@@ -1,0 +1,211 @@
+{
+  "main": {
+    "id": "23d8a76637cd890e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1bb8d10f2b9ff68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "42072c81ae3a7044",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chimica/Chimica.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Chimica"
+            }
+          },
+          {
+            "id": "3f91f6b2ae4535a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Chimica/Stati della materia.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stati della materia"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "59244380d22290a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "4aa2e828e34b5f57",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9a9ca17dc578d3d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "9325fb74e88f194a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "11f415142781caa7",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "254827c54368f444",
+    "type": "split",
+    "children": [
+      {
+        "id": "9bde456771411ab0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9e0952b3ab9b6d65",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Chimica/Chimica.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Chimica"
+            }
+          },
+          {
+            "id": "26e9e932bb2160cc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Chimica/Chimica.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Chimica"
+            }
+          },
+          {
+            "id": "7f4a46791ea687e4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "4a33adc6d7153af0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Chimica/Chimica.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Chimica"
+            }
+          },
+          {
+            "id": "2898713e1491c77a",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "42072c81ae3a7044",
+  "lastOpenFiles": [
+    "Chimica/Stati della materia.md",
+    "Chimica/Chimica.md",
+    "Res/Screenshot 2024-12-02 at 18.30.05.png",
+    "Res/Screenshot 2024-12-02 at 18.24.44.png",
+    "Res/Screenshot 2024-12-02 at 18.24.29.png",
+    "Welcome.md",
+    "Res",
+    "Biologia Molecolare/Biologia Molecolare.md",
+    "Biologia/Biologia.md",
+    "pendingSync-gdrive-plugin",
+    "Biologia Molecolare",
+    "Chimica",
+    "obsidian-gdrive-sync/styles.css",
+    "obsidian-gdrive-sync/manifest.json",
+    "obsidian-gdrive-sync/main.js",
+    "obsidian-gdrive-sync",
+    "Biologia"
+  ]
+}
