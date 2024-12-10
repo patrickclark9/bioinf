@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "254827c54368f444",
@@ -177,12 +178,14 @@
   "lastOpenFiles": [
     "Chimica/Stati della materia.md",
     "Chimica/Configurazione Elettronica.md",
+    "Res/Chemistry/Screenshot 2024-12-02 at 18.24.29.png",
+    "Res/Chemistry",
+    "Res/Chemistry/spectrum.jpg",
     "create a link.md",
     "Welcome.md",
     "Chimica/Chimica.md",
-    "Res/Screenshot 2024-12-02 at 18.30.05.png",
-    "Res/Screenshot 2024-12-02 at 18.24.44.png",
-    "Res/Screenshot 2024-12-02 at 18.24.29.png",
+    "Res/Chemistry/Screenshot 2024-12-02 at 18.30.05.png",
+    "Res/Chemistry/Screenshot 2024-12-02 at 18.24.44.png",
     "Res",
     "Biologia Molecolare/Biologia Molecolare.md",
     "Biologia/Biologia.md",

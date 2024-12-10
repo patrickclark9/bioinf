@@ -1,4 +1,4 @@
-#bioinf [[Stati della materia]]
+#bioinf #parte2[[Stati della materia]]
 
 ## Teoria di Dalton
 
@@ -35,5 +35,38 @@ Secondo questo modello, gli elettroni, per non cadere nel nucleo (attirati dalla
 Inoltre, gli elettroni che ruotano attorno al campo elettrico positivo del nucleo dovrebbero perdere energia mettendo una radiazione elettromagnetica, come previsto dalle leggi dell'elettrodinamica, collassando così sul nucleo.
 Gli atomi possono ancore emettere ed assorbire radiazione elettromagnetica, secondo modalità non spiegate dal modello di Rutherford.
 
+#### La radiazione e gli Spettri Atomici
+La radiazione emessa o assorbita dai vari stati della materia presentano comportamenti ben precisi che caraterizzano lo spettro della sostanza presa in esame.
+Identifichiamo due tipi di spettri:
+- Spettro Continuo -> Denotato da una successione **continua** di lunghezze d'onda. Tipicamente emesse da solidi, liquidi o gas densi a temperatura sufficientemente elevata
+- Spettro Discreto -> Denotato da una successione **discreta** di lunghezze d'onda, chiamate anche *==righe spettrali==*. Tipicamente emessi da gas *rarefatti* incandescenti o posti in tubo in cui è applicata una d.d.p?? (***spettro di emissione***) oppure a da gas rarefatti freddi esposti ad una sorgente luminosa (***spettro di assorbimento***).
+
+In gas monoatomici, gli spettri a righe sono un fenomeno caratteristico del singolo atomo. 
+**Proprietà:**
+- La lunghezza d'onda delle righe di emissione coincide con la lunghezza d'onda delle righe di assorbimento
+- Gli spettri a righe sono quindi una caratteristica tipica di ogni elemento chimico
+
+L'analisi spettroscopica è la base dell'identificazione degli elementi.
+![[spectrum.jpg]]
 
 
+
+#### Formula di Rydberg-Balmer
+Le energie delle transizioni elettroniche legate agli spettri di assorbimento ed emissione fra stati quantici possono essere calcolate a partire dai numeri quantici dei livelli energetici coinvolti:
+
+$$ \frac{1}{\lambda} = R_H \space \Bigl( \frac{1}{m^2}-\frac{1}{n^2}\Bigr)$$
+con $R_H = 109678 \space cm^{-1}$ Costante di Rydberg 
+$n$ ed $m$ numeri quantici coinvolti nella transizione.
+
+## Il modello quantizzato di Bohr
+
+Nel modello di Bohr, gli elettroni orbitano attorno al nucleo in orbite circolari **stazionarie** chiamate orbite stazionarie.
+Gli elettroni che rimangono su un'orbita stazionaria non emettono e non assorbono energia.
+Non tutte le energie sono possibili ma solo alcuni livelli energetici sono permessi, cioè le energie elettroniche sono quantizzate.
+Il numero quantico principale $n$ indica il livello energetico associato ad ogni orbita, ed assume solo valori interi 1,2,3,4...
+Il livello più basso di energia è detto **stato fondamentale**.
+Gli stati in cui gli elettroni occupano livelli a energia superiore sono detti stati eccitati.
+
+---------
+### Quantizzazione
+Secondo il modello di Bohr delle orbite stazionarie, la forza centrifuga $F_c$ e l'attrazione elettrostatica coulombiana $F_{el}$ che agiscono sull'elettrone si devono eguagliare.
