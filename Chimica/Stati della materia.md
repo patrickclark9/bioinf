@@ -1,6 +1,7 @@
 ---
 lastSync: Mon Dec 02 2024 18:31:59 GMT+0100 (Central European Standard Time)
 ---
+#bioinf #parte1 #chimica 
 ## Atomo
 Un atomo è composto da da elettroni protoni e neutroni. I neutroni ed i protoni si trovano nel nucleo dell'atomo, mentre gli elettroni orbitano attorno al nucleo.
 Ogni atomo viene distinto da due numeri particolari
@@ -11,10 +12,11 @@ Ogni atomo viene distinto da due numeri particolari
 Gli isotopi sono atomi di uno stesso elemento avente numero atomico differente, come ad esempio il carbonio-14 o il carbonio-13, che hanno numero Z pari a rispettivamente 14 e 13, a differenza del carbonio più frequentemente osservato che ha numero atomico pari a 12.
 
 ### Massa atomica e peso atomico
-La massa atomica è pari alla media ponderata di tutti gli isotopi di uno stesso elemento, si esprime in grammi ed è generalmente compresa tra $10^{-25}kg$ ed $10^{-27}kg$
+La **massa atomica** corrisponde a $1/12$ della massa di un singolo atomo di carbonio-12, si esprime in grammi ed è generalmente compresa tra $10^{-25}kg$ ed $10^{-27}kg$ ed è definita come la massa di quel singolo atomo espressa in grammi.
+La massa atomica **si** calcola sommando i pesi di protoni e neutroni, che sono i maggiori contribuenti. Gli elettroni pesano $1/1836$ del protone, diventando quindi irrilevanti per il calcolo del peso atomico (dato che numero di protoni ed elettroni è uguale, il peso degli elettroni è trascurabile rispetto al peso dei protoni).
 
-Il **Peso atomico** o **massa atomica relativa** è definita come la massa atomica espressa in termini massa atomica unificata $u$ o $Da \space (Dalton)$, che corrisponde a $1/12$ della massa di un singolo atomo di carbonio-12. Il peso atomico si calcola sommando i pesi di protoni e neutroni, che sono i maggiori contribuenti. Gli elettroni pesano $1/1836$ del protone, diventando quindi irrilevanti per il calcolo del peso atomico (dato che numero di protoni ed elettroni è uguale, il peso degli elettroni è trascurabile rispetto al peso dei protoni).
 
+Il **Peso atomico** o **massa atomica relativa** è definita come la massa atomica espressa in termini massa atomica unificata $u$ o $Da \space (Dalton)$, che corrisponde alla media ponderata di tutti gli isotopi di uno stesso elemento . 
 **Grammoatomo**: La massa di un elemento pari ad una quantità in grammi corrispondente al peso atomico
 $PA_O = 15.994$ $\rightarrow$ $Grammoatomo= 15.994 \space g$
 

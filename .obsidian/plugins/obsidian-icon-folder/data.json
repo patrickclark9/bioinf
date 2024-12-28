@@ -33,7 +33,8 @@
   "Chimica": "LiFlaskConical",
   "Chimica/Chimica.md": "LiFlaskConical",
   "Chimica/Stati della materia.md": "LiFlaskConical",
-  "Biologia Molecolare": "LiDna",
-  "Biologia Molecolare/Biologia Molecolare.md": "LiDna",
-  "Chimica/Configurazione Elettronica.md": "LiFlaskConical"
+  "Chimica/Configurazione Elettronica.md": "LiFlaskConical",
+  "Chimica/Legami chimici.md": "LiFlaskConical",
+  "Biologia Generale": "LiDna",
+  "Biologia Generale/Biologia Molecolare.md": "LiDna"
 }
