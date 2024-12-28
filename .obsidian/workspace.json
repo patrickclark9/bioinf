@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "254827c54368f444",
@@ -174,8 +173,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0a47f6087a5263da",
+  "active": "d9a9ca17dc578d3d",
   "lastOpenFiles": [
+    "New Text Document.txt",
     "Res/Chemistry/Screenshot 2024-12-28 at 18.38.24.png",
     "Chimica/Legami chimici.md",
     "Res/Chemistry/Screenshot 2024-12-28 at 18.51.08.png",
