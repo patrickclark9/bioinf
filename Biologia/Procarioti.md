@@ -83,9 +83,10 @@ La parete cellulare differisce nei batteri Gram positivi e nei Gram negativi.
 Nei Gram positivi lo strato di peptoglicani è molto spesso (20-80nm), contiene acidi teicoici (polimeri lineari di glicerolo o fosfato ribitolico (???????)) legati covalentemente al peptoglicano. Aiutano nel trasporto degli ioni, contribuiscono alla carica negativa.
 Non è presente una membrana esterna. (Stafilococchi, Streptococchi)
 
-Nei Gram negativi lo strato di peptoglicani è molto più sottile (2-7nm), e si trova nello spazio periplasmatico. È avvolto da una membrana esterna, un doppio strato lipidico contenente:
+Nei Gram negativi lo strato di peptoglicani è molto più sottile (2-7nm), e si trova nello spazio periplasmatico. È avvolto da  una membrana esterna, un doppio strato lipidico contenente:
 - Lipopolisaccaridi -> contribuiscono all'attività endotossica e la risposta immunitaria
 - Porine -> canali per piccole molecole
 (Escherichia coli, Salmonella)
 
 Gli antibiotici a base di penicilliina e cefalosporina interferiscono con la parete cellulare, efficace esclusivamente sui batteri in fase moltiplicativa attiva.![[Screenshot 2025-01-02 at 10.07.40.png | 350]]
+Penicillina -> impedisce la sintesi del peptoglicano nei gram positivi
