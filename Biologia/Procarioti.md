@@ -94,3 +94,9 @@ Lo spazio periplasmico è lo spazio tra la membrana esterna e la membrana plasma
 
 Gli antibiotici a base di penicilliina e cefalosporina interferiscono con la parete cellulare, efficace esclusivamente sui batteri in fase moltiplicativa attiva.![[Screenshot 2025-01-02 at 10.07.40.png | 350]]
 Penicillina -> impedisce la sintesi del peptoglicano nei gram positivi -> Cefalosporina
+
+### Membrana Plasmatica
+La membrana plasmatica è costituita da un doppio strato fosfolipidico di spessore compreso tra i 5-10nm nella quale sono inserite molecole amfipatiche proteiche responsabile per le diverse funzioni della membrana.
+Le proteine integrali o interne compongono il 70-80% delle proteine totali, e sono difficilmente separabili dalla membrana. Il restante 20-30% è composto da proteine esterne più facilmente separabili dalla membrana. 
+Nei batteri sono presenti opanoidi, molecole simili agli steroidi, che stabilizzano la membrana.
+Svolge un ruolo fondamentale nell'ad
