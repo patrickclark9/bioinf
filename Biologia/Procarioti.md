@@ -78,5 +78,13 @@ La parete cellulare nei batteri ha funzione:
 
 Struttura -> Composta principalmente da peptoglicani (mureina), una struttura polimerica a rete composta da zuccheri ed amminoacidi. Si alternano unità di N-acetilglucosammina e N-acetilmuramico uniti da legami glicosidici. Le catene peptidiche sono piccole catene di amminoacidi che effettuano un cross link (uniscono i due zuccheri) con i polimeri di zucchero per fornire ulteriore integrità strutturale. La struttura di queste catene peptidiche dipende dal batterio.
 
-La parete cellulare differisce nei batteri Gram positivi e nei Gram negativi
+La parete cellulare differisce nei batteri Gram positivi e nei Gram negativi.
+
+Nei Gram positivi lo strato di peptoglicani è molto spesso (20-80nm), contiene acidi teicoici (polimeri lineari di glicerolo o fosfato ribitolico) legati covalentemente al peptoglicano. Aiutano nel trasporto degli ioni, contribuiscono alla carica negativa.
+Non è presente una membrana esterna. (Stafilococchi, Streptococchi)
+
+Nei Gram negativi lo strato di peptoglicani è molto più sottile (2-7nm), e si trova nello spazio periplasmatico. È avvolto da una membrana esterna, un doppio strato lipidico contenente:
+- Lipopolisaccaridi -> contribuiscono all'attività endotossica e la risposta immunitaria
+- Porine -> canali per piccole molecole
+(Escherichia coli, Salmonella)
 
