@@ -94,3 +94,58 @@ Si forma tra atomi differenti con differenza di elettronegatività compresa tra 
 L'orbitale molecolare non è simmetrico ma si addensa sull'atomo più elettronegativo, e la molecola può presentare un momento dipolare netto.
 
 ![[Screenshot 2024-12-28 at 18.50.27.png]]![[Screenshot 2024-12-28 at 18.50.42.png]]![[Screenshot 2024-12-28 at 18.51.08.png]]
+
+### Legami Multipli
+Gli atomi possono mettere in compartecipazione più elettroni sovrapponendo gli orbitali atomici all'ultimo livello per formare così legami multipli doppi o tripli
+![[Screenshot 2024-12-28 at 22.55.56.png]]
+![[Screenshot 2024-12-28 at 22.56.16.png]]
+![[Screenshot 2024-12-28 at 22.58.00.png]]
+### Energia di Legame
+Energia necessaria per scindere un legame tra due atomi.
+Le molecole hanno energia potenziale inferiore a quella degli atomi che la compongono.
+L'energia di legame è definita positiva e rappresenta il lavoro necessario per scindere il legame tra due atomi![[Screenshot 2024-12-29 at 10.01.03.png]]
+Rappresenta quindi il calore fornito dall'ambiente quando avviene la rottura omeolitica del legame.
+
+### Energia di dissociazione del legame
+
+Rappresenta una media calcolata a partire dalle somme delle energie di dissociazione del legame di tutti i legami in una molecola.![[Screenshot 2024-12-29 at 10.02.36.png]]
+
+## Teoria VSEPR
+Teoria Valence Shell Electron Pair Repulsion. Ci consente di ricavare la geometria a partire dalle rappresentazione delle formule delle strutture di Lewis, partendo dal presupposto che le coppie di elettroni esterne tendono a respingersi reciprocamente.
+![[Screenshot 2024-12-29 at 10.07.33.png]]
+Secondo questa teoria gli angoli di legame che si vengono a formare tra gli atomi di una molecola dipendono dal numero di doppietti elettronici presenti attorno all'atomo centrale che per azione repulsiva tendono a disporsi reciprocamente il più lontano possibile.
+
+## Ibridizzazione
+L'ibridizzazione è una procedura matematica che consiste nel combinare linearmente gli orbitali che descrivono gli elettroni di valenza 2s e 2p ottenendo nuovi orbitali atomici tutti isoenergetici su  si dispongono i 4 Carbonio del livello 2 che possono essere condivisi per formare i legami covalenti. Descrive meglio il comportamento degli elettroni di valenza nella formazione dei legami soprattutto tra gli atomi del secondo periodo.
+![[Screenshot 2024-12-29 at 10.15.17.png]]![[Screenshot 2024-12-29 at 10.15.47.png]]![[Screenshot 2024-12-29 at 10.16.33.png]]![[Screenshot 2024-12-29 at 10.17.00.png]]
+## Interazioni Deboli
+Le interazioni inter molecolari determinano il valore del punto di ebollizione degli elementi, tanto più sono intense, più alto sarà il punto di ebollizione.
+
+![[Screenshot 2024-12-29 at 10.26.19.png]]
+Negli Idruri per esempio il punto di ebollizione aumenta all'aumentare del peso atomico dell'atomo centrale. Le proprietà fisiche dei liquidi e dei solidi vengono quindi spiegate dalle varie interazioni inter-molecolari e la loro intensità.
+
+## Legame Idrogeno
+Il legame idrogeno si forma quando un idrogeno si lega contemporaneamente a due atomi (A e D).
+L'atomo A deve contenere una coppia di elettroni disponibili in un orbitale atomico (lone pair) e può interagire favorevolmente con un atomo di idrogeno legato covalentemente ad un atomo donatore D.
+Il legame ad idrogeno richiede che entrambi gli atomi A e D siano più elettronegativi dell'idrogeno. A viene chiamato accettore del legame idrogeno, il gruppo HD viene chiamato donatore del legame idrogeno.
+Il legame idrogeno è possibile perchè quando l'idrogeno forma un legame covalente con l'atomo D essendo quest'ultimo più elettronegativo di H l'atomo viene messo in compartecipazione e tirato più verso D, lasciando il protone nel nucleo di H non schermato. Il protone non schermato è quindi disponibile per formare il legame idrogeno e quindi interazioni elettrostatiche con elettroni che formano coppie solitarie.
+L'intensità aumenta aumentando l'elettronegatività dell'atomo D questo infatti porta ad un aumento della carica parziale positiva sull'atomo H e quindi la forza del legame idrogeno, oppure aumentando la carica negativa dell'atomo accettore A.
+
+La formazione del legame idrogeno non viene giustificata solamente dalla elettronegatività. La seconda ragione risiede nella configurazione elettronica degli atomi. Infatti si nota che le coppie di elettroni che formano legame idrogeno in Azoto Fluoro ed Ossigeno si trovano tutte negli orbitali 2p. Nel Cloro questi si trovano nel 3p, non formando quindi i legami idrogeno.
+
+
+## Forze Molecolari Deboli
+
+Interazioni deboli intermolecolari sono dette forze di Van der Waals.
+Queste sono interazioni elettrostatiche fra particelle cariche permanenti (ioni) o fra molecole che presentano una parziale separazione di carica (dipoli permanenti), o fra particelle neutre che presentano uno sbilanciamento di carica momentaneo causato dalla presenza di un campo elettrico, o per fluttuazioni istantanee della densità di carica.
+
+- Forze di Keesom -> interazione fra dipoli permanenti e ione-dipolo permanente
+- Forze di Debye -> interazioni fra ioni/dipoli permanenti e dipoli indotti
+- Forze di Dispersione di London -> interazioni fra dipoli indotti
+
+### Keesom
+![[Screenshot 2024-12-29 at 10.43.14.png]]
+## Debye 
+![[Screenshot 2024-12-29 at 10.43.28.png]]
+## Forze di London
+![[Screenshot 2024-12-29 at 10.43.42.png]]![[Screenshot 2024-12-29 at 10.45.04.png]]
