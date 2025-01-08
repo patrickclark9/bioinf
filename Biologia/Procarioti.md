@@ -197,5 +197,6 @@ Il processo di invaginazione viene diviso in più fasi:
 4. Assemblaggio dell'apparato di sintesi della parete cellulare
 5. Costrizione dell'anello Z e formazione del setto
 La fase critica nel processo di settazione è rappresentata dall'assemblaggio dell'anello Z, perchè la sua formazione determina il buon esito delle fasi successive.
-La proteina FtsZ omologa della tubulina negli eucarioti è l'elemento di formazione dell'anello Z.![[Screenshot 2025-01-02 at 17.26.08.png | 450]]
+La proteina FtsZ omologa della tubulina negli eucarioti è l'elemento di formazione dell'anello Z.
+![[Screenshot 2025-01-02 at 17.26.08.png | 450]]
 ![[Screenshot 2025-01-02 at 17.26.34.png]]![[Screenshot 2025-01-02 at 17.27.08.png | 450]]

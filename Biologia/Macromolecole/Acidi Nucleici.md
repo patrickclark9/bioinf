@@ -1,19 +1,19 @@
 Gli acidi nucleici sono divisi in due classi:
 - DNA -> Deossiribonucleico
 - RNA -> Ribonucleico
-![[Screenshot 2024-12-29 at 17.32.50.png]]
+![[Screenshot 2024-12-29 at 17.32.50.png | 450]]
 Non è chiaro chi sia il precursore della vita, anche se l'ipotesi più quotata attualmente è quella del mondo ad RNA, ovvero che l'RNA è la molecola primordiale ed il precursore del DNA e delle proteine.
 Questa teoria è corroborata dal fatto che l'RNA è in grado di effettuare azione enzimatica ed è in grado di replicarsi in autonomia.
 
 ## Nucleotidi
 I nucleotidi sono le unità monomeriche che compongono gli acidi nucleici.
 Sono composti da uno zucchero pentoso, da 1 a 3 gruppi fosfati, ed una base azotata.
-![[Screenshot 2024-12-29 at 17.38.35.png]]
+![[Screenshot 2024-12-29 at 17.38.35.png | 550]]
 ### Base azotata
 Le basi azotate possono essere di due tipi:
 - Pirimidiniche -> Molecole eterocicliche composte da C H e 2N. La lunghezza di ciascun doppio legame è un ibrido tra un singolo e doppio legame
 - Puriniche -> Molecole eterocicliche composte da un anello pirimidinico fuso con un anello di imidazolo
-![[Screenshot 2024-12-29 at 17.41.00.png]]
+![[Screenshot 2024-12-29 at 17.41.00.png |350]]
 Le basi azotate sono presenti in DNA ed RNA sono 5 in totale, 4 per ciascuna delle due macromolecole:
 - DNA:
 	- Pirimidine:
@@ -29,8 +29,8 @@ Le basi azotate sono presenti in DNA ed RNA sono 5 in totale, 4 per ciascuna del
 	- Purine:
 		- Adenina
 		- Guanina
-![[Screenshot 2024-12-29 at 17.46.06.png]]
-![[Screenshot 2024-12-29 at 17.46.28.png]]
+![[Screenshot 2024-12-29 at 17.46.06.png |550]]
+![[Screenshot 2024-12-29 at 17.46.28.png | 550]]
 (Nucleosidi:
 - Adenosina
 - Timidina

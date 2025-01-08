@@ -52,7 +52,7 @@ Ad esempio gli enzimi chiave per la produzione di vitamina B12 si trovano unicam
 [[Microscopi]]
 ### Componenti della cellula
 ![[Screenshot 2024-12-31 at 10.38.13.png | 350]]
-- Membrana Cellulare -> Funge da protezione, bilayer fosfolipidico, controlla l'ingresso e l'uscita di sostanze
+- Membrana Cellulare (Plasmatica) -> Funzione di protezione, bilayer fosfolipidico, controlla l'ingresso e l'uscita di sostanze
 - Membrana Nucleare (Eucarioti) -> Struttura a doppia membrana, composta da membrana esterna (continua con il RE) e spesso con ribosomi attaccati, membrana interna che fornisce supporto strutturale. Lo spazio tra le due membrane è detto spazio perinucleare.
 - Pori Nucleari -> Parte della membrana. Sono grossi complessi di proteine. Permettono lo scambio selettivo di molecole come l'RNA, le proteine e gli ioni tra il nucleo ed il citoplasma
 - Citoplasma -> Sostanza gelatinosa contenente citosol ed elementi del citoscheletro. È il sito in cui avvengono molte reazioni metaboliche
@@ -67,7 +67,7 @@ Ad esempio gli enzimi chiave per la produzione di vitamina B12 si trovano unicam
 - Lisosomi -> Si occupano di demolire organelli danneggiati, sostanze esterne, ed altro mediante gli enzimi. È un organello con membrana contenente enzimi idrolitici
 - Perossisoma -> Demolizione di acidi grassi e detossificazione. Composto da enzimi come l'ossidasi e la catalasi
 - Citoscheletro -> Supporto strutturale, aiuta nel movimento delle cellule, organizza gli organelli. Composto da microfilamenti, filamenti intermedi e microtubuli
-- Vacuoli -> Immagazzinano nutrienti, acqua ecc.. Funzione strutturale in cellule vegetali. Sono più grandi nelle piante, più piccoli negli animali.
+- Vacuoli (solo vegetali)-> Immagazzinano nutrienti, acqua ecc.. Funzione strutturale in cellule vegetali. Sono più grandi nelle piante, più piccoli negli animali.
 - Cloroplasti (solo piante) -> Fotosintesi. Contiene clorofilla, composta da una doppia membrana.
 I tessuti sono composti da numerose cellule:
 ![[Screenshot 2024-12-31 at 10.43.15.png | 450]]
