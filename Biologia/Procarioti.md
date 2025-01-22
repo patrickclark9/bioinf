@@ -52,12 +52,18 @@ I batteri possono essere classificati in base alla colorazione ottenuta dal proc
 4. Si utilizza la safranina, che lascia invariato il colore dei gram positivi, ma colora di rosa i gram negativi
 Ovviamente, i batteri gram differiscono principalmente per lo spessore dello strato di peptoglicani.
 
+## Classificazione: Respirazione
+- Aerobici -> crescono in presenza di ossigeno, producono superossido dismutasi -> dismutasi demolisce perossido di idrogeno e anione superossido  $O^{2-}$
+- Anaerobici -> muoiono in presenza di ossigeno, utilizzano fermentazione (molto inefficiente, utilizza molte molecole di zucchero per produrre ATP)
+- Facoltativi -> respirano se in presenza di ossigeno, fermentazione in assenza di ossigeno
+- Microaerofoli -> necessitano delle giuste concentrazioni di O2 (basse) e CO2
+I processi enzimatici avvengono nel citosol, fosforilazione ossidativa sulla membrana plasmatica
 ## Struttura
 ### Struttura esterna
 La cellula procariotica è composta da:
 - Parete Cellulare -> Funzione strutturale e di protezione, mantiene la forma cellulare. Composta da peptoglicani nei batteri. Negli archea non ci sono peptoglicani ma possono contenere pseudopeptoglicani
 - Membrana Plasmatica -> Doppio strato fosfolipidico con proteine annesse. Controlla il movimento delle sostanze dentro e fuori la cellula. Differisce chimicamente tra archea e batteri
-- Capsula (non sempre presente) -> Strato di polisaccaridi o proteine fuori dalle pareti cellulari. Funzione di protezione, aiuta ad aderire alle superfici, resistenza alla essicazione
+- Capsula (non sempre presente) -> Strato di polisaccaridi o proteine fuori dalle pareti cellulari. Dimensioni notevoli. Funzione di protezione, aiuta ad aderire alle superfici, resistenza alla essicazione, protezione dal sistema immunitario
 - Pili e Fimbriae -> Localizzati sulla superficie cellulare. Aiutano ad aderire alle superficie e nella coniugazione (trasferimento di materiale genetico)
 - Flagello (non sempre presente) -> Lunga "coda" composta da proteine flagelline, utilizzata principalmente per il movimento
 ### Struttura interna
@@ -76,30 +82,35 @@ La parete cellulare nei batteri ha funzione:
 - Permeabilità -> permette lo spostamento solo di determinate sostanze
 - Patogenicità -> ruolo durante l'interazione ospite-patogeno, portando spesso molecole che contribuiscono alla virulenza
 
-Struttura -> Composta principalmente da peptoglicani (mureina), una struttura polimerica a rete composta da zuccheri ed amminoacidi. Si alternano unità di N-acetilglucosammina e N-acetilmuramico uniti da legami glicosidici. Le catene peptidiche sono piccole catene di amminoacidi che effettuano un cross link (uniscono i due zuccheri) con i polimeri di zucchero per fornire ulteriore integrità strutturale. La struttura di queste catene peptidiche dipende dal batterio.
+
 
 La parete cellulare differisce nei batteri Gram positivi e nei Gram negativi.
 
-Nei Gram positivi lo strato di peptoglicani è molto spesso (20-80nm), contiene acidi teicoici (polimeri lineari di glicerolo o fosfato ribitolico (???????)) legati covalentemente al peptoglicano. Aiutano nel trasporto degli ioni, contribuiscono alla carica negativa.
-Non è presente una membrana esterna. (Stafilococchi, Streptococchi)
+Nei Gram positivi lo strato di peptoglicani è molto spesso (20-80nm), contiene acidi teicoici  legati covalentemente al peptoglicano, in aggiunta a proteine e carboidrati differenti tra i vari batteri. Non è presente una membrana esterna. (Stafilococchi, Streptococchi)
+Struttura Gram + -> Composta principalmente da peptidoglicani (mureina). É una struttura polimerica a matrice composta da una catena lineare di glicani (si alternano unità di N-acetilglucosamina e acido N-acetilmuramico). L'acido muramico lega un tetrapeptide. Il peptidoglicano si forma attraverso legami crociati tra il 3o amminoacido di un tetrapeptide ed il 4o amminoacido di un tetrapeptide adiacente. 
 
-Nei Gram negativi lo strato di peptoglicani è molto più sottile (2-7nm), e si trova nello spazio periplasmico. È avvolto da  una membrana esterna, un doppio strato lipidico contenente:
-- Lipopolisaccaridi -> contribuiscono all'attività endotossica e la risposta immunitaria
+Nei Gram negativi lo strato di peptidoglicani è molto più sottile (2-7nm), e si trova nello spazio periplasmico (è lo spazio tra la membrana esterna e la membrana plasmatica). È avvolto da  una membrana esterna, un doppio strato fosfolipidico contenente sul lato esterno:
+- Lipopolisaccaridi -> contribuiscono all'attività endotossica (La componente lipidica costituisce l'endotossina) e la risposta immunitaria
 - Porine -> canali per piccole molecole
 (Escherichia coli, Salmonella)
-
-Lo spazio periplasmico è lo spazio tra la membrana esterna e la membrana plasmatica. Ha consistenza gelatinosa ed occupa circa il 20-40% del volume totale della cellula. In questo spazio si trovano:
+L'evoluzione della parete cellulare nei gram negativi ha portato alla formazione di uno spazio periplasmatico contenente enzimi e proteine importanti per la chemiotassi e per il trasporto
+Spazio Periplasmico:
 - Enzimi -> sintesi peptidoglicano, trasporto, acquisizione nutrienti 
 - Proteine di Trasporto -> zuccheri, amminoacidi, fosfato, vitamine
 
-Gli antibiotici a base di penicilliina e cefalosporina interferiscono con la parete cellulare, efficace esclusivamente sui batteri in fase moltiplicativa attiva.![[Screenshot 2025-01-02 at 10.07.40.png | 350]]
+Gli antibiotici a base di penicillina e cefalosporina interferiscono con la parete cellulare, efficace esclusivamente sui batteri in fase moltiplicativa attiva.![[Screenshot 2025-01-02 at 10.07.40.png | 350]]
 Penicillina -> impedisce la sintesi del peptoglicano nei gram positivi -> Cefalosporina
 Mycoplasma pneumoniae immune a questi antibiotici -> Gram negativo
 
 ### Membrana Plasmatica
 La membrana plasmatica è costituita da un doppio strato fosfolipidico di spessore compreso tra i 5-10nm nella quale sono inserite molecole amfipatiche proteiche responsabile per le diverse funzioni della membrana.
 Le proteine integrali o interne compongono il 70-80% delle proteine totali, e sono difficilmente separabili dalla membrana. Il restante 20-30% è composto da proteine esterne più facilmente separabili dalla membrana. 
-Nei batteri sono presenti opanoidi, molecole simili agli steroidi, che stabilizzano la membrana. Svolgono un ruolo fondamentale nell'adattamento a condizioni estreme e nella regolazione della permeabilità. Negli eucarioti questa funzione è principalmente effettuata dal colesterolo, che stabilizza la membrana e mantiene la fluidità.
+Nei batteri sono presenti opanoidi, molecole simili agli steroidi, che stabilizzano la membrana. Negli eucarioti viene effettuata dagli steroidi.
+
+Nei batteri il cromosoma é ancorato alla membrana citoplasmatica, quindi la membrana ha ruolo analogo all'apparato mitotico degli eucarioti. 
+Ha ruolo nella secrezione di proteine e nel trasporto. Circa la metà delle proteine di trasporto dei batteri appartengono al sistema di trasporto attivo primario detto ABC (ATPase Binding Cassette) e al sistema di diffusione facilitata/trasporto attivo secondario MFS (Major facilitator superfamily).
+La membrana plasmatica ha funzione di barriera selettiva, per lo scambio di molecole e sito di ancoraggio per le proteine.
+Ha funzione energetica, sede di proteine della chemiotassi, soprattutto nei gram positivi che non possiedono gli enzimi dello spazio periplasmico.
 
 Negli eubatteri, la membrana plasmatica è formata da molecole di glicerolo e da catene laterali di acidi grassi, legati tramite esterificazione (legami estere). Il glicerolo è predominante nella forma Destrogira.
 Negli archea, la forma del glicerolo è predominante nella forma Levogira, a cui vengono legati mediante legami etere molecole di idrocarburi a catena ramificata.
@@ -110,24 +121,27 @@ I mesosomi possono essere:
 - Respiratori -> Associati a processi enzimatici, respirazione
 Possono essere associati al cromosoma batterico e dirigere la replicazione.
 
-La membrana plasmatica ha funzione di barriera selettiva, per lo scambio di molecole e sito di ancoraggio per le proteine.
-
-La membrana viene utilizzata anche per la produzione e la conservazione dell'energia, attraverso i mesosomi respiratori.
-
-Circa la metà delle proteine di trasporto dei batteri appartengono al sistema di trasporto attivo primario detto ABC (ATPase Binding Cassette) e al sistema di diffusione facilitata/trasporto attivo secondario MFS (Major facilitator superfamily).
-
 La densità delle proteine di trasporto nei batteri è regolata dalla concentrazione del soluto nel mezzo e dalle necessità metaboliche della cellula. Questo perchè le permeasi batteriche sono generalmente inducibili.
 
-Nei cianobatteri (fotosintesi) esiste un sistema di membrane interne su cui avviene la riduzione dell'anidride carbonica da parte dell'acqua e la sintesi di zuccheri ed ossigeno. Questo processo è chiamato fotosintesi ossigenica.
+Nei cianobatteri esiste un sistema di membrane interne su cui avviene la riduzione dell'anidride carbonica da parte dell'acqua e la sintesi di zuccheri ed ossigeno. Questo processo è chiamato fotosintesi ossigenica. I cianobatteri differiscono dai normali batteri in cui la compartimentalizzazione non esiste, come negli eucarioti. I cianobatteri infatti sono composti da diversi sistemi di membrane, il resto dei batteri da solo membrana plasmatica.
 
 ## Citoplasma
-Il citoplasma è la parte che viene delimitata dalla membrana plasmatica. Il citosol rappresenta la parte acquosa del citoplasma nel quale sono sospesi tutti gli organuli cellulari.È un fluido altamente viscoso perchè costituito al 50% da proteine.
+Il citoplasma è la parte che viene delimitata dalla membrana plasmatica. Il citosol rappresenta la parte acquosa del citoplasma nel quale sono sospesi tutti gli organuli cellulari.È un fluido altamente viscoso e granulare perchè costituito al 50% da proteine e da ribosomi.
 Nel citoplasma avvengono tutti i processi relativi alla replicazione del DNA, dalla trascrizione alla sintesi proteica.
+### Citoscheletro
+In passato si credeva che il citoscheletro fosse esclusivo agli eucarioti.
+Nei procarioti il citoscheletro si trova nel citoplasma ed ha funzione strutturale e partecipa al processo di riproduzione. Il citoscheletro è composto da proteine che si possono suddividere in:
+- Omologhe agli eucarioti (tubulina, actina)
+- Filamenti intermedi (IF)
+- Non-Omologhe agli eucarioti (MinD, ParA)
 
+Simili a tubulina -> FtsA, MreB, MreC, MreD, ParM
+Simili ad actina -> FtsZ
 ### Nucleoide
 Le cellule procariotiche possiedono solo il nucleoide, senza membrana nucleare, e sono composte da un solo cromosoma circolare, composto da un'unica molecola di DNA a doppio filamento circolare, fortemente avvolto su se stesso nel nucleoide.
-Una parte dell'informazione genetica può essere sotto forma di plasmidi, anche detto DNA extra-cromosomiale. A differenza degli eucarioti, una singola molecola di mRNA nei batteri viene tradotta in più di una proteina. Infatti sull'mRNA batterico ci sono siti di traduzione multipli.
+Una parte dell'informazione genetica può essere sotto forma di **plasmidi**, anche detto DNA extra-cromosomiale, che possono contenere anche l'informazione necessaria per l'antibiotico resistenza. A differenza degli eucarioti, una singola molecola di mRNA nei batteri viene tradotta in più di una proteina. Infatti sull'mRNA batterico ci sono siti di traduzione multipli.
 La riproduzione avviene unicamente per via asessuata.
+L'assenza di membrana nucleare fornisce un vantaggio non indifferente ai batteri nel reagire ai cambiamenti ambientali, adattandosi.
 
 ### Ribosomi 
 I ribosomi fluttuano liberamente nel citoplasma. Sono complessi di RNA e proteine legati mediante legami covalenti. Sono composti da due unità che formano un complesso 70S e si presentano in grappoli chiamati polisomi.
@@ -144,24 +158,16 @@ Percorrono uno spazio di circa 25 volte superiore alle loro dimensioni.
 
 ## Pili e Fimbrie
 I pili sono strutture proteiche filiformi più corte dei flagelli che servono per l'adesione.
-I pili **coniugativi** servono per il contatto e lo scambio di materiale genetico tra cellule batteriche.
+I pili **coniugativi** (sessuali) servono per il contatto e lo scambio di materiale genetico tra cellule batteriche. 
 
 Le fimbrie sono più corte dei pili ed hanno una funzione di adesione a superfici abiotiche e biotiche, come le cellule animali (gli epiteli) per procurarsi cibo e protezione.
 
-## Citoscheletro
-In passato si credeva che il citoscheletro fosse esclusivo agli eucarioti.
-Nei procarioti il citoscheletro ha funzione strutturale e partecipa al processo di riproduzione. Il citoscheletro è composto da proteine che si possono suddividere in:
-- Omologhe agli eucarioti (tubulina, actina)
-- Filamenti intermedi (IF)
-- Non-Omologhe agli eucarioti (MinD, ParA)
 
-Simili a tubulina -> FtsA, MreB, MreC, MreD, ParM
-Simili ad actina -> FtsZ
 
 
 ## Riproduzione
 
-In un sistema chiuso, i batteri seguono una curva di crescita ben precisa, che inizia con una prima fase detta di latenza (lag) abbastanza breve in cui non si ha proliferazione del batterio. I batteri in media si dividono ogni 20 minuti, quindi in seguito alla fase lag si ha una fase log (logaritmo del numero di cellule vive) in cui il batterio prolifera secondo un andamento esponenziale, a cui poi è seguita una fase stazionaria in cui la popolazione rimane stabile, per poi subire una decrescita alla morte di parte della popolazione detta fase di morte.
+In un sistema chiuso, i batteri seguono una curva di crescita ben precisa, che inizia con una prima fase detta di latenza (lag) abbastanza breve in cui non si ha proliferazione del batterio. I batteri in media si dividono ogni 20 minuti, quindi in seguito alla fase lag si ha una fase log (logaritmo del numero di cellule vive) in cui il batterio prolifera secondo un andamento esponenziale, a cui poi è seguita una fase stazionaria in cui la popolazione rimane stabile, per poi subire una decrescita alla morte di parte della popolazione detta fase di morte, dovuta all'esaurimento dei nutrienti.
 ![[Screenshot 2025-01-02 at 17.25.43.png]]
 I batteri si riproducono mediante riproduzione asessuata in un processo chiamato scissione binaria. Le cellule figli sono perfettamente identiche alla cellula madre.
 La riproduzione avviene in seguito a determinati segnali ambientali.

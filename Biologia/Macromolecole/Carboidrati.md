@@ -12,7 +12,7 @@ Ulteriormente i carboidrati possono essere:
 
 ## Carboidrati Semplici
 
-![[Screenshot 2024-12-30 at 16.46.24.png]]
+![[Screenshot 2024-12-30 at 16.46.24.png | 700]]
 
 Tra i carboidrati semplici si identifica principalmente il Glucosio, che è la principale fonte di energia per le cellule.![[Screenshot 2024-12-30 at 16.48.18.png|300]]
 (Ossidazione completa di una molecola di glucosio)
@@ -42,7 +42,7 @@ Gli zuccheri in natura sono prevalentemente nella forma D.
 Nella forma ciclica possono formarsi due altri isomeri:
 - $\alpha$ -> Gruppo OH sotto il piano
 - $\beta$ -> Gruppo OH sopra il piano
-![[Screenshot 2024-12-30 at 17.29.51.png]]
+![[Screenshot 2024-12-30 at 17.29.51.png | 600]]
 
 Il fruttosio invece è un monosaccaride cheto-esoso a differenza del glucosio che è aldo-esoso.
 
@@ -52,6 +52,7 @@ Alcuni dei disaccaridi più importanti sono:
 - Lattosio -> galattosio + glucosio
 - Maltosio -> glucosio + glucosio
 ![[Screenshot 2024-12-30 at 17.33.27.png | 300]]![[Screenshot 2024-12-30 at 17.33.01.png | 300]] 
+------------
 
 ### Polisaccaridi
 Sono catene molto lunghe composte da centinaia di monosaccaridi.
@@ -78,20 +79,44 @@ Polimero del glucosio ed è la riserva energetica principale nelle cellule anima
 Negli epatociti e nelle cellule muscolari, il glicogeno si accumula sotto forma di granuli.
 
 #### Cellulosa
-Omopolimero del glucosio biopolimero più abbondante. Presenta una struttura compatta ed è la principale componente della parete cellulare vegetali.![[Screenshot 2024-12-30 at 18.29.14.png | 350]]
+Omopolimero del glucosio biopolimero più abbondante. Presenta una struttura compatta ed è la principale componente della parete cellulare vegetali.
+![[Screenshot 2024-12-30 at 18.29.14.png | 350]]
 
 #### Chitina
-Omopolimero lineare della N-Acetil-Glucosammina (amminozucchero), secondo biopolimero più presente sulla terra.
+Omo-polimero lineare della N-Acetil-Glucosammina (amminozucchero), secondo biopolimero più presente sulla terra.
 Principale componente della parete cellulare (funzione strutturale e funzione protettiva) dei funghi e dell'esoscheletro degli insetti.
 
 ### Carboidrati Modificati
-Amminozuccheri -> zuccheri con gruppo amminico al posto dell'ossidrile.![[Screenshot 2024-12-30 at 18.32.48.png]]
-![[Screenshot 2024-12-30 at 18.33.08.png]]
+I Carboidrati Modificati sono carboidrati in cui un gruppo ossidrilico viene sostituito con un altro gruppo funzionale, ad esempio:
+- Amminozuccheri -> zuccheri con gruppo amminico al posto dell'ossidrile.
 
-Gli amminozuccheri sono componenti principali dei glicolipidi. 
-Nei glicolipidi la molecola portante è la ceramide (sfingosina + acido grasso), ma la testa polare è data da un singolo monosaccaride nei cerebrosidi, oppure da una catena ramificata di zuccheri.
-![[Screenshot 2024-12-30 at 18.39.55.png| 400]]![[Screenshot 2024-12-30 at 18.40.18.png]]
+In particolare, gli amminozuccheri sono i componenti principali dei glicolipidi e delle glicoproteine.
+
+Glicolipidi -> Lipidi con un carboidrato legato mediante legame glicosidico. Il residuo di zucchero può essere un monosaccaride o un disaccaride. Ruoli principali sono simili alle glicoproteine:
+		- Recettori, particolarmente cruciali per il sistema immunitario
+		- Mantengono stabilità nella membrana cellulare
+Glicoproteine -> Proteine legate mediante legame glicosidico a carboidrati. Un polipeptide di questo tipo viene chiamato proteina glicosilata. Il processo per cui viene legato un zucchero alla catena polipeptidica é chiamato glicosilazione, ed avviene o nell'apparato di Golgi, o nei ribosomi. Principali funzioni sono:
+			- Anticorpi (Immunoglobuline)
+			- Collagene dei tessuti connettivi
+			- Recettori ed antigeni
+	Si possono legare allo zucchero:
+		- Asparagina -> N-Glicosilazione -> Inizia in Reticolo Endoplasmatico Ruvido, termina nel Golgi
+		- Treonina e Serina -> O-Glicosilazione -> Apparato di Golgi da inizio a fine
+
+![[Screenshot 2024-12-30 at 18.32.48.png | 550]]![[Screenshot 2024-12-30 at 18.33.08.png | 450]]
+
+
+Nei glicolipidi la molecola portante è la ceramide (ceramide = sfingosina + acido grasso).
+La sfingosina é un ammino-alcol.
+La testa polare è data da un singolo monosaccaride nei cerebrosidi, oppure da una catena ramificata di zuccheri nei gangliosidi.
+
+La ceramide é uno sfingolipide formato da una sfingosina legata ad un acido grasso.
+Un cerebroside é un SfingoGlicolipide -> Uno sfingolipide legato ad un carboidrato, in questo caso un monosaccaride (galattosio o glucosio).
+I Gangliosidi sono SfingoGlicolipidi con legato uno zucchero a catena ramificata
+![[Screenshot 2025-01-18 173804.png | 550]]
+![[Screenshot 2024-12-30 at 18.39.55.png| 400]]![[Screenshot 2024-12-30 at 18.40.18.png| 300]]
+
 
 ## Eteropolisaccaridi
-Componenti della matrice extracellulare o del tessuto connettivo
+Componenti della matrice extracellulare o del tessuto connettivo. Es -> Glicosoamminoglicani
 ![[Screenshot 2024-12-30 at 18.41.23.png | 350]]

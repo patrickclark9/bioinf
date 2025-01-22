@@ -46,21 +46,21 @@ Nucleoside + Pi(1,2,3) -> Nucleoside(mono,di,tri)fosfato
 Esempio: Adenosina + 3Pi -> Adenosinatrifosfato (ATP)
 
 L'ATP per esempio si forma per legame fosfoesterico con lo zucchero pentoso del nucleoside. I legami fosfoanidridici (tra gruppi fosfati) sono altamente energitici:
-![[Screenshot 2024-12-29 at 17.58.51.png]]
+![[Screenshot 2024-12-29 at 17.58.51.png | 650]]
 
 
 Gli acidi nucleici si formano per condensazione dei nucleotidi (base + zucchero + 1-3 gruppi fosfato)
 Base + Base -> (Polimero doppia catena) + $H_2O$ 
-![[Screenshot 2024-12-29 at 18.17.44.png]]
+![[Screenshot 2024-12-29 at 18.17.44.png | 650]]
 L'RNA forma legami idrogeno (intramolecolari), si ripiega su stesso formando varie strutture tridimensionali tra cui anche una doppia elica.
 Di RNA ne esistono diverse varianti:
 - tRNA -> transfer, trasferimento di amminoacidi/interazione tra ribosomi
 - mRNA -> messagero, stampo sintesi
 - rRNA -> macchina per sintesi proteina
 ## DNA
-Il DNA forma legami idrogeno intramolecolari, ha una struttura a doppia elica antiparallela e complementari, si allunga asimmetricamente ed ha una struttra relativamente costante.
-![[Screenshot 2024-12-30 at 10.33.49.png]]
-![[Screenshot 2024-12-30 at 10.34.03.png]]
+Il DNA forma legami idrogeno intramolecolari, ha una struttura a doppia elica antiparallela e complementari, si allunga asimmetricamente ed ha una struttura relativamente costante.
+![[Screenshot 2024-12-30 at 10.33.49.png | 550]]
+![[Screenshot 2024-12-30 at 10.34.03.png | 550]]
 
 | DNA                             | RNA                                  |
 | ------------------------------- | ------------------------------------ |

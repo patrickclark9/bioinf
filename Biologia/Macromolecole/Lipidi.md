@@ -60,7 +60,9 @@ Gli acidi grassi tendono ad aggregarsi. L'aggregazione di acidi grassi saturi co
 ### Animali e Vegetali
 Gli acidi grassi animali contengono acidi grassi a catena lunga, saturi e molto compatti. Sono solidi a temperatura ambiente e presentano alti punti di fusione
 
-Gli acidi grassi vegetali sono a catena corta, insaturi molto spesso, e poco compatti. Sono liquidi a temperatura ambiente e hanno bassi punti di fusione
+Gli acidi grassi vegetali sono a catena corta, insaturi molto spesso, e poco compatti. Sono liquidi a temperatura ambiente e hanno bassi punti di fusione.
+
+---------------------------
 
 
 ## Lipidi Semplici
@@ -80,11 +82,19 @@ Alcuni esempi di steroidi sono:
 Il colesterolo viene tipicamente assorbito da latte, burro e grassi animali.
 Può essere LDL (Low density Lipoprotein) o HDL (High density Lipoprotein).
 
-### Vitamine (Liposolubili)
-Piccole molecole che non vengono sintetizzate dal corpo umano, vengono unicamnete assunte tramite la dieta. Sono liposolubili. Vengono classificate in base alla solubilità (Liposolubili o Idrosolubili).
-La deficienza di alcune vitamine può portare a diverse problematiche. Carenze di vitamina D causano il rachitismo, la carenza di C causa lo scorbuto (fragilità vasale, mineralizzazione ossea)
+### Vitamine Liposolubili
+Piccole molecole che non vengono sintetizzate dal corpo umano, vengono unicamente assunte tramite la dieta.
+Le vitamine sono classificate in base alla loro solubilitá:
+- Liposolubili -> Simili agli acidi grassi -> Vitamina A D E K, Acido Lipolico
+- Idrosolubili -> Vitamina B C
+La deficienza di alcune vitamine può portare a diverse problematiche. 
+- Carenze di vitamina D causano il rachitismo -> Regola il metabolismo del calcio, utile nella calcificazione delle ossa
+- Carenza di C causa lo scorbuto (fragilità vasale, mineralizzazione ossea)
 ![[Screenshot 2024-12-31 at 00.46.21.png | 450]]
 
+----------------------
+
+## Lipidi Complessi
 ### Fosfolipidi
 I fosfolipidi sono una classe di lipidi essenziali componenti della membrana cellulare.
 Sono formati da una struttura con:
@@ -100,17 +110,20 @@ Liposomi -> struttura sferica più grande delle micelle (20nm -> diversi microme
 I liposomi si formano quando i fosfolipi vengono idratati in acqua, formando un bilayer chiuso in vescicole.
 Le micelle si formano quando la concentrazione di molecole anfipatiche raggiunge la concentrazione critica micellare (CMC).
 
-### Glicolipidi -> Estendere?
-Sono composti da una parte lipidica unita ad una parte glicidica. Sono anfipatici.
+### Glicolipidi
+Sono composti da una parte lipidica unita ad una parte glucidica. Sono anfipatici.
+Molto simili ai fosfolipidi, con la differenza che alla terza glicerina é legata un glucide e non un gruppo fosfato.
 Ricoprono una funzione strutturale nelle membrane, una funzione di riconoscimento cellulare e di segnalazione cellulare.
 Tipicamente:
-Glicerolo/Sfingosina + componente glucidica.
-(glicerosfingolipi o sfingoglicolipidi).
-![[Screenshot 2024-12-31 at 01.37.35.png]]
-I glicolipi sono presenti nelle membrane delle cellule vegetali in forma glicerosfingolipidi.
+Glicerolo o Sfingosina + componente glucidica.
+La sfingosina é un ammino alcol, contenente quindi sia gruppi amminici NH sia gruppi ossidrilici OH. Sostituisce il glicerolo: al gruppo amminico viene legato un acido grasso, lo zucchero ad uno degli alcoli.
+(gliceroglicolipidi o sfingoglicolipidi).
 
-Gli sfingoglicolipi compongono i cerebrosidi (carboidrato singolo) ed i gangliosidi (carboidrati multipli)
-![[Screenshot 2024-12-31 at 01.39.40.png]]![[Screenshot 2024-12-31 at 01.40.09.png]]
+![[Screenshot 2024-12-31 at 01.39.40.png | 150]]![[Screenshot 2024-12-31 at 01.40.09.png | 150]]![[Screenshot 2024-12-31 at 01.37.35.png | 450]]
+
+I glicolipidi sono presenti nelle membrane delle cellule vegetali in forma gliceroglicolipidi.
+
+Gli sfingoglicolipidi compongono i cerebrosidi (carboidrato singolo) ed i gangliosidi (carboidrati multipli)
 
 ### Lipoproteine
 Le lipoproteine sono complessi di lipidi e proteine che trasportano grassi colesterolo o altri lipidi. Poichè i lipidi sono insolubili in acqua, le lipoproteine consentono il trasporto attraverso un ambiente acquoso, come il corpo umano.

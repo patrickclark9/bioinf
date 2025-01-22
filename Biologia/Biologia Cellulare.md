@@ -93,8 +93,7 @@ La mutazione dei virus è anche a base di diversi salti di specie.
 
 I virus possono avere genomi a DNA o RNA
 - RNA -> entro 30 kb
-	- Retrovirus -> Virus ad RNA che utilizzano la trascrittasi inversa per convertire il proprio genoma da RNA (nel citpoplasma) in DNA migrando successivamente nel nucleo e comportandosi come un virus a DNA
-- DNA -> entro 1250kb (1.25 mb)
+		- Retrovirus -> Virus ad RNA che utilizzano la trascrittasi inversa 	
 Possono attaccare quasi tutti gli organismi viventi: batteri, animali, funghi, piante.
 Ogni specie ha un suo virus.
 Capside -> rivestimento proteico
@@ -103,6 +102,7 @@ Pericapside -> bilayer fosfolipidico
 Strutturalmente possono essere:
 Nudi -> Composto da solo capside ed acido nucleico
 Rivestiti -> Composti da capside, pericapside ed acido nucleico
+Il pericapside puó essere ottenuto dalla cellula ospite. Il pericapside puó aiutare il virus rendendolo invisibile al sistema immunitario della cellula ospite. Il pericapside li rende vulnerabili ai cambiamenti ambientali, sono piú semplici da estirpare perché la sola inibizione dalla formazione del pericapside impedisce la replicazione. In compenso si adattano facilmente al sistema immunitario. Sono vulnerabili a calore, essicazione, saponi e detergenti.
 ![[Screenshot 2024-12-31 at 16.40.52.png | 250]]
 #### Ciclo Vitale
 ![[Screenshot 2024-12-31 at 16.41.53.png | 300]]

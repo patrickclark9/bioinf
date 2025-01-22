@@ -87,7 +87,7 @@ Le proteine periferiche: Legate alla membrana tramite interazioni ioniche o lega
 
 Lo strato piú esterno della membrana plasmatica é costituito da:
 - Glicoproteine -> oligosaccaridi, legami O ed N glicosidici
-- Proteoglicani -> 1+ catene polisaccaride lunghe 
+- Proteoglicani -> 1+ catene polisaccaride lunghe (la percentuale di zuccheri nei peptidoglicani é maggiore rispetto alle glicoproteine)
 - Glicolipidi
 Glicoproteine, proteoglicani e glicolipidi si trovano dal lato non citosolico e contribuiscono a formare il **glicocalice**
 É presente nella maggior parte delle cellule eucariotiche, animali e vegetali, e nei batteri (capsula).
@@ -106,7 +106,7 @@ Il trasporto puó essere:
 - Attivo -> Richiede energia, tipicamente ATP per pompare sostanze (es. Sodio-Potassio). Avviene contro gradiente di carica/concentrazione ed é direzionale. Tipologie:
 	- Sistema di Trasporto attivo primario -> Utilizzo diretto di ATP per pompare sostanze (es. Na+/K+-ATPasi). Richiede energia chimica (idrolisi ATP)
 	- Sistema di Trasporto attivo secondario -> Utilizzo di energia da un gradiente di concentrazione elettrochimico esistente per il trasporto di sostanze (Es.gradiente di concentrazione ionica derivante da trasporto attivo primario alimenta un trasporto secondario):
-		- Simporto -> Entrambe le sostanze si muovono nella stessa direzione (es. co-trasportatore sodio-glucosio)
+		- Simporto -> Entrambe le sostanze si muovono nella stessa direzione (es. co-trasportatore sodio-glucosio: Entra nella cellula una molecola di glucosio in simporto a due ioni di sodio, contro gradiente)
 		- Antiporto -> Le sostanze si muovono in direzioni opposte (es. Pompa Sodio-Potassio (Sodio esce, Potassio entra))
 	- Trasporto Macromolecole -> Trasporto Vescicolare -> Trasporto di macromolecole attraverso vescicole:
 		- Endocitosi
@@ -159,7 +159,7 @@ Struttura:
 - Proteine (In-Out) -> Fattori di replicazione, fattori di trascrizione, destinate ad altre compartimenti cellulari
 - Ribosomi (In-Out) -> rRNA, proteine ribosomali, Assemblaggio (In), funzione (Out)
 - RNA (soprattutto Out) -> mRNA, rRNA-proteine
-Per il trasporto di queste molecole sfrutta il trasporto attivo (dipendente da energia). In linea di massima i pori nucleari fanno aentrare proteine e proteine ribosomali, ed espellono RNA e subunitá ribosomali nel citoplasma.
+Per il trasporto di queste molecole sfrutta il trasporto attivo (dipendente da energia). In linea di massima i pori nucleari fanno entrare proteine e proteine ribosomali, ed espellono RNA e subunitá ribosomali nel citoplasma.
 
 ### Nucleoscheletro (Lamina fibrosa, Rete fibrillare, Matrice Nucleare)
 É una rete di proteine periferiche e filamenti proteici, insolubili, immediatamente sotto la membrana nucleare interna. Mantiene la forma del nucleo, ha ruolo nella formazione e distruzione dell'involucro nucleare durante la divisione cellulare, lega la cromatina, acquisendo funzione di regolazione della replicazione e trascrizione.
@@ -205,7 +205,7 @@ I ribosomi sono localizzati su:
 
 
 ## Sistema endomembranoso
-Il sistema endomembranoso è un insieme di membrane presenti nel citoplasma delle cellule eucariote. Esso comprende la membrana cellulare e tutta una serie di organuli che includono l'involucro nucleare, il reticolo endoplasmatico, l'apparato del Golgi, i lisosomi, le vescicole e i vacuoli. Tutte queste strutture interagiscono fra loro e svolgono principalmente la funzione di produrre lipidi, enzimi e proteine destinati a essere secreti o a comporre la membrana cellulare. Non fanno parte del sistema endomembranoso né i mitocondri né i plastidi. 
+Il sistema endomembranoso è un insieme di membrane presenti nel citoplasma delle cellule eucariote. Esso comprende la membrana cellulare e tutta una serie di organuli che includono l'involucro nucleare, il reticolo endoplasmatico, l'apparato del Golgi, i lisosomi, le vescicole e i vacuoli. Tutte queste strutture interagiscono fra loro e svolgono principalmente la funzione di produrre lipidi, enzimi e proteine destinati a essere secreti o a comporre la membrana cellulare. I vari componenti sono collegati tra loro mediante contatto diretto o attraverso il trasferimento di frammenti di membrana attraverso vescicole. Non fanno parte del sistema endomembranoso né i mitocondri né i plastidi. 
 La cellula quindi é composta da compartimenti e canali per la sintesi,l'immagazzinamento e la distribuzione di molecole.
 Tutti i compartimenti sono interconnessi ed in ogni compartimenti avvengono trasformazioni.
 La superficie di questo strato é ovviamente maggiore a quella della membrana cellulare.
@@ -288,7 +288,7 @@ Struttura:
 - Spazio Intermembrana -> Composizione simile al citosol, contiene enzimi specifici
 - Matrice -> Ricca di proteine, contiene DNA, ribosomi, enzimi per il ciclo di Krebs ed ossidazione di acidi grassi
 I mitocondri sono quasi autonomi geneticamente, possiedono infatti il proprio genoma. Il 95% delle proteine mitocondriali sono sintetizzate dal DNA nucleare. Ha un DNA lungo circa 16kb, 22tRNA, 2 rRNA (12S e 16S), 13 geni per catena respiratoria (ATP sintasi, sub COX, subunitá NADH-DH).
-
+![[Pasted image 20250120174807.png | 450]]
 Nella matrice mitocondriale avviene il ciclo di Krebs e la Beta-ossidazione.
 Ciclo di Krebs:
 - Citrato sintasi
@@ -338,10 +338,11 @@ La fusione avviene tra lisosoma e:
 - Particelle o cellule esterne
 - Organuli interni
 La fusione avviene grazie a recettori di membrana.
+Lisosomi Terziari -> Corpi residui che resistono alla digestione, rimangono sotto forma di resti non digeribili. Vengono eliminati per esocitosi.
 
 Struttura:
 - Un solo strato di bilayer lipidico, che separa l'interno acido del lisosoma dal citoplasma
-- Enzimi idrolotici come proteasi lipasi nucleasi e carboidrasi, che operano principalmente in ambiente acido
+- Enzimi idrolitici come proteasi lipasi nucleasi e carboidrasi, che operano principalmente in ambiente acido
 - Ambiente acido interno, tenuto attivo ed acido da un pompa protonica H+-ATPasi. La pompa si trova all'interno della membrana lisosomale.
 
 Funzioni:
