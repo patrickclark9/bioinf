@@ -61,4 +61,26 @@ Il numero di legami idrogeno per unità di massa è generalmente più elevato ne
 Anche se l'energia di formazione di un legame idrogeno intramolecolare tra due gruppi polari di una macromolecola viene in gran parte annullata, in quanto contemporaneamente si rompono le interazioni tra gli stessi gruppi polari e l'acqua. Il rilascio di molecola d'acqua libere determinato dalle interazioni intramolecolari rappresenta la forza entropica trainante per l'avvolgimento della macromolecola.
 La maggior parte della variazione di energia libera che si verifica quando in una proteina si formano interazioni deboli deriva quindi dall'aumento dell'entropia della soluzione acquosa circostante, per effetto dell'ammassamento delle superfici idrofobiche. In questo modo viene controbilanciata la perdita di entropia conformazionale dovuta all'assunzione della conformazione ripiegata da parte del polipeptide.
 L'effetto idrofobico è importante per stabilizzare la conformazione. L'interno di una proteina è in genere costituito da un nucleo di catene laterali  idrofobiche addensate. È anche importante che tutti i gruppi polari o carichi all'interno delle proteine trovino le controparti corrette per la formazione di legami idrogeno e di interazioni ioniche. Anche se un legame idrogeno contribuisce poco alla stabilità della struttura nativa, la presenza di gruppi che possono formare legami idrogeno nei nuclei idrofobici delle proteine senza controparte corretta può essere destabilizzante, conformazioni che contengono tali gruppi sono termodinamicamente improbabili. La variazione di energia libera che si ha tra questi gruppi e le loro controparti nel solvente può essere superiore alla differenza di energia libera tra lo stato ripiegato e lo stato disordinato. 
-I legami idrogeno si formano cooperativamente (un legame stimola la formazione di un altro legame) durante la formazione delle strutture secondarie che rendono ottimale i legami idrogeno. I legami idrogeno sono fondamentali nel ripiegamento delle proteine
+I legami idrogeno si formano cooperativamente (un legame stimola la formazione di un altro legame) durante la formazione delle strutture secondarie che rendono ottimale i legami idrogeno. I legami idrogeno sono fondamentali nel ripiegamento delle proteine.
+
+L'interazione tra gruppi con cariche opposte forma una coppia ionica, o legame salino, che ha effetto sia destabilizzante sia stabilizzante sulla struttura delle proteine.
+Come con i legami idrogeno, le catene laterali cariche degli amminoacidi interagiscono con l'acqua e con i sali quando la proteina ha una struttura disordinata.
+La perdita di queste interazioni deve essere presa in considerazione quando si valuta l'effetto di un legame salino sulla stabilità di una proteina ripiegata.
+La forza dei legami salini aumenta quando passando da un ambiente a bassa costante dielettrica, cioè da un solvente acquoso polare ($\epsilon = 80$) all'interno non polare di una proteina $\epsilon = 4$.
+I legami salini quindi possono contribuire significativamente a stabilizzare la struttura delle proteine, soprattutto quelli in parte o del tutto compresi all'interno della proteina.
+Questo spiega la presenza di molti legami salini all'interno delle proteine degli organismi termofili. Le interazioni ioniche limitano anche la flessibilità delle proteine e conferiscono alla struttura una forma caratteristica che l'effetto idrofobico non conferisce.
+
+
+Le interazioni di Van der Walls sono un altro tipo di interazione debole che hanno effetto significativo in ambiente atomico altamente compattato di una proteina.
+Queste sono interazioni dipolo-dipolo che coinvolgono:
+- i dipoli elettrici permanenti presenti in alcuni gruppi
+- i dipoli transitori che derivano da fluttuazioni delle nuvole elettroniche che circondano gli atomi all'interno di gruppi funzionali
+- i dipoli indotti, generati da interazioni tra un atomo ed un altro appartenente ad un dipolo permanente o transitorio
+La forza attrattiva si forma quando gli atomi si avvicinano. Agisce solo a livello delle piccole distante intermolecolari: 0.3-0.6 nm. Come i legami idrogeno sono molto deboli, quindi individualmente contribuiscono pco alla stabilità. In una proteina organizzata o all'interno di una regione di contatto tra due proteine, o tra proteine ed una molecola con complementarietà di superficie, queste interazioni possono diventare numerose.
+
+### Regole per le strutture
+1. I residui idrofobici per lo più si trovano all'interno delle proteine, lontano dall'acqua
+2. Il numero di legami idrogeno e delle interazioni ioniche nella proteina è massimo, riducendo in questo modo il numero di legami idrogeno dei gruppi ionici non correttamente appaiati.
+Queste regole si applicano alla maggior parte delle strutture proteiche.
+
+Proteine di membrana e intrinsecamente disordinate seguono regole diverse, a causa delle loro particolari funzione o delle proprietà dell'ambiente in cui si trovano. Le interazioni debole svolgono un ruolo importante anche per questo tipo di proteine.
