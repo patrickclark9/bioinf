@@ -84,3 +84,26 @@ La forza attrattiva si forma quando gli atomi si avvicinano. Agisce solo a livel
 Queste regole si applicano alla maggior parte delle strutture proteiche.
 
 Proteine di membrana e intrinsecamente disordinate seguono regole diverse, a causa delle loro particolari funzione o delle proprietà dell'ambiente in cui si trovano. Le interazioni debole svolgono un ruolo importante anche per questo tipo di proteine.
+
+
+### Il legame peptidico
+Il legame peptidico è rilevante per determinare la conformazione di un polipeptide.
+Gli atomi di carbonio $\alpha$ di residui amminoacidici adiacenti sono separati da tre legami covalenti che si susseguono:
+$$C_\alpha - C - N - C_\alpha$$
+C-N nei legami peptidici è leggermente più corto di C-N in ammine primarie. Gli atomi del legame peptidico sono complanari.
+L'ossigeno ha una carica negativa parziale e l'azoto ha una carica positiva parziale, generando quindi così un dipolo elettrico. I sei atomi del gruppo peptidico giacciono sullo stesso piano e l'atomo di ossigeno del gruppo carbonilico si trova in trans con l'atomo di idrogeno legato all'azoto ammidico.
+I legami C-N non possono quindi ruotare liberamente, a causa del loro parziale carattere di doppio legame.
+È permessa la rotazione tra $N-C_\alpha$ e $C_\alpha-C$. Lo scheletro della catena polipeptidica può quindi essere considerata come una serie di piani rigidi in cui i piani consecutivi hanno in comune un punto di rotazione in corrispondenza di $C_\alpha$. 
+La rigidità del legame peptidico limita severamente il numero di conformazioni assumibli.
+La conformazione del peptide è infine definita da tre angoli di torsione:
+- $\phi$
+- $\psi$
+- $\omega$
+Riflettono la rotazione intorno a ciascuno dei tre legami che si ripetono nello scheletro del peptide.
+Due vettori di legame successivi descrivono un piano, tre vettori descrivono due piani.
+L'angolo che si instaura tra questi due piani è quello che dobbiamo misurare per ottenere la conformazione della proteina.
+
+In teoria $\phi$ e $\psi$ possono avere qualsiasi valore compreso tra 180 e -180 gradi, ma in realtà alcuni valori non permessi a causa di ingombri sterici tra atomi dello scheletro carbonioso e le catene laterali degli amminoacidi. Per questo motivo la conformazione in cui $\phi$ e $\psi$ hanno valore 0 non è permessa. Va considerata come punto di riferimento per la descrizione degli angoli.
+Il grafico di Ramachandran mostra i valori permessi per $\phi$ e $\psi$.
+
+[[Strutture Secondarie]]
