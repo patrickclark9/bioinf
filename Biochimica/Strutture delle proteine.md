@@ -71,7 +71,7 @@ I legami salini quindi possono contribuire significativamente a stabilizzare la 
 Questo spiega la presenza di molti legami salini all'interno delle proteine degli organismi termofili. Le interazioni ioniche limitano anche la flessibilità delle proteine e conferiscono alla struttura una forma caratteristica che l'effetto idrofobico non conferisce.
 
 
-Le interazioni di Van der Walls sono un altro tipo di interazione debole che hanno effetto significativo in ambiente atomico altamente compattato di una proteina.
+Le interazioni di Van der Waals sono un altro tipo di interazione debole che hanno effetto significativo in ambiente atomico altamente compattato di una proteina.
 Queste sono interazioni dipolo-dipolo che coinvolgono:
 - i dipoli elettrici permanenti presenti in alcuni gruppi
 - i dipoli transitori che derivano da fluttuazioni delle nuvole elettroniche che circondano gli atomi all'interno di gruppi funzionali

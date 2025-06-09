@@ -26,14 +26,14 @@ Le cellule hanno quindi elaborato e perfezionato le vie per la degradazione di q
 Le proteine si sono evolute per svolgere la loro funzione in particolari condizioni ambientali. In ambienti diversi possono andare incontro a variazioni strutturali anche di notevole entità.
 La perdita della struttura tridimensionale sufficiente alla perdita di funzione è detta **denaturazione.**
 La denaturazione delle proteine può avvenire inoltre mediante:
-- Calore: L'effetto del calore è difficlmente prevedibile nelle proteine. Se la temperatura aumenta gradualmente, la proteina rimane stabile finchè bruscamente non si denatura. In molti batteri ed archea termofili le proteine si sono evolute portando agli estremi alcune generalizzazioni descritte. Esse hanno elevate densità di residui carichi in superficie, residui idrofobici impachettati ancora più strettamente e ripiegamenti resi meno flessibili da reti di coppie di ioni che rendono queste proteine meno suscettibili al calore.
+- Calore: L'effetto del calore è difficilmente prevedibile nelle proteine. Se la temperatura aumenta gradualmente, la proteina rimane stabile finché bruscamente non si denatura. In molti batteri ed archea termofili le proteine si sono evolute portando agli estremi alcune generalizzazioni descritte. Esse hanno elevate densità di residui carichi in superficie, residui idrofobici impachettati ancora più strettamente e ripiegamenti resi meno flessibili da reti di coppie di ioni che rendono queste proteine meno suscettibili al calore.
 - pH Estremi -> Alterano la carica netta delle proteine, causando repulsioni elettrostatiche e rottura dei legami idrogeno
 - Solventi organici miscibili con l'acqua, come alcol, acetone -> Rompono interazione idrofobiche che stabilizzano il nucleo
 - Soluti come l'urea, cloruro di guanina e detergenti -> Come i solventi organici
 Gli agenti denaturanti diversi dal calore hanno un effetto blando, poichè impattano solo una parte, lasciando intatti i legami covalenti delle catene peptidiche. Le strutture che si ottengono con questi agenti ovviamente non sono necessariamente le stesse.
 
 La denaturazione spesso porta alla precipitazione delle proteine, conseguenza data dalla formazione di aggregati proteici che si ha nel caso in cui si associno le superfici idrofobiche nel momento in cui queste vengono esposte. Gli aggregati sono spesso disordinati.
-Esempio -> albume uovo bollito è un precepitato proteico
+Esempio -> albume uovo bollito è un precipitato proteico
 
 ### Rinaturazione
 La prova più importante che conferma che la sequenza amminoacidica determina la struttura terziaria è data dal processo di rinaturazione.
