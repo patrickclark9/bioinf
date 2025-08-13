@@ -162,3 +162,5 @@ Forma un complesso con le serina proteasi in rapporto 1 a 1, in particolar modo 
 Questi due sistemi di regolazione, insieme a quello di TFPI, aiutano a stabilire un livello o una soglia di esposizione al TF da raggiungere per attivare la cascata della coagulazione.
 
 I portatori di difetti genici che riducono i livelli di proteina C o di ATIII presentano rischi alti di trombosi.
+
+[[Cinetica Enzimatica]]

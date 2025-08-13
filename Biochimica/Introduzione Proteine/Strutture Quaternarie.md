@@ -87,4 +87,4 @@ Hsp60 utilizza un processo simile, ma al posto di GroES vi sono delle protrusion
 Infine, il percorso di ripiegamento di alcune proteine richiede la presenza di due enzimi che catalizzano reazioni di isomerizzazione.
 La proteina disolfuro isomerasi (PDI) è un enzima ampiamente distribuito che catalizza l'interscambio, o rimescolamento, dei ponti disolfuro, fino a che non si formano i ponti della conformazione nativa.
 Tra le sue funzioni, la PDI catalizza l'eliminazione di intermedi ripiegati in cui sono presenti ponti disolfuro non corretti. La prolil cis-trans isomerasi (PPI) dei peptidi catalizza l'interconversione cis-trans dei legami peptidici contenenti residui di prolina un processo che può essere considerato la fase lenta del ripiegamento delle proteine che contengono legami peptidici della prolina in conformazione cis.
-
+[[Funzione delle proteine]]

@@ -94,3 +94,9 @@ Come detto, il TCA è una via anfibolica, ovvero è utile sia per gli anabolismi
 $\alpha$ chetoglutarato e ossalacetato possono essere sottratti al ciclo e possono essere utilizzati per la produzione di aspartato e glutammato. Attraverso aspartato e glutammato, gli atomi di carbonio dell'ossalacetato e del $\alpha$ chetoglutarato possono essere usati per la produzione di altri amminoacidi o nucleotidi. Il succinil-CoA può essere usato per la sintesi dell'anello porfirinico del gruppo eme.
 Quando vengono sottratti intermedi al ciclo, essi vengono rimpiazzati mediante reazioni anaplerotiche, quindi la concentrazione di intermedi del ciclo rimane quasi costante.
 La biotina (vitamina, si trova in molti cibi, sintetizzata dai batteri intestinali) è richiesta per la reazione della piruvato carbossilasi. L'attività della biotina viene inibita dall'avidina, presente nell'albume d'uovo, e può causare diverse malattie. La biotina ha un ruolo fondamentale, dato che è un trasportatore specializzato di gruppi ad un atomo di carbonio nella loro forma più ossidata, ovvero la CO2. I gruppi carbossilici sono attivati da una reazione che idrolizza ATP e lega CO2 alla biotina legata all'enzima. Questa CO2 attivata viene quindi donata ad un accettore (il piruvato) in una reazione di carbossilazione a formare ossalacetato.
+[[Glicolisi]]
+[[Fosforilazione Ossidativa]]
+
+[[Biosintesi di Lipidi]]
+[[Gluconeogenesi]]
+[[Biosintesi degli Acidi Grassi]]

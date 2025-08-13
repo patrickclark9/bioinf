@@ -113,3 +113,5 @@ L'energia conservata in questo gradiente è detta anche forza motrice protonica,
 - L'energia potenziale chimica dovuta alla differenza di concentrazione di una specie chimica
 - L'energia del potenziale elettrico, che si genera nella separazione delle cariche che si ottiene quando un protone si sposta attraverso la membrana senza che vi sia un flusso contrario di pari carica
 
+[[ATP Sintasi]]
+[[Beta Ossidazione]]

@@ -157,3 +157,5 @@ In assenza di BPG l'emoglobina viene convertita più facilmente nello stato R.
 
 La regolazione dell'ossigeno da parte del BPG è essenziale per lo sviluppo fetale. L'emoglobina fetale deve avere un'affinità maggiore per l'O2, superiore a quella dell'emoglobina materna, dato che deve ottenere ossigeno dal sangue materno.
 Emoglobina fetale forma subunità $\gamma$ formando composizioni $\alpha_2 \gamma_1$. HbF emoglobina fetale ha affinità bassa per BPG e di conseguenza alta per O2.
+
+[[Enzimi e Catalisi]]
