@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Ciclo dell'acido citrico
 Il piruvato prodotto dalla glicolisi viene ulteriormente ossidato ad H2O e CO2 nei processi aerobici, a differenza di quelli anaerobici in cui il glucosio viene ridotto a lattato etanolo o qualche altro prodotto di fermentazione.
 In fase aerobica, il catabolismo del piruvato è chiamato respirazione, più precisamente respirazione cellulare.

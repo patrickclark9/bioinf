@@ -1,3 +1,6 @@
+---
+publish: true
+---
  [[Amminoacidi]]
 
 # Introduzione alle proteine

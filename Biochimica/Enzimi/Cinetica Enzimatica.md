@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Cinetica degli Enzimi
 Uno dei fattori che modificano la velocità di una reazione catalizzata da un enzima purificato è la concentrazione del substrato \[S].
 Gli studi sull'effetto del substrato vengono complicati ulteriormente dal fatto che la concentrazione di S varia durante il corso di una reazione, man mano che il substrato viene convertito in prodotto. Per eliminare questo problema, si può valutare $V_0$ la velocità iniziale.

@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Beta Ossidazione
 
 Le cellule ottengono lipidi tramite:

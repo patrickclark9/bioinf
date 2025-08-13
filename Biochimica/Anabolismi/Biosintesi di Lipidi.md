@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Biosintesi di trigliceridi
 
 La maggior parte degli acidi grassi ingeriti o sintetizzati segue una di due possibile vie:

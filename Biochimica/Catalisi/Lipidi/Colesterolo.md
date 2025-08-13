@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Colesterolo
 
 Il colesterolo è il lipide più noto, precursore per molti ormoni steroidei e degli acidi biliari. Il colesterolo è essenziale per molti animali e nell'uomo, ma non è richiesto nella dieta, perchè sintetizzabile.

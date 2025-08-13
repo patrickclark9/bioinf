@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # La gluconeogenesi
 
 Il glucosio ha un ruolo insostituibile nel metabolismo. Alcuni tessuti dipendono da esso e funzionano quasi esclusivamente grazie al glucosio.

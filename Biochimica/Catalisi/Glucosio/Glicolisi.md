@@ -1,3 +1,6 @@
+---
+publish: true
+---
 La glicolisi consiste nella scissione di una molecola di glucosio. La glicolisi è la via centrale per il catabolismo del glucosio, attraverso la quale passa la quantità più consiste di atomi di carbonio nella maggior parte delle cellule. La demolizione del glucosio è la sola fonte di energia metabolica in alcuni tessuti di mammifero ed in alcuni tipi di cellule.
 
 La demolizione del glucosio in due molecole di piruvato avviene in 10 tappe, le prime 5 delle quali costituiscono la fase preparatoria.

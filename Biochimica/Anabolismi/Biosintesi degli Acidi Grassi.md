@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Anabolismo degli acidi grassi
 La biosintesi degli acidi grassi e la degradazione degli acidi grassi sono due vie differenti, catalizzate da una serie di reazioni e di enzimi diversi, localizzate quindi in compartimenti cellulari differenti.
 L'intermedio malonil-CoA inoltre partecipa alla biosintesi ma non entra nella via degradativa.

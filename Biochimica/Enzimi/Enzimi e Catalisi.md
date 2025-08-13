@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Introduzione di enzimi
 Gli enzimi sono per lo più proteine, fatta eccezioni per alcuni RNA catalitici. La loro funzione principale è quella di catalizzare reazioni, dato che le molecole biologiche sono relativamente stabili a pH neutro temperatura ambiente ed ambiente acquoso della cellula, alcune reazioni sarebbero estremamente lente senza l'utilizzo di fattori enzimatici. Molte reazioni inoltre possono non essere spontanee o anche molto improbabili nell'ambiente cellulare, come la formazione transitoria di un intermedio catalitico instabile o la collisione tra due o più molecole con un certo orientamento, essenziale per la reazione.
 Le reazioni necessarie per digerire le sostanza nutrienti, per inviare segnali nervosi o per contrarre un muscolo non avvengono a velocità sufficiente senza enzimi.

@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Catena respiratoria mitocondriale
 I tessuti con alto metabolismo aerobico (cervello, muscolo scheletrico e cardiaco, occhi) contengono migliaia o centinaia di mitocondri per cellula, e i mitocondri di cellule con elevata attività metabolica hanno maggiore numero di creste più densamente compatte. I mitocondri si dividono per scissione durante la divisione cellulare ed in alcune circostante possono compattarsi per formare strutture più grandi maggiormente estese.
 Condizioni di stress come la presenza di inibitori del trasferimento di elettroni o mutazioni in un trasportatore di elettroni possono innescare la scissione e a volte la mitofagia, ovvero la rottura dei mitocondri e il riciclo degli amminoacidi, dei nucleotidi e dei lipidi rilasciati. Quando la situazione di stress tende a ridursi, i mitocondri di piccole dimensioni si fondono per formare lunghi e sottili organelli tubulari.

@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Struttura primaria
 La struttura primaria delle proteine rappresenta la sequenza amminoacidica lineare che compone il peptide.
 Questa struttura è la struttura con il livello di complessità più basso.

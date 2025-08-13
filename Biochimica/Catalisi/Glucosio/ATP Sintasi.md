@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Modello Chemiosmotico
 Nel modello chemiosmotico, l'energia elettrochimica contenuta nella differenza di concentrazione protonica e nella separazione delle cariche attraverso la membrana mitocondriale interna, cioè la forza motrice protonica, porta alla sintesi di ATP quando il flusso protonico inverte la sua direzione e i protoni ritornano nella matrice attraverso un canale protonico associato all'ATP sintasi.$$ADP + P_i + nH^+_P \rightarrow ATP +H_2O + nH^+_N$$
 Una trasformazione chemiosmotica è una reazione che comporta simultaneamente una reazione chimica ed un processo di trasferimento. Si chiama anche accoppiamento chemiosmotico, che fa riferimento alla dipendenza della sintesi di ATP nei mitocondri dal flusso degli elettroni attraverso la catena respiratoria. Nessuno dei due processi avviene senza l'altro.

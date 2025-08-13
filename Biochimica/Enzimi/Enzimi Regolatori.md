@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Enzimi Regolatori
 In molti processi metabolici, gruppi di enzimi catalizzano reazioni sequenziali per far avanzare processi metabolici, come la demolizione a molte tappe del glucosio in lattato o la sintesi di un amminoacido. Il prodotto di reazione di un enzima diventa il substrato dell'enzima successivo.
 

@@ -1,3 +1,6 @@
+---
+publish: true
+---
 Le proteine svolgono le loro funzioni interagendo con altre molecole. La conoscenza della struttura è fondamentale per comprenderne la funzione.
 Le proteine sono molecole dinamiche, le loro interazioni sono influenzate da variazioni conformazionali che possono essere limitate, ma abbastanza ambie da influenzare le loro funzioni fisiologiche.
 

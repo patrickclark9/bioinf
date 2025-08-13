@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Strutture Terziarie
 La disposizione nello spazio di tutti gli atomi di una proteine viene definita come struttura terziaria.
 La struttura terziaria tiene conte delle relazioni a lungo raggio della sequenza amminoacidica.

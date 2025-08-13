@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Strutture Secondarie
 Le strutture secondarie si riferisconoad un segmento polipeptidico e descrivono l'organizzazione spaziale della catena principale, senza tener conto della conformazione delle catene laterali o delle relazioni tra gli altri segmenti della proteina.
 Si dice *regolare* se la struttura presenta angoli $\phi$ e $\psi$ invariati all'interno del segmento.

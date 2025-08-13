@@ -1,3 +1,6 @@
+---
+publish: true
+---
 # Introduzione
 Le proteine sono composte da amminoacidi legate tra loro attraverso uno specifico legame covalente. Questi sono chiamati *residui amminoacidici*, residui poichè il legame si forma per condensazione, quindi gli amminoacidi perdono gli elementi di una molecola d'acqua. Ogni proteina può essere idrolizzata nei rispettivi amminoacidi costitutivi.
 I nomi degli amminoacidi derivano dalla sorgente di scoperta (asparagi -> asparagina).
