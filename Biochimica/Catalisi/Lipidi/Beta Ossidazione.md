@@ -53,7 +53,6 @@ L'acil-CoA sintetasi cataliza la formazione di un legame tioestere tra il gruppo
 La reazione avviene in due tappe e coinvolge la formazione di un intermedio acil-adenilato.
 Gli acil-CoA come l'acetil-CoA sono composti ad alta energia. La loro idrolisi ad acidi grassi liberi e CoA ha una variazione di energia libera molto negativa. La formazione degli acil-CoA è resa favorevole dall'idrolisi di due legami ad alta energia dell'ATP.
 Il pirofosfato nella reazione di attivazione viene idrolizzato immediatamente da un secondo enzima, la pirofsfatasi inorganica che trascina la reazione precedente nella formazione dell'acil-CoA:$$Acido \space grasso + CoA +ATP \leftrightarrow acil\text-CoA + AMP + 2P_i$$
-i
 $$\Delta G '\degree = -34kj/mol$$
 Gli acil-CoA formati sul lato citosolico della membrana mitocondriale esterna possono essere trasportati nel mitocondrio per essere ossidati oppure utilizzati nel citosol per sintetizzare lipidi di membrana.
 Gli acidi grassi destinati all'ossidazione nel mitocondrio sono legati transitoriamente al gruppo ossidrilico della carnitina, formando acil-carnitina, la seconda reazione dello shuttle.
