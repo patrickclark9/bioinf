@@ -58,7 +58,7 @@ Alcuni, tra cui glicina istidina e cisteina sono difficilmente caratterizzabili,
 	- **Gruppi R carichi negativamente (acidi):** I due amminoacidi che hanno gruppi R con una carica negativa netta a pH 7.0 sono aspartato ed il glutammato, ognuno dei quali ha un secondo gruppo carbossilico
 #### Amminoacidi modificati
 Alcuni amminoacidi possono subire modificazioni chimiche quando assemblati in una proteina.
-Tipicamente questi si trovano solo tra gli amminoacidi che contengono proteine. Tra questi si hanno la 4-idrossiprolina, la 5-idrossilisina, derivati appunto dalla prolina e dalla lisina. La prima si trova nelle pareti cellulare delle cellule vegetali. Entrambe si trovano nel collagene.
+Tipicamente questi si trovano solo tra gli amminoacidi che compongono proteine. Tra questi si hanno la 4-idrossiprolina, la 5-idrossilisina, derivati appunto dalla prolina e dalla lisina. La prima si trova nelle pareti cellulare delle cellule vegetali. Entrambe si trovano nel collagene.
 Caso particolare è la selenocisteina, in cui il selenio sostiuisce l'atomo di zolfo con il selenio nella cisteina. In realtà questo è un derivato della serina.
 Alcuni residui amminoacidici possono essere modificati nelle proteine transitoriamente, per aumentarne o diminuirne l'attività proteica.
 Tipiche modificazioni sono Fosforilazione, Ubiquitazione, Metilazione, Glicosilazione.
