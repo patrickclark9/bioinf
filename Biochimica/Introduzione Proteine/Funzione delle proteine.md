@@ -47,6 +47,7 @@ La mioglobina è un singolo polipeptide di 153 a.a. che contiene una molecola di
 La mioglobina è formata da 8 $\alpha$ eliche denominate da A ad H. I singoli residui vengono identificati dalla loro posizione nella sequenza:
 - L'His93 viene indicato con His F8, ovvero ottavo residuo dell'elica F
 - L'His93 è il coordinatore del gruppo eme
+
 I ripiegamenti prendono il nome delle due $\alpha$ eliche che collegano.
 
 
@@ -68,6 +69,13 @@ I movimenti molecolari (delle catene laterali) producono delle cavità transitor
 
 Nelle altre globine, l'His distale agisce differentemente, particolarmente in citoglobina e neuroglobina, ed in alcune globine delle piante, dato che è coordinata direttamente con l'atomo di ferro dell'eme che deve legare il ligando. In queste globine l'His distale va rimosso dal ligando per potersi formare il legame ligando-proteina.
 
+### Descrizione Quantitativa dell'interazione proteina-ligando
+In genere il legame reversibile di un ligando L ad una proteina P può essere descritto dalla reazione di equilibrio $$P+L \leftrightharpoons PL$$
+La reazione è caratterizzata dalla costante di equilibrio $K_{as}$. Questa è la costante di **associazione**.
+$$K_{as} = \frac{[PL]}{[P][L]} = \frac{k_a}{k_d}$$
+$k_a$ e $k_d$ sono costanti di velocità.
+La costante di associazione indica l'equilibrio tra complesso e componenti non legati del complesso. Misura l'affinità del ligando L per la proteina P. Misurata in $M^{-1}$, valori elevati equivalgono ad elevata affinità. Rappresenta il rapporto tra velocità di reazione di associazione, a cui corrisponde la costante cinetica $k_a$ e velocità di reazione di dissociazione, a cui corrisponde la costante cinetica $k_d$. Se la reazione è del primo ordine, ovvero coinvolge una sola molecola, allora la costante cinetica si misura in $s^{-1}$. Se ne coinvolge due, come la reazione di associazione, allora si misura come $M^{-1}s^{-1}$.
+Se si considera l'equilibrio dal punti di vista della frazione dei siti di legame Y occupati dal ligando presenti nella proteina: $$Y = \frac{siti \space di \space legame \space occupati}{totale\space dei \space siti \space di \space legame} = \frac{[PL]}{[PL]+[P]}$$Sostituendo $[PL]$ con $K_{as}[P][L]$ si ottiene:$$Y = \frac{K_{as}[P][L]}{K_{as}[P][L] + [P]} = \frac{K_{as}[L]}{K_{as}[L]+1} = \frac{[L]}{[L] + \frac{1}{K_{as}}}$$
 ### Emoglobina
 L'emoglobina è un trasportatore dell'ossigeno negli animali. Quasi tutto l'ossigeno viene trasportato dall'emoglobina contenuta negli eritrociti (cellule derivate dal precursore staminale emocitoblasto). Gli eritrociti sono incapaci di riproduzione, hanno tempo di vita di 120 giorni, unico compito è trasporto di ossigeno disciolto nel loro citosol a concentrazione 34%.
 - Sangue arterioso -> emoglobina satura al 96% di ossigeno
@@ -78,6 +86,7 @@ L'emoglobina ha una forma quasi sferica. È una proteina tetramerica con 4 grupp
 L'emoglobina A dell'adulto è composta da due tipi di globine:
 - 2 catene $\alpha$
 - 2 catene $\beta$
+
 La struttura tridimensionale dei due tipi di catene è molto simile, anche se l'identità amminoacidica non è altissima.
 La struttura tridimensionale di entrambe le catene è simile alla miolgobina, e anche qui l'identità amminoacidica è molto bassa. 
 Le tasche dell'eme sono costituite in gran parte dalle eliche E ed F sia nella catena $\alpha$ sia nella catena $\beta$.
@@ -91,15 +100,20 @@ L'emoglobina può assumere due stati:
 - R -> Rilassato -> Relaxed
 - T -> Teso -> Tensed -> Stabilizzato dalle interazioni ioniche, gran parte nelle interfacce $\alpha_1 \beta_2$ e $\alpha_2 \beta_1$ 
 Il legame con l'ossigeno stabilizza lo stato R. In assenza di ossigeno, lo stato T è più stabile ed è quindi la conformazione prevalente della deossiemoglobina.
+
+
+
 Il legame dell'ossigeno molecolare a una delle subunità nello stato T dell'emoglobina innesca una variazione conformazionale, che converte la subunità nello stato R. La transizione non modifica sostanzialmente le strutture delle singole subunità, ma i due monomeri $\alpha\beta$ scivolano l'uno rispetto all'altro e ruotano, restringendo così la tasca tra le subunità  $\beta$. Legami ionici che stabilizzano lo stato T si spezzano e se ne formano altri durante questo processo.
 Nello stato T la porfirina ha una forma a cupola, il ferro quindi protrude dal lato dell'istidina prossimale HisF8. Il legame con l'ossigeno costringe l'eme ad assumere una conformazione planare, modificano la posizione dell'HisF8 e dell'elica F associata. Questo causa un riposizionamento nelle coppie ioniche all'interfaccia  $\alpha_1 \beta_2$.
 
 Questi due stati sono fondamentali per il funzionamento dell'emoglobina:
 - Dovendo trasportare ossigeno dai polmoni ai tessuti, una proteina con alta affinità per l'ossigeno sarebbe in grado di raccoglierla dai polmoni, ma ne rilascerebbe molto poca nei tessuti
 - Al contrario una proteina con bassa affinità, sarebbe in grado di rilasciarla nei tessuti, ma ne raccoglierebbe molto poca dai polmoni
+
 I due stati infatti hanno affinità diverse per l'ossigeno:
 - Lo stato T ha una bassa affinità per l'ossigeno
 - Lo stato R ha un'alta affinità per l'ossigeno
+
 Il risultato è una curva a sigmoide per l'andamento dell'ossigeno 5.12 Lehninger figura mettere
 
 Proteine a singola subunità con singolo sito di legame per il ligando non sono in grado di produrre un grafico a sigmoide, in quanto il ligando non è in grado di alterare le proprietà di legame di altre molecole di ligando, dato che agisce singolarmente.
@@ -135,9 +149,11 @@ Modelli per la spiegazione del legame cooperativo di ligandi alle proteine con p
 	- Le subunità di una proteina che lega i ligandi in modo cooperativo sono funzionalmente identiche
 	- Ciascuna subunità può esistere in almeno due conformazioni
 	- Tutte le subunità vanno incontro simultaneamente a una transizione da una conformazione all'altra
+
 - Modello Sequenziale:
 	- Il legame del ligando induce una variazione conformazione in una singola subunità che a sua volte induce una variazione simile in quelle adiacenti, rendendo più probabile il legame di una seconda molecola di ligando
 	- Questo modello prevede l'esistenza di più stati intermedi rispetto al modello concertato
+
 I due modelli non si escludono a vicenda. Il concertato può essere considerato un caso limite del modello sequenziale.
 
 ### 2-3 Bifosfoglicerato

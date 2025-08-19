@@ -14,6 +14,7 @@ Tutti gli amminoacidi eccetto la glicina presentano il carbonio $\alpha$ legato 
 - Uno amminico
 - Un gruppo R
 - Un atomo di Idrogeno
+
 L'unica eccezione è la *glicina*, in cui il gruppo R è un altro atomo di idrogeno.
 Il carbonio $\alpha$ è quindi un centro chirale, a causa della disposizione tetraedrica degli orbitali di legame, i quattro gruppi differenti possono disporsi nello spazio in due modi diversi, quindi per ogni amminoacido sono possibili due stereoisomeri. Essendo immagini speculari l'una dell'altra non sovrapponibili, i due isomeri sono detti enantiomeri. Tutte le molecole con un centro chirale sono anche otticamente attive, cioè ruotano il piano della luce polarizzata.
 
