@@ -33,7 +33,7 @@ $\alpha$ eliche si possono formare sia con residui D sia L. È essenziale che gl
 La forma più stabile di $\alpha$ elica è la destrorsa composta da amminoacidi D.
 
 ### Fattori di impatto per la formazione delle eliche
-Ogni amminoacido in un polipeptide ha una intrinseca tendenza a formare un'$\alpha$ elica. Non tutte le sequenze di residui in un polipeptide sono ingrado di formare $\alpha$ eliche stabili.
+Ogni amminoacido in un polipeptide ha una intrinseca tendenza a formare un'$\alpha$ elica. Non tutte le sequenze di residui in un polipeptide sono in grado di formare $\alpha$ eliche stabili.
 Ad esempio, una serie di residui glutammato a pH 7.0 difficilmente potrà formare un'$\alpha$ elica, dato che i gruppi carbossilici carichi negativamente dei vari residui glutammato tenderanno a respingersi a vicenda, impedendo attivamente la formazione dell'elica. Stesso discorso vale per Lys o Arg, che hanno gruppi carichi positivamente.
 
 I residui Asn, Ser, Thr e Cys possono destabilizzare l'$\alpha$ elica se vicini in una catena polipeptidica.
@@ -48,7 +48,7 @@ I residui Pro e Gly hanno la propensione più bassa a formare strutture ad $\alp
 Infine, l'ultimo fattore di impatto per la formazione di un $\alpha$ elica è dato dalla natura dell'amminoacido localizzato all'estremità del segmento di un polipeptide con struttura ad $\alpha$ elica.
 In ogni legame peptidico esiste un piccolo dipolo elettrico, che si sommano attraverso i legami idrogeno presenti nell'elica e quindi il dipolo netto aumenta con l'aumentare dell'elica.
 Le cariche parziali negative e positive del dipolo dell'elica risiedono sui gruppi N-H e C-O dei legami peptidici alle estremità carbossi e ammino terminali dell'elica.
-Per questo motivo, gli amminoacidi carichi negativamente tendono ad essere presenti all'estermità amminoterminale del segmento elicoidale, dove possono generare interazioni stabilizzanti con la carica positiva del dipolo ell'elica. Un residuo carico positivamente sarebbe destabilizzante. Viceversa per il carbossiterminale.
+Per questo motivo, gli amminoacidi carichi negativamente tendono ad essere presenti all'estremità amminoterminale del segmento elicoidale, dove possono generare interazioni stabilizzanti con la carica positiva del dipolo all'elica. Un residuo carico positivamente sarebbe destabilizzante. Viceversa per il carbossiterminale.
 
 ## $\beta$ Conformazione
 Struttura più estesa della catena polipeptidica, definita dalla disposizione degli atomi dello scheletro secondo specifici angoli diedrici. Si estende secondo una conformazione a zig-zag, a differenza dell'elica.

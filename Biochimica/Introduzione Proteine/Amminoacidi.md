@@ -70,7 +70,7 @@ Nelle cellule sono stati trovati più di 300 amminoacidi.
 
 
 #### Acidi e Basi
-Gruppi amminici e gruppi carbossilici insieme ai gruppi R si comportano come acidi e come basi. Questi composti sono detti anfoteri. Quando un amminoacido viene sciolto a pH neutro, e non possiede un gruppo R ionizzabile, esso esiste in soluzione sotto forma di zwitterione, ovvero ione dipolare, comportandosi sia come acido sia come base.
+Gruppi amminici e gruppi carbossilici degli amminoacidi insieme ai gruppi R si comportano come acidi e come basi. Questi composti sono detti anfoteri. Quando un amminoacido viene sciolto a pH neutro, e non possiede un gruppo R ionizzabile, esso esiste in soluzione sotto forma di zwitterione, ovvero ione dipolare, comportandosi sia come acido sia come base.
 Sono detti *anfoliti* gli elettroliti *anfoterici*.
 Amminoacidi monoammino e monocarbossilico, come l'alanina, quando è completamente protonato è un acido diprotico dato che ha due gruppi, il $-COOH$ ed il $-NH_3^+$, che possono cedere protoni.
 

@@ -94,14 +94,11 @@ La struttura quaternaria dell'emoglobina è caratterizzata da interazioni molto 
 L'interfaccia $\alpha_1 \beta_1$ esattamente come l'altra interfaccia comprende circa 30 residui ed è abbastanza forte da resistere a deboli agenti denaturanti. L'esposizione all'urea causa la dissociazione dei tetrameri di emoglobina nei dimeri $\alpha \beta$, che restano intatti.
 Le interfacce $\alpha_1 \beta_2$ e $\alpha_2 \beta_1$ comprendono 19 residui.
 L'effetto idrofobico è il principale stabilizzatore di queste interfacce, insieme a molti legami idrogeno ed alcune coppie ioniche (ponti salini).
-
 #### Stati R e T
 L'emoglobina può assumere due stati:
 - R -> Rilassato -> Relaxed
 - T -> Teso -> Tensed -> Stabilizzato dalle interazioni ioniche, gran parte nelle interfacce $\alpha_1 \beta_2$ e $\alpha_2 \beta_1$ 
 Il legame con l'ossigeno stabilizza lo stato R. In assenza di ossigeno, lo stato T è più stabile ed è quindi la conformazione prevalente della deossiemoglobina.
-
-
 
 Il legame dell'ossigeno molecolare a una delle subunità nello stato T dell'emoglobina innesca una variazione conformazionale, che converte la subunità nello stato R. La transizione non modifica sostanzialmente le strutture delle singole subunità, ma i due monomeri $\alpha\beta$ scivolano l'uno rispetto all'altro e ruotano, restringendo così la tasca tra le subunità  $\beta$. Legami ionici che stabilizzano lo stato T si spezzano e se ne formano altri durante questo processo.
 Nello stato T la porfirina ha una forma a cupola, il ferro quindi protrude dal lato dell'istidina prossimale HisF8. Il legame con l'ossigeno costringe l'eme ad assumere una conformazione planare, modificano la posizione dell'HisF8 e dell'elica F associata. Questo causa un riposizionamento nelle coppie ioniche all'interfaccia  $\alpha_1 \beta_2$.
@@ -114,7 +111,8 @@ I due stati infatti hanno affinità diverse per l'ossigeno:
 - Lo stato T ha una bassa affinità per l'ossigeno
 - Lo stato R ha un'alta affinità per l'ossigeno
 
-Il risultato è una curva a sigmoide per l'andamento dell'ossigeno 5.12 Lehninger figura mettere
+Il risultato è una curva a sigmoide per l'andamento dell'ossigeno 
+![[Pasted image 20250819102648.png | 450]]
 
 Proteine a singola subunità con singolo sito di legame per il ligando non sono in grado di produrre un grafico a sigmoide, in quanto il ligando non è in grado di alterare le proprietà di legame di altre molecole di ligando, dato che agisce singolarmente.
 Nell'emoglobina, il legame di O2 con una subunità, modifica l'affinità dell'emoglobina per l'ossigeno.
@@ -140,9 +138,15 @@ I siti di legame di una proteina allosterica sono costituiti da segmenti stabili
 Il legame di un ligando comporta la stabilizzazione in una particolare confomrazione delle regioni mobili del sito attivo della proteina, influenzando la conformazione delle subunità polipeptidiche adiacenti. Se fosse tutto stabile, poche modifiche conformazionali potrebbero avvenire, oppure essere trasmesse ad altre parti della proteina.
 
 Quantitavamente:
-Equazione e grafico di Hill
 
-
+| $K_{as}$ Emoglobina (Eq. di Hill)           | Grafico di Hill                             |
+| ------------------------------------------- | ------------------------------------------- |
+| ![[Pasted image 20250819102754.png \| 550]] | ![[Pasted image 20250819102816.png \| 550]] |
+#### Trasporti addizionali
+L'emoglobina trasporta inoltre sia $CO_2$ sia $H^+$, che sono prodotti finali della respirazione cellulare, dai tessuti ai polmoni e reni, dove sono escreti. La $CO_2$ viene idratata sotto forma di bicarbonato: $$CO_{2} + H_{2}O \leftrightharpoons H^+ + HCO^{-}_{3}$$
+ed è una reazione catalizzata dall'anidrasi carbonica. L'idratazione di $CO_2$ determina un aumento di concentrazione di $H^+$ nei tessuti, abbassando il pH. Il legame tra ossigeno ed emoglobina è influenzato dal pH e dalla concentrazione di $CO_2$, la conversione del bicarbonato è quindi un processo importante per la regolazione del legame dell'ossigeno e del rilascio nel sangue. L'affinità dell'emoglobina per l'ossigeno diminuisce man mano che $H^+$ e $CO_2$ si legano e $O_2$ è rilasciato nei tessuti. Questo è detto effetto Bohr, da Christian Bohr, padre di Niels Bohr.
+$$Hb + O_{2} \leftrightharpoons HbO_{2}$$ L'equazione più corretta sarebbe: $$HHb^+ + O_{2} \leftrightharpoons HbO_{2} + H^+$$
+$H^+$ e $O_{2}$ non si legano sullo stesso sito, poichè lo ione si lega alle catene laterali di diversi residui amminoacidici della proteina.
 ## Modelli per il legame cooperativo
 Modelli per la spiegazione del legame cooperativo di ligandi alle proteine con più siti di legame.
 - Modello Concertato: Prevede che in una proteina multimerica le subunità non possano essere presenti in stati conformazionali diversi. Le due conformazioni sono in equilibrio tra loro. Il ligando può legarsi ad entrambe le configurazioni ma con diverse affinità - il legame del ligando con la conformazione a bassa affinità rende più probabile la transizione nella conformazione ad alta affinità
@@ -161,7 +165,7 @@ Il 2-3 bifosfoglicerato BPG con le molecole di emoglobina regola ulteriormente l
 Il BPG è presente in concentrazioni relativamente elevate negli eritrociti. L'emoglobina purificata contiene una quantità notevole di BPG, che è difficile da rimuovere completamente. Infatti le curve di saturazione studiate sono sempre ottenute con emoglobina contenente BPG. Il 2,3-bifosfoglicerato riduce fortemente l'affinità dell'emoglobina per l'ossigeno, esiste quindi una relazione inversa tra legame di O2 e BPG. L areazione di legame dell'ossigeno diventa quindi $$HbBPG + O_2 \leftrightarrow HbO_2 + BPG$$
 Il BPG si lega in un sito distante da quello dell'ossigeno e regola l'affinità del legame dell'O2 all'emoglobina in relazione alla pO2 nei polmoni.
 Il BPG svolge una funzione importante nell'adattamento fisiologico alla bassa pO2 che si riscontra per esempio ad altitudini elevate.
-A livello del mare, in un soggetto sano, il legame dell'ossigeno all'emoglobina è regolato in modo che l'O2 trasferito ai tessuti sia circa il 40% della quantità toale di gas che il sangue può trasportare.
+A livello del mare, in un soggetto sano, il legame dell'ossigeno all'emoglobina è regolato in modo che l'O2 trasferito ai tessuti sia circa il 40% della quantità totale di gas che il sangue può trasportare.
 Salendo rapidamente ad altezze elevate, dove la pressione di O2 è più bassa, il trasferimento di O2 ai tessuti si abbassa.
 Alcune ore più tardi la concentrazione di BPG nel sangue della persona in questione comincia ad aumentare, generando una diminuizione dell'affinità dell'emoglobina per l'ossigeno.
 Questa variazione nei livelli di BPG provoca solo un piccolo effetto sul legame dell'ossigeno a livello dei polmoni, ma ha un effetto significativo sul rilascio di O2 a livello dei tessuti periferici.

@@ -33,7 +33,7 @@ Alcuni segmenti di una sequenza proteica si possono trovare in certi organismi d
 
 ## Strutture Tridimensionali
 La disposizione spaziale degli atomi di una proteine o di una sua porzione è detta conformazione. Le conformazioni possibili in una proteina sono tutte le strutture che essa può assumere senza rottura dei legami covalenti.
-Una proteina può teoricamente assumere molte conformazioni differenti. Di queste però solo una o poche sono prevalenti in condizioni biologiche. La modifica della conformazione è necessaria quando le proteine legano altre molevole o catalizzano una reazione.
+Una proteina può teoricamente assumere molte conformazioni differenti. Di queste però solo una o poche sono prevalenti in condizioni biologiche. La modifica della conformazione è necessaria quando le proteine legano altre molecole o catalizzano una reazione.
 Le proteine assumono tendenzialmente le conformazioni più termodinamicamente stabili.
 Una proteina è detta **nativa** se si trova in una conformazione *funzionale*.
 In molte proteine solo una caratteristica struttura o un piccolo gruppo di esse sono strettamente correlate alla funzione. Alcune parti invece sono prive di strutture distinguibili, e si trovano quindi in uno stato disordinato.
@@ -46,10 +46,11 @@ Lo stato non avvolto è caratterizzato da un elevato grado di entropia conformaz
 L'entropia e le interazioni dei numerosi gruppi delle catene polipeptidiche con il solvente (acqua) tendono a mantenere le proteine in uno stato non avvolto.
 Le interazioni che si oppongono a questi effetti sono:
 - Ponti Disolfuro -> Assenti in molte proteine, l'ambiente interno alle cellule è altamente riducente, a causa di elevata concentrazione di agenti riducenti come il glutatione. La maggior parte dei gruppi sulfidrilici rimane ridotto. All'esterno della cellula l'ambiente è spesso ossidante ed è quindi più facile che avvenga la formazione dei legami disolfuro. I ponti disolfuro sono poco comuni in proteine batteriche, comuni nei batteri termofili ed archea.
-- Interazioni Deboli: -> Nelle proteine intracellulari hanno rilevanza particolare nell'avvolgimento delle catene polipeptidiche in strutture secondarie e terziarie. Anche l'associazione di più catene polipeptidiche che genera strutture quaternarie dipende dalle interazioni deboli. La struttura proteica viene stabilizzata dai legami deboli, che sono estremamente numerosi, poichè l'energia necessaria per rompere un legame debole è tra le 100 e le 10 volte più bassa rispetto a quella necessaria per rompere un legame covalente (0.4-30 kJ/mol contro 200-420 kJ/mol). In genere le conformazioni con $\Delta G$ più basso sono quelle con i maggior numero di interazioni deboli.
+- Interazioni Deboli: -> Nelle proteine intracellulari hanno rilevanza particolare nell'avvolgimento delle catene polipeptidiche in strutture secondarie e terziarie. Anche l'associazione di più catene polipeptidiche che genera strutture quaternarie dipende dalle interazioni deboli. La struttura proteica viene stabilizzata dai legami deboli, che sono estremamente numerosi, poiché l'energia necessaria per rompere un legame debole è tra le 100 e le 10 volte più bassa rispetto a quella necessaria per rompere un legame covalente (0.4-30 kJ/mol contro 200-420 kJ/mol). In genere le conformazioni con $\Delta G$ più basso sono quelle con i maggior numero di interazioni deboli.
 	- Legami idrogeno
 	- Effetto idrofobico
 	- Interazioni Ioniche
+
 La stabilità di una proteina non è semplicemente la somma delle energia di formazione delle molte interazioni deboli all'interno della proteina stessa. Per ogni legame idrogeno che si forma all'interno di una proteina durante il suo avvolgimento, un altro legame idrogeno deve essere rotto tra lo stesso gruppo e l'acqua. Il contributo che ciascun legame idrogeno da alla stabilità globale, cioè la differenza in energia libera tra gli stati avvolto e non avvolto è vicino allo zero.
 Le interazioni ioniche possono essere stabilizzanti o destabilizzanti.
 
@@ -79,7 +80,7 @@ Queste sono interazioni dipolo-dipolo che coinvolgono:
 - i dipoli elettrici permanenti presenti in alcuni gruppi
 - i dipoli transitori che derivano da fluttuazioni delle nuvole elettroniche che circondano gli atomi all'interno di gruppi funzionali
 - i dipoli indotti, generati da interazioni tra un atomo ed un altro appartenente ad un dipolo permanente o transitorio
-La forza attrattiva si forma quando gli atomi si avvicinano. Agisce solo a livello delle piccole distante intermolecolari: 0.3-0.6 nm. Come i legami idrogeno sono molto deboli, quindi individualmente contribuiscono pco alla stabilità. In una proteina organizzata o all'interno di una regione di contatto tra due proteine, o tra proteine ed una molecola con complementarietà di superficie, queste interazioni possono diventare numerose.
+La forza attrattiva si forma quando gli atomi si avvicinano. Agisce solo a livello delle piccole distante intermolecolari: 0.3-0.6 nm. Come i legami idrogeno sono molto deboli, quindi individualmente contribuiscono poco alla stabilità. In una proteina organizzata o all'interno di una regione di contatto tra due proteine, o tra proteine ed una molecola con complementarietà di superficie, queste interazioni possono diventare numerose.
 
 ### Regole per le strutture
 1. I residui idrofobici per lo più si trovano all'interno delle proteine, lontano dall'acqua
@@ -92,7 +93,8 @@ Proteine di membrana e intrinsecamente disordinate seguono regole diverse, a cau
 ### Il legame peptidico
 Il legame peptidico è rilevante per determinare la conformazione di un polipeptide.
 Gli atomi di carbonio $\alpha$ di residui amminoacidici adiacenti sono separati da tre legami covalenti che si susseguono:
-$$C_\alpha - C - N - C_\alpha$$
+$$NH_{2} - C_\alpha - COOH - NH_{2} - C_\alpha - COOH$$
+I tre legami che si susseguono sono $C_{\alpha} - COOH - NH_{2} - C_{\alpha}$.
 C-N nei legami peptidici è leggermente più corto di C-N in ammine primarie. Gli atomi del legame peptidico sono complanari.
 L'ossigeno ha una carica negativa parziale e l'azoto ha una carica positiva parziale, generando quindi così un dipolo elettrico. I sei atomi del gruppo peptidico giacciono sullo stesso piano e l'atomo di ossigeno del gruppo carbonilico si trova in trans con l'atomo di idrogeno legato all'azoto ammidico.
 I legami C-N non possono quindi ruotare liberamente, a causa del loro parziale carattere di doppio legame.
