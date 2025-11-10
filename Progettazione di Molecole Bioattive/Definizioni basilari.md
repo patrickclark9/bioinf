@@ -1,0 +1,3 @@
+IC50 stands for ==half-maximal inhibitory concentration== and is a measure of a substance's potency, such as a drug, toxin, or inhibitor. It represents the concentration of the substance required to inhibit a specific biological process by 50% in laboratory (in vitro) conditions
+
+EC50: Half maximal effective concentration is a measure of the concentration of a drug, antibody or toxicant which induces a biological response halfway between the baseline and maximum after a specified exposure time.
