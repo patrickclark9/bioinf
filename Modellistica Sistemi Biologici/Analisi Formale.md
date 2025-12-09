@@ -44,7 +44,7 @@ $$\begin{cases}
 	\frac{dy_2}{t} = f_2(y_1,y_2)
 \end{cases} \rightarrow \frac{dy_1}{dy_2} = \frac{f_1(y_1)}{f_2(y_2)}$$
 #### Spazio delle Fasi
-Diagramma in cui su ogni asse viene riportata la concetrazione di una specie reagente. Un punto rappresenta uno stato del sistema.
+Diagramma in cui su ogni asse viene riportata la concentrazione di una specie reagente. Un punto rappresenta uno stato del sistema.
 
 ## Soluzioni per un sistema ODE
 Per risolvere analiticamente un sistema ODE, bisogna trovare n funzioni le cui derivate prime $y_i(t) (i = 1,2,3,...,n)$ calcolate rispetto a t soddisfino le equazioni del sistema.
