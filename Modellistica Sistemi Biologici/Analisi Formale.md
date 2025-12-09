@@ -48,6 +48,6 @@ Diagramma in cui su ogni asse viene riportata la concentrazione di una specie re
 
 ## Soluzioni per un sistema ODE
 Per risolvere analiticamente un sistema ODE, bisogna trovare n funzioni le cui derivate prime $y_i(t) (i = 1,2,3,...,n)$ calcolate rispetto a t soddisfino le equazioni del sistema.
-Affinchè le soluzioni $y_i(t)$ siano determinate univocamente sono necesarie ulteriori equazioni.
+Affinché le soluzioni $y_i(t)$ siano determinate univocamente sono necessarie ulteriori equazioni.
 **Problema dei valori iniziali**: Le soluzioni assumono particolari valori al tempo t=0
 **Problema dei valori di contorno**: Le soluzioni assumono particolari valori agli estremi dell'intervallo di definizione di t.
