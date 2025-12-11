@@ -1,4 +1,4 @@
-- Genoma mitocondriale per la variazione nella popolazione femminile
+****- Genoma mitocondriale per la variazione nella popolazione femminile
 - Cromosoma Y per variazione nel sesso maschile
 - L'**aplotipo** (dal greco ἁπλόος contratto ἁπλοῦς haplóos=singolo o semplice) è un gruppo di varianti [alleliche](https://it.wikipedia.org/wiki/Allele "Allele"), lungo un [cromosoma](https://it.wikipedia.org/wiki/Cromosoma "Cromosoma") o un segmento cromosomico, che in genere vengono ereditati insieme. Per un'altra definizione l'aplotipo è un insieme di [marcatori genetici](https://it.wikipedia.org/wiki/Marcatori_genetici "Marcatori genetici") presenti su un singolo cromosoma, che vengono ereditati insieme; i marcatori possono essere un gruppo di varianti alleliche, un gruppo di [STR](https://it.wikipedia.org/wiki/Microsatelliti "Microsatelliti"), o un gruppo di [SNP](https://it.wikipedia.org/wiki/Polimorfismo_a_singolo_nucleotide "Polimorfismo a singolo nucleotide")
 

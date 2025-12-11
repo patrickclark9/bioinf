@@ -187,5 +187,28 @@ p-value per $\alpha$ a destra, sinistra, doppio intervallo (sinistra / destra), 
 p-value per intervallo di confidenza unilaterale o bilaterale
 arricchimento della sequenza di legame di p53 e di CTCF per le regioni in overlap che legano sia p53 sia CTCF.
 
+## FPKM RPKM TPM
+FPKM e RPKM hanno problemi in normalizzazione dovuta alla formula. 
+Se il totale delle read è molto simile dopo la somma per gene, allora si può usare fpkm ed rpkm. Altrimenti si usa TPM.
+Totale sembra essere diverso  per sample per ogni gene con RPKM, il che è impossibile. Per TPM questo non accade
+![[Screenshot 2025-11-10 at 15.25.39.png]]![[Screenshot 2025-11-10 at 15.26.09.png]]
+
+## DESeq 2
+Normalizza per profondità del sequenziamnto e composizione della read.
+Ottimo per confronto tra tessuti, tiene conto di read che sono largamente più alte per un gene rispetto agli altri che sbilanciano il calcolo.
 
 
+Risultati:
+- Base Mean -> media
+- $log_2(FC)$ -> FOLD CHANGE -> Rapporto media del trattato / media del confronto (non trattato)
+
+## TEST
+TEST NON PARAMETRICO CON BASSO NUMERO DI CAMPIONI (ES = 3) NON E MAI STATISTICAMENTE SIGNIFICATIVO
+
+I TEST PARAMETRICI FANNO ASSUNZIONI CHE POTREBBERO ESSERE INCORRETTE IN ALCUNI CASI, ALLORA SI PERDE POTERE STATISTICO UTILIZZANDO UN TEST NON PARAMETRICO
+
+DISTRIBUZIONE REPLICHE -> NORMALE QUASI SICURAMENTE, NON CAMBIA QUASI NIENTE TRA LE REPLICHE
+
+## P-ADJ
+
+Il pvalue aggiustato con bonferroni è spesso troppo aggressivo e toglie veri positivo

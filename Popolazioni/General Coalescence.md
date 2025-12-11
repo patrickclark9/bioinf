@@ -69,3 +69,5 @@ Singleton -> Mutazione presente solo nelle foglie (rami esterni), e quindi su un
 $F_{st} = \frac{H_t - H_s}{H_t}$
 Intervallo compreso tra 0,1 per questo valore. Tanto più è basso Fst, tanto minore sono le differenze dovuta al raggruppamento.
 Fst = 0.04, solo il 4% della differenza è dovuta alla separazione tra gruppi.
+Fst = 0 non ci sono differenze tra due popolazioni, quindi non si può parlare di due popolazioni ma di popolazione singola
+Fst = 1 le due popolazioni sono completamente diverse
