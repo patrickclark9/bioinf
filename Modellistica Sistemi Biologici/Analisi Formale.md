@@ -1,4 +1,3 @@
-
 **Analisi Formale**:
 1. Viene assunto un meccanismo compatibile con l'equazione stechiometrica e dei valori iniziali delle costanti cinetiche
 2. Vengono calcolate le osservabili e confrontate con i dati sperimentali
