@@ -86,6 +86,19 @@ $r = \frac{v}{V}+\frac{[A]}{aV}\frac{dV}{dt}$
 ![[Screenshot 2025-08-16 at 18.35.26.png]]
 **La catena di uguaglianze può non essere sempre verificata, va confermata sperimentalmente per stabilire se l'equazione è valide oppure no ed in quali intervalli di tempo**.
 
+
+-------------------------------------------
+
+## Equazione Cinetica
+L'equazione cinetica rappresenta l'espressione empirica della velocità di reazione per un dato processo ed esplicita la dipendenza funzionale di `r` dalle concentrazioni delle specie presenti nel sistema
+$$r = f([reagenti] [prodotti] [catalizzatori][intermedi])$$
+La determinazione dell'equazione chimica rappresenta il primo passo nell'analisi cinetica empirica e richiede la raccolta di un gran numero di osservabili.
+
+$$r=k[A]^\alpha[B]^\beta$$
+con $\alpha$ e $\beta$ ordine di reazione relativo. $a+b$ somma dei coefficienti stechiometrici è detta molecolarità
+Per una reazione elementare, la legge di Guldberg Waage afferma che la velocità è pari a: $$r=k[A]^a[B]^b$$
+ovvero elevati ai propri coefficienti stechiometrici.
+Infatti condizione necessaria ma non sufficiente perchè una reazione sia elementare è che la sua molecolarità sia uguale al suo ordine di reazione.
 ### Equazione di Arrhenius
 $ln(K) = ln(A) - \frac{E_a}{RT}$
 è la riformulazione dell'equazione di Arrhenius in forma logaritmica, con cui è possibile determinare il fattore pre-esponenziale A e l'energia di attivazione Ea, effettuando misure di k a valori diversi di temperatura e riportando in grafico contro l'inversa di T.
