@@ -805,13 +805,13 @@ $$\hat{\theta}_W = \frac{S}{a_k}$$
 
 **Summary**
 
-| Quantity | Role |
-|---|---|
-| ISM | Guarantees every mutation = one new segregating site |
-| θ | Mutation rate scaled by population size = expected S between two sequences |
-| T (tree height) | How long mutations had to accumulate |
-| S = θ × T | Segregating sites = rate × time |
-| Watterson's estimator | Extends this to k sequences via harmonic number |
+| Quantity              | Role                                                                       |
+| --------------------- | -------------------------------------------------------------------------- |
+| ISM                   | Guarantees every mutation = one new segregating site                       |
+| θ                     | Mutation rate scaled by population size = expected S between two sequences |
+| T (tree height)       | How long mutations had to accumulate                                       |
+| S = θ × T             | Segregating sites = rate × time                                            |
+| Watterson's estimator | Extends this to k sequences via harmonic number                            |
 
 The key insight is that under ISM, **counting mutations and counting segregating sites are the same thing** — which is what makes the coalescent so powerful for inference.
 
@@ -835,10 +835,10 @@ where $d_{ij}$ is the number of differences between sequences i and j. Each pair
 
 **Contrast with Watterson**
 
-| Estimator | Based on | Lineages |
-|---|---|---|
-| θπ (Tajima) | Average pairwise differences | 2 lineages at a time |
-| θW (Watterson) | Total segregating sites | Full k-lineage tree |
+| Estimator      | Based on                     | Lineages             |
+| -------------- | ---------------------------- | -------------------- |
+| θπ (Tajima)    | Average pairwise differences | 2 lineages at a time |
+| θW (Watterson) | Total segregating sites      | Full k-lineage tree  |
 
 Both estimate the same θ under neutrality, but they weight different parts of the tree differently.
 
@@ -850,9 +850,9 @@ $$D = \frac{\hat{\theta}_\pi - \hat{\theta}_W}{\text{Var}} \approx 0 \text{ unde
 
 Deviations signal departures from neutrality:
 
-| D | Interpretation |
-|---|---|
-| D < 0 | θW > θπ → many rare variants → recent expansion or positive selection |
+| D     | Interpretation                                                                     |
+| ----- | ---------------------------------------------------------------------------------- |
+| D < 0 | θW > θπ → many rare variants → recent expansion or positive selection              |
 | D > 0 | θπ > θW → many intermediate frequency variants → balancing selection or bottleneck |
 
 The power of Tajima's D comes entirely from the fact that the two estimators look at different parts of the coalescent tree — pairwise depths vs. total branch length — and selection or demography distorts these differently.
@@ -886,11 +886,11 @@ $$H = P(\text{different}) = 1 - \frac{1}{1+\theta} = \frac{\theta}{1+\theta}$$
 
 **What this means**
 
-| Scenario | H |
-|---|---|
-| θ → 0 (tiny Ne or μ) | H → 0, everyone identical, drift dominates |
+| Scenario              | H                                             |
+| --------------------- | --------------------------------------------- |
+| θ → 0 (tiny Ne or μ)  | H → 0, everyone identical, drift dominates    |
 | θ → ∞ (large Ne or μ) | H → 1, everyone different, mutation dominates |
-| θ = 1 | H = 0.5, drift and mutation balanced |
+| θ = 1                 | H = 0.5, drift and mutation balanced          |
 
 **The drift interpretation**
 
@@ -915,10 +915,19 @@ Without mutation (θ = 0), every pair eventually coalesces → H = 0. This is ge
 
 **Summary**
 
-| Quantity | Coalescent meaning |
-|---|---|
-| H | Probability two lineages differ = mutation won the race against coalescence |
-| 1 − H | Probability two lineages are identical = coalesced before any mutation |
-| θ | Controls the balance between drift (coalescence) and mutation |
-| Ne large | Slow coalescence → more H |
-| Ne small | Fast coalescence → less H, drift dominates |
+| Quantity | Coalescent meaning                                                          |
+| -------- | --------------------------------------------------------------------------- |
+| H        | Probability two lineages differ = mutation won the race against coalescence |
+| 1 − H    | Probability two lineages are identical = coalesced before any mutation      |
+| θ        | Controls the balance between drift (coalescence) and mutation               |
+| Ne large | Slow coalescence → more H                                                   |
+| Ne small | Fast coalescence → less H, drift dominates                                  |
+## Q20 Inbreeding or F-statistic negative
+Fst -> No, Hs can only add up to to Ht, so at best Hs = Ht
+Inbreeding F -> Yes, selection againts homozygotes drives up heterozygotes, leading to $2f_Af_a < f_{Aa}$, then $F = \frac{2f_Af_a - f_{Aa}}{2f_Af_a} < 0$ 
+
+
+
+# Da chiedere
+**Low Homogeneity ->  Recent TMRCA?**
+**Migration?**
