@@ -1,0 +1,162 @@
+#+title: Intro
+
+* Alignment :ATTACH:
+:PROPERTIES:
+:ID:       7f3e9447-83b3-488d-a0b9-d68f3a5d5a42
+:END:
+
+Allineare le sequenze è importante per ottenere una comparazione diretta, oltre ad essere prerequisito per analisi più complesse contro database or per la costruzione di alberi filogenetici o identificazione di motivi funzionali
+*Omologia* -> Due entità condividono la stessa origina filogenetica, da cui si sono evoluti, differenziandosi dalle altre -> *Qualitativa*
+*Similarità* -> Il termine similarità ha un significato generale, utilizzato a prescindere dalla motivazione. La similarità biologica può essere dovuta ad omologia ma anche dovuta al caso, o da fenomeni di convergenza adattiva -> *Quantitative*
+- Ortologhi -> Speciazione
+- Parologhi -> Duplicazione
+- Xenologhi -> trasferimento orizzontale
+ **BioMart** -> Raccoglimento di ortologhi e parologhi di un gene
+[[attachment:Screenshot from 2026-04-14 17-11-14.png]]
+*Gap Opening* -> Si apre un gap assegnando uno score negativo, la cui estensione comporta ulteriore penalità
+** Matrici
+1. Identità
+2. Genetic-Code
+3. Matrice delle proprietà chimiche
+4. Matrici Empiriche
+   1. PAM
+      2. BLOSUM
+         3. Gonnet
+PAM e BLOSUM si basano sulle frequenze osservate di specifiche sostituzioni amminoacidiche. La similarità tra due amminoacidi è proporzionale alla loro frequenza di sostituzione osservata.
+Queste matrici si basano su evidenze biologiche, le cui differenze osservata tra sequenze omologhe negli allineamenti è dovuta solo a eventi di mutazione. Alcune di queste mutazioni hanno effetti minimi o assenti nella struttura/funzione delle proteine.
+
+La scelta di una delle matrici è cruciale per ottenere buoni risultati.
+Per sequenze meno divergenti, BLOSUM80 e PAM1 sono le migliori. BLOSUM62 e PAM120 per mediamente divergenti. BLOSUM45 e PAM250 per sequenze molto divergenti.
+*** PAM
+L'idea base delle matrici PAM nasce da studi di filogenetica molecolare su 71 famiglie di proteine con un minimo di 85% di similarità. L'assunzione di partenza è che analizzando sequenze filogeneticamente associate è possibile calcolare la percentuale di mutazioni accettate. Una unità di PAM è definita come l'1% di cambiamento di posizione di un amminoacido, cioè una sostituzione ogni 100 amminoacidi.
+Si è partiti ricostruendo la sequenza ancestrale partendo da allineamento multiplo tra proteine con similarità elevata >85%.
+Le sostituzioni "accettate" sono riportate su una matrice da cui è possibile ottenere la mutabilità relativa ($m_i$) del residuo i.
+Per ogni amminoacido è quindi possibile valutare la possibilità di cambiamento.
+Una volta definita la mutabilità, la domanda da porsi è qual è la probabilità che sia cambiato in j.
+$$M_{ij} = m_i \cdot \frac{f_{ij}}{f_i} = \frac{f_{ij}}{f_i} \cdot \frac{f_i}{100 \cdot fp_i} = \frac{f_{ij}}{100 \cdot fp_i}$$
+La probabilità che il residui i non cambi è $1-M_{ij}$_{}.
+La probabilità di una mutazione dipende dal tempo trascorso dalla divergenza delle sequenze. I valori sono normalizzati per il tempo necessario ad introdurre 1 mutazione ogni 100 residui (distanza = 1PAM).
+Matrici PAM con indice maggiore di 1 si ottengono moltiplicando la matrice PAM per se stessa k volte, PAM2 = PAM1 x PAM1
+Le Matrici PAM si dividono in
+- Scoring
+- Substitution
+Le matrici di scoring utilizzate dai programmi di allineamento sono calcolate dalle matrici di sostituzione come:
+$$s(a,b) = int(10\cdot log{\frac{M(a,b)} {C(a,b)}})$$
+Dove
+- s(a,b) -> score per una coppia di amminoacidi
+- M(a,b) -> probabilità di sostituzione di un amminoacido
+- C(a,b) -> probabilità di una sostituzione di un amminoacido
+Il rapporto $\frac{M(a,b)}{C(a,b)}$  indica quante volte la probabilità di omologia è maggiore della probabilità casuale.
+*** BLOSUM
+Le matrici BLOSUM si basano sul BLOCKS database, il quale mantiene blocchi di sequenze relazionate tra loro con un definito valore di identità amminoacidica, generalmente tra il 30% ed il 95%. A partire da ogni blocco è possibile calcolare la frequenza di sostituzione osservata e la probabilità di accoppiamento casuale
+$$s(a,b) = int(10\cdot log{\frac{M(a,b)} {C(a,b)}})$$
+In questo caso $M(a,b)$ si riferisce alla probabilità di sostituzione osservata per ogni blocco.
+- Per ogni allineamento nel database BLOCKS le sequenze sono raggruppate in cluster con almeno il 50% (per BLOSUM50, altrimenti 80% per BLOSUM80 ecc...) di residui identici
+- Tutte le coppie di sequenze sono comparate, e la frequenza delle coppie osservata vengono annotate
+- La frequenza attesa delle singole coppie vengono computate dalle singole frequenze amminoacidiche $$f_{A,C} = f_A \cdot f_C$$
+  - Per ogni coppia di amminoacidi lo score di sostituzione viene computato essenzialmente con $s(a,b)$.
+** DotPlot :ATTACH:
+Il dotplot aiuta a ispezionare la relazione tra due sequenze. Aiuta ad identificare potenzialmente regioni conservate. Si ottiene in 4 maniere:
+- Diagonalmente attraverso i dot -> Match
+- Diagonalmente attraverso celle vuote -> Mismatch
+- Orizzontalmente -> Gap
+- Verticalmente -> Gap
+L'allineamento viene effettuato muovendosi lungo la matrice maniera tale da utilizzare le diagonali con i punti più grandi. Questo massimizza il numero di match.
+Il metodo DotPlot si utilizza sia su sequenze nucleotidiche sia su sequenze proteiche.
+Poichè all'aumentare della lunghezza della sequenza aumentano anche i match spuri e quindi anche il rumore di fondo, i parametri del window size e della stringency aiutano a visualizzare meglio.
+[[attachment:Screenshot from 2026-04-15 16-21-31.png]]
+** Tipologie di Allineamento
+- *Globale* -> L'allineamento globale tiene conto della similarità tra sequenze per l'intera lunghezza (Query Coverage 100% sempre)
+- *Locale* -> L'allineamento locale tiene conto della similarità tra sequenze soltanto per specifiche regioni simile tra parti della sequenza in analisi (Cambia il Query Coverage)
+Importante considerare che *lo score di allineamento più elevato non significa necessariamente che sia biologicamente significativo rispetto ad un altro allineamento con score inferiore*.
+Il tipo di allineamento (globale o locale) dipende strettamente dal caso in studio. A volte è meglio un allineamento locale, altre volte uno globale.
+Considerando che il numero di allineamenti cresce al crescere della lunghezza delle sequenze, tecniche di programmazione come il dynamic programming vengono utilizzate per esplorare le possibili soluzioni al problema in un tempo ragionevole.
+L'algoritmo globale *Needleman-Wunsch* e quello locale *Smith-Waterman* utilizzano questa tecnica.
+*** Needleman-Wunsch
+L'algoritmo di Needleman-Wunsch può essere riassunto in 3 step principali:
+1. Riempimento della matrice
+2. Calcolo dello score
+3. Allineamento
+Le sequenze compongono la matrice principale e le regole di composizione sono uguali a quelle del DotPlot.
+Ogni punto della matrice può essere raggiunto da 3 possibili posizioni. Si sceglie quello con lo score più elevato tra le 3 possibilità per ottenere il best alignment score per uno specifico punto.
+*** Smith -Waterman
+La Smith-Waterman la si può ottenere modificando la formula introducendo lo 0 cosiì da non avere score negativi.
+L'allineamento si ricostruisce dal valore più elevato e l'allineamento termina allo 0.
+Lo score sarà infatti pari al massimo tra score(x,y-1) - gap_penalty, score(x-1, y-1) + substitution-score(x,y), score (x-1, y) - gap-penalty
+In principio l'allineamento locale è utile per cercare similarità in un databse. Smith-Waterman è troppo lento però per identificare regioni simili ad una query in database molto grandi. L'algoritmo Smith-Waterman genera allineamenti ottimali ed esaustivi unicamente.
+Per la ricerca su database si utilizzano algoritmi più complessi quali FASTA e BLAST.
+
+** FASTA
+L'algoritmo FASTA viene sviluppato nel 1985 basandosi sull'indicizzazione delle parole di una data lunghezza (k-tuple) (2 per a.a. e 6 per acidi nucleici). L'indicizzazione consiste nel creare una lista di tutte le posizioni in cui ogni possibile w (word) appare all'interno della sequenza. Nel caso delle proteine, per k =2 avremo 40 parole diverse ($20\cdot N$ dove N è la lunghezza delle k-tuple).
+Il primo step dell'algoritmo FASTA è quello di creare un indice di word (w) della sequenza di query. Ogni parola verrà poi utilizzata per la ricerca all'interno del database
+Nello specifico:
+- Troviamo parole contigue sulla stessa diagonale
+- Calcoliamo gli score con le matrici di sostituzione
+- Si uniscono i frammenti che possono essere uniti con una threshold T di accettabilità
+- Si applica Smith-Waterman su una porzione solamente (i frammenti riuniti) per ottenere l'allineamento migliore
+** BLAST
+Parametri del BLAST (Basic Local Alignment Search Tool): W,T,S,X:
+- W: Wordsize, tanto più è elevato, tanto minore il numero di word generate, quindi l'algoritmo sarà più rapido. Sensitività diminuisce all'aumentare della word-size
+- T: Threshold, tanto più piccolo il valore, tanto più grande il numero di W-mers inclusi nella lista, tanto più elevato il tempo di esecuzione. Al diminuire di T aumenta la sensitività
+- S: Score, tanto più basso, tanto più lunghi saranno gli HSP (High scoring segment pairs)
+- X: Dropoff, tanto più elevato, tanto più le regioni attorno agli HSP verranno esplorate, incrementando il tempo di esecuzione. Di base il Dropoff controlla quanto lo score può scendere prima di arrestare l'allineamento
+Funzionamento basilare del BLAST:
+- Si crea quindi un indice di tutte le w di una sequenza di query (con overlap)
+  - Si ottengono tutte le w dalla sequenza di query
+  - Si va a creare una lista di tutte le query che hanno un match al di sopra della threshold T (se la w è GSW -> GTW GNW GAW ATW GTF sono alcune delle possibili word. In base alla sostituzione si calcola lo score e se nonostante la sostituzione siamo sopra T, allora viene aggiunta la word alla lista)
+- Ogni parola dalla lista compilata (quindi incluse quelle generate in base alle matrici di sostituzione) viene ricercata all'interno del database per trovare i match all'interno del DB
+- Si estende la sequenza in ambe due direzioni
+- Ci si ferma quando lo score diminuisce, o la sequenza termina (full-match)
+Una delle estensioni recenti del BLAST  è il Two-Hit Method, che consiste dall'attivare l'estensione di un HSP solo e soltanto se due hit indipendenti si allineano per un certo numero di residui (A) senza alcun gap tra loro.
+Per il BLAST è stata infine prodotta una misura quantitativa dell'allineamento, per verificare che sia statisticamente significativo o no (quindi un match dovuto al caso). Vennero sviluppate le Altschul statistics.
+Per un allineamento tra query sequence e database, si possono plottare i valori degli score, ottenendo una distribuzione extreme-value.
+Per due sequenze m ed n, la funzione cumulativa di distribuzione degli score S è $$P(S < x) = \exp(-e^{-\lambda(x-u)}$$.
+Per allineamenti senza gap, il parametro u dipende dalla lunghezza delle sequenze comparate, e viene definita come $u = \frac{\ln Kmn}{\lambda}$, dove m ed n sono le lunghezze delle sequenze, K è una costante.
+Date le equazioni, la probabilità di osservare uno score uguale o superiore a x per caso è dato dalla formula $P(S\ge x) = 1 - \exp(-Kmne^{-\lambda x})$.
+Il parametro $Kmne^ {-\lambda x}$ è il numero di allineamenti senza gap con uno score di almeno x. m ed n sono le lunghezze della sequenza e del database, rispettivamente. $m\cdot n$ rappresenta lo spazio di ricerca sostanzialmente.
+L'atteso del numero di HSP con score S o più elevato per caso è dato da $E = Kmne^ {\lambda x}$. E è il valore atteso del numero di allineamenti differenti con score equivalenti o superiori a S avvenuti per caso. Per E che tende a 0, la probabilità che un allineamento sia avvenuto per caso tende a 0.
+Un alto score in una ricerca con BLAST corrisponde ad un E-Value basso.
+$P = 1 - e^ {-E}$. P value ed E value sono modi differenti di rappresentare la significatività di un allineamento. Le probabilità di trovare un HSP con un dato  E-value è la formula precedente.
+Spesso si utilizza il bit-score. Il bit-score S' è uno score calcolato da S normalizzandolo con le variabili statistiche che definiscono un dato sistema di scoring. Il bit-score ci permette di comparare allineamenti differenti, anche se utilizzano matrici di scoring differenti in differenti ricerche tramite BLAST.
+$$S' =\frac{ \lambda S - \ln K} {\ln 2}$$.
+L'E-value corrispondente sarà $E = mn\cdot 2^{-S'}$.
+** BLAT
+Il BLAST Like Alignment Tool (BLAT) è un algoritmo che eredita le caratteristiche del BLAST, ma al posto di indicizzare la query, indicizza il databse in k-mer senza overlap contro cui viene linearmente comparata la sequenza di query.
+Si formano k-mer senza overlap nelle sequenze del database, andando a formare l'indice. Il processo è molto memory-hungry, ma riduce notevolmente il tempo di esecuzione. Il database è tipicamente molto grande, quindi salvare tutti i k-mer in un indice senza overlap diventa dispendioso.
+La query viene indicizzata in k-mer con overlap. Ogni k-mer della query viene comparato con il database.
+** CLUSTALW
+È un algoritmo di allineamento multiplo. Date 4 sequenze, si allineano S1 con S2, S3 con S4. Dopodiché, i risultati degli allineamenti (S1,S2) ed (S3,4) vengono a loro volta allineati, al fine di creare tutti i pairwise alignments. L'allineamento dei risultati di allineamento delle coppie aiuta a ridurre il numero di allineamenti da effettuare.
+
+* Genomes
+** Prokaryotes
+I genomi procariotici differiscono sostanzialmente dalle loro controparti eucariotiche. Il termine cromosoma utilizzato negli eucarioti viene applicato anche su genomi procariotici, i quali però presentano poche similarità con il genoma eucariotico.
+Tipicamente si osserva che il genoma procariotico è contenuto all'interno di un singolo cromosoma circolare localizzato nel nucleoide. Ovviamente in assenza di compartimentalizzazione nei procarioti è difficile localizzare determinati aspetti. Il nucleoide è una regione.
+Esattamente come negli eucarioti, nei procarioti la molecola di DNA va contenuta in uno spazio relativamente molto piccolo. La compressione del genoma si ottiene con proteine leganti al DNA che impaccano il genoma in una struttura finemente organizzata.
+Molti degli studi riguardo i genomi procariotici sono stati fatti analizzando Escherichia coli. Ad esempio si è osservato che il genoma di E.coli  è *supercoiled*.
+Si parla di supercoiling *positivo* se la doppia elica subisce ulteriori avvolgimenti, *negativo* se vengono rimossi giri dalla doppia elica.
+In un cromosoma lineare lo stress di torsione dovuto a over/under coiling viene immediatamente rilasciato dalla rotazione della parte terminale della molecola di DNA.
+Il DNA circolare però non avendo terminazioni non riesce a ridurre lo stress torsionale, di conseguenza si avvolge su stesso ottenendo una struttura più compatta. Il supercoiling rappresenta la maniera ideale per incapsulare la molecola di DNA circolare all'interno di uno spazio ristretto.
+In E.coli si pensa che il supercoiling sia generato e controllato da una DNA topoisomerasi detta DNA girasi.
+La molecola di DNA non è libera di muoversi una volta che viene introdotta una all'interno. Ciò è dovuto molto probabilmente al fatto che la molecola di DNA si trova legata a diverse proteine che riducono la possibilità di rilassamente, quindi una rottura  causa una perdita di supercoiling solamente in una piccola porzione del DNA.
+Il modello attuale colloca la molecola di DNA di E.coli come legata ad un core proteico dal quale radiano i loop, chiamatii chromosomal interaction domains (CID). Ogni loop contiene 40-300kb di DNA supercoiled. Risultato ottenuto grazie agli esperimenti effettuati per studiare la rottura del supercoiling. Infatti 40-300kb di DNA supercoiled perde l'avvolgimento dopo una singola rottura.
+Il numero di CID è variabile e dipende dallo stato. In condizioni di bassi nutrienti i CID diventano meno, durante la crescita sono circa 31.
+Si ha un'associazione tra CID che forma 4 distinte regioni nel nucleoide chiamate macrodomini, una associata con l'origine di replicazione, una sul lato opposto associata con la terminazione. Le rimanenti due formano la parte sinistra e destra del genoma.
+La componente proteica è composta da proteine associate al nucleoide, che presumibilmente includono le proteine coinvolte nell'impaccamento del DNA.
+Questo non vale necessariamente per gli Archea, dove gli Euryarchaeota presentano proteine più simili agli istoni che a quelle dei batteri.
+*** Differenze tra altri genomi procariotici
+Due variazioni principali:
+- Alcuni genomi procariotici sono lineari, quindi richiedono strutture terminali simili a telomeri. Streptomyces presenta terminazioni evidenziate da un cap all'estremità composto da speciali proteine.
+- La seconda variazione è la presenza di genomi multipartizionati, ovvero divisi tra due o più molecole di DNA, dove diventa complesso distinguere il genoma principale dal plasmidico
+I plasmidi sono piccoli frammenti di DNA non sempre circolari che coestistono con il genoma principale. Alcuni plasmidi si integrano nel genoma, altri sono completamente indipendenti. La replicazione è diversa da quella del cromosoma principale, e possono essere presenti in migliaia di unità. Durante la divisione batterica, i plasmidi si partizionano tra le cellule figlie attraverso un processo differente da quello del cromosoma principale.
+I plasmidi contengono spesso geni non essenziali e non presenti nel genoma principale. Tipicamente si parla di geni codificanti per proteine per esempio per l'antibiotico resistenza o per particolari condizioni ambientali.
+I plasmidi sono in grado di essere trasferiti tra cellule, infatti non è raro trovare plasmidi specifici per un tipo di batterio in batteri di una specie differente.
+Il genoma plasmidico è raramente incluso nel genoma completo di una specie data l'elevata variabilità e la loro indipendenza totale dal cromosoma principale.
+*Integrone* -> Un insieme di gene e altre sequenze di DNA che permettono ai plasmidi di catturare geni da batteriofagi e altri plasmidi. La presenza di questi in Vibrio cholerae, particolarmente in una seconda molecola di DNA più piccola rispetto all'altra, ha messo in discussione il genoma di Vibrio cholerae. Infatti si pensa che la seconda molecola sia invece un megaplasmide ereditato da ancestori di quest'ultimo. Il genoma di Vibrio cholerae fino alla definizione di questi integroni si pensava essere formato da 2 molecole di DNA circolari, una più piccola dell'altra.
+
+Queste complicazioni hanno portato all'invenzione di un nuovo termine, il *cromide*, per descrivere un plasmide che trasporta geni essenziali. Quindi la divisione diventa:
+1. Uno o più cromosomi localizzati nel nucleoide
+2. Plasmidi, distinti dai cromosomi trasportanti geni non essenziali. Utilizzano uno speciale sistema di partizione.
+3. Cromidi, utilizzano il sistema di partizione dei plasmidi ma trasportano geni essenziali per la sopravvivenza
+*** Plasticità
+Un genoma batterico generico è composto dall'endogenoma composto da uno o più endocromosomi. Queste componenti possono essere lineari o circolari e possono essere state sottoposte a shuffling/inversion. Altri cambi fisici (inversioni ecc...) possono accadere frequentemente, ma le sequenze dell'endogenoma sono presenti in ogni individuo sano.
+Una serie di elementi accessori all'endogenoma possono essere presenti, ovvero tipi di plasmidi che esistono come repliconi liberi o integrati, profagi o frammenti di profagi che possono essere integrati o in forma plasmidica libera, e isole di patogenicità. Infine piccoli elementi mobili come trasposoni, integroni ecc..., possono essere inseriti in una qualsiasi componente del genoma.

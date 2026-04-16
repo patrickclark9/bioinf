@@ -1,10 +1,9 @@
-
+****
 === 1. Selezione dei Target e Progettazione della Libreria
 
 - *Identificazione dei geni:* Sono stati selezionati *258 geni SLC espressi* nella linea cellulare HCT 116 (soglia di espressione > 1 trascritto per milione - TPM).
 
 - *Progettazione degli sgRNA:* Sono state progettate guide specifiche per ogni gene (3 sgRNA per gene nel sistema Cas12a e 6 per gene nel sistema Cas9).
-
 - *Combinazioni:* Gli sgRNA sono stati accoppiati in tutte le combinazioni possibili, generando una libreria di oltre un milione di coppie di guide per interrogare *33.153 combinazioni SLC-SLC* uniche.
 
 - *Controlli:* Sono stati inclusi sgRNA mirati a recettori olfattivi (OR) per misurare l'effetto dei singoli knockout e coppie di geni con letalità sintetica già nota come controlli positivi.
