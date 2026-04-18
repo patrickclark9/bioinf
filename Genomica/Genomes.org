@@ -1,0 +1,261 @@
+#+title: Genomes
+* Genomes
+** Prokaryotes
+I genomi procariotici differiscono sostanzialmente dalle loro controparti eucariotiche. Il termine cromosoma utilizzato negli eucarioti viene applicato anche su genomi procariotici, i quali però presentano poche similarità con il genoma eucariotico.
+Tipicamente si osserva che il genoma procariotico è contenuto all'interno di un singolo cromosoma circolare localizzato nel nucleoide. Ovviamente in assenza di compartimentalizzazione nei procarioti è difficile localizzare determinati aspetti. Il nucleoide è una regione.
+Esattamente come negli eucarioti, nei procarioti la molecola di DNA va contenuta in uno spazio relativamente molto piccolo. La compressione del genoma si ottiene con proteine leganti al DNA che impaccano il genoma in una struttura finemente organizzata.
+Molti degli studi riguardo i genomi procariotici sono stati fatti analizzando Escherichia coli. Ad esempio si è osservato che il genoma di E.coli  è *supercoiled*.
+Si parla di supercoiling *positivo* se la doppia elica subisce ulteriori avvolgimenti, *negativo* se vengono rimossi giri dalla doppia elica.
+In un cromosoma lineare lo stress di torsione dovuto a over/under coiling viene immediatamente rilasciato dalla rotazione della parte terminale della molecola di DNA.
+Il DNA circolare però non avendo terminazioni non riesce a ridurre lo stress torsionale, di conseguenza si avvolge su stesso ottenendo una struttura più compatta. Il supercoiling rappresenta la maniera ideale per incapsulare la molecola di DNA circolare all'interno di uno spazio ristretto.
+In E.coli si pensa che il supercoiling sia generato e controllato da una DNA topoisomerasi detta DNA girasi.
+La molecola di DNA non è libera di muoversi una volta che viene introdotta una all'interno. Ciò è dovuto molto probabilmente al fatto che la molecola di DNA si trova legata a diverse proteine che riducono la possibilità di rilassamente, quindi una rottura  causa una perdita di supercoiling solamente in una piccola porzione del DNA.
+Il modello attuale colloca la molecola di DNA di E.coli come legata ad un core proteico dal quale radiano i loop, chiamati chromosomal interaction domains (CID). Ogni loop contiene 40-300kb di DNA supercoiled. Risultato ottenuto grazie agli esperimenti effettuati per studiare la rottura del supercoiling. Infatti 40-300kb di DNA supercoiled perde l'avvolgimento dopo una singola rottura.
+Il numero di CID è variabile e dipende dallo stato. In condizioni di bassi nutrienti i CID diventano meno, durante la crescita sono circa 31.
+Si ha un'associazione tra CID che forma 4 distinte regioni nel nucleoide chiamate macrodomini, una associata con l'origine di replicazione, una sul lato opposto associata con la terminazione. Le rimanenti due formano la parte sinistra e destra del genoma.
+La componente proteica è composta da proteine associate al nucleoide, che presumibilmente includono le proteine coinvolte nell'impaccamento del DNA.
+Questo non vale necessariamente per gli Archea, dove gli Euryarchaeota presentano proteine più simili agli istoni che a quelle dei batteri.
+*** Differenze tra altri genomi procariotici
+Due variazioni principali:
+- Alcuni genomi procariotici sono lineari, quindi richiedono strutture terminali simili a telomeri. Streptomyces presenta terminazioni evidenziate da un cap all'estremità composto da speciali proteine.
+- La seconda variazione è la presenza di genomi multipartizionati, ovvero divisi tra due o più molecole di DNA, dove diventa complesso distinguere il genoma principale dal plasmidico
+I plasmidi sono piccoli frammenti di DNA non sempre circolari che coesistono con il genoma principale. Alcuni plasmidi si integrano nel genoma, altri sono completamente indipendenti. La replicazione è diversa da quella del cromosoma principale, e possono essere presenti in migliaia di unità. Durante la divisione batterica, i plasmidi si partizionano tra le cellule figlie attraverso un processo differente da quello del cromosoma principale.
+I plasmidi contengono spesso geni non essenziali e non presenti nel genoma principale. Tipicamente si parla di geni codificanti per proteine per esempio per l'antibiotico resistenza o per particolari condizioni ambientali.
+I plasmidi sono in grado di essere trasferiti tra cellule, infatti non è raro trovare plasmidi specifici per un tipo di batterio in batteri di una specie differente.
+Il genoma plasmidico è raramente incluso nel genoma completo di una specie data l'elevata variabilità e la loro indipendenza totale dal cromosoma principale.
+*Integrone* -> Un insieme di geni e altre sequenze di DNA che permettono ai plasmidi di catturare geni da batteriofagi e altri plasmidi. La presenza di questi in Vibrio cholerae, particolarmente in una seconda molecola di DNA più piccola rispetto all'altra, ha messo in discussione il genoma di Vibrio cholerae. Infatti si pensa che la seconda molecola sia invece un megaplasmide ereditato da ancestori di quest'ultimo. Il genoma di Vibrio cholerae fino alla definizione di questi integroni si pensava essere formato da 2 molecole di DNA circolari, una più piccola dell'altra.
+
+Queste complicazioni hanno portato all'invenzione di un nuovo termine, il *cromide*, per descrivere un plasmide che trasporta geni essenziali. Quindi la divisione diventa:
+1. Uno o più cromosomi localizzati nel nucleoide
+2. Plasmidi, distinti dai cromosomi trasportanti geni non essenziali. Utilizzano uno speciale sistema di partizione.
+3. Cromidi, utilizzano il sistema di partizione dei plasmidi ma trasportano geni essenziali per la sopravvivenza
+*** Plasticità
+Un genoma batterico generico è composto dall'endogenoma composto da uno o più endocromosomi. Queste componenti possono essere lineari o circolari e possono essere state sottoposte a shuffling/inversion. Altri cambi fisici (inversioni ecc...) possono accadere frequentemente, ma le sequenze dell'endogenoma sono presenti in ogni individuo sano.
+Una serie di elementi accessori all'endogenoma possono essere presenti, ovvero tipi di plasmidi che esistono come repliconi liberi o integrati, profagi o frammenti di profagi che possono essere integrati o in forma plasmidica libera, e isole di patogenicità. Infine piccoli elementi mobili come trasposoni, integroni ecc..., possono essere inseriti in una qualsiasi componente del genoma.
+*** Struttura Generale
+Il genoma procariotico ha una compatta organizzazione con pochi spazi tra geni. Il DNA intergenico all'interno di E.coli ad esempio compone solo l'11% del totale ed è distribuito in tutto il genoma in segmenti piccoli. In generale questo si osserva in quasi tutti i genomi procariotici, ovvero c'è pochissimo spazio "perso". L'idea principale sullo sviluppo di un genoma così compatto è che sia necessario per una replicazione più veloce, ma è una pura ipotesi.
+Comparando un segmento di 50kb di E.coli contro quello umano diventa chiaro che ci sono più geni e meno spazio tra loro. Alcuni geni sono perfettamente contigui oppure hanno solo 1nt di spaziatore.
+In generale i geni procariotici sono più corti di quelli eucariotici (circa 3/4 della lunghezza).
+Altre caratteristica è l'infrequenza di elementi ripetitivi. Possiedono però sequenze ripetute in parti differenti del genoma (esempio Insertion Sequence IS1), che è un esempio di sequenza trasponibile, ovvero in grado di muoversi nel genoma o nel caso degli elementi di inserzione, di essere trasferito anche ad altri organismi (anche tra specie differenti).
+I genomi procariotici possiedono almeno qualcun elemento non trasponibile ripetuto, classificati in maniera diversa. I più importanti sono:
+1. Repetitive extragenic palindromic sequences (REP) -> Molte delle quali sono 20-50bp in lunghezza ed appaiono singolarmente o in array. Se appaiono subito dopo un gene possono essere trascritte come estensione dell'mRNA, dove questa estensione diviene uno stem-loop con probabile funzione regolatoria
+2. Clustered Regularly Interspaced Short Palindromic Repeats (CRISPR) -> Fonte delle endonucleasi programmabili. Sono sequenze di 20-50bp che si trovano in tandem, ogni ripetizione separata da quella vicina da uno spacer di lunghezza simile ma sequenza diversa. Alcuni spacer assomigliano a segmenti di genomi di batteriofagi, si pensa quindi che CRISPR sia un meccanismo di sistema immunitario batterico, dato che il trascritto dello spacer funge da gRNA (RNA guida) che si lega al genoma del fago, attivando una endonucleasi Cas (il gene Cas è spesso adiacente ad una regione CRISPR) per effettuare un taglio endonucleolitico ed inattivare il fago. Tipicamente le regioni CRISPR sono precedute da una sequenza leader ricca in AT ma non conservata. Il numero di ripetizioni può variare da un minimo di due fino a qualche centinaio. La lunghezza delle ripetizioni è pero sempre compresa tra 23 e 50. Le ripetizioni sono separate da spacer di dimensioni simili i quali hanno sequenza simile o identica a frammenti di plasmidi e genomi batteriofagi, specificando il target della interferenza CRISPR. Un insieme di geni associati a CRISPR detti Cas seguono immediatamente o precedono le ripetizioni. Sono geni molto conservati che codificano per la macchina proteica responsabile per l'attività della CRISPR.
+Numero di elementi trasponibili e non trasponibili nei genomi procariotici è fortemente variabile. Tipicamente sono meno dell'1% del genoma, ci sono casi in cui sono più frequenti (Neisseria meningitidis, 11%).
+Seconda particolarità del genoma procariotico è la scarsità di introni. E.coli non ha geni discontinui, ed in genere gli introni sono rari nei procarioti.
+Gli introni che si ritrovano in alcuni genomi procariotici sono classificati in Gruppo I e Gruppo II. Questi introni tralaltro sono in grado di auto-splicing, di conseguenza la loro presenza non impatta la possibilità espressiva del gene dato che si possono auto-rimuovere dal trascritto, senza ausilio di enzimi catalitici appositi come invece accade negli eucarioti. Alcuni di questi introni sono in grado di trasporsi in differenti punti del genoma, motivo per cui possono apparire tra geni che tipicamente non hanno introni.
+Si può quindi classificare un introne procariotico come un elemento trasponibile, a differenza di quelli eucariotici che invece sono regioni intrageniche fisse.
+*** Operone
+Il genoma procariotico è caratterizzato dalla presenza di operoni. Un operone è un gruppo di geni localizzati uno adiacente all'altro nel genoma, con al massimo un paio di nucleotidi tra loro. Esempi di operone sono thr, dna e lac.
+I geni che compongono un operone tipicamente sono geni che trascrivono per proteine che hanno funzioni collegate tra loro. L'operone thr trascrive per 3 enzimi che catalizzano diversi step della conversione di aspartato-4-semialdeide in treonina. L'operone dna trascrive dnaK e dnaJ, il cui scopo è quello di proteggere le altre proteine da danni quando il batterio è esposto a danni termini o shock osmotico, sono praticamente chaperonine.
+Il fatto che si trovino adiacentemente uno all'altro significa che il batterio può coordinare la sintesi di proteine necessarie per la funzione biochimica codificata dall'operone.
+Gli operoni si distinguono in *inducibili* ed *repressibili*.
+Gli operoni vengono ricercati all'interno del genoma andando a cercare geni adiacenti ad un altro con funzione biochimica simile. In generale, un operone genuino sarà presente anche in genomi di specie simili, non solo in quella presa in esame.
+Poichè la maggior parte degli operoni sono stati identificati con questa strategia, con supporto della genomica comparativa, alcune predizioni possono essere sbagliate, ma in generale rappresentano un aspetto chiave e comune del genoma procariotico.
+*** Dimensioni
+Le dimensioni del genoma procariotico sono molto variabili. Tra il genoma procariotico più grande e il genoma eucariotico più piccolo esiste una sovrapposizione, ma in generale i genomi procariotici sono più piccoli dei genomi eucariotici.
+Tipicamente sono molto compatti: E.coli K12 ha una densità genica dell'87% e molti genomi si attestano attorno all'85-90%. La dimensione del genoma è proporzionale al numero di geni. Il numero di geni varia molto in base all'ambiente o nicchia ecologica dove le specie vivono.
+I genomi più grandi appartengono alle specie che si trovano nei terreni, dove l'ambiente è abbastanza complesso ed esposto a diverse condizioni fisiologiche e biologiche. Sorangium cellulosum possiede 14.8Mb di genoma con 10.400 geni necessari a dividere la cellulosa in monosaccaridi e per la sintesi di proteine anti-fungo e anti-batteriche per la competizione ambientale.
+Nasuia deltocephanicola al contrario è un batterio che vive nell'addome delle cicadelle, è un endosimbionte. Nasuia produce due amminoacidi necessari per le cicadelle ma che non sono in grado di produrre autonomamente, e riceve nutrienti dall'insetto. Nasuia quindi non ha bisogno di una moltitudine di geni necessari invece ad altre specie batteriche, e quindi possiede un genoma di 112Kb con solo 169 geni, di cui 137 protein coding.
+Queste differenze hanno posto al centro la domanda di quanti geni sono necessari per una specie. In generale, creando ambienti ricchi di nutrienti, il numero di geni necessari ad una specie può essere ridotto estensivamente, dato che vengono meno tutti gli enzimi e le proteine necessarie per il sostentamento e saranno necessarie solo quelle indispensabili per la replicazione.
+**** Dimensioni del gene
+La media lunghezza delle proteine nei procarioti è 300 amminoacidi, nel r ange 100-300 solitamente. Le annotazione delle sequenze del genoma presentano molti geni "orfani", ovvero geni che non presentano similarità di sequenza con proteine note. Probabilmente hanno funzioni cruciali specifiche per l'organismo. La proporzione di orfani annotati differisce considerevolmente tra un genoma ed un altro.
+**** Ordine dei geni
+Studi Whole-Genome hanno dimostrato che la maggior parte degli ordini dei geni negli operoni può essere modulata, ed è accaduto frequentemente durante l'evoluzione. Traslocazione ed inversioni accadono frequentemente in genomi batterici ma non cambiano il contenuto genico. Coincidono con inserzioni e delezioni derivanti dall'escissione imprecisa di elementi genici mobili.
+**** Dimensioni all'interno delle specie
+Le dimensioni del genoma possono essere variabili anche tra individui di una stessa specie. Infatti lo studio dei genomi ha complicato l'aspetto della speciazione, in quanto nei procarioti la classificazione diventa sempre più complessa data la presenza di individui che tecnicamente presentano caratteristiche strutturali simili o uguali, quindi dovrebbero appartenere alla stessa specie, ma in realtà presentano proprietà anche molto diverse tra loro. L'esempio chiave è E.coli di cui esistono tantissimi ceppi che vanno dal completamente innocuo al letale.
+La moderna definizione di specie, ovvero quella in cui due individui appartengono alla stessa specie se possono riprodursi tra loro senza problemi, complica ulteriormente le cose poiché i microrganismi possono scambiarsi materiale genetico sfruttando più metodi anche tra specie differenti. Il gene flow che è centrale per gli organismi superiori non si applica per i procarioti.
+È diventato chiaro che differenti ceppi di una stessa specie possono presentare insiemi di geni specifici per quel dato ceppo, differenziandosi dal resto.
+Alcune metodologie di trasferimento sono:
+1. Trasformazioni: DNA "nudo" viene rilasciato durante la lisi di un organismo e viene "raccolto" da un altro organismo. L'antibiotico resistenza può essere integrata nel cromosoma o nel plasmide della cellula che riceve il materiale genetico.
+2. Trasduzione: L'antibiotico resistenza viene trasferita da un batterio all'altro tramite batteriofagi, ed integrato nel cromosoma recipiente (lisogenia).
+3. Coniugazione: Contatto diretto grazie al collegamento dei pili. I plasmidi formano un "mating bridge" tra i batteri ed il DNA viene scambiato, con il risultato dell'acquisizione dell'antibiotico resistenza dalla cellula ricevente. I trasposoni sono sequenza che trasportano i propri enzimi ricombinanti che permettono trasposizione da una locazione ad un'altra. Possono trasportare anche i geni per l'antibiotico-resistenza.
+Differenze tra dimensioni di genomi e composizione all'interno della specie hanno portato al concetto del *pan-genoma*.
+In base al pan-genoma il genoma viene diviso in due parti principali:
+1. Core Genome -> Tutti i membri -> Attività cellulari e biochimiche che definiscono una specie
+2. Accessory Genome -> Strain specific -> Completa capacità biologica, le cui componenti sono espresse da singoli ceppi
+
+Il pan-genoma viene classificato come:
+- Aperto -> Il numero di geni continua ad incrementare (es. E.coli è arrivato a 60.000 geni da 200.000 ceppi diversi)
+- Chiuso -> Il sequenziamento di nuovi ceppi non ha portato ad incremento nel numero di geni (Bacillus anthracis, pan-genome di 2978 geni di cui 2893 sono Core-Genome)
+Un basso numero di geni dell'Accessory Genome è associato con un limitato range ecologico, e viceversa.
+
+*** Lateral Gene Transfer or Horizontal
+Geni trasferiti da una specie batterica ad un altra. Questi eventi sono la base per le tecniche di mapping genico nei batteri. Stessi geni presenti in diverse specie batteriche che non dovrebbero averle. Il numero di questi trasferimenti è anche molto elevato (E.coli 12,8% di geni acquisiti tramite Lateral Gene Transfer). Ci sono 3 modi per identificare potenziale HGT:
+1. Analisi filogenetica, trovare inconsistenza tra relazioni evolutive contro studi genomici. Questo perchè il trasferimento di un gene da una specie ad un'altra sarà accaduto necessariamente prima della divergenza da un ancestore comune. Le sequenze del gene tra le due specie sarà molto simile perchè non è passato abbastanza tempo perchè la mutazioni e la deriva causino divergenza. Quindi l'albero filogenetico della specie contraddirrà l'albero del gene, in quanto quello filogenetico porrà le due specie lontane tra loro mentre quello genico le metterà più vicine
+2. Differenze composizionali: GC content, codon usage, AA content tendono ad essere le stesse su tutto il genoma. Se un segmento del genoma ha una composizione atipica per quella specie può significare HGT (E.coli ad esempio ha GC content di 51%, CCG è il codone più frequente per la prolina, e leucina alanina e glicina sono i 3 a.a. più frequenti. Staphylococcus aureus ha un GC content del 33%, CCG è raramente usato per la prolina, e gli amminoacidi più frequenti sono leucina isoleucina e lisina)
+3. Sintenia -> Conservazione dell'ordine dei geni tra due specie. I genomi di due procarioti non imparentati dovrebbero presentare sintenia nulla o bassa. Una regione sintenica è sintomo di HGT
+HGT avviene anche tra batteri ed archea ma l'impatto di questi non è chiaro.
+Poichè solo una minuscola parte dei geni ottenuti per HGT/LGT hanno un immediato vantaggio selettivo, batteri ed archea hanno sviluppato meccanismi che prevengono HGT, come il DNA-restriction e la surface exclusion. Anche le regioni CRISPR sono state identificate come pathway di interferenza per limitare almeno due vie maggiori di HGT: Coniugazione e Trasduzione.
+*** Base Composition
+Il contenuto in basi (GC-content) varia molto tra specie. Dovuto ad elementi mobili o HGT/LGT. I batteri non mostrano asimmetria in composizione nucleotidica (le 4 basi hanno uguale frequenza in entrambi i filamenti di DNA).
+Le composizioni nucleotidiche in molti batteri ed archea presentano asimmetria all'origine ed alla terminazione della replicazione del cromosoma, dove i filamenti di DNA cambiano da leading a lagging e viceversa. Questa asimmetria viene misurata come la differenza normalizzata nel contenuto complementare di nucleotidi, chiamati GC-Skew e AT-Skew. Il minimo e massimo GC-Skew può essere utilizzato per predire l'origine e la terminazione della replicazione.
+Il codon usage e AA content sono misure simili. Il codon usage fa riferimento al codone preferito per dati amminoacidi, AA content misura quali amminoacidi sono più comuni nelle proteine di una data specie.
+Organismi ricchi in GC preferiranno codoni ricchi in GC. Se ricchi in AT allora preferiranno codoni ricchi in AT.
+Il codon usage può essere utilizzato per identificare ORF che potrebbero essere geni.
+*** Regioni Non geniche
+Una frazione rilevante del genoma batterico è composta da elementi genici mobili. Possono trasporre per meccanismo replicativo o conservativo.
+I Trasposoni DNA nei procarioti possono essere di diversi tipi:
+- Insertion sequences
+- Tn3-type transposon
+- Transposable phages
+- Composite Transposon
+I primi 3 sono fiancheggiati da piccole (<50bp) ITR (inverted terminal repeat). Il gene della resolvasi di Tn3 codifica una proteina coinvolta nella trasposizione. Inserzioni di elementi nel DNA target crea coppie di piccole ripetizioni dirette nel genoma ospite.
+*** CRISPR-Cas
+Il sistema immunitario adattativo batterico CRISPR-Cas opera attraverso tre fasi distinte: adattamento, espressione e interferenza.
+
+1. Adattamento (Acquisizione della memoria)
+Nei sistemi di tipo I e tipo II, il riconoscimento dell'acido nucleico estraneo (come il DNA virale) dipende strettamente da una breve sequenza bersaglio chiamata PAM (Protospacer-Adjacent Motif). Dopo questo primo step di riconoscimento, il complesso proteico formato da Cas1 e Cas2 preleva un frammento del DNA invasore (il proto-spacer) e lo integra all'interno del locus CRISPR del genoma batterico, dove prenderà il nome di spacer.
+
+2. Espressione (Maturazione dei crRNA)
+Il locus CRISPR viene trascritto in un lungo RNA precursore, chiamato pre-crRNA. I meccanismi di maturazione variano in base al tipo di sistema:
+
+- Nei sistemi di Tipo I: Il pre-crRNA viene processato dal complesso proteico Cascade (CRISPR-Associated complex for antiviral defense), che vi si lega.
+
+- Nei sistemi di Tipo II: Il processo richiede un piccolo RNA trans-codificato chiamato tracrRNA. Questo si appaia alle sequenze ripetute presenti sul pre-crRNA; la struttura a doppio filamento di RNA che si viene a formare viene poi tagliata dall'enzima housekeeping RNasi III (in un processo che richiede la presenza della proteina Cas9), generando i crRNA maturi.
+
+3. Interferenza e Prevenzione dell'Autoimmunità
+Durante l'interferenza, i crRNA guidano le nucleasi verso il bersaglio per distruggerlo. Poiché la sequenza dello spacer nel crRNA è perfettamente complementare anche al locus CRISPR batterico da cui è stata trascritta, esiste un rischio potenziale di auto-taglio. Il sistema previene questa risposta autoimmune in due modi:
+
+- L'assenza della PAM: Il DNA target invasore possiede la sequenza PAM, mentre il locus CRISPR del batterio ne è sprovvisto.
+
+- Complementarietà estesa: La perfetta corrispondenza tra il crRNA e le sequenze ripetute fiancheggianti all'interno del DNA CRISPR ospite (che invece risulta in un mismatch fuori dalla sequenza dello spacer quando ci si lega al DNA virale) funge da segnale inibitorio, bloccando il taglio.
+
+**** Applicazioni Biotecnologiche di Cas9
+
+Sfruttando il sistema di Tipo II, si è fuso crRNA e tracrRNA in un unico filamento chiamato sgRNA (single guide RNA). Inserendo la proteina Cas9 wild-type guidata da un sgRNA in una cellula, è possibile generare rotture mirate al doppio filamento del DNA. La cellula può riparare queste rotture in due modi principali, permettendo diverse applicazioni:
+
+- Knockout genico tramite NHEJ: Se la rottura viene riparata tramite la giunzione non omologa delle estremità (Non-Homologous End Joining, NHEJ), si generano frequentemente inserzioni o delezioni (indel). Questo causa mutazioni  frameshift che inattivano il gene bersaglio (Knockout).
+
+- Modifiche precise tramite HDR: Se si fornisce un filamento di DNA stampo omologo alle regioni fiancheggianti il taglio (il template di editing, quindi o un dsDNA lineare o un piccolo oligonucleotide), la rottura può essere riparata tramite ricombinazione omologa (Homology-Directed Repair, HDR). Questo permette di introdurre mutazioni sito-specifiche o inserire nuove sequenze in modo preciso (Knock-In).
+
+***** La variante dCas9 (dead Cas9)
+Modificando Cas9 (mutazioni nei siti di attività RuvC ed HNH) in modo da disattivarne l'attività di taglio, si ottiene la dCas9, una proteina "cataliticamente morta" che mantiene intatta la capacità di legarsi al DNA guidata dall'RNA. La dCas9 viene usata per:
+
+- Repressione della trascrizione: Legandosi a un promotore, blocca l'inizio della trascrizione; legandosi al filamento stampo di una Open Reading Frame (ORF), ne blocca l'allungamento.
+
+- Proteina di fusione: La dCas9 può essere fusa con differenti domini funzionali, agendo da veicolo per trasportare attività enzimatiche specifiche o proteine reporter (es. fluorofori) verso precisi loci genomici..
+** Genomi VIrali
+I virus sono organismo specifici, data la loro natura di parassiti obbligati estremi, ovvero incapaci di riprodursi al di fuori delle cellule ospiti.
+Infatti essi spesso possiedono geni per le loro DNA polimerasi ed RNA polimerasi, ma richiedono i sistemi dell'ospite per la replicazione e la trascrizione.
+Tutti i virus necessitano di ribosomi e apparato intero di traduzione per la riproduzione.
+Di conseguenza la specificità del virus per un organismo è necessaria perchè il virus avrà geni compatibili con sistema genetico dell'ospite.
+I virus possono essere composti da diversi tipi di acido nucleico. In particolare i virus possono essere:
+- DNA doppio filamento
+- DNA singolo filamento
+- RNA singolo filamento
+- RNA doppio filamento
+- Retrovirus (RNA->DNA)
+Per ragioni sconosciute, i virus delle piante sono spesso a RNA.
+I virus inoltre presentano genomi:
+- Segmentati -> Più molecole di RNA o DNA
+- Non-Segmentati -> Una sola molecola di DNA o RNA
+La struttura dell'acido nucleico è tipicamente lineare o circolare.
+In generale molti virus eucariotici seguono unicamente il ciclo litico, solo pochi seguono il ciclo lisogenico.
+Molti virus coesistono con le cellule ospiti per lunghi periodi, con la perdita di funzione della cellula ospite solo verso le fasi finali dell'infezione dopo anche anni. Queste possono avvenire anche senza integrazione del genoma virale nella cellula ospite. Altri virus invece seguono il ciclo lisogenico come quello dei batteriofagi, integrando il proprio genoma in quello ospite.
+*** Contenuto Genico
+Il contenuto genico è estremamente variabile e dipende dal tipo di virus. Alcuni retrovirus presentano solo 3 geni, altri tipi di virus possono avere anche 200 geni.
+Nonostante lo scarso contenuto genico, questi possono essere conservati in maniera complessa.
+Nel caso del fago \phi X174, un virus a ssDNA [+] circolare, esso riesce a includere informazione "extra", poichè presenta geni in overlap. Questi geni con overlap condividono la sequenza (alcuni geni sono completamente contenuti all'interno della sequenza di un altro gene), ma codificano per cose differenti perchè cambia il sito di inizio, di terminazione ed in alcuni casi anche la reading frame.
+L'overlap genico non è raro.
+In generale, tanto più e grande e complesso il virus (capside, pericapside) tanti più geni avrà, dato che solo per la sintesi del capside spesso sono necessari anche 40 geni.
+*** Dimensioni
+Esiste un overlap tra il genoma procariotico più piccolo ed il genoma virale più grande (Nasuia deltocephalinicola 112kb, alcuni virus raggiungono queste dimensioni). In generale i virus eucariotici hanno genoma più grande dei fagi.
+
+*** Struttura virale
+- Icosaedri -> I segmenti polipeptidici si organizzano in una struttura icosaedrale attorno all'acido nucleico
+- Filamentosi -> I polipeptidi si organizzano in strutture elicoidali
+- Testa-Coda -> Testa icosaedrica contenente l'acido nucleico, coda filamentosa e altre strutture per facilitare l'ingresso dell'acido nucleico nell'ospite. *Solo i batteriofagi presentano questa struttura*
+
+*** Retrovirus
+Un esempio di genoma virale integrativo sono i retroelementi virali. Sono di due tipi:
+- Retrovirus -> Contengono nel loro capside la versione a RNA del loro genoma. Sfruttando la trascrittasi inversa convertono il genoma RNA in DNA.
+- Pararetrovirus -> Contengono nel loro capside la versione a DNA del loro genoma. Sfruttando la trascrittasi inversa convertono il genoma DNA in RNA.
+Il genoma tipico di un retrovirus è una singola molecola singolo filamento di RNA di 7-12kb.Dopo l'ingresso nella cellula, il genome è copiato in DNA doppio filamento da alcune molecole di trascrittasi inversa che il virus possiede nel capside.
+Il dsDNA si integra poi nel genoma ospite. Poichè si ha 0 similarità di sequenza, esso può integrarsi in qualsiasi punto dei cromosomi dell'ospite.
+I retrovirus possiedono almeno 3 geni:
+- gag -> Codifica per proteine strutturali (capside)
+- pol -> Codifica per la trascrittasi inversa
+- env -> Codifica per proteine envelope
+Ognuno di questi codifica per una poliproteina che viene tagliata, dopo la traduzione, in due o più prodotti genici funzionanti.
+** Genomi Eucariotici
+Il genoma eucariotico, a differenza degli altri, è diviso in un insieme di molecole di DNA lineari, ognuna contenuta in un cromosoma.
+Questo è l'unico pattern conosciuto:
+- Almeno 2 cromosomi
+- Tutti  lineari
+I cromosomi sono sempre più piccoli delle molecole di DNA che contengono, infatti il cromosoma medio umano possiede appena 5cm di DNA. Di conseguenza è necessario un sistema di impaccamento adeguato affinché la molecola di DNA riesca ad essere contenuta fisicamente nel cromosoma.
+È chiaro che il sistema di impaccamento ha un'influenza chiave sui processi coinvolti nell'espressione genica.
+*** Cromatina
+L'arrangiamento spaziale della cromatina all'interno dello spazio confinato del nucleo e la sua relazione allo sviluppo cellulare e la sua funzione rimane non chiara.
+Quello che si sa ad oggi è che ogni cromosoma occupa il proprio spazio (detto "territorio del cromosoma"). Scoperta avvenuta grazie al /chromosome staining/.
+
+[[/home/patrick/Pictures/Screenshots/Screenshot from 2026-04-17 18-00-47.png]]
+All'interno dell'interfase del nucleo, i cromosomi occupano territori distinti evidenziati da colori differenti.
+All'interno di ogni territorio cromosomico, la cromatina si folda in molteplici loop e segrega in due compartimenti:
+- Compartimento A: Clusterizzazione attorno al nucleolo e a corpi nucleici (Regioni *Permissive*)
+- Compartimento B: Associate a LAD (Lamina associated domain) nella parte periferica del nucleo (Regioni *Repressive*)
+Le interazioni cromatiniche avvengono principalmente intracromosoma. Le regioni permissive della cromatina tendono a posizionarsi quanto più lontano possibile dalla lamina nucleare o dalla eterocromatina pericentromerica.
+La preferenza per interazioni interne al cromosoma tra regioni etero- ed eu- cromatiniche (compartimento A e B) risultano nella formazione dei TAD (Topologically associated domains), demarcati da elementi arricchiti con CTCF/Cohesin. All'interno delle TAD la cromatina si ripiega ulteriormente a formare /loop regolatori/, facilitando interazioni /close proximity/ tra promotori ed enhancer. Il fold avvicina le due regioni così che l'enhancer possa svolgere la sua funzione.
+La CCC (Chromosome Conformation Capture) è la tecnica utilizzata per studiare le interazioni all'interno dell TAD. A partire da questa sono state sviluppate altre tecniche (4C,5C, Hi-C).
+
+Il confine di una TAD è delimitato dagli *insulator*, sequenze di 1-2kb di lunghezza che fiancheggiano la TAD, determinando la presenza di un dominio funzionale.
+- Positional Effect:  Un gene clonato inserito in una regione a cromatina altamente compressa renderà il gene inattivo. Inserendolo in cromatina meno compressa (più aperta) permetterà l'espressione del gene. In assenza di insulators, l'espressione del gene dipende unicamente dallo stato della cromatina. Quando fiancheggiato da un insulator, l'espressione sarà sempre elevata, poichè l'insulator determina e stabilisce un dominio funzionale nel sito di inserzione.
+**** Eterocromatina
+- Costitutiva -> Permanente. Tipica di telomero e centromero e alcune regioni di altri cromosomi. Esempio fondamentale è il cromosoma Y che è quasi completamente costituito da eterocromatina costitutiva, data lo scarsissimo numero di geni presenti su di esso
+- Facoltativa -> Non permanente. Contiene geni inattivi in alcune cellule ed in alcuni periodi del ciclo cellulare. Il compattamento della cromatina non permette ai macchinari di trascrizione e traduzione di accedere ai siti necessari per l'espressione genica
+**** Eucromatina
+L'esatta organizzazione del DNA all'interno dell'eucromatina non è noto, ma al microscopio elettronico sono visibili avvolgimenti (loop) di DNA all'interno delle regioni eucromatiniche, ogni loop tra 40 e 100kb di lunghezza e predominantemente in forma di fibra cromatinica di 30nm.
+I loop di DNA tra i punti di legame nella matrice nucleare sono detti domini strutturali.
+La relazione precisa tra domini strutturali e domini funzionali non è esattamente conosciuta.
+Un dominio funzionale viene identificato trattando una regione di cromatina con la DNasi I (deossiribonucleasi I) che non riesce ad accedere alle struttura più compatte del DNA.
+
+**** Istoni
+Tutti gli istoni sono soggetti a modifiche post-traduzionali, principalmente nelle code. Le maggiori modifiche post-traduzionali sono acetilazione, metilazione, fosforilazione e ubiquitinazione.
+Le modificazioni istoniche hanno ruoli nella riparazione del DNA, la replicazione, splicing alternativo, regolazione della trascrizione e condensazione cromosomica.
+In particolare, dividendo lo stato trascrizionalmente attivo in eucromatina e l'opposto in eterocromatina, notiamo che l'eucromatina è caratterizzata da alti livelli di acetilazione e trimetilazione H3K4, H3K36 e H3K79. L'eterocromatina è caratterizzata da bassi livelli di acetilazione e alti livelli di metilazione di H3K9, H3K27 e H4K20.
+Le modifiche istoniche possono influenzare positivamente o negativamente modifiche istoniche in altri siti (Ubiquitinazione di H2BK123 influenza positivamente la metilazione di H3K79 e H3K4, fosforilazione di H3S10 influenza negativamente la metilazione in H3K9)
+**** Chromatin Remodelling
+L'accessibilità del DNA in forma nucleosomica può essere modulata sfruttando enzimi, i quali utilizzano l'energia rilasciata dall'idrolisi dell'ATP per alterale la struttura nucleosomica e rendere regioni protette della cromatina "aperte" al legame con complessi di binding al DNA (Fattori di trascrizione, iniziatori).
+L'apertura della struttura cromatinica la si ottiene attraverso:
+- Nucleosome sliding
+- Unwrapping -> Dissociazione del contatto nucleosoma-DNA
+- Nucleosome Eviction
+- Sostituzione di istoni -> Possono essere sostituiti istoni con varianti (es. H2A con H2Avar a formare il dimero H2Avar-H2B)
+** Dimensioni del Genoma
+Le dimensioni di un genoma eucariotico sono estremamente variabili in base all'organismo. Il più piccolo genoma eucariotico presenta overlap con il più grande genoma batterico, ma in generale gli eucarioti hanno genomi (aploidi) più grandi.
+Una parte cruciale del genoma eucariotico è l'assenza di correlazione tra numero di geni e complessità apparente dell'organismo. Esistono piante con genomi aploidi ben più grandi di quello umano, oltre a presentare poliploidicità (es. piante esaploidi).
+Due fattori da tener conto:
+- I geni eucariotici sono interrotti
+- Presenza di DNA ripetitivo
+Banalmente nei batteri dimensione del genoma e numero di geni sono fortemente correlati, cosa non vero negli eucarioti.
+Definendo la complessità di un organismo come il numero di possibili stati trascrittomici (trascrittoma -> universo dei possibili trascritti di un genoma) ottenibili dal genoma, si può osservare che dato un modello semplice in cui un gene può trovarsi in due stati (acceso o spento), un genoma con N geni può codificare per $2^N$ stati differenti.
+Comparando Homo sapiens a Caenorhabditis elegans ($\frac{2^ {21000}}{2^ {20000}} = 2^ {1000} = 10^ {300}$) si può già notare la differenza enorme in complessità. L'espressione genica inoltre presenta molti più stati, non solo 2.
+Degno di nota è che la densità genica (coding genes) aumenta al diminuire della complessità dell'organismo. S.cerevisiae presenta densità genica pari al 70%, non così lontana da E.coli. C.elegans invece presenta una densità attorno al 15%, mentre H.sapiens attorno all'1%. La frazione non coding occupa la maggior parte del genoma di eucarioti più complessi, ed in generale anche per i più semplici è di gran lunga più elevata rispetto a quella dei genomi procariotici.
+*** Densità
+Il genoma eucariotico presenta molta meno densità di geni, almeno rispetto ai procarioti, soprattutto per gli organismi più complessi. Saccharomyces cerevisiae e Drosophila melanogaster presentano densità geniche più elevate rispetto a piante e uomo ad esempio.
+*** Base composition
+I genomi eucariotici presentano meno variabilità in contenuti in GC. Tutti gli eucarioti si attestano attorno al 35-40% di contenuto in GC.
+** Isocore
+L'ultracentrifugazione del genoma dei mammiferi ha portato alla scoperta di una compartimentalizzazione del genoma in un piccolo numero di famiglie non-satelliti. Infatti la centrifugazione separa, come atteso, il DNA satellite (sequenze altamente ripetute non coding che formano cluster in tandem, soprattutto trovate nell'eterocromatina e nei centromeri/telomeri), da questo piccolo numero di famiglie.
+Queste sono caratterizzate da differenti livelli in GC ed una base composition abbastanza omogenea, e sono state chiamate isocore.
+Le isocore presentano livelli in GC abbastanza uniformi all'interno della singola famiglia. Sono state divise in 5 famiglie distinte:
+1. L1 ed L2 -> Basso contenuto in GC
+2. H1, H2 ed H3 -> Alto contenuto in GC
+Le isocore sono fortemente correlate all'organizzazione genomica, e le isocore ricche in GC sono correlate con una più alta densità genica (i 2/3 dei geni protein-coding si concentrano nelle famiglie H2 ed H3, che rappresentano solo il 15% del genoma), si replicano all'inizio del ciclo cellulare, e sono trovate specialmente in regioni trascrizionalmente attive della cromatina.
+Il genoma dei mammiferi è quindi compartimentalizzato in queste isocore, di dimensioni maggiori di 300Kb.
+ Le isocore sono correlate con bande ad alta e bassa risoluzione.
+** Isole CpG
+I dinucleotidi CpG si osservano con frequenza inferiore all'atteso all'interno dei vertebrati. Ad esempio in Homo sapiens si osservano solo con frequenza pari a 1/5 dell'atteso. Ciò è dovuto alla tendenza della citosina a deaminazione spontanea. Tipicamente, citosine non metilate deaminano in uracile, che viene riconosciuto e sostituito con citosina dal sistema di riparazione del DNA (uracil-DNA glicosilasi causa escissione dell'uracile e l'attivazione del BER pathway).
+Le CpG presentano metilazione in posizione 5 della citosina, che causa deaminazione spontanea in timina. La timina, essendo una base canonica del DNA, non viene riconosciuta e sostituita con una citosina.
+Nel genoma si ritrovano cluster di sequenze di DNA chiamate isole CpG che non presentano metilazione, con un elevato contenuto in GC e bassa soppressione CpG. Queste tipicamente hanno lunghezza di 1Kb e presentano overlap nella regione del promotore per il 60-70% dei geni umani.
+La metilazione della citosina nell'isola permette il legame di HDAC, che comporta l'impaccamento della cromatina e quindi la soppressione del gene.
+Di conseguenza la non-metilazione è associata con uno stato trascrizionalmente attivo.
+CpG Obs/Exp = $\frac{f(CG)}{f(C)\cdot f(G)}$ .
+** Gene
+La definizione di gene è molto complessa, dato che possiamo osservare siti alternativi di inizio della trascrizione, siti alternativi di terminazione, o anche trascritti alternativi (splicing alternativo). Gene possono trovarsi in overlap o innestati all'interno di altri geni.
+In certi casi, sequenze enhancer possono agire come promotori per alcune isoforme di splicing. Alcune sequenze regolatorie possono essere più vicine ad un altro gene, ed il target può essere misidentificato se ci si basa unicamente sulla prossimità.
+Alcuni dei trascritti possono essere anche noncoding-RNA (ncRNA).
+Un gene umano ha una struttura altamente complessa.
+In zona distale troviamo sequenze regolatorie (enhancer-silencer) insieme ai TAD boundary element. Prossimali al sito di inizio possiamo trovare oltre a sequenze regolatorie anche siti di binding di proteine PcG, segnali epigenitici (metilazione del DNA, modificazioni stoniche) seguite da isole CpG.
+La sequenza stessa inizia dal sito di inizio della trascrizione, preceduto dal sito del promotore che contiene sequenze responsabili per l'inizio della trascrizione (TATA box, CCAAT), dopodichè si ha una sequenza di esoni ed introni variabile, oltre alla presenza di siti di splicing, che possono essere molteplici per una stessa sequenza, intervallati da sequenza intraesoniche o introniche di regolazione dello splicing. Al 3' troviamo le zone UTR seguite da elementi ricchi in AU, siti di binding per miRNA, e SE CIS seguiti dal sito di legame per la catena di poli-A.
+[[/home/patrick/Pictures/Screenshots/Screenshot from 2026-04-18 10-38-41.png]]
+[[/home/patrick/Pictures/Screenshots/Screenshot from 2026-04-18 10-38-48.png]]
