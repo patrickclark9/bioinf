@@ -164,34 +164,233 @@ Un gene umano ha una struttura altamente complessa:
 ![[Screenshot from 2026-04-18 10-38-41.png]]
 ![[Screenshot from 2026-04-18 10-38-48.png]]
 
-## Fase intronica
+## Fase Intronica
+
 La fase intronica descrive dove esattamente un introne interrompe la reading frame di un gene. L'introne può cadere anche in mezzo ad un codone, dividendolo.
-In fase 0, l'introne si trova esattamente tra due codoni. Splicing di questo introne non disrompe l'integrità del codone (ATG \[Introne] CTG)
-In fase 1, l'introne interrompe il codone dopo il primo nucleotide. Quando l'mRNA subisce splicing, il primo nucleotide dall'esone a monte deve collegarsi con i prossimi due nucleotidi dell'esone sucessivo per completare il codone (A \[introne] TG).
-In fase 2, è uguale alla fase 1 ma due nucleotidi a monte devono collegarsi con l'ultimo nucleotide dell'esone successivo (AT \[introne] G).
-Se un introne in fase 1 effettua splicing in un sito in fase 2 si avrà misallineamento della fase e quindi un frameshift.
-Un esone è detto simmetrico se fiancheggiato da introni in stessa fase da entrambi i lati.
+
+| Fase       | Descrizione                                                                                                                                    | Esempio             |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
+| **Fase 0** | L'introne cade esattamente tra due codoni. Lo splicing non disrompe l'integrità di alcun codone.                                               | `ATG [Introne] CTG` |
+| **Fase 1** | L'introne interrompe il codone dopo il primo nucleotide. Il primo nt dell'esone a monte si ricollega ai successivi due nt dell'esone seguente. | `A [Introne] TG`    |
+| **Fase 2** | Come la fase 1, ma i primi due nt dell'esone a monte si ricollegano all'ultimo nt dell'esone seguente.                                         | `AT [Introne] G`    |
+
+> ⚠️ Se un introne in fase 1 effettua splicing in un sito in fase 2 si avrà misallineamento della fase e quindi un **frameshift**.
+
+Un esone è detto **simmetrico** se fiancheggiato da introni nella stessa fase da entrambi i lati.
+
+---
+## Maturazione dei Trascritti di Pol II
+
+I trascritti di Pol II subiscono tre processi di maturazione:
+
+1. **Splicing** → Rimozione della componente intronica
+2. **Capping** → Aggiunta di un cap al 5' (m⁷G) sul nucleotide iniziale e sui 1–2 nucleotidi successivi
+3. **Poliadenilazione** → Aggiunta di un tratto poli-A al 3', immediatamente dopo il 3'UTR
+
+Capping e poliadenilazione sono essenziali per l'**esportazione dell'mRNA** nel citoplasma: stabilizzano la molecola consentendo il passaggio nucleo → citoplasma. Nei procarioti questi due passaggi non sono necessari poiché non va attraversata alcuna membrana.
+Pol I e Pol III trascrivono rispettivamente geni codificanti per
+- Pol I -> RNA
+- Pol III -> tRNA, rRNA 5S, snRNA U6, RNA 7SL
+- Pol II -> Trascrive mRNA, e la maggior parte degli snRNA e miRNA
 
 ---
 
-## Maturazione dei trascritti e Splicing
-I trascritti di Pol II subiscono maturazione, ovvero l'azione dello splicing, del capping e della poliadenilazione.
-Lo splicing va a rimuovere la componente intronica, mentre capping aggiunge un cap al 5' (m7g) ed al nucleotide successivo/ 2 nucleotidi successivi, mentre la poliadenilazione consiste nell'aggiunta di un tratto poliadenilico al 3' immediatamente dopo il 3'UTR.
-Capping e poliadenilazione sono essenziali per l'esportazione del mRNA all'interno del citoplasma. Stabilizzano la molecola consentendo il passaggio nucleo->citoplasma. Ovviamente nei procarioti questi due passaggi non sono necessari perchè non va attraversata alcuna membrana.
+## Splicing
 
-Lo splicing alternativo sono eventi di splicing differenti dalla semplice rimozioni delle porzioni introniche e dell'aggancio delle porzioni esoniche.
-Esistono diversi possibili eventi di splicing alternativo:
-- Alternative 5' SS (Siti di splicing alternativi al 5')
-- Alternative 3' SS (Siti di splicing alternativi al 3')
-- Mutually Exclusive Exons
-- Cassette Exons (Esoni facoltativi)
-- Intron Retention
-- Alternative Promoters
-- Alternative Polyadenilation
-Possono avvenire anche diversi eventi alternativi per uno stesso trascritto.
-L'esone è detto facoltativo se non sempre presente, costitutivo se sempre presente.
-Lo splicing avviene attraverse due macchine macromolecolari dette Spliceosoma maggiore e Spliceosoma minore.
-I modelli Exon e Intron definition illustrano come il macchinario di splicing riconosce accuratamente un target.
-- Modello Exon Definition -> Il macchinario si assembla sull'esone riconoscendo i siti di splicing attorno ad un esone. Regolatori dello splicing come SR (serine-arginine rich) e altre proteine si legano all'ESE reclutando snRNP U1 (small nuclear RiboNucleoProtein, complessi ribonucleoproteici) e U2AF (fattore ausiliario a U2) al sito di splicing al 3', che poi recluta U2 snRNP al punto di ramificazione
-- Modello Intron Definition -> Le sequenze ISR (Intronic Splicing Regulator) vengono riconosciute dai regolatori di splicing, che reclutano snRNP U1 e U2AF al 5' e 3'.
+### Spliceosoma
+
+Lo splicing avviene attraverso due macchine macromolecolari:
+- **Spliceosoma maggiore**
+- **Spliceosoma minore**
+
+### Modelli di riconoscimento del sito di splicing
+
+- **Modello Exon Definition** — Il macchinario si assembla sull'esone riconoscendo i siti di splicing attorno ad esso. Regolatori come le proteine **SR** (serine-arginine rich) si legano all'**ESE** (Exonic Splicing Enhancer), reclutando **snRNP U1** e **U2AF** al sito di splicing al 3', che poi recluta **U2 snRNP** al punto di ramificazione.
+- **Modello Intron Definition** — Le sequenze **ISR** (Intronic Splicing Regulator) vengono riconosciute dai regolatori di splicing, che reclutano snRNP U1 e U2AF al 5' e 3'.
+
 ![[Pasted image 20260418170628.png]]
+
+### Splicing Alternativo
+
+Lo splicing alternativo comprende tutti gli eventi di splicing che vanno oltre la semplice rimozione degli introni e il collegamento degli esoni. Possono avvenire eventi multipli sullo stesso trascritto.
+
+| Evento | Descrizione |
+|---|---|
+| **Alternative 5' SS** | Uso di siti di splicing alternativi al 5' |
+| **Alternative 3' SS** | Uso di siti di splicing alternativi al 3' |
+| **Mutually Exclusive Exons** | Solo uno tra due esoni alternativi viene incluso |
+| **Cassette Exons** | Esoni facoltativi (non sempre inclusi) |
+| **Intron Retention** | Un introne viene ritenuto nel trascritto maturo |
+| **Alternative Promoters** | Uso di promotori alternativi |
+| **Alternative Polyadenylation** | Uso di siti alternativi di poliadenilazione |
+
+- **Esone costitutivo** → sempre presente nel trascritto maturo
+- **Esone facoltativo** → non sempre presente
+
+---
+
+### Trans-Splicing
+
+Le reazioni di splicing possono avvenire anche **in trans**: le reazioni di trans-esterificazione sono intermolecolari e portano alla concatenazione di esoni provenienti da molecole differenti di RNA.
+
+Il tipo più comune consiste nel trasferimento di un piccolo RNA non-codificante di ~20 nt denominato **Spliced Leader (SL)**, proveniente da un RNA donatore (**SL RNA**) contenuto in una snRNP, all'esone al 5' terminale di un'altra molecola di RNA trascritta indipendentemente. Il meccanismo è identico a quello dello splicing nucleare.
+
+**Differenza sostanziale rispetto al cis-splicing**: il sito donatore GU e il sito accettore AG si trovano su molecole di RNA distinte, con il sito di ramificazione e l'elemento ricco di pirimidine sull'RNA contenente il sito accettore.
+
+**Caratteristiche degli SL RNA:**
+- Trascritti da Pol II, piuttosto corti
+- Nessuna conservazione evolutiva di sequenza o struttura secondaria
+- Presenti come Sm snRNP
+- Cap con **trimetilguanosina** (come snRNA U1, U2, U4, U5)
+
+L'aggiunta della sequenza leader a seguito del trans-splicing non contribuisce all'espansione della complessità del proteoma, ma può svolgere importanti funzioni regolatorie.
+
+**Contesti in cui si osserva il trans-splicing:**
+- Introni capaci di autosplicing (la porzione codificante può essere suddivisa in più trascritti da cui si produce l'mRNA maturo via cis e trans splicing)
+- Splicing dei tRNA
+- Introni spliceosomali di geni nucleari in cellule animali
+
+**Tipi di eventi:**
+- **Trans-splicing intragenico** → possono essere generate sequenze esoniche duplicate
+- **Trans-splicing intergenico** → possono essere generati **mRNA chimerici**, concatenando esoni da trascritti distinti, anche da geni su filamenti complementari
+
+---
+
+## Geni Non-Coding
+
+Più dell'85% del genoma eucromatico umano viene trascritto; la trascrizione multigenica è frequente. La distinzione tra geni e spazio intergenico è diventata sempre meno marcata.
+
+- Il 70% dei geni umani può essere trascritto da entrambi i filamenti
+- Il DNA coding è meno di un quarto della frazione altamente conservata del genoma (quella funzionalmente importante)
+- Si possono trovare geni in overlap tra i due filamenti (gene A su filamento +, gene B su filamento − alla stessa posizione)
+
+---
+
+### microRNA (miRNA)
+
+I microRNA sono piccoli RNA di **21–23 nt** che derivano dal processamento di molecole precursori RNA più grandi. Interagiscono in **trans** con l'mRNA bersaglio influenzandone stabilità o traducibilità.
+
+**Scoperta**: il primo miRNA fu identificato in *C. elegans*, prodotto dal gene *lin-4*, che regola negativamente l'espressione di *lin-14* (coinvolto nello sviluppo larvale). Lin-4 possiede una regione di 10 nt ripetuta 7 volte sul 3'UTR dell'mRNA di *lin-14*; l'appaiamento risulta in una riduzione della produzione della proteina.
+
+I miRNA sono coinvolti nella regolazione dell'espressione genica in processi quali  stabilità e traduzione di specifici mRNA, proliferazione cellulare, differenziamento, apoptosi e sviluppo.
+
+#### Biogenesi dei miRNA
+
+I miRNA vengono generati da precursori denominati **pri-miRNA** (primary-miRNA), che possono essere espressi da:
+- Geni non codificanti (contenenti uno o più miRNA in regioni esoniche o introniche)
+- Geni codificanti (in regioni introniche)
+
+![[Pasted image 20260418184649.png]]
+
+I pri-miRNA vengono trascritti da **Pol II** e subiscono:
+1. Capping
+2. Splicing
+3. Poliadenilazione
+4. **Maturazione** in due fasi:
+
+| Fase | Localizzazione | Enzima | Risultato |
+|---|---|---|---|
+| **Cropping** | Nucleo | **DROSHA** (RNasi III) | Rimuove le estremità 5' e 3' del pri-miRNA → genera il **pre-miRNA** (struttura a forcina di 60–100 nt) |
+| Esportazione | Poro nucleare | **Esportina-5 / Ran-GTP** | Traslocazione nel citoplasma |
+| **Dicing** | Citoplasma | **DICER** (RNasi III) | Rimozione del loop → **miRNA-duplex** → selezione del filamento attivo → incorporazione nel **RISC** |
+
+![[Pasted image 20260418184738.png]]
+
+#### Meccanismo d'azione
+
+I miRNA si legano al bersaglio principalmente nella regione **3'UTR** dell'mRNA, ma non esclusivamente. Un mRNA può essere bersaglio di più miRNA contemporaneamente, con effetti cooperativi sul controllo della produzione proteica.
+
+I miRNA agiscono solo quando assemblati nel complesso **miRNP** o **RISC** (RNA-Induced Silencing Complex), che contiene anche ulteriori proteine — in particolare le **proteine Argonauta (AGO)**, componente fondamentale e conservata. L'utilizzo di pochi tipi di AGO permette il silenziamento di moltissimi bersagli, poiché il riconoscimento specifico è a carico dell'RNA.
+
+| Tipo di appaiamento | Effetto | Reversibilità |
+|---|---|---|
+| **Perfetto** | Degradazione dell'mRNA | ❌ Irreversibile |
+| **Imperfetto** | Blocco della traduzione | ✅ Possibilmente reversibile |
+
+**Meccanismo molecolare noto**: uno dei bersagli del complesso miRNA-RISC è il fattore eucariotico di inizio **eIF4A**, un'elicasi che agisce sul 5'UTR svolgendo le strutture secondarie e permettendo lo scorrimento della subunità 40S fino al codone AUG. L'interazione con il RISC riduce o inibisce la sintesi proteica interferendo con la reazione di scanning promossa da eIF4.
+
+> ⚠️ Molti aspetti rimangono non chiari: ruoli specifici, meccanismi di funzionamento, identificazione di tutti i bersagli, e se la repressione traduzionale avvenga all'inizio o al termine della traduzione.
+
+---
+
+### RISC e RITS
+
+- **RISC** (RNA-Induced Silencing Complex) — Meccanismo di silenziamento post-trascrizionale. Le proteine della famiglia **Argonauta (AGO)** sono la componente fondamentale e conservata. Il riconoscimento specifico del bersaglio è affidato all'RNA guida, permettendo alla cellula di silenziare moltissimi target senza sintetizzare numerosi complessi enzimatici diversi.
+- **RITS** (RNA-Induced Transcriptional Silencing) — Un'altra classe di complesso Argonauta, coinvolta nel silenziamento trascrizionale.
+
+---
+
+### siRNA (Small Interfering RNA)
+
+Gli siRNA sono RNA a doppio filamento di **20–24 nt** (stessa classe dimensionale dei miRNA). Sono coinvolti principalmente nell'**RNA Interference (RNAi)**, dove partecipano al silenziamento dell'espressione genica.
+
+La transfezione di siRNA esogeni sintetici (o piccoli *hairpin* RNA) induce il silenziamento di geni specifici mediante RNAi.
+
+#### Biogenesi e meccanismo d'azione
+
+Il processo è quasi identico a quello dei miRNA:
+
+1. **Dicer** taglia una molecola più grande di dsRNA in frammenti di 20–24 nt → siRNA
+2. Il siRNA viene caricato sul **RISC**
+3. Il RISC separa i due filamenti, selezionando il **filamento guida** e scartando l'altro
+4. Il match **perfetto** del siRNA con il suo target causa la **degradazione dell'mRNA** ad opera della proteina **Argonauta**, che spezza il filamento target
+
+#### Confronto miRNA vs siRNA
+![[1776532964043583884.png | 500]]
+
+| Caratteristica | miRNA | siRNA |
+|---|---|---|
+| Dimensione | 21–23 nt | 20–24 nt |
+| Origine | pri-miRNA (endogena) | dsRNA (esogeno o endogeno) |
+| Processamento nucleare | DROSHA → pre-miRNA | — |
+| Processamento citoplasmatico | DICER | DICER |
+| Complesso effettore | RISC / miRNP | RISC |
+| Appaiamento con target | Imperfetto (tipico) | Perfetto |
+| Effetto principale | Blocco traduzione / degradazione | Degradazione mRNA |
+
+#### endo-siRNA
+
+Le cellule umane sono in grado di produrre naturalmente **siRNA endogeni (endo-siRNA)**, che si formano grazie alla presenza di dsRNA naturalmente presente nella cellula. Uno dei contesti in cui ciò accade è l'occasionale trascrizione di **pseudogeni**, i cui trascritti possono formare dsRNA con i trascritti del gene originale.
+### lncRNA
+I long non coding RNA sono RNA non codificanti abbastanza lunghi, spesso anche di lunghezza di diverse kilobasi.
+La maggior parte dei trascritti eucariotici sono lncRNA, espressi tuttavia singolarmente a livelli molto inferiori rispetto ai trascritti canonici di geni codificanti proteine. Una spiegazione plausibile per la loro esistenza suggerisce che le polimerasi non siano sistemi stringenti. Anche se trascrivono preferenzialmente un solo sito del DNA ed iniziano solitamente da un TSS, il processo può iniziare anche ad una certa distanza dal promotore, oppure su sequenze che assomigliano molto ad un promotore ma che non lo sono.
+![[Pasted image 20260418193706.png | 500]]
+Tra i lncRNA troviamo:
+- Trascritti antisenso che non subiscono splicing e che hanno possibile funzione regolatoria per geni in overlap sul filamento opposto
+- Varietà di mRNA non-coding che vengono sottoposti a splicing, capping e poliadenilazione ma non sembrano codificare per nessun polipeptide, anche se alcuni contengono ncRNA interni come snoRNA e piRNA. La funzione di questi mRNA-like ncRNA non è nota
+![[Pasted image 20260418192927.png]]
+
+Molti lncRNA sono trascritti da pseudogeni, e molti possono essere risultati di duplicazioni, inversioni e inserzioni nel genoma.
+
+Gli lncRNA potrebbero essere interpretati come “rumore di fondo”, ma in realtà assumono ruoli nella regolazione. Questo dovuto molto probabilmente ad un evento di selezione, che può aver trovato vantaggioso utilizzare questi RNA per ruoli specifici nella regolazione.
+
+La funzione si esplica in nucleo e citoplasma. Hanno ruolo di regolazione nello sviluppo, nel differenziamento ed altro.
+
+#### Possibili funzioni
+![[Pasted image 20260418193018.png]]
+Alcuni modelli:
+- (a) Agisce come decoy per separare DNA binding proteins, come fattori di trascrizione o altro
+- (b) Azione come _scaffold_ per avvicinare 2 o più proteine a formare un complesso, oppure semplicemente per mantenerle in prossimità spaziale
+- (c) Azione da guide per reclutare proteine, come enzimi per la modifica della cromatina, al DNA (per interazione RNA-DNA o attraverso interazione cona DNA binding protein)
+- (d) Questa forma di guida lncRNA può essere esercitata anche attraverso il looping del cromosoma in un modello enhancer-like, dove il looping definisce la natura cis e l'ampiezza dell'effetto del lncRNA
+
+
+#### circRNA
+RNA circolari, una nuova classe di RNA non codificanti contraddistinti da struttura circolare caratterizzata dalla presenza di un legame covalente che unisce le estremità 5’ e 3’. I circRNA hanno una vasta gamma di dimensioni (da 100nt a 10.000 nt).
+Esiste una competizione tra splicing lineare e backsplicing di esoni durante la trascrizione di molti geni umani.
+- Lunghi introni fiancheggianti, elementi ripetuti invertiti (Alu) e RNA Binding Proteins preferiscono backsplicing. Specificamente, l'appaiamentro tra basi tra elementi ripetuti o la dimerizzazione delle RBP porta il sito donatore di splicing in prossimità del sito accettore. Questa associazione può causare backsplicing, dove il punto di ramificazione attacca un sito donatore, che attacca a sua volta un sito accettore portando alla formazione di circRNA esone-introne (ElcircRNA) o circRNA esonico (circRNA dove l'introne interno è stato rimosso dallo splicing).
+- Splicing canonico lineare è favorito invece da esoni circondati da corti introni, e da introni legati alle trans-acting RNA Binding proteins ADAR1 e ATP-Dependent RNA helicase A (DHX9). Queste RBP interferiscono con l'appaiamento tra basi tra elementi ripetuti invertiti, permettendo al macchinario di splicing di generare mRNA lineare.
+circRNA si possono formare da intermedi di splicing (il lariat) detti lariat-precursors, creati da un evento di exon-skipping durante lo splicing lineare. Oppure si possono formare da lariat-precursor intronici, che sfuggono allo step di debranching dello splicing lineare canonico.
+![[Pasted image 20260418202339.png]]
+![[Pasted image 20260418202316.png]]
+BSJ -> Backsplicing Junction
+Funzioni:
+- Spugne per miRNA, competendo per i siti di appaiamento dei miRNA e proteggendo l'mRNA dai miRNA
+- Sequestro dei siti di inizio della traduzione dell’mRNA
+- Spugne proteiche legando RBP (circRNA che contengono RBP)
+- Traduzione in proteine funzionali (se possiedono IRES, ribosome entry site)
+- Scaffolding di proteine (facilitano la colocalizzazione di enzimi)
+- Reclutamento di proteine specifiche in determinati loci o compartimenti subcellulari
+
+[circRNA detection](https://info.abmgood.com/circRNA-methods-of-enrichment-detection-and-analysis)
+
