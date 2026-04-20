@@ -77,7 +77,7 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 
 L'amplificazione clonale si rende necessaria per ottenere un buon segnale misurabile (intensità della luce, variazione pH ecc...) per verificare poi la sequenza.
 Nuove tecnologie di terza generazione in grado di sequenziare singole molecole di DNA senza amplificazione emergono poichè l'amplificazione può portare problemi.
-L'amplificazione clonale può introdurre distorsioni a causa di errori nella fase di amplificazione e della non uniformità nella scelta degli stampi (contenuto in GC e altre caratteristiche intrinseche rendono alcuni frammenti più suscettibili ad amplificazione). L'amplificazione non permette di rilevale specifiche modificazioni del DNA quali metilazione.
+L'amplificazione clonale può introdurre distorsioni a causa di errori nella fase di amplificazione e della non uniformità nella scelta degli stampi (contenuto in GC e altre caratteristiche intrinseche rendono alcuni frammenti più suscettibili ad amplificazione). L'amplificazione non permette di rilevare specifiche modificazioni del DNA quali metilazione.
 
 
 ---
@@ -114,7 +114,7 @@ Non avviene nessun clonaggio o colony-picking.
 > La maggior parte dei bead non produce prodotti funzionali, ma poiché ne vengono generati un gran numero questo non costituisce un problema.
 
 
-I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima, centrifugato e il sequenziamento avviene simultaneamente in centinaia di migliaia di pozzi di dimensioni in picolitri.
+I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima, centrifugato e il sequenziamento avviene simultaneamente in centinaia di migliaia di pozzetti di dimensioni in picolitri.
 ![[Pasted image 20260420115755.png]]
 ![[Pasted image 20260420115729.png]]
 
@@ -137,15 +137,16 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 #### Protocollo
 
 1. La sequenza da analizzare viene amplificata tramite PCR e denaturata a singolo filamento insieme a primer, dNTP, APS, luciferina e agli enzimi sopra elencati
-2. Un **solo tipo di dNTP** viene aggiunto alla reazione per volta
+2. I bead ottenuti da emPCR vengono depositati su un apposito vetrino dove vengono alloggiate in micropozzetti di dimensioni appropriate
+3. Un **solo tipo di dNTP** viene aggiunto alla reazione per volta
     - Se non è complementare al template → nessun allungamento → l'apirasi lo degrada
     - Se è complementare → la polimerasi lo incorpora → rilascio di **PPi**
-3. Il PPi viene convertito in **ATP** dall'ATP solforilasi; l'ATP fornisce energia alla luciferasi per convertire la luciferina in **ossiluciferina**, producendo un **segnale luminoso** rilevato da una camera CCD (charged coupled device)
+4. Il PPi viene convertito in **ATP** dall'ATP solforilasi; l'ATP fornisce energia alla luciferasi per convertire la luciferina in **ossiluciferina**, producendo un **segnale luminoso** rilevato da una camera CCD (charged coupled device)
     - Il segnale viene registrato in un **pirogramma**
     - L'**intensità** del segnale è proporzionale al numero di basi uguali consecutive incorporate nello stesso ciclo
     - **Segnale nullo** → il dNTP aggiunto non è complementare
-4. L'apirasi degrada l'eccesso di dNTP non incorporato e l'ATP in eccesso prima del ciclo successivo
-5. I 4 dNTP vengono aggiunti **ciclicamente** fino al completamento della sequenza
+5. L'apirasi degrada l'eccesso di dNTP non incorporato e l'ATP in eccesso prima del ciclo successivo
+6. I 4 dNTP vengono aggiunti **ciclicamente** fino al completamento della sequenza
 
 ##### FlowGram
 ![[Pasted image 20260420153839.png]]
@@ -166,19 +167,19 @@ I file Standard Flowgram Format (SFF) sono gli equivalenti del 454 ai file ABI d
 I clipping raccomandati sono dati dal macchinario 454. Qualità e sequenza dell'adattore sono tenute in considerazione per la raccomandazione sul clipping per ogni sequenza.
 Il file .sff può essere convertito in un Fasta, che conterra come header `>seq_name description`  e se si hanno informazioni sulla qualità può essere creato un secondo fasta, con le sequenze nello stesso ordine, ma invece di contenere la sequenza stessa conterrà i valori di qualità della sequenza.
 
+---
 ### Illumina
 #### Preparazione della Libreria Illumina
-1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate. Due metodi comuni:
-	- **Mechanical Shearing**:
-		- **Sonicazione** -> Si utilizza un sonicatore che emette onde acustiche a bassa frequenza per tagliare il campione
-		- **Nebulizzazione** -> Si utilizza un gasso in compressione, forzando una soluzione di acido nucleico attraverso un piccolo foro nel nebulizzatore. Il livello di frammentazione viene controllato dalla pressione del gas
-	- **Enzymatic Digestion**:
-		- Alternativa al Mechanical Shearing in cui si utilizza una endonucleasi per tagliare entrambi i filamenti o singoli filamenti creado dsBreakage. Per evitare base-bias, si utilizzano enzimi con meno specificità di taglio oppure un insieme di endonucleasi di diversa tipologia
+1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate. 
 2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
 	- Overhang al 5' vengono riempiti da DNA polimerasi
 	- Overhang al 3' vengono rimossi da una 3'->5' esonucleasi
 	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
-	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A (Solo Illumina?)
+	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A
 3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
     - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
     - Possono includere **UMI** (Unique Molecular Identifiers) per l'identificazione di varianti
+#### FlowCell Illumina
+La flowcell di Illumina possiede 8 canali, e presenta una superficie sul quale sono presenti un gran numero di oligonucleotidi complementari agli adattatori.
+Queste flowcell sono ambienti contenuti, quindi non c'è bisogno di stanze pulite e purificate.
+Il sequenziamento avviene all'interno della flowcell.
