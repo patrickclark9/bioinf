@@ -70,12 +70,15 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
 	- Overhang al 5' vengono riempiti da DNA polimerasi
 	- Overhang al 3' vengono rimossi da una 3'->5' esonucleasi
-	- Le terminazioni al 5' del DNA Blu
+	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
+	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A (Solo Illumina?)
 3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
     - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
     - Possono includere **UMI** (Unique Molecular Identifiers) per l'identificazione di varianti
-4. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
-5. **Denaturazione** -> i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
+
+Nel caso del pirosequenziamento:
+1. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
+2. **Denaturazione** -> i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
 
 ---
 
