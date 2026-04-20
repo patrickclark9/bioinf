@@ -57,14 +57,19 @@ Le tecnologie NGS eseguono un elevatissimo numero di sequenziamenti in parallelo
 
 ---
 
-### Preparazione delle Librerie e Titolazione
+### Pirosequenziamento
 
+Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, che sequenzia tra **100 e 1000 basi per volta** per lettura.
+Uno dei macchinari che implementano il Pirosequenziamento è il Roche GS 454 FLX+ ed il Roche GS junior.
+Il pirosequenziamento è un metodo che si basa interamente sul rilascio di PPi da parte della reazione di sintesi, motivo per cui è chiamato Sequencing-by-Synthesis.
+### Preparazione delle Librerie e Titolazione
+![[Pasted image 20260420165104.png]]
 Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
 
 1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Viene frammentato per nebulazione o sonicazione.
 2. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
-3. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
-4. **Denaturazione** -> i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
+3. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**. L'adattatore B è **biotinilato**: la purificazione con **streptavidina** cattura selettivamente tutti i frammenti contenenti B (A-B e B-B).
+4. **Denaturazione** -> i frammenti catturati vengono denaturati. Si rilascia il filamento privo di B (ovvero il filamento con adattatore A del frammento A-B), ottenendo **ssDNA con adattatore A** a un'estremità → pronto per l'emPCR.
 
 ---
 
@@ -89,11 +94,6 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 ![[Pasted image 20260420115729.png]]
 ---
 
-### Pirosequenziamento
-
-Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, che sequenzia tra **100 e 1000 basi per volta** per lettura.
-Uno dei macchinari che implementano il Pirosequenziamento è il Roche GS 454 FLX+ ed il Roche GS junior.
-Il pirosequenziamento è un metodo che si basa interamente sul rilascio di PPi da parte della reazione di sintesi, motivo per cui è chiamato Sequencing-by-Synthesis.
 
 #### Componenti della reazione
 
@@ -129,3 +129,21 @@ Viene generato dal macchinario al termine del sequenziamento.
 - Ascissa -> Nucleotide passato
 - Ordinata -> Intensità del segnale luminoso. Se supera una certa soglia, significa ripetizione di un nucleotide
 
+### Illumina
+#### Preparazione della Libreria
+Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
+
+1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Due metodi comuni:
+	- **Mechanical Shearing**:
+		- **Sonicazione** -> Si utilizza un sonicatore che emette onde acustiche a bassa frequenza per tagliare il campione
+		- **Nebulizzazione** -> Si utilizza un gasso in compressione, forzando una soluzione di acido nucleico attraverso un piccolo foro nel nebulizzatore. Il livello di frammentazione viene controllato dalla pressione del gas
+	- **Enzymatic Digestion**:
+		- Alternativa al Mechanical Shearing in cui si utilizza una endonucleasi per tagliare entrambi i filamenti o singoli filamenti creado dsBreakage. Per evitare base-bias, si utilizzano enzimi con meno specificità di taglio oppure un insieme di endonucleasi di diversa tipologia
+2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
+	- Overhang al 5' vengono riempiti da DNA polimerasi
+	- Overhang al 3' vengono rimossi da una 3'->5' esonucleasi
+	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
+	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A (Solo Illumina?)
+3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
+    - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
+    - Possono includere **UMI** (Unique Molecular Identifiers) per l'identificazione di varianti
