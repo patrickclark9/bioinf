@@ -61,8 +61,12 @@ Le tecnologie NGS eseguono un elevatissimo numero di sequenziamenti in parallelo
 
 Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
 
-1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche)
-2. **Riparazione** -> le estremità dei frammenti vengono riparate
+1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Due metodi comuni:
+	- **Mechanical Shearing**:
+		- **Sonicazione** -> Si utilizza un sonicatore che emette
+2. **Riparazione** -> le estremità dei frammenti in overhang vengono spuntate (blunting) per Fill-In ed esonucleasi
+	- Le estremità spuntate vengono fosforilate, e viene aggiunto un singolo nucleotide A al 3'
+	- L'attività esonucleasica rimuove nucleotidi al 5' o 3', mentre il Fill-In consiste nell'aggiunta di nucleotidi al 3' ad opera di una Polimerasi
 3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
     - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
     - Possono includere **UMI** (Unique Molecular Identifiers) per l'identificazione di varianti
