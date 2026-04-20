@@ -57,10 +57,13 @@ La metodica è stata progressivamente affinata e automatizzata. I sistemi modern
 ## NGS (Next Generation Sequencing)
 
 Le tecnologie NGS eseguono un elevatissimo numero di sequenziamenti in parallelo (**alto parallelismo**). Ne esistono svariate versioni che utilizzano reazioni chimiche e strategie differenti.
+
 I vantaggi principali presentati da NGS sono:
+
 1. Non è richiesto clonaggio classico dei frammenti di DNA da sequenziare
 2. L'utilizzo di micro o nano reattori normalmente immobilizzati su un supporto solido permette un elevato livello di parallelizzazione
-3. La determinazione della sequenza non richiede il passaggio limitante della separazione elettroforetica, in quanto via via i nucleotidi che vengono incorporati nella reazione di sequenziamento vengono simultaneamente identificati
+3. La determinazione della sequenza non richiede il passaggio limitante della separazione elettroforetica: i nucleotidi incorporati vengono simultaneamente identificati durante la sintesi
+
 
 ### Preparazione delle librerie
 
@@ -75,14 +78,19 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 2. **Ligazione degli adattatori** —  gli **adattatori** vengono legati alle librerie preparate
     - Gli adattatori sono usati per l'amplificazione clonale e per il sequenziamento stesso
 
-L'amplificazione clonale si rende necessaria per ottenere un buon segnale misurabile (intensità della luce, variazione pH ecc...) per verificare poi la sequenza.
-Nuove tecnologie di terza generazione in grado di sequenziare singole molecole di DNA senza amplificazione emergono poichè l'amplificazione può portare problemi.
-L'amplificazione clonale può introdurre distorsioni a causa di errori nella fase di amplificazione e della non uniformità nella scelta degli stampi (contenuto in GC e altre caratteristiche intrinseche rendono alcuni frammenti più suscettibili ad amplificazione). L'amplificazione non permette di rilevare specifiche modificazioni del DNA quali metilazione.
+### Note sull'Amplificazione Clonale
 
+L'amplificazione clonale si rende necessaria per ottenere un segnale misurabile (intensità della luce, variazione di pH, ecc.) durante il sequenziamento. Tuttavia può introdurre problemi:
+
+- **Distorsioni** a causa di errori nella fase di amplificazione
+- **Non uniformità** nella scelta degli stampi (contenuto in GC e altre caratteristiche rendono alcuni frammenti più suscettibili ad amplificazione)
+- **Impossibilità di rilevare** modificazioni del DNA quali la metilazione
+
+> Le tecnologie di terza generazione sono in grado di sequenziare singole molecole di DNA senza amplificazione, superando questi limiti.
 
 ---
 
-### Pirosequenziamento
+## Pirosequenziamento (454/Roche)
 
 Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, che sequenzia tra **100 e 1000 basi per volta** per lettura.
 Uno dei macchinari che implementano il Pirosequenziamento è il Roche GS 454 FLX+ ed il Roche GS junior.
@@ -99,9 +107,10 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 ---
 
 ### emPCR (Emulsion-Based Clonal Amplification)
-
-L'emPCR è il metodo di amplificazione clonale utilizzato in  piattaforme NGS di pirosequenziamento prima del sequenziamento:
 ![[Pasted image 20260420155256.png]]
+
+L'emPCR è il metodo di amplificazione clonale utilizzato in piattaforme NGS di 
+pirosequenziamento prima del sequenziamento:
 1. Le librerie DNA vengono mescolate a **capture beads** (microbiglie ad agarosio a cui vengono legate singole molecole di DNA)
 2. Il tutto viene immerso in acqua contenente i reagenti PCR
 3. Si aggiunge l'**emulsionante** (olio): l'acqua si diffonde in minuscole goccioline sospese nell'olio. L'amplificazione avviene nelle micelle, che contengono i reagenti necessari per PCR
@@ -116,10 +125,11 @@ Non avviene nessun clonaggio o colony-picking.
 
 I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima, centrifugato e il sequenziamento avviene simultaneamente in centinaia di migliaia di pozzetti di dimensioni in picolitri.
 ![[Pasted image 20260420115755.png]]
+
 ![[Pasted image 20260420115729.png]]
 
 ---
-#### Componenti della reazione
+### Componenti della reazione
 
 | Componente                 | Ruolo                                              |
 | -------------------------- | -------------------------------------------------- |
@@ -134,7 +144,7 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 
 > ⚠️ Al posto dell'ATP normale si usa l'**Adenosin-α-tio-trifosfato**: è riconosciuto dalla polimerasi ma non dalla luciferasi, così da verificare la complementarietà dell'adenina senza produrre un segnale luminoso spurio (e continuo).
 
-#### Protocollo
+### Protocollo
 
 1. La sequenza da analizzare viene amplificata tramite PCR e denaturata a singolo filamento insieme a primer, dNTP, APS, luciferina e agli enzimi sopra elencati
 2. I bead ottenuti da emPCR vengono depositati su un apposito vetrino dove vengono alloggiate in micropozzetti di dimensioni appropriate
@@ -148,31 +158,41 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 5. L'apirasi degrada l'eccesso di dNTP non incorporato e l'ATP in eccesso prima del ciclo successivo
 6. I 4 dNTP vengono aggiunti **ciclicamente** fino al completamento della sequenza
 
-##### FlowGram
+### FlowGram
 ![[Pasted image 20260420153839.png]]
-Viene generato dal macchinario al termine del sequenziamento.
-- Ascissa -> Nucleotide passato
-- Ordinata -> Intensità del segnale luminoso. Se supera una certa soglia, significa ripetizione di un nucleotide
-##### Lunghezza delle Read
+Il FlowGram viene generato dal macchinario al termine del sequenziamento.
+
+- **Ascissa** → nucleotide passato (ciclo)
+- **Ordinata** → intensità del segnale luminoso; se supera una certa soglia indica la ripetizione di un nucleotide (omopolimero)
+### Lunghezza delle Read
 ![[Pasted image 20260420170811.png]]
 
-La lunghezza delle read nel pirosequenziamento dipendono strettamente dal quantitativo di omopolimeri ("AAA", "GGG" ecc...) contenuti all'interno della sequenza. Se il frammento possiede tanti omopolimeri, incorpora più basi per ciclo, risultando in una lunghezza della read finale più lunga solitamente.
-Un sequenziamento diverso, e.g. Illumina, avrebbe un grafico piatto dato che nella library preparation le read vengono uniformate ad una stessa lunghezza.
-##### Formato 454 SFF
-I file Standard Flowgram Format (SFF) sono gli equivalenti del 454 ai file ABI del cromatogramma. Questi file contengono informazioni su:
+La lunghezza delle read dipende strettamente dalla quantità di **omopolimeri** (es. `AAA`, `GGG`) nella sequenza: più omopolimeri sono presenti, più basi vengono incorporate per ciclo, risultando generalmente in read più lunghe.
+
+> Un sequenziamento Illumina produrrebbe un grafico piatto, poiché nella preparazione della libreria le read vengono uniformate ad una stessa lunghezza.
+
+### Formato 454 SFF
+
+I file **Standard Flowgram Format (SFF)** sono l'equivalente 454 dei file ABI del cromatogramma Sanger. Contengono:
+
 - FlowGram
 - Sequenza chiamata
 - Qualità
 - Qualità raccomandata e adaptor clipping
-I clipping raccomandati sono dati dal macchinario 454. Qualità e sequenza dell'adattore sono tenute in considerazione per la raccomandazione sul clipping per ogni sequenza.
-Il file .sff può essere convertito in un Fasta, che conterra come header `>seq_name description`  e se si hanno informazioni sulla qualità può essere creato un secondo fasta, con le sequenze nello stesso ordine, ma invece di contenere la sequenza stessa conterrà i valori di qualità della sequenza.
+
+I clipping raccomandati sono forniti dal macchinario 454, tenendo conto della qualità e della sequenza dell'adattatore.
+
+Il file `.sff` può essere convertito in formato **FASTA**:
+
+- L'header sarà nella forma `>seq_name description`
+- Le informazioni sulla qualità, se disponibili, vengono esportate in un **secondo file FASTA parallelo** con lo stesso ordine delle sequenze, ma contenente i valori di qualità al posto delle basi
 
 ---
-### Illumina
-#### FlowCell Illumina
-La flowcell di Illumina possiede 8 canali, e presenta una superficie sul quale sono presenti un gran numero di oligonucleotidi complementari agli adattatori.
-Queste flowcell sono ambienti contenuti, quindi non c'è bisogno di stanze pulite e purificate.
-Il sequenziamento avviene all'interno della flowcell.
+## Illumina
+
+### FlowCell
+
+La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un gran numero di **oligonucleotidi complementari agli adattatori**. È un ambiente contenuto, quindi non è necessario operare in camere pulite. Il sequenziamento avviene interamente all'interno della flowcell.
 #### Preparazione della Libreria Illumina
 1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate. 
 2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
