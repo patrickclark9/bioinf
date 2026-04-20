@@ -60,8 +60,24 @@ Le tecnologie NGS eseguono un elevatissimo numero di sequenziamenti in parallelo
 I vantaggi principali presentati da NGS sono:
 1. Non è richiesto clonaggio classico dei frammenti di DNA da sequenziare
 2. L'utilizzo di micro o nano reattori normalmente immobilizzati su un supporto solido permette un elevato livello di parallelizzazione
-3. La determinazione della sequenza non richiede il passaggio limitante della separazione elettroforetica, in quanto via via i nucleotidi
+3. La determinazione della sequenza non richiede il passaggio limitante della separazione elettroforetica, in quanto via via i nucleotidi che vengono incorporati nella reazione di sequenziamento vengono simultaneamente identificati
 
+### Preparazione delle librerie
+
+Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
+
+1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate in funzione della tecnologia usata e dell'applicazione. Due metodi comuni:
+	- **Mechanical Shearing**:
+		- **Sonicazione** -> Si utilizza un sonicatore che emette onde acustiche a bassa frequenza per tagliare il campione
+		- **Nebulizzazione** -> Si utilizza un gasso in compressione, forzando una soluzione di acido nucleico attraverso un piccolo foro nel nebulizzatore. Il livello di frammentazione viene controllato dalla pressione del gas
+	- **Enzymatic Digestion**:
+		- Alternativa al Mechanical Shearing in cui si utilizza una endonucleasi per tagliare entrambi i filamenti o singoli filamenti creado dsBreakage. Per evitare base-bias, si utilizzano enzimi con meno specificità di taglio oppure un insieme di endonucleasi di diversa tipologia
+2. **Ligazione degli adattatori** — una ligasi lega covalentemente gli **adattatori** alle librerie preparate
+    - Gli adattatori sono usati per l'amplificazione clonale e per il sequenziamento stesso
+	    
+3. **Selezione dei frammenti** — durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
+4. **Denaturazione** — i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
+L'amplificazione clonale si rende necessaria per ottenere un buon segnale misurabile (intensità della luce, variazione pH ecc...)
 ---
 
 ### Pirosequenziamento
@@ -149,10 +165,8 @@ I clipping raccomandati sono dati dal macchinario 454. Qualità e sequenza dell'
 Il file .sff può essere convertito in un Fasta, che conterra come header `>seq_name description`  e se si hanno informazioni sulla qualità può essere creato un secondo fasta, con le sequenze nello stesso ordine, ma invece di contenere la sequenza stessa conterrà i valori di qualità della sequenza.
 
 ### Illumina
-#### Preparazione della Libreria
-Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
-
-1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Due metodi comuni:
+#### Preparazione della Libreria Illumina
+1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate. Due metodi comuni:
 	- **Mechanical Shearing**:
 		- **Sonicazione** -> Si utilizza un sonicatore che emette onde acustiche a bassa frequenza per tagliare il campione
 		- **Nebulizzazione** -> Si utilizza un gasso in compressione, forzando una soluzione di acido nucleico attraverso un piccolo foro nel nebulizzatore. Il livello di frammentazione viene controllato dalla pressione del gas
