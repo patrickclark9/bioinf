@@ -72,14 +72,12 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 		- **Nebulizzazione** -> Si utilizza un gasso in compressione, forzando una soluzione di acido nucleico attraverso un piccolo foro nel nebulizzatore. Il livello di frammentazione viene controllato dalla pressione del gas
 	- **Enzymatic Digestion**:
 		- Alternativa al Mechanical Shearing in cui si utilizza una endonucleasi per tagliare entrambi i filamenti o singoli filamenti creado dsBreakage. Per evitare base-bias, si utilizzano enzimi con meno specificità di taglio oppure un insieme di endonucleasi di diversa tipologia
-2. **Ligazione degli adattatori** — una ligasi lega covalentemente gli **adattatori** alle librerie preparate
+2. **Ligazione degli adattatori** —  gli **adattatori** vengono legati alle librerie preparate
     - Gli adattatori sono usati per l'amplificazione clonale e per il sequenziamento stesso
-	    
-3. **Selezione dei frammenti** — durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
-4. **Denaturazione** — i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
+
 L'amplificazione clonale si rende necessaria per ottenere un buon segnale misurabile (intensità della luce, variazione pH ecc...) per verificare poi la sequenza.
 Nuove tecnologie di terza generazione in grado di sequenziare singole molecole di DNA senza amplificazione emergono poichè l'amplificazione può portare problemi.
-L'amplificazione clonale può portare 
+L'amplificazione clonale può introdurre distorsioni a causa di errori nella fase di amplificazione e della non uniformità nella scelta degli stampi (contenuto in GC e altre caratteristiche intrinseche rendono alcuni frammenti più suscettibili ad amplificazione). L'amplificazione non permette di rilevale specifiche modificazioni del DNA quali metilazione.
 
 
 ---
@@ -93,7 +91,7 @@ Il pirosequenziamento è un metodo che si basa interamente sul rilascio di PPi d
 ![[Pasted image 20260420165104.png]]
 Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
 
-1. **Frammentazione** -> il gDNA viene frammentato in pezzi più corti (i macchinari short-read non possono leggere intere sequenze cromosomiche). Viene frammentato per nebulazione o sonicazione.
+1. **Frammentazione** -> il gDNA viene frammentato per nebulazione o sonicazione.
 2. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
 3. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**. L'adattatore B è **biotinilato**: la purificazione con **streptavidina** cattura selettivamente tutti i frammenti contenenti B (A-B e B-B).
 4. **Denaturazione** -> i frammenti catturati vengono denaturati. Si rilascia il filamento privo di B (ovvero il filamento con adattatore A del frammento A-B), ottenendo **ssDNA con adattatore A** a un'estremità → pronto per l'emPCR.
@@ -102,15 +100,15 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 
 ### emPCR (Emulsion-Based Clonal Amplification)
 
-L'emPCR è il metodo di amplificazione clonale utilizzato in alcune piattaforme NGS prima del sequenziamento:
+L'emPCR è il metodo di amplificazione clonale utilizzato in  piattaforme NGS di pirosequenziamento prima del sequenziamento:
 ![[Pasted image 20260420155256.png]]
-1. Le librerie DNA vengono mescolate a **capture beads**
+1. Le librerie DNA vengono mescolate a **capture beads** (microbiglie ad agarosio a cui vengono legate singole molecole di DNA)
 2. Il tutto viene immerso in acqua contenente i reagenti PCR
-3. Si aggiunge l'**emulsionante** (olio): l'acqua si diffonde in minuscole goccioline sospese nell'olio
+3. Si aggiunge l'**emulsionante** (olio): l'acqua si diffonde in minuscole goccioline sospese nell'olio. L'amplificazione avviene nelle micelle, che contengono i reagenti necessari per PCR
 4. Statisticamente, la maggior parte delle gocce contiene **esattamente un bead e un frammento di DNA**
-5. Avviene la **PCR** all'interno dell'intera emulsione → amplificazione clonale del frammento su ogni bead
+5. Avviene la **PCR** all'interno dell'intera emulsione → amplificazione clonale del frammento su ogni bead. L'amplificazione genera un milione di molecole identiche sulla superficie di ogni bead
 6. Si rimuove l'olio e si raccolgono i singoli bead contenenti DNA
-Infinite vengono generati milioni di template amplificati su ogni bead.
+
 Non avviene nessun clonaggio o colony-picking.
 
 > La maggior parte dei bead non produce prodotti funzionali, ma poiché ne vengono generati un gran numero questo non costituisce un problema.
@@ -142,7 +140,7 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 2. Un **solo tipo di dNTP** viene aggiunto alla reazione per volta
     - Se non è complementare al template → nessun allungamento → l'apirasi lo degrada
     - Se è complementare → la polimerasi lo incorpora → rilascio di **PPi**
-3. Il PPi viene convertito in **ATP** dall'ATP solforilasi; l'ATP fornisce energia alla luciferasi per convertire la luciferina in **ossiluciferina**, producendo un **segnale luminoso** rilevato da una camera CCD
+3. Il PPi viene convertito in **ATP** dall'ATP solforilasi; l'ATP fornisce energia alla luciferasi per convertire la luciferina in **ossiluciferina**, producendo un **segnale luminoso** rilevato da una camera CCD (charged coupled device)
     - Il segnale viene registrato in un **pirogramma**
     - L'**intensità** del segnale è proporzionale al numero di basi uguali consecutive incorporate nello stesso ciclo
     - **Segnale nullo** → il dNTP aggiunto non è complementare
