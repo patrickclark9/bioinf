@@ -77,7 +77,11 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 	    
 3. **Selezione dei frammenti** — durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
 4. **Denaturazione** — i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
-L'amplificazione clonale si rende necessaria per ottenere un buon segnale misurabile (intensità della luce, variazione pH ecc...)
+L'amplificazione clonale si rende necessaria per ottenere un buon segnale misurabile (intensità della luce, variazione pH ecc...) per verificare poi la sequenza.
+Nuove tecnologie di terza generazione in grado di sequenziare singole molecole di DNA senza amplificazione emergono poichè l'amplificazione può portare problemi.
+L'amplificazione clonale può portare 
+
+
 ---
 
 ### Pirosequenziamento
