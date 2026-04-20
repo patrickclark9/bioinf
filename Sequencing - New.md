@@ -217,3 +217,19 @@ La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un
 10. Dopo l'incorporazione, il sequenziatore rileva il **segnale fluorescente**
 11. Il **gruppo terminatore** e il **colorante fluorescente** vengono rimossi per consentire l'aggiunta del nucleotide successivo
 12. Il processo si ripete per **25–150 cicli** per determinare la sequenza
+
+#### Formazione dei Cluster
+1. Più di 150 di singole molecole si ibridizzano ai primer oligonucleotidici della flow cell
+2. Le molecole legate vengono poi estese da una polimerasi
+3. La molecola a doppio filamento viene denaturata, ed il template viene scartato, mentre il filamento di nuova sintesi rimane legato alla superficie della flowcell
+	- Le singole molecole rimangono legate alla flowcell in un pattern casuale
+4. I singoli filamenti si ripiegano su primer adiacenti e formano un ponte
+5. Il primer ibridizzato viene esteso dalla polimerasi, formando un ponte a doppio filamento
+6. Il ponte a doppio filamento viene denaturato, portando a formazione di due copie legate covalentemente ai primer
+7. Si ripetono step 4-6 finchè non si formano più ponti contemporaneamente
+8. Si denaturano tutti i ponti e vengono rimossi i filamenti in reverse, lasciando un cluster con solo i filamenti in forward
+9. Ai filamenti viene aggiunto un Fl-NTP (nucleotidi trifosfato marcati a fluorescenza) ed una polimerasi
+10. I Fl-NTP sono nucleotidi modificati che terminano la sintesi e portano un segnale fluorescente per identificare la base aggiunta
+11. Dopo l'incorporazione del Fl-NTP nella catena, il sequenziatore rileva il segnale fluorescente emesso
+12. Una volta registrata la fluorescenza, il gruppo terminatore ed il colorante fluorescente vengono rimossi dal Fl-NTP per consentire l'aggiunta del nucleotide successivo
+13. Il processo si ripete per 25-150 cicli per determinare la sequenza

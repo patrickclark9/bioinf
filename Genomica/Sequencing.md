@@ -195,29 +195,33 @@ Il file `.sff` può essere convertito in formato **FASTA**:
 La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un gran numero di **oligonucleotidi complementari agli adattatori**. È un ambiente contenuto, quindi non è necessario operare in camere pulite. Il sequenziamento avviene interamente all'interno della flowcell.
 #### Preparazione della Libreria Illumina
 1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate. 
-2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
+2. **Riparazione** -> le reazioni di taglio generano un mix di protrusioni al 5' e 3' quindi le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
 	- Overhang al 5' vengono riempiti da DNA polimerasi
 	- Overhang al 3' vengono rimossi da una 3'->5' esonucleasi
 	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
 	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A
-3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti. Due adattatori **_identici_** vengono legati ad entrambe le estremità cosicchè gli oligonucleotidi della flowcell possano riconoscerli.
-    - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
-    - Gli adattatori sono non complementari alle loro terminazioni per prevenire la ligazione tra di loro, formando una Y. Questa forma ad Y viene persa se avviene amplificazione
+3. **Ligazione degli adattatori** -> due adattatori **identici** vengono ligati ad entrambe le estremità, così che gli oligonucleotidi della flowcell possano riconoscerli. Gli adattatori sono **non complementari alle loro terminazioni**, formando una struttura a **Y** che previene la self-ligazione. Questa struttura a Y viene persa dopo l'amplificazione.
+### Formazione dei Cluster (Bridge PCR)
 
+1. Le singole molecole di libreria si **ibridizzano** agli oligonucleotidi della flowcell
+2. Le molecole legate vengono estese da una **polimerasi**
+3. Il dsDNA viene **denaturato**: il template originale viene scartato, il filamento neosintetizzato rimane legato alla flowcell
+4. Il filamento si ripiega su un **oligonucleotide adiacente** formando un **ponte**
+5. Il primer ibridizzato viene esteso → **ponte a dsDNA**
+6. Il ponte viene denaturato → **due copie** legate covalentemente alla flowcell
+7. Si ripetono gli step 4–6 finché non si formano più ponti simultaneamente → **cluster clonale**
+8. Tutti i ponti vengono denaturati e i **filamenti in reverse vengono rimossi** → rimane un cluster di soli filamenti forward
 
+### Sequenziamento per Sintesi (SBS)
 
-#### Formazione dei Cluster
-1. Più di 150 di singole molecole si ibridizzano ai primer oligonucleotidici della flow cell
-2. Le molecole legate vengono poi estese da una polimerasi
-3. La molecola a doppio filamento viene denaturata, ed il template viene scartato, mentre il filamento di nuova sintesi rimane legato alla superficie della flowcell
-	- Le singole molecole rimangono legate alla flowcell in un pattern casuale
-4. I singoli filamenti si ripiegano su primer adiacenti e formano un ponte
-5. Il primer ibridizzato viene esteso dalla polimerasi, formando un ponte a doppio filamento
-6. Il ponte a doppio filamento viene denaturato, portando a formazione di due copie legate covalentemente ai primer
-7. Si ripetono step 4-6 finchè non si formano più ponti contemporaneamente
-8. Si denaturano tutti i ponti e vengono rimossi i filamenti in reverse, lasciando un cluster con solo i filamenti in forward
-9. Ai filamenti viene aggiunto un Fl-NTP (nucleotidi trifosfato marcati a fluorescenza) ed una polimerasi
-10. I Fl-NTP sono nucleotidi modificati che terminano la sintesi e portano un segnale fluorescente per identificare la base aggiunta
-11. Dopo l'incorporazione del Fl-NTP nella catena, il sequenziatore rileva il segnale fluorescente emesso
-12. Una volta registrata la fluorescenza, il gruppo terminatore ed il colorante fluorescente vengono rimossi dal Fl-NTP per consentire l'aggiunta del nucleotide successivo
-13. Il processo si ripete per 25-150 cicli per determinare la sequenza
+9. Vengono aggiunti **Fl-NTP** (nucleotidi trifosfato marcati a fluorescenza) e una polimerasi
+    - I Fl-NTP sono **terminatori reversibili**: bloccano la sintesi dopo l'incorporazione e portano un segnale fluorescente per identificare la base aggiunta
+10. Dopo l'incorporazione, il sequenziatore rileva il **segnale fluorescente**
+11. Il **gruppo terminatore** e il **colorante fluorescente** vengono rimossi per consentire l'aggiunta del nucleotide successivo
+12. Il processo si ripete per **25–150 cicli** per determinare la sequenza
+
+### 4-Channel SBS vs 2-Channel SBS
+
+![[Pasted image 20260420185242.png]]![[Pasted image 20260420185301.png]]
+In SBS a 4 canali, 4 immagini sono necessarie per catturare la tinta fluorescente unica per ogni base.
+In SBS a 2 canali, 2 immagini sono richieste per determinare tutte e 4 le chiamate ad una base
