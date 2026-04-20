@@ -227,6 +227,43 @@ La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un
 In SBS a 4 canali, 4 immagini sono necessarie per catturare la tinta fluorescente unica per ogni base.
 In SBS a 2 canali, 2 immagini sono richieste per determinare tutte e 4 le chiamate ad una base
 
+# Multiplexing (Illumina)
+
+Il sequenziatore Illumina può generare anche miliardi di read in una singola run. Se si sequenzia un genoma batterico, non servono tutte queste read per un singolo campione. Il **multiplexing** permette di sequenziare molti campioni diversi simultaneamente in una singola run.
+
+---
+
+## Flusso del Multiplexing
+
+### 1. Indexing
+
+Durante la preparazione della libreria, ad ogni campione viene ligato un adattatore contenente un **indice univoco** (barcode).
+
+### 2. Pooling
+
+Ogni campione è taggato con il proprio barcode, che indica da quale campione proviene. Tutti i campioni vengono uniti in un **singolo pool multiplexed**, che viene caricato sulla flowcell.
+
+### 3. Index Read
+
+Durante il sequenziamento, la macchina effettua una fase aggiuntiva chiamata **index read**: sequenzia le **6–10 basi di indice** e registra il barcode di ogni cluster sulla flowcell.
+
+### 4. Demultiplexing
+
+Al termine del sequenziamento, il processo di **demultiplexing** consiste nel leggere le sequenze di indice e assegnare ogni cluster al campione corrispondente, in base alla sequenza di indice contenuta nel **sample sheet**.
+
+---
+
+## Dual Indexing
+
+Per evitare l'**index hopping** — ovvero quando un indice viene assegnato al frammento errato durante la preparazione della libreria — si utilizzano due strategie:
+
+|Strategia|Descrizione|
+|---|---|
+|**CDI** (Combinatorial Dual Indexing)|Un indice al 5' (i5) e uno al 3' (i7); le combinazioni sono predefinite|
+|**UDI** (Unique Dual Indexing)|Ogni campione ha una coppia unica i5+i7|
+
+In entrambi i casi, il software deve leggere **entrambi i barcode** per assegnare una read ad un campione, eliminando la cross-contaminazione da index hopping.
+
 ### Multiplexing
 Il sequenziatore Illumina può generare anche miliardi di read in una singola run. Se andiamo a sequenziare un genoma batterico, non servono tutte queste read per campione.
 Il multiplexing permette di sequenziare molti diversi campioni simultaneamente in una singola run.
