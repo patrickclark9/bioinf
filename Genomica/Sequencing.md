@@ -95,7 +95,8 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 ### Pirosequenziamento
 
 Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, che sequenzia tra **100 e 1000 basi per volta** per lettura.
-Uno dei macchinari che implementano il Pirosequenziamento è il Roche 454 FLX+ ed il Roche GS junior
+Uno dei macchinari che implementano il Pirosequenziamento è il Roche GS 454 FLX+ ed il Roche GS junior.
+Il pirosequenziamento è un metodo che si basa interamente sul rilascio di PPi da parte della reazione di sintesi, motivo per cui è chiamato Sequencing-by-Synthesis.
 
 #### Componenti della reazione
 
