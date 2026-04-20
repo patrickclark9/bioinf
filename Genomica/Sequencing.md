@@ -169,6 +169,10 @@ Il file .sff può essere convertito in un Fasta, che conterra come header `>seq_
 
 ---
 ### Illumina
+#### FlowCell Illumina
+La flowcell di Illumina possiede 8 canali, e presenta una superficie sul quale sono presenti un gran numero di oligonucleotidi complementari agli adattatori.
+Queste flowcell sono ambienti contenuti, quindi non c'è bisogno di stanze pulite e purificate.
+Il sequenziamento avviene all'interno della flowcell.
 #### Preparazione della Libreria Illumina
 1. **Frammentazione** -> il gDNA viene frammentato in frammenti di dimensioni appropriate. 
 2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
@@ -176,10 +180,13 @@ Il file .sff può essere convertito in un Fasta, che conterra come header `>seq_
 	- Overhang al 3' vengono rimossi da una 3'->5' esonucleasi
 	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
 	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A
-3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
+3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti. Due adattatori **_identici_** vengono legati ad entrambe le estremità cosicchè gli oligonucleotidi della flowcell possano riconoscerli.
     - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
-    - Possono includere **UMI** (Unique Molecular Identifiers) per l'identificazione di varianti
-#### FlowCell Illumina
-La flowcell di Illumina possiede 8 canali, e presenta una superficie sul quale sono presenti un gran numero di oligonucleotidi complementari agli adattatori.
-Queste flowcell sono ambienti contenuti, quindi non c'è bisogno di stanze pulite e purificate.
-Il sequenziamento avviene all'interno della flowcell.
+    - Gli adattatori sono non complementari alle loro terminazioni per prevenire la ligazione tra di loro, formando una Y. Questa forma ad Y viene persa se avviene amplificazione
+
+
+
+#### Formazione dei Cluster
+1. Più di 150 di singole molecole si ibridizzano ai primer oligonucleotidici della flow cell
+2. Le molecole legate vengono poi estese da una polimerasi
+3. 
