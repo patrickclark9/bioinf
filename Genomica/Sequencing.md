@@ -98,14 +98,14 @@ Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, 
 
 #### Componenti della reazione
 
-|Componente|Ruolo|
-|---|---|
-|DNA Polimerasi|Catalizza l'aggiunta dei dNTP|
-|ATP solforilasi|Converte il PPi rilasciato in ATP|
-|Luciferasi|Converte la luciferina in ossiluciferina (→ luce)|
-|Apirasi|Degrada il dNTP non incorporato e l'ATP in eccesso|
-|Adenosinsolfofosfato (APS)|Substrato per l'ATP solforilasi|
-|Luciferina|Substrato per la luciferasi|
+| Componente                 | Ruolo                                              |
+| -------------------------- | -------------------------------------------------- |
+| DNA Polimerasi             | Catalizza l'aggiunta dei dNTP                      |
+| ATP solforilasi            | Converte il PPi rilasciato in ATP                  |
+| Luciferasi                 | Converte la luciferina in ossiluciferina (→ luce)  |
+| Apirasi                    | Degrada il dNTP non incorporato e l'ATP in eccesso |
+| Adenosinsolfofosfato (APS) | Substrato per l'ATP solforilasi                    |
+| Luciferina                 | Substrato per la luciferasi                        |
 
 > ⚠️ Al posto dell'ATP normale si usa l'**Adenosin-α-tio-trifosfato**: è riconosciuto dalla polimerasi ma non dalla luciferasi, così da verificare la complementarietà dell'adenina senza produrre un segnale luminoso spurio.
 
