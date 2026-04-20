@@ -57,28 +57,14 @@ Le tecnologie NGS eseguono un elevatissimo numero di sequenziamenti in parallelo
 
 ---
 
-### Preparazione delle Librerie
+### Preparazione delle Librerie e Titolazione
 
 Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
 
-1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Due metodi comuni:
-	- **Mechanical Shearing**:
-		- **Sonicazione** -> Si utilizza un sonicatore che emette onde acustiche a bassa frequenza per tagliare il campione
-		- **Nebulizzazione** -> Si utilizza un gasso in compressione, forzando una soluzione di acido nucleico attraverso un piccolo foro nel nebulizzatore. Il livello di frammentazione viene controllato dalla pressione del gas
-	- **Enzymatic Digestion**:
-		- Alternativa al Mechanical Shearing in cui si utilizza una endonucleasi per tagliare entrambi i filamenti o singoli filamenti creado dsBreakage. Per evitare base-bias, si utilizzano enzimi con meno specificità di taglio oppure un insieme di endonucleasi di diversa tipologia
-2. **Riparazione** -> poichè le reazioni di taglio causano un mix di protrusioni al 5' ed al 3', le estremità dei frammenti devono essere riparate. Le estremità in overhang vengono spuntate (Blunting) da una esonucleasi e "riempite" (Fill-In) da una DNA polimerasi
-	- Overhang al 5' vengono riempiti da DNA polimerasi
-	- Overhang al 3' vengono rimossi da una 3'->5' esonucleasi
-	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
-	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A (Solo Illumina?)
-3. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
-    - Gli adattatori permettono il legame alla flow-cell e assicurano la compatibilità di piattaforma
-    - Possono includere **UMI** (Unique Molecular Identifiers) per l'identificazione di varianti
-
-Nel caso del pirosequenziamento:
-1. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
-2. **Denaturazione** -> i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
+1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Viene frammentato per nebulazione o sonicazione.
+2. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
+3. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**
+4. **Denaturazione** -> i frammenti selezionati vengono denaturati in ssDNA, senza necessità di clonazione o colony-picking
 
 ---
 
