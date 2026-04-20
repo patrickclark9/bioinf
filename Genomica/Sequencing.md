@@ -200,3 +200,4 @@ Il sequenziamento avviene all'interno della flowcell.
 10. I Fl-NTP sono nucleotidi modificati che terminano la sintesi e portano un segnale fluorescente per identificare la base aggiunta
 11. Dopo l'incorporazione del Fl-NTP nella catena, il sequenziatore rileva il segnale fluorescente emesso
 12. Una volta registrata la fluorescenza, il gruppo terminatore ed il colorante fluorescente vengono rimossi dal Fl-NTP per consentire l'aggiunta del nucleotide successivo
+13. Il processo si ripete per 25-150 cicli per determinare la sequenza
