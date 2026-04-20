@@ -37,13 +37,13 @@ Il metodo Sanger si basa sull'utilizzo di **nucleotidi dideossi (ddNTP)** modifi
 - ddNTP (marcati radioattivamente o per fluorescenza)
 
 ### Protocollo
-
+![[Pasted image 20260420155402.png]]
 1. Il campione viene diviso in **4 reazioni separate**, ciascuna contenente polimerasi e i 4 dNTP
 2. Ad ognuna viene aggiunto **un solo ddNTP** (uno per reazione), in quantità stechiometricamente inferiori per permettere una elongazione adeguata prima della terminazione
 3. L'incorporazione casuale del ddNTP interrompe l'elongazione, generando una serie di **frammenti di lunghezza diversa**, ognuno terminante in corrispondenza della base del ddNTP aggiunto
 4. I frammenti vengono separati su **gel di poliacrilammide-urea** (risoluzione di 1 nt)
 5. Le 4 reazioni vengono caricate su pozzetti vicini e le bande visualizzate sotto luce UV o su lastra autoradiografica
-6. La sequenza viene letta direttamente dal gel o dalla lastra
+6. La sequenza viene letta direttamente dal gel o dalla lastra (dipende se marcati radioattivamente o per fluorescenza)
 
 ### Automazione
 
@@ -74,7 +74,7 @@ Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreri
 ### emPCR (Emulsion-Based Clonal Amplification)
 
 L'emPCR è il metodo di amplificazione clonale utilizzato in alcune piattaforme NGS prima del sequenziamento:
-
+![[Pasted image 20260420155256.png]]
 1. Le librerie DNA vengono mescolate a **capture beads**
 2. Il tutto viene immerso in acqua contenente i reagenti PCR
 3. Si aggiunge l'**emulsionante** (olio): l'acqua si diffonde in minuscole goccioline sospese nell'olio
@@ -95,6 +95,7 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 ### Pirosequenziamento
 
 Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, che sequenzia tra **100 e 1000 basi per volta** per lettura.
+Uno dei macchinari che implementano il Pirosequenziamento è il Roche 454 FLX+ ed il Roche GS junior
 
 #### Componenti della reazione
 
@@ -106,8 +107,10 @@ Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, 
 | Apirasi                    | Degrada il dNTP non incorporato e l'ATP in eccesso |
 | Adenosinsolfofosfato (APS) | Substrato per l'ATP solforilasi                    |
 | Luciferina                 | Substrato per la luciferasi                        |
+| Primer                     | Devono essere adeguati per il macchinario          |
+| dNTP                       | TTP, GTP, CTP, e Adenosin-α-tio-trifosfato         |
 
-> ⚠️ Al posto dell'ATP normale si usa l'**Adenosin-α-tio-trifosfato**: è riconosciuto dalla polimerasi ma non dalla luciferasi, così da verificare la complementarietà dell'adenina senza produrre un segnale luminoso spurio.
+> ⚠️ Al posto dell'ATP normale si usa l'**Adenosin-α-tio-trifosfato**: è riconosciuto dalla polimerasi ma non dalla luciferasi, così da verificare la complementarietà dell'adenina senza produrre un segnale luminoso spurio (e continuo).
 
 #### Protocollo
 
@@ -122,5 +125,9 @@ Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, 
 4. L'apirasi degrada l'eccesso di dNTP non incorporato e l'ATP in eccesso prima del ciclo successivo
 5. I 4 dNTP vengono aggiunti **ciclicamente** fino al completamento della sequenza
 
-#### FlowGram
+##### FlowGram
 ![[Pasted image 20260420153839.png]]
+Viene generato dal macchinario al termine del sequenziamento.
+- Ascissa -> Nucleotide passato
+- Ordinata -> Intensità del segnale luminoso. Se supera una certa soglia, significa ripetizione di un nucleotide
+
