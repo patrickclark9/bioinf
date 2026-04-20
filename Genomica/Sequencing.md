@@ -201,6 +201,7 @@ La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un
 	- Le terminazioni al 5' del DNA spuntato (post-Blunting) vengono fosforilate da una chinasi
 	- Le terminazioni al 3' del DNA spuntato vengono adenilate (A-Tailing), necessario per la ligazione T->A
 3. **Ligazione degli adattatori** -> due adattatori **identici** vengono ligati ad entrambe le estremità, così che gli oligonucleotidi della flowcell possano riconoscerli. Gli adattatori sono **non complementari alle loro terminazioni**, formando una struttura a **Y** che previene la self-ligazione. Questa struttura a Y viene persa dopo l'amplificazione.
+	- Possono includere unique molecular identifiers UMI che aiutano nella identificazione di varianti
 ### Formazione dei Cluster (Bridge PCR)
 
 1. Le singole molecole di libreria si **ibridizzano** agli oligonucleotidi della flowcell
