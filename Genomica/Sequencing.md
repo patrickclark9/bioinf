@@ -121,3 +121,6 @@ Il pirosequenziamento è una strategia NGS completamente automatizzata, rapida, 
     - **Segnale nullo** → il dNTP aggiunto non è complementare
 4. L'apirasi degrada l'eccesso di dNTP non incorporato e l'ATP in eccesso prima del ciclo successivo
 5. I 4 dNTP vengono aggiunti **ciclicamente** fino al completamento della sequenza
+
+#### FlowGram
+![[Pasted image 20260420153839.png]]
