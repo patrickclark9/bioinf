@@ -57,6 +57,10 @@ La metodica è stata progressivamente affinata e automatizzata. I sistemi modern
 ## NGS (Next Generation Sequencing)
 
 Le tecnologie NGS eseguono un elevatissimo numero di sequenziamenti in parallelo (**alto parallelismo**). Ne esistono svariate versioni che utilizzano reazioni chimiche e strategie differenti.
+I vantaggi principali presentati da NGS sono:
+1. Non è richiesto clonaggio classico dei frammenti di DNA da sequenziare
+2. L'utilizzo di micro o nano reattori normalmente immobilizzati su un supporto solido permette un elevato livello di parallelizzazione
+3. La determinazione della sequenza non richiede il passaggio limitante della separazione elettroforetica, in quanto via via i nucleotidi
 
 ---
 
