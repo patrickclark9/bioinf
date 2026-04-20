@@ -1,3 +1,6 @@
+---
+publish: true
+---
 
 
 # Metodi di Sequenziamento
@@ -130,7 +133,8 @@ Viene generato dal macchinario al termine del sequenziamento.
 ##### Lunghezza delle Read
 ![[Pasted image 20260420170811.png]]
 
-La lunghezza delle read nel pirosequenziamento dipendono strettamente 
+La lunghezza delle read nel pirosequenziamento dipendono strettamente dal quantitativo di omopolimeri ("AAA", "GGG" ecc...) contenuti all'interno della sequenza. Se il frammento possiede tanti omopolimeri, incorpora più basi per ciclo, risultando in una lunghezza della read finale più lunga solitamente.
+Un sequenziamento diverso, e.g. Illumina, avrebbe un grafico piatto dato che nella library preparation le read vengono uniformate ad una stessa lunghezza.
 ##### Formato 454 SFF
 I file Standard Flowgram Format (SFF) sono gli equivalenti del 454 ai file ABI del cromatogramma. Questi file contengono informazioni su:
 - FlowGram
