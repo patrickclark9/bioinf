@@ -66,7 +66,7 @@ Il pirosequenziamento è un metodo che si basa interamente sul rilascio di PPi d
 ![[Pasted image 20260420165104.png]]
 Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
 
-1. **Frammentazione** -> il gDNA viene frammentato in pezzi corti ed uniformi (i macchinari short-read non possono leggere intere sequenze cromosomiche). Viene frammentato per nebulazione o sonicazione.
+1. **Frammentazione** -> il gDNA viene frammentato in pezzi più corti (i macchinari short-read non possono leggere intere sequenze cromosomiche). Viene frammentato per nebulazione o sonicazione.
 2. **Ligazione degli adattatori** -> una ligasi lega covalentemente gli **adattatori** ai frammenti
 3. **Selezione dei frammenti** -> durante la ligazione gli adattatori si legano casualmente. Con due adattatori A e B si ottengono combinazioni A-A, A-B, B-A, B-B. Solo i frammenti **A-B** sono utili per il sequenziamento; gli altri vengono rimossi tramite **purificazione avidina-biotina**. L'adattatore B è **biotinilato**: la purificazione con **streptavidina** cattura selettivamente tutti i frammenti contenenti B (A-B e B-B).
 4. **Denaturazione** -> i frammenti catturati vengono denaturati. Si rilascia il filamento privo di B (ovvero il filamento con adattatore A del frammento A-B), ottenendo **ssDNA con adattatore A** a un'estremità → pronto per l'emPCR.
@@ -89,12 +89,11 @@ Non avviene nessun clonaggio o colony-picking.
 > La maggior parte dei bead non produce prodotti funzionali, ma poiché ne vengono generati un gran numero questo non costituisce un problema.
 
 
-I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima, centrifugato e il sequenziamento avviene in centinaia di migliaia di pozzi di dimensioni in picolitri.
+I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima, centrifugato e il sequenziamento avviene simultaneamente in centinaia di migliaia di pozzi di dimensioni in picolitri.
 ![[Pasted image 20260420115755.png]]
 ![[Pasted image 20260420115729.png]]
+
 ---
-
-
 #### Componenti della reazione
 
 | Componente                 | Ruolo                                              |
@@ -128,6 +127,18 @@ I bead vengono poi depositati in una **PicoTiter plate**, aggiunti i bead enzima
 Viene generato dal macchinario al termine del sequenziamento.
 - Ascissa -> Nucleotide passato
 - Ordinata -> Intensità del segnale luminoso. Se supera una certa soglia, significa ripetizione di un nucleotide
+##### Lunghezza delle Read
+![[Pasted image 20260420170811.png]]
+
+La lunghezza delle read nel pirosequenziamento dipendono strettamente 
+##### Formato 454 SFF
+I file Standard Flowgram Format (SFF) sono gli equivalenti del 454 ai file ABI del cromatogramma. Questi file contengono informazioni su:
+- FlowGram
+- Sequenza chiamata
+- Qualità
+- Qualità raccomandata e adaptor clipping
+I clipping raccomandati sono dati dal macchinario 454. Qualità e sequenza dell'adattore sono tenute in considerazione per la raccomandazione sul clipping per ogni sequenza.
+Il file .sff può essere convertito in un Fasta, che conterra come header `>seq_name description`  e se si hanno informazioni sulla qualità può essere creato un secondo fasta, con le sequenze nello stesso ordine, ma invece di contenere la sequenza stessa conterrà i valori di qualità della sequenza.
 
 ### Illumina
 #### Preparazione della Libreria
