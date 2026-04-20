@@ -226,3 +226,14 @@ La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un
 ![[Pasted image 20260420185242.png]]![[Pasted image 20260420185301.png]]
 In SBS a 4 canali, 4 immagini sono necessarie per catturare la tinta fluorescente unica per ogni base.
 In SBS a 2 canali, 2 immagini sono richieste per determinare tutte e 4 le chiamate ad una base
+
+### Multiplexing
+Il sequenziatore Illumina può generare anche miliardi di read in una singola run. Se andiamo a sequenziare un genoma batterico, non servono tutte queste read per campione.
+Il multiplexing permette di sequenziare molti diversi campioni simultaneamente in una singola run.
+1. Indexing
+La chiave del multiplexing avviene nella fase di preparazione della libreria. Ad ogni campione viene legato un adattatore contenente un indice diverso.
+Ogni campione è quindi taggato con un barcode che indica da quale campione proviene, consentendo il pooling di tutti i campioni in un singolo pool multiplexed. Questo pool viene caricato sulla flow cell.
+Durante il sequenziamento la macchina effettua una fase aggiuntiva chiamata index read. Durante la index read, sequenzia le 6-10 basi di indice e registra il barcode di ogni cluster sulla flowcell.
+Dopo la fine del sequenziamento, va effettuato il demultiplexing.
+Il processo di demultiplexing consiste nel leggere le sequenze di indice, assegnando un cluster ad ogni campione, in base alla sequenza di indice contenuta nel sample sheet.
+Per evitare index hopping, ovvero quando un indice viene assegnato al frammento errato durante la preparazione della libreria, si utilizza la Combinatoria
