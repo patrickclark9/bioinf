@@ -476,4 +476,6 @@ Quando la polimerasi inizia a copiare, poichè è un ciclo, essa gira attorno al
 
 ---
 ## Oxford Nanopore
-
+La tecnologia Nanopore abbandona completamente l'SBS. La base di questa tecnologia è una membrana polimerica elettricamente resistente. All'interno nella membrana ci sono migliaia di canali proteici microscopici chiamati nanopori. Un enzima specializzato elicasi  viene legato all'apertura del nanoporo. L'elicasi si lega al dsDNA, lo svolge in ssDNA, e lo incanala in un poro. L'elicasi controlla la velocità con cui il filamento attraversa il poro (400 basi al secondo).
+Il sistema si trova in una soluzione salina conduttiva. La macchina applica un voltaggio continuo attraverso la membrana. Poichè la membrana è resistente, l'unica via per gli ioni per attraversarla è direttamente attraverso il poro, creando un flusso ionico continuo.
+Il DNA ostruisce il passaggio degli ioni, e poichè A T C G hanno ingombro sterico differente, la macchina rileva queste alterazioni della cor
