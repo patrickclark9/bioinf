@@ -27,4 +27,4 @@ Una mappa fornisce una guida per esperimenti di sequenziamento mostrando le posi
 
 Per convenzione si dividono i metodi di mapping del genoma in 2 categorie:
 - Genetic Mapping -> Si basa sull'utilizzo di tecniche genetiche per costruire mappe che mostrano la posizione dei geni ed altre sequenze sul genoma. Le tecniche genetiche includono cross-breeding, o l'esaminazione delle genealogie (pedigree) per gli umani.
-- 
+- Physical Mapping -> Tecniche di biologia molecolare per esaminare le molecole di DNA direttamente per costruire mappe mostrando le posizioni di sequenze, inclusi geni
