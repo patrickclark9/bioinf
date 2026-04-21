@@ -417,3 +417,11 @@ Il sistema Helicos è un esempio di **Sequencing by Synthesis** di terza generaz
 5. Il ciclo si ripete per ogni posizione della sequenza
 
 ![[Pasted image 20260421112106.png]]
+
+# 3rd Gen Sequencing
+## PacBio
+La tecnologia PacBio è chiamata SMRT (Single Molecule Real Time) sequencing.
+A differenza delle seconde generazioni, non richiede PCR, non richiede cicli di pulizia per rimuovere agenti chimici e può leggere filamenti continui molto lunghi, anche fino a 20Kbp.
+
+### ZMW
+La tecnologia fondamentale è la Zero-Mode Waveguide. Un ZMW è un microscopico pozzetto in una cella, che contiente migliaia di questi ZMW. La macchina ancora una singola DNA polimerasi nel fondo del pozzetto, in modo che venga letto solo quello che accade all'interno dell'enzima.
