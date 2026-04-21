@@ -483,3 +483,6 @@ Ad ogni dato istante, ci sono attorno 5 nucleotidi nel punto più stretto del po
 
 ### Library Prep
 Si parte da HMW DNA (High Molecular Weight). Opzionalmente lo si frammenta, non necessario, vanno bene target anche di 10Kbp o 20Kbp.
+Si riparano le estremità per blunting, fosforila 5' e si aggiunge una Adenina al 3' di ogni filamento.
+Gli adattatori ONT hanno un complementare T overhang, che si ligano alla A in overhang al 3'.
+Gli adattatori ONT montano la Motor Protein (pre-load adapter) ed un Tether. Il tether idrofobico si va ad inserire immediatamente nella parte lipidica della membrana della flowcell, ancorando il frammento di DNA direttamente sulla superficie della membrana, incrementano la concentrazione di DNA appena accanto ai pori. Il tether mantiene il DNA vicino ai nanopori, permettendo alla Motor Protein di trovare pori e dockarsi, constenendo l'inizio del processo.
