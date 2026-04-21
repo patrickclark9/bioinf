@@ -317,23 +317,26 @@ Struttura di un probe:
 - **Basi finali** — universali
 - **Sito di ligazione** al 3'
 - **Sito di cleavage** tra le basi degenerate e le basi universali
-
-Dopo la ligazione viene rilevata la fluorescenza, e le basi universali vengono tagliate, lasciando la coppia specifica e le 3 basi degenerate appaiate al template.
 ![[Pasted image 20260421103253.png]]
+Dopo la ligazione viene rilevata la fluorescenza, e le basi universali vengono tagliate, lasciando la coppia specifica e le 3 basi degenerate appaiate al template.
+
 ![[Pasted image 20260421103308.png]]
 ![[Pasted image 20260421103316.png]]
+Le basi universali vengono tagliate al sito di cleavage, lasciando la coppia specifica e le 3 basi degenerate appaiate al template. Il primer è ora pronto per il ciclo successivo.
 ![[Pasted image 20260421103322.png]]
+Il ciclo si ripete: un nuovo probe si lega alla posizione successiva, estendendo la lettura della sequenza.
 ![[Pasted image 20260421103339.png]]
 
 ### 6. Cicli di Ligazione
 
 Vengono effettuati molteplici cicli di **ligazione → rilevamento → taglio**. Il numero di cicli determina la lunghezza della read.
-![[Pasted image 20260421103426.png]]
+
 ### 7. Reset del Primer
 
 Dopo una serie di cicli di ligazione, il prodotto esteso viene rimosso e il template viene **resettato** con un primer complementare alla posizione **n-1**, per un secondo round di cicli di ligazione.
 
 Vengono completati **5 round di reset del primer** per ogni tag di sequenza (si arriva quindi a n-4).
+![[Pasted image 20260421103426.png]]
 
 ---
 
