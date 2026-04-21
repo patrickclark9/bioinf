@@ -470,5 +470,10 @@ Il risultato è una **sintesi processiva osservata in real time** in migliaia di
 
 ---
 ### Library Preparation
-Le long read storicamente hanno probelmi con elevate frequenze di errore
+Le long read storicamente hanno probelmi con elevate frequenze di errore. PacBio risolve questo problema durante la preparazione delle librerie.
+Invece di mantenere i frammenti di DNA in forma lineare, vengono ligati degli adattatori con loop hairpin ad entrambe le estremità, convertendo il dsDNA in un cerchio chiuso, la SMRTbell.
+Quando la polimerasi inizia a copiare, poichè è un ciclo, essa gira attorno al loop, legge il filamento in reverse, gira attorno al loop, e legge nuovamente il filamento forward, producendo read HiFi. Un errore durante il primo ciclo probabilmente non verrà commesso durante il secondo o il terzo. Impilando le sequenze si va a generare una sequenza consensus circolare (CCS) estremamente lunga e accurata (99.9% di accuracy con un 30x consensus).
+
+---
+## Oxford Nanopore
 
