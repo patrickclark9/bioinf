@@ -32,4 +32,16 @@ Per convenzione si dividono i metodi di mapping del genoma in 2 categorie:
 Una mappa genetica (linkage map) mostra la locazione relativa dei marker genetici (riflettendo siti di varianti genomiche) su un cromosoma.
 Si basa sul linkage genetico -> Più vicini due marker sono su un cromosoma, più tenderanno a segregare insieme.
 Studiando i pattern di ereditarietà possono essere stabiliti l'ordine relativo e la locazione dei marker genetici lungo un cromosoma.
-I geni sono marker genetici, ma non sono ideali per il mapping. In genomi grandi, una mappa basata solo sui geni non sarà molto dettagliata. Inoltre nei genomi eucari
+I geni sono marker genetici, ma non sono ideali per il mapping. In genomi grandi, una mappa basata solo sui geni non sarà molto dettagliata. Inoltre nei genomi eucariotici i geni sono spesso estremamente sparsi nel genoma, con enormi gap tra loro.
+Solo una frazione dei geni esiste in forma allelica, e può essere distinta convenientemente.
+Feature mappate che non sono geni prendono il noem di DNA Marker. Come i geni, i DNA marker devono possedere almeno due alleli per essere utili.
+Tre feature di sequenze DNA soddisfano questi requisiti:
+- RFLP restriction fragment length polymorphism -> Alcune molecole presentano siti di restrizioni assenti in altre molecole. Un RFLP viene scoperto con il trattamento da enzimi di restrizione, dove una molecola con il sito in più verrà tagliata in un pezzo aggiuntivo rispetto l'altra
+- SSLP simple sequence length polymorphism -> Sono Array di sequenze ripetute con differente lunghezza, i differenti alleli contengono differente numero di unità ripetute
+- SNP single nucleotide polymorphism -> Posizioni nel genoma dove singoli individui presentano un Nucleotide mentre altri individui presentano altri nucleotidi. Ci sono almeno 1.5 milioni di SNP nel genoma umano, ed alcuni possono dare vita a RFLP, ma è raro perche la sequenza in cui si trovano spesso non è riconosciuta da enzimi di restrizione
+La costruzione della mappa si basa sull'analisi linkage, motivo per cui i DNA marker devono essere eterozigoti. L'affidabilità di un marker è data dal PIC index
+
+
+### Mappe fisiche
+Una mappa genetica è raramente sufficiente per il sequenziamento diretto:
+- La risoluzione dipende dal numero di Crossing-
