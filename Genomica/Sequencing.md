@@ -190,6 +190,9 @@ Il file `.sff` può essere convertito in formato **FASTA**:
 ---
 ## Illumina
 
+![[Pasted image 20260421092420.png]]
+Illumina presenta diversi macchinari con lunghezza delle singole read e lunghezza totale del sequenziamento vastamente differenti.
+Si passa dalle read 150x2, per un totale di 52 miliardi 
 ### FlowCell
 
 La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un gran numero di **oligonucleotidi complementari agli adattatori**. È un ambiente contenuto, quindi non è necessario operare in camere pulite. Il sequenziamento avviene interamente all'interno della flowcell.
@@ -264,3 +267,6 @@ Per evitare l'**index hopping** — ovvero quando un indice viene assegnato al f
 
 In entrambi i casi, il software deve leggere **entrambi i barcode** per assegnare una read ad un campione, eliminando la cross-contaminazione da index hopping.
 
+
+
+## SOLiD Sequencing
