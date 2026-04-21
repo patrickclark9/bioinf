@@ -400,3 +400,21 @@ Ancorata la polimerasi, questi nucleotidi phospholinked vengono introdotti nella
 4. Il fosfato marcato esce dalla zona illimunata 
 Poichè il fosfato viene rimosso naturalmente, l'enzima non si ferma mai, a differenza delle altre tecniche dove c'è un tempo di attesa per la pulizia.
 Si osserva una sintesi processiva avvenire in real time in migliaia di micropozzetti simultaneamente
+
+## Oxford Nanopore
+La tecnologia Nanopore abbandona completamente l'SBS. La base di questa tecnologia è una membrana polimerica elettricamente resistente. All'interno nella membrana ci sono migliaia di canali proteici microscopici chiamati nanopori. Un enzima specializzato Motor Protein (elicasi)  viene legato all'apertura del nanoporo. L'elicasi si lega al dsDNA, lo svolge in ssDNA, e lo incanala in un poro. L'elicasi controlla la velocità con cui il filamento attraversa il poro (400 basi al secondo). Una seconda proteina crea il poro nella membrana e contiene una molecola adattatore
+Il sistema si trova in una soluzione salina conduttiva. La macchina applica un voltaggio continuo attraverso la membrana. Poichè la membrana è resistente, l'unica via per gli ioni per attraversarla è direttamente attraverso il poro, creando un flusso ionico continuo. L'adattatore mantiene le basi ferme per abbastanza tempo per farle riconoscere elettronicamente
+Il DNA ostruisce il passaggio degli ioni, e poichè A T C G hanno ingombro sterico differente, la macchina rileva queste alterazioni della corrente. L'ouput è una grafico a picchi chiamato squiggle.
+Ad ogni dato istante, ci sono attorno 5 nucleotidi nel punto più stretto del poro contemporaneamente. ATGCA scende di uno spot e diventa TGCAT ad esempio. Tradurre questi squiggle in base-call è molto dispensioso computazionalmente. 
+
+### Library Prep
+Si parte da HMW DNA (High Molecular Weight). Opzionalmente lo si frammenta, non necessario, vanno bene target anche di 10Kbp o 20Kbp.
+Si riparano le estremità per blunting, fosforila 5' e si aggiunge una Adenina al 3' di ogni filamento. Si ligano i barcode successivamente.
+Gli adattatori ONT hanno un complementare T overhang, che si ligano alla A in overhang al 3'.
+Gli adattatori ONT montano la Motor Protein (pre-load adapter) ed un Tether. Il tether idrofobico si va ad inserire immediatamente nella parte lipidica della membrana della flowcell, ancorando il frammento di DNA direttamente sulla superficie della membrana, incrementano la concentrazione di DNA appena accanto ai pori. Il tether mantiene il DNA vicino ai nanopori, permettendo alla Motor Protein di trovare pori e dockarsi, constenendo l'inizio del processo.
+
+Per una molecola di RNA invece si liga alla coda di poli(A) un cDNA RevTrans adapter, contenente una coda di poli(T).
+L'adattatore viene digerito, lasciando solo la molecola di RNA.
+Si applica la RevTrans e si incorpora l'UMI.
+Si ligano gli adattatori di sequenziamento montanti la Motor Protein al 3'.
+Si ottiene un sequenziamento diretto dell'RNA così, poichè si rimuove la motor Protein dal cDNA ottenuto per reverse transcriptase, che infatti è opzionale

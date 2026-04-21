@@ -475,20 +475,66 @@ Invece di mantenere i frammenti di DNA in forma lineare, vengono ligati degli ad
 Quando la polimerasi inizia a copiare, poichè è un ciclo, essa gira attorno al loop, legge il filamento in reverse, gira attorno al loop, e legge nuovamente il filamento forward, producendo read HiFi. Un errore durante il primo ciclo probabilmente non verrà commesso durante il secondo o il terzo. Impilando le sequenze si va a generare una sequenza consensus circolare (CCS) estremamente lunga e accurata (99.9% di accuracy con un 30x consensus).
 
 ---
-## Oxford Nanopore
-La tecnologia Nanopore abbandona completamente l'SBS. La base di questa tecnologia è una membrana polimerica elettricamente resistente. All'interno nella membrana ci sono migliaia di canali proteici microscopici chiamati nanopori. Un enzima specializzato Motor Protein (elicasi)  viene legato all'apertura del nanoporo. L'elicasi si lega al dsDNA, lo svolge in ssDNA, e lo incanala in un poro. L'elicasi controlla la velocità con cui il filamento attraversa il poro (400 basi al secondo). Una seconda proteina crea il poro nella membrana e contiene una molecola adattatore
-Il sistema si trova in una soluzione salina conduttiva. La macchina applica un voltaggio continuo attraverso la membrana. Poichè la membrana è resistente, l'unica via per gli ioni per attraversarla è direttamente attraverso il poro, creando un flusso ionico continuo. L'adattatore mantiene le basi ferme per abbastanza tempo per farle riconoscere elettronicamente
-Il DNA ostruisce il passaggio degli ioni, e poichè A T C G hanno ingombro sterico differente, la macchina rileva queste alterazioni della corrente. L'ouput è una grafico a picchi chiamato squiggle.
-Ad ogni dato istante, ci sono attorno 5 nucleotidi nel punto più stretto del poro contemporaneamente. ATGCA scende di uno spot e diventa TGCAT ad esempio. Tradurre questi squiggle in base-call è molto dispensioso computazionalmente. 
+## Oxford Nanopore Technology (ONT)
 
-### Library Prep
-Si parte da HMW DNA (High Molecular Weight). Opzionalmente lo si frammenta, non necessario, vanno bene target anche di 10Kbp o 20Kbp.
-Si riparano le estremità per blunting, fosforila 5' e si aggiunge una Adenina al 3' di ogni filamento. Si ligano i barcode successivamente.
-Gli adattatori ONT hanno un complementare T overhang, che si ligano alla A in overhang al 3'.
-Gli adattatori ONT montano la Motor Protein (pre-load adapter) ed un Tether. Il tether idrofobico si va ad inserire immediatamente nella parte lipidica della membrana della flowcell, ancorando il frammento di DNA direttamente sulla superficie della membrana, incrementano la concentrazione di DNA appena accanto ai pori. Il tether mantiene il DNA vicino ai nanopori, permettendo alla Motor Protein di trovare pori e dockarsi, constenendo l'inizio del processo.
+La tecnologia Nanopore abbandona completamente il paradigma **Sequencing by Synthesis**. Non utilizza nucleotidi marcati né polimerasi come motore principale di rilevamento: legge direttamente la sequenza attraverso variazioni di **corrente ionica**.
 
-Per una molecola di RNA invece si liga alla coda di poli(A) un cDNA RevTrans adapter, contenente una coda di poli(T).
-L'adattatore viene digerito, lasciando solo la molecola di RNA.
-Si applica la RevTrans e si incorpora l'UMI.
-Si ligano gli adattatori di sequenziamento montanti la Motor Protein al 3'.
-Si ottiene un sequenziamento diretto dell'RNA così, poichè si rimuove la motor Protein dal cDNA ottenuto per reverse transcriptase, che infatti è opzionale
+---
+
+### Principio di Funzionamento
+
+La base della tecnologia è una **membrana polimerica elettricamente resistente** contenente migliaia di **nanopori** — canali proteici microscopici. Il sistema si trova immerso in una **soluzione salina conduttiva** attraverso cui la macchina applica un **voltaggio continuo**.
+
+Poiché la membrana è resistente, l'unica via per gli ioni è attraversare direttamente i pori, creando un **flusso ionico continuo** misurabile.
+
+#### Struttura del Nanoporo
+
+Ogni nanoporo è composto da due proteine:
+
+- **Proteina del poro** — crea il canale nella membrana e contiene una **molecola adattatore** che mantiene le basi ferme abbastanza a lungo da permetterne il riconoscimento elettronico
+- **Motor Protein (elicasi)** — legata all'apertura del poro; si lega al dsDNA, lo svolge in ssDNA e lo incanalza nel poro, controllando la velocità di traslocazione (**~400 basi/secondo**)
+
+---
+
+### Rilevamento della Sequenza
+
+Il DNA ostruisce il passaggio degli ioni attraverso il poro. Poiché A, T, C, G hanno **ingombro sterico differente**, ogni base (o combinazione di basi) altera la corrente in modo caratteristico.
+
+Ad ogni istante, circa **5 nucleotidi** si trovano contemporaneamente nel punto più stretto del poro. Il segnale riflette quindi una finestra di 5 basi che scorre lungo il filamento:
+
+```
+Istante t:    A T G C A  →  segnale corrente X
+Istante t+1:  T G C A T  →  segnale corrente Y
+```
+
+L'output è un grafico a picchi chiamato **squiggle**.
+
+> La traduzione degli squiggle in base-call è computazionalmente molto dispendiosa e viene effettuata da modelli di deep learning (basecalling).
+
+---
+
+### Preparazione della Libreria (DNA)
+
+Si parte da **HMW DNA** (High Molecular Weight). La frammentazione è opzionale: ONT è compatibile con target anche di **10–20 kbp**.
+
+1. **Riparazione delle estremità** — blunting, fosforilazione al 5', A-tailing al 3'
+2. **Ligazione dei barcode** (opzionale, per multiplexing)
+3. **Ligazione degli adattatori ONT**
+    - Gli adattatori ONT hanno un **T overhang** complementare alla A aggiunta al 3', consentendo la ligazione
+    - Gli adattatori montano la **Motor Protein** (pre-load adapter) e un **Tether idrofobico**
+    - Il tether si inserisce nella parte lipidica della membrana della flowcell, **ancorando il frammento direttamente sulla superficie** vicino ai pori
+    - Questo incrementa la concentrazione locale di DNA e permette alla Motor Protein di trovare i pori e dockarvisi, avviando il sequenziamento
+![[Pasted image 20260421162526.png]]
+---
+
+### Preparazione della Libreria (RNA diretto)
+
+ONT permette il **sequenziamento diretto dell'RNA** senza conversione in cDNA:
+
+1. Si lega alla coda di poli(A) dell'RNA un **cDNA RevTrans adapter** contenente una coda di poli(T)
+2. Si applica la **trascrittasi inversa** e si incorpora l'**UMI** (Opzionale Trascrittasi Inversa)
+3. Si ligano gli adattatori di sequenziamento con la Motor Protein al 3'
+4. La Motor Protein viene **rimossa dal cDNA** ottenuto per reverse transcriptase (passaggio opzionale)
+
+Il risultato è il sequenziamento diretto della molecola di RNA originale, preservando le modificazioni dell'RNA che andrebbero perse con la conversione in cDNA.
+![[Pasted image 20260421162518.png]]
