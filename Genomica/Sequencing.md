@@ -288,12 +288,12 @@ A differenza di Illumina e del pirosequenziamento, SOLiD non si basa sulla sinte
 
 ### 1. Sample Preparation
 
-Si forma la libreria di frammenti e si legano gli adattatori **P1** e **P2**. Il DNA viene frammentato per sonicazione o per metodo enzimatico. Gli inserti sono tipicamente tra 100 e 200bp
+Si forma la libreria di frammenti e si legano gli adattatori **P1** e **P2**. Il DNA viene frammentato per sonicazione o per metodo enzimatico. Gli inserti sono tipicamente tra **100 e 200 bp**.
 
 ### 2. emPCR
 
 1. Il template si lega all'adattatore P1
-2. La polimerasi estende dal adattatore P1
+2. La polimerasi estende dall'adattatore P1
 3. La sequenza complementare si estende dal bead
 
 > La sequenza adattatore P1 è **universale**: la sequenza di partenza di ogni frammento è quindi uguale, nota e identica per ogni frammento.
@@ -305,22 +305,43 @@ Post-arricchimento, i bead vengono depositati su uno **slide di vetro**, dove og
 ### 4. Ibridizzazione del Primer
 
 I primer si ibridizzano alla sequenza dell'adattatore P1 all'interno del template della libreria.
-
+![[Pasted image 20260421103229.png]]
 ### 5. Ligazione delle Probe Duo-Base
 
-Un insieme di **4 probe duo-base marcati a fluorescenza** competono per la ligazione al primer. La specificità del probe viene ottenuta interrogando la **prima e la seconda base** in ogni reazione di ligazione. Dei probe solo le prime due basi sono specifiche, le altre sono degenerate (posizioni universali)
-Un probe è formato da un sito di ligazione al 3', un sito di cleavage tra basi degenerate e basi universali.
-Dopo la ligazione viene rilevata
+Un insieme di **4 probe duo-base marcati a fluorescenza** competono per la ligazione al primer.
 
+Struttura di un probe:
+
+- **Prime due basi** — specifiche (interrogano la sequenza)
+- **Basi intermedie** — degenerate
+- **Basi finali** — universali
+- **Sito di ligazione** al 3'
+- **Sito di cleavage** tra le basi degenerate e le basi universali
+
+Dopo la ligazione viene rilevata la fluorescenza, e le basi universali vengono tagliate, lasciando la coppia specifica e le 3 basi degenerate appaiate al template.
+![[Pasted image 20260421103253.png]]
+![[Pasted image 20260421103308.png]]
+![[Pasted image 20260421103316.png]]
+![[Pasted image 20260421103322.png]]
+![[Pasted image 20260421103339.png]]
+<div style="display:flex; gap:10px;">  
+  
+![[Pasted image 20260421103253.png]]  
+![[Pasted image 20260421103308.png]]  
+![[Pasted image 20260421103316.png]]  
+![[Pasted image 20260421103322.png]]  
+![[Pasted image 20260421103339.png]]  
+  
+</div>
 ### 6. Cicli di Ligazione
 
 Vengono effettuati molteplici cicli di **ligazione → rilevamento → taglio**. Il numero di cicli determina la lunghezza della read.
-
+![[Pasted image 20260421103426.png]]
 ### 7. Reset del Primer
 
 Dopo una serie di cicli di ligazione, il prodotto esteso viene rimosso e il template viene **resettato** con un primer complementare alla posizione **n-1**, per un secondo round di cicli di ligazione.
 
-Vengono completati **5 round di reset del primer** per ogni tag di sequenza.
+Vengono completati **5 round di reset del primer** per ogni tag di sequenza (si arriva quindi a n-4).
 
 ---
 
@@ -332,7 +353,14 @@ Attraverso il reset del primer, ogni base viene interrogata in **due reazioni di
 
 
 ### Two Base encoding
-La macchina come output ha una sequenza di colori, BGRY, dove ogni colore rappresenta una specifica coppia di nucleotidi. Poichè le reading frame sono in overlap, ogni singola base nel DNA è stata interrogata da due differenti probe.
-Se la cattura del colore è un errore della macchina, la traduzione in DNA non sarà corretta, e quindi viene scartata.
-Uno SNP invece viene riconosciuto perchè cambia il colore di due probe adiacenti in overlap.
-Si possono osservare delezione ed inserzioni anche
+
+L'output del macchinario SOLiD non è direttamente una sequenza di basi, ma una **sequenza di colori** (B, G, R, Y), dove ogni colore rappresenta una specifica coppia di nucleotidi.
+
+Poiché le reading frame dei probe sono in **overlap**, ogni singola base nel DNA viene interrogata da **due probe differenti**. Questo permette di distinguere due tipi di eventi:
+
+|Evento|Effetto sui colori|Interpretazione|
+|---|---|---|
+|**Errore strumentale**|Un solo colore errato in una posizione|La traduzione in DNA risulta inconsistente → read **scartata**|
+|**SNP**|Due colori adiacenti in overlap cambiano entrambi|Cambiamento reale nella sequenza → **SNP riconosciuto**|
+|**Inserzione/Delezione**|Pattern di shift nei colori a valle|Rilevabile dall'analisi del pattern|
+![[Pasted image 20260421103136.png]]
