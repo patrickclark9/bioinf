@@ -10,11 +10,11 @@ $$\text{Phred score} = -10\log_{10} P$$
 
 Dove $P$ è la probabilità di errore.
 
-|Phred Score|Accuratezza|Probabilità di errore|
-|---|---|---|
-|50|99,999%|1 su 100.000|
-|10|90%|1 su 10|
-|0|0%|Certezza di errore|
+| Phred Score | Accuratezza | Probabilità di errore |
+| ----------- | ----------- | --------------------- |
+| 50          | 99,999%     | 1 su 100.000          |
+| 10          | 90%         | 1 su 10               |
+| 0           | 0%          | Certezza di errore    |
 
 > Inizio e fine di un elettroferogramma non sono di qualità elevata. Per basi non riconosciute dal sequenziatore (`N`) non viene assegnato alcun Phred score.
 
