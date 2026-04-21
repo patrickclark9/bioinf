@@ -280,4 +280,18 @@ In entrambi i casi, il software deve leggere **entrambi i barcode** per assegnar
 ## SOLiD Sequencing
 ### Sequencing by Ligation
 Il sistema solid consiste in:
-1. Sample preparation
+1. Sample preparation: Si forma la libreria di frammenti, si legano gli adattatori P1 e P2.
+2. emPCR
+	1. Template si lega al adattatore P1
+	2. Polimerasi estende dal adattatore P1
+	3. Sequenza complementare si estende dal bead
+> La seequenza adattatore di P1 è universale quindi la sequenza di partenza di ogni frammento è uguale ed è nota e identica per ogni frammento
+3. Post arricchimento, si depositano i bead su uno slide di vetro
+4. I primer si ibridizzano alla sequenza P1 di adattatore all'interno del template library.
+5. Un insieme di 4 probe duo-base marcati fluorescenza competono per ligazione al primer
+6. La specificità del probe duo-base viene ottenuta interrogando ogni prima e seconda base in ogni reazione di ligazione
+7. Molteplici cicli di ligazione, rilevamento e taglio vengono effettuati. Il numero di cicli determinano la lunghezza della read
+8. Dopo una serie di cicli di ligazione, il prodotto esteso viene rimosso ed il template viene resettato con un primer complementare alla posizione n-1 per un secondo round di ciclo di ligazione
+9. 5 round di reset di primer vengono completati per ogni tag di sequenza.
+10. Attraverso il reset del primer, ogni base è interrogata in due indipendenti reazioni di ligazione da due differenti primer
+11. Per esempio, la read in posizione 5 viene interrogata dal primer numbero 2 in ciclo di licazione 2 e da primer numero 3 in ciclo di ligazione 1
