@@ -324,15 +324,7 @@ Dopo la ligazione viene rilevata la fluorescenza, e le basi universali vengono t
 ![[Pasted image 20260421103316.png]]
 ![[Pasted image 20260421103322.png]]
 ![[Pasted image 20260421103339.png]]
-<div style="display:flex; gap:10px;">  
-  
-![[Pasted image 20260421103253.png]]  
-![[Pasted image 20260421103308.png]]  
-![[Pasted image 20260421103316.png]]  
-![[Pasted image 20260421103322.png]]  
-![[Pasted image 20260421103339.png]]  
-  
-</div>
+
 ### 6. Cicli di Ligazione
 
 Vengono effettuati molteplici cicli di **ligazione → rilevamento → taglio**. Il numero di cicli determina la lunghezza della read.
@@ -364,3 +356,6 @@ Poiché le reading frame dei probe sono in **overlap**, ogni singola base nel DN
 |**SNP**|Due colori adiacenti in overlap cambiano entrambi|Cambiamento reale nella sequenza → **SNP riconosciuto**|
 |**Inserzione/Delezione**|Pattern di shift nei colori a valle|Rilevabile dall'analisi del pattern|
 ![[Pasted image 20260421103136.png]]
+
+### SOLiD csFASTA
+![[Pasted image 20260421103808.png]]
