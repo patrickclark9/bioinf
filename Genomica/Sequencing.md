@@ -64,7 +64,7 @@ I vantaggi principali presentati da NGS sono:
 2. L'utilizzo di micro o nano reattori normalmente immobilizzati su un supporto solido permette un elevato livello di parallelizzazione
 3. La determinazione della sequenza non richiede il passaggio limitante della separazione elettroforetica: i nucleotidi incorporati vengono simultaneamente identificati durante la sintesi
 
-
+![[Pasted image 20260421163520.png]]
 ### Preparazione delle librerie
 
 Prima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
@@ -511,6 +511,9 @@ L'output è un grafico a picchi chiamato **squiggle**.
 
 > La traduzione degli squiggle in base-call è computazionalmente molto dispendiosa e viene effettuata da modelli di deep learning (basecalling).
 
+![[Pasted image 20260421163353.png]]
+
+
 ---
 
 ### Preparazione della Libreria (DNA)
@@ -538,3 +541,12 @@ ONT permette il **sequenziamento diretto dell'RNA** senza conversione in cDNA:
 
 Il risultato è il sequenziamento diretto della molecola di RNA originale, preservando le modificazioni dell'RNA che andrebbero perse con la conversione in cDNA.
 ![[Pasted image 20260421162518.png]]
+
+---
+
+### Errori
+L'ONT commette un sostanziale numero di errori, di cui la maggior parte viene risolta con un po' di profondità. Più sequenze possono essere usate per formare una consensus, così da minimizzare l'errore
+Le delezioni sono più comuni delle inserzioni.
+È presente un errore sistematica che verrà risolto con un modello migliore
+
+![[Pasted image 20260421163333.png]]
