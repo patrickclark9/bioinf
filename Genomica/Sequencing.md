@@ -321,7 +321,7 @@ Vengono completati **5 round di reset del primer** per ogni tag di sequenza.
 
 ---
 
-## Doppia Interrogazione di ogni Base
+### Doppia Interrogazione di ogni Base
 
 Attraverso il reset del primer, ogni base viene interrogata in **due reazioni di ligazione indipendenti** da due primer differenti. Questo è il vantaggio chiave del sistema SOLiD: permette la **correzione degli errori** poiché ogni base viene confermata due volte.
 
