@@ -476,6 +476,10 @@ Quando la polimerasi inizia a copiare, poichè è un ciclo, essa gira attorno al
 
 ---
 ## Oxford Nanopore
-La tecnologia Nanopore abbandona completamente l'SBS. La base di questa tecnologia è una membrana polimerica elettricamente resistente. All'interno nella membrana ci sono migliaia di canali proteici microscopici chiamati nanopori. Un enzima specializzato elicasi  viene legato all'apertura del nanoporo. L'elicasi si lega al dsDNA, lo svolge in ssDNA, e lo incanala in un poro. L'elicasi controlla la velocità con cui il filamento attraversa il poro (400 basi al secondo).
-Il sistema si trova in una soluzione salina conduttiva. La macchina applica un voltaggio continuo attraverso la membrana. Poichè la membrana è resistente, l'unica via per gli ioni per attraversarla è direttamente attraverso il poro, creando un flusso ionico continuo.
-Il DNA ostruisce il passaggio degli ioni, e poichè A T C G hanno ingombro sterico differente, la macchina rileva queste alterazioni della cor
+La tecnologia Nanopore abbandona completamente l'SBS. La base di questa tecnologia è una membrana polimerica elettricamente resistente. All'interno nella membrana ci sono migliaia di canali proteici microscopici chiamati nanopori. Un enzima specializzato Motor Protein (elicasi)  viene legato all'apertura del nanoporo. L'elicasi si lega al dsDNA, lo svolge in ssDNA, e lo incanala in un poro. L'elicasi controlla la velocità con cui il filamento attraversa il poro (400 basi al secondo). Una seconda proteina crea il poro nella membrana e contiene una molecola adattatore
+Il sistema si trova in una soluzione salina conduttiva. La macchina applica un voltaggio continuo attraverso la membrana. Poichè la membrana è resistente, l'unica via per gli ioni per attraversarla è direttamente attraverso il poro, creando un flusso ionico continuo. L'adattatore mantiene le basi ferme per abbastanza tempo per farle riconoscere elettronicamente
+Il DNA ostruisce il passaggio degli ioni, e poichè A T C G hanno ingombro sterico differente, la macchina rileva queste alterazioni della corrente. L'ouput è una grafico a picchi chiamato squiggle.
+Ad ogni dato istante, ci sono attorno 5 nucleotidi nel punto più stretto del poro contemporaneamente. ATGCA scende di uno spot e diventa TGCAT ad esempio. Tradurre questi squiggle in base-call è molto dispensioso computazionalmente. 
+
+### Library Prep
+Si parte da HMW DNA (High Molecular Weight). Opzionalmente lo si frammenta, non necessario, vanno bene target anche di 10Kbp o 20Kbp.
