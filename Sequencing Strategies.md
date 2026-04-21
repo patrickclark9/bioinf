@@ -62,3 +62,12 @@ Le STS si possono ottenere in diversi modi, i più comuni sono EST SSLP e random
 - EST Expressed sequence Tags -> corte sequenze ottenuta da analisi di cloni cDNA
 - SSLP possono essere usati come STS in mapping fisico. SSLP polimorfici sono già stati mappati dalla linkage analisi e sono particolarme utili poichè danno una connessione diretta tra mappa genetica e mappa fisica
 - Random genomic sequences -> Ottenuta sequenziando pezzi di DNA genoma clonato o scaricando sequenze depositate sui database
+
+
+### Clone by Clone
+Una volta definito il MTP, i cloni individuali come il BACK vengono selezionati, e un grande quantitativo di DNA BAC viene purificato. Il DNA purificato viene frammetanto da metodi di shearing fisico. I frammenti random di 2kb-5kb sono subclonati.
+Le read poi vengono generate da una estremità o entrambe le estemità di subcloni selezionati a caso (migliaia di read per ogni BAC di 100-150kb).
+Le read casuali poi vengono assemblate sulla base di overlap, portando ad un assmeblaggio preliminare (prefinished sequence).
+Questa sequenza è imperfetta, viene associata sia a gap e sia a zone di qualità molto bassa. Ordine ed orientamento dei contig spesso non è noto.
+Seguono metodi di sequence finishing, che coinvolgono la generazione di dati addizionali di sequenze per chiudere gap e migliorare la qualità di alcune zone.
+Dopo questo step si ottiene la seuqnza finita e accurata di tutto il clone intero.
