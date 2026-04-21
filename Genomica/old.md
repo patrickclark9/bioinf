@@ -348,3 +348,16 @@ Nelle piante sono molto più comuni i DNA trasposoni attivi (Ac/D e Spm, entramb
 L'elemento P è specifico per D.melanogaster ed è stato scoperto incrociando femmine provenienti da un laboratorio e maschi wild-type. La progenie era sterile, il motivo è che le femmine non possedevano elemento P fiancheggiate da inverted terminal repeats. L'incrocio causa l'attivazione degli elementi ereditati dal maschio wild type nelle uova, risultando in trasposizione in nuove posizioni e causando interferenze con alcuni geni.
 rima del sequenziamento, il DNA genomico deve essere preparato in una **libreria**:
 
+### Multiplexing
+Il sequenziatore Illumina può generare anche miliardi di read in una singola run. Se andiamo a sequenziare un genoma batterico, non servono tutte queste read per campione.
+Il multiplexing permette di sequenziare molti diversi campioni simultaneamente in una singola run.
+1. Indexing
+La chiave del multiplexing avviene nella fase di preparazione della libreria. Ad ogni campione viene legato un adattatore contenente un indice diverso.
+2. pooling
+Ogni campione è quindi taggato con un barcode che indica da quale campione proviene, consentendo il pooling di tutti i campioni in un singolo pool multiplexed. Questo pool viene caricato sulla flow cell.
+3. index read
+Durante il sequenziamento la macchina effettua una fase aggiuntiva chiamata index read. Durante la index read, sequenzia le 6-10 basi di indice e registra il barcode di ogni cluster sulla flowcell.
+4. demultiplexing
+Dopo la fine del sequenziamento, va effettuato il demultiplexing.
+Il processo di demultiplexing consiste nel leggere le sequenze di indice, assegnando un cluster ad ogni campione, in base alla sequenza di indice contenuta nel sample sheet.
+Per evitare index hopping, ovvero quando un indice viene assegnato al frammento errato durante la preparazione della libreria, si utilizza la Combinatorial Dual Indexing CDI o Unique Dual Indexing. Invece di un solo codice barcode, viene inserito un indice al 5' (i5) ed uno al 3' (i7). Il software deve leggere entrambi i barcode per assegnare una read ad un sample, eliminando la cross-contaminazione
