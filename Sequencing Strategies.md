@@ -44,4 +44,21 @@ La costruzione della mappa si basa sull'analisi linkage, motivo per cui i DNA ma
 
 ### Mappe fisiche
 Una mappa genetica è raramente sufficiente per il sequenziamento diretto:
-- La risoluzione dipende dal numero di Crossing-
+- La risoluzione dipende dal numero di Crossing-Over -> non è un problema per microorganismi, lo è per eucarioti in cui la riproduzione è lenta e non è possibile ottenere un gran numero di progenie, quindi possono essere studiate poche meiosi, e il potere della linkage analisi è abbastanza ristretto. Geni che si trovano a distanza elevata (decine di migliaiai di kb) possono apparire nella stessa posizione nella mappa genetica 
+- Le mappe genetiche hanno accuratezza limitata -> I crossover avvengono più frequentemente in determinate zone invece di altre
+Tecniche di mapping fisiche sono quindi necessarie. Una mappa fisica è una rappresentazione grafica dellle locazioni fisiche di marker e landmark (geni, DNA marker, varianti ecc...) all'iterno di un cromosoma o genoma
+Una sequnza completa di un genoma è una tipologia di mappa fisica. Le mappe fisiche sono utilizzate per generare complete sequenze di un genoma
+
+Tra le molte tecniche, le più importanti sono:
+- Restriction mapping -> localizza posizioni relative su una molecola di DNA di sequenze di riconoscimento per endonucleasi di restrizione
+- Fluorescent in situ hybridization -> locazione dei marker sono mappate per ibridizzazione di un probe contenente il marker con il cromosoma intatto
+- Sequence tagged site STS mapping -> In cui le posizioni di corte sequenze sono mappate da PCR e/o analisi di ibridizzazione di frammenti del genoma
+
+#### STS
+È una delle più potenti tecniche di mapping fisico, e quella responsabile per la generazione delle mappe dettagliate di genomi grandi.
+Una sequence tagged site o STS è una corta sequenza, tra 100 e 500 bp, facilmente riconoscibile e che appare una sola volta nel cromosoma o nel genoma studiato.
+La PCR si usa per determinare quale framment contiene STSs.
+Le STS si possono ottenere in diversi modi, i più comuni sono EST SSLP e random genomic sequences.
+- EST Expressed sequence Tags -> corte sequenze ottenuta da analisi di cloni cDNA
+- SSLP possono essere usati come STS in mapping fisico. SSLP polimorfici sono già stati mappati dalla linkage analisi e sono particolarme utili poichè danno una connessione diretta tra mappa genetica e mappa fisica
+- Random genomic sequences -> Ottenuta sequenziando pezzi di DNA genoma clonato o scaricando sequenze depositate sui database
