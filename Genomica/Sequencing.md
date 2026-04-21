@@ -191,8 +191,16 @@ Il file `.sff` può essere convertito in formato **FASTA**:
 ## Illumina
 
 ![[Pasted image 20260421092420.png]]
+
+| Macchinario        | Output massimo | Read length | Read totali |
+| ------------------ | -------------- | ----------- | ----------- |
+| **NovaSeq X Plus** | 16 Tb          | 150×2 bp    | 52 B        |
+| **NovaSeq 6000**   | 6.000 Gb       | 250×2 bp    | 20 B        |
+| **HiSeq 4000**     | 1.500 Gb       | 150×2 bp    | 5 B         |
+| **NextSeq**        | 120 Gb         | 150×2 bp    | 400 M       |
+| **MiSeq**          | 15 Gb          | 300×2 bp    | 25 M        |
 Illumina presenta diversi macchinari con lunghezza delle singole read e lunghezza totale del sequenziamento vastamente differenti.
-Si passa dalle read 150x2, per un totale di 52 miliardi 
+Si passa dalle read 150x2, per un totale di 52 miliardi di reads che portano ad un totale di 16Terabasi sequenziate del NovaSeq X Plus fino a 300x2, per 25M read per un totale di 15 Gigabasi sequenziate del MiSeq.
 ### FlowCell
 
 La flowcell di Illumina possiede **8 canali** e presenta sulla sua superficie un gran numero di **oligonucleotidi complementari agli adattatori**. È un ambiente contenuto, quindi non è necessario operare in camere pulite. Il sequenziamento avviene interamente all'interno della flowcell.
@@ -270,3 +278,6 @@ In entrambi i casi, il software deve leggere **entrambi i barcode** per assegnar
 
 
 ## SOLiD Sequencing
+### Sequencing by Ligation
+Il sistema solid consiste in:
+1. Sample preparation
