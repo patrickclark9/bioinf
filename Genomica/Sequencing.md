@@ -550,3 +550,8 @@ Le delezioni sono più comuni delle inserzioni.
 È presente un errore sistematica che verrà risolto con un modello migliore
 
 ![[Pasted image 20260421163333.png]]
+
+# Quality Check
+
+![[Pasted image 20260421164340.png]]![[Pasted image 20260421164348.png]]![[Pasted image 20260421164356.png]]![[Pasted image 20260421164403.png]
+![[Pasted image 20260421164414.png]]![[Pasted image 20260421164426.png]]
