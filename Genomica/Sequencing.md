@@ -281,13 +281,14 @@ In entrambi i casi, il software deve leggere **entrambi i barcode** per assegnar
 
 A differenza di Illumina e del pirosequenziamento, SOLiD non si basa sulla sintesi da parte di una polimerasi, ma sulla **ligazione** di probe fluorescenti.
 
+
 ---
 
 ## Flusso del Sequenziamento
 
 ### 1. Sample Preparation
 
-Si forma la libreria di frammenti e si legano gli adattatori **P1** e **P2**.
+Si forma la libreria di frammenti e si legano gli adattatori **P1** e **P2**. Il DNA viene frammentato per sonicazione o per metodo enzimatico. Gli inserti sono tipicamente tra 100 e 200bp
 
 ### 2. emPCR
 
@@ -299,7 +300,7 @@ Si forma la libreria di frammenti e si legano gli adattatori **P1** e **P2**.
 
 ### 3. Deposizione
 
-Post-arricchimento, i bead vengono depositati su uno **slide di vetro**.
+Post-arricchimento, i bead vengono depositati su uno **slide di vetro**, dove ogni bead occupa una posizione fissa.
 
 ### 4. Ibridizzazione del Primer
 
@@ -307,7 +308,9 @@ I primer si ibridizzano alla sequenza dell'adattatore P1 all'interno del templat
 
 ### 5. Ligazione delle Probe Duo-Base
 
-Un insieme di **4 probe duo-base marcati a fluorescenza** competono per la ligazione al primer. La specificità del probe viene ottenuta interrogando la **prima e la seconda base** in ogni reazione di ligazione.
+Un insieme di **4 probe duo-base marcati a fluorescenza** competono per la ligazione al primer. La specificità del probe viene ottenuta interrogando la **prima e la seconda base** in ogni reazione di ligazione. Dei probe solo le prime due basi sono specifiche, le altre sono degenerate (posizioni universali)
+Un probe è formato da un sito di ligazione al 3', un sito di cleavage tra basi degenerate e basi universali.
+Dopo la ligazione viene rilevata
 
 ### 6. Cicli di Ligazione
 
@@ -329,4 +332,7 @@ Attraverso il reset del primer, ogni base viene interrogata in **due reazioni di
 
 
 ### Two Base encoding
-La macchina come output ha una sequenza di colori, BGRY, dove ogni colore rappresenta una specifica coppia di nucl
+La macchina come output ha una sequenza di colori, BGRY, dove ogni colore rappresenta una specifica coppia di nucleotidi. Poichè le reading frame sono in overlap, ogni singola base nel DNA è stata interrogata da due differenti probe.
+Se la cattura del colore è un errore della macchina, la traduzione in DNA non sarà corretta, e quindi viene scartata.
+Uno SNP invece viene riconosciuto perchè cambia il colore di due probe adiacenti in overlap.
+Si possono osservare delezione ed inserzioni anche
