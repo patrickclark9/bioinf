@@ -418,18 +418,57 @@ Il sistema Helicos è un esempio di **Sequencing by Synthesis** di terza generaz
 
 ![[Pasted image 20260421112106.png]]
 
-# 3rd Gen Sequencing
-## PacBio
-La tecnologia PacBio è chiamata SMRT (Single Molecule Real Time) sequencing.
-A differenza delle seconde generazioni, non richiede PCR, non richiede cicli di pulizia per rimuovere agenti chimici e può leggere filamenti continui molto lunghi, anche fino a 20Kbp.
 
-### ZMW
-La tecnologia fondamentale è la Zero-Mode Waveguide. Un ZMW è un microscopico pozzetto in un folietto di metallo supportato da un substrato trasparente (tipicamente in vetro) che contiente migliaia di questi ZMW. Il pozzetto è talmente stretto (pochi nanometri) che quando viene illuminato attraverso il substrato trasparente da luce laser, la lunghezza d'onda della luce è troppo grande per passare attraverso l'apertura del pozzetto. La macchina ancora una singola DNA polimerasi nel fondo del pozzetto, in modo che venga letto solo quello che accade all'interno dell'enzima.
-In PacBio la tinta fluorescente viene applicata alla catena fosfato del nucleotide. 
-Ancorata la polimerasi, questi nucleotidi phospholinked vengono introdotti nella camera del micropozzeto, ognuno con un fluoroforo diverso in modo da distinguere ogni nucleotide.
-1. La polimerasi raccoglie un nucleotide fosfolinked e lo incorpora nella catena
-2. Viene rilevato un impulso di luce, distinguendo e identificando il colore, che viene convertito in una chiamata ad una base utilizzando appositi algoritmi
-3. La polimerasi inserisce la base e rimuove il fosfato marcato a fluorescenza
-4. Il fosfato marcato esce dalla zona illimunata 
-Poichè il fosfato viene rimosso naturalmente, l'enzima non si ferma mai, a differenza delle altre tecniche dove c'è un tempo di attesa per la pulizia.
-Si osserva una sintesi processiva avvenire in real time in migliaia di micropozzetti simultaneamente
+# Sequenziamento di Terza Generazione
+
+---
+
+## PacBio — SMRT Sequencing
+
+La tecnologia PacBio è chiamata **SMRT** (Single Molecule Real Time) sequencing. A differenza delle tecnologie di seconda generazione:
+
+- Non richiede **PCR**
+- Non richiede **cicli di pulizia** per rimuovere agenti chimici
+- Può leggere filamenti continui molto lunghi, fino a **20 kbp**
+
+---
+
+### Zero-Mode Waveguide (ZMW)
+
+La tecnologia fondamentale alla base di PacBio è la **Zero-Mode Waveguide (ZMW)**.
+
+Un ZMW è un microscopico pozzetto ricavato in un foglietto di metallo supportato da un substrato trasparente (tipicamente vetro). Il substrato contiene migliaia di questi ZMW.
+
+Il pozzetto è talmente stretto (pochi nanometri) che quando viene illuminato da laser attraverso il substrato trasparente, la **lunghezza d'onda della luce è troppo grande** per passare attraverso l'apertura: la luce non si propaga, ma decade esponenzialmente, illuminando **solo il fondo del pozzetto**.
+
+> Questo confina il volume di osservazione a pochi zeptolitri, permettendo di rilevare il segnale fluorescente di un singolo nucleotide incorporato senza rumore di fondo dai nucleotidi liberi in soluzione.
+
+Una singola **DNA polimerasi** viene ancorata nel fondo del pozzetto, in modo che venga rilevato solo ciò che accade all'interno dell'enzima.
+
+---
+
+### Nucleotidi Phospholinked
+
+In PacBio il fluoroforo **non viene applicato alla base** del nucleotide (come in Illumina), ma alla **catena fosfato**. I nucleotidi così modificati sono detti **phospholinked**.
+
+Ogni nucleotide (A, T, G, C) porta un fluoroforo diverso, permettendo di distinguerli durante il sequenziamento.
+
+---
+
+### Protocollo di Sequenziamento
+
+I nucleotidi phospholinked vengono introdotti nella camera del micropozzetto.
+
+1. La polimerasi raccoglie un nucleotide phospholinked e lo incorpora nella catena
+2. Viene rilevato un **impulso di luce**: il colore viene rilevato, identificato e convertito in una chiamata alla base tramite appositi algoritmi
+3. La polimerasi inserisce la base e **rimuove il fosfato marcato**
+4. Il fosfato fluorescente esce dalla zona illuminata, eliminando il segnale
+
+Poiché il fosfato marcato viene rimosso **naturalmente dalla reazione di polimerizzazione**, l'enzima non si ferma mai. Non sono necessari cicli di blocco e pulizia come nelle tecnologie di seconda generazione.
+
+Il risultato è una **sintesi processiva osservata in real time** in migliaia di micropozzetti simultaneamente.
+
+---
+### Library Preparation
+Le long read storicamente hanno probelmi con elevate frequenze di errore
+

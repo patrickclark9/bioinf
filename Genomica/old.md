@@ -383,3 +383,20 @@ Produce fino a 1 miliardox30-35 bp read.
 Il processo si chiama tSMS (true single molecule sequencing).
 I campioni di DNA vengono frammentati, denaturati in singolo filamento e viene aggiunta una coda di poli(A). Miliardi di queste singole molecole di DNA vengono catturate sulla superficie di una flowcell proprietaria, fungendo da template per il SBS processo.
 Vengono aggiunti nucleotidi marcati con fluorescenza uno per volta ed incorporati nella crescente catena di DNA complementare da un enzima polimerasi, in base alla sequenza del template. Nucleotidi inutilizzati vengono lavati via
+
+
+# 3rd Gen Sequencing
+## PacBio
+La tecnologia PacBio è chiamata SMRT (Single Molecule Real Time) sequencing.
+A differenza delle seconde generazioni, non richiede PCR, non richiede cicli di pulizia per rimuovere agenti chimici e può leggere filamenti continui molto lunghi, anche fino a 20Kbp.
+
+### ZMW
+La tecnologia fondamentale è la Zero-Mode Waveguide. Un ZMW è un microscopico pozzetto in un folietto di metallo supportato da un substrato trasparente (tipicamente in vetro) che contiente migliaia di questi ZMW. Il pozzetto è talmente stretto (pochi nanometri) che quando viene illuminato attraverso il substrato trasparente da luce laser, la lunghezza d'onda della luce è troppo grande per passare attraverso l'apertura del pozzetto. La macchina ancora una singola DNA polimerasi nel fondo del pozzetto, in modo che venga letto solo quello che accade all'interno dell'enzima.
+In PacBio la tinta fluorescente viene applicata alla catena fosfato del nucleotide. 
+Ancorata la polimerasi, questi nucleotidi phospholinked vengono introdotti nella camera del micropozzeto, ognuno con un fluoroforo diverso in modo da distinguere ogni nucleotide.
+1. La polimerasi raccoglie un nucleotide fosfolinked e lo incorpora nella catena
+2. Viene rilevato un impulso di luce, distinguendo e identificando il colore, che viene convertito in una chiamata ad una base utilizzando appositi algoritmi
+3. La polimerasi inserisce la base e rimuove il fosfato marcato a fluorescenza
+4. Il fosfato marcato esce dalla zona illimunata 
+Poichè il fosfato viene rimosso naturalmente, l'enzima non si ferma mai, a differenza delle altre tecniche dove c'è un tempo di attesa per la pulizia.
+Si osserva una sintesi processiva avvenire in real time in migliaia di micropozzetti simultaneamente
