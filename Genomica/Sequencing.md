@@ -362,21 +362,58 @@ Poiché le reading frame dei probe sono in **overlap**, ogni singola base nel DN
 
 ### SOLiD csFASTA
 ![[Pasted image 20260421103808.png]]
-## ION Torrent
-La tecnologia ion torrent utilizza una chimica completamente differente dagli altri.
-L'aggiunta di un nucleotide ad una catena di DNA la reazione porta al rilascio di PPi e ioni H+.
-Ion Torrent prende gli stessi bead dell'emPCR, ponendo ogni bead su un chip contenente milioni di pozzetti microscopici. Sotto ogni micropozzetto c'è un Ion-sensitive field effect transistor, sensore microscopico in grado di rilevare minime variazioni del pH.
-Il processo di sequenziamento utilizza un ciclo simile al 454.
-La macchina immette un singolo nucleotide sul chip.
-Se la polimerasi su un bead incorpora la T, verranno rilasciati un gran numero di ioni H+.
-Il sensore ISFET rileva questa piccola discesa del pH e lo converte in un picco di voltaggio.
-Viene rimosso il dNTP inserito e si inserisce un altro.
-Il picco sarà più elevato se due basi uguali sono incorporate.
-Il risultato non è un flowgram come 454 ma un ionogram, che mostra l'intensità del voltaggio.
- La più grande debolezza è l'impossibilità di distinguere una run di 6 identiche basi da una di 7, rendendo errore di inserzioni/delezioni la più grande debolezza
+# Ion Torrent
 
-## Helicos
-Il sistema Helicos rappresenta invece un altro esempio di seuqencing by synthesis.
-Produce fino a 1 miliardox30-35 bp read.
-Il processo si chiama tSMS (true single molecule sequencing).
-I campioni di DNA vengono frammentati, denaturati 
+![[Pasted image 20260421112004.png]]
+
+---
+
+## Ion Torrent
+
+La tecnologia Ion Torrent utilizza una chimica completamente differente dagli altri sistemi NGS. Invece di rilevare luce o fluorescenza, sfrutta il **rilascio di ioni H⁺** durante l'incorporazione di un nucleotide.
+
+> Durante l'aggiunta di un nucleotide ad una catena di DNA, la reazione porta al rilascio di **PPi** e **ioni H⁺**.
+
+### Setup
+
+Ion Torrent utilizza gli stessi bead dell'emPCR, ponendo ogni bead su un **chip** contenente milioni di pozzetti microscopici. Sotto ogni micropozzetto si trova un **ISFET** (Ion-Sensitive Field Effect Transistor), un sensore microscopico in grado di rilevare minime variazioni di pH.
+
+### Protocollo di Sequenziamento
+
+Il processo utilizza un ciclo simile al pirosequenziamento (454):
+
+1. La macchina immette un **singolo tipo di nucleotide** sul chip
+2. Se la polimerasi su un bead incorpora il nucleotide, vengono rilasciati **ioni H⁺** → piccola discesa del pH
+3. Il sensore ISFET rileva la variazione di pH e la converte in un **picco di voltaggio**
+4. Il dNTP viene rimosso e si introduce il nucleotide successivo
+5. Il ciclo si ripete per tutti e 4 i nucleotidi
+![[Pasted image 20260421112051.png]]
+Il risultato non è un flowgram come nel 454, ma un **ionogram**, che mostra l'intensità del voltaggio in funzione del nucleotide passato. Il picco sarà proporzionale al numero di basi uguali incorporate nello stesso ciclo.
+![[Pasted image 20260421112029.png]]
+### Limitazione
+
+> La più grande debolezza di Ion Torrent è l'**impossibilità di distinguere run lunghe di basi identiche**: ad esempio, una run di 6 basi identiche non è distinguibile da una di 7. Gli errori di **inserzione/delezione** rappresentano quindi la principale fonte di errore della piattaforma.
+
+---
+# Helicos
+## Helicos (tSMS)
+
+Il sistema Helicos è un esempio di **Sequencing by Synthesis** di terza generazione. Il processo è chiamato **tSMS** (True Single Molecule Sequencing) — non richiede amplificazione clonale, sequenziando direttamente singole molecole di DNA.
+
+**Output**: fino a **1 miliardo** di read da **30–35 bp**.
+
+### Preparazione del Campione
+
+1. Il DNA viene **frammentato** e **denaturato** in singolo filamento
+2. Viene aggiunta una **coda di poli(A)** alle molecole
+3. Miliardi di singole molecole di ssDNA vengono catturate sulla superficie di una **flowcell proprietaria**, fungendo da template per il sequenziamento
+
+### Protocollo di Sequenziamento
+
+1. Vengono aggiunti **nucleotidi marcati a fluorescenza** uno per volta
+2. Una **polimerasi** incorpora il nucleotide complementare al template
+3. I nucleotidi non incorporati vengono **lavati via**
+4. Viene rilevato il segnale fluorescente
+5. Il ciclo si ripete per ogni posizione della sequenza
+
+![[Pasted image 20260421112106.png]]

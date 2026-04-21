@@ -361,3 +361,25 @@ Durante il sequenziamento la macchina effettua una fase aggiuntiva chiamata inde
 Dopo la fine del sequenziamento, va effettuato il demultiplexing.
 Il processo di demultiplexing consiste nel leggere le sequenze di indice, assegnando un cluster ad ogni campione, in base alla sequenza di indice contenuta nel sample sheet.
 Per evitare index hopping, ovvero quando un indice viene assegnato al frammento errato durante la preparazione della libreria, si utilizza la Combinatorial Dual Indexing CDI o Unique Dual Indexing. Invece di un solo codice barcode, viene inserito un indice al 5' (i5) ed uno al 3' (i7). Il software deve leggere entrambi i barcode per assegnare una read ad un sample, eliminando la cross-contaminazione
+
+
+
+## ION Torrent
+La tecnologia ion torrent utilizza una chimica completamente differente dagli altri.
+L'aggiunta di un nucleotide ad una catena di DNA la reazione porta al rilascio di PPi e ioni H+.
+Ion Torrent prende gli stessi bead dell'emPCR, ponendo ogni bead su un chip contenente milioni di pozzetti microscopici. Sotto ogni micropozzetto c'è un Ion-sensitive field effect transistor, sensore microscopico in grado di rilevare minime variazioni del pH.
+Il processo di sequenziamento utilizza un ciclo simile al 454.
+La macchina immette un singolo nucleotide sul chip.
+Se la polimerasi su un bead incorpora la T, verranno rilasciati un gran numero di ioni H+.
+Il sensore ISFET rileva questa piccola discesa del pH e lo converte in un picco di voltaggio.
+Viene rimosso il dNTP inserito e si inserisce un altro.
+Il picco sarà più elevato se due basi uguali sono incorporate.
+Il risultato non è un flowgram come 454 ma un ionogram, che mostra l'intensità del voltaggio.
+ La più grande debolezza è l'impossibilità di distinguere una run di 6 identiche basi da una di 7, rendendo errore di inserzioni/delezioni la più grande debolezza
+
+## Helicos
+Il sistema Helicos rappresenta invece un altro esempio di seuqencing by synthesis.
+Produce fino a 1 miliardox30-35 bp read.
+Il processo si chiama tSMS (true single molecule sequencing).
+I campioni di DNA vengono frammentati, denaturati in singolo filamento e viene aggiunta una coda di poli(A). Miliardi di queste singole molecole di DNA vengono catturate sulla superficie di una flowcell proprietaria, fungendo da template per il SBS processo.
+Vengono aggiunti nucleotidi marcati con fluorescenza uno per volta ed incorporati nella crescente catena di DNA complementare da un enzima polimerasi, in base alla sequenza del template. Nucleotidi inutilizzati vengono lavati via
