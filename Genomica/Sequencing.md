@@ -277,21 +277,52 @@ In entrambi i casi, il software deve leggere **entrambi i barcode** per assegnar
 
 
 
-## SOLiD Sequencing
-### Sequencing by Ligation
-Il sistema solid consiste in:
-1. Sample preparation: Si forma la libreria di frammenti, si legano gli adattatori P1 e P2.
-2. emPCR
-	1. Template si lega al adattatore P1
-	2. Polimerasi estende dal adattatore P1
-	3. Sequenza complementare si estende dal bead
-> La seequenza adattatore di P1 è universale quindi la sequenza di partenza di ogni frammento è uguale ed è nota e identica per ogni frammento
-3. Post arricchimento, si depositano i bead su uno slide di vetro
-4. I primer si ibridizzano alla sequenza P1 di adattatore all'interno del template library.
-5. Un insieme di 4 probe duo-base marcati fluorescenza competono per ligazione al primer
-6. La specificità del probe duo-base viene ottenuta interrogando ogni prima e seconda base in ogni reazione di ligazione
-7. Molteplici cicli di ligazione, rilevamento e taglio vengono effettuati. Il numero di cicli determinano la lunghezza della read
-8. Dopo una serie di cicli di ligazione, il prodotto esteso viene rimosso ed il template viene resettato con un primer complementare alla posizione n-1 per un secondo round di ciclo di ligazione
-9. 5 round di reset di primer vengono completati per ogni tag di sequenza.
-10. Attraverso il reset del primer, ogni base è interrogata in due indipendenti reazioni di ligazione da due differenti primer
-11. Per esempio, la read in posizione 5 viene interrogata dal primer numbero 2 in ciclo di licazione 2 e da primer numero 3 in ciclo di ligazione 1
+## SOLiD Sequencing (Sequencing by Ligation)
+
+A differenza di Illumina e del pirosequenziamento, SOLiD non si basa sulla sintesi da parte di una polimerasi, ma sulla **ligazione** di probe fluorescenti.
+
+---
+
+## Flusso del Sequenziamento
+
+### 1. Sample Preparation
+
+Si forma la libreria di frammenti e si legano gli adattatori **P1** e **P2**.
+
+### 2. emPCR
+
+1. Il template si lega all'adattatore P1
+2. La polimerasi estende dal adattatore P1
+3. La sequenza complementare si estende dal bead
+
+> La sequenza adattatore P1 è **universale**: la sequenza di partenza di ogni frammento è quindi uguale, nota e identica per ogni frammento.
+
+### 3. Deposizione
+
+Post-arricchimento, i bead vengono depositati su uno **slide di vetro**.
+
+### 4. Ibridizzazione del Primer
+
+I primer si ibridizzano alla sequenza dell'adattatore P1 all'interno del template della libreria.
+
+### 5. Ligazione delle Probe Duo-Base
+
+Un insieme di **4 probe duo-base marcati a fluorescenza** competono per la ligazione al primer. La specificità del probe viene ottenuta interrogando la **prima e la seconda base** in ogni reazione di ligazione.
+
+### 6. Cicli di Ligazione
+
+Vengono effettuati molteplici cicli di **ligazione → rilevamento → taglio**. Il numero di cicli determina la lunghezza della read.
+
+### 7. Reset del Primer
+
+Dopo una serie di cicli di ligazione, il prodotto esteso viene rimosso e il template viene **resettato** con un primer complementare alla posizione **n-1**, per un secondo round di cicli di ligazione.
+
+Vengono completati **5 round di reset del primer** per ogni tag di sequenza.
+
+---
+
+## Doppia Interrogazione di ogni Base
+
+Attraverso il reset del primer, ogni base viene interrogata in **due reazioni di ligazione indipendenti** da due primer differenti. Questo è il vantaggio chiave del sistema SOLiD: permette la **correzione degli errori** poiché ogni base viene confermata due volte.
+
+> **Esempio**: la base in posizione 5 viene interrogata dal primer n°2 nel ciclo di ligazione 2, e dal primer n°3 nel ciclo di ligazione 1.
