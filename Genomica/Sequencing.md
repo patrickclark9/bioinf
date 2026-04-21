@@ -362,3 +362,21 @@ Poiché le reading frame dei probe sono in **overlap**, ogni singola base nel DN
 
 ### SOLiD csFASTA
 ![[Pasted image 20260421103808.png]]
+## ION Torrent
+La tecnologia ion torrent utilizza una chimica completamente differente dagli altri.
+L'aggiunta di un nucleotide ad una catena di DNA la reazione porta al rilascio di PPi e ioni H+.
+Ion Torrent prende gli stessi bead dell'emPCR, ponendo ogni bead su un chip contenente milioni di pozzetti microscopici. Sotto ogni micropozzetto c'è un Ion-sensitive field effect transistor, sensore microscopico in grado di rilevare minime variazioni del pH.
+Il processo di sequenziamento utilizza un ciclo simile al 454.
+La macchina immette un singolo nucleotide sul chip.
+Se la polimerasi su un bead incorpora la T, verranno rilasciati un gran numero di ioni H+.
+Il sensore ISFET rileva questa piccola discesa del pH e lo converte in un picco di voltaggio.
+Viene rimosso il dNTP inserito e si inserisce un altro.
+Il picco sarà più elevato se due basi uguali sono incorporate.
+Il risultato non è un flowgram come 454 ma un ionogram, che mostra l'intensità del voltaggio.
+ La più grande debolezza è l'impossibilità di distinguere una run di 6 identiche basi da una di 7, rendendo errore di inserzioni/delezioni la più grande debolezza
+
+## Helicos
+Il sistema Helicos rappresenta invece un altro esempio di seuqencing by synthesis.
+Produce fino a 1 miliardox30-35 bp read.
+Il processo si chiama tSMS (true single molecule sequencing).
+I campioni di DNA vengono frammentati, denaturati 
