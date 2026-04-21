@@ -28,3 +28,8 @@ Una mappa fornisce una guida per esperimenti di sequenziamento mostrando le posi
 Per convenzione si dividono i metodi di mapping del genoma in 2 categorie:
 - Genetic Mapping -> Si basa sull'utilizzo di tecniche genetiche per costruire mappe che mostrano la posizione dei geni ed altre sequenze sul genoma. Le tecniche genetiche includono cross-breeding, o l'esaminazione delle genealogie (pedigree) per gli umani.
 - Physical Mapping -> Tecniche di biologia molecolare per esaminare le molecole di DNA direttamente per costruire mappe mostrando le posizioni di sequenze, inclusi geni
+###  Genetic mapping
+Una mappa genetica (linkage map) mostra la locazione relativa dei marker genetici (riflettendo siti di varianti genomiche) su un cromosoma.
+Si basa sul linkage genetico -> Più vicini due marker sono su un cromosoma, più tenderanno a segregare insieme.
+Studiando i pattern di ereditarietà possono essere stabiliti l'ordine relativo e la locazione dei marker genetici lungo un cromosoma.
+I geni sono marker genetici, ma non sono ideali per il mapping. In genomi grandi, una mappa basata solo sui geni non sarà molto dettagliata. Inoltre nei genomi eucari
