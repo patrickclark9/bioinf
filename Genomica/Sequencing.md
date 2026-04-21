@@ -326,3 +326,7 @@ Vengono completati **5 round di reset del primer** per ogni tag di sequenza.
 Attraverso il reset del primer, ogni base viene interrogata in **due reazioni di ligazione indipendenti** da due primer differenti. Questo è il vantaggio chiave del sistema SOLiD: permette la **correzione degli errori** poiché ogni base viene confermata due volte.
 
 > **Esempio**: la base in posizione 5 viene interrogata dal primer n°2 nel ciclo di ligazione 2, e dal primer n°3 nel ciclo di ligazione 1.
+
+
+### Two Base encoding
+La macchina come output ha una sequenza di colori, BGRY, dove ogni colore rappresenta una specifica coppia di nucl
