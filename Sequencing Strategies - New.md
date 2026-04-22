@@ -181,3 +181,15 @@ Le read che costituiscono un contig vengono allineate e si prende il **voto cons
 ### Svantaggi di OLC
 
 La costruzione del grafo di overlap è lenta. I dataset di sequenziamento moderni contengono fino a miliardi di read e centinaia di miliardi di nucleotidi totali, rendendo OLC impraticabile su larga scala senza ottimizzazioni significative.
+
+
+---
+
+## DeBrujin Graph
+
+Un'alternativa all'OLC sono i grafi di DeBrujin (DBG).
+Si inizia con una collezione di read, sottostringhe del genoma di riferimento
+
+ogni K-mer viene diviso in left-mer ed un right-mer di dimensioni k-1.
+AAC -> L-mer -> AA 
+AAC -> R-mer 
