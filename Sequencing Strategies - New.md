@@ -191,5 +191,12 @@ Un'alternativa all'OLC sono i grafi di DeBrujin (DBG).
 Si inizia con una collezione di read, sottostringhe del genoma di riferimento
 
 ogni K-mer viene diviso in left-mer ed un right-mer di dimensioni k-1.
-AAC -> L-mer -> AA 
-AAC -> R-mer 
+3-mer -> AAC -> L-2-mer -> AA  
+3-mer -> AAC -> R-2-mer -> AC 
+
+Un suffisso sono tutti i nucleotidi eccetto il primo. Prefisso tutti i nucleotidi eccetto l'ultimo.
+
+Ogni kmer in input viene diviso in due sottostringhe di overlap, L-k-1-mer e R-k-1-mer.
+Ponendo i 2-mer come nodi in un nuovo grafo, si immette un arco da ogni k-1-mer sinistro al corrispondente k-1-mer destro.
+
+Nei grafi di De Brujin, le stringhe devono essere di lunghezza uguale, cosi che quando usate nell'assemblaggio  lo step iniziale è quello di rompere le read in segmenti o k-mer di 20-30
