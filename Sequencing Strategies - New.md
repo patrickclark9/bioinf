@@ -216,4 +216,13 @@ Il prossimo step è identificare contig adiacenti uno all'altro nel genome e sta
 
 - Pair-end possono essere utili. Se due membri di una coppia di read cadono in contig differenti, allora chiaramente questi contig devono essere adiacenti uno all'altro nella sequenza del gneoma, e il gap tra loro potrebbe essere riempito da ulteriore sequenziamento del frammento da cui le read in pair end sono state ottenute
 - Se è disponibile una mappa genetica o fisica, allora questa può essere usata per ancorare i contig sulla sequenza del genoma e per identificare i contig adiacenti. Mappe ottiche sono ora frequentemente utilizzate per questo motivo, e percheè sono relativamente facili da generare ed hanno un elevata densità di marker
-- Se i contig sono stati assemblati da short read, allora SMRT o Nanopore possono essere utilizzati per generare long-read 
+- Se i contig sono stati assemblati da short read, allora SMRT o Nanopore sequencing possono essere utilizzati per generare long-read che mostreranno quali contig short read sono adiacenti
+
+
+## Mapping Ottico -> Bionano
+
+Si parte con DNA labelling
+1. HMW DNA viene nickato con una endonucleasi scelta che introduce single strand nick nel genoma
+2. Taq polimerasi riconosce questi siti e rimpiazza diversi nucleotidi con nucleotidi marcati a fluorescenza, aggiunti alla soluzione
+3. Le due estremità del DNA sono ligate utilizzando la ligasi
+4. Il backbone del DNA viene
