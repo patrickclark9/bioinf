@@ -28,3 +28,10 @@ MissingSpecificità = tp/tp+fp -> nr esoni Sbagliati/ nr esoni predetti
 
 Coefficienti di coorelazione
 Correlazione approssimata
+
+### Formati GFF e GTF
+
+Il gene transfer format e il general feature format sono due comuni formati di file utilizzati per la rappresentazione di dati genomici, utilizzati ampiamente in diversi aspetti della ricerca per la loro abilità nel rappresentare dati genomici complessi in un formato standardizzato.
+I file GFF sono comunemente utilizati nel mapping, nell'annotazione e nella genomica comparativa. Ci danno una visione comprensiva delle feature genomiche tra DNA RNA e proteine.
+I file GTF sono particolarmente utili nello studio dell'espressione genica come RNA-seq e analisi del trascrittoma.
+GFF
