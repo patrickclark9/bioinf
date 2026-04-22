@@ -84,3 +84,33 @@ Una libreria di subcloni dal whole genome viene preparata, e numerose read vengo
 Contemporaneamente, BAC individuali vengono sottoposte a shotgun sequencing.
 Le read derivanti dal BAC possono esere usate per identificare sequenze in overlap nella grande collezione di whole-genome-derived reads, riducendo la complessità del dataset whole-genome shotgun in una serie di bin di dimensioni di un BAC.
 L'insieme combinato di read per ogni bAC può poi essere assemblato individualmente ed è soggetto a sequence finishing.
+
+
+## Ripetizioni
+Le ripetizioni contenute nei genomi eucariotici rappresentano un grande ostacolo che complica l'assemblaggio. Queste sequenze arrivano a lunghezze in Kb, ripetute in almeno 2 posizioni nel genoma.
+Quando un genoma contenente DNA ripetitivo viene rotto in frammenti, alcuni dei pezzi risultanti conterranno gli stessi motivi di sequenza.
+Sarebbe semplice riassmblare queste sequenze cosi che il DNA tra coppie di ripetizioni venga trascurato, o anche connettere due pezzi separati su stesso o differente cromosoma. Una mappa genomica permette di evitare questo tipo di errori
+
+## Ridodanza e Coverage
+La Ridodanza indica quante volta una base è stata coperta.
+Trovare nuove sequenze è un evento raro che segue Poisson. $P_0 = e^{-R}$  ovvero la probabilità di trovare una nuova base sequenziata dipende dalla ridodanza media.
+L'equazione usta per calcolare il coverage del genoma è $$C = \frac{LN}{G}$$
+C -> Coverage
+L -> Read Length
+G -> Lunghezza genoma (Aploide)
+N -> Nr di Read
+
+## Overlap
+Le read in overalp vengono estese per ricostruire la regione genomica originale.
+1. Si cerca overlap tra le sequenze primarie
+2. Si assembllano in contig per ottenere corte sequenze consensus
+3. L'assemblaggio di supercontig utilizzando le informazioni nelle coppie di sequenze (terminazioni + distanza)
+4. Completamento della consensus
+
+La regione sovrapposta è l'overlap. Regioni non allineati sono overhang.
+L'assembler individua i merge in base a:
+- Lunghezza overlap
+- % identità nella regione di overlap
+- dimensione dell'overhang
+
+## Overlap Layout Consensus
