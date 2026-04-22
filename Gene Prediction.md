@@ -62,4 +62,10 @@ Invece del sistema a coordinate utilizato da GFF e GTF, il sistema bed è zero b
 3. chromEnd -> coordinata di terminazione sul cromosoma o scaffold. La posizione è non inclusiva, a differenza di chromStart.
 4. name -> nome della riga del bed
 5. score -> score tra 0 e 1000
-6. strand -> +,
+6. strand -> +,- o "."
+7. thickStart -> coordinata di inizio da cui l'annotazione viene visualizzata in grassetto su una rappresentazione grafica: codone di start di un gene ad esempio
+8. thickEnd -> coordinata di fine da cui l'annotazione non verrà più visualizzata in grassetto su  una rappresentazione grafica (codone di stop di un gene ad esempio)
+9. ItemRGB -> RGB value per determinare il display cloro dell'annotazione contenuta nel bed
+10. blockCount -> numero di blocck sulla riga del bed file (e.g. esoni)
+11. blockSizes -> Lista di valori separati da virgola CSV corrispondente alla dimensione dei blocchi (numero di valori devono corrispondere a quelli di blockCount)
+12. blockStart -> lista di valori CSV corrispondenti all'inizio della coordinata dei blocchi, calcolate relativamente a quelli presenti in chromStart (nr di valori deve corrispondere a blockCount)
