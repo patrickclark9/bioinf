@@ -184,65 +184,125 @@ La costruzione del grafo di overlap è lenta. I dataset di sequenziamento modern
 
 
 ---
+## De Bruijn Graph (DBG)
 
-## DeBrujin Graph
+Un'alternativa all'OLC sono i **grafi di De Bruijn (DBG)**, più adatti a dataset di grandi dimensioni con read corte.
 
-Un'alternativa all'OLC sono i grafi di DeBrujin (DBG).
-Si inizia con una collezione di read, sottostringhe del genoma di riferimento
+### Principio
 
-ogni K-mer viene diviso in left-mer ed un right-mer di dimensioni k-1.
-3-mer -> AAC -> L-2-mer -> AA  
-3-mer -> AAC -> R-2-mer -> AC 
+Si parte da una collezione di read (sottostringhe del genoma). Ogni read viene spezzata in **k-mer** di lunghezza fissa (tipicamente 20–30 nt). I k-mer duplicati vengono scartati, riducendo le dimensioni del dataset.
 
-Un suffisso sono tutti i nucleotidi eccetto il primo. Prefisso tutti i nucleotidi eccetto l'ultimo.
+Ogni k-mer viene poi diviso in:
 
-Ogni kmer in input viene diviso in due sottostringhe di overlap, L-k-1-mer e R-k-1-mer.
-Ponendo i 2-mer come nodi in un nuovo grafo, si immette un arco da ogni k-1-mer sinistro al corrispondente k-1-mer destro.
+- **L-(k-1)-mer** → prefisso: tutti i nucleotidi eccetto l'ultimo
+- **R-(k-1)-mer** → suffisso: tutti i nucleotidi eccetto il primo
 
-Nei grafi di De Brujin, le stringhe devono essere di lunghezza uguale, cosi che quando usate nell'assemblaggio  lo step iniziale è quello di rompere le read in segmenti o k-mer di 20-30 nt. k-mer duplicati vengono scartati, così questo step riduce le dimensioni del dataset. Ogni k-mer è poi convertito in una sequenza preffiso e suffisso.
+> **Esempio** (k=3): `AAC` → L-2-mer = `AA`, R-2-mer = `AC`
 
-Gli overlap tra k-mer vengono poi identificati e i k-mer vengono collegati tra loro come un grafo di de-brujin. Ogni k-mer viene identificatgo da un nodo, con archi che connettono i k-mer che hanno suffissi e prefissi in overlap.
-La master sequenze può essere letta dal grafo
+I (k-1)-mer diventano i **nodi** del grafo. Per ogni k-mer viene aggiunto un **arco** dal suo L-(k-1)-mer al suo R-(k-1)-mer. I k-mer con suffissi e prefissi in overlap vengono così collegati tra loro, e la sequenza master può essere letta percorrendo il grafo.
 
-Se la sequenza contiene DNA ripetitivo, allora il grafo di de brujin si ramificherà al posto di linearizzarsi. In questo caso, allora si tenta di identificare un cammino euleriano attraverso il grafo, cammino dove ogni nodo viene osservato una sola volta.
-Se viene identificato un cammino euleriano, allora l'assemblaggio di sequenza corretto verrà trovato, anche in presenza di sequenze ripetute
+### Ripetizioni e Cammino Euleriano
 
+Se la sequenza contiene **DNA ripetitivo**, il grafo si **ramifica** invece di linearizzarsi. In questo caso si cerca un **cammino Euleriano** — un percorso in cui ogni **arco** viene attraversato una sola volta (a differenza dell'Hamiltoniano di OLC, dove ogni _nodo_ viene attraversato una volta).
 
-## Scaffolds
-Un assembler DeBrujin o OLC risulterà sempre in un insieme di contig. 
-Il prossimo step è identificare contig adiacenti uno all'altro nel genome e stabilire una serie di scaffold, dove ogni scaffold compone un insieme di sequenze contig separate da gap, non coperte dal dataset.
+> Se viene identificato un cammino Euleriano, l'assemblaggio corretto viene trovato anche in presenza di sequenze ripetute. Il problema del cammino Euleriano è risolvibile in tempo polinomiale, a differenza dell'NP-Hard Hamiltoniano di OLC.
 
-3 strategie per la costruzione degli scaffold. I contig adiacenti uno all'altro possono essere identificati da read in pair-end, per referenza ad una mappa genetica, e da sequenze long-read.
+### OLC vs DBG
 
-- Pair-end possono essere utili. Se due membri di una coppia di read cadono in contig differenti, allora chiaramente questi contig devono essere adiacenti uno all'altro nella sequenza del gneoma, e il gap tra loro potrebbe essere riempito da ulteriore sequenziamento del frammento da cui le read in pair end sono state ottenute
-- Se è disponibile una mappa genetica o fisica, allora questa può essere usata per ancorare i contig sulla sequenza del genoma e per identificare i contig adiacenti. Mappe ottiche sono ora frequentemente utilizzate per questo motivo, e percheè sono relativamente facili da generare ed hanno un elevata densità di marker
-- Se i contig sono stati assemblati da short read, allora SMRT o Nanopore sequencing possono essere utilizzati per generare long-read che mostreranno quali contig short read sono adiacenti
+|Caratteristica|OLC|De Bruijn Graph|
+|---|---|---|
+|Nodi del grafo|Read intere|k-mer|
+|Archi|Overlap tra read|Connessioni prefisso-suffisso|
+|Percorso cercato|Hamiltoniano (ogni nodo 1×)|Euleriano (ogni arco 1×)|
+|Complessità|NP-Hard|Polinomiale|
+|Adatto a|Read lunghe, bassa copertura|Read corte, alta copertura|
 
+---
 
-## Mapping Ottico -> Bionano
+## Scaffolding
 
-Si parte con DNA labelling
-1. HMW DNA viene nickato con una endonucleasi scelta che introduce single strand nick nel genoma
-2. Taq polimerasi riconosce questi siti e rimpiazza diversi nucleotidi con nucleotidi marcati a fluorescenza, aggiunti alla soluzione
-3. Le due estremità del DNA sono ligate utilizzando la ligasi
-4. Il backbone del DNA viene marcato con una tinta per DNA
-Il dsDNA etichettato viene carico su un chip di flowcells. Viene applicato un voltaggio che concentra il DNA coiled sulla lip. Il DNA viene poi spinto verso i pillars al centro per perdere la struttura/raddrizzarsi. Il DNA viene poi fermato e rilevato nei nanocanali. 
-Blu -> DNA Backbone staining, Verde -> Siti nickati etichettati a fluorescenza
+Un assembler DBG o OLC produce sempre un insieme di **contig**. Il passo successivo è identificare i contig adiacenti nel genoma e costruire gli **scaffold**: insiemi di contig separati da gap di dimensione stimata ma sequenza non determinata.
 
-Visualizzazione del DNA
-Una volta ottenuta una immagine grezaz delle lunghe molecole di  DNA etichettato, viene converitto in rappresentazione digitale dei pattern label motif-specific.
-Un software assembla i dati de novo per ricreare una whole genome map assembly
-### qualità
-Due parametri devono essere considerati per misurare la qualità del genoma
-1. Completezza -> Frazione di eucromatina sequenziata
-2. Accuratezza -> % errori
-Sono state create misurazioni statistiche per ottener una più accurata indicazione dellaqualità del gnoma sequenziato. 
-- N50 size -> applicvabile a contig o scaffold
-	- Dato un set di contig, N50 è definito come la lunghezza della sequenza del contig più corto al 50% della lunghezza totale del genoma
-	- Uno svantaggio di N50 è che non tiene in considearzione la dimensione del genoma, quindi 2 assembly possono avere identiche N50 dimensioni ma rappresentare differenti gradi di completezza del genoma
-- NG50 aggira il problema permettendo comparazione diretta tra assembly genomiche di differente specie
+Tre strategie per identificare contig adiacenti:
 
-### Genoma T2T
-Il genoma reference umano copre solo le regioni eucromatiche del genome, lasciando importanti regioni eterocromatiche non finite. La rimanente parte 8% del genoma è stata completata dal consorzio T2T. 3.055 miliardi di base pair sequence che include assembly gapless per ogni cromosoma eccetto l'Y, correggendo errori in referenze precedenti, e introducendo quasi 200 milioni di bp di sequenza contenente 1956 predizioni di gene, 99 dei quali sembrano essere protein-coding.
-Le regioni completate includono tutti gli array satellite centromerici, duplicazioni segmentali ed il braccio corto di tutti e 5 i cromosomi acrocentrici.
-Per terminare le ultimi regioni del genoma, aspetti complementari di sequenziamento PacBio (20kbp) e ONT ultralong read (>100kbp) sono state prese in considerazione per assemblare l'uniformemente omozigote CHM13hTERT cell line (46,XX).
+|Strategia|Principio|
+|---|---|
+|**Paired-end reads**|Se i due membri di una coppia cadono in contig diversi, quei contig sono adiacenti. Il gap può essere stimato dalla lunghezza del frammento originale|
+|**Mappa genetica/fisica**|I contig vengono ancorati alla mappa per identificare quelli adiacenti. Le **mappe ottiche** sono ora frequentemente usate per l'alta densità di marker e la relativa facilità di generazione|
+|**Long-read**|Se i contig sono stati assemblati da short-read, SMRT o Nanopore possono generare long-read che mostrano direttamente quali contig sono adiacenti|
+
+---
+
+## Mapping Ottico — Bionano
+
+### DNA Labelling
+
+1. L'**HMW DNA** viene nickato con un'endonucleasi scelta, che introduce single strand nick nel genoma
+2. La **Taq polimerasi** riconosce questi siti e rimpiazza alcuni nucleotidi con **nucleotidi marcati a fluorescenza**
+3. Le due estremità del DNA vengono ligate con una **ligasi**
+4. Il backbone del DNA viene marcato con una **tinta per DNA**
+
+> 🔵 Blu → DNA backbone staining | 🟢 Verde → Siti nickati etichettati a fluorescenza
+
+### Analisi sulla FlowCell
+
+Il dsDNA etichettato viene caricato su un chip di flowcell:
+
+1. Un voltaggio **concentra il DNA coiled** sulla lip
+2. Il DNA viene spinto verso i **pillars** centrali, perdendo la struttura supercoiled e raddrizzandosi
+3. Il DNA viene fermato e rilevato nei **nanocanali**
+
+### Elaborazione
+
+Le immagini grezze delle lunghe molecole di DNA etichettato vengono convertite in una **rappresentazione digitale** dei pattern label motif-specific. Un software assembla i dati _de novo_ per ricreare una **whole genome map assembly**.
+
+---
+
+## Qualità dell'Assemblaggio
+
+Due parametri fondamentali per misurare la qualità di un genoma assemblato:
+
+|Parametro|Descrizione|
+|---|---|
+|**Completezza**|Frazione di eucromatina sequenziata|
+|**Accuratezza**|% di errori nella sequenza|
+
+### Statistiche di qualità
+
+**N50**
+
+- Dato un set di contig, N50 è la lunghezza del contig più corto tale che i contig di lunghezza ≥ N50 coprono il **50% della lunghezza totale del genoma assemblato**
+- ⚠️ Svantaggio: non tiene in considerazione la dimensione del genoma → due assembly possono avere identica N50 ma rappresentare gradi di completezza molto diversi
+
+**NG50**
+
+- Variante di N50 che usa la **dimensione del genoma di riferimento** invece della lunghezza totale dell'assembly
+- Permette la **comparazione diretta tra assembly di specie diverse**
+
+---
+
+## Genoma T2T (Telomere-to-Telomere)
+
+Il genoma di riferimento umano tradizionale copre solo le regioni **eucromatiche**, lasciando importanti regioni eterocromatiche incomplete. Il restante **~8% del genoma** è stato completato dal **consorzio T2T**.
+
+### Risultati
+
+- **3,055 miliardi di bp** di sequenza totale
+- Assembly **gapless** per ogni cromosoma eccetto l'Y
+- Correzione di errori in riferimenti precedenti
+- ~**200 milioni di bp** di nuova sequenza, contenente **1956 predizioni di geni** (99 apparentemente protein-coding)
+
+### Regioni completate
+
+- Tutti gli **array satellite centromerici**
+- **Duplicazioni segmentali**
+- Braccio corto di tutti e 5 i **cromosomi acrocentrici**
+
+### Metodologia
+
+Per completare le ultime regioni del genoma sono stati combinati:
+
+- **PacBio SMRT** — read di ~20 kbp
+- **ONT ultralong read** — read >100 kbp
+
+Il sequenziamento è stato effettuato sulla **CHM13hTERT cell line** (46,XX), scelta per la sua uniforma omozigosità che semplifica l'assemblaggio.
