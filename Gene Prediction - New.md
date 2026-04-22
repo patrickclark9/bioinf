@@ -18,6 +18,8 @@ Utilizza la similarità con annotazioni già note (proteine, cDNA, EST) tramite 
 - Errori nel database si propagano nell'annotazione
 - I confini della similarità non sono ben definiti
 
+**Vantaggio**: produce evidenza di geni biologicamente rilevanti, poichè ci si basa su dati biologici pre-esistenti
+
 ---
 
 ### Comparativa
@@ -27,7 +29,7 @@ Utilizza la similarità tra genomi attraverso comparazione diretta, individuando
 **Limiti:**
 
 - I confini esatti della similarità non sono ben definiti
-- Soffre degli stessi problemi di errori nel genoma di riferimento
+- Soffre degli stessi problemi di errori nelle annotazioni nel genoma di riferimento
 - Difficoltà nel trovare la **distanza evolutiva ottimale** dal genoma di riferimento (i pattern di conservazione differiscono tra i diversi loci)
 
 **Vantaggio**: produce evidenza di geni biologicamente rilevanti.
@@ -69,12 +71,15 @@ Esempi di segnali rilevati:
 - Initiation site
 - Codoni di stop
 
-Metodi computazionali utilizzati:
+Metodi computazionali utilizzati per la ricerca di signal sensor:
 
 - Consensus-sequence con allineamento multiplo
 - **PWM** (Positional Weight Matrices)
 - Modelli di Markov probabilistici
 
+#### Signal Sensors - Introns
+
+![[Pasted image 20260422172809.png]]
 #### Intron Phase
 
 ![[Pasted image 20260422161723.png]]
@@ -149,17 +154,17 @@ Formato semplice e computazionalmente efficiente. Ogni riga è un record complet
 
 > ⚠️ Il sistema di coordinate BED è **0-based per chromStart** e **1-based per chromEnd**. Un nucleotide in posizione 1 nel genoma avrà `start = 0` e `end = 1` — a differenza di GFF/GTF che usano coordinate 1-based.
 
-|#|Campo|Descrizione|
-|---|---|---|
-|1|**chrom**|Cromosoma o scaffold|
-|2|**chromStart**|Coordinata di inizio (0-based, inclusiva)|
-|3|**chromEnd**|Coordinata di fine (1-based, **non inclusiva**)|
-|4|**name**|Nome della riga|
-|5|**score**|Score tra 0 e 1000|
-|6|**strand**|`+`, `-` o `.`|
-|7|**thickStart**|Coordinata da cui l'annotazione viene visualizzata in grassetto (es. codone di start)|
-|8|**thickEnd**|Coordinata da cui l'annotazione non viene più visualizzata in grassetto (es. codone di stop)|
-|9|**itemRGB**|Valore RGB per il colore di visualizzazione dell'annotazione|
-|10|**blockCount**|Numero di blocchi nella riga (es. numero di esoni)|
-|11|**blockSizes**|Lista CSV delle dimensioni dei blocchi (deve corrispondere a blockCount)|
-|12|**blockStarts**|Lista CSV degli inizi dei blocchi, relativi a chromStart (deve corrispondere a blockCount)|
+| #   | Campo           | Descrizione                                                                                  |
+| --- | --------------- | -------------------------------------------------------------------------------------------- |
+| 1   | **chrom**       | Cromosoma o scaffold                                                                         |
+| 2   | **chromStart**  | Coordinata di inizio (0-based, inclusiva)                                                    |
+| 3   | **chromEnd**    | Coordinata di fine (1-based, **non inclusiva**)                                              |
+| 4   | **name**        | Nome della riga                                                                              |
+| 5   | **score**       | Score tra 0 e 1000                                                                           |
+| 6   | **strand**      | `+`, `-` o `.`                                                                               |
+| 7   | **thickStart**  | Coordinata da cui l'annotazione viene visualizzata in grassetto (es. codone di start)        |
+| 8   | **thickEnd**    | Coordinata da cui l'annotazione non viene più visualizzata in grassetto (es. codone di stop) |
+| 9   | **itemRGB**     | Valore RGB per il colore di visualizzazione dell'annotazione                                 |
+| 10  | **blockCount**  | Numero di blocchi nella riga (es. numero di esoni)                                           |
+| 11  | **blockSizes**  | Lista CSV delle dimensioni dei blocchi (deve corrispondere a blockCount)                     |
+| 12  | **blockStarts** | Lista CSV degli inizi dei blocchi, relativi a chromStart (deve corrispondere a blockCount)   |
