@@ -237,4 +237,7 @@ Due parametri devono essere considerati per misurare la qualità del genoma
 1. Completezza -> Frazione di eucromatina sequenziata
 2. Accuratezza -> % errori
 Sono state create misurazioni statistiche per ottener una più accurata indicazione dellaqualità del gnoma sequenziato. 
-N50 size -> applicvabile a contig o scaffold
+- N50 size -> applicvabile a contig o scaffold
+	- Dato un set di contig, N50 è definito come la lunghezza della sequenza del contig più corto al 50% della lunghezza totale del genoma
+	- Uno svantaggio di N50 è che non tiene in considearzione la dimensione del genoma, quindi 2 assembly possono avere identiche N50 dimensioni ma rappresentare differenti gradi di completezza del genoma
+- NG50 aggira il problema permettendo comparazione diretta tra assembly genomiche di differente specie
