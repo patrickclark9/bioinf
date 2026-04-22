@@ -71,3 +71,16 @@ Le read casuali poi vengono assemblate sulla base di overlap, portando ad un ass
 Questa sequenza è imperfetta, viene associata sia a gap e sia a zone di qualità molto bassa. Ordine ed orientamento dei contig spesso non è noto.
 Seguono metodi di sequence finishing, che coinvolgono la generazione di dati addizionali di sequenze per chiudere gap e migliorare la qualità di alcune zone.
 Dopo questo step si ottiene la seuqnza finita e accurata di tutto il clone intero.
+
+
+## Whole Genome Shotgun
+
+Sequenze individuali generate da un Whole Genome Shotgun vengono inizialmente assemblate in contig.
+I gruppi di contig vengono organizzati in scaffold sulla base di informazioni di linking date dalle coppie di read (per ogni caso, una read da una coppia si assembla in un conting e l'altra read in un altro contig).
+Gli scaffold vengono allineati a turno relativamente al genoma di partenza per identificazione di marker sequence-based già mappati nel contig, associandoli con una locazione nota nel genoma
+### Hybrid Shotgun
+In approcci ibridi, si uniscono elementi del Clone-by-Clone e del Whole Genome Shotgun.
+Una libreria di subcloni dal whole genome viene preparata, e numerose read vengono generate genome-wide.
+Contemporaneamente, BAC individuali vengono sottoposte a shotgun sequencing.
+Le read derivanti dal BAC possono esere usate per identificare sequenze in overlap nella grande collezione di whole-genome-derived reads, riducendo la complessità del dataset whole-genome shotgun in una serie di bin di dimensioni di un BAC.
+L'insieme combinato di read per ogni bAC può poi essere assemblato individualmente ed è soggetto a sequence finishing.
