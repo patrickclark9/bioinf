@@ -133,4 +133,4 @@ Consensus
 Si prendono le read che costituiscono un contig e si allineano. SI prende poi il voto consensus.
 
 Svantaggi OLC
-La costruzione del grafo di overlap è lenta. Dataset di se
+La costruzione del grafo di overlap è lenta. Dataset di sequenziamento contengono fino a miliardi di read, centinaia di miliardi di nucleotidi in totale.
