@@ -199,4 +199,13 @@ Un suffisso sono tutti i nucleotidi eccetto il primo. Prefisso tutti i nucleotid
 Ogni kmer in input viene diviso in due sottostringhe di overlap, L-k-1-mer e R-k-1-mer.
 Ponendo i 2-mer come nodi in un nuovo grafo, si immette un arco da ogni k-1-mer sinistro al corrispondente k-1-mer destro.
 
-Nei grafi di De Brujin, le stringhe devono essere di lunghezza uguale, cosi che quando usate nell'assemblaggio  lo step iniziale è quello di rompere le read in segmenti o k-mer di 20-30
+Nei grafi di De Brujin, le stringhe devono essere di lunghezza uguale, cosi che quando usate nell'assemblaggio  lo step iniziale è quello di rompere le read in segmenti o k-mer di 20-30 nt. k-mer duplicati vengono scartati, così questo step riduce le dimensioni del dataset. Ogni k-mer è poi convertito in una sequenza preffiso e suffisso.
+
+Gli overlap tra k-mer vengono poi identificati e i k-mer vengono collegati tra loro come un grafo di de-brujin. Ogni k-mer viene identificatgo da un nodo, con archi che connettono i k-mer che hanno suffissi e prefissi in overlap.
+La master sequenze può essere letta dal grafo
+
+Se la sequenza contiene DNA ripetitivo, allora il grafo di de brujin si ramificherà al posto di linearizzarsi. In questo caso, allora si tenta di identificare un cammino euleriano attraverso il grafo, cammino dove ogni nodo viene osservato una sola volta.
+Se viene identificato un cammino euleriano, allora l'assemblaggio di sequenza corretto verrà trovato, anche in presenza di sequenze ripetute
+
+
+##
