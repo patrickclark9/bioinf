@@ -34,4 +34,18 @@ Correlazione approssimata
 Il gene transfer format e il general feature format sono due comuni formati di file utilizzati per la rappresentazione di dati genomici, utilizzati ampiamente in diversi aspetti della ricerca per la loro abilità nel rappresentare dati genomici complessi in un formato standardizzato.
 I file GFF sono comunemente utilizati nel mapping, nell'annotazione e nella genomica comparativa. Ci danno una visione comprensiva delle feature genomiche tra DNA RNA e proteine.
 I file GTF sono particolarmente utili nello studio dell'espressione genica come RNA-seq e analisi del trascrittoma.
-GFF
+GFF:
+1. seqID -> nome sequenza
+2. Source -> algoritmo o procedura utilizzata per generare la sequenza. tipicamente software o database
+3. Type -> feature type, "gene" " exon" "CDS" "5'UTR", "3' UTR". In un GFF ben strutturato tutte le feature figlie seguono ii parenti in un singolo blocco (tutti gli esoni di un trascritto seguono immediatamente il parente "transcritp" , prima di ogni altro "transcript" parente. Tutte le feature e le relazioni dovrebbero essere compatibile con sstandard del Sequence Ontology Project)
+4. Start -> Genomic start della feature, con offset di 1 base, in contrasto ad altri formati come il BED che hanno offset 0
+5. End -> Genomic end della feature con 1 base di ofset
+6. Score -> Valore numerico che indica la confidenza della sorgente nella feature annotata. Il punto "." indica un valore nullo
+7. Strand -> singolo carattere. Può essere + (5'->3'), - (3'->5'), "." indica valore nullo, ? per feature in cui la strand è rilevante ma sconosciuta
+8. Phase -> Fase di una CDS, 0,1,2 per una CDS, "." per tutto il resto.
+9. Attributes -> Lista di tag-valore coppie separate da un ";" puntoe virgola con informazioni aggiuntiva
+
+Il GTF ha strutura simile al GFF: <seqname><source><feature><start><end><score><strand><frame><attributes>
+Ogni attributo di attribute deve avere forma: nome_atributo "valore attributo";.
+gene_id -> identificatore unico per la sorgente genomica del trasccritto. Usato per raggruppare i trascritti in geni.
+transcript_id -> identificatore unico per il trascritto predetto. Utilizzato per raggruppare feature per trascritto
