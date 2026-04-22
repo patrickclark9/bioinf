@@ -100,12 +100,14 @@ Combina elementi delle strategie estrinseca, comparativa e ab initio per miglior
 
 ## Assessment della Gene Prediction
 
-|Metrica|Formula|Significato|
-|---|---|---|
-|**Sensitività**|$\frac{tp}{tp + fn}$|Nr esoni corretti / Nr esoni reali|
-|**Specificità**|$\frac{tp}{tp + fp}$|Nr esoni corretti / Nr esoni predetti|
-|**Missing Sensitivity**|$\frac{fn}{tp + fn}$|Nr esoni mancanti / Nr esoni reali|
-|**Missing Specificity**|$\frac{fp}{tp + fp}$|Nr esoni sbagliati / Nr esoni predetti|
+| Metrica                     | Formula              | Significato                            |
+| --------------------------- | -------------------- | -------------------------------------- |
+| **Sensitività**             | $\frac{tp}{tp + fn}$ | Nr esoni corretti / Nr esoni reali     |
+| **Specificità**             | $\frac{tp}{tp + fp}$ | Nr esoni corretti / Nr esoni predetti  |
+| **Missing Sensitivity**     | $\frac{fn}{tp + fn}$ | Nr esoni mancanti / Nr esoni reali     |
+| **Missing Specificity**     | $\frac{fp}{tp + fp}$ | Nr esoni sbagliati / Nr esoni predetti |
+| **Correlation Coefficient** |                      |                                        |
+| **Approximate Correlation** |                      |                                        |
 
 ---
 
