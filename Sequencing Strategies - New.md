@@ -241,3 +241,8 @@ Sono state create misurazioni statistiche per ottener una più accurata indicazi
 	- Dato un set di contig, N50 è definito come la lunghezza della sequenza del contig più corto al 50% della lunghezza totale del genoma
 	- Uno svantaggio di N50 è che non tiene in considearzione la dimensione del genoma, quindi 2 assembly possono avere identiche N50 dimensioni ma rappresentare differenti gradi di completezza del genoma
 - NG50 aggira il problema permettendo comparazione diretta tra assembly genomiche di differente specie
+
+### Genoma T2T
+Il genoma reference umano copre solo le regioni eucromatiche del genome, lasciando importanti regioni eterocromatiche non finite. La rimanente parte 8% del genoma è stata completata dal consorzio T2T. 3.055 miliardi di base pair sequence che include assembly gapless per ogni cromosoma eccetto l'Y, correggendo errori in referenze precedenti, e introducendo quasi 200 milioni di bp di sequenza contenente 1956 predizioni di gene, 99 dei quali sembrano essere protein-coding.
+Le regioni completate includono tutti gli array satellite centromerici, duplicazioni segmentali ed il braccio corto di tutti e 5 i cromosomi acrocentrici.
+Per terminare le ultimi regioni del genoma, aspetti complementari di sequenziamento PacBio (20kbp) e ONT ultralong read (>100kbp) sono state prese in considerazione per assemblare l'uniformemente omozigote CHM13hTERT cell line (46,XX).
