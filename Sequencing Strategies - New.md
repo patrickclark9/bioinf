@@ -225,4 +225,16 @@ Si parte con DNA labelling
 1. HMW DNA viene nickato con una endonucleasi scelta che introduce single strand nick nel genoma
 2. Taq polimerasi riconosce questi siti e rimpiazza diversi nucleotidi con nucleotidi marcati a fluorescenza, aggiunti alla soluzione
 3. Le due estremità del DNA sono ligate utilizzando la ligasi
-4. Il backbone del DNA viene
+4. Il backbone del DNA viene marcato con una tinta per DNA
+Il dsDNA etichettato viene carico su un chip di flowcells. Viene applicato un voltaggio che concentra il DNA coiled sulla lip. Il DNA viene poi spinto verso i pillars al centro per perdere la struttura/raddrizzarsi. Il DNA viene poi fermato e rilevato nei nanocanali. 
+Blu -> DNA Backbone staining, Verde -> Siti nickati etichettati a fluorescenza
+
+Visualizzazione del DNA
+Una volta ottenuta una immagine grezaz delle lunghe molecole di  DNA etichettato, viene converitto in rappresentazione digitale dei pattern label motif-specific.
+Un software assembla i dati de novo per ricreare una whole genome map assembly
+### qualità
+Due parametri devono essere considerati per misurare la qualità del genoma
+1. Completezza -> Frazione di eucromatina sequenziata
+2. Accuratezza -> % errori
+Sono state create misurazioni statistiche per ottener una più accurata indicazione dellaqualità del gnoma sequenziato. 
+N50 size -> applicvabile a contig o scaffold
