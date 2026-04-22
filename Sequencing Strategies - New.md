@@ -208,4 +208,12 @@ Se la sequenza contiene DNA ripetitivo, allora il grafo di de brujin si ramifich
 Se viene identificato un cammino euleriano, allora l'assemblaggio di sequenza corretto verrà trovato, anche in presenza di sequenze ripetute
 
 
-##
+## Scaffolds
+Un assembler DeBrujin o OLC risulterà sempre in un insieme di contig. 
+Il prossimo step è identificare contig adiacenti uno all'altro nel genome e stabilire una serie di scaffold, dove ogni scaffold compone un insieme di sequenze contig separate da gap, non coperte dal dataset.
+
+3 strategie per la costruzione degli scaffold. I contig adiacenti uno all'altro possono essere identificati da read in pair-end, per referenza ad una mappa genetica, e da sequenze long-read.
+
+- Pair-end possono essere utili. Se due membri di una coppia di read cadono in contig differenti, allora chiaramente questi contig devono essere adiacenti uno all'altro nella sequenza del gneoma, e il gap tra loro potrebbe essere riempito da ulteriore sequenziamento del frammento da cui le read in pair end sono state ottenute
+- Se è disponibile una mappa genetica o fisica, allora questa può essere usata per ancorare i contig sulla sequenza del genoma e per identificare i contig adiacenti. Mappe ottiche sono ora frequentemente utilizzate per questo motivo, e percheè sono relativamente facili da generare ed hanno un elevata densità di marker
+- Se i contig sono stati assemblati da short read, allora SMRT o Nanopore possono essere utilizzati per generare long-read 
