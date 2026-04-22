@@ -49,3 +49,17 @@ Il GTF ha strutura simile al GFF: <seqname><source><feature><start><end><score><
 Ogni attributo di attribute deve avere forma: nome_atributo "valore attributo";.
 gene_id -> identificatore unico per la sorgente genomica del trasccritto. Usato per raggruppare i trascritti in geni.
 transcript_id -> identificatore unico per il trascritto predetto. Utilizzato per raggruppare feature per trascritto
+
+
+
+### Bed
+I file bed contengono un singolo record per linea e sono facilmente parsabili, computazionalmente semplici da parsare.
+Ogni riga è un record completo.
+Minimo 3 colonne per riga, con 9 aggiuntive colonne opzionali.
+Invece del sistema a coordinate utilizato da GFF e GTF, il sistema bed è zero based per coordinate start e 1-based per coordinate end. Quindi un nucleotide con coordinata 1 un nel gnoma avrà start = 0 ed end = 1.
+1. Chrom -> cromosoma o scaffold
+2. chromStart -> coordinata di inizio sul cromosoma o sullo scaffold per la sequenza considerata
+3. chromEnd -> coordinata di terminazione sul cromosoma o scaffold. La posizione è non inclusiva, a differenza di chromStart.
+4. name -> nome della riga del bed
+5. score -> score tra 0 e 1000
+6. strand -> +,
