@@ -114,3 +114,23 @@ L'assembler individua i merge in base a:
 - dimensione dell'overhang
 
 ## Overlap Layout Consensus
+1. Overlap -> Si cercano read in Overlap
+2. Layout -> Si mergiano le read in contig e supercontig
+3. Consensus -> Si costruisce la sequenza consensus e si correggono errori nelle read
+
+Una strategia consiste nel considerare le read come nodi in un grafo, con gli archi che rappresentano allineamenti tra le read. Si percorre un cammino hamiltoniano seguendo gli archi in ordine numerico ricostruendo il genoma combinando gli allineamenti tra read successive.
+Hamiltoniano -> Ogni nodo è attraversato 1 sola volta e termina al nodo di partenza. Ogni read verrà quindi inclusa una volta nell'assemblaggio -> NP-HARD
+
+I vertici sono read o kmer, gli edge sono allineamenti pairwise.
+
+Durante la fase layout cerchiamo di identificare la Shortest common superstring. Non è semplice dato che il grafo di overlap è grande.
+Si inizia rimuovendo archi transivitevely inferred, parendo da archi che saltano uno o due nodi.
+
+I contig ottenuto corrispondono a stretch non ramificanti.
+In fase di layout bisogno anche tenere conto di sottografi spuri a causa di erori di sequenziamento.
+
+Consensus
+Si prendono le read che costituiscono un contig e si allineano. SI prende poi il voto consensus.
+
+Svantaggi OLC
+La costruzione del grafo di overlap è lenta. Dataset di se
