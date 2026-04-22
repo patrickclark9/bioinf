@@ -305,4 +305,4 @@ Per completare le ultime regioni del genoma sono stati combinati:
 - **PacBio SMRT** — read di ~20 kbp
 - **ONT ultralong read** — read >100 kbp
 
-Il sequenziamento è stato effettuato sulla **CHM13hTERT cell line** (46,XX), scelta per la sua uniforma omozigosità che semplifica l'assemblaggiohot
+Il sequenziamento è stato effettuato sulla **CHM13hTERT cell line** (46,XX), scelta per la sua uniforma omozigosità che semplifica l'assemblaggio.

@@ -33,4 +33,17 @@ Ogni trie ha le seguenti proprietà:
 - Ogni Chiave (sottostringa di lunghezza 2) viene estesa lungo un percorso partendo dalla radice
 Un'altra idea è non utilizzare lunghezze fisse. In questo caso utilizziamo i suffissi invece di sottostringhe di lunghezza prefissata.
 Prendendo T = abaaba$, in cui $ segna il termine del suffisso. Tutte le sottostringhe e le trie corrispondenti evidenzieranno un percorso, da cui possiamo trovare il suffisso più lungo ed il suffisso più corto.
-Rimuovendo il carattere speciale la trie non avrebbe o
+Rimuovendo il carattere speciale la trie non avrebbe ogni suffisso rappresentato da un path dalla radice alla foglia.
+Ogni nodo etichettato con una stringa si estende per tutti i caratteri che appaiono lungho un cammino dalla radice fino al nodo stesso.
+La suffix-trie è una struttura dati ideali per controllare rapidamente che un pattern sia o non sia presente in un testo.
+
+Si può usare una suffix trie anche per controllare che una stringa sia il suffisso di un testo o quante volte una particolare sottostringa viene trovata in un testo.
+
+Se andiamo a collassare tutti i percorsi non ramificati e concatenando le etichette, si ottiene un albero in cui ogni foglia è etichettata con un offset del corrispondente suffisso.
+
+La logica rimane uguale ai suffix trie, ad eccezione che ora bisogna tener conto del fatto che lungo alcuni archi solo una porzione dei caratteri di un etichetta combacieranno.
+
+Una comune applicazione degli alberi suffix dell'analisi dei genomi è trovare la più comune subsequenza tra due sequenze.
+
+## Suffix array
+I suffix array invece offrono una soluzione più compatta per rappresentare i suffissi del testo. Specifica un ordine lessicografico ordinando i suffissi derivati dal testo T. Poichè non è necessario un ulteriore albero per la rappresentazione, utilizza vastamente meno memoria (12GB per il genoma umano contro i 47GB del suffix tree)
