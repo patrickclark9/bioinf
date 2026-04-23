@@ -45,3 +45,10 @@ Varianti strutturali identificabili da seconda generazione:
 - Gain ->  Copy number Variation
 - Punto di breakpoint di Traslocazioni
 - Patogeni
+
+Si sequuenziando e allineando i dati contro un genoma di riferimento al fine di creare un file BAM pronto per essere utilizzato. Nel variant calling di Varianti ereditarie, si fa utilizzo di 3 BAM, proband BAM, Madre BAM e Padre BAM. Si fa un joint-variant calling, in cui vengono analizzate SNV/Indel/SV/CNV. Segue un filtro di rimozione di artefatti, e conferma con una review manuale.
+Per de Novo alterazioni bisogna rimuovere anche i falsi positivi.
+Variant calling si può fare anche per varianti somatiche, utilizzando un BAM per Tumore ed un altro per controllo (normale).
+Si cercano SNV/Indel/SV/CNA somatiche, si rimuovono gli artefatti, e si conferma manualmente che sia una variante.
+Linee guida e standard per l'identificazione di varianti genetiche sono ancora in sviluppo. WES e WGS producono molti dati su numerose varianti genetiche, la maggior parte delle quali, nel contesto di uno studio su una particolare malattia, non sono rilevanti, dato che non hanno effetto funzionale sulle proteine o a livello sistemico. Da notare è che tutti presnetiamo un gran numero di varianti genetiche ereditarie e de novo mutazioni, ma una piccola frazione di queste effettivamente impatta la funzione proteica o sistemica (ad esempio mutazioni non senso).
+L'annotazione di varianti ha come obiettivo produrre metadati ausiliari per variant call putative grezze filtrate per qualità, al fine di approfondire le varianti che probabilmente hanno un impatto funzionale o sistemico.
