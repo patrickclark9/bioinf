@@ -34,3 +34,11 @@ Il metodo più comune utilizzato oggi. I probe vengono biotinilati (taggati), ed
 
 ### Molecular inversion probe
 Oligonucleotide a singolo filamento prodotto cosi che le terminazioni siano complementari al DNA target. Quando si lega il probe, si inverte e forma un cerchio attorno al target. Una reazione di gap-filling e ligazione chiudono il cerchio. Solo i probe circolarizzati vengono sottoposti a PCR.
+![[Pasted image 20260423183843.png]]
+
+## Varianti strutturali
+Varianti strutturali identificabili da seconda generazione:
+- Mutazioni puntiformi
+- Indel
+- Delezioni omozigoti
+- Delezio
