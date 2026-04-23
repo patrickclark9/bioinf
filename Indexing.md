@@ -65,4 +65,9 @@ Inizio nella prima riga -> F deve avere $. L contiene un carattere appena prima 
 a0: LF dice che questa  occorenza di a è la prima a in F. Si salta alla riga che inizia con a0. L contiene il carattere appena prima di a0, b0.
 Si ripete per b0 ottenendo a2. Si ripete per a2 ottenendo a1, per a1 si ottiebe b1, per b1 si ottiene a3, per a3 si ottiene $, quindi termina l'algoritmo.
 
-Possiamo quidi usare il mapping LF per trovare una stringa in una BWT. es. sottostringa aba in BWT  o bba, che non risulterà in alcun match 
+Possiamo quidi usare il mapping LF per trovare una stringa in una BWT. es. sottostringa aba in BWT  o bba, che non risulterà in alcun match.
+
+La BWT è molto compatta, ma ha svantaggi. Ad esempio, la difficoltà nel trovare dove i match sono nel genoma, oltre ad alcuni problemi di prestazioni.
+Combinare la BWT con strutture dati ausiliari come l'FM index (Full text index in Minute space), può aiutare.
+Le componenti dell'FM index utilizzate per allineare read al genoma sono Tally, Checkpoints e suffix arrays index.
+Tally-> conta le occorrenze di un carattere dall'inizio della colonna L. Per conservare spazio, solo un sottoinsieme di tally vengono memorizzate come checkpoint, salvati in intervalli regolari
