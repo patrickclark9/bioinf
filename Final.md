@@ -40,5 +40,8 @@ Oligonucleotide a singolo filamento prodotto cosi che le terminazioni siano comp
 Varianti strutturali identificabili da seconda generazione:
 - Mutazioni puntiformi
 - Indel
-- Delezioni omozigoti
-- Delezio
+- Delezioni omozigoti -> Copy Number variation
+- Delezioni emizigoti -> Copy Number Variation
+- Gain ->  Copy number Variation
+- Punto di breakpoint di Traslocazioni
+- Patogeni
