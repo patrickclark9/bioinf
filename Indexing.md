@@ -47,3 +47,12 @@ Una comune applicazione degli alberi suffix dell'analisi dei genomi è trovare l
 
 ## Suffix array
 I suffix array invece offrono una soluzione più compatta per rappresentare i suffissi del testo. Specifica un ordine lessicografico ordinando i suffissi derivati dal testo T. Poichè non è necessario un ulteriore albero per la rappresentazione, utilizza vastamente meno memoria (12GB per il genoma umano contro i 47GB del suffix tree)
+
+
+## Burrows Wheeler Transform
+
+La BW è una permutazione reversibile di una stringa. Ha tre importanti feature che la rendono ideale per creare compatte e facili da esplorare rappresentazioni di dati genomici.
+- Può essere compressa
+- Può essere invertita per ricostruire la stringa originale
+- Può essere usata come indice
+Prendendo la stringa or
