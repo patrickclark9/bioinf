@@ -148,5 +148,8 @@ L'algoritmo HISAT2 implementa una struttura dati a grafo chiamata GraphFM index.
 Assumendo una sequenza di 6 bp, contenente SNP e indel.
 Creiamo la rappresentazione grafica della sequenza + varianti.
 Segue uno step di prefix doubling e pruning delle ramificazioni.
+Questa è una tecnica di compressione in cui prima si individuano tutti path di lunghezza 1.
+Dopo i path di lunghezza 1 si identificano tutti i path di lunghezza 2, 4,8  cosi via.
+
 Il prefix doubling consiste del creare altri prefissi per i diversi percorsi.
-Infine si crea una rappresentazione tabular dei grafi ordinati per prefisso.
+Infine si crea una rappresentazione tabulare dei grafi ordinati per prefisso.
