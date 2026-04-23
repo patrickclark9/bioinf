@@ -26,3 +26,11 @@ Processo in cui si va a determinare l'intera sequenza del DNA di un genoma di un
 ## Target Enrinchment
 
 L'arricchimento consiste nel catturare, o arricchire, specifiche regioni di interesse, che possono essere esoni, ncRNA, o specifici geni, prima del sequenziamento.
+
+### Array Hybridization
+Approccio che consiste nell'utilizzare probe, piccoli olignonucleoitidi sintetici,  su un vetrino (array). DNA genomico viene introdotto sull'array, dove DNA target legherà i probe complementari sull'array, mentre il DNA non target viene rimosso. Il DNA catturato viene poi sequenziato
+### In Solution Hybridization
+Il metodo più comune utilizzato oggi. I probe vengono biotinilati (taggati), ed inseriti insieme al DNA genomico in soluzione. Dopo ibridizzazione, vengono utilizzati bead con streptavidina che lega la biotina, tirandosi i probe target in complesso con DNA di interesse, permettendo di rimuovere il resto del materiale genomico. 
+
+### Molecular inversion probe
+Oligonucleotide a singolo filamento prodotto cosi che le terminazioni siano complementari al DNA target. Quando si lega il probe, si inverte e forma un cerchio attorno al target. Una reazione di gap-filling e ligazione chiudono il cerchio. Solo i probe circolarizzati vengono sottoposti a PCR.
