@@ -155,3 +155,22 @@ Il processo continua ifnchè la lunghezza del cammino è >= alla lunghezza della
 Il prefix doubling consiste del creare altri prefissi per i diversi percorsi, ottenendo un indice compresso di tutti i possibili cammini attraverso il grafo fino ad una specifica lunghezza.
 Infine si crea una rappresentazione tabulare dei grafi ordinati per prefisso.
 La ricerca inizia leggendo la read, una volta raggiunto un nodo del grafo con molteplici nodi entranti o uscenti, vengono attraversati tutti i percorsi contemporaneamente. Viene mantenuto un insieme di nodi attivi, ovvero nodi che matchano la read, e si esplorano tutti. 
+
+
+## Formato SAM/BAM
+
+Il formato SAM sta per sequence alignment/map format. È un formato tab-delimited che consiste in una sezione header, opzionale, una sezione allineamento.
+Ogni allineamento ha 11 campi mandatori per informazioni di allineamento essenziali, come mappaggio delle posizioni, e diversi campi opzionali per informazioni allineamento-specifiche o generali.
+
+- QNAME -> readID
+- FLAG -> Informazioni sull'allineamento della read: paired aligned: Il flagscore è un decimale usato per rappresentare un binario specifico. Il flag sono 12bit, in cui ogni bit rappresenta un attributo diverso, con 0 = false e 1 = true. Un valore decimale di 3 corrisponde a 000000000011, quindi flippati solo i bit corrispondenti a pair-end read e allineate appropriatamente, dove appropriatamente significa che entrambe le read in una coppia sono orientate una verso l'altra (fwd, rvrs), sullo stesso contig e sono a distanza attesa l'una dall'altra. Altra nota è il flag all'ottavo bit che significa
+- RNAME -> Reference sequence name
+- POS -> 1-based position
+- MAPQ -> Mapping quality
+- CIGAR -> Riassunto dell'allineamento: inserzioni, delezioni
+- RNEXT -> reference sequence name dell'allineamento primario della NEXT read. per pair-end sequencing, NEXT read è la read paired, corrispondente alla colonna RNAME
+- PNEXT -> Posizione dell'allineamento primario della NEXT read nel template. 0 quando non disponibile. Corrisponde alla colonna POS
+- TLEN -> Numero di basi coperte da read dello stesso frammento. +/- significa che la read attuale è la più a sinistra/destra. E.g. comparazione tra prima e ultima riga.
+- SEQ -> la sequenza della read
+- QUAL -> La qualità della read. * significa che non è disponibile
+- Optional Fields TAG\:TYPE\:VALUE
