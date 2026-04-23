@@ -174,3 +174,4 @@ Ogni allineamento ha 11 campi mandatori per informazioni di allineamento essenzi
 - SEQ -> la sequenza della read
 - QUAL -> La qualità della read. * significa che non è disponibile
 - Optional Fields TAG\:TYPE\:VALUE. Ogni tag può apparire una sola volta ed è una stringa di 2 caratteri. Ordine non  è importante. TYPE definisce il tipo del VALUE (A->Carattere, C -> Intero 8bit, f->Numero reale, H -> array esadecimale, i -> intero 32?, Z-> stringa.
+

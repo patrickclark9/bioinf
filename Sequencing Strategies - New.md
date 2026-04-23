@@ -170,7 +170,7 @@ Si mergiano le read in contig e supercontig. L'obiettivo è trovare la **Shortes
 
 Si percorre un **cammino Hamiltoniano** nel grafo: ogni nodo (read) viene attraversato una sola volta → ogni read viene inclusa una volta nell'assemblaggio.
 
-> ⚠️ Il problema del cammino Hamiltoniano è **NP-Hard**: la costruzione del grafo di overlap su dataset con miliardi di read è computazionalmente proibitiva.
+> Il problema del cammino Hamiltoniano è **NP-Hard**: la costruzione del grafo di overlap su dataset con miliardi di read è computazionalmente proibitiva.
 
 Per semplificare il grafo si rimuovono gli **archi transitivamente inferibili** (archi che "saltano" uno o due nodi). I contig ottenuti corrispondono a stretch non ramificanti. Bisogna anche tenere conto di sottografi spuri causati da errori di sequenziamento.
 
@@ -272,7 +272,7 @@ Due parametri fondamentali per misurare la qualità di un genoma assemblato:
 **N50**
 
 - Dato un set di contig, N50 è la lunghezza del contig più corto tale che i contig di lunghezza ≥ N50 coprono il **50% della lunghezza totale del genoma assemblato**
-- ⚠️ Svantaggio: non tiene in considerazione la dimensione del genoma → due assembly possono avere identica N50 ma rappresentare gradi di completezza molto diversi
+- **Svantaggio**: non tiene in considerazione la dimensione del genoma → due assembly possono avere identica N50 ma rappresentare gradi di completezza molto diversi
 
 **NG50**
 
