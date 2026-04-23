@@ -21,3 +21,8 @@ Consiste nel sequenziare nuovamente l'intero genoma di una specie di cui si ha u
 
 ## Whole Genome Sequencing
 Processo in cui si va a determinare l'intera sequenza del DNA di un genoma di un organismo , incluso cromosomale e mitocondriale.
+
+
+## Target Enrinchment
+
+L'arricchimento consiste nel catturare, o arricchire, specifiche regioni di interesse, che possono essere esoni, ncRNA, o specifici geni, prima del sequenziamento.
