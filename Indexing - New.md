@@ -1,0 +1,139 @@
+# Indicizzazione (Indexing)
+
+L'indicizzazione rappresenta una delle sfide più grandi per effettuare ricerca e trovare la regione mappata con elevata accuratezza.
+
+Gli indici possono essere:
+
+- **Invertiti** (word → locazione)
+- **Forward** (locazione → word)
+
+Algoritmi efficienti di indicizzazione sono essenziali per organizzare le sequenze del genoma di riferimento e le short read in memoria, e per consentire ricerche rapide di pattern.
+
+### Principio generale
+
+Dato un indice $T$ e una query $Q$:
+
+1. Si spezza la query in sottostringhe definite
+2. Si esplora l'indice $T$ per verificare se le sottostringhe sono presenti
+3. Se presenti, si estende per verificare se l'intera sequenza ha un match
+
+> Un indice per il solo cromosoma 1 umano può occupare fino a **12 GB**. Una soluzione pratica per ridurre lo spazio è saltare alcune sottostringhe durante la creazione dell'indice (es. includere ogni 4a sottostringa può ridurre 12 GB a 8 GB).
+
+### Strutture dati principali
+
+|Struttura|Spazio (genoma umano)|Note|
+|---|---|---|
+|Hash Table|Variabile|Accesso O(1) per chiave esatta|
+|Suffix Tree|~47 GB|Potente ma molto pesante|
+|Suffix Array|~12 GB|Più compatto del suffix tree|
+|BWT + FM-index|Molto compatto|Comprimibile, reversibile, ricercabile|
+
+---
+
+## Hash Table
+
+Si costruisce una struttura stile dizionario in cui ogni sottostringa è una **chiave** a cui corrispondono i **valori delle posizioni** in cui quella chiave appare nel testo.
+
+---
+
+## Trees e Tries
+
+### Trie a lunghezza fissa
+
+Si costruisce un indice usando sottostringhe di lunghezza fissa (es. lunghezza 2, saltando ogni altra sottostringa). La lista ordinata viene convertita in una **trie**, che mappa ogni sottostringa alla sua posizione (offset).
+
+Proprietà di ogni trie:
+
+- Ogni **arco** è etichettato con un carattere dell'alfabeto
+- Ogni **nodo** ha un singolo arco uscente per ogni carattere dell'alfabeto
+- Ogni **chiave** (sottostringa) si estende lungo un percorso dalla radice
+
+### Suffix Trie
+
+Un'estensione più potente: invece di sottostringhe a lunghezza fissa, si usano tutti i **suffissi** della stringa.
+
+Prendendo $T = \text{abaaba\$}$, dove `$` marca la terminazione:
+
+- Ogni suffisso è rappresentato da un percorso dalla radice a una foglia
+- Il carattere `$` garantisce che ogni suffisso abbia un percorso unico (senza il `$`, alcuni suffissi non avrebbero percorsi distinti)
+- Ogni nodo è etichettato con la stringa formata da tutti i caratteri lungo il cammino dalla radice al nodo
+
+La suffix trie permette di:
+
+- Verificare rapidamente se un pattern è presente nel testo
+- Verificare se una stringa è suffisso del testo
+- Contare quante volte una sottostringa appare nel testo
+
+### Suffix Tree
+
+Collassando tutti i **percorsi non ramificanti** nella suffix trie e concatenando le etichette, si ottiene il **suffix tree**: ogni foglia è etichettata con l'offset del corrispondente suffisso.
+
+La logica è uguale alla suffix trie, con la differenza che lungo alcuni archi solo una **porzione** dei caratteri dell'etichetta combacerà durante la ricerca.
+
+> **Applicazione comune**: trovare la più lunga sottosequenza comune tra due sequenze genomiche.
+
+**Svantaggio**: occupa ~**47 GB** per il genoma umano intero.
+
+---
+
+## Suffix Array
+
+Il suffix array offre una soluzione più **compatta** rispetto al suffix tree. Specifica un **ordine lessicografico** ordinando tutti i suffissi derivati dal testo $T$.
+
+Non richiede una struttura ad albero per la rappresentazione → utilizza vastamente meno memoria:
+
+| Struttura    | Spazio |
+| ------------ | ------ |
+| Suffix Tree  | ~47 GB |
+| Suffix Array | ~12 GB |
+
+---
+
+## Burrows-Wheeler Transform (BWT)
+
+La BWT è una **permutazione reversibile** di una stringa con tre caratteristiche fondamentali che la rendono ideale per rappresentazioni compatte di dati genomici:
+
+1. **Comprimibile** — la stringa trasformata è facilmente comprimibile
+2. **Invertibile** — può essere invertita per ricostruire la stringa originale
+3. **Ricercabile** — può essere usata direttamente come indice
+
+### Costruzione della BWT
+
+1. Si aggiunge `$` alla fine della stringa
+2. Si generano tutte le rotazioni della stringa
+3. Si ordinano le rotazioni lessicograficamente (**T-Ranking**)
+4. La BWT è l'**ultima colonna** (L) della matrice ordinata; la **prima colonna** (F) contiene i caratteri in ordine lessicografico
+
+> L'ordine del ranking viene mantenuto coerentemente tra la prima colonna (F) e l'ultima colonna (L).
+
+### LF Mapping (ricostruzione)
+
+Il **mapping LF** permette di ricostruire il testo originale dalla BWT. Si legge da destra verso sinistra:
+
+1. Si inizia dalla prima riga → F contiene `$`, L contiene il carattere immediatamente prima di `$` (es. `a₀`)
+2. LF indica a quale riga in F corrisponde quella occorrenza in L
+3. Si salta alla riga corrispondente in F e si legge il nuovo carattere in L
+4. Si ripete fino a raggiungere `$`
+
+Il mapping LF può essere usato anche per **ricercare una sottostringa** nella BWT: si verifica se il range di righe che iniziano con il pattern si restringe ad un insieme non vuoto.
+
+> **Esempio**: cercare `aba` nella BWT restringerà progressivamente il range. Cercare `bba` non produrrà alcun match se la stringa non è presente.
+
+### Svantaggi della BWT
+
+- Difficoltà nel determinare **dove** si trovano i match nel genoma (la BWT da sola non fornisce le posizioni)
+- Alcune limitazioni di prestazioni su certi pattern
+
+---
+
+## FM-Index (Full-text index in Minute space)
+
+Combinare la BWT con strutture dati ausiliarie produce l'**FM-index**, che risolve il problema della localizzazione dei match.
+
+Le componenti dell'FM-index utilizzate per allineare read al genoma sono:
+
+|Componente|Funzione|
+|---|---|
+|**Tally**|Conta le occorrenze cumulative di ogni carattere dall'inizio della colonna L|
+|**Checkpoints**|Sottoinsieme del Tally salvato a intervalli regolari per risparmiare spazio|
+|**Suffix Array**|Una volta trovata la sottostringa, la sua posizione nel genoma si trova al corrispondente indice nel Suffix Array|
