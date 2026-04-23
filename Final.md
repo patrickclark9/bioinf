@@ -26,6 +26,8 @@ Processo in cui si va a determinare l'intera sequenza del DNA di un genoma di un
 ## Target Enrinchment
 
 L'arricchimento consiste nel catturare, o arricchire, specifiche regioni di interesse, che possono essere esoni, ncRNA, o specifici geni, prima del sequenziamento.
+Le tecniche presentate sono utilizzate per l'arricchimento di DNA genomico, quindi non utilizzate per l'arricchimento di ncRNA. 
+Per ncRNA si utilizzano tecniche differenti data la loro complessa e diversificata struttura.
 
 ### Array Hybridization
 Approccio che consiste nell'utilizzare probe, piccoli olignonucleoitidi sintetici,  su un vetrino (array). DNA genomico viene introdotto sull'array, dove DNA target legherà i probe complementari sull'array, mentre il DNA non target viene rimosso. Il DNA catturato viene poi sequenziato
