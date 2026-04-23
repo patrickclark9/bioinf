@@ -137,3 +137,9 @@ Le componenti dell'FM-index utilizzate per allineare read al genoma sono:
 |**Tally**|Conta le occorrenze cumulative di ogni carattere dall'inizio della colonna L|
 |**Checkpoints**|Sottoinsieme del Tally salvato a intervalli regolari per risparmiare spazio|
 |**Suffix Array**|Una volta trovata la sottostringa, la sua posizione nel genoma si trova al corrispondente indice nel Suffix Array|
+
+---
+## Graph FM Index
+Il genome di riferimento hg38 non include varianti genomiche della popolazione umana.
+Protocolli di allineamento del sequenziamento basati su questo singolo genoma di reference sono a volte non in grado di allineare le read correttaemnte, specialmente quando il genoma di partenza è distante dalla reference.
+L'algoritmo HISAT2 implementa una struttura dati a grafo chiamata GraphFM index.
