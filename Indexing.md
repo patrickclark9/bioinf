@@ -70,4 +70,5 @@ Possiamo quidi usare il mapping LF per trovare una stringa in una BWT. es. sotto
 La BWT è molto compatta, ma ha svantaggi. Ad esempio, la difficoltà nel trovare dove i match sono nel genoma, oltre ad alcuni problemi di prestazioni.
 Combinare la BWT con strutture dati ausiliari come l'FM index (Full text index in Minute space), può aiutare.
 Le componenti dell'FM index utilizzate per allineare read al genoma sono Tally, Checkpoints e suffix arrays index.
-Tally-> conta le occorrenze di un carattere dall'inizio della colonna L. Per conservare spazio, solo un sottoinsieme di tally vengono memorizzate come checkpoint, salvati in intervalli regolari
+Tally-> conta le occorrenze di un carattere dall'inizio della colonna L. Per conservare spazio, solo un sottoinsieme di tally vengono memorizzate come checkpoint, salvati in intervalli regolari.
+Trovata la sottostringa, la sua occorrenza nel genoma sarà a Suffix Array K
