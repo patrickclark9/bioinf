@@ -167,10 +167,10 @@ Ogni allineamento ha 11 campi mandatori per informazioni di allineamento essenzi
 - RNAME -> Reference sequence name
 - POS -> 1-based position
 - MAPQ -> Mapping quality
-- CIGAR -> Riassunto dell'allineamento: inserzioni, delezioni
+- CIGAR -> Riassunto dell'allineamento: inserzioni, delezioni. Sono diversi operatori, come M I D N S H P = X, ognuno significa qualcosa, M -> alignment match, I -> Insertion, D -> Deletion N -> Skipped region from reference, S-> Soft clipping (clipped seq present in SEQ), H -> hard clipping (clipped sequence not Present in seq). Precede un numero all'operatore indicando quanti nucleotidi hanno quella proprietà (2S5M-> i primi due sono soft-clippati, i successivi 5nt sono Match)
 - RNEXT -> reference sequence name dell'allineamento primario della NEXT read. per pair-end sequencing, NEXT read è la read paired, corrispondente alla colonna RNAME
 - PNEXT -> Posizione dell'allineamento primario della NEXT read nel template. 0 quando non disponibile. Corrisponde alla colonna POS
 - TLEN -> Numero di basi coperte da read dello stesso frammento. +/- significa che la read attuale è la più a sinistra/destra. E.g. comparazione tra prima e ultima riga.
 - SEQ -> la sequenza della read
 - QUAL -> La qualità della read. * significa che non è disponibile
-- Optional Fields TAG\:TYPE\:VALUE
+- Optional Fields TAG\:TYPE\:VALUE. Ogni tag può apparire una sola volta ed è una stringa di 2 caratteri. Ordine non  è importante. TYPE definisce il tipo del VALUE (A->Carattere, C -> Intero 8bit, f->Numero reale, H -> array esadecimale, i -> intero 32?, Z-> stringa.
