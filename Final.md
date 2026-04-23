@@ -15,4 +15,9 @@ Alcune applicazioni delle piattaforme NGS sono:
 - RNA Editing
 - Metatrascrittomica (analisi funzionale di campioni ambientali)
 
-##
+## Genome Resequencing
+
+Consiste nel sequenziare nuovamente l'intero genoma di una specie di cui si ha un genoma di reference, permettendo l'indetificazione di varianti come SNP, indel, e varianti strutturali
+
+## Whole Genome Sequencing
+Processo in cui si va a determinare l'intera sequenza del DNA di un genoma di un organismo , incluso cromosomale e mitocondriale.
