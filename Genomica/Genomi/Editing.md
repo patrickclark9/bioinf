@@ -193,7 +193,7 @@ Quando l'ECS si trova in un **esone** (pannello B), la struttura dsRNA si forma 
 ECS INTRONICA
 ─────────────────────────────────────────────────────
 Pre-mRNA:   [Esone A]──────[Introne (ECS)]──────[Esone B]
-                  ↑ editing dsRNA si forma qui
+			                  ↑ editing dsRNA si forma qui
                   
 Se ADAR agisce PRIMA dello splicing → editing avviene ✅
 Se splicing avviene PRIMA → introne rimosso, ECS scompare → no editing ❌
