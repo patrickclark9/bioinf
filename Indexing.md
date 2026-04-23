@@ -55,4 +55,14 @@ La BW è una permutazione reversibile di una stringa. Ha tre importanti feature 
 - Può essere compressa
 - Può essere invertita per ricostruire la stringa originale
 - Può essere usata come indice
-Prendendo la stringa or
+Prendendo la stringa originale, si aggiunge $ alla fine della stringa e si ordina per carattere nel test (T-Ranking)
+L'ordine del ranking viene mantenuto tra la prima colonna e l'ultima colonna.
+Si prende poi la colonna F e la colonna L e si organizzano i caratteri in ordine di apparizione.
+Il mapping LF può essere usato per ricostruire il testo originale dalla sua trasformata in BW.
+Si inizia a leggere dalla destra nella stringa T e ci si muove verso sinistra.
+
+Inizio nella prima riga -> F deve avere $. L contiene un carattere appena prima di $. es a0
+a0: LF dice che questa  occorenza di a è la prima a in F. Si salta alla riga che inizia con a0. L contiene il carattere appena prima di a0, b0.
+Si ripete per b0 ottenendo a2. Si ripete per a2 ottenendo a1, per a1 si ottiebe b1, per b1 si ottiene a3, per a3 si ottiene $, quindi termina l'algoritmo.
+
+Possiamo quidi usare il mapping LF per trovare una stringa in una BWT. es. sottostringa aba in BWT  o bba, che non risulterà in alcun match 
