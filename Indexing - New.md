@@ -142,4 +142,11 @@ Le componenti dell'FM-index utilizzate per allineare read al genoma sono:
 ## Graph FM Index
 Il genome di riferimento hg38 non include varianti genomiche della popolazione umana.
 Protocolli di allineamento del sequenziamento basati su questo singolo genoma di reference sono a volte non in grado di allineare le read correttaemnte, specialmente quando il genoma di partenza è distante dalla reference.
+Di base la reference potrebbe anche non contenere le varianti più comuni per locus
 L'algoritmo HISAT2 implementa una struttura dati a grafo chiamata GraphFM index.
+
+Assumendo una sequenza di 6 bp, contenente SNP e indel.
+Creiamo la rappresentazione grafica della sequenza + varianti.
+Segue uno step di prefix doubling e pruning delle ramificazioni.
+Il prefix doubling consiste del creare altri prefissi per i diversi percorsi.
+Infine si crea una rappresentazione tabular dei grafi ordinati per prefisso.
