@@ -154,7 +154,7 @@ Attributi principali:
 
 Formato semplice e computazionalmente efficiente. Ogni riga è un record completo, con **minimo 3 colonne** e fino a 9 colonne opzionali.
 
-> ⚠️ Il sistema di coordinate BED è **0-based per chromStart** e **1-based per chromEnd**. Un nucleotide in posizione 1 nel genoma avrà `start = 0` e `end = 1` — a differenza di GFF/GTF che usano coordinate 1-based.
+> Il sistema di coordinate BED è **0-based per chromStart** e **1-based per chromEnd**. Un nucleotide in posizione 1 nel genoma avrà `start = 0` e `end = 1` — a differenza di GFF/GTF che usano coordinate 1-based.
 
 | #   | Campo           | Descrizione                                                                                  |
 | --- | --------------- | -------------------------------------------------------------------------------------------- |

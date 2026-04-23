@@ -193,7 +193,7 @@ Quando l'ECS si trova in un **esone** (pannello B), la struttura dsRNA si forma 
 ECS INTRONICA
 ─────────────────────────────────────────────────────
 Pre-mRNA:   [Esone A]──────[Introne (ECS)]──────[Esone B]
-			                  ↑ editing dsRNA si forma qui
+			               ↑ editing dsRNA si forma qui
                   
 Se ADAR agisce PRIMA dello splicing → editing avviene ✅
 Se splicing avviene PRIMA → introne rimosso, ECS scompare → no editing ❌
@@ -232,5 +232,5 @@ Le ADAR possono essere direzionate verso specifici nucleotidi all'interno del tr
 
 --- 
 ### Editing Detection
-Possiamo rilevare l'editing andando a confrontare il locus genomic con il corrispondente cDNA sequenziato con metodologia Sanger.
+Possiamo rilevare l'editing andando a confrontare il locus genomico con il corrispondente cDNA sequenziato con metodologia Sanger.
 La maggior parte degli eventi canditati sono stati identificati attraverso analisi computazionali poichè la rilevazioni di eventi di editing non è possibile per esperimenti su larga scala. Allineare mRNA/EST contro il genoma originale per verificare la presenza di eventi A->G è una delle possibilità.

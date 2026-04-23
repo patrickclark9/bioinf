@@ -134,7 +134,7 @@ I bead vengono depositati in una **PicoTiter Plate** insieme ai bead enzima, cen
 |Primer|Devono essere adeguati per il macchinario|
 |dNTP|TTP, GTP, CTP e Adenosin-α-tio-trifosfato|
 
-> ⚠️ Al posto dell'ATP normale si usa l'**Adenosin-α-tio-trifosfato**: è riconosciuto dalla polimerasi ma non dalla luciferasi, così da verificare la complementarietà dell'adenina senza produrre un segnale luminoso spurio.
+>  Al posto dell'ATP normale si usa l'**Adenosin-α-tio-trifosfato**: è riconosciuto dalla polimerasi ma non dalla luciferasi, così da verificare la complementarietà dell'adenina senza produrre un segnale luminoso spurio.
 
 ### Protocollo di Sequenziamento
 
