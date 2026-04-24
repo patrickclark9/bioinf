@@ -418,3 +418,22 @@ L'adattatore viene digerito, lasciando solo la molecola di RNA.
 Si applica la RevTrans e si incorpora l'UMI.
 Si ligano gli adattatori di sequenziamento montanti la Motor Protein al 3'.
 Si ottiene un sequenziamento diretto dell'RNA così, poichè si rimuove la motor Protein dal cDNA ottenuto per reverse transcriptase, che infatti è opzionale
+
+
+
+## Graph FM Index
+Il genome di riferimento hg38 non include varianti genomiche della popolazione umana.
+Protocolli di allineamento del sequenziamento basati su questo singolo genoma di reference sono a volte non in grado di allineare le read correttaemnte, specialmente quando il genoma di partenza è distante dalla reference.
+Di base la reference potrebbe anche non contenere le varianti più comuni per locus
+L'algoritmo HISAT2 implementa una struttura dati a grafo chiamata GraphFM index.
+
+Assumendo una sequenza di 6 bp, contenente SNP e indel.
+Creiamo la rappresentazione grafica della sequenza + varianti.
+Segue uno step di prefix doubling e pruning delle ramificazioni.
+Questa è una tecnica di compressione in cui prima si individuano tutti path di lunghezza 1.
+Dopo i path di lunghezza 1 si identificano tutti i path di lunghezza 2, 4,8  cosi via.
+Conoscendo il cammino ordinato di lunghezza k, possiamo identificare i cammini di lunghezza 2k concatenandoli e ordinando i risultati.
+Il processo continua ifnchè la lunghezza del cammino è >= alla lunghezza della read da mappare.
+Il prefix doubling consiste del creare altri prefissi per i diversi percorsi, ottenendo un indice compresso di tutti i possibili cammini attraverso il grafo fino ad una specifica lunghezza.
+Infine si crea una rappresentazione tabulare dei grafi ordinati per prefisso.
+La ricerca inizia leggendo la read, una volta raggiunto un nodo del grafo con molteplici nodi entranti o uscenti, vengono attraversati tutti i percorsi contemporaneamente. Viene mantenuto un insieme di nodi attivi, ovvero nodi che matchano la read, e si esplorano tutti.
