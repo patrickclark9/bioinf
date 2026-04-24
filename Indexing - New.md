@@ -132,11 +132,11 @@ Combinare la BWT con strutture dati ausiliarie produce l'**FM-index**, che risol
 
 Le componenti dell'FM-index utilizzate per allineare read al genoma sono:
 
-|Componente|Funzione|
-|---|---|
-|**Tally**|Conta le occorrenze cumulative di ogni carattere dall'inizio della colonna L|
-|**Checkpoints**|Sottoinsieme del Tally salvato a intervalli regolari per risparmiare spazio|
-|**Suffix Array**|Una volta trovata la sottostringa, la sua posizione nel genoma si trova al corrispondente indice nel Suffix Array|
+| Componente       | Funzione                                                                                                          |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Tally**        | Conta le occorrenze cumulative di ogni carattere dall'inizio della colonna L                                      |
+| **Checkpoints**  | Sottoinsieme del Tally salvato a intervalli regolari per risparmiare spazio                                       |
+| **Suffix Array** | Una volta trovata la sottostringa, la sua posizione nel genoma si trova al corrispondente indice nel Suffix Array |
 
 ---
 ## Graph FM Index
@@ -157,21 +157,77 @@ Infine si crea una rappresentazione tabulare dei grafi ordinati per prefisso.
 La ricerca inizia leggendo la read, una volta raggiunto un nodo del grafo con molteplici nodi entranti o uscenti, vengono attraversati tutti i percorsi contemporaneamente. Viene mantenuto un insieme di nodi attivi, ovvero nodi che matchano la read, e si esplorano tutti. 
 
 
-## Formato SAM/BAM
+# Formato SAM/BAM
 
-Il formato SAM sta per sequence alignment/map format. È un formato tab-delimited che consiste in una sezione header, opzionale, una sezione allineamento.
-Ogni allineamento ha 11 campi mandatori per informazioni di allineamento essenziali, come mappaggio delle posizioni, e diversi campi opzionali per informazioni allineamento-specifiche o generali.
+Il formato **SAM** (Sequence Alignment/Map) è un formato tab-delimited composto da:
 
-- QNAME -> readID
-- FLAG -> Informazioni sull'allineamento della read: paired aligned: Il flagscore è un decimale usato per rappresentare un binario specifico. Il flag sono 12bit, in cui ogni bit rappresenta un attributo diverso, con 0 = false e 1 = true. Un valore decimale di 3 corrisponde a 000000000011, quindi flippati solo i bit corrispondenti a pair-end read e allineate appropriatamente, dove appropriatamente significa che entrambe le read in una coppia sono orientate una verso l'altra (fwd, rvrs), sullo stesso contig e sono a distanza attesa l'una dall'altra. Altra nota è il flag all'ottavo bit che significa che la read è un allineamento secondario. In questo caso secondario fa riferimento al fatto che ha molteplici potenziali allineamenti e che questo non è la prima scelta tra tutti quelli disponibili. Valori decimali corrispondono ad un preciso bit flipping, e quindi ad una serie precisa di flag
-- RNAME -> Reference sequence name
-- POS -> 1-based position
-- MAPQ -> Mapping quality
-- CIGAR -> Riassunto dell'allineamento: inserzioni, delezioni. Sono diversi operatori, come M I D N S H P = X, ognuno significa qualcosa, M -> alignment match, I -> Insertion, D -> Deletion N -> Skipped region from reference, S-> Soft clipping (clipped seq present in SEQ), H -> hard clipping (clipped sequence not Present in seq). Precede un numero all'operatore indicando quanti nucleotidi hanno quella proprietà (2S5M-> i primi due sono soft-clippati, i successivi 5nt sono Match)
-- RNEXT -> reference sequence name dell'allineamento primario della NEXT read. per pair-end sequencing, NEXT read è la read paired, corrispondente alla colonna RNAME
-- PNEXT -> Posizione dell'allineamento primario della NEXT read nel template. 0 quando non disponibile. Corrisponde alla colonna POS
-- TLEN -> Numero di basi coperte da read dello stesso frammento. +/- significa che la read attuale è la più a sinistra/destra. E.g. comparazione tra prima e ultima riga.
-- SEQ -> la sequenza della read
-- QUAL -> La qualità della read. * significa che non è disponibile
-- Optional Fields TAG\:TYPE\:VALUE. Ogni tag può apparire una sola volta ed è una stringa di 2 caratteri. Ordine non  è importante. TYPE definisce il tipo del VALUE (A->Carattere, C -> Intero 8bit, f->Numero reale, H -> array esadecimale, i -> intero 32?, Z-> stringa.
+- Una sezione **header** (opzionale)
+- Una sezione **allineamento**
 
+Ogni allineamento ha **11 campi mandatori** per le informazioni essenziali (posizioni di mappaggio, ecc.) e diversi **campi opzionali** per informazioni specifiche.
+
+---
+
+## Campi Mandatori
+
+|Campo|Descrizione|
+|---|---|
+|**QNAME**|Read ID|
+|**FLAG**|Informazioni sull'allineamento (vedi sotto)|
+|**RNAME**|Reference sequence name|
+|**POS**|Posizione 1-based nel reference|
+|**MAPQ**|Mapping quality|
+|**CIGAR**|Riassunto dell'allineamento: inserzioni, delezioni, ecc. (vedi sotto)|
+|**RNEXT**|Reference sequence name dell'allineamento primario della read accoppiata. Corrisponde a RNAME per il paired-end|
+|**PNEXT**|Posizione dell'allineamento primario della read accoppiata. `0` quando non disponibile. Corrisponde a POS|
+|**TLEN**|Numero di basi coperte dalle read dello stesso frammento. `+/-` indica se la read attuale è la più a sinistra/destra|
+|**SEQ**|Sequenza della read|
+|**QUAL**|Qualità della read. `*` indica non disponibile|
+
+---
+
+## FLAG
+
+Il FLAG è un valore decimale che rappresenta un **numero binario a 12 bit**, dove ogni bit rappresenta un attributo diverso (`0` = false, `1` = true).
+
+> **Esempio**: valore decimale `3` → `000000000011` → solo i primi due bit sono attivi → la read è paired-end ed è allineata appropriatamente (entrambe le read della coppia sono orientate una verso l'altra, sullo stesso contig e a distanza attesa).
+
+Nota importante: il bit alla posizione 8 indica che la read è un **allineamento secondario** — ovvero ha molteplici potenziali allineamenti e quello corrente non è la prima scelta tra quelli disponibili.
+
+---
+
+## CIGAR
+
+Il campo CIGAR riassume l'allineamento con una stringa di operatori, ognuno preceduto dal numero di nucleotidi a cui si applica.
+
+> **Esempio**: `2S5M` → i primi 2 nt sono soft-clippati, i successivi 5 nt sono match.
+
+|Operatore|Significato|
+|---|---|
+|`M`|Alignment match|
+|`I`|Insertion rispetto al reference|
+|`D`|Deletion rispetto al reference|
+|`N`|Skipped region dal reference|
+|`S`|Soft clipping (sequenza clippata **presente** in SEQ)|
+|`H`|Hard clipping (sequenza clippata **non presente** in SEQ)|
+|`P`|Padding (silent deletion da reference paddato)|
+|`=`|Sequence match|
+|`X`|Sequence mismatch|
+
+---
+
+## Campi Opzionali
+
+Formato: `TAG:TYPE:VALUE`
+
+- Ogni tag può apparire **una sola volta** ed è una stringa di **2 caratteri**
+- L'ordine dei campi opzionali non è importante
+
+|TYPE|Tipo di dato|
+|---|---|
+|`A`|Carattere|
+|`C`|Intero 8-bit|
+|`f`|Numero reale|
+|`H`|Array esadecimale|
+|`i`|Intero 32-bit|
+|`Z`|Stringa|
