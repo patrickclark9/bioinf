@@ -256,58 +256,128 @@ Approccio stile BLAST:
 
 **Svantaggio**: in media impiega **8 volte più tempo** dell'exon-first, risultando solo in 1.5 spliced read aggiuntive.
 
-## STAR
+---
 
-Per ogni read che STAR allinea, cerca la più lunga sequenza che corrisponde esattamente in una o più locazioni sul genoma di riferimento. Queste sequenze corrispondenti sono chiamate Maximal Mappable Prefixes (MMPs).
-STAR ripete la ricerca solo per la porzione della read non mappata per trovare la prossima più lunga sequenza che ha corrispondenza nel genoma di riferimento, o il prossimo MMP.
-La ricerca sequenziale di solo le porzioni non mappate raccoglie l'efficienza dell'algoritmo STAR. STAR uitlizza un uncompressed Suffix Array per ricercare velocemente MMP contro i genomi di riferimento più grandi.
-Se non viene trovato un match esatto per ogni parte della read per mismatch o indel, allora l'MMP precedente  viene esteso.
-Se l'estensione non ha un buon allineamento, allora la porzione a bassa qualità o l'adattatore viene soft-clipped.
-I seed separati vengono riuniti per creare una read completaprima clusterizzando i seed in base alla prossimità con un insieme di seed detti "anchor", che sono seed che non si trovano in condizioni di multi-mapping, poi riuniti in base all'allineamento migliore per la read (score dipende da mismatch, indel, gap e tutto ciò che impatta l'allineamento).
+## STAR (Spliced Transcripts Alignment to a Reference)
 
-## Ricostruzione del trascrittoma
-Sono due strategie principali
-- Genome Guided Approach:
-	- Si parte allineando le read contro il genoma
-	- I frammenti allineati contro il genoma di riferimento vengono assemblati a formare un grafo dei trascritti
-	- Il grafo dei trascritti viene parsato in trascritti
-	- Si ottengono i loci genomici assemblati dall'RNA frammentato
-	- Cufflink, Scripture utilizzano questo approccio
-- Genome Independent Approach:
-	- Si rompono le read in k-mer
-	- Si assemblano le read
-	- Si utilizza la strategia dei grafi di de Brujin per costruire l'assemblaggio
-	- Il grafo risultante viene parsato in sequenze
-	- Le quali vengono allineate contro il genoma, ottenendo i genomic loci assemblati dall'RNA frammentato
-	- Abyss, Trinity sono software che utilizzano questo approccio
+STAR utilizza un approccio basato sui **MMP** (Maximal Mappable Prefixes): per ogni read, cerca la sequenza più lunga che corrisponde esattamente in una o più locazioni sul genoma di riferimento.
 
-## Espressione Genica
-Le conte di RNA-seq necessitano di apposita normalizzazione prima di poter essere utilizzate. I principali fattori sono:
-- Sequencing Depth/Library Size -> Variabilità nel numero di read prodotta da ogni run. Questa variabilità può causare fluttuazioni nel numero di frammenti mappati tra i campioni
-- Gene Length -> La frammentazione dell'RNA durante la costruzione delle libreria porta i geni lunghi a creare più read in confronto ai trascritti corti, data medesima abbondanza nel campione
-- RNA-Composition -> Pochi geni altamente differenzialmente espressi, differenze nel numero di geni tra campione, o presenza di contaminazione può portare asimmetria in alcuni tipi di normalizzazione
+### Algoritmo
 
-### Normalizzazioni
+1. Si trova il primo MMP della read
+2. Si ripete la ricerca solo sulla **porzione non mappata** per trovare il successivo MMP
+3. Se non viene trovato un match esatto per mismatch o indel, l'MMP precedente viene **esteso**
+4. Se l'estensione non produce un buon allineamento, la porzione a bassa qualità o l'adattatore viene **soft-clipped**
+5. I seed separati vengono **riuniti** per ricostruire la read completa:
+    - Prima si clusterizzano i seed in base alla prossimità con un insieme di seed detti **anchor** (seed non in condizioni di multi-mapping)
+    - Poi si riuniscono in base all'allineamento migliore per la read (score dipende da mismatch, indel, gap e tutto ciò che impatta l'allineamento)
 
-#### RPM o CPM
-Count per million/ Read per million -> Basica, normalizza solo per la profondità di sequenziamento. CPM è fortemente biased in applicazioni dove la lunghezza del gene influenza la sua espressione, quindi RNA-seq
-$$\text{RPM or CPM} = \frac{\text{Nr of reads mapped to gene} \cdot 10^6}{\text{Total nr of mapped reads}}  $$
-Utile per comparazione tra conte per un gene tra repliche di un stesso gruppo di campioni. NON per comparazione nel campione o per DE analysis
-#### RPKM e FPKM
-Reads per kilobase million/ Fragments per kilobase million -> normalizza per lunghezza del gene e profondità del sequenziamento.
-$$RPKM = \frac{\text{Nr of reads mapped to gene} \cdot 10^3 \cdot 10^6}{\text{Total number of mapped reads} \cdot \text{gene length in bp}} $$
-$10^3$ normalizza per lunghezza del gene e $10^6$ normalizza per la profondità/library size
-Utile per comparazione tra conte di geni differenti in un campione. NON per comparazione tra campioni o per DE analysis.
-FPKM è uguale ma RPKM venne sviluppata per read single-end.
-FPKM invece tiene conto del fatto che due read corrispondono ad un singolo frammento, o se una read nella coppia non ha mappato, una read corrisponde al singolo frammento.
-RPKM -> Single end
-FPKM -> PairEnd
-#### TPM
-Transcript per million -> Alternativa alle F/RPKM. La media è costante ed è proporzionale alla concentrazione molare relativa di RNA.
-$$TPM = A \cdot \frac{1}{\sum{A}}\cdot 10^6$$
-$$A = \frac{\text{total read mapped to gene} \cdot 10^3}{\text{gene length in bp}}$$
-Utile per comparazione tra geni all'interno di un campione o tra campione. NON per DE analysis
+> STAR utilizza un **uncompressed Suffix Array** per ricercare velocemente gli MMP contro i genomi di riferimento più grandi. La ricerca sequenziale delle sole porzioni non mappate garantisce l'efficienza dell'algoritmo.
 
-### DE Analysis
-L'analisi dei differenzialmente espressi comparano le conte di geni tra campioni per uno stesso gene, la lunghezza del gene quindi non serve come fattore di normalizzazione, anzi potrebbe risultare anche detrimentale. Si utilizzano quindi tipi di normalizzazione diverse, che tengono in considerazione solo Sequencing Depth e RNA composition.
-Deseq2 utilizza una sua normalizzazione chiamata median of ratios.
+---
+
+## Ricostruzione del Trascrittoma
+
+Esistono due strategie principali:
+
+### Genome-Guided Approach
+
+1. Si allineano le read contro il genoma di riferimento
+2. I frammenti allineati vengono assemblati a formare un **grafo dei trascritti**
+3. Il grafo viene parsato in trascritti
+4. Si ottengono i **loci genomici** assemblati dall'RNA frammentato
+
+Software: **Cufflinks**, **Scripture**
+
+### Genome-Independent Approach
+
+1. Le read vengono rotte in **k-mer**
+2. Si assemblano le read usando la strategia dei **grafi di De Bruijn**
+3. Il grafo risultante viene parsato in sequenze
+4. Le sequenze vengono allineate contro il genoma → si ottengono i **loci genomici** assemblati dall'RNA frammentato
+
+Software: **ABySS**, **Trinity**
+
+---
+
+## Espressione Genica — Normalizzazione
+
+Le conte di RNA-seq necessitano di normalizzazione prima di poter essere utilizzate. I principali fattori da tenere in considerazione sono:
+
+|Fattore|Problema|
+|---|---|
+|**Sequencing Depth / Library Size**|Variabilità nel numero di read prodotte per run → fluttuazioni nel numero di frammenti mappati tra campioni|
+|**Gene Length**|La frammentazione dell'RNA porta i geni lunghi a generare più read rispetto ai trascritti corti, a parità di abbondanza|
+|**RNA Composition**|Pochi geni altamente differenzialmente espressi, differenze nel numero di geni tra campioni, o contaminazione possono introdurre asimmetria|
+
+---
+
+### RPM / CPM (Reads/Counts Per Million)
+
+Normalizza solo per la **profondità di sequenziamento**.
+
+$$\text{RPM/CPM} = \frac{\text{Nr. reads mappate al gene} \cdot 10^6}{\text{Nr. totale reads mappate}}$$
+
+- ✅ Comparazione tra conte per uno stesso gene tra repliche dello stesso gruppo
+- ❌ NON per comparazione tra geni nello stesso campione
+- ❌ NON per DE analysis
+- ⚠️ Fortemente biased in RNA-seq dove la lunghezza del gene influenza l'espressione
+
+---
+
+### RPKM / FPKM (Reads/Fragments Per Kilobase Million)
+
+Normalizza per **lunghezza del gene** e **profondità di sequenziamento**.
+
+$$\text{RPKM} = \frac{\text{Nr. reads mappate al gene} \cdot 10^3 \cdot 10^6}{\text{Nr. totale reads mappate} \cdot \text{lunghezza gene (bp)}}$$
+
+Dove $10^3$ normalizza per la lunghezza del gene e $10^6$ per la profondità/library size.
+
+|Metrica|Applicazione|
+|---|---|
+|**RPKM**|Read single-end|
+|**FPKM**|Read paired-end (due read = un singolo frammento; se una read della coppia non ha mappato, una read = un singolo frammento)|
+
+- ✅ Comparazione tra conte di geni diversi nello stesso campione
+- ❌ NON per comparazione tra campioni
+- ❌ NON per DE analysis
+
+---
+
+### TPM (Transcripts Per Million)
+
+Alternativa a RPKM/FPKM. La media è costante ed è proporzionale alla **concentrazione molare relativa** di RNA.
+
+$$A = \frac{\text{Nr. reads mappate al gene} \cdot 10^3}{\text{lunghezza gene (bp)}}$$
+
+$$\text{TPM} = A \cdot \frac{1}{\sum A} \cdot 10^6$$
+
+- ✅ Comparazione tra geni nello stesso campione
+- ✅ Comparazione tra campioni
+- ❌ NON per DE analysis
+
+---
+
+## DE Analysis (Analisi dell'Espressione Differenziale)
+
+La DE analysis compara le conte di uno stesso gene tra campioni diversi. La **lunghezza del gene non serve** come fattore di normalizzazione (anzi, potrebbe essere detrimentale). Si usano normalizzazioni che tengono conto solo di:
+
+- **Library Size** — numero di frammenti/read che mappano su un campione. Le differenze potrebbero non avere nulla a che fare con il fenomeno biologico. La lunghezza del gene non è considerata poiché si confronta lo stesso gene tra campioni, non geni diversi tra loro.
+- **Library Composition** — alcuni geni potrebbero essere specifici di un campione ma non di un altro. Questo **non è** espressione differenziale. La normalizzazione delle conte aiuta a rimuovere questo tipo di falsi positivi.
+
+**DESeq2** utilizza una normalizzazione chiamata **Median of Ratios**.
+
+### Median of Ratios (DESeq2)
+
+1. **Media geometrica** per ogni gene tra i campioni — più robusta agli outlier rispetto alla media aritmetica: $$\text{GeomMean} = \sqrt{\text{geneCount}_A \cdot \text{geneCount}_B}$$
+    
+2. **Divisione delle conte per la media geometrica**:
+    
+    - Untreated: $\frac{\text{Count}_\text{untreated}}{\text{GeomMean}}$
+    - Treated: $\frac{\text{Count}_\text{treated}}{\text{GeomMean}}$
+3. **Mediana dei rapporti** — si prende la mediana dei rapporti calcolati al passo 2 per ogni condizione (una mediana per untreated, una per treated) → questo è il **size factor**
+    
+4. **Divisione delle conte grezze per il size factor**:
+    
+    - Untreated diviso per la mediana dei rapporti di untreated
+    - Treated diviso per la mediana dei rapporti di treated
