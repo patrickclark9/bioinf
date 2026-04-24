@@ -280,3 +280,22 @@ Sono due strategie principali
 	- Il grafo risultante viene parsato in sequenze
 	- Le quali vengono allineate contro il genoma, ottenendo i genomic loci assemblati dall'RNA frammentato
 	- Abyss, Trinity sono software che utilizzano questo approccio
+
+## Espressione Genica
+Le conte di RNA-seq necessitano di apposita normalizzazione prima di poter essere utilizzate. I principali fattori sono:
+- Sequencing Depth/Library Size -> Variabilità nel numero di read prodotta da ogni run. Questa variabilità può causare fluttuazioni nel numero di frammenti mappati tra i campioni
+- Gene Length -> La frammentazione dell'RNA durante la costruzione delle libreria porta i geni lunghi a creare più read in confronto ai trascritti corti, data medesima abbondanza nel campione
+- RNA-Composition -> Pochi geni altamente differenzialmente espressi, differenze nel numero di geni tra campione, o presenza di contaminazione può portare asimmetria in alcuni tipi di normalizzazione
+
+### Normalizzazioni
+
+#### RPM o CPM
+Count per million/ Read per million -> Basica, normalizza solo per la profondità di sequenziamento. CPM è fortemente biased in applicazioni dove la lunghezza del gene influenza la sua espressione, quindi RNA-seq
+$$\text{RPM or CPM} = \frac{\text{Nr of reads mapped to gene}}{\text{Total nr of mapped reads}} \cdot 10^6 $$
+Utile per comparazione tra conte per un gene tra repliche di un stesso gruppo di campioni. NON per comparazione nel campione o per DE analysis
+#### RPKM e FPKM
+Reads per kilobase million/ Fragments per kilobase million -> normalizza per lunghezza del gene e profondità del sequenziamento.
+$$RPKM = \frac{\text{Nr of reads mapped to gene}}{\text{Total number of mapped reads} \cdot \text{gene length in bp}} \cdot 10^3 \cdot 10^6$$
+$10^3$ normalizza per lunghezza del gene e $10^6$ normalizza per la profondità/library size
+Utile per comparazione tra conte di geni differenti in un campione. NON per comparazione tra campioni o per DE analysis
+#### TPM
