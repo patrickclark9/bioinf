@@ -255,3 +255,10 @@ Approccio stile BLAST:
 3. Le regioni candidate vengono esplorate con metodi ad alta sensibilità: **Smith-Waterman** o estensione iterativa con merging dei seed iniziali, per determinare l'esatto allineamento spliced
 
 **Svantaggio**: in media impiega **8 volte più tempo** dell'exon-first, risultando solo in 1.5 spliced read aggiuntive.
+
+## STAR
+
+Per ogni read che STAR allinea, cerca la più lunga sequenza che corrisponde esattamente in una o più locazioni sul genoma di riferimento. Queste sequenze corrispondenti sono chiamate Maximal Mappable Prefixes (MMPs).
+STAR ripete la ricerca solo per la porzione della read non mappata per trovare la prossima più lunga sequenza che ha corrispondenza nel genoma di riferimento, o il prossimo MMP.
+La ricerca sequenziale di solo le porzioni non mappate raccoglie l'efficienza dell'algoritmo STAR. STAR uitlizza un uncompressed Suffix Array per ricercare velocemente MMP contro i genomi di riferimento più grandi.
+Se non viene trova
