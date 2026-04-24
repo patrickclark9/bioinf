@@ -264,3 +264,19 @@ La ricerca sequenziale di solo le porzioni non mappate raccoglie l'efficienza de
 Se non viene trovato un match esatto per ogni parte della read per mismatch o indel, allora l'MMP precedente  viene esteso.
 Se l'estensione non ha un buon allineamento, allora la porzione a bassa qualità o l'adattatore viene soft-clipped.
 I seed separati vengono riuniti per creare una read completaprima clusterizzando i seed in base alla prossimità con un insieme di seed detti "anchor", che sono seed che non si trovano in condizioni di multi-mapping, poi riuniti in base all'allineamento migliore per la read (score dipende da mismatch, indel, gap e tutto ciò che impatta l'allineamento).
+
+## Ricostruzione del trascrittoma
+Sono due strategie principali
+- Genome Guided Approach:
+	- Si parte allineando le read contro il genoma
+	- I frammenti allineati contro il genoma di riferimento vengono assemblati a formare un grafo dei trascritti
+	- Il grafo dei trascritti viene parsato in trascritti
+	- Si ottengono i loci genomici assemblati dall'RNA frammentato
+	- Cufflink, Scripture utilizzano questo approccio
+- Genome Independent Approach:
+	- Si rompono le read in k-mer
+	- Si assemblano le read
+	- Si utilizza la strategia dei grafi di de Brujin per costruire l'assemblaggio
+	- Il grafo risultante viene parsato in sequenze
+	- Le quali vengono allineate contro il genoma, ottenendo i genomic loci assemblati dall'RNA frammentato
+	- Abyss, Trinity sono software che utilizzano questo approccio
