@@ -291,11 +291,23 @@ Le conte di RNA-seq necessitano di apposita normalizzazione prima di poter esser
 
 #### RPM o CPM
 Count per million/ Read per million -> Basica, normalizza solo per la profondità di sequenziamento. CPM è fortemente biased in applicazioni dove la lunghezza del gene influenza la sua espressione, quindi RNA-seq
-$$\text{RPM or CPM} = \frac{\text{Nr of reads mapped to gene}}{\text{Total nr of mapped reads}} \cdot 10^6 $$
+$$\text{RPM or CPM} = \frac{\text{Nr of reads mapped to gene} \cdot 10^6}{\text{Total nr of mapped reads}}  $$
 Utile per comparazione tra conte per un gene tra repliche di un stesso gruppo di campioni. NON per comparazione nel campione o per DE analysis
 #### RPKM e FPKM
 Reads per kilobase million/ Fragments per kilobase million -> normalizza per lunghezza del gene e profondità del sequenziamento.
-$$RPKM = \frac{\text{Nr of reads mapped to gene}}{\text{Total number of mapped reads} \cdot \text{gene length in bp}} \cdot 10^3 \cdot 10^6$$
+$$RPKM = \frac{\text{Nr of reads mapped to gene} \cdot 10^3 \cdot 10^6}{\text{Total number of mapped reads} \cdot \text{gene length in bp}} $$
 $10^3$ normalizza per lunghezza del gene e $10^6$ normalizza per la profondità/library size
-Utile per comparazione tra conte di geni differenti in un campione. NON per comparazione tra campioni o per DE analysis
+Utile per comparazione tra conte di geni differenti in un campione. NON per comparazione tra campioni o per DE analysis.
+FPKM è uguale ma RPKM venne sviluppata per read single-end.
+FPKM invece tiene conto del fatto che due read corrispondono ad un singolo frammento, o se una read nella coppia non ha mappato, una read corrisponde al singolo frammento.
+RPKM -> Single end
+FPKM -> PairEnd
 #### TPM
+Transcript per million -> Alternativa alle F/RPKM. La media è costante ed è proporzionale alla concentrazione molare relativa di RNA.
+$$TPM = A \cdot \frac{1}{\sum{A}}\cdot 10^6$$
+$$A = \frac{\text{total read mapped to gene} \cdot 10^3}{\text{gene length in bp}}$$
+Utile per comparazione tra geni all'interno di un campione o tra campione. NON per DE analysis
+
+### DE Analysis
+L'analisi dei differenzialmente espressi comparano le conte di geni tra campioni per uno stesso gene, la lunghezza del gene quindi non serve come fattore di normalizzazione, anzi potrebbe risultare anche detrimentale. Si utilizzano quindi tipi di normalizzazione diverse, che tengono in considerazione solo Sequencing Depth e RNA composition.
+Deseq2 utilizza una sua normalizzazione chiamata median of ratios.
