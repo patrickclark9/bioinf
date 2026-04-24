@@ -261,4 +261,6 @@ Approccio stile BLAST:
 Per ogni read che STAR allinea, cerca la più lunga sequenza che corrisponde esattamente in una o più locazioni sul genoma di riferimento. Queste sequenze corrispondenti sono chiamate Maximal Mappable Prefixes (MMPs).
 STAR ripete la ricerca solo per la porzione della read non mappata per trovare la prossima più lunga sequenza che ha corrispondenza nel genoma di riferimento, o il prossimo MMP.
 La ricerca sequenziale di solo le porzioni non mappate raccoglie l'efficienza dell'algoritmo STAR. STAR uitlizza un uncompressed Suffix Array per ricercare velocemente MMP contro i genomi di riferimento più grandi.
-Se non viene trova
+Se non viene trovato un match esatto per ogni parte della read per mismatch o indel, allora l'MMP precedente  viene esteso.
+Se l'estensione non ha un buon allineamento, allora la porzione a bassa qualità o l'adattatore viene soft-clipped.
+I seed separati vengono riuniti per creare una read completaprima clusterizzando i seed in base alla prossimità con un insieme di seed detti "anchor", che sono seed che non si trovano in condizioni di multi-mapping, poi riuniti in base all'allineamento migliore per la read (score dipende da mismatch, indel, gap e tutto ciò che impatta l'allineamento).
