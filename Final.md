@@ -318,10 +318,12 @@ Normalizza solo per la **profondità di sequenziamento**.
 
 $$\text{RPM/CPM} = \frac{\text{Nr. reads mappate al gene} \cdot 10^6}{\text{Nr. totale reads mappate}}$$
 
-- ✅ Comparazione tra conte per uno stesso gene tra repliche dello stesso gruppo
-- ❌ NON per comparazione tra geni nello stesso campione
-- ❌ NON per DE analysis
-- ⚠️ Fortemente biased in RNA-seq dove la lunghezza del gene influenza l'espressione
+**Vantaggi**
+ - Comparazione tra conte per uno stesso gene tra repliche dello stesso gruppo
+**Svanataggi**
+- NON per comparazione tra geni nello stesso campione
+- NON per DE analysis
+- Fortemente biased in RNA-seq dove la lunghezza del gene influenza l'espressione
 
 ---
 
@@ -333,14 +335,16 @@ $$\text{RPKM} = \frac{\text{Nr. reads mappate al gene} \cdot 10^3 \cdot 10^6}{\t
 
 Dove $10^3$ normalizza per la lunghezza del gene e $10^6$ per la profondità/library size.
 
-|Metrica|Applicazione|
-|---|---|
-|**RPKM**|Read single-end|
-|**FPKM**|Read paired-end (due read = un singolo frammento; se una read della coppia non ha mappato, una read = un singolo frammento)|
+| Metrica  | Applicazione                                                                                                                |
+| -------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **RPKM** | Read single-end                                                                                                             |
+| **FPKM** | Read paired-end (due read = un singolo frammento; se una read della coppia non ha mappato, una read = un singolo frammento) |
 
-- ✅ Comparazione tra conte di geni diversi nello stesso campione
-- ❌ NON per comparazione tra campioni
-- ❌ NON per DE analysis
+**Vantaggi**
+-  Comparazione tra conte di geni diversi nello stesso campione
+**Svantaggi**
+-  NON per comparazione tra campioni
+-  NON per DE analysis
 
 ---
 
@@ -352,9 +356,11 @@ $$A = \frac{\text{Nr. reads mappate al gene} \cdot 10^3}{\text{lunghezza gene (b
 
 $$\text{TPM} = A \cdot \frac{1}{\sum A} \cdot 10^6$$
 
-- ✅ Comparazione tra geni nello stesso campione
-- ✅ Comparazione tra campioni
-- ❌ NON per DE analysis
+**Vantaggi**
+-  Comparazione tra geni nello stesso campione
+-  Comparazione tra campioni
+**Svantaggi**
+-  NON per DE analysis
 
 ---
 
