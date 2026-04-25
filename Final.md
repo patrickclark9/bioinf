@@ -1,3 +1,8 @@
+---
+id: Final
+aliases: []
+tags: []
+---
 
 # Applicazioni di NGS
 
@@ -387,3 +392,36 @@ La DE analysis compara le conte di uno stesso gene tra campioni diversi. La **lu
     
     - Untreated diviso per la mediana dei rapporti di untreated
     - Treated diviso per la mediana dei rapporti di treated
+
+
+## Gene Fusions
+
+Dall'RNA-seq è possibile identificare **fusioni geniche**, come la **BCR:ABL** derivata da una traslocazione reciproca tra chr9 e chr22.
+
+Mentre indel e mutazioni puntiformi possono essere catturate con il Whole Exome Sequencing, i riarrangiamenti genomici richiedono tipicamente WGS. L'RNA-seq fornisce l'**esoma espresso**, catturando solo le regioni genomicamente trascrizionalmente attive, permettendo di identificare riarrangiamenti strutturali senza dover ricostruire l'intero genoma.
+
+### Strategie di Rilevamento
+
+| Approccio | Descrizione |
+|---|---|
+| **Mapping-first** | Si allineano le read al genoma per identificare read mappate discordanti, che suggeriscono riarrangiamenti |
+| **Assembly-first** | Si assemblano direttamente le read in trascritti più lunghi, seguita dall'identificazione di trascritti chimerici consistenti con riarrangiamenti cromosomici |
+
+### Tipi di Read per la Rilevazione
+
+Un riarrangiamento viene misurato da due tipi di evidenza:
+
+- **Read chimeriche** (split o junction read) — hanno un overlap diretto con la junction chimerica del trascritto di fusione
+- **Read discordanti** (bridging read pair / fusion-spanning read pair) — ogni read mappa su lati opposti della junction chimerica, senza overlap diretto della junction
+### Software
+
+- **STAR-fusion** — utilizza gli allineamenti identificati da STAR come chimerici e discordanti per la predizione delle fusioni
+- **TrinityFusion** — utilizza read chimeriche e assembly del trascrittoma per ricostruire i trascritti di fusione e identificare candidati
+### Note
+
+> La fusion detection è fortemente influenzata dai **livelli di espressione**: livelli troppo bassi (ma anche semplicemente non elevati) riducono la capacità di identificare trascritti di fusione.
+
+Il **sequenziamento long-read** aumenta significativamente la capacità di rilevamento, specialmente per i metodi basati sull'assembly.
+
+
+

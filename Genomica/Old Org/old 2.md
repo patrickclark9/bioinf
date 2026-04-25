@@ -1,3 +1,8 @@
+---
+id: old 2
+aliases: []
+tags: []
+---
 
 # Applicazioni di NGS
 
@@ -183,3 +188,24 @@ Median of ratios:
 2. Divide Counts by geometric mean -> Counts/GeometricMean: Count for untreated / GeomMean; Counts for Treated / GeomMean
 3. Median of Ratios -> Grab the median of the ratios calculated in step 2. One median of untreated, one median for treated.
 4. Divide the raw counts by the size factor. Size factor is  the Median of Ratios. So untreated will be divided by Median of Ratio of Untreated, while treated will be divided by Median of Ratio of Treated.
+
+
+## Gene Fusions
+Dall'RNA-seq possiamo anche identificare fusioni geniche, come la BCR:ABL derivata da una traslocazione reciproca tra chr9 e chr22.
+Rilevazione di indel e mutazioni puntiformi possono essere catturate con un semplice Whole Exome Sequencing, tipicamente riarrangiamenti genomici richiede WGS.
+L'RNA seq ci fornisce l'esoma espresso, catturando solo le regioni genomiche trascrizionalmente attive, dandoci la possibilità di identificare di trovare e identificare riarrangiamenti strutturali senza dover ricostruire l'intero genoma.
+Tipicamente l'RNA-seq based fusion detection viene effettuata secondo due strategie:
+1. Mapping first approach -> Si allineano le read dell'RNA-seq a geni e genomi per identificare read mappate discordanti, che possono suggerire riarrangiamenti
+2. Assembly first approach -> Si assemblano direttamente le read in trascritti più lunghi seguita dall'identificazione di trascritti chimerici consistenti con riarrangiamenti cromosomici.
+
+Tipicamente un riarrangiamento viene misurato dal numero di frammenti trovati che sono read chimeriche (split o junction) che hanno un overlap diretto con la junction chimerica del trascritto di fusione, oppure coppie di read discordanti (bridging read pair o fusion-spanning read), dove ogni read mappa su lati opposti della junction chimerica senza un diretto overlap della junction chimerica stessa.
+
+L'algoritmo STAR-fusion utilizza allineamenti identificati dall'allineatore STAR come chimerici e discordanti per la predizione delle fusioni. TrinityFusion ad esempio invece utilizza read chimeriche e assembly del trascrittoma per ricostruire i trascritti di fusione e identificare candidati per fusione.
+
+In generale la fusion detection è fortemente influenzata dai livelli di espressione, dove livelli di espressione troppo bassi, ma anche non eccessivamente, risultano in una ridotta capacità di identificare trascritti di fusione.
+
+Sequenziamento Long-read aumenta significativamente la capacità di rilevamento di fusione, specialmente per i metodi basati sull'assembly.
+
+
+
+
