@@ -423,5 +423,34 @@ Un riarrangiamento viene misurato da due tipi di evidenza:
 
 Il **sequenziamento long-read** aumenta significativamente la capacità di rilevamento, specialmente per i metodi basati sull'assembly.
 
+## SmallRNA detection
 
+L'RNA-seq viene utilizzato anche per la rilevazione di piccoli RNA come i miRNA.
+Si inizia con un processo di arricchimento detto size-selection. La tecnica di laboratorio utilizzata si chiama PAGE (Polyacrylamide Gel Electrophoresis), che separa e purifica small RNA di dimensioni inferiori a 35bp.
+Dopo questa fase di size selection segue la ligazione degli adattori e la trascrizione inversa.
+Segue un secondo processo di size selection dove vengono rimossi ulteriori RNA. Si procede al sequenziamento.
 
+Per miRNA:
+- Post-PAGE potrebbe essere utile fitlrare le read che si allineano contro database di soli tRNA, snRNA e snoRNA per verificare che le read prodotte non siano appartenenti ad un'altra categoria di RNA
+- Le read sequenziate vengono filtrate per presenza della sequenza 3'-Linker.
+- Le read con 3'-linker vengono prima di tutto confrontate contro un database di noti miRNA
+- Le read che non hanno nessun match contro il database vengono invece analizzate con software quali mirDeep per verificare l'identificazione di nuovi miRNA. Questo software adopera strategia come l'Hairpin test, ovvero va a mappare le read che non hanno matchato contro il database di miRNA e le mappa contro l'intero genoma di riferimento. Il test hairpin lo effettua quando identifica un cluster di read mappate ad una specifica regione genomica. Avvia un RNA-folding algorithm (ViennaRNA) e controlla se questa sequenza si folda naturalmente in una stem-loop. Se forma un hairpin e la read mappa perfettamente al braccio dell'hairpin, allora viene flaggato come potenziale miRNA con un score.
+- Da notare l'esistenza di isomiRNA che sono miRNA 1 base più lunghi o più corti del reference, dato da errori nel Dicer
+- Si validano questi nuovi miRNA identificati ad esempio con un Northern Blot
+
+## RNA Editing
+Il sequenziamento massimo di RNA facilita lo studio dell'intero trascrittoma, quindi anche di eventi post-trascrizionali come l'editing e lo splicing.
+Le NGS forniscono un gran numero di sequenze per una data posizione genomica, facilitando la rilevazione di sostituzioni dovute a RNA editing.
+Possiamo utilizare dati di NGS (RNA-seq, genome resequencing, exome sequencing) per studiare l'RNA editing a diversi livelli:
+- Identificazione di nuovi eventi di editing
+- Esplorazione della presenza di conosciuti eventi di A->I
+
+L'identificazione di nuovi eventi può essere effettuata tramite strategie come:
+- Genome/Exome vs RNA-seq per l'identificazione
+- RNA-seq per l'identificazione di de novo candidati ad Editing
+
+La vera problematica dell'editing de novo è distinguere SNP o eventi simili da eventi di Editing.
+L'inosina viene identificata come G da polimerasi et al. Una sostituzione A->G nell'RNA quindi può essere sia un evento di editing, sia una mutazione puntiforme.
+Una delle strategie è il confronto RNA-seq contro DNA-seq. Ovviamente se la posizione nel DNA-seq risulta essere una A, mentre i trascritti sono predominantemente G, allora possiamo identificare con una certa confidenza un evento di Editing.
+Un'altra possibilità dato che il DNA-seq è abbastanza dispendioso è utilizzare un database di SNP conosciuti per verificare che non sia uno SNP ma un effettivo evento di Editing.
+In assenza di entrambe, si utilizzano filtri per minimizzare la quantità di falsi positivi. Protocolli strand-specifici sono preferiti perchè facilitano l'identifiazione in regioni con transcritti in overlap generati da strand opposti.
