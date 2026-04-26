@@ -1,4 +1,6 @@
-# Gene Prediction
+#> La vera problematica dell'editing de novo è distinguere SNP da eventi di editing. L'inosina viene letta come G da polimerasi et al. — una sostituzione A→G nell'RNA può essere sia un evento di editing sia una mutazione puntiforme.
+ 
+> I protocolli **strand-specifici** sono preferiti perché facilitano l'identificazione in regioni con trascritti in overlap generati da strand opposti. Gene Prediction
 
 I metodi di Gene prediction sono utilizzato per annotare lunghe sequenze contigue generate da Whole Genome Sequencing.
 La maggior parte dei programmi usati per questo scopo hanno come obiettivo il predire l'intera struttura esone-introne dei trascritti protein-coding.

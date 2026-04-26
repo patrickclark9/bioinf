@@ -525,19 +525,21 @@ Le nuove tecnologie permettono l'analisi dell'RNA a livello della singola cellul
  
 ### Workflow
  
-1. Dissociazione delle cellule dal tessuto (disaggregazione meccanica + dissociazione enzimatica con collagenasi e DNasi — il risultato dipende strettamente dal tessuto e va determinato empiricamente)
+1. Dissociazione delle cellule dal tessuto (disaggregazione meccanica e dissociazione enzimatica con collagenasi e DNasi — il risultato dipende strettamente dal tessuto e va determinato empiricamente)
 2. Estrazione dell'RNA e preparazione delle librerie per i diversi tipi cellulari
 3. Pooling e sequenziamento
 4. Allineamento delle read al genoma di riferimento
 5. Ricostruzione del profilo di espressione per cellula (livelli di espressione del gene $k$ per la cellula $j$)
 6. **Clustering** dei profili di espressione per identificare i tipi cellulari
 ### Strategie di Cattura delle Cellule
- 
-| Metodo | Throughput | Note |
-|---|---|---|
-| **Microtitre plate** | Basso | Isolazione in pozzetti (microdissezione o FACS); identifica cellule danneggiate e doublet; molto dispendioso in tempo per cellula |
-| **Microfluidic array-based** | Medio | Sistema integrato cattura + reazioni chimiche; solo ~10% delle cellule catturate; nanopozzetti dimensione-specifici → possibile bias sul campionamento |
-| **Microfluidic droplet-based** | Alto | Metodo più popolare; incapsula singole cellule in goccioline da ~1 nL con un bead; costo ~0,05 USD/cellula |
+
+La strategia utilizzata per la cattura determina il throughput (in numero di cellule), la qualità e la riproducibilità dell'esperimento
+
+| Metodo                         | Throughput | Note                                                                                                                                                   |
+| ------------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Microtitre plate**           | Basso      | Isolazione in pozzetti (microdissezione o FACS); identifica cellule danneggiate e doublet; molto dispendioso in tempo per cellula                      |
+| **Microfluidic array-based**   | Medio      | Sistema integrato cattura + reazioni chimiche; solo ~10% delle cellule catturate; nanopozzetti dimensione-specifici → possibile bias sul campionamento |
+| **Microfluidic droplet-based** | Alto       | Metodo più popolare; incapsula singole cellule in goccioline da ~1 nL con un bead; costo ~0,05 USD/cellula                                             |
  
 Il **Fluidigm C1** è il dispositivo più comune per la preparazione di campioni single-cell: processa fino a 800 cellule individuali in parallelo tramite microvalvole per lisi, trascrizione inversa, amplificazione e altri trattamenti.
  
@@ -545,11 +547,11 @@ Le **droplet microfluidiche** seguono una distribuzione di Poisson nell'incapsul
  
 ### Library Preparation (Droplet)
  
-| Strategia | Descrizione |
-|---|---|
-| **inDrop** | Droplet microfluidiche con bead barcoding in idrogel |
-| **dropSeq** | Simile a inDrop ma con bead in resina dura |
-| **10x** | Combinazione di inDrop + dropSeq |
+| Strategia   | Descrizione                                          |
+| ----------- | ---------------------------------------------------- |
+| **inDrop**  | Droplet microfluidiche con bead barcoding in idrogel |
+| **dropSeq** | Simile a inDrop ma con bead in resina dura           |
+| **10x**     | Combinazione di inDrop + dropSeq                     |
  
 ### Library Sequencing
  
