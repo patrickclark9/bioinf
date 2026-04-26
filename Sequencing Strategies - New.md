@@ -65,6 +65,8 @@ Le STS si ottengono principalmente da:
 ## Clone-by-Clone (Hierarchical Shotgun)
 
 La strategia Clone-by-Clone è una strategia di physical mapping in cui vengono prodotte serie di cloni in overlap (**contig**), ognuno dei quali copre una lunga regione contigua del genoma.
+Nella strategia shotgun, cloni individuali sono subclonati in librerie più piccole, dalle quali si derivano casualmente le read. Nel caso di utilizzo di BAC, questo tipicamente richiede la generazione di diverse migliaia di read per clone.
+Il risultato viene utilizzato per costruire la sequenza completa del clone
 
 ### Vettori di Clonaggio
 
@@ -101,11 +103,11 @@ Questa strategia è stata usata per sequenziare i genomi di _A. thaliana_, _H. s
 
 ## Whole Genome Shotgun (WGS)
 
-Nel WGS l'intero genoma viene frammentato e sequenziato senza costruire prima una mappa fisica. L'assemblaggio avviene per:
+Nel WGS l'intero genoma viene frammentato e sequenziato senza costruire prima una mappa fisica. Viene completamente saltata la fase di mapping, e si utilizzano librerie di subcloni preparati dall'intero genoma. Tipicamente generate decine di milioni di read, le quali vengono assemblate per costruire sequenze contigue di diverse dimensioni. L'assemblaggio avviene per:
 
 1. **Contig** — assemblaggio iniziale delle read individuali in base agli overlap
 2. **Scaffold** — i gruppi di contig vengono organizzati sulla base delle informazioni di linking fornite dalle **coppie di read** (paired-end: una read si assembla in un contig, l'altra in un altro contig a distanza nota)
-3. **Ancoraggio** — gli scaffold vengono allineati al genoma di riferimento identificando marker sequence-based già mappati, associandoli con una locazione nota nel genoma
+3. **Ancoraggio** — gli scaffold vengono allineati al genoma di riferimento identificando marker sequence-based (STS, geni, marker genetici) già mappati, associandoli con una locazione nota nel genoma
 
 ### Hybrid Shotgun
 
