@@ -422,6 +422,7 @@ Un riarrangiamento viene misurato da due tipi di evidenza:
 > La fusion detection è fortemente influenzata dai **livelli di espressione**: livelli troppo bassi (ma anche semplicemente non elevati) riducono la capacità di identificare trascritti di fusione.
 
 Il **sequenziamento long-read** aumenta significativamente la capacità di rilevamento, specialmente per i metodi basati sull'assembly.
+
 ---
  
 ## Small RNA Detection
@@ -436,7 +437,7 @@ L'RNA-seq viene utilizzato anche per la rilevazione di piccoli RNA come i miRNA.
 4. Sequenziamento
 ### Workflow per miRNA
  
-1. (Opzionale) Filtraggio delle read che si allineano contro database di tRNA, snRNA e snoRNA
+1. (Opzionale) Filtraggio delle read che si allineano contro database di tRNA, snRNA e snoRNA per verificare che le read prodotte non siano appartenenti ad un'altra categoria di RNA
 2. Filtraggio delle read per presenza della **sequenza 3'-Linker**
 3. Le read con 3'-linker vengono confrontate contro un **database di miRNA noti**
 4. Le read senza match vengono analizzate con software come **mirDeep** per l'identificazione di nuovi miRNA:
@@ -468,14 +469,14 @@ Si utilizzano trattamenti applicabili in ordine diverso:
 Le tecniche si possono combinare in ordini diversi:
 - rRNA⁻ → poli(A) → RNase R
 - poli(A) → RNase R → rRNA⁻
-> La qualità dell'analisi downstream è estremamente variabile in base ai metodi di arricchimento utilizzati e al loro ordine, influenzando il numero di circRNA purificati, la precisione e la sensitività.
+> La qualità dell'analisi downstream è estremamente variabile in base ai metodi di arricchimento utilizzati e al loro ordine, influenzando il numero di circRNA purificati, la precisione e la sensitività. Queste variazioni sono dovute alla complessità dei metodi, e quanto essi riescono a purificare circRNA ed eliminare RNA lineari, che interferiscono con l'analisi downstream.
  
 ### Rilevazione
  
 - **RT-PCR con primer divergenti** — primer con direzionalità opposta che coprono la **Back Splice Junction (BSJ)**. Amplificano i circRNA ma non le controparti lineari, poiché i primer divergenti diventano convergenti solo se l'RNA è circolare
 - **RNA-seq** — post-arricchimento, il campione viene sequenziato. Tool disponibili:
   - Tool per l'identificazione della BSJ (firma molecolare dei circRNA): basati su read splittate o su BSJ pre-definite e sequenze fiancheggianti
-  - **Integrated** — ensemble di tool che integrano e uniscono i risultati di più tool
+  - **Integrated** — Metodi ensemble che integrano e uniscono i risultati di più tool
 ---
  
 ## RNA Editing
@@ -485,16 +486,20 @@ Le NGS forniscono un gran numero di sequenze per una data posizione genomica, fa
 - Identificazione di nuovi eventi di editing
 - Esplorazione di conosciuti eventi A→I
 ### Strategie di Identificazione
+
+ > La vera problematica dell'editing de novo è distinguere SNP da eventi di editing. L'inosina viene letta come G da polimerasi et al. — una sostituzione A→G nell'RNA può essere sia un evento di editing sia una mutazione puntiforme.
  
+> I protocolli **strand-specifici** sono preferiti perché facilitano l'identificazione in regioni con trascritti in overlap generati da strand opposti.
+
+Alcune strategie utilizzate:
+
 **Confronto RNA-seq vs DNA-seq** — se la posizione nel DNA-seq risulta essere una A mentre i trascritti sono predominantemente G, si può identificare un evento di editing con buona confidenza.
  
 **Database di SNP noti** — alternativa meno costosa al DNA-seq; permette di escludere che la variante sia uno SNP invece di un evento di editing.
  
 **Filtri bioinformatici** — in assenza delle strategie precedenti, si usano filtri per minimizzare i falsi positivi.
  
-> La vera problematica dell'editing de novo è distinguere SNP da eventi di editing. L'inosina viene letta come G da polimerasi et al. — una sostituzione A→G nell'RNA può essere sia un evento di editing sia una mutazione puntiforme.
- 
-> I protocolli **strand-specifici** sono preferiti perché facilitano l'identificazione in regioni con trascritti in overlap generati da strand opposti.
+
  
 ---
  
