@@ -497,7 +497,7 @@ Alcune strategie utilizzate:
  
 **Database di SNP noti** — alternativa meno costosa al DNA-seq; permette di escludere che la variante sia uno SNP invece di un evento di editing.
  
-**Filtri bioinformatici** — in assenza delle strategie precedenti, si usano filtri per minimizzare i falsi positivi.
+**Filtri bioinformatici** — in assenza di dati di DNA-seq, si usano filtri per minimizzare i falsi positivi. Questi filtri sono necessari per minimizzare la presenza di errori di sequenziamento e SNP conosciuti.
  
 
  
@@ -514,6 +514,7 @@ L'espressione è altamente **tessuto-specifica**. La distanza tra i cluster dimo
 ## Single Cell RNA-seq (scRNA-seq)
  
 La **deconvoluzione** di dati RNA-seq consiste in metodi computazionali per stimare le proporzioni relative di differenti tipi cellulari in un campione eterogeneo, basandosi sui profili di espressione genica.
+È molto utile per trovare ed identificare profili di espressione genica specifici ad un particolare tipo cellulare/subpopolazione
  
 **Limiti della deconvoluzione:**
 - Assenza di marker affidabili cellula-specifici
