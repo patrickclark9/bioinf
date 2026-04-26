@@ -107,7 +107,7 @@ Le short read generate dai frammenti immunoprecipitati (dette **tag**) vengono a
 1. Ogni posizione mappata viene estesa con un frammento di dimensione stimata per generare un **profilo**
 2. Il profilo combinato viene analizzato tramite algoritmi di **peak-calling** (es. MACS) per distinguere segnali di binding dal rumore di fondo
 3. L'identificazione dei picchi può essere effettuata su qualsiasi profilo generato
-
+---
 ## Metagenomica
 
 La metagenomica è lo studio della struttura e della funzione di intere sequenze nucleotidiche isolate e analizzate da tutti gli organismi in un campione "bulk", tipicamente ambientale (es. feci → microbiota). È spesso utilizzata per studiare uno specifico gruppo di microorganismi, come quelli che si trovano sulla pelle umana, nel suolo o nell'acqua.
