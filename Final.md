@@ -289,8 +289,13 @@ Esistono due strategie principali:
 
 ### Genome-Guided Approach
 
-1. Si allineano le read contro il genoma di riferimento
-2. I frammenti allineati vengono assemblati a formare un **grafo dei trascritti**
+1. Si allineano le read contro il genoma di riferimento (STAR, HISAT2) -> BAM file
+2. I frammenti allineati dal file BAM vengono assemblati a formare un **grafo dei trascritti**:
+	- Gli esoni sono identificati da read sovrapposte su una stessa regione
+	- Il grafo viene ricostruito mappando il percorso possibile da un esone all'altro
+	- Se il gene presenta isoforme di splicing, allora vanno esplorati i singoli path:
+		- Cufflink -> Maximum parsimony -> Numero minimo di path richiesti per spiegare tutte le read e tutte le junction
+		- Scripture -> Filtra i path cercando quelli che hanno una read coverage statisticamente significativa
 3. Il grafo viene parsato in trascritti
 4. Si ottengono i **loci genomici** assemblati dall'RNA frammentato
 
