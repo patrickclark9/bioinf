@@ -311,6 +311,11 @@ Software: **Cufflinks**, **Scripture**
 
 Software: **ABySS** (DNA Assembler), **Trinity** (RNA Assembler)
 
+
+### Identificazione
+
+Possiamo quindi identificare nuove isoforme di splicing attraverso la detection di note o nuove splice-junctions, oppure per comparazione diretta tra isoforme.
+
 ---
 
 ## Espressione Genica — Normalizzazione
