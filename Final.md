@@ -284,7 +284,8 @@ STAR utilizza un approccio basato sui **MMP** (Maximal Mappable Prefixes): per o
 ## Ricostruzione del Trascrittoma
 
 La ricostruzione del trascrittoma è fondamentale per quantificare esattamente quali trascritti sono stati prodotti, a differenza di quantificazioni a livello del singolo gene, in cui si va ad osservare l'espressione di un singolo gene a prescindere dal trascritto (se canonico o isoforma di splicing).
-Un tool come featureCounts produce conte gene-level. Tool come ABySS e Trinity utilizzano strategie di ricostruzione del trascritto per quantificare esattamente il livello di espressione di un trascritto specifico (e.g. isoforma 1, isoforma 2 ecc...)
+Un tool come featureCounts produce conte gene-level. Tool come ABySS e Trinity utilizzano strategie di ricostruzione del trascritto per quantificare esattamente il livello di espressione di un trascritto specifico (e.g. isoforma 1, isoforma 2 ecc...).
+Quindi possiamo usare questi tool per l'identificazione di isoforme di splicing ma anche per la scoperta di nuove splice-junctions sconosciute.
 Esistono due strategie principali:
 
 ### Genome-Guided Approach
@@ -296,7 +297,7 @@ Esistono due strategie principali:
 	- Se il gene presenta isoforme di splicing, allora vanno esplorati i singoli path:
 		- Cufflink -> Maximum parsimony -> Numero minimo di path richiesti per spiegare tutte le read e tutte le junction
 		- Scripture -> Filtra i path cercando quelli che hanno una read coverage statisticamente significativa
-3. Il grafo viene parsato in trascritti
+3. Il grafo viene attraversato per produrre i trascritti -> GTF con coordinate del trascritto
 4. Si ottengono i **loci genomici** assemblati dall'RNA frammentato
 
 Software: **Cufflinks**, **Scripture**
@@ -305,10 +306,10 @@ Software: **Cufflinks**, **Scripture**
 
 1. Le read vengono rotte in **k-mer**
 2. Si assemblano le read usando la strategia dei **grafi di De Bruijn**
-3. Il grafo risultante viene parsato in sequenze
+3. Il grafo risultante viene parsato in sequenze intere del trascritto (un **contig**)
 4. Le sequenze vengono allineate contro il genoma → si ottengono i **loci genomici** assemblati dall'RNA frammentato
 
-Software: **ABySS**, **Trinity**
+Software: **ABySS** (DNA Assembler), **Trinity** (RNA Assembler)
 
 ---
 
