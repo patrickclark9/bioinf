@@ -283,6 +283,8 @@ STAR utilizza un approccio basato sui **MMP** (Maximal Mappable Prefixes): per o
 
 ## Ricostruzione del Trascrittoma
 
+La ricostruzione del trascrittoma è fondamentale per quantificare esattamente quali trascritti sono stati prodotti, a differenza di quantificazioni a livello del singolo gene, in cui si va ad osservare l'espressione di un singolo gene a prescindere dal trascritto (se canonico o isoforma di splicing).
+Un tool come featureCounts produce conte gene-level. Tool come ABySS e Trinity utilizzano strategie di ricostruzione del trascritto per quantificare esattamente il livello di espressione di un trascritto specifico (e.g. isoforma 1, isoforma 2 ecc...)
 Esistono due strategie principali:
 
 ### Genome-Guided Approach
