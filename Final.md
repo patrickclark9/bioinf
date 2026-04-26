@@ -422,35 +422,143 @@ Un riarrangiamento viene misurato da due tipi di evidenza:
 > La fusion detection è fortemente influenzata dai **livelli di espressione**: livelli troppo bassi (ma anche semplicemente non elevati) riducono la capacità di identificare trascritti di fusione.
 
 Il **sequenziamento long-read** aumenta significativamente la capacità di rilevamento, specialmente per i metodi basati sull'assembly.
-
-## SmallRNA detection
-
+---
+ 
+## Small RNA Detection
+ 
 L'RNA-seq viene utilizzato anche per la rilevazione di piccoli RNA come i miRNA.
-Si inizia con un processo di arricchimento detto size-selection. La tecnica di laboratorio utilizzata si chiama PAGE (Polyacrylamide Gel Electrophoresis), che separa e purifica small RNA di dimensioni inferiori a 35bp.
-Dopo questa fase di size selection segue la ligazione degli adattori e la trascrizione inversa.
-Segue un secondo processo di size selection dove vengono rimossi ulteriori RNA. Si procede al sequenziamento.
-
-Per miRNA:
-- Post-PAGE potrebbe essere utile fitlrare le read che si allineano contro database di soli tRNA, snRNA e snoRNA per verificare che le read prodotte non siano appartenenti ad un'altra categoria di RNA
-- Le read sequenziate vengono filtrate per presenza della sequenza 3'-Linker.
-- Le read con 3'-linker vengono prima di tutto confrontate contro un database di noti miRNA
-- Le read che non hanno nessun match contro il database vengono invece analizzate con software quali mirDeep per verificare l'identificazione di nuovi miRNA. Questo software adopera strategia come l'Hairpin test, ovvero va a mappare le read che non hanno matchato contro il database di miRNA e le mappa contro l'intero genoma di riferimento. Il test hairpin lo effettua quando identifica un cluster di read mappate ad una specifica regione genomica. Avvia un RNA-folding algorithm (ViennaRNA) e controlla se questa sequenza si folda naturalmente in una stem-loop. Se forma un hairpin e la read mappa perfettamente al braccio dell'hairpin, allora viene flaggato come potenziale miRNA con un score.
-- Da notare l'esistenza di isomiRNA che sono miRNA 1 base più lunghi o più corti del reference, dato da errori nel Dicer
-- Si validano questi nuovi miRNA identificati ad esempio con un Northern Blot
-
+ 
+### Preparazione della Libreria
+ 
+1. **Size-selection** tramite **PAGE** (Polyacrylamide Gel Electrophoresis) — separa e purifica small RNA di dimensioni inferiori a 35 bp
+2. Ligazione degli adattatori e trascrizione inversa
+3. Secondo ciclo di **size selection** per rimuovere ulteriori RNA
+4. Sequenziamento
+### Workflow per miRNA
+ 
+1. (Opzionale) Filtraggio delle read che si allineano contro database di tRNA, snRNA e snoRNA
+2. Filtraggio delle read per presenza della **sequenza 3'-Linker**
+3. Le read con 3'-linker vengono confrontate contro un **database di miRNA noti**
+4. Le read senza match vengono analizzate con software come **mirDeep** per l'identificazione di nuovi miRNA:
+   - Mappatura delle read non matchate contro il genoma di riferimento
+   - Identificazione di cluster di read mappate in una specifica regione genomica
+   - **Hairpin test**: avvio di un RNA-folding algorithm (**ViennaRNA**) per verificare se la sequenza si folda naturalmente in uno stem-loop
+   - Se forma un hairpin e la read mappa perfettamente al braccio, viene flaggata come potenziale miRNA con uno score
+> **isomiRNA** — miRNA di 1 base più lunghi o più corti del reference, dovuti ad errori nel processamento da parte di Dicer.
+ 
+I nuovi miRNA identificati vengono validati, ad esempio con **Northern Blot**.
+ 
+---
+ 
+## circRNA Detection
+ 
+La rilevazione dei circRNA è più complessa: la forma circolarizzata non è direttamente osservabile da dati di sequenziamento. I circRNA variano per genesi e dimensione rispetto agli RNA lineari, quindi non possono essere purificati semplicemente filtrando per dimensione o sequenza.
+ 
+### Strategie di Arricchimento
+ 
+Si utilizzano trattamenti applicabili in ordine diverso:
+ 
+**rRNA Depletion** — rimozione dell'rRNA (80–90% dell'RNA totale). Fondamentale poiché i circRNA compongono solo lo **0,1%** dell'RNA totale. Metodi principali:
+- **Subtractive hybridization** — probe di ssDNA biotinilato si ibridizzano all'rRNA; bead di streptavidina separano gli rRNA marcati dal resto
+- **RNase H degradation** — probe di ssDNA si ibridizzano all'rRNA; i duplex vengono degradati dalla RNase H
+> La sola rRNA depletion è altamente inefficace perché rimuove solo rRNA, non l'RNA lineare residuo.
+ 
+**RNase R treatment e/o polyadenylation treatment** — gli RNA lineari vengono resi suscettibili all'RNase R aggiungendo una coda di poli(A) al 3', che funge da punto di binding per l'attività esonucleasica 3'→5' dell'RNase R.
+ 
+Le tecniche si possono combinare in ordini diversi:
+- rRNA⁻ → poli(A) → RNase R
+- poli(A) → RNase R → rRNA⁻
+> La qualità dell'analisi downstream è estremamente variabile in base ai metodi di arricchimento utilizzati e al loro ordine, influenzando il numero di circRNA purificati, la precisione e la sensitività.
+ 
+### Rilevazione
+ 
+- **RT-PCR con primer divergenti** — primer con direzionalità opposta che coprono la **Back Splice Junction (BSJ)**. Amplificano i circRNA ma non le controparti lineari, poiché i primer divergenti diventano convergenti solo se l'RNA è circolare
+- **RNA-seq** — post-arricchimento, il campione viene sequenziato. Tool disponibili:
+  - Tool per l'identificazione della BSJ (firma molecolare dei circRNA): basati su read splittate o su BSJ pre-definite e sequenze fiancheggianti
+  - **Integrated** — ensemble di tool che integrano e uniscono i risultati di più tool
+---
+ 
 ## RNA Editing
-Il sequenziamento massimo di RNA facilita lo studio dell'intero trascrittoma, quindi anche di eventi post-trascrizionali come l'editing e lo splicing.
-Le NGS forniscono un gran numero di sequenze per una data posizione genomica, facilitando la rilevazione di sostituzioni dovute a RNA editing.
-Possiamo utilizare dati di NGS (RNA-seq, genome resequencing, exome sequencing) per studiare l'RNA editing a diversi livelli:
+ 
+Le NGS forniscono un gran numero di sequenze per una data posizione genomica, facilitando la rilevazione di sostituzioni dovute a RNA editing. Si possono usare dati di RNA-seq, genome resequencing ed exome sequencing per:
+ 
 - Identificazione di nuovi eventi di editing
-- Esplorazione della presenza di conosciuti eventi di A->I
+- Esplorazione di conosciuti eventi A→I
+### Strategie di Identificazione
+ 
+**Confronto RNA-seq vs DNA-seq** — se la posizione nel DNA-seq risulta essere una A mentre i trascritti sono predominantemente G, si può identificare un evento di editing con buona confidenza.
+ 
+**Database di SNP noti** — alternativa meno costosa al DNA-seq; permette di escludere che la variante sia uno SNP invece di un evento di editing.
+ 
+**Filtri bioinformatici** — in assenza delle strategie precedenti, si usano filtri per minimizzare i falsi positivi.
+ 
+> La vera problematica dell'editing de novo è distinguere SNP da eventi di editing. L'inosina viene letta come G da polimerasi et al. — una sostituzione A→G nell'RNA può essere sia un evento di editing sia una mutazione puntiforme.
+ 
+> I protocolli **strand-specifici** sono preferiti perché facilitano l'identificazione in regioni con trascritti in overlap generati da strand opposti.
+ 
+---
+ 
+## Il Trascrittoma
+ 
+L'espressione è altamente **tessuto-specifica**. La distanza tra i cluster dimostra come tessuti simili mostrano profili di espressione simili; all'aumentare della distanza, il profilo di espressione cambia significativamente.
+ 
+![[Pasted image 20260425180742.png]]
+ 
+---
+ 
+## Single Cell RNA-seq (scRNA-seq)
+ 
+La **deconvoluzione** di dati RNA-seq consiste in metodi computazionali per stimare le proporzioni relative di differenti tipi cellulari in un campione eterogeneo, basandosi sui profili di espressione genica.
+ 
+**Limiti della deconvoluzione:**
+- Assenza di marker affidabili cellula-specifici
+- Eterogeneità all'interno dei tipi cellulari
+- Fattori tecnici (batch-effect, profondità di sequenziamento)
+- Assunzione di indipendenza dell'espressione genica tra tipi cellulari diversi
+Le nuove tecnologie permettono l'analisi dell'RNA a livello della singola cellula (**scRNA-seq**).
+ 
+### Workflow
+ 
+1. Dissociazione delle cellule dal tessuto (disaggregazione meccanica + dissociazione enzimatica con collagenasi e DNasi — il risultato dipende strettamente dal tessuto e va determinato empiricamente)
+2. Estrazione dell'RNA e preparazione delle librerie per i diversi tipi cellulari
+3. Pooling e sequenziamento
+4. Allineamento delle read al genoma di riferimento
+5. Ricostruzione del profilo di espressione per cellula (livelli di espressione del gene $k$ per la cellula $j$)
+6. **Clustering** dei profili di espressione per identificare i tipi cellulari
+### Strategie di Cattura delle Cellule
+ 
+| Metodo | Throughput | Note |
+|---|---|---|
+| **Microtitre plate** | Basso | Isolazione in pozzetti (microdissezione o FACS); identifica cellule danneggiate e doublet; molto dispendioso in tempo per cellula |
+| **Microfluidic array-based** | Medio | Sistema integrato cattura + reazioni chimiche; solo ~10% delle cellule catturate; nanopozzetti dimensione-specifici → possibile bias sul campionamento |
+| **Microfluidic droplet-based** | Alto | Metodo più popolare; incapsula singole cellule in goccioline da ~1 nL con un bead; costo ~0,05 USD/cellula |
+ 
+Il **Fluidigm C1** è il dispositivo più comune per la preparazione di campioni single-cell: processa fino a 800 cellule individuali in parallelo tramite microvalvole per lisi, trascrizione inversa, amplificazione e altri trattamenti.
+ 
+Le **droplet microfluidiche** seguono una distribuzione di Poisson nell'incapsulazione delle cellule, minimizzando il rischio di incapsulare più cellule in una singola gocciolina.
+ 
+### Library Preparation (Droplet)
+ 
+| Strategia | Descrizione |
+|---|---|
+| **inDrop** | Droplet microfluidiche con bead barcoding in idrogel |
+| **dropSeq** | Simile a inDrop ma con bead in resina dura |
+| **10x** | Combinazione di inDrop + dropSeq |
+ 
+### Library Sequencing
+ 
+Ogni libreria contiene:
+- **Barcode** → identifica la cellula
+- **UMI** (Unique Molecular Identifier) → identifica il gene
+Le cellule vengono raggruppate per barcode e si contano gli UMI unici per ogni gene in ogni cellula.
+ 
+### Applicazioni
+ 
+- Profilazione single-cell
+- Espressione differenziale
+- Fattori di trascrizione
+- Cell-cell interaction
+- Disease-specific population
+- Lineage trajectory reconstitution
+- Cellule staminali cancerogene
 
-L'identificazione di nuovi eventi può essere effettuata tramite strategie come:
-- Genome/Exome vs RNA-seq per l'identificazione
-- RNA-seq per l'identificazione di de novo candidati ad Editing
-
-La vera problematica dell'editing de novo è distinguere SNP o eventi simili da eventi di Editing.
-L'inosina viene identificata come G da polimerasi et al. Una sostituzione A->G nell'RNA quindi può essere sia un evento di editing, sia una mutazione puntiforme.
-Una delle strategie è il confronto RNA-seq contro DNA-seq. Ovviamente se la posizione nel DNA-seq risulta essere una A, mentre i trascritti sono predominantemente G, allora possiamo identificare con una certa confidenza un evento di Editing.
-Un'altra possibilità dato che il DNA-seq è abbastanza dispendioso è utilizzare un database di SNP conosciuti per verificare che non sia uno SNP ma un effettivo evento di Editing.
-In assenza di entrambe, si utilizzano filtri per minimizzare la quantità di falsi positivi. Protocolli strand-specifici sono preferiti perchè facilitano l'identifiazione in regioni con transcritti in overlap generati da strand opposti.

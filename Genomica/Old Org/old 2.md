@@ -209,3 +209,108 @@ Sequenziamento Long-read aumenta significativamente la capacità di rilevamento 
 
 
 
+## SmallRNA detection
+
+L'RNA-seq viene utilizzato anche per la rilevazione di piccoli RNA come i miRNA.
+Si inizia con un processo di arricchimento detto size-selection. La tecnica di laboratorio utilizzata si chiama PAGE (Polyacrylamide Gel Electrophoresis), che separa e purifica small RNA di dimensioni inferiori a 35bp.
+Dopo questa fase di size selection segue la ligazione degli adattori e la trascrizione inversa.
+Segue un secondo processo di size selection dove vengono rimossi ulteriori RNA. Si procede al sequenziamento.
+
+Per miRNA:
+- Post-PAGE potrebbe essere utile fitlrare le read che si allineano contro database di soli tRNA, snRNA e snoRNA per verificare che le read prodotte non siano appartenenti ad un'altra categoria di RNA
+- Le read sequenziate vengono filtrate per presenza della sequenza 3'-Linker.
+- Le read con 3'-linker vengono prima di tutto confrontate contro un database di noti miRNA
+- Le read che non hanno nessun match contro il database vengono invece analizzate con software quali mirDeep per verificare l'identificazione di nuovi miRNA. Questo software adopera strategia come l'Hairpin test, ovvero va a mappare le read che non hanno matchato contro il database di miRNA e le mappa contro l'intero genoma di riferimento. Il test hairpin lo effettua quando identifica un cluster di read mappate ad una specifica regione genomica. Avvia un RNA-folding algorithm (ViennaRNA) e controlla se questa sequenza si folda naturalmente in una stem-loop. Se forma un hairpin e la read mappa perfettamente al braccio dell'hairpin, allora viene flaggato come potenziale miRNA con un score.
+- Da notare l'esistenza di isomiRNA che sono miRNA 1 base più lunghi o più corti del reference, dato da errori nel Dicer
+- Si validano questi nuovi miRNA identificati ad esempio con un Northern Blot
+
+### circRNA Detection
+La rilevazione dei circRNA è più complessa, poichè la forma circolarizzata del circRNA non è osservabile semplicemente da dati di sequenziamento.
+I circRNA variano sia per genesi sia per dimensione rispetto agli RNA lineari, quindi non possono essere purificati semplicemente filtrando gli RNA per dimensione o per sequenza.
+Si utilizzano invece trattamenti applicabili in ordini differenti:
+- rRNA depletion -> Rimozione dell'rRNA che compone l'80-90% della popolazione totale di RNA. Fondamentale poichè i circRNA compongono solo lo 0.1% dell'RNA totale. Principalmente la si effettua per subtractive hybdrization (ibridizzazione di probe di ssDNA biotinilato al rRNA, con la susseguente applicazione di bead composti da streptavidina in grado di separare gli rRNA marcati da biotina dal resto degli RNA) e da RNase H degradation, dove sempre probe di ssDNA si ibridizzano specificatamente a rRNA, ed in seguito questi duplex vengono degradati dalla RNase H aggiunta in soluzione. La sola rRNA depletion è altamente inefficace poichè rimuove solo rRNA e non tutto il resto dell'RNA lineare.
+- RNase R treatment e/o polyadenilation treatment -> Diversi studi hanno dimostrato che gli RNA lineari sono resistenti alla trattamento con RNasi R poichè presentano determinate strutture al 3', limitazione che viene superata tramite l'aggiunta di una coda di poli(A) al 3' di tutte le specie lineari. Questa lunga terminazione non strutturata è un punto di binding adeguato per l'RNasi R, che effettua attività esonucleasica 3'->5'. Rimuove un gran numero di RNA lineare.
+Si possono combinare le tecniche anche:
+- rRNA- + Poli(A) + RNase R
+- Poli(A) + RNase R + rRNA-
+È stato dimostrato che la qualità dell'analisi downstream dei circRNA è estremamente variabile in base ai metodi di arricchimento utilizzati ed in quale ordine. Cambiano il numero di circRNA purificati, la precisione e la sensitività.
+Queste variazioni sono dovute alla complessità dei metodi, e quanto essi riescono a purificare circRNA ed eliminare RNA lineari, che interferiscono con l'analisi downstream.
+
+La rilevazione può essere fatta o tramite RT-PCR utilizzando primer divergenti, primer appositi con direzionalità opposta che coprono la BackSplice Junction dei circRNA. Questi primer amplificano circRNA ma non le controparti lineari, dato che primer divergenti diventano convergenti solo se l'RNA è circolare
+In alternativa, post arricchimento il campione può essere sequenziato e si possono applicare tecniche di RNA-seq per la loro identificazione.
+- Tool per l'identificazione della Back Splice Junction, che è una firma molecolare importante. Molti tool si basano sullo splittare le read o basati su pre-definite BSJ e sequenze fiancheggianti
+- Integrated -> Ensemble di tool in grado di integrare e unire i risultati di molteplici tool
+
+## RNA Editing
+Il sequenziamento massimo di RNA facilita lo studio dell'intero trascrittoma, quindi anche di eventi post-trascrizionali come l'editing e lo splicing.
+Le NGS forniscono un gran numero di sequenze per una data posizione genomica, facilitando la rilevazione di sostituzioni dovute a RNA editing.
+Possiamo utilizare dati di NGS (RNA-seq, genome resequencing, exome sequencing) per studiare l'RNA editing a diversi livelli:
+- Identificazione di nuovi eventi di editing
+- Esplorazione della presenza di conosciuti eventi di A->I
+
+L'identificazione di nuovi eventi può essere effettuata tramite strategie come:
+- Genome/Exome vs RNA-seq per l'identificazione
+- RNA-seq per l'identificazione di de novo candidati ad Editing
+
+La vera problematica dell'editing de novo è distinguere SNP o eventi simili da eventi di Editing.
+L'inosina viene identificata come G da polimerasi et al. Una sostituzione A->G nell'RNA quindi può essere sia un evento di editing, sia una mutazione puntiforme.
+Una delle strategie è il confronto RNA-seq contro DNA-seq. Ovviamente se la posizione nel DNA-seq risulta essere una A, mentre i trascritti sono predominantemente G, allora possiamo identificare con una certa confidenza un evento di Editing.
+Un'altra possibilità dato che il DNA-seq è abbastanza dispendioso è utilizzare un database di SNP conosciuti per verificare che non sia uno SNP ma un effettivo evento di Editing.
+In assenza di entrambe, si utilizzano filtri per minimizzare la quantità di falsi positivi. Protocolli strand-specifici sono preferiti perchè facilitano l'identifiazione in regioni con transcritti in overlap generati da strand opposti.
+
+
+## Il Trascrittoma
+L'espressione è altamente tessuto specifica.
+La distanza tra i vari cluster dimostrano come tessuti simili mostrano livelli di espressione simili. All'aumentare della distanza, il profilo di espressione cambia significativamente
+![[Pasted image 20260425180742.png]]
+
+## Single Cell
+La deconvoluzione di dati di RNA seq consiste in metodi computazionali utilizzati per stimare le relative porzioni di differenti tipi cellulari o subpopolazioni all'interno di un campione eterogeneo basandosi sui profili di espressione genica.
+È molto utile per trovare e identificare profili di espressione genica specifici ad un particolare tipo cellulare/subpopolazione.
+Presenta alcuni limiti:
+- Non ci sono marker affidabili cellula-specifici
+- L'eterogeneità all'interno dei tipi cellulari
+- Fattori tecnici come batch-effect e profondità di sequenziamento
+- L'assunzione di independeza dell'espressione genica tra differenti tipi cellulari
+
+Nuove tecnologie oggi permettono l'anilisi dell'RNA a livello delle singole cellule, chiamato scRNA-seq ovvero single cell RNA seq.
+Gli step sono molto simili a quelli già visti:
+- Si dissociano le cellule prelevate dal tesuto, creando isolazione per la singola cellula
+- Si estrae l'RNA e si preparano le librerie dai diversi tipi cellulari
+- Si effettua un pooling dell'RNA e lo si sequenzia
+- Le read prodotte vengono allineate al genoma di riferimento
+- Si ricostruire il profilo di espressione per cellula, riportando i livelli di espressione per il gene k per la cellula j
+- Si effettua una operazione di clustering sui profili di espressione in modo da identificare i tipi cellulari
+
+Lo step di dissociazione avviene per disaggregazione meccanica e dissociazione enzimatica con collagenasi e DNasi. Il prodotto dell'utilizzo di queste tecniche dipende strettamente dal tessuto ed è opportuno determinarlo empiricamente.
+
+La strategia utilizzata per la cattura delle cellule invece determina il throughput (quante cellula da isolare), la qualità e la riproducibilità dell'esperimento. Le 3 opzioni più utilizzate sono:
+1. Microtitre plate -> Isolazione delle cellule in pozzetti di un vetrino, utilizzando ad esempio microdissezione o FACS (fluorescent activated cell sorting). Può identificare e scartare cellule danneggiate o trovare pozzetti contenenti doublets (2 o più cellule in un pozzetto). Basso throughput ed è molto dispendioso in termini di tempo di lavoro per cellula
+2. Microfluidic-array-based -> Permette un sistema integrato di cattura delle cellule oltre ad effettuare le reazioni chimiche necessarie per la preparazione delle librerie. Ha un throughput più elevato rispetto a microtitre-plate. Tipicamente solo il 10% delle cellule vengono cattuare in una piattaforma microfluidica. I nanopozzetti sono specifici per una particolare dimensione, ha quindi un effetto sul campionamento unbiased delle cellule in tessuti complessi 
+3. Microfluidic-droplet-based -> Offre il throughput più elevato e sono i metodi più popolari. Incapsulano cellule individuali all'interno di una gocciolina di dimensione di un nanolitro di olio, insieme ad un bead. Il bead è caricato con enzimi e altre componenti richieste per costruire la libreria. Le piattaforme droplet hanno costi bassi in termini di library preparation (0.05 USD/cell)
+
+Il fluidigm C1 integrate fluidic circuit system è il più comune dispositivo utilizzato per la preparazione di campioni single-cell. Il sistema automatizzato può processare fino a 800 cellule individuali in parallelo. Microvalvole facilitano la cattura delle singole cellule seguite dalla spinta di cellula in camere downstream per la lisi, Trascrittasi inversa, amplificazione e altri trattamenti, dipendentenmente dal target dell'analisi (DNA, mRNA, esomi)
+
+Le droplet microfluidiche stanno emergendo come tecnologia di scelta facilmente implementabili, ad alto throughput e relativamente a basso costo, per un largo range di analisi single cell.
+Le goccioline possono essere aricate con singole cellule utilizzando una sospensione cellulare diluita come fase acquosa. La distribuzione delle cellule in goccioline segue distribuzione di poisson, minimizzando il rischio di incapsulazione di molte cellule in una gocciolina.
+Una volta formata, le goccioline con cellule incapsulate possono essere manipolate in diverse maniere.
+
+### Library Preparation (Droplet)
+Esistono diverse strategie per le droplet microfluidiche
+- inDrop -> Indexing droplets. Si utilizzano le droplet microfluidiche per incapsulare una soluzione altamente diluita di cellula con bead barcoding fatti di idrogel
+- dropSeq -> Simile a inDrop ma le cellule sono incapsulate in droplet con bead barcoding fatti di resina dura
+- 10x -> È una combinazione di inDrop + dropSeq
+
+### Library sequencing
+Ogni libreria contiene un barcode che identifica una cellula ed un UMI che identifica il gene, maniera tale che identificare tipi cellulare e geni sia semplice.
+Si raggruppano le cellule per barcode, e si contano gli UMI unici per ogni gene in ogni cellula
+
+
+### Applicazioni
+- Profilazione single-cell
+- espressione differenziale
+- fattori di trascrizione
+- Cell-cell interaction
+- Disease specific population
+- Lineage Trajectory reconstitution
+- Cellule staminali cancerogeni
