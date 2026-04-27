@@ -20,10 +20,10 @@ Allineare le sequenze è importante per ottenere una comparazione diretta, oltre
 
 ## Matrici
 
-1. Identità -> Match vs M
+1. Identità -> Match vs Mismatch
 2. Genetic-Code -> Similarità dei codoni
-3. Matrice delle proprietà chimiche
-4. Matrici Empiriche
+3. Matrice delle proprietà chimiche -> Proprietà fisico-chimiche
+4. Matrici Empiriche -> Basate sulle frequenze osservate
     - PAM
     - BLOSUM
     - Gonnet
@@ -44,13 +44,13 @@ La scelta di una delle matrici è cruciale per ottenere buoni risultati:
 
 ### PAM
 
-L'idea base delle matrici PAM nasce da studi di filogenetica molecolare su 71 famiglie di proteine con un minimo di 85% di similarità. L'assunzione di partenza è che analizzando sequenze filogeneticamente associate è possibile calcolare la percentuale di mutazioni accettate.
+L'idea base delle matrici PAM nasce da studi di filogenetica molecolare su 71 famiglie di proteine con un minimo di 85% di similarità. L'assunzione di partenza è che analizzando sequenze filogeneticamente associate è possibile calcolare la percentuale di mutazioni accettate (PAM).
 
 > **1 unità PAM** = 1% di cambiamento di posizione di un aminoacido = una sostituzione ogni 100 aminoacidi.
 
 Si è partiti ricostruendo la sequenza ancestrale partendo da allineamento multiplo tra proteine con similarità elevata >85%.
 
-Le sostituzioni "accettate" sono riportate su una matrice da cui è possibile ottenere la **mutabilità relativa** ($m_i$) del residuo $i$. Una volta definita la mutabilità, la domanda da porsi è qual è la probabilità che sia cambiato in $j$.
+Le sostituzioni "accettate"  sono riportate su una matrice da cui è possibile ottenere la **mutabilità relativa** ($m_i$) del residuo $i$. Una volta definita la mutabilità, la domanda da porsi è qual è la probabilità che sia cambiato in $j$.
 
 $$M_{ij} = m_i \cdot \frac{f_{ij}}{f_i} = \frac{f_{ij}}{f_i} \cdot \frac{f_i}{100 \cdot fp_i} = \frac{f_{ij}}{100 \cdot fp_i}$$
 
