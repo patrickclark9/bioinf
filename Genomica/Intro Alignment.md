@@ -140,6 +140,8 @@ Lo score è pari al massimo tra:
 - $\text{score}(x-1, y-1) + \text{substitution\_score}(x,y)$
 - $\text{score}(x-1, y) - \text{gap\_penalty}$
 
+Quindi, dipendentemente da dove apriamo il gap (sequenza 1 o sequenza 2), si sale o ci si muove orizzontalmente. Ad ogni step si prende il massimo tra le 3 direzioni possibili (diagonale è Match/Mismatch (matrice di scoring), Verticale è Gap in sequenza 1, Orizzontale è Gap in sequenza 2).
+
 ---
 
 ### Smith-Waterman
