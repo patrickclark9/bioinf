@@ -28,7 +28,7 @@ Allineare le sequenze è importante per ottenere una comparazione diretta, oltre
     - BLOSUM
     - Gonnet
 
-PAM e BLOSUM si basano sulle frequenze osservate di specifiche sostituzioni aminoacidiche. La similarità tra due aminoacidi è proporzionale alla loro frequenza di sostituzione osservata.
+PAM e BLOSUM si basano sulle frequenze osservate di specifiche sostituzioni amminoacidiche. La similarità tra due amminoacidi è proporzionale alla loro frequenza di sostituzione osservata.
 
 Queste matrici si basano su evidenze biologiche: le differenze osservate tra sequenze omologhe negli allineamenti sono dovute solo a eventi di mutazione. Alcune di queste mutazioni hanno effetti minimi o assenti nella struttura/funzione delle proteine.
 
