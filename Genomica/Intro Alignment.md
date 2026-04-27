@@ -20,8 +20,8 @@ Allineare le sequenze è importante per ottenere una comparazione diretta, oltre
 
 ## Matrici
 
-1. Identità
-2. Genetic-Code
+1. Identità -> Match vs M
+2. Genetic-Code -> Similarità dei codoni
 3. Matrice delle proprietà chimiche
 4. Matrici Empiriche
     - PAM
