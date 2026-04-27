@@ -236,7 +236,8 @@ I protocolli stranded preservano l'informazione riguardante lo strand da cui l'm
 
 ## Read Mapping
 
-Per allineare le sequenze contro il genoma di interesse è necessario un **allineatore spliced-aware** (es. STAR, TopHat2, SOAPSplice, Bowtie).
+Per allineare le sequenze contro il genoma di interesse è necessario un **allineatore spliced-aware** (es. STAR, TopHat2, SOAPSplice).
+La problematica sorge fondamentalmente dalle short-reads, che tipicamente sono troppo corte per catturare un'intero esone, quindi è necessaria una soluzione che riesca a ricostruire la struttura dell'RNA originale partendo dai frammenti.
 
 Esistono due approcci generali:
 
@@ -426,6 +427,8 @@ Un riarrangiamento viene misurato da due tipi di evidenza:
 
 - **Read chimeriche** (split o junction read) — hanno un overlap diretto con la junction chimerica del trascritto di fusione
 - **Read discordanti** (bridging read pair / fusion-spanning read pair) — ogni read mappa su lati opposti della junction chimerica, senza overlap diretto della junction
+
+> Chimeric reads are ==sequencing reads composed of two or more distinct DNA/RNA segments that originate from different genomic regions or different molecules==. Often called split reads, they can represent genuine biological structural variations (like fusions) or, conversely, technological artifacts produced during sequencing library preparation, such as during PCR amplification.
 ### Software
 
 - **STAR-fusion** — utilizza gli allineamenti identificati da STAR come chimerici e discordanti per la predizione delle fusioni
