@@ -194,12 +194,12 @@ Il primo step è creare un indice di word della sequenza di query. Ogni parola v
 
 **BLAST** (Basic Local Alignment Search Tool) — Parametri principali: W, T, S, X.
 
-|Parametro|Descrizione|
-|---|---|
-|**W** (Wordsize)|↑ W → meno word generate → algoritmo più rapido, ma sensitività ↓|
-|**T** (Threshold)|↓ T → più W-mers inclusi → tempo ↑, sensitività ↑|
-|**S** (Score)|↓ S → HSP più lunghi|
-|**X** (Dropoff)|↑ X → più regioni attorno agli HSP esplorate → tempo ↑. Controlla quanto lo score può scendere prima di arrestare l'allineamento|
+| Parametro         | Descrizione                                                                                                                      |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **W** (Wordsize)  | ↑ W → meno word generate → algoritmo più rapido, ma sensitività ↓                                                                |
+| **T** (Threshold) | ↓ T → più W-mers inclusi → tempo ↑, sensitività ↑                                                                                |
+| **S** (Score)     | ↓ S → HSP più lunghi                                                                                                             |
+| **X** (Dropoff)   | ↑ X → più regioni attorno agli HSP esplorate → tempo ↑. Controlla quanto lo score può scendere prima di arrestare l'allineamento |
 
 Funzionamento basilare del BLAST:
 
@@ -211,8 +211,8 @@ Funzionamento basilare del BLAST:
 4. Ci si ferma quando lo score diminuisce, o la sequenza termina (full-match)
 
 Una delle estensioni recenti è il **Two-Hit Method**: l'estensione di un HSP viene attivata solo se due hit indipendenti si allineano per un certo numero di residui $A$ senza alcun gap tra loro.
-I due HSP devono essere NON in overlap. Questo metodo permette la riduzione del Threshold T senza perdita in accuratezza.
-Altra ottimizzazione è l'eliminazione di hit sulla stessa diagonale. Consiste nel rimuovere gli hit che si trovano in overlap di zone, che risulteranno nell'estensione già avvenuta della stessa porzione. (E.g. Query Pos = 0-3, DB pos = 100-103. 100-0 = 100 -> Diagonal. QueryPos_2 = 1-4, DBPos_2 101-104. 101-1 = 100 -> Stessa diagonale. Stiamo estendo lo stesso seed, ma da posizioni diverse)
+I due HSP devono essere NON in overlap. Questo metodo permette la riduzione del Threshold T senza rendere l'algoritmo estremamente lento, quindi riducendo il tempo di esecuzione senza perdita in termini di accuratezza.
+Altra ottimizzazione è l'eliminazione di hit IN OVERLAP sulla stessa diagonale. Consiste nel rimuovere gli hit che si trovano in overlap di zone, che risulteranno nell'estensione già avvenuta della stessa porzione. (E.g. Query Pos = 0-3, DB pos = 100-103. 100-0 = 100 -> Diagonal. QueryPos_2 = 1-4, DBPos_2 101-104. 101-1 = 100 -> Stessa diagonale. Stiamo estendo lo stesso seed, ma da posizioni diverse)
 
 ### Altschul Statistics
 
