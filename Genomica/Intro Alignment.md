@@ -134,6 +134,12 @@ L'algoritmo di Needleman-Wunsch può essere riassunto in 3 step principali:
 
 Le sequenze compongono la matrice principale e le regole di composizione sono uguali a quelle del DotPlot. Ogni punto della matrice può essere raggiunto da 3 possibili posizioni; si sceglie quello con lo score più elevato tra le 3 possibilità per ottenere il best alignment score per uno specifico punto.
 
+Lo score è pari al massimo tra:
+
+- $\text{score}(x, y-1) - \text{gap\_penalty}$
+- $\text{score}(x-1, y-1) + \text{substitution\_score}(x,y)$
+- $\text{score}(x-1, y) - \text{gap\_penalty}$
+
 ---
 
 ### Smith-Waterman
@@ -145,6 +151,7 @@ Lo score è pari al massimo tra:
 - $\text{score}(x, y-1) - \text{gap\_penalty}$
 - $\text{score}(x-1, y-1) + \text{substitution\_score}(x,y)$
 - $\text{score}(x-1, y) - \text{gap\_penalty}$
+- $0$
 
 In principio l'allineamento locale è utile per cercare similarità in un database. Smith-Waterman è però troppo lento per identificare regioni simili ad una query in database molto grandi. Genera allineamenti ottimali ed esaustivi unicamente.
 
