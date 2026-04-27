@@ -161,6 +161,13 @@ Per la ricerca su database si utilizzano algoritmi più complessi quali **FASTA*
 
 ![[Screenshot from 2026-04-15 17-10-18.png]]
 
+
+
+#### Comparazione
+
+Needleman-Wunsch è un algoritmo di ricerca globale, quindi è utile sono per confronti sequenza - 
+
+
 ---
 
 ## FASTA
