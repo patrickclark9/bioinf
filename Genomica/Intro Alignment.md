@@ -133,6 +133,7 @@ L'algoritmo di Needleman-Wunsch può essere riassunto in 3 step principali:
 3. Allineamento
 
 Le sequenze compongono la matrice principale e le regole di composizione sono uguali a quelle del DotPlot. Ogni punto della matrice può essere raggiunto da 3 possibili posizioni; si sceglie quello con lo score più elevato tra le 3 possibilità per ottenere il best alignment score per uno specifico punto.
+Post riempimento della matrice, si parte dall'ultima posizione $<x_n,y_n>$ , ovvero quella in basso a destra della matrice.
 
 Lo score è pari al massimo tra:
 
@@ -141,12 +142,15 @@ Lo score è pari al massimo tra:
 - $\text{score}(x-1, y) - \text{gap\_penalty}$
 
 Quindi, dipendentemente da dove apriamo il gap (sequenza 1 o sequenza 2), si sale o ci si muove orizzontalmente. Ad ogni step si prende il massimo tra le 3 direzioni possibili (diagonale è Match/Mismatch (matrice di scoring), Verticale è Gap in sequenza 1, Orizzontale è Gap in sequenza 2).
+![[Pasted image 20260427155959.png]]
+![[Screenshot from 2026-04-15 17-10-18.png]]
 
 ---
 
 ### Smith-Waterman
 
 La Smith-Waterman si ottiene modificando la formula introducendo lo 0, così da non avere score negativi. L'allineamento si ricostruisce dal valore più elevato e termina allo 0.
+Al posto di partire dall'ultima posizione (basso a destra), si parte dallo score più elevato ottenuto dalla matrice
 
 Lo score è pari al massimo tra:
 
@@ -159,13 +163,16 @@ In principio l'allineamento locale è utile per cercare similarità in un databa
 
 Per la ricerca su database si utilizzano algoritmi più complessi quali **FASTA** e **BLAST**.
 
-![[Screenshot from 2026-04-15 17-10-18.png]]
+![[Pasted image 20260427155934.png]]
 
+![[Pasted image 20260427160023.png]]
 
-
+---
 #### Comparazione
 
-Needleman-Wunsch è un algoritmo di ricerca globale, quindi è utile sono per confronti sequenza - 
+Needleman-Wunsch è un algoritmo di ricerca globale, quindi è utile sono per confronti sequenza - sequenza o database estremamente piccoli. È meglio applicato per confrontare sequenze ad alto livello di similarità.
+
+Smith-Waterman è un algoritmo di ricerca locale, ma non è molto efficiente contro databse grandi. Utile per trovare domini conservati.
 
 
 ---
