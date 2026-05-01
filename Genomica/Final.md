@@ -323,11 +323,11 @@ Possiamo quindi identificare nuove isoforme di splicing attraverso la detection 
 
 Le conte di RNA-seq necessitano di normalizzazione prima di poter essere utilizzate. I principali fattori da tenere in considerazione sono:
 
-|Fattore|Problema|
-|---|---|
-|**Sequencing Depth / Library Size**|Variabilità nel numero di read prodotte per run → fluttuazioni nel numero di frammenti mappati tra campioni|
-|**Gene Length**|La frammentazione dell'RNA porta i geni lunghi a generare più read rispetto ai trascritti corti, a parità di abbondanza|
-|**RNA Composition**|Pochi geni altamente differenzialmente espressi, differenze nel numero di geni tra campioni, o contaminazione possono introdurre asimmetria|
+| Fattore                             | Problema                                                                                                                                    |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sequencing Depth / Library Size** | Variabilità nel numero di read prodotte per run → fluttuazioni nel numero di frammenti mappati tra campioni                                 |
+| **Gene Length**                     | La frammentazione dell'RNA porta i geni lunghi a generare più read rispetto ai trascritti corti, a parità di abbondanza                     |
+| **RNA Composition**                 | Pochi geni altamente differenzialmente espressi, differenze nel numero di geni tra campioni, o contaminazione possono introdurre asimmetria |
 
 ---
 
