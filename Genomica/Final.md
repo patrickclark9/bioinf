@@ -55,7 +55,7 @@ Un oligonucleotide a singolo filamento con le terminazioni complementari al DNA 
 
 Varianti strutturali identificabili con sequenziamento di seconda generazione:
 
-- Mutazioni puntiformi
+- Mutazioni puntiformi (SNP)
 - Indel
 - Delezioni omozigoti → Copy Number Variation (CNV)
 - Delezioni emizigoti → Copy Number Variation (CNV)
