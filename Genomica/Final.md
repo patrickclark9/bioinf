@@ -62,7 +62,7 @@ Varianti strutturali identificabili con sequenziamento di seconda generazione:
 - Gain → Copy Number Variation (CNV)
 - Punti di breakpoint di traslocazioni
 - Patogeni
-
+![[Pasted image 20260518143512.png]]
 ### Workflow di Variant Calling
 
 I dati vengono sequenziati e allineati contro un genoma di riferimento per creare un file **BAM**.
@@ -107,6 +107,10 @@ Le short read generate dai frammenti immunoprecipitati (dette **tag**) vengono a
 1. Ogni posizione mappata viene estesa con un frammento di dimensione stimata per generare un **profilo**
 2. Il profilo combinato viene analizzato tramite algoritmi di **peak-calling** (es. MACS) per distinguere segnali di binding dal rumore di fondo
 3. L'identificazione dei picchi può essere effettuata su qualsiasi profilo generato
+![[Pasted image 20260518143534.png]]
+![[Pasted image 20260518143541.png]]
+
+
 ---
 ## Metagenomica
 
@@ -133,6 +137,8 @@ Questo permette la rapida e profonda analisi delle comunità microbiche da campi
 4. Clusterizzazione delle sequenze per identità (es. 99%) in unità chiamate **OTU** (Operational Taxonomic Units)
 5. Ricerca delle sequenze rRNA tramite **BLAST** contro un database con milioni di sequenze tassonomicamente classificate
 
+![[Pasted image 20260518143600.png]]
+
 ---
 
 ### Shotgun Metagenomics
@@ -147,6 +153,9 @@ Si estraggono short read da **tutte le specie** presenti nel campione, senza tar
 4. **Gene finding** e annotazione per organizzare le sequenze
 5. **Phylogenetic binning** per raggruppare i genomi per specie
 6. **Ricostruzione metabolica**
+
+
+![[Pasted image 20260518143617.png]]
 
 ---
 
@@ -231,6 +240,9 @@ I protocolli stranded preservano l'informazione riguardante lo strand da cui l'm
 
 - **First strand library** → si sintetizza il secondo strand utilizzando **dUTP**, che viene poi rimosso per digestione con **uracil-DNA-glicosilasi**
 - **Second strand library** → si rimuove l'RNA dopo la sintesi del filamento template, prima della PCR e del sequenziamento
+
+![[Pasted image 20260518143641.png]]
+
 
 ---
 
