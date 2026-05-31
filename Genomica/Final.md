@@ -2,6 +2,7 @@
 id: Final
 aliases: []
 tags: []
+publish: true
 ---
 
 # Applicazioni di NGS
