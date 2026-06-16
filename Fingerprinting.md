@@ -152,8 +152,9 @@ La prima dimensione utilizza solitamente un gradiente di pH ottenuto grazie a mo
 
 Durante la seconda dimensione, il campione viene trattato con SDS per conferire a tutte le proteine una carica elettrica negativa. Segue la classica SDS-PAGE, in cui le specie proteiche si dividono in funzione del loro peso molecolare.
 
-Modificazioni post-traduzionali possono causare cambiamenti nel punto isoelettrico e/o nel peso molecolare.
+Modificazioni post-traduzionali possono causare cambiamenti nel punto isoelettrico e/o nel peso molecolare. Si riconoscono i "train" in proteine estensivamente modificate.
 La 2D-PAGE e l'analisi dell'immagine ci permettono di studiare modificazioni nella composizione del proteoma.
+Con l'image 
 #### SDS-PAGE
 L'SDS (dodecil solfato di sodio) è un detergente fortemento ionico che conferisce carica elettrica negativa in media ogni 2 residui amminoacidici. Le proteine trattate con SDS sono denaturate con un numero di cariche proporzionale al loro peso molecolare:
 - 40kDa -> assumerà circa 180 cariche negative
