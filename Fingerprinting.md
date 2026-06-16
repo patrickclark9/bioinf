@@ -98,7 +98,7 @@ Separazione della proteina intatta mediante elettroforesi
 | Separazione cromatografica   | Scambio cationico / anionico               |
 | Separazione elettroforetica  | 1D-SDS-PAGE · 2D-PAGE (pI + MW)            |
 | Affinity Chromatography      |                                            |
-
+![[Pasted image 20260616201219.png]]
 ### 5.2 Post-digestione (Separazione del Peptide)
 
 Si riduce la complessità a livello peptidico, dopo la digestione.
@@ -107,6 +107,8 @@ Si riduce la complessità a livello peptidico, dopo la digestione.
 |---|---|
 | **Cromatografia a fase inversa** (RP-HPLC) | Step finale prima dell'ingresso nello spettrometro |
 | **Cromatografia multidimensionale** (MudPIT) | Es. SCX → RP; aumenta drasticamente la copertura del proteoma |
+![[Pasted image 20260616201207.png]]
+
 
 ---
 
@@ -154,7 +156,9 @@ Durante la seconda dimensione, il campione viene trattato con SDS per conferire 
 
 Modificazioni post-traduzionali possono causare cambiamenti nel punto isoelettrico e/o nel peso molecolare. Si riconoscono i "train" in proteine estensivamente modificate.
 La 2D-PAGE e l'analisi dell'immagine ci permettono di studiare modificazioni nella composizione del proteoma.
-Con l'image 
+
+Un altro problema è gli spot messi vicino l'una all’altra che hanno diverso pI ma uguale massa. Questi spot sono dovuti a modificazioni post traduzionali. Quindi alla stessa altezza di massa abbiamo spot che si mettono vicine. È la stessa proteina ma con modifiche quindi co esistenza di specie con livelli di modificazioni diverse.
+Con l'image analysis si va a identificare gli spot, gel-to-gel-matching, assenza/presenza di spot, up/down regolazione, analisi statistiche.
 #### SDS-PAGE
 L'SDS (dodecil solfato di sodio) è un detergente fortemento ionico che conferisce carica elettrica negativa in media ogni 2 residui amminoacidici. Le proteine trattate con SDS sono denaturate con un numero di cariche proporzionale al loro peso molecolare:
 - 40kDa -> assumerà circa 180 cariche negative
