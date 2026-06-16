@@ -89,6 +89,7 @@ $$2.25\ \mu g \times 10^5 = \mathbf{225\ mg\ \text{di proteina totale}}$$
 ### 5.1 Pre-digestione (Separazione della Proteina)
 
 Si riduce la complessità a livello proteico, prima di digerire.
+Separazione della proteina intatta mediante elettroforesi
 
 | Metodo | Esempi |
 |---|---|
