@@ -91,12 +91,13 @@ $$2.25\ \mu g \times 10^5 = \mathbf{225\ mg\ \text{di proteina totale}}$$
 Si riduce la complessità a livello proteico, prima di digerire.
 Separazione della proteina intatta mediante elettroforesi
 
-| Metodo | Esempi |
-|---|---|
-| Isolamento di organelli | Mitocondri, nucleo, membrana plasmatica |
+| Metodo                       | Esempi                                     |
+| ---------------------------- | ------------------------------------------ |
+| Isolamento di organelli      | Mitocondri, nucleo, membrana plasmatica    |
 | Frazionamento per solubilità | Frazione di membrana vs. frazione solubile |
-| Separazione cromatografica | Scambio cationico / anionico |
-| Separazione elettroforetica | 1D-SDS-PAGE · 2D-PAGE (pI + MW) |
+| Separazione cromatografica   | Scambio cationico / anionico               |
+| Separazione elettroforetica  | 1D-SDS-PAGE · 2D-PAGE (pI + MW)            |
+| Affinity Chromatography      |                                            |
 
 ### 5.2 Post-digestione (Separazione del Peptide)
 
@@ -131,3 +132,12 @@ Si riduce la complessità a livello peptidico, dopo la digestione.
                            │
                    Identificazione
 ```
+
+
+
+## Classi di esperimenti di proteomica
+Il tipico esperimento di proteomica è il PEA -> Expression analysis. Analisi dell'espressione di una proteina ( o più) nei diversi campioni. La complessità del campione è elevata perchè estendiamo questa analisi a più proteine possibili. Il dettaglio analitico ovviamente è basso, si valuta solo l'espressione
+
+Un'altro tipo di esperimento è  l'analisi di gruppi specifici di proteine. Non si lavora più su un solo campione complesso, ma su un gruppo specifico di 20-200 proteine già selezionate. (Proteine delle stessa famiglia, oppure di un organello). Il dettaglio analitico aumenta.
+
+L'ultimo è lo studio delle modificazioni post-traduzionali, andando ad utilizzare la composizione della sequenza amminoacidica per ricercare le modificazioni. Si lavora con un basso numero di proteine, il dettaglio analitico aumenta
