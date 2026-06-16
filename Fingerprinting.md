@@ -150,10 +150,14 @@ Nel caso dell'elettroforesi bidimensionale, i principi più utilizzati solo il p
 
 La prima dimensione utilizza solitamente un gradiente di pH ottenuto grazie a molecole anfotere, fatte migrare all'interno di un supporto costituito in gene da un gel di poliacrilammide, posto in un campo elettrico. Il campione viene caricato su gel ed il campo elettrico applicato fa si che le proteine presenti in forma ionica si muovano fino a raggiungere il punto isoelettrico proprio. Il processo si chaiam isoelettrofocalizzazione o IEF.
 
-Durante la seconda dimensione, il campione viene trattato con SDS per conferire a tutte le proteine una carica elettrica negativa. Segue la classica SDS-PAGE, in cui le specie proteiche si dividono in funzione del loro peso molecolare
+Durante la seconda dimensione, il campione viene trattato con SDS per conferire a tutte le proteine una carica elettrica negativa. Segue la classica SDS-PAGE, in cui le specie proteiche si dividono in funzione del loro peso molecolare.
+
+Modificazioni post-traduzionali possono causare cambiamenti nel punto isoelettrico e/o nel peso molecolare.
+La 2D-PAGE e l'analisi dell'immagine ci permettono di studiare modificazioni nella composizione del proteoma.
 #### SDS-PAGE
 L'SDS (dodecil solfato di sodio) è un detergente fortemento ionico che conferisce carica elettrica negativa in media ogni 2 residui amminoacidici. Le proteine trattate con SDS sono denaturate con un numero di cariche proporzionale al loro peso molecolare:
 - 40kDa -> assumerà circa 180 cariche negative
 - 80kDa -> assumerà circa 360 cariche negative
 L'idea è la stessa della elettroforesi: Quando si applica un campo elettrico di corrente continua ad una soluzione a pH determinato, il contenuto (proteine) si muoverà verso uno dei due elettrodi (il catodo nel caso della SDS-PAGE dato che sono tutte cariche negativamente). La velocità è inversamente proporzionale al peso molecolare.
 L'SDS-PAGE permette di stabilire la purezza della proteina purificata e il suo peso molecolare.
+
