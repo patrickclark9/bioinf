@@ -150,7 +150,7 @@ L'ultimo è lo studio delle modificazioni post-traduzionali, andando ad utilizza
 La tecnica cosnta di due dimensioni ortogonali lungo le quali sono separate le diverse proteine. In proteomica, ortogonale si riferisce in genere alle due dimensioni lungo le quali la separazione avviene sfruttando principi fisici differenti, che non sono influenzati l'uno dall'altro.
 Nel caso dell'elettroforesi bidimensionale, i principi più utilizzati solo il punto isoelettrico e il peso molecolare.
 
-La prima dimensione utilizza solitamente un gradiente di pH ottenuto grazie a molecole anfotere, fatte migrare all'interno di un supporto costituito in gene da un gel di poliacrilammide, posto in un campo elettrico. Il campione viene caricato su gel ed il campo elettrico applicato fa si che le proteine presenti in forma ionica si muovano fino a raggiungere il punto isoelettrico proprio. Il processo si chaiam isoelettrofocalizzazione o IEF.
+La prima dimensione utilizza solitamente un gradiente di pH ottenuto grazie a molecole anfotere, fatte migrare all'interno di un supporto costituito in gene da un gel di poliacrilammide, posto in un campo elettrico. Il campione viene caricato su gel ed il campo elettrico applicato fa si che le proteine presenti in forma ionica si muovano fino a raggiungere il punto isoelettrico proprio. Il processo si chiama isoelettrofocalizzazione o IEF.
 
 Durante la seconda dimensione, il campione viene trattato con SDS per conferire a tutte le proteine una carica elettrica negativa. Segue la classica SDS-PAGE, in cui le specie proteiche si dividono in funzione del loro peso molecolare.
 
@@ -166,3 +166,27 @@ L'SDS (dodecil solfato di sodio) è un detergente fortemento ionico che conferis
 L'idea è la stessa della elettroforesi: Quando si applica un campo elettrico di corrente continua ad una soluzione a pH determinato, il contenuto (proteine) si muoverà verso uno dei due elettrodi (il catodo nel caso della SDS-PAGE dato che sono tutte cariche negativamente). La velocità è inversamente proporzionale al peso molecolare.
 L'SDS-PAGE permette di stabilire la purezza della proteina purificata e il suo peso molecolare.
 
+## Gel-Based Proteomics
+
+1. Stabilire mappe reference
+	- Frazione Organellare
+	- Frazione solubile
+2. Differenze qualitative
+	- Comparazione di genotipi
+	- Comparazione di differenti organelli
+3. Differenze quantitative
+	- Risposta ai farmaci
+	- Cambiamenti durante la malattia
+	- Risposta a stimoli
+**Tecnica Gel per singolo campione** -> Tessuti -> Elettroforesi 2D -> Staining del gel -> Matching dei gel -> Comparazione degli spot
+
+Il volume dello spot lo otteniamo da analisi dell'immagine come somma dei pixel all'interno dei confini dello spot. Si normalizza poi $\frac{\text{Spot volume}}{\text{volume totale degli spot su gel}}$
+![[Pasted image 20260617085517.png]]
+
+Con più replicati biologici controllo/trattato -> Analisi statistica.
+
+Problema:  2D-Electrophoresis:
+Gel-to-Gel variazioni nel profilo della proteina:
+Prima dimensione:
+- Reidratazione non uniforme degli strip IEF
+- Perdita di proteina durante l'uscita dal gel IEF
