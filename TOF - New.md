@@ -94,11 +94,11 @@ Avendo due stadi di accelerazione indipendenti, è possibile "modulare" le tensi
 
 Si introduce un **ritardo** ($\sim$ nanosecondi (MALDI)–microsecondi (ESI)) tra l'ionizzazione e l'applicazione del campo di accelerazione:
 
-- Durante il ritardo, gli ioni con velocità iniziale maggiore si allontanano di più dalla sorgente 
+- Durante il ritardo, gli ioni con velocità iniziale maggiore si allontanano di più dalla sorgente -> parziale diffusione di energia cinetica
 - Quando il campo viene applicato, gli ioni più veloci (più lontani) si trovano in una regione a potenziale inferiore → ricevono meno energia → arrivano al rivelatore insieme agli ioni più lenti
 - Risultato: **compressione temporale** della distribuzione → riduzione del position e del velocity spread tra ioni con lo stesso m/z che lasciando la sorgente
 
-#### 3. Reflectron
+#### 3. Reflectron - Compensazione ulteriore per velocity spread
 
 Specchio elettrostatico posto in fondo alla drift region, formato da **elettrodi a potenziale crescente** con segno opposto al campo di accelerazione.
 
@@ -107,20 +107,27 @@ Sorgente ──────────────► Reflectron ────�
          drift region 1              drift region 2
 ```
 
+Il voltaggio viene impostato a 1.05-1.1 moltiplicato per il voltaggio di accelerazione. Gli ioni entrano nel reflectron, penetrano fino al raggiungimento di 0 energia cinetica, e poi vengono accelerati nella direzione del detector
+
 **Meccanismo di correzione:**
 
-|Ione|Velocità|Penetrazione nel reflectron|Percorso extra|Effetto|
-|---|---|---|---|---|
-|Più veloce (più energetico)|Alta|Maggiore|Più lungo|Rallentato|
-|Più lento (meno energetico)|Bassa|Minore|Più corto|Meno rallentato|
+| Ione                        | Velocità | Penetrazione nel reflectron | Percorso extra | Effetto                       |
+| --------------------------- | -------- | --------------------------- | -------------- | ----------------------------- |
+| Più veloce (più energetico) | Alta     | Maggiore                    | Più lungo      | Rallentamento più aggressivo  |
+| Più lento (meno energetico) | Bassa    | Minore                      | Più corto      | Rallentamento meno aggressivo |
 
 I due ioni, pur entrando in tempi diversi, escono dal reflectron e arrivano al rivelatore **contemporaneamente** → focalizzazione indipendente dalla posizione di partenza.
 
 > Il voltaggio del reflectron è **superiore** al potenziale di accelerazione iniziale e di **segno opposto**: tutti gli ioni vengono decelerati, invertiti ed espulsi, ma con percorsi diversi in funzione della loro energia.
 
+Il campo ritardante/riflettente permette una compensazione **Indipendente dalla massa** per la velocity spread.
+
+**Tanto più corto il path dello ione, tanto più accurata deve essere la misurazione del time of flight**.
+
 #### Configurazione Ottimale: Dual Stage Reflectron
 
 La combinazione di **dual stage extraction + time-delayed extraction + reflectron** massimizza la focalizzazione del fascio ionico su tutte e tre le cause di spreading, consentendo la massima risoluzione raggiungibile in un TOF.
+È lo standard per ottenere massima risoluzione e accuratezza per un analizzatore TOF.
 
 ---
 

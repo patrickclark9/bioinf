@@ -41,7 +41,7 @@ Separa miscele proteiche complesse lungo **due dimensioni ortogonali**, sfruttan
 #### Prima dimensione — Isoelettrofocalizzazione (IEF)
 
 - Gel di poliacrilammide con **gradiente di pH** generato da molecole anfotere
-- Le proteine cariche migrano fino a raggiungere il proprio **punto isoelettrico (pI)** → si fermano (carica netta = 0)
+- Le proteine cariche migrano fino a raggiungere il proprio **punto isoelettrico (pI)** → si fermano (carica netta = 0) -> Separazione per punto isolettrico
 
 #### Seconda dimensione — SDS-PAGE
 
