@@ -23,3 +23,14 @@ $$E_K = \frac{1}{2}mv^2, v=\text{velocity of ion in drift region}$$
 $$E_P = E_K \rightarrow qU = \frac{1}{2}mv^2$$
 Il tempo di percorrenza è una variabile che dipende unicamente dalla massa.
 **In sintesi:** Poiché il voltaggio U è fisso e uguale per tutti, l'energia impartita allo ione dipende solo dalla sua carica q. A parità di carica, uno ione con una massa (m) più piccola raggiungerà una velocità (v) maggiore e arriverà al rivelatore in un tempo più breve. Ecco come il TOF riesce a misurare il tempo di volo per ricavare il famoso rapporto **m/z** (massa su carica)!
+
+$v=\frac{d}{t}$,, dove v = velocità dello ione, d = durata del drift, e t tempo di volo.
+Il tempo di volo sarà $$t = \frac{d}{\sqrt{2U}}\sqrt{\frac{m}{q} }$$ ed $$m=\frac{2qU}{d^2}t^2$$
+Differenziando l'equazione della massa: $$dm=\frac{2qU}{d^2}2tdt$$
+$$\frac{m}{dm} = \frac{t^2}{2tdt} \rightarrow \frac{m}{dm} = \frac{t}{2dt}$$
+Si ottiene il resolving power di TOF: $$\text{Resolving Power} \rightarrow \frac{m}{\Delta m} = \frac{t}{2\Delta t}$$
+Sostanzialmente, variazioni in massa sono legate alla variazione nel tempo. La capacità risolutiva è povera -> il rapporto tra massa e variabilità di essa descrive la capacità di separazione di masse vicine tra loro.
+La risoluzione è legata la focalizzazione del fascio ionico avente uguale massa. Se fascio a uguale massa è focalizzato entro intervalli di tempo molto ridotti -> Elevata risoluzione.
+Ma ioni con la stessa massa avranno tempi diversi a causa di tempi di partenza differenti -> Nel TOF tutti gli ioni con stessa massa partono in maniera diversa e avranno tempi di percorrenza differenti. Ampliamento quindi dellla banda ionica -> Risoluzione va a picco.
+Fattori che determinano la focalizzazione:
+- Ioni generati nell'ordine di nanosecondi -> Due ioni ide
