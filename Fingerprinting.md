@@ -293,5 +293,10 @@ Ci permette inoltre di creare uno standard interno rimuovendo la necessita per r
 ![[Pasted image 20260617093909.png]]
 
 ## Gel-Free
-Una delle evoluzioni maggiori della protemica sono gli approcci gel-free, per l'identifiacazione e la quantificazione su larga scala.
+Una delle evoluzioni maggiori della protemica sono gli approcci gel-free, per l'identificazione e la quantificazione su larga scala.
 Si combinano metodi come il labelling degli isotopi, tecniche di separazione e spettrometria di massa.
+Il limite principale dell'elettroforesi sta nella variabilità biologica (natura del campione ) e tecnica (legata alla tecnica) -> Problemi per analisi statistica.
+La 2D Electrophoresis è utile per l'analisi quantitativa, perchè generiamo mappe bidimensionali con spot, e ciascuno spot corrisponde ad una proteine. Confrontando le mappe e con analisi densiometrica si risale all'espressione di una proteina in quella mappa.
+Il vantaggio della DiGE è quello di introdurre criteri per distinguere campioni diversi in modo da ridurre la variabilità -> 2 mappe per gene, ogni mappa è un campione, rimuoviamo il confronto tra mappe.
+
+Nell'analisi bottom up si lavora con proteine digerite da tripsina. Non possiamo usare proteine intatte a causa delle tecniche cromatografiche. Tecnica di separazione delle proteine principale è HPLC a fase inversa
