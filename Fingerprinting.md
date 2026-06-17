@@ -232,7 +232,7 @@ Il volume di uno spot si ricava dalla somma dei pixel interni ai suoi confini (i
 
 $$\text{Spot normalizzato} = \frac{\text{Volume spot}}{\text{Volume totale di tutti gli spot sul gel}}$$
 
-Con **repliche biologiche** (controllo/trattato) si procede con analisi statistica.
+Con **repliche biologiche** (controllo/trattato) si ottiene significatività statistica, e si procede con analisi statistica. L'elettroforesi è poco riproducibile però
 ![[Screenshot from 2026-06-17 08-55-16.png]]
 
 ---
@@ -266,11 +266,11 @@ Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della qu
 
 ### 3.5 Strategie per Limitare le Variazioni
 
-|Strategia|Implicazione|
-|---|---|
-|Repliche biologiche|≥3 campioni biologici indipendenti|
-|Repliche tecniche|≥3 gel per ciascun campione biologico|
-|**Totale tipico**|**3 biologiche × 3 tecniche = 18 gel**|
+| Strategia           | Implicazione                                                    |
+| ------------------- | --------------------------------------------------------------- |
+| Repliche biologiche | ≥3 campioni biologici indipendenti                              |
+| Repliche tecniche   | ≥3 gel per ciascun campione biologico                           |
+| **Totale tipico**   | **3 biologiche × 3 tecniche × 2 (treated/untreated)  = 18 gel** |
 
 > **Limite:** aumentare il numero di repliche incrementa costi in reagenti e tempo in modo significativo.
 
