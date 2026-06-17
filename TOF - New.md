@@ -45,13 +45,13 @@ Il tempo di volo è dunque una misura diretta di $\sqrt{m/q}$ — da $t$ misurat
 
 ### 5.3 Resolving Power
 
-Differenziando $m = \frac{2qU}{d^2},t^2$:
+Differenziando $m = \frac{2qU}{d^2}t^2$:
 
-$$dm = \frac{2qU}{d^2}\cdot 2t,dt$$
+$$dm = \frac{2qU}{d^2}\cdot 2tdt$$
 
 Dividendo membro a membro:
 
-$$\frac{m}{dm} = \frac{t}{2,dt} ;\Longrightarrow; \boxed{R = \frac{m}{\Delta m} = \frac{t}{2\Delta t}}$$
+$$\frac{m}{dm} = \frac{t}{2dt} ;\Longrightarrow; \boxed{R = \frac{m}{\Delta m} = \frac{t}{2\Delta t}}$$
 
 **Interpretazione:** la risoluzione di massa dipende direttamente dalla precisione temporale $\Delta t$. Per separare due masse simili occorre che il fascio ionico di ciascuna massa arrivi al rivelatore entro un intervallo di tempo $\Delta t$ il più stretto possibile → **focalizzazione del fascio ionico**.
 
@@ -61,11 +61,11 @@ $$\frac{m}{dm} = \frac{t}{2,dt} ;\Longrightarrow; \boxed{R = \frac{m}{\Delta m} 
 
 In pratica, ioni con la **stessa** m/z non arrivano tutti nello stesso istante, causando allargamento della banda ionica e perdita di risoluzione. Le cause sono tre:
 
-|Effetto|Causa|Conseguenza|
-|---|---|---|
-|**Position spread**|Ioni formati in posizioni diverse nella sorgente → diversa distanza percorsa nella zona di accelerazione|Diversa energia cinetica acquisita|
-|**Direction spread**|Ioni emessi con direzioni diverse → componente assiale della velocità variabile|Tempi di transito diversi anche a parità di massa|
-|**Energy spread**|Energia cinetica iniziale (pre-accelerazione) variabile|Velocità di partenza non uniformi|
+| Effetto                    | Causa                                                                                                    | Conseguenza                                       |
+| -------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| **Position spread**        | Ioni formati in posizioni diverse nella sorgente → diversa distanza percorsa nella zona di accelerazione | Diversa energia cinetica acquisita                |
+| **Direction spread**       | Ioni emessi con direzioni diverse → componente assiale della velocità variabile                          | Tempi di transito diversi anche a parità di massa |
+| **Energy/Velocity spread** | Energia cinetica iniziale (pre-accelerazione) variabile                                                  | Velocità di partenza non uniformi                 |
 
 Tutti e tre i fenomeni **ampliano la distribuzione temporale** degli ioni a massa uguale → $\Delta t$ aumenta → $R$ diminuisce.
 
