@@ -33,4 +33,7 @@ Sostanzialmente, variazioni in massa sono legate alla variazione nel tempo. La c
 La risoluzione è legata la focalizzazione del fascio ionico avente uguale massa. Se fascio a uguale massa è focalizzato entro intervalli di tempo molto ridotti -> Elevata risoluzione.
 Ma ioni con la stessa massa avranno tempi diversi a causa di tempi di partenza differenti -> Nel TOF tutti gli ioni con stessa massa partono in maniera diversa e avranno tempi di percorrenza differenti. Ampliamento quindi dellla banda ionica -> Risoluzione va a picco.
 Fattori che determinano la focalizzazione:
-- Ioni generati nell'ordine di nanosecondi -> Due ioni ide
+- Ioni generati nell'ordine di nanosecondi -> Due ioni identici hanno punti di partenza differenti, non percorrono quindi la stessa distanza **position spread**
+- Possono essere generati con direzioni diverse -> stesso campo di accelerazione le molecole non vanno nello stesso verso **direction spread**
+- Energia Cinetica diversa
+Tutto questo va a de-focalizzare il fascio ionico, costituito da un'unica molecola di m/z definito, riducendo la risoluzione.
