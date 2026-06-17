@@ -11,7 +11,7 @@
 
 Il TOF misura il **tempo impiegato da uno ione per percorrere una distanza fissa** (drift region). Ioni con massa diversa acquistano velocità diverse e arrivano al rivelatore in tempi diversi → separazione per m/z.
 
-> **Accoppiamento naturale:** MALDI/TOF è stato a lungo lo standard della proteomica — MALDI ionizza anche macromolecole intatte, e TOF ha un range di massa teoricamente illimitato.
+> **Accoppiamento naturale:** MALDI/TOF è stato a lungo lo standard della proteomica. MALDI ionizza anche macromolecole intatte, e TOF ha un range di massa teoricamente illimitato.
 
 ---
 
@@ -23,11 +23,16 @@ Nella zona sorgente tutti gli ioni vengono accelerati dallo **stesso potenziale 
 
 $$E_P = qU \qquad E_K = \frac{1}{2}mv^2$$
 
-$$E_P = E_K ;\Longrightarrow; qU = \frac{1}{2}mv^2$$
+$$E_P = E_K \Longrightarrow qU = \frac{1}{2}mv^2$$
 
-dove $q = ze$ (carica totale dello ione), $U$ = voltaggio di accelerazione, $m$ = massa, $v$ = velocità nella drift region.
+dove $q = ze$ , $U$ = voltaggio di accelerazione, $m$ = massa, $v$ = velocità nella drift region.
+$q$ è la carica elettrica totale dello ione -> +1, +2, +3 ecc...
+$e$ è la carica elementare (la carica di un singolo protone o elettrone, $1.602\times 10^{-19}Coulomb$)
 
-> **Intuizione chiave:** Poiché U è uguale per tutti, a parità di carica uno ione con massa minore raggiunge velocità maggiore → arriva prima al rivelatore.
+La formula $E_P​=qU$ descrive l'**energia potenziale elettrica** che lo strumento fornisce allo ione.
+
+
+> Poiché U è uguale per tutti, a parità di carica uno ione con massa minore raggiunge velocità maggiore → arriva prima al rivelatore.
 
 #### Tempo di volo
 
@@ -54,6 +59,7 @@ Dividendo membro a membro:
 $$\frac{m}{dm} = \frac{t}{2dt} ;\Longrightarrow; \boxed{R = \frac{m}{\Delta m} = \frac{t}{2\Delta t}}$$
 
 **Interpretazione:** la risoluzione di massa dipende direttamente dalla precisione temporale $\Delta t$. Per separare due masse simili occorre che il fascio ionico di ciascuna massa arrivi al rivelatore entro un intervallo di tempo $\Delta t$ il più stretto possibile → **focalizzazione del fascio ionico**.
+![[Pasted image 20260617151250.png]]
 
 ---
 
@@ -61,13 +67,14 @@ $$\frac{m}{dm} = \frac{t}{2dt} ;\Longrightarrow; \boxed{R = \frac{m}{\Delta m} =
 
 In pratica, ioni con la **stessa** m/z non arrivano tutti nello stesso istante, causando allargamento della banda ionica e perdita di risoluzione. Le cause sono tre:
 
-| Effetto                    | Causa                                                                                                    | Conseguenza                                       |
-| -------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| **Position spread**        | Ioni formati in posizioni diverse nella sorgente → diversa distanza percorsa nella zona di accelerazione | Diversa energia cinetica acquisita                |
-| **Direction spread**       | Ioni emessi con direzioni diverse → componente assiale della velocità variabile                          | Tempi di transito diversi anche a parità di massa |
-| **Energy/Velocity spread** | Energia cinetica iniziale (pre-accelerazione) variabile                                                  | Velocità di partenza non uniformi                 |
+| Effetto                    | Causa                                                                                                                                           | Conseguenza                                       |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| **Position spread**        | Ioni formati in posizioni diverse nella sorgente → diversa distanza percorsa nella zona di accelerazione                                        | Diversa energia cinetica acquisita                |
+| **Direction spread**       | Ioni emessi con direzioni diverse → componente assiale della velocità variabile. Raggiungono l'uscita ma impiegano più tempo (turn-around time) | Tempi di transito diversi anche a parità di massa |
+| **Energy/Velocity spread** | Energia cinetica iniziale (pre-accelerazione) variabile                                                                                         | Velocità di partenza non uniformi                 |
 
 Tutti e tre i fenomeni **ampliano la distribuzione temporale** degli ioni a massa uguale → $\Delta t$ aumenta → $R$ diminuisce.
+$\Delta t$ è dato quindi dalla somma del tempo trascorso nella regione **source** e il tempo trascorso nel **drifting tube**, oltre al response time del detector (dovrebbe essere circa costante).
 
 ---
 
