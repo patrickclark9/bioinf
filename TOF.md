@@ -37,3 +37,14 @@ Fattori che determinano la focalizzazione:
 - Possono essere generati con direzioni diverse -> stesso campo di accelerazione le molecole non vanno nello stesso verso **direction spread**
 - Energia Cinetica diversa
 Tutto questo va a de-focalizzare il fascio ionico, costituito da un'unica molecola di m/z definito, riducendo la risoluzione.
+
+Position spread -> Aggiungendo ulteriore energia riportiamo le molecole tutte sulla stessa posizione. Questa differenza di energia è visibile nella risoluzione -> Coda nel picco
+Direction Spread -> Energia per inveritire la direzione dello ione.
+
+Nel tempo di passaggio all'analizzatore si osserva position e direction sprtead.
+Estrazione di ioni dalla sorgente di ionizzazione in due stadi, non uno. 
+Applichiamo 2 campi di accelerazione -> Dual stage extraction
+1. Risolvere lo spazio -> Compensa per diversa energia e diversa posizione -> Correzione che dipende dalla massa iniziale
+2. Time-Delay -> Tra  Ionizzazione e successive applicazioni del campo. Riduce problematiche di diversi posizionamenti nello spazio
+3. Reflectron -> Applica correzione indipendentemente dalla massa, migliorando il segnale
+Il Reflectron è fatto da elettrodi 
