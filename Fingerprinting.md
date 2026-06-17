@@ -318,4 +318,11 @@ Questo processo parla i peptidi su un tempo più lungo, permettendo di anallizar
 
 HPLC è un sistema a flusso continuo, perfetto per essere accopiato ad una sorgente di ionizzazione ESI. ESI lavora infatti vaporizzando e ionizzando un flusso di liquido in tempo reale. ESI però impone limitazioni su solventi e su sali utilizzabili.
 ESI ha bisogno di un donatore di protoni per dare carica ai peptidi affinchè lo spettrometro possa leggerli. Acido formico ad esempio. Gli ioni aggiunti influenzano la qualità della cromatografia:
-- Picco ottimale -> tutte le molecole di un peptide si staccano dalla colonna contemporaneamente. Il segnale sale e scende rapidamente a livello del rumore di fundo -> Possiamo quantificare facilmente l
+- Picco ottimale -> tutte le molecole di un peptide si staccano dalla colonna contemporaneamente. Il segnale sale e scende rapidamente a livello del rumore di fundo -> Possiamo quantificare facilmente l'area del picco.
+- Picco slargato -> Il peptide si stacca lentamente o interagisce male. Il segnale non scende a zero rapidamente, creando una spalla -> Impossibile quantificare il peptide
+
+HPLC Tradizionale usa spesso fosfati per miglirare la separazione -> Non si possono usare in MS.
+Acidi e basi forti non evaporano -> In ESI, acqua evapora ma questi sali no e precipitano allo s tato solido -> Crosta bianca sulla sorgente di ionizzazione
+Si usano solo acidi/sali volatili e deboli.
+L'uso di concentrazioni errate di ioni forti può causare l'effeto matrice -> soppressione della ionizzazione. I sali rubano la carica ai peptidi e lo strumento non rileva il sgnale.
+**Nota sulla purificazione finale:** Proprio perché l'ESI è intollerante ai sali (molto più del MALDI), prima di iniettare campioni complessi è fondamentale un passaggio di "desalting" (rimozione dei sali), spesso fatto passando il campione attraverso resine C18 miniaturizzate dentro speciali puntali da pipetta (es. ZipTip).
