@@ -299,4 +299,6 @@ Il limite principale dell'elettroforesi sta nella variabilità biologica (natura
 La 2D Electrophoresis è utile per l'analisi quantitativa, perchè generiamo mappe bidimensionali con spot, e ciascuno spot corrisponde ad una proteine. Confrontando le mappe e con analisi densiometrica si risale all'espressione di una proteina in quella mappa.
 Il vantaggio della DiGE è quello di introdurre criteri per distinguere campioni diversi in modo da ridurre la variabilità -> 2 mappe per gene, ogni mappa è un campione, rimuoviamo il confronto tra mappe.
 
-Nell'analisi bottom up si lavora con proteine digerite da tripsina. Non possiamo usare proteine intatte a causa delle tecniche cromatografiche. Tecnica di separazione delle proteine principale è HPLC a fase inversa
+L'elettroforesi bidimensionale (2D-PAGE) analizza le proteine intere (intatte). Tuttavia, le tecniche cromatografiche moderne faticano a gestire macromolecole così grandi e complesse.
+
+Per questo si usa l'approccio **Bottom-Up**: invece di analizzare la proteina intera, la si "digerisce" a monte (solitamente usando l'enzima **tripsina**). Questo processo taglia le proteine in frammenti più piccoli chiamati **peptidi**. I peptidi, avendo pesi molecolari inferiori e polarità diverse in base alla loro sequenza amminoacidica, sono molto più facili da separare chimicamente.
