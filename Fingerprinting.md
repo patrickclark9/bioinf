@@ -233,6 +233,7 @@ Il volume di uno spot si ricava dalla somma dei pixel interni ai suoi confini (i
 $$\text{Spot normalizzato} = \frac{\text{Volume spot}}{\text{Volume totale di tutti gli spot sul gel}}$$
 
 Con **repliche biologiche** (controllo/trattato) si procede con analisi statistica.
+![[Screenshot from 2026-06-17 08-55-16.png]]
 
 ---
 
@@ -275,3 +276,9 @@ Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della qu
 
 
 ### 3.6 Strategia DiGE
+
+La strategia DiGE consiste in un miglioramento della 2D-Electrophoresis, nella quale le proteine vengono marcate prima di essere analizzate. Con la tecniche DiGE è possibile caricare inoltre più di un campione alla volta, in quanto ad ogni campione viene legata una molecola che produce una fluorescenza differente (Multiplexing). Le proteine vengono marcate con molecole chiamate **Cianine** (Cya), che fungono da coloranti legando il gruppo amminico libero dei residui Lys -> L'ultimo gruppo, il primo (carbonio alpha) è impegnato in un legame peptidico.
+Il multiplexing riduce il numero di gel da produrre. L'utilizzo di tinte fluorescenti incrementa la sensitività e ha un range dinamico grande (1-100.00).
+Ci permette inoltre di creare uno standard interno rimuovendo la necessita per repliche tecniche, migliorando il gel-matching
+![[Pasted image 20260617091745.png]]
+![[Pasted image 20260617091835.png]]
