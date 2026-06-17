@@ -14,7 +14,14 @@ La cromatografia è una tecnica di separazione utilizzata per separare, identifi
 ## Tipi
 - In colonna -> La fase stazionaria si trova impaccata in una colonna verticale. La miscela viene caricata dall'alto, ed la fase mobile fluisce attraverso la fase stazionaria
 - HPLC -> Versione rifinita della colonna. Le particelle che compongono la fase stazionaria sono molto piccole, formando una superficie di interazione particolarmente grande. Pompe ad alta pressione sono necessarie per forzare la fase mobile (che è un liquido) attraverso la colonna.
-- Gas Cromatografia GC -> La fase mobile è un gas inerte come l'elio, e la fase stazionaria è un microscopico layer di liquido o polimero in una colonna coiled. Il campione viene vaporizzato e spinto lungo il tubo.
+	- Vantaggi: Dimensione ridotta della colonna -> No deviazioni longitudinali 
+	- Velocità di eluizione costante e regolabile
+	- Velocità di esecuzione ridotta
+	- Piccole quantità di compost necessaria per l'analisi
+	- Permette la cromatografia di sostanze termolabili (no forni a 350 gradi) -> Proteine
+- Gas Cromatografia GC -> La fase mobile è un gas inerte come l'elio, e la fase stazionaria è un microscopico layer di liquido non volatile che riempie la colonna o polimero in una colonna coiled. Il campione viene vaporizzato e spinto lungo il tubo. Principalmente campioni gassosi liquidi o solidi non termolabili. Il più grande svantaggio è proprio che il campione deve essere volatile in un intervallo di temperatura compreso tra ambiente e 350 gradi.
+	- **adsorbimento**: la fase stazionaria è un solido sulla cui superficie si trovano dei siti attivi in grado di stabilire una serie di legami secondari (dipolo-dipolo, ponte idrogeno, Van der Waals, dipolo-dipolo indotto, ecc.) con le diverse molecole della miscela da risolvere, si parla perciò di cromatografia _gas-solido_ (GSC, gas-solid chromatography).
+	- **ripartizione**: se la fase stazionaria è liquida si verifica una vera e propria solubilizzazione delle sostanze nella fase stazionaria che si ripartiscono tra le due fasi immiscibili. Si parla di cromatografia _gas-liquido_ (GLC, gas-liquid chromatography).
 ### Meccanismo di separazione
 
 La separazione avviene perchè i differenti componenti della miscela hanno differenti affinità per le due fasi:
