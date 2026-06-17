@@ -302,3 +302,20 @@ Il vantaggio della DiGE è quello di introdurre criteri per distinguere campioni
 L'elettroforesi bidimensionale (2D-PAGE) analizza le proteine intere (intatte). Tuttavia, le tecniche cromatografiche moderne faticano a gestire macromolecole così grandi e complesse.
 
 Per questo si usa l'approccio **Bottom-Up**: invece di analizzare la proteina intera, la si "digerisce" a monte (solitamente usando l'enzima **tripsina**). Questo processo taglia le proteine in frammenti più piccoli chiamati **peptidi**. I peptidi, avendo pesi molecolari inferiori e polarità diverse in base alla loro sequenza amminoacidica, sono molto più facili da separare chimicamente.
+
+La separazione HPLC A fase inversa è la tecnica di separazione di peptidi più utilizzata.
+Si chiama inversa perchè inverte la logica della cromatografia tradizionale (Fase stazionaria polare e fase mobile apolare).
+La fase stazionaria è idrofobica e trattiene i peptidi all'interno della colonna cromatografica
+La Fase mobile è idrofilica -> idrofobica, e spinge i peptidi verso la colonna per eluirli (farli uscire).
+Per separare peptidi diversi, la composizione della fase mobile non è fissa, ma varia nel tempo creando un gradiente lineare
+1. Si parte con un'alta percentuale di solvente A. I peptidi idrofilici si legano poco alla colonna idrofobica, quindi vengono trasportati fuori ed eluiscono quasi subito
+2. Il sistema pompa progressivamente sempre più solvente B (idrofobico)
+3. L'aumento dell'idrofobocità della fase mobile stacca progressivamente i peptidi idrofobici dalla fase stazionaria. Quando l'idrofobicità della fase mobile eguaglia o supera la forza del legame del peptide con la colonna, il peptide si ripartisce nella fase mobile e viene eluito.
+Un proteoma intero però contiene milioni di peptidi, troppi per una colonna. per evitare che si sovrappongano, si usano due colonne in serie, basate su due criteri chimici ortogonali:
+ - La prima separa i peptidi per scambio ionico -> In base alla loro carica
+ - I peptidi in uscita dalla prima colonna passano in una seconda, che li separa in base alla idrofobicità
+Questo processo parla i peptidi su un tempo più lungo, permettendo di anallizarli tutti senza ingolfare il sistema.
+
+HPLC è un sistema a flusso continuo, perfetto per essere accopiato ad una sorgente di ionizzazione ESI. ESI lavora infatti vaporizzando e ionizzando un flusso di liquido in tempo reale. ESI però impone limitazioni su solventi e su sali utilizzabili.
+ESI ha bisogno di un donatore di protoni per dare carica ai peptidi affinchè lo spettrometro possa leggerli. Acido formico ad esempio. Gli ioni aggiunti influenzano la qualità della cromatografia:
+- Picco ottimale -> tutte le molecole di un peptide si staccano dalla colonna contemporaneamente. Il segnale sale e scende rapidamente a livello del rumore di fundo -> Possiamo quantificare facilmente l
