@@ -232,14 +232,14 @@ Il volume di uno spot si ricava dalla somma dei pixel interni ai suoi confini (i
 
 $$\text{Spot normalizzato} = \frac{\text{Volume spot}}{\text{Volume totale di tutti gli spot sul gel}}$$
 
-Con **repliche biologiche** (controllo/trattato) si ottiene significatività statistica, e si procede con analisi statistica. L'elettroforesi è poco riproducibile però
+Con **repliche biologiche** (controllo/trattato) si ottiene significatività statistica, e si procede con analisi statistica. 
 ![[Screenshot from 2026-06-17 08-55-16.png]]
 
 ---
 
 ### 3.4 Problemi: Variazioni Gel-to-Gel
 
-Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della quantificazione.
+**L'elettroforesi è poco riproducibile**. Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della quantificazione.
 
 #### Prima dimensione (IEF)
 
@@ -277,8 +277,21 @@ Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della qu
 
 ### 3.6 Strategia DiGE
 
-La strategia DiGE consiste in un miglioramento della 2D-Electrophoresis, nella quale le proteine vengono marcate prima di essere analizzate. Con la tecniche DiGE è possibile caricare inoltre più di un campione alla volta, in quanto ad ogni campione viene legata una molecola che produce una fluorescenza differente (Multiplexing). Le proteine vengono marcate con molecole chiamate **Cianine** (Cya), che fungono da coloranti legando il gruppo amminico libero dei residui Lys -> L'ultimo gruppo, il primo (carbonio alpha) è impegnato in un legame peptidico.
+La strategia DiGE consiste in un miglioramento della 2D-Electrophoresis, nella quale le proteine vengono marcate prima di essere analizzate. Con la tecniche DiGE è possibile caricare inoltre più di un campione alla volta, in quanto ad ogni campione viene legata una molecola che produce una fluorescenza differente (Multiplexing). Le proteine vengono marcate con molecole chiamate **Cianine** (Cy), che fungono da coloranti legando il gruppo amminico libero dei residui Lys -> L'ultimo gruppo, il primo (carbonio alpha) è impegnato in un legame peptidico.
+Ad esempio: Controllo derivatizzato Cy3, trattato derivatizzato Cy5. I campioni vengono miscelati e si ottiene un unico gel da cui si osservano due mappe distinte. Utilizzando fluorimetro che eccita frequenze distinte -> I campioni hanno corso come se fossero lo stesso campione, quindi non si ha distorsione degli spot. Con un terzo colorante Cy2 si può generare anche uno standard interno. Lo standard si ottiene generando un terzo campione, marcandolo differentemente, e poi normalizzando proteina nel controllo / standard e proteina nel trattato / standard.
+L'abbondanza si calcola fissando l'abbondanza dello standard a 1, e l'espressione nelle singole condizioni rapportate rispetto allo standard
 Il multiplexing riduce il numero di gel da produrre. L'utilizzo di tinte fluorescenti incrementa la sensitività e ha un range dinamico grande (1-100.00).
 Ci permette inoltre di creare uno standard interno rimuovendo la necessita per repliche tecniche, migliorando il gel-matching
 ![[Pasted image 20260617091745.png]]
 ![[Pasted image 20260617091835.png]]
+
+### 3.7 Image Analysis
+1. Gel Imaging -> 1 gel = 3 immagini -> standard Cy2, Controllo Cy3, Trattato Cy5
+2. Spot detection -> Co-detection degli spot nei 3 campioni -> Algoritmi sfruttano i pixel dalle 3 immagini
+3. Gel Matching -> Utilizzando lo standard interno
+4. Spot quantification -> La quantificazione è legata allo standard interno in ogni gel
+![[Pasted image 20260617093909.png]]
+
+## Gel-Free
+Una delle evoluzioni maggiori della protemica sono gli approcci gel-free, per l'identifiacazione e la quantificazione su larga scala.
+Si combinano metodi come il labelling degli isotopi, tecniche di separazione e spettrometria di massa.
