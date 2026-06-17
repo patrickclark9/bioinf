@@ -74,28 +74,29 @@ In pratica, ioni con la **stessa** m/z non arrivano tutti nello stesso istante, 
 | **Energy/Velocity spread** | Energia cinetica iniziale (pre-accelerazione) variabile                                                                                         | Velocità di partenza non uniformi                 |
 
 Tutti e tre i fenomeni **ampliano la distribuzione temporale** degli ioni a massa uguale → $\Delta t$ aumenta → $R$ diminuisce.
-$\Delta t$ è dato quindi dalla somma del tempo trascorso nella regione **source** e il tempo trascorso nel **drifting tube**, oltre al response time del detector (dovrebbe essere circa costante).
+$\Delta t$ è dato quindi dalla somma del tempo trascorso nella regione **source** (formazione dello ione, position spread, velocity spread, direction spread) e il tempo trascorso nel **drifting tube** (position spread, velocity spread), oltre al response time del detector (dovrebbe essere circa costante).
 
 ---
 
 ### 5.5 Soluzioni Tecniche per la Focalizzazione
 
-#### 1. Dual Stage Extraction
+#### 1. Dual Stage Extraction - Position Spread
 
-Si applica l'accelerazione in **due stadi** invece di uno:
+Anche detta focalizzazione spaziale di Wiley-McLaren. Si applica l'accelerazione in **due stadi** invece di uno:
 
 - **Stadio 1:** campo più debole vicino alla sorgente → corregge le differenze di posizione e di energia cinetica iniziale
 - **Stadio 2:** campo più intenso → accelerazione finale uniforme
 
 La correzione del primo stadio è dipendente dalla massa, compensando esattamente il position spread per ciascuna specie.
+Avendo due stadi di accelerazione indipendenti, è possibile "modulare" le tensioni in modo che gli ioni partiti da posizioni leggermente diverse (e che quindi subiscono potenziale diverso) convergano temporalmente _esattamente_ nel punto in cui si trova il rivelatore.
 
-#### 2. Time-Delayed Extraction (TDE)
+#### 2. Time-Delayed Extraction (DE) - Velocity Spread
 
-Si introduce un **ritardo** ($\sim$ nanosecondi–microsecondi) tra l'ionizzazione e l'applicazione del campo di accelerazione:
+Si introduce un **ritardo** ($\sim$ nanosecondi (MALDI)–microsecondi (ESI)) tra l'ionizzazione e l'applicazione del campo di accelerazione:
 
-- Durante il ritardo, gli ioni con velocità iniziale maggiore si allontanano di più dalla sorgente
+- Durante il ritardo, gli ioni con velocità iniziale maggiore si allontanano di più dalla sorgente 
 - Quando il campo viene applicato, gli ioni più veloci (più lontani) si trovano in una regione a potenziale inferiore → ricevono meno energia → arrivano al rivelatore insieme agli ioni più lenti
-- Risultato: **compressione temporale** della distribuzione → riduzione del position e dell'energy spread
+- Risultato: **compressione temporale** della distribuzione → riduzione del position e del velocity spread tra ioni con lo stesso m/z che lasciando la sorgente
 
 #### 3. Reflectron
 
