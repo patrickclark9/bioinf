@@ -11,8 +11,18 @@ Tecnica di separazione basata sulla differenza di **velocità di migrazione** de
 | **Fase stazionaria** | Materiale solido o liquido fisso in colonna o su superficie piana |
 | **Fase mobile** | Liquido o gas che fluisce attraverso la fase stazionaria |
 | **Campione** | Miscela da separare, disciolta in un solvente appropriato |
-### 1.1 Iniettore
-Il campione è iniettato 
+### 1.1 Iniettore - GC
+Il campione è iniettato usando speciale siringa, all'interno di un blocco riscaldato -> Vaporizzato istantaneamente. La temperatura dell'iniettore è 50 gradi più elevata della colonna.
+Per LC si usano iniettori diversi, non volatilizziamo il campione.
+
+L'iniettore può essere split o splitless. Split si usa con colonne capillari, per evitare sovraccarichi di campione nella colonna
+
+### 1.2 Rilevatori
+Uno dei punti di forza della tecnica GC è la grande varietà dei rivelatori disponibili. Alcuni sono aspecifici e quindi di uso generale (TCD, FID), altri sono invece molto specifici. Quelli universalmente accettati sono TCD ed FID, ma è sempre più diffuso l’impiego del rivelatore a spettrometria di massa (MS):
+- a conducibilità termica (TCD)
+- a ionizzazione di fiamma (FID)    
+- a cattura di elettroni (ECD)
+- a ionizzazione in fiamma termoionico (rivelatore azoto-fosforo, NPD)
 
 ---
 
