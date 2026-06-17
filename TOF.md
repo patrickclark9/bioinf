@@ -35,7 +35,7 @@ Ma ioni con la stessa massa avranno tempi diversi a causa di tempi di partenza d
 Fattori che determinano la focalizzazione:
 - Ioni generati nell'ordine di nanosecondi -> Due ioni identici hanno punti di partenza differenti, non percorrono quindi la stessa distanza **position spread**
 - Possono essere generati con direzioni diverse -> stesso campo di accelerazione le molecole non vanno nello stesso verso **direction spread**
-- Energia Cinetica diversa
+- Energia Cinetica diversa **Velocity Spread**
 Tutto questo va a de-focalizzare il fascio ionico, costituito da un'unica molecola di m/z definito, riducendo la risoluzione.
 
 Position spread -> Aggiungendo ulteriore energia riportiamo le molecole tutte sulla stessa posizione. Questa differenza di energia è visibile nella risoluzione -> Coda nel picco
@@ -47,4 +47,9 @@ Applichiamo 2 campi di accelerazione -> Dual stage extraction
 1. Risolvere lo spazio -> Compensa per diversa energia e diversa posizione -> Correzione che dipende dalla massa iniziale
 2. Time-Delay -> Tra  Ionizzazione e successive applicazioni del campo. Riduce problematiche di diversi posizionamenti nello spazio
 3. Reflectron -> Applica correzione indipendentemente dalla massa, migliorando il segnale
-Il Reflectron è fatto da elettrodi 
+Il Reflectron è fatto da elettrodi a diversa differenza di potenziale.Il voltaggio del reflectron è più alto del potenziale di accelerazione iniziale e presenta segno opposto rispetto al campo di accelerazione applicato iniziale.
+Quindi gli ioni che entrano nel reflectron vengono rallentati e mandati fuori, dipendentemente dalla velocità
+- A velocità elevate entranto più facilmente nel reflectron -> Percorrono spazio aggiuntivo alla massa con velocità più elevata -> All'uscita il fascio è focalizzato
+- A velocità basse penetrano meno
+Permette quindi di focalizzare il fascio ionico.
+Attualmente si usa dual stage reflection -> Estrazione a doppio strato -> Massimizza focalizzazione, permettendo elevata risoluzione
