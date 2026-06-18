@@ -1,6 +1,6 @@
 # Cromatografia
 
-Tecnica di separazione basata sulla differenza di **velocità di migrazione** dei componenti di una miscela attraverso un mezzo adsorbente sotto l'influenza di una fase mobile.
+Tecnica di separazione basata sulla differenza di **velocità di migrazione** dei componenti di una miscela attraverso un mezzo adsorbente (fase stazionaria) sotto l'influenza di una fase mobile.
 
 ---
 
