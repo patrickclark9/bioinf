@@ -39,5 +39,17 @@ Fisicamente, MS/MS non è altro che un tandem MS - MS:
 - MS1 -> Selezione dei parent -> Si selezionano ioni ad un particolare m/z. MS1 è una sorgente ionica per MS2 sostanzialmente
 - Collision cell (Gas neutrale ad elevata pressione He, Ar, N2) -> Energia cinetica convertita ad Energia interna porta alla rottura di legami
 - MS2 analizza gli ioni frammentati dalla collision cell
+In MS1 si va a ionizzare, poi uno ione è selezionato da un particolare sistema (quadrupolo, settore magnetico, ion cyclotron resonance). Solo un tipo di ione passa nella regione della camera di collisione
+In MS2, gli ioni daughter vengono rilevati, e lo spettro finale è composto dai picchi degli ioni selezionati e di tutti i suoi daughter
+![[Pasted image 20260618090804.png]]
 
 Il principio di MS/MS è reazioni filiate -> Lo spettro di un composto complesso è difficilmente interpretabile si osservano molti picchi è i più importanti corrispondono al maggior costituente, rendendo complessa l'identificazione di un preciso composto nello spettro della miscela, ma selezionando un singolo precursore e frammentadolo si ottiene uno spettro diagnostico per la struttura di una molecola.
+
+MS/MS risulta nell'acquisizione quindi di informazioni di pseudo sequenza per molteplici peptidi prodotti dalla tripsina, in aggiunta all'informazione di massa del peptide intatto.
+Serve quindi uno strumento in grado di isolare e frammentare gli ioni, oltre ad MS. 
+Risulta nell'acquisizione di molteplici file ortogonali (1 spettro per peptide) - Roughly **one MS/MS spectrum per selected peptide precursor**
+
+- **MS1** → gives **intact peptide masses**
+- **MS/MS** → gives **fragment ions → sequence info**
+- Done for **many peptides** in a sample
+- **“intact” relative to MS/MS**, meaning it hasn’t yet been broken inside the Collision Chamber
