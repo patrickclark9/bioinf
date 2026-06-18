@@ -123,3 +123,58 @@ Scores > 50–63 are typically significant (p < 0.05) — threshold depends on d
 
 ### Output: Sequence Coverage Map
 Matched peptides highlighted in the protein sequence. **Sequence coverage (%)** = fraction of protein covered by matched peptides.
+
+## Identificazione di proteine per MS/MS
+
+Il PMF presenta numerose limitazioni -> 
+- richiede proteine relativamente pure
+- Non riesce a gestire composti complessi
+- Non si ottengono informazioni riguardo la sequenza del peptide
+
+MS/MS invece fornisce informazioni di pseudo-sequenza per peptide, ed è compatibile con analisi di composti complessi -> Shotgun proteomics
+
+### Automated LC-ESI-MS/MS (Shotgun Proteomics)
+
+#### LC Setup (nanoLC)
+- Reversed-phase C₁₈ column: 15–25 cm length, 75 μm internal diameter
+- Flow rate: 200–300 nL/min (T-splitter from standard HPLC pump)
+- **Organic solvent gradient** (typically MeCN/water + 0.1% formic acid) elutes peptides by hydrophobicity
+
+#### Data-Dependent Acquisition (DDA)
+The mass spectrometer automatically:
+1. Acquires a full MS1 scan (TIC/survey scan)
+2. Selects the top-N most intense precursor ions
+3. Isolates each in turn and fragments by CID
+4. Acquires MS/MS spectrum for each
+
+→ One LC run generates **hundreds to thousands of MS/MS spectra**, each (ideally) from a distinct peptide.
+
+#### Data-Independent Acquisition (DIA)
+
+La logica di selezione di MS1 cambia
+- MS1 may still scan, but:
+- The instrument fragments **all ions within wide m/z windows** (e.g., 25 Da chunks)
+
+No “most intense peak” selection at all  
+Everything gets fragmented in a systematic way
+
+### Database search
+Ogni spettro MS/MS viene ricercato contro un database -> Per ogni proteina candidata, si computa il numero teorico di ioni b/y, e si cercano match per lo ione osservato. Mascot riporta gli score peptidici individuali ed un overall protein score, ovvero la somma degli score peptidici significativi
+
+### Ortogonalità
+Ogni spettro di frammentazione è un dataset indipendente (ortogonale) legato ad una specifica sequenza.
+Data la probabilità $P_i$ che un un match sia dovuto al caso per uno spettro $i$: 
+$$P(\text{two random matches to same protein}) = P_1^2$$
+Example: $P_1 = 5 \times 10^{-3}$ → $P_2 = 2.5 \times 10^{-5}$ — two orders of magnitude more stringent.
+
+Dall'esempio, la probabilità che un singolo spettro matchi una sequenza per caso è due ordini di grandezza maggiore rispetto a due spettri distinti che matchano la STESSA sequenza per caso
+
+
+In generale, si necessitano almeno 2 peptidi per proteina per ottenere confidenza abbastanza elevata.
+Ogni peptide è assegnato univocamente alla sua sequenza parent, quindi molte proteine sono identificabili per run
+
+### Critical Distinction
+
+> **Protein identification ≠ Protein characterization**
+> 
+> Two peptides are sufficient to identify a protein, but you are characterizing only those two peptides. Highly similar sequences (isoforms, paralogs) may not be distinguishable. For detecting PTMs, extensive sequence coverage is essential.
