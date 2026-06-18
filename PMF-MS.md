@@ -314,3 +314,14 @@ Pro: Utilizzabile su qualsiasi tipo di campione, bassa complessità (solo i pept
 Con: Copre solo il 50-70% delle proteine (quelle con più di 1 Cys); possibili reazioni con altri residui, perdita durante purificazione con streptavidina
 
 For the quantitative comparison of two proteomes, one sample is labeled with the isotopically light (d0) probe and the other with the isotopically heavy (d8) version. To minimize error, both samples are then combined, digested with a protease (i.e., trypsin, and subjected to avidin affinity chromatography to isolate peptides labeled with isotope-coded tagging reagents. These peptides are then analyzed by LC-MS. The ratios of signal intensities of differentially mass-tagged peptide pairs are quantified to determine the relative levels of proteins in the two samples.
+
+## iTRAQ
+
+La Isotope Tagging for Relative and Absolute protein Quantitation è una tecnica che permette di etichettare e di runnare fino a 4 campioni.
+Le proteine vengono digerite prima dell'etichettatura, ed interagiscono con l'N-terminale. Nessuna riduzione di peptidi dovuta ad composizione amminoacidica -> Si analizzano tutti i peptidi.
+La massa degli ioni peptidici è la stessa, permettendo il selezionamento di una singola massa per MS/MS.
+Il gruppo reporter viene perso durante la frammentazione, ed è usato per determinare la relativa abbondanza di peptidi selezionati di interesse tra i 4 campioni.
+
+**Reactive group**: NHS ester → reacts with **N-terminus** and **Lys ε-amine**.
+
+**Key innovation**: 4 reagents with **identical total mass (145 Da)** but different internal distribution — reporter group carries the mass difference (114, 115, 116, 117 Da).
