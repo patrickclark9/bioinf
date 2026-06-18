@@ -60,10 +60,10 @@ Sample solution sprayed through a high-voltage needle; desolvation produces **mu
 ### 2.3 Identifying Charge State from Isotope Spacing
 
 | Charge state (z) | Spacing between isotope peaks |
-|---|---|
-| 1+ | Δm = 1.0 Da |
-| 2+ | Δm = 0.5 Da |
-| 3+ | Δm = 0.33 Da |
+| ---------------- | ----------------------------- |
+| 1+               | Δm = 1.0 Da                   |
+| 2+               | Δm = 0.5 Da                   |
+| 3+               | Δm = 0.33 Da                  |
 
 General rule: $z = 1 / \Delta m_{\text{isotope}}$
 
