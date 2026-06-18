@@ -103,18 +103,20 @@ With tolerance fixed at 0.1 Da:
 
 → **More peptides = exponentially more specific identification.**
 
-### Search Parameters (Mascot)
+### Search Parameters (Mascot/ProFound)
 
 - **Database**: UniProtKB/SwissProt, NCBInr, etc.
 - **Taxonomy**: narrow to organism when possible (reduces search space)
 - **Enzyme**: Trypsin (cuts C-terminal to Lys/Arg, not before Pro)
 - **Missed cleavages**: typically 1–2 (accounts for incomplete digestion)
-- **Fixed modifications**: Carbamidomethyl (C) — from iodoacetamide alkylation during gel prep
+- **Fixed modifications**: Carbamidomethyl (C) — from iodoacetamide alkylation during gel prep. Dipende dalla tecnica utilizzata in preparazione. Possono anche non esserci modificazioni Complete/Fixed.
 - **Variable modifications**: Oxidation (M) — Met side-chain oxidation is common artifact
 - **Mass values**: MH⁺ (monoisotopic preferred for high-res instruments)
 - **Tolerance**: in Da or ppm
 
-I dati possono essere importati da file oppure manualmente si inserisce la lista di picchi m/z nel campo query
+I dati possono essere importati da file oppure manualmente si inserisce la lista di picchi m/z nel campo query.
+
+ProFound è molto simile. Le modificazioni parziali sono tipicamente Methionine Oxidation, ma se ne possono aggiungere altre sia in Profound sia in MASCOT
 ### Mascot Scoring
 Score = −10 × log(P), where P = probability that the match is random.  
 Scores > 50–63 are typically significant (p < 0.05) — threshold depends on database size.
