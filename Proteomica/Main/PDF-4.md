@@ -109,7 +109,7 @@ With tolerance fixed at 0.1 Da:
 - **Taxonomy**: narrow to organism when possible (reduces search space)
 - **Enzyme**: Trypsin (cuts C-terminal to Lys/Arg, not before Pro)
 - **Missed cleavages**: typically 1–2 (accounts for incomplete digestion)
-- **Fixed modifications**: Carbamidomethyl (C) — from iodoacetamide alkylation during gel prep. Dipende dalla tecnica utilizzata in preparazione. Possono anche non esserci modificazioni Complete/Fixed.
+- **Fixed modifications**: Carbamidomethyl (C) — from iodoacetamide alkylation during gel prep. Dipende dalla tecnica utilizzata in preparazione. Possono anche non esserci modificazioni Complete/Fixed
 - **Variable modifications**: Oxidation (M) — Met side-chain oxidation is common artifact
 - **Mass values**: MH⁺ (monoisotopic preferred for high-res instruments)
 - **Tolerance**: in Da or ppm
