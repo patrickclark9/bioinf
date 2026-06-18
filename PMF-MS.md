@@ -278,3 +278,19 @@ In generale, **si necessitano almeno 2 peptidi per proteina** per ottenere confi
 - Ma si stanno caratterizzando **solo quei due peptidi**
 - Sequenze molto simili (isoforme, paraloghi) possono non essere distinguibili
 - Per rilevare PTM è essenziale una **coverage di sequenza estesa**
+
+## Gel Based Proteomics Workflow Base
+2D Electrophoresis -> MALDI-TOF:
+Separazione elettroforetica (non cromatografica) + MALDI/TOF -> Workflow tipico perchè MALDI non può essere accoppiato ad un HPLC come ESI.
+
+![[Pasted image 20260618153646.png]]
+![[Pasted image 20260618153655.png]]![[Pasted image 20260618153705.png]]
+## Quantitative Proteomics (Shotgun approaches) - Isotope Labelling
+
+Ovviamente vogliamo quantificare -> Espressione differenziale -> Chi cambia e quanto cambia
+
+Perchè il labelling -> La spettrometria di massa non è inerentemente quantitativa -> segnali ionici dipendono dall'efficienza di ionizzazione, che varia per peptide e per run. Per comparare l'abbondanza tra cambione A e campione B:
+1. Si va a etichettare ogni campione con reagenti identici chimicamente, ma sfruttando isotopi diversi
+2. Si mescolano i campioni -> Si co-analizzano -> Le coppie isotopo leggero-pesante coeluiscono in LC e vengono distinte per massa
+3. Si quantifica analizzando l'area del picco
+Mescolare prima rimuove variabilità analitica downstream
