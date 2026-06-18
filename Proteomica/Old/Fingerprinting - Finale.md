@@ -1,18 +1,45 @@
 # Proteomica: Esperimenti e Tecniche di Separazione
 
+
+
+
+
+
+## 0. Due Approcci Principali
+
+|                        | **Top-Down**                                                  | **Bottom-Up**                              |
+| ---------------------- | ------------------------------------------------------------- | ------------------------------------------ |
+| **Oggetto di misura**  | Proteine intere e loro frammenti                              | Peptidi derivati da digestione             |
+| **Applicazioni**       | Struttura terziaria e quaternaria                             | Identificazione, quantificazione, PTM      |
+| **Limitazione chiave** | Le proteine grandi non eluiscono dalla colonna cromatografica | Si perde il contesto della proteina intera |
+| **Diffusione**         | Poco diffuso                                                  | Approccio dominante                        |
+
 ---
 
-## 1. Classi di Esperimenti di Proteomica
+## 1. Due Scuole di Pensiero (Bottom-Up)
 
-| Tipo | Complessità campione | Proteine analizzate | Dettaglio analitico |
-|---|---|---|---|
-| **Expression Analysis (PEA)** | Elevata | Quante più possibile | Basso — solo espressione |
-| **Analisi di gruppi specifici** | Media | 20–200 proteine preselezionate (stessa famiglia, stesso organello) | Intermedio |
-| **Studio PTM** | Bassa | Poche proteine | Alto — composizione AA per ricercare modificazioni |
+### 1.1 Approccio Elettroforetico (classico)
+- Separazione mediante **PAGE** (mono- o bi-dimensionale)
+- Processo **manuale**: l'operatore taglia ogni spot dal gel, lo lavora individualmente, poi lo analizza per MS/MS
+- Laborioso e poco scalabile
+
+### 1.2 Approccio Cromatografico (moderno)
+- Separazione mediante **LC in fase liquida + ESI**
+- Processo **automatizzato**: estratto proteico → digestione → HPLC → MS/MS
+- Permette throughput molto superiore e analisi di miscele complesse
+---
+
+## 2. Classi di Esperimenti di Proteomica
+
+| Tipo                            | Complessità campione | Proteine analizzate                                                | Dettaglio analitico                                |
+| ------------------------------- | -------------------- | ------------------------------------------------------------------ | -------------------------------------------------- |
+| **Expression Analysis (PEA)**   | Elevata              | Quante più possibile                                               | Basso — solo espressione                           |
+| **Analisi di gruppi specifici** | Media                | 20–200 proteine preselezionate (stessa famiglia, stesso organello) | Intermedio                                         |
+| **Studio PTM**                  | Bassa                | Poche proteine                                                     | Alto — composizione AA per ricercare modificazioni |
 
 ---
 
-## 2. Tecniche di Separazione Proteica
+## 3. Tecniche di Separazione Proteica
 
 ### 2.1 SDS-PAGE
 
@@ -22,9 +49,9 @@ L'**SDS** (dodecil solfato di sodio) è un detergente fortemente ionico che:
 - Rende la carica totale proporzionale al peso molecolare
 
 | Peso molecolare | Cariche negative approssimative |
-|---|---|
-| 40 kDa | ~180 |
-| 80 kDa | ~360 |
+| --------------- | ------------------------------- |
+| 40 kDa          | ~180                            |
+| 80 kDa          | ~360                            |
 
 In campo elettrico di corrente continua le proteine (tutte negative) migrano verso il **catodo**, con velocità **inversamente proporzionale al peso molecolare**.
 
