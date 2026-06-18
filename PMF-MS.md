@@ -3,7 +3,15 @@
 
 Tutti gli spettrometri di massa misurano le molecole in stati ionizzati. Tutti i valori determinati da MS sono relativi al rapporto m/z:
 
-$$m/z = (m_i + (m_A \cdot z)) / z$$
+
+$$\frac{M}{Z} = \frac{M_r + (M_a \times Z)}{Z}$$
+
+- $M_r$ = true molecular mass
+- $M_a$ = mass of the ionizing adduct (typically H⁺ in positive mode; $M_a = 1.0072$ u)
+- $Z$ = charge state
+
+**Single vs. multiple charge states** can be observed, depending on compound, ionization mode, and instrument. Work is almost always done in **positive (+) ion mode** — peptides are protonated (MH⁺) under acidic conditions.
+
 
 ---
 
@@ -78,6 +86,14 @@ Regola generale: $z = 1 / \Delta m_{\text{isotope}}$
 4. Separazione degli ioni daughter
 5. Detection
 
+| Analyzer              | Resolution    | Key Feature                                               |
+| --------------------- | ------------- | --------------------------------------------------------- |
+| Quadrupole (Q)        | Low           | Transmit, scan, or select by m/z                          |
+| 3D Ion Trap (IT)      | Low           | Trap → select → fragment → scan                           |
+| Linear Ion Trap (LIT) | Low           | Higher capacity than 3D-IT                                |
+| TOF (Time-of-Flight)  | Moderate–High | Separation by flight time; reflectron improves resolution |
+| FT-ICR                | Very High     | Ion cyclotron resonance, Fourier transform detection      |
+| Orbitrap (OT)         | Very High     | Orbital trapping; standard high-res platform              |
 ### Schema fisico del tandem MS
 
 ```

@@ -71,14 +71,14 @@ General rule: $z = 1 / \Delta m_{\text{isotope}}$
 
 ## 3. Mass Analyzers
 
-| Analyzer | Resolution | Key Feature |
-|---|---|---|
-| Quadrupole (Q) | Low | Transmit, scan, or select by m/z |
-| 3D Ion Trap (IT) | Low | Trap → select → fragment → scan |
-| Linear Ion Trap (LIT) | Low | Higher capacity than 3D-IT |
-| TOF (Time-of-Flight) | Moderate–High | Separation by flight time; reflectron improves resolution |
-| FT-ICR | Very High | Ion cyclotron resonance, Fourier transform detection |
-| Orbitrap (OT) | Very High | Orbital trapping; standard high-res platform |
+| Analyzer              | Resolution    | Key Feature                                               |
+| --------------------- | ------------- | --------------------------------------------------------- |
+| Quadrupole (Q)        | Low           | Transmit, scan, or select by m/z                          |
+| 3D Ion Trap (IT)      | Low           | Trap → select → fragment → scan                           |
+| Linear Ion Trap (LIT) | Low           | Higher capacity than 3D-IT                                |
+| TOF (Time-of-Flight)  | Moderate–High | Separation by flight time; reflectron improves resolution |
+| FT-ICR                | Very High     | Ion cyclotron resonance, Fourier transform detection      |
+| Orbitrap (OT)         | Very High     | Orbital trapping; standard high-res platform              |
 
 ### Common ESI Instrument Configurations
 

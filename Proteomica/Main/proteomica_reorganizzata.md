@@ -156,15 +156,18 @@ L'**SDS** (dodecil solfato di sodio) è un detergente fortemente ionico che:
 - Rende la carica totale proporzionale al peso molecolare
 
 | Peso molecolare | Cariche negative approssimative |
-|---|---|
-| 40 kDa | ~180 |
-| 80 kDa | ~360 |
+| --------------- | ------------------------------- |
+| 40 kDa          | ~180                            |
+| 80 kDa          | ~360                            |
 
 In campo elettrico di corrente continua le proteine (tutte negative) migrano verso il **catodo**, con velocità **inversamente proporzionale al peso molecolare**.
 
 **Applicazioni principali:**
 - Valutare la purezza di una proteina purificata
 - Determinare il peso molecolare
+
+SDS-Page è robusta, lavora in fase solida, facile da effettuare, e permette di rimuovere contaminanti -> al punto di carico, o dopo migrazione.
+Non permette però analisi quantitativa, il recupero della sequenza del peptide o dell'intera proteina
 
 ---
 
@@ -442,15 +445,15 @@ Prima di iniettare campioni complessi, è indispensabile un passaggio di **desal
 
 ### 4.6 Riepilogo: Gel-Based vs Gel-Free
 
-| Caratteristica | Gel-Based (2D-PAGE / DiGE) | Gel-Free (Bottom-Up LC-MS) |
-|---|---|---|
-| Forma analizzata | Proteina intera | Peptidi (dopo digestione triptica) |
-| Separazione | IEF + SDS-PAGE | RP-HPLC (± scambio ionico) |
-| Rilevazione | Densitometria / fluorimetria | Spettrometria di massa |
-| Scala | Centinaia di proteine | Migliaia di proteine |
-| PTM | Visibili come shift di spot | Identificabili dal frammento peptidico |
-| Variabilità tecnica | Alta (gel-to-gel) | Ridotta |
-| Informazione quantitativa | Diretta (volume spot) | Richiede labelling o label-free |
+| Caratteristica            | Gel-Based (2D-PAGE / DiGE)   | Gel-Free (Bottom-Up LC-MS)             |
+| ------------------------- | ---------------------------- | -------------------------------------- |
+| Forma analizzata          | Proteina intera              | Peptidi (dopo digestione triptica)     |
+| Separazione               | IEF + SDS-PAGE               | RP-HPLC (± scambio ionico)             |
+| Rilevazione               | Densitometria / fluorimetria | Spettrometria di massa                 |
+| Scala                     | Centinaia di proteine        | Migliaia di proteine                   |
+| PTM                       | Visibili come shift di spot  | Identificabili dal frammento peptidico |
+| Variabilità tecnica       | Alta (gel-to-gel)            | Ridotta                                |
+| Informazione quantitativa | Diretta (volume spot)        | Richiede labelling o label-free        |
 
 ---
 
