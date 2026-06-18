@@ -54,6 +54,7 @@ Risulta nell'acquisizione di molteplici file ortogonali (1 spettro per peptide) 
 - Done for **many peptides** in a sample
 - **“intact” relative to MS/MS**, meaning it hasn’t yet been broken inside the Collision Chamber
 Spesso si osservano ion series y e b  negli spettri di frammentazione di peptidi triptici MS/MS.
+ The y₁ ion at 147 Da = Lys or 175 Da = Arg is characteristic (terminal basic residue from trypsin cleavage)
 CID rompe legami peptidici lungo il backbone, risultanto in frammenti ionici classificati sulla base di quale terminale ritengono e quali legami sono rotti:
 
 | Ion series | Terminus retained | Bond broken | Notes                         |
@@ -64,3 +65,9 @@ CID rompe legami peptidici lungo il backbone, risultanto in frammenti ionici cla
 | **x**      | C-terminal        | CO–N        | Rare                          |
 | **y**      | C-terminal        | N–Cα        | Most common C-terminal series |
 | **z**      | C-terminal        | Cα–CO       | Less common                   |
+![[Pasted image 20260618093635.png]]
+![[Pasted image 20260618093642.png]]
+
+## Identificazione di proteine per spettrometria di massa
+
+In generale, la tripsina digerisce una proteina in un insieme di peptidi con massa prevedibile. Il pattern specifico di 
