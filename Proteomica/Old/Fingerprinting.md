@@ -98,15 +98,20 @@ Separazione della proteina intatta mediante elettroforesi
 | Separazione cromatografica   | Scambio cationico / anionico               |
 | Separazione elettroforetica  | 1D-SDS-PAGE · 2D-PAGE (pI + MW)            |
 | Affinity Chromatography      |                                            |
+|                              |                                            |
+|                              |                                            |
+|                              |                                            |
 ![[Pasted image 20260616201219.png]]
 ### 5.2 Post-digestione (Separazione del Peptide)
 
 Si riduce la complessità a livello peptidico, dopo la digestione.
 
-| Metodo | Note |
-|---|---|
-| **Cromatografia a fase inversa** (RP-HPLC) | Step finale prima dell'ingresso nello spettrometro |
+| Metodo                                       | Note                                                          |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| **Cromatografia a fase inversa** (RP-HPLC)   | Step finale prima dell'ingresso nello spettrometro            |
 | **Cromatografia multidimensionale** (MudPIT) | Es. SCX → RP; aumenta drasticamente la copertura del proteoma |
+|                                              |                                                               |
+|                                              |                                                               |
 ![[Pasted image 20260616201207.png]]
 
 
