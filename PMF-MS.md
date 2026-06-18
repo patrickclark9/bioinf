@@ -124,7 +124,7 @@ Negli spettri di frammentazione di peptidi triptici si osservano spesso **serie 
 
 ---
 
-## Identificazione di Proteine per Spettrometria di Massa
+## Identificazione di Proteine per Fingeprinting Molecolare
 
 La tripsina digerisce una proteina in un insieme di peptidi con massa prevedibile. Il pattern specifico di masse dei peptidi è una **fingerprint unica** (o quasi unica) per una proteina.
 
@@ -190,3 +190,12 @@ dove P = probabilità che il match sia casuale. Score > 50–63 sono tipicamente
 ### Output: Sequence Coverage Map
 
 I peptidi matched vengono evidenziati nella sequenza proteica. La **sequence coverage (%)** rappresenta la frazione della proteina coperta dai peptidi identificati.
+
+## Identificazione di proteine per MS/MS
+
+Il PMF presenta numerose limitazioni -> 
+- richiede proteine relativamente pure
+- Non riesce a gestire composti complessi
+- Non si ottengono informazioni riguardo la sequenza del peptide
+
+MS/MS invece fornisce informazioni di pseudo-sequenza per peptide, ed è compatibile con analisi di composti complessi -> Shotgun proteomics
