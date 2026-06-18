@@ -131,7 +131,6 @@ La tripsina digerisce una proteina in un insieme di peptidi con massa prevedibil
 
 ### Workflow PMF (MALDI-TOF)
 
-```
 Banda proteica (SDS-PAGE)
     ↓  digestione in-gel con tripsina
 Miscela di peptidi
@@ -139,7 +138,7 @@ Miscela di peptidi
 Lista di picchi (valori m/z degli ioni peptidici)
     ↓  ricerca in database (digestione in silico di tutte le proteine)
 Identificazione della proteina
-```
+
 
 Data una lista di picchi, si confronta contro liste di masse ioniche di peptidi generate da un database di sequenze proteiche.
 
