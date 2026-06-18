@@ -301,14 +301,16 @@ Metabolicamente -> durante la sintesi proteica, incorporazione di uno o più amm
 
 ## ICAT - Isotopically Coded Affinity Tagging
 
-Sfrutta marcatura Idrogeno-Deuterio (8 Da di separazione) o Carbonio-13 vs -12 (9 Da separazione).
+Sfrutta marcatura Idrogeno-Deuterio (8 Da di separazione) o Carbonio-13 vs -12 (9 Da separazione) -> Deuterio interagisce con la fase stazionaria della colonna, motivo per cui si è passato al carbonio.
 
 I reagenti sono:
-- Biotin Tag -> Utilizzato per la cattura delle Cys reagenti mediante streptavidina
+- Biotin Tag -> Utilizzato per l'isolazione per affinità dei peptidi etichettati (mediante streptavidina)
 - Linker chain (H o D, 8 Da di differenza)
-- Reactive group -> Lega residui Cys (tio-alchilazione)
-Sample A ──\[H₈-ICAT]──┐
-                        ├─→ Mix → Trypsin digest → Avidin affinity purification
-Sample B ──[D₈-ICAT]──┘         (captures Cys-containing peptides via biotin)
-                                         ↓
-                              LC-MS/MS → quantify H/D peak ratio → identify by MS/MS
+- Reactive group -> Tipicamente Iodoacetamide.Lega residui Cys (tio-alchilazione)
+![[Pasted image 20260618155459.png]]
+
+Pro: Utilizzabile su qualsiasi tipo di campione, bassa complessità (solo i peptidi contenenti residui Cys sono analizzati), elmina variabilità analitica mescolando all'inizio
+
+Con: Copre solo il 50-70% delle proteine (quelle con più di 1 Cys); possibili reazioni con altri residui, perdita durante purificazione con streptavidina
+
+For the quantitative comparison of two proteomes, one sample is labeled with the isotopically light (d0) probe and the other with the isotopically heavy (d8) version. To minimize error, both samples are then combined, digested with a protease (i.e., trypsin, and subjected to avidin affinity chromatography to isolate peptides labeled with isotope-coded tagging reagents. These peptides are then analyzed by LC-MS. The ratios of signal intensities of differentially mass-tagged peptide pairs are quantified to determine the relative levels of proteins in the two samples.
