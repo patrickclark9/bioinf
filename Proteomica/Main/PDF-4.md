@@ -36,8 +36,8 @@ L'MS/MS:
 - Detection
 
 Fisicamente, MS/MS non è altro che un tandem MS - MS:
-- MS1 -> Selezione dei parent 
+- MS1 -> Selezione dei parent -> Si selezionano ioni ad un particolare m/z. MS1 è una sorgente ionica per MS2 sostanzialmente
 - Collision cell (Gas neutrale ad elevata pressione He, Ar, N2) -> Energia cinetica convertita ad Energia interna porta alla rottura di legami
 - MS2 analizza gli ioni frammentati dalla collision cell
 
-Il principio di MS/MS è reazioni filiate -> Lo spettro di un composto complesso è difficilmente interpretabile, ma selezionando un singolo precursore e frammentadolo si ottiene uno spettro diagnostico per la struttura di una molecola.
+Il principio di MS/MS è reazioni filiate -> Lo spettro di un composto complesso è difficilmente interpretabile si osservano molti picchi è i più importanti corrispondono al maggior costituente, rendendo complessa l'identificazione di un preciso composto nello spettro della miscela, ma selezionando un singolo precursore e frammentadolo si ottiene uno spettro diagnostico per la struttura di una molecola.
