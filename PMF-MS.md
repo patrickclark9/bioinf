@@ -279,12 +279,8 @@ In generale, **si necessitano almeno 2 peptidi per proteina** per ottenere confi
 - Sequenze molto simili (isoforme, paraloghi) possono non essere distinguibili
 - Per rilevare PTM è essenziale una **coverage di sequenza estesa**
 
-## Gel Based Proteomics Workflow Base
-2D Electrophoresis -> MALDI-TOF:
-Separazione elettroforetica (non cromatografica) + MALDI/TOF -> Workflow tipico perchè MALDI non può essere accoppiato ad un HPLC come ESI.
 
-![[Pasted image 20260618153646.png]]
-![[Pasted image 20260618153655.png]]![[Pasted image 20260618153705.png]]
+
 ## Quantitative Proteomics (Shotgun approaches) - Isotope Labelling
 
 Ovviamente vogliamo quantificare -> Espressione differenziale -> Chi cambia e quanto cambia
@@ -325,3 +321,94 @@ Il gruppo reporter viene perso durante la frammentazione, ed è usato per determ
 **Reactive group**: NHS ester → reacts with **N-terminus** and **Lys ε-amine**.
 
 **Key innovation**: 4 reagents with **identical total mass (145 Da)** but different internal distribution — reporter group carries the mass difference (114, 115, 116, 117 Da).
+
+**Because the total tag mass = 145 Da for all four reagents**:
+- The same peptide from each of the 4 samples has the **same precursor m/z** in MS1
+- All 4 are co-isolated for fragmentation in a single MS/MS event
+
+**MS/MS yields two types of information simultaneously**:
+- **Reporter ions** (114–117 Da region): relative abundance of the peptide across 4 samples → **quantification**
+- **b/y ions**: peptide sequence → **identification**
+
+**Workflow**:
+```
+Sample 1 → digest → [114-tag]──┐
+Sample 2 → digest → [115-tag]──┤
+Sample 3 → digest → [116-tag]──┤ → Mix → SCX fractionation → nanoLC-MS/MS
+Sample 4 → digest → [117-tag]──┘
+```
+
+**Pros**: 4 (or 8) samples per run; any protein (not limited to Cys); single MS/MS event yields both ID and quantification.
+
+**Cons**: Requires MS/MS for quantification (cannot quantify from MS1); isobaric co-isolation can cause ratio compression; more complex data analysis.
+
+## SILAC Stable Isotope Labelling by aminoacids in cell culture
+
+**Principle**: Metabolic labeling — cells grown in medium where a specific amino acid is replaced by a heavy isotope version.
+
+**Common labels**:
+- ¹³C₃-Leucine ("Leu D3") vs. normal leucine — 3 Da per Leu residue
+- ¹³C₆-Arg / ¹³C₆-Lys ("heavy SILAC") — now most common
+
+After ~5 cell doublings, essentially all proteins are fully labeled.
+
+**Workflow**:
+```
+Light cells (control)           Heavy cells (stimulated)
+     ↓                                ↓
+  Grow 5+ doublings in             Grow in ¹³C/¹⁵N-AA medium
+  normal medium                         ↓
+     └──────────── Mix immediately after lysis ──────────────┘
+                          ↓
+               (Optional immunoprecipitation / fractionation)
+                          ↓
+                    LC-MS/MS
+                     ↓          ↓
+              Identify (MS/MS)   Quantify (MS1 peak area ratio of heavy/light pairs)
+```
+
+**Mass shift**: Variable — depends on number of labeled residues per peptide. This complicates automated peak finding but is well-handled by current software (MaxQuant, etc.).
+
+**Pros**: No chemical modification; native peptides; minimal variability (mixed before any sample handling); quantification at the MS1 level (no co-isolation compression issue).
+
+**Cons**: Only applicable to cultivable organisms (cells or microorganisms); typically limited to 2–3 conditions (light/medium/heavy); cannot be applied to tissues or clinical samples directly.
+
+
+
+
+
+## Applicazioni
+### 9.1 Classical 2D-PAGE + MALDI-TOF PMF
+Proteins separated by pI (isoelectric focusing, 1st dimension) and MW (SDS-PAGE, 2nd dimension). Spots excised → in-gel trypsin digestion → MALDI-TOF PMF.
+
+**Why SDS-PAGE is a good prep method**:
+- Robust, widely available, low-tech
+- Removes many contaminants during fixation/staining steps
+- Analytical + micropreparative
+
+**Limitations**:
+- In-gel digestion is non-quantitative
+- Peptide recovery from gel is incomplete
+- Poor recovery of very hydrophobic or large proteins
+
+**Example — E. coli adaptation to low glucose (Wick et al., Environ Microbiol 2001)**:
+- 2D-PAGE of E. coli grown in normal vs. very low glucose medium → 15 differentially regulated protein spots identified by PMF
+- Functional categories: metabolic enzymes + transport proteins → shift toward alternative energy sources
+
+![[Pasted image 20260618153646.png]]
+![[Pasted image 20260618153655.png]]![[Pasted image 20260618153705.png]]
+### 9.2 Gel-Free Shotgun Proteomics
+
+Replaces gel separation with solution-phase digestion + LC fractionation + MS/MS. Enables:
+- Analysis of complex proteomes (thousands of proteins per experiment)
+- Quantification via SILAC, iTRAQ, or label-free methods
+- Detection of low-abundance proteins
+
+---
+
+### 9.3 Other Fields
+
+- **Phosphoproteomics**: Enrichment of phosphopeptides (TiO₂, IMAC) followed by LC-MS/MS; phosphorylation site localization from MS/MS
+- **Ubiquitinomics**: Enrichment of ubiquitinated proteins/peptides
+- **Clinical proteomics / Biomarker discovery**: Serum/plasma proteomics; comparison of patient vs. healthy cohorts
+- **Proteome imaging**: MALDI of tissue sections → spatial maps of protein/peptide distribution without extraction
