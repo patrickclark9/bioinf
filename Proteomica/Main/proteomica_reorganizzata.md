@@ -258,6 +258,8 @@ Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della qu
 - Matching gel-to-gel problematico
 - Inaccuratezza nella quantificazione
 
+
+
 ---
 
 ### 3.5 Strategie per Limitare le Variazioni
@@ -312,13 +314,15 @@ Fissando l'abbondanza dello standard a 1, le espressioni nelle singole condizion
 
 > La DiGE riduce il numero totale di gel da produrre e rimuove la necessità di repliche tecniche, migliorando sia il gel-matching sia l'accuratezza della quantificazione.
 
+Nella 2D-E generiamo mappe bidimensionali con spot, dove ogni spot corrisponde ad una proteina. Le mappe sono confrontabili e da analisi densiometriche si riesce a risalire all'espressione di una data proteina in una precisa mappa.
+Nella DiGE introduciamo criteri per distinguere i campioni diversi maniera tale da ridurre la variabilità. Per ogni gene si ottengono 2 mappe, ogni mappa corrisponde ad un campione.
+
 ---
 
 ### 3.7 Image Analysis in DiGE
 
 Il workflow di analisi dell'immagine in DiGE si svolge in quattro fasi sequenziali:
 
-```
 1. Gel Imaging
    └─► 1 gel → 3 immagini separate (Cy2 / Cy3 / Cy5)
 
@@ -333,13 +337,13 @@ Il workflow di analisi dell'immagine in DiGE si svolge in quattro fasi sequenzia
 4. Spot Quantification
    └─► Ogni spot quantificato in rapporto allo standard interno
        → Valori comparabili tra gel diversi
-```
+       
 
 ![[Pasted image 20260617093909.png]]
 
 ---
 
-## 4. Gel-Free Proteomics
+## 4. Gel-Free Proteomics -> Shotgun
 
 ### 4.1 Motivazione: Limiti dell'Approccio Gel-Based
 
