@@ -14,7 +14,7 @@ Il sistema presenta alcuni svantaggi -> Elevata accuratezza richiede calibrazion
 
 Svantaggi -> L'introduzione di campioni è più complessa, l'analisi è più complessa dati gli ioni 2+ e 3+, one-shot analysis -> limiti di tempo, il picco sparisce, e bassa tolleranza agli agenti contaminanti.
 
-Il 2+/3+ per peptidi triptici è molto utile, dato che la tripsina raglia il C terminale vicino a Lys e Arg, quindi ogni peptide ha un residuo basico al suo C-terminale, oltre ad un N-terminale libero -> Almeno due siti di protonazione
+Il 2+/3+ per peptidi triptici è molto utile, dato che la tripsina taglia il C terminale vicino a Lys e Arg, quindi ogni peptide ha un residuo basico al suo C-terminale (Lys K o Arg R), oltre ad un N-terminale libero -> Almeno due siti di protonazione
 
 | Charge state (z) | Spacing between isotope peaks |
 | ---------------- | ----------------------------- |
@@ -53,3 +53,14 @@ Risulta nell'acquisizione di molteplici file ortogonali (1 spettro per peptide) 
 - **MS/MS** → gives **fragment ions → sequence info**
 - Done for **many peptides** in a sample
 - **“intact” relative to MS/MS**, meaning it hasn’t yet been broken inside the Collision Chamber
+Spesso si osservano ion series y e b  negli spettri di frammentazione di peptidi triptici MS/MS.
+CID rompe legami peptidici lungo il backbone, risultanto in frammenti ionici classificati sulla base di quale terminale ritengono e quali legami sono rotti:
+
+| Ion series | Terminus retained | Bond broken | Notes                         |
+| ---------- | ----------------- | ----------- | ----------------------------- |
+| **a**      | N-terminal        | Cα–CO       | = b − 28 Da (CO loss)         |
+| **b**      | N-terminal        | CO–N        | Most common N-terminal series |
+| **c**      | N-terminal        | N–Cα        | Less common                   |
+| **x**      | C-terminal        | CO–N        | Rare                          |
+| **y**      | C-terminal        | N–Cα        | Most common C-terminal series |
+| **z**      | C-terminal        | Cα–CO       | Less common                   |

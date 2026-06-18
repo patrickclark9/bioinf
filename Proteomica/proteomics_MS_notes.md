@@ -136,14 +136,14 @@ H₂N─[AA₁]─[AA₂]─...─[AAᵢ]─┊─[AAᵢ₊₁]─...─[AAₙ]�
                               ↑ bond cleavage
 ```
 
-| Ion series | Terminus retained | Bond broken | Notes |
-|---|---|---|---|
-| **a** | N-terminal | Cα–CO | = b − 28 Da (CO loss) |
-| **b** | N-terminal | CO–N | Most common N-terminal series |
-| **c** | N-terminal | N–Cα | Less common |
-| **x** | C-terminal | CO–N | Rare |
-| **y** | C-terminal | N–Cα | Most common C-terminal series |
-| **z** | C-terminal | Cα–CO | Less common |
+| Ion series | Terminus retained | Bond broken | Notes                         |
+| ---------- | ----------------- | ----------- | ----------------------------- |
+| **a**      | N-terminal        | Cα–CO       | = b − 28 Da (CO loss)         |
+| **b**      | N-terminal        | CO–N        | Most common N-terminal series |
+| **c**      | N-terminal        | N–Cα        | Less common                   |
+| **x**      | C-terminal        | CO–N        | Rare                          |
+| **y**      | C-terminal        | N–Cα        | Most common C-terminal series |
+| **z**      | C-terminal        | Cα–CO       | Less common                   |
 
 ### Reading Sequence from b and y Ions
 
