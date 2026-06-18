@@ -70,4 +70,54 @@ CID rompe legami peptidici lungo il backbone, risultanto in frammenti ionici cla
 
 ## Identificazione di proteine per spettrometria di massa
 
-In generale, la tripsina digerisce una proteina in un insieme di peptidi con massa prevedibile. Il pattern specifico di 
+In generale, la tripsina digerisce una proteina in un insieme di peptidi con massa prevedibile. Il pattern specifico di masse dei peptidi è effettivamente una fingerprint unica (o quasi unica)per una proteina
+![[Pasted image 20260618094554.png]]
+
+- Protein band (SDS-PAGE)
+    ↓ in-gel trypsin digest
+- Peptide mixture
+    ↓ MALDI-TOF MS
+- Peak list (m/z values of peptide ions)
+    ↓ database search (in silico digest of all proteins)
+- Protein identification
+
+Data una lista di picchi, li andiamo a confrontare confrontare contro liste di masse ioniche di peptidi generati da un database di sequenze proteiche
+
+| Accuracy | Tolerance (Da) | Hits (example) |
+|---|---|---|
+| Low | 1.0 | 478 |
+| Medium | 0.1 | 164 |
+| High | 0.01 | 25 |
+| Very high | 0.001 | 4 |
+| Ultrahigh | 0.0001 | 2 |
+
+→ **Mass accuracy is the single biggest determinant of search specificity in PMF.**
+
+With tolerance fixed at 0.1 Da:
+
+| Peptides queried | Hits |
+|---|---|
+| 1 peptide | 204 |
+| 2 peptides | 7 |
+| 3 peptides | 1 |
+
+→ **More peptides = exponentially more specific identification.**
+
+### Search Parameters (Mascot)
+
+- **Database**: UniProtKB/SwissProt, NCBInr, etc.
+- **Taxonomy**: narrow to organism when possible (reduces search space)
+- **Enzyme**: Trypsin (cuts C-terminal to Lys/Arg, not before Pro)
+- **Missed cleavages**: typically 1–2 (accounts for incomplete digestion)
+- **Fixed modifications**: Carbamidomethyl (C) — from iodoacetamide alkylation during gel prep
+- **Variable modifications**: Oxidation (M) — Met side-chain oxidation is common artifact
+- **Mass values**: MH⁺ (monoisotopic preferred for high-res instruments)
+- **Tolerance**: in Da or ppm
+
+I dati possono essere importati da file oppure manualmente si inserisce la lista di picchi m/z nel campo query
+### Mascot Scoring
+Score = −10 × log(P), where P = probability that the match is random.  
+Scores > 50–63 are typically significant (p < 0.05) — threshold depends on database size.
+
+### Output: Sequence Coverage Map
+Matched peptides highlighted in the protein sequence. **Sequence coverage (%)** = fraction of protein covered by matched peptides.
