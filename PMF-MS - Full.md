@@ -296,13 +296,10 @@ Sfrutta marcatura H/D (8 Da di separazione) o ¹²C/¹³C (9 Da). Il deuterio in
 
 **Workflow**: un campione è etichettato con la sonda leggera (d0), l'altro con quella pesante (d8). I campioni vengono combinati, digeriti con tripsina e soggetti a cromatografia di affinità con avidina per isolare i peptidi etichettati. L'analisi LC-MS permette di quantificare i rapporti di intensità delle coppie di peptidi.
 
-| | |
-
 |---|---|
-
 | **Pro** | Applicabile a qualsiasi campione; bassa complessità (solo peptidi con Cys); variabilità ridotta mescolando all'inizio |
-
 | **Contro** | Copre solo 50–70% delle proteine (quelle con ≥1 Cys); possibili reazioni con altri residui; perdita durante purificazione con streptavidina |
+|---|---|
 
 ---
 
@@ -371,11 +368,10 @@ Cellule light (controllo)              Cellule heavy (stimolate)
 Il mass shift è variabile (dipende dal numero di residui etichettati per peptide) — ben gestito da software come MaxQuant.
 
 |---|---|
-
 |**Pro**|Nessuna modificazione chimica; peptidi nativi; variabilità minima (mescolati prima di qualsiasi manipolazione); quantificazione a livello MS1 (no ratio compression da co-isolazione)|
 |**Contro**|Applicabile solo a organismi coltivabili; tipicamente limitato a 2–3 condizioni (light/medium/heavy); non applicabile direttamente a tessuti o campioni clinici|
-
 |---|---|
+
 
 ---
 
