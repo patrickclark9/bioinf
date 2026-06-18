@@ -292,5 +292,23 @@ Ovviamente vogliamo quantificare -> Espressione differenziale -> Chi cambia e qu
 Perchè il labelling -> La spettrometria di massa non è inerentemente quantitativa -> segnali ionici dipendono dall'efficienza di ionizzazione, che varia per peptide e per run. Per comparare l'abbondanza tra cambione A e campione B:
 1. Si va a etichettare ogni campione con reagenti identici chimicamente, ma sfruttando isotopi diversi
 2. Si mescolano i campioni -> Si co-analizzano -> Le coppie isotopo leggero-pesante coeluiscono in LC e vengono distinte per massa
-3. Si quantifica analizzando l'area del picco
-Mescolare prima rimuove variabilità analitica downstream
+3. Le masse dei frammenti ionici ci permettono di identificare la sequenza peptidica -> protein identification
+4. Si quantifica analizzando l'area del picco
+Mescolare prima rimuove variabilità analitica downstream.
+
+L'etichettatura può essere fatta post-sintesi proteica -> Specifiche modificazioni nella catena Amminoacidica. Applicabile ad ogni sample, ma possono avvenire reazioni
+Metabolicamente -> durante la sintesi proteica, incorporazione di uno o più amminoacidi etichettati. Si utilizzano proteine native (no modifiche alle catene laterali), ma necessitano di un organismo di coltivazione
+
+## ICAT - Isotopically Coded Affinity Tagging
+
+Sfrutta marcatura Idrogeno-Deuterio (8 Da di separazione) o Carbonio-13 vs -12 (9 Da separazione).
+
+I reagenti sono:
+- Biotin Tag -> Utilizzato per la cattura delle Cys reagenti mediante streptavidina
+- Linker chain (H o D, 8 Da di differenza)
+- Reactive group -> Lega residui Cys (tio-alchilazione)
+Sample A ──\[H₈-ICAT]──┐
+                        ├─→ Mix → Trypsin digest → Avidin affinity purification
+Sample B ──[D₈-ICAT]──┘         (captures Cys-containing peptides via biotin)
+                                         ↓
+                              LC-MS/MS → quantify H/D peak ratio → identify by MS/MS
