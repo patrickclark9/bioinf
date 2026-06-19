@@ -350,17 +350,24 @@ Il **picco ideale** è:
 |**Esterno (librerie pubbliche)**|Confronto con database pubblici; più comune per GC-MS, dove gli spettri EI sono altamente riproducibili|Alta (GC-MS), minore per LC-MS|
 Il match viene confermato dal confronto simulataneo di tR, m/z del precursore ed m/z dei frammenti. Cruciale è che la metodologia cromatografico sia la più simile possibile tra analisi del campione e generazione della libreria, per riproducibilità.
 
-**2. Standard-free** (per metaboliti non noti)
+**2. Standard-free / putative identification** (per metaboliti non noti)
 
-Se non otteniamo un match, la **massa esatta** e il **pattern di frammentazione** rimangono gli strumenti principali per l'identificazione, anche quando si cambiano metodi cromatografici o di frammentazione, calcolando i valori di m/z attesi.
+Se non otteniamo un match (metabolita sconosciuto o non esiste uno standard commerciale), la **massa esatta** e il **pattern di frammentazione** rimangono gli strumenti principali per l'identificazione, anche quando si cambiano metodi cromatografici o di frammentazione, calcolando i valori di m/z attesi.
 
-- **In silico database generation**: sulla base di m/z e pattern di frammentazione si tenta di ricostruire la struttura
-- **De novo elucidation**: se il metabolita è totalmente nuovo, si integrano tecniche non distruttive come **NMR**
+- **MS1 → formula molecolare (candidati), non struttura**
+- **MS2 → pattern di frammentazione**  
+    → ricostruiamo la struttura analizzando:
+    - frammenti (picchi)
+    - gap (perdite neutre: H₂O, CO₂, ecc.)
+- **Similarity searching**  
+    → cerchiamo pattern di frammentazione simili  
+    → indica **stesso scaffold chimico con modificazioni** (es. glicosilazione)
+- **In silico fragmentation prediction**  
+    → confronto con spettri teorici generati computazionalmente
+- **De novo elucidation**  
+    → integrazione con tecniche come **NMR**
 
-MS1 -> Formula molecolare candidata
-MS2 -> Pattern di frammentazione -> ricostruiamo la struttura sulla base della frammentazione, analizzando gap (perdite neutrale, perdita di gruppi comuni (H2O, CO2 etc))
-Similarity searching -> Cerchiamo nel database pattern di frammentazione **simili** a quelli ottenuti -> Probabilmente è un metabolita noto ma glicosilato, o con piccole modificazioni
-
+Nello standard-free sp
 ### Considerazioni per il Confronto
 
 Per il confronto tra spettri è essenziale che la frammentazione sia riproducibile, quindi deve essere identico l'esperimento di frammentazione.
