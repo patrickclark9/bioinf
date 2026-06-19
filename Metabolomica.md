@@ -39,13 +39,16 @@ Sono tanti >200.000, ed eterogenei (3.000 classi chimiche diverse).
 Attualmente non è possibile analizzare il metaboloma completo con un unico sistema cromatografico, si ricorre alla separazione in comparti:
 - Si analizza il Metaboloma idrofilico
 - Si analizza separatamente il comparto dei lipidi
+Si ottengono quindi più estratti dallo stesso campione biologico.
 Abbiamo bisogno di sistemi che soddisfano esigenze contrastanti:
 - Risoluzione e accuratezza -> Bisogna spingere la risoluzione al massimo perchè molecole diverse possono avere valori di m/z identici o molto simili. L'accuratezza è necessaria per distinguere queste molecole
 - Ampio Range Dinamico -> La concentrazione dei metaboliti varia enormemente ma la bassa concentrazione nonb è indice di scarsa importanza funzione. Bisogna spingere la sensibilità del sistema per rilevare anche i metaboliti meno abbondanti
 Alta risoluzione e alta sensibilità contemporaneamente non è semplice
-Sono necessari sistemi High throughput, poichè spesso l'analisi richiede un numero elevato di campioni N.
+Sono necessari sistemi High throughput, poichè spesso l'analisi richiede un numero elevato di campioni N, con elevata automazione e grande velocità di analisi.
 
-La concentrazione non è correlata all'importanza funzionale. No
+La concentrazione non è correlata all'importanza funzionale.
+Non esiste un'unica tecnica in grado di visualizzare l'intero metaboloma in un solo esperimento. 
+La MS deve affrontare requisiti contrastanti.
 ## Tecnologie
 - NMR -> Prevalente in passato, ma aveva bassa sensibilità, richiedendo grandi quantitià di campione
 - La spettrometria di massa (soprattutto avanzamenti di questa, con velocità di scansione aumentata e maggiore risoluzione) ha permesso di identificare metaboliti a livelli di concentrazione più bassi, spingendo lo sviluppo della disciplina
