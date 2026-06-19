@@ -394,12 +394,28 @@ Per il confronto tra spettri è essenziale che la frammentazione sia riproducibi
 La sorgente MS può produrre vari addotti a partire dalla stessa molecola. La deconvoluzione mira a identificare queste forme derivanti da un unico analita per evitare di contarle come metaboliti distinti.
 Ad ogni tempo di ritenzione, si ricercano feature separate da differenze di massa dati dalle diverse forme adduttive.
 
-### Isotopi
+### Isotopologhi
 Gli isotopologhi sono problematici -> Sono molecole di struttura identica ma con distribuzione isotopica differente.
 La de-isotopizzazione è il processo di ricerca dei picchi corrispondenti a isotopologhi della stessa molecola.
 All'interno di ogni spettro, si ricercano masse separate da sostituzioni isotopiche conosciute
 La capacità di distinguere isotopologhi è fondamentale e viene sfruttata quando il sistema viene arricchito artificialmente con isotopi più pesanti (flussomica).
 
+### Allineamento
+L'allineamento è necessario quando si confrontano più campioni. Anche tentando di mantenere costanti le condizioni cromatografiche, piccoli shift nei tempi di ritenzione si verificano inevitabilmente tra le iniezioni.
+L'allineamento corregge questi scostamenti, sincronizzando i picchi attraverso tutti i campioni in modo che la matrice di dati sia corretto.
+
+### QA/QC
+
+Per garantire riproducibilità e accuratezza, è essenziale implementare diversi fattori di controllo:
+- Replicati -> Replicati tecnici dello stesso campione per valutare la variabilità strumentale e analitica
+- Randomizzare l'ordine dei campioni di analisi per evitare bias sistematici (Deriva strumentale, effetto carry-over) influenzino i risultati
+- QC -> Blanks -> fondamentali per valutare e sottrarre il background strumentale ed eventuale contaminazione
+	- Standard -> Iniezione periodica di standard a concentrazione nota per monitorare le prestazioni dello strumento
+- QA -> Ispezione manuale della qualità dei dati generati dal software, verificando forma dei picchi, stabilità della baseline e coerenza degli spettri di massa
+### Normalizzazione
+Mira a ridurre variabilità biologica e analitica. Dipende da molti fattori -> metodologia comune di normalizzazione in campioni cellulari è la normalizzazione rispetto al contenuto proteico. Si quantifica il pellet proteico e la quantità di metaboliti ritrovata viene normalizzata rispetto alla quantità di proteina iniziale, fungendo da misura del volume cellulare o della biomassa 
+L'output finale è una tabella completa che riporta i parametri identificativi (Nome, tR, m/z
+Parent/Daughter) e le aree dei picchi normalizzate per tutti i campioni, pronta per l'analisi statistica.
 
 ---
 
