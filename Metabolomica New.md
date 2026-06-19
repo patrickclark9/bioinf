@@ -299,6 +299,9 @@ L'obiettivo è compilare una tabella che riporti per ciascun campione tutti ques
 ### Identificazione
 Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. 
 Si confronta tempo di ritenzione, m/z precursore e m/z daughter. Cruciale è che la metodologia cromatografica tra DB ed esperimento sia quanto più simile possibile, motivo per cui spesso si fanno database in house.
+Per metaboliti non noti:
+- Sulla base dei valori di m/z e dei pattern di frammentazione si tenta di ricostruire la struttura della molecola.
+- Se il metabolita è totalmente nuovo, allora bisogna integrare tecniche non distruttive
 L'identificazione è più complessa per:
 - Variabilità analitica-> colonne o strumenti diversi, tR diversi
 - Database -> i metaboliti sono tantissimi, non sempre si ottiene un match univoco
