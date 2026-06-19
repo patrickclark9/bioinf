@@ -108,3 +108,100 @@ Non si varia la composizione chimica della fase mobile, si applica invece un gra
 La maggior parte dei metaboliti nei campioni biologici non è volatile.
 Derivatizzazione -> Si asciuga il campione (rimozione acqua). Dopodichè si utilizzano silani (agenti derivatizzanti), aggiungono gruppi (ad esempio trimetilsilil o TMS) a gruppi funzionali di metaboliti al campione secco, rendendo le molecole più volatili e meno termolabili. I silani reagiscono con gruppi nucleofili (ammine, ossidrili, carbossilici). In assenza di questi e presenza di carbonilici ad esempio (C=O) si usa metossiamina per stabilizzare i gruppi funzionali e derivatizzarli.
 Ovviamente derivatizzazione ha conseguenze -> Modifica del peso molecolare, TMS aggiunto e quindi m/z; La GC utilizza impatto elettronico, la quale produce inevitabilmente ioni frammento direttamente nella sorgente. Le librerie per GC-MS contengono già lo spettro di frammentazione atteso per il metabolita già derivatizzato con uno specifico agente. Queste librerie sono robuste e validate, rendendo possibile la consultazione della libreria per dedurre il valore di m/z atteso sia di ione molecolare che dei frammenti
+
+## LC-MS
+Si utilizza principalmente Reversed-Phase LC.
+- Fase stazionaria apolare idrofobica (catene C-18 o C-8 spesso derivatizzate)
+- Fase mobile -> Inizia polare acquosa, e procede verso una fase mobile più apolare (acetonitrile 0.1% acido formico)
+Qui le molecole meno polari eluiscono dopo perchè la fase stazionaria è apolare, quindi formano interazioni più forti con la fase stazionaria rispetto alla mobile.
+Molti metaboliti sono estremamente polari, quindi la reversed phase non fornisce risoluzione ottimale -> HILIC
+
+Il grande sviluppo della LC in metabolomica è stato guidato dall'innovazione nei materiali delle
+colonne cromatografiche (ad esempio, le particelle sub-2 micrometri utilizzate
+nell'UPLC/UHPLC). Questi progressi tecnologici hanno continuamente migliorato l'efficienza di
+separazione e la risoluzione analitica dei metaboliti.
+ESI-LC-MS è lo standard
+### HILIC
+- Fase stazionaria polare
+- Mobile va da apolare e procede verso una più acquosa, con aumento progressivo della componente acquosa
+Si ottiene l'inverso, i composti più polari vengono trattenuti più a lungo, i meno polari eluiscono prima.
+HILIC permette una maggiore separazione e risoluzione delle sostanze polari, dilazionando la loro uscita nel tempo maggiormente per una migliore analisi
+
+## Detection MS vs NMR
+
+La più utilizzata è la GC-MS o LC-MS:
+- Ion-Trap, Q, QqQ, o Q-TOF sono comuni per quantificazione, a bassa/media risoluzione
+- Orbitrap, FT-ICR-MS hanno accuratezza di massa e risoluzione molto elevata, usati in ambiti specialistici. L'elevata risoluzione permette di distinguere molecole con masse molto vicine
+Spesso si usano in combinazione GC-MS e LC-MS, dipendentemente dal metabolita.
+
+La risonanza magnetica atomica valuta un assorbimento di energia da parte dei nuclei atomici, che viene rilasciata:
+- Poco sensibile, la separazione energetica tra i livelli di spin nucleare è molto ridotta, aumenta solo all'aumentare dell'intensità del campo magnetico applicato
+- Necessita di strumenti che applicano campi magnetici intensi
+- Molto riproducibile
+- La bassa sensitività richiede quantitativo di materiale elevato, rispetto ad MS
+- La preparazione del campione consiste solo nel solubilizzarlo, molto semplice, almeno rispetto a MS
+- Non distruttiva
+- Fondamentale nel Tracing Isotopico, molto sensibile agli isotopi pesanti
+- Distingue bene gli isomeri
+In genere si combinano più tecniche per combinare alta sensibilità. identificazione e dati strutturali completi
+
+## Analisi Eluizione -> Identificazione
+
+L'output iniziale è il cromatogramma, che visualizza i picchi dei metaboliti nel tempo: separazione cromatografica
+
+## MS
+L'analisi singolo MS genera un'analisi 2D:
+- Tempo di ritenzione -> Istante di eluizione del metabolita
+- m/z aprendo lo spettro a quel tempo
+- Intensità del picco -> Proporzionale alla quantità di metabolita
+
+## MS/MS
+Un ulteriore livello analitico:
+- m/z dei frammenti daughter -> spettro di frammentazione è unico per ogni molecola
+- La configurazione tempo di ritenzione, m/z precursore, m/z frammento fornisce una impronta molecolare specifica
+
+L'obiettivo è compilare una tabella che riporti per ciascun campione tutti questi parametri, insieme all'area sottesa al picco -> Quantificazione
+
+### Identificazione
+Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. 
+Si confronta tempo di ritenzione, m/z precursore e m/z daughter. Cruciale è che la metodologia cromatografica tra DB ed esperimento sia quanto più simile possibile, 
+
+L'identificazione è più complessa per:
+- Variabilità analitica-> colonne o strumenti diversi, tR diversi (drift di tR dovuto a variazione strumentale)
+- Database -> i metaboliti sono tantissimi, non sempre si ottiene un match univoco
+Il picco è una variazione significativa e sostenuta del segnali di fondo.
+Il picco ideale è:
+- Sottile e appuntito -> simmetrico e con alta risoluzione
+- Baseline stabile -> Ritorna alla baseline, non a uno superiore
+- Curvo, no indentazione
+Problemi:
+- Forme non ideali, code
+- Baseline mobile
+- picchi tronchi dovuta a saturazione. Se l'intensità misurata supera il limite di saturazione dello strumento, il campione va diluito e rianalizzato
+- Picchi sovrapposti:
+	- In questo caso si fa deconvoluzione:
+		- Si sfruttano assunzioni sulla forma ideale del picco, come la simmetria, per separare distintamente i due picchi. Le assunzioni possono non riflettere la realtà chimica, sono assunzioni puramente analitiche
+Le strategie di identificazione sono:
+- Standard based:
+	- In house -> Confronto con standard di metaboliti precedentemente analizzati in laboratorio -> massima affidabilità
+	- Esterno -> Confronto con librerie pubbliche, più comune per GC-MS, dove gli spettri sono più riproducibili
+- Standard free per metaboliti non noti:
+	- In silico database generation
+	- Sulla base dei valori di m/z e dei pattern di frammentazione si tenta di ricostruire la struttura della molecola.
+	- De novo elucidation -> Se il metabolita è totalmente nuovo, allora bisogna integrare tecniche non distruttive NMR
+Durante il confronto bisogna tener conto di:
+- Variazioni in frammentazione -> Energia di collisione e tipologia di frammentazione in MS/MS possono variare e produrre diversi pattern di frammenti -> Si necessita di metodica di frammentazione uguale, stessa energia di frammentazione e durata di frammentazione simile per confrontare spettri MS/MS
+- Addotti -> I metaboliti possono formare addotti per sodiazione o altro, che alterano peso molecolare rispetto alla nativa. È essenziale identificare correttamente di quale ione si sta parlando prima di assegnare la massa alla molecola
+
+La massa esatta e l'analisi del pattern di frammentazione rimangono gli strumenti principali per identificare le sostanze, anche quando si utilizzano nuovi metodi cromatografici o di
+frammentazione, al fine di calcolare i valori di m/z attesi.
+
+### Quantificazione
+- Relativa -> Solo area del picco, confronta i livelli di metabolita tra diversi campioni (normalizzati per variabilità di carico)
+- Assoluta -> Si vuole ottenere concentrazione assoluta (Molare, ng/mL) -> Serve una curva di calibrazione di diluizione seriale di standard puri, per correlare i picchi osservati a quelli noti
+## Isomeri e Isobari
+- Gli isomeri avranno stesso m/z. Per distinguerli serve una separazione cromatografica molto efficiente, poichè spesso varia il tempo di ritenzione
+- Isobari -> Sostanze non correlate ma con m/z quasi identico -> in MS/MS la frammentazione avverrebbe su entrambe le molecole simultaneamente. La separazione cromatografica risolve questo problema perchè quasi sicuramente due sostanze completamente diverse avranno tempi di ritenzione diversi
+
+File spesso proprietari -> ProteoWizard converte tra formati proprietari
+
