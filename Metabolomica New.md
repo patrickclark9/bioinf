@@ -455,3 +455,20 @@ L'obiettivo principale della flussonomica non è misurare le quantità assolute 
 - Monitoraggio -> Si monitora l'incorporazione di marcatori isotopici lungo un pathway metabolico specifico. In pratica si nutre il sistema con un substrato marcato e si osserva quanto rapidamente e in che misura l'isotopo viene trasferito ai metaboliti a valle
 
 Applicazioni -> Studi in vivo, studio delle alterazioni metaboliche (effetto warburg nei tumori), efficienza dei bioreattori nell'utilizzo del carbonio
+
+L'analisi dei dati di flussonomica è complessa:
+- Rilevazione MS o NMR, per distinguere la massa degli isotopologhi
+- Modello matematico metabolico che ipotizza le possibili risposte metaboliche del sistema
+L'integrazione di questi due elementi permette di mappare i flussi e di comprendere come il flusso di un determinato metabolita si ripartisce attraverso i pathway metabolici a valle, fornendo una visione dinamica della funzione cellulare
+
+Metaboliti chiave:
+- ATP
+- acetil-CoA
+- NAD+
+- S-AdenosilMetionina SAM
+Comprendere i livelli e i flussi di questi metaboliti permette di interpretare direttamente lo stato funzionale della cellula.
+
+
+## Metabolomica Statica vs Dinamica
+
+La comprensione della relazione tra metabolismo e funzione biologica richiede più di una semplice misurazione della quantità di metaboliti
