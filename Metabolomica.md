@@ -34,6 +34,22 @@ I metaboliti possono essere endogeni -> prodotti ciclicamente da anabolismo e ca
 Possono derivare dalla dieta/farmaci o altro.
 Sono tanti >200.000, ed eterogenei (3.000 classi chimiche diverse).
 
+![[Pasted image 20260619093720.png]]
+
+Attualmente non è possibile analizzare il metaboloma completo con un unico sistema cromatografico, si ricorre alla separazione in comparti:
+- Si analizza il Metaboloma idrofilico
+- Si analizza separatamente il comparto dei lipidi
+Abbiamo bisogno di sistemi che soddisfano esigenze contrastanti:
+- Risoluzione e accuratezza -> Bisogna spingere la risoluzione al massimo perchè molecole diverse possono avere valori di m/z identici o molto simili. L'accuratezza è necessaria per distinguere queste molecole
+- Ampio Range Dinamico -> La concentrazione dei metaboliti varia enormemente ma la bassa concentrazione nonb è indice di scarsa importanza funzione. Bisogna spingere la sensibilità del sistema per rilevare anche i metaboliti meno abbondanti
+Alta risoluzione e alta sensibilità contemporaneamente non è semplice
+Sono necessari sistemi High throughput, poichè spesso l'analisi richiede un numero elevato di campioni N.
+
+La concentrazione non è correlata all'importanza funzionale. No
 ## Tecnologie
 - NMR -> Prevalente in passato, ma aveva bassa sensibilità, richiedendo grandi quantitià di campione
 - La spettrometria di massa (soprattutto avanzamenti di questa, con velocità di scansione aumentata e maggiore risoluzione) ha permesso di identificare metaboliti a livelli di concentrazione più bassi, spingendo lo sviluppo della disciplina
+
+## Lipidomica
+È una disciplina a se stante, dato che richiedono metodi particolari date le loro caratteristiche chimiche (apolarità, richiedono HPLC diversi). La metabolomica generale ha beneficiato maggiormente dalle tecniche MS applicate a molecole più polari e reattive.
+![[Pasted image 20260619094140.png]]
