@@ -28,13 +28,13 @@ Uno dei punti di forza della tecnica GC è la grande varietà dei rivelatori dis
 
 ## 2. Workflow Generale
 
-```
+
 1. Preparazione   → campione disciolto in solvente appropriato
 2. Introduzione   → campione iniettato nel sistema cromatografico
 3. Separazione    → componenti migrano a velocità diverse attraverso la fase stazionaria
 4. Rivelazione    → detector registra i componenti separati in uscita
 5. Analisi        → dati elaborati per identificazione e quantificazione
-```
+
 
 ---
 

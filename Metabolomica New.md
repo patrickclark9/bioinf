@@ -161,5 +161,10 @@ Per campioni solidi o ambientali, il campione viene analizzato in toto -> Disomo
 ## Separazione cromatografica
 Passaggio obbligatorio nel workflow metabolomico -> Risolve risoluzione e distinzione tra metaboliti diversi, che pur avendo lo stesso PM devono essere analizzati separatamente. Il tempo di ritenzione in colonna permette la distinzione. Un altro aspetto è la duilizione temporale, che diluisce nel tempo l'ingresso dei vari metaboliti verso la sorgente di ionizzazione di MS. L'intera massa di metaboliti contemporaneamente sarebbe impossibile da analizzare, dato che MS/MS richiede un certo tempo strumentale per l'acquisizione
 
-Se l'obiettivo è la quantificazione assoluta, è indispensabile utilizzare una curva di calibrazione per metabolita -> Standard 
+Se l'obiettivo è la quantificazione assoluta, è indispensabile utilizzare una curva di calibrazione per metabolita -> Standard puro diluito serialmente a concentrazione nota, poi si relazionano i due dati: concentrazione nota dello standard e area sottesa al picco cromatografico generato, da cui possiamo interpolare i dati
 ### GC-MS
+
+La GC è importante in metabolomica, limitata però a sostanze volatili -> Iniettore a temperature elevate, immediata volatilizzazione del campione liquido iniettato.
+Nella GC l'interazione dei composti con la fase stazionaria è modulata dalla temperatura.
+Non si varia la composizione chimica della fase mobile, si applica invece un gradiente di temperatura, che aumentando, favorisce l'eluizione dei vari composti.
+
