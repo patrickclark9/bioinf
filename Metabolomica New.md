@@ -298,10 +298,10 @@ L'obiettivo è compilare una tabella che riporti per ciascun campione tutti ques
 
 ### Identificazione
 Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. 
-Si confronta tempo di ritenzione, m/z precursore e m/z daughter. Cruciale è che la metodologia cromatografica tra DB ed esperimento sia quanto più simile possibile, motivo per cui spesso si fanno database in house.
+Si confronta tempo di ritenzione, m/z precursore e m/z daughter. Cruciale è che la metodologia cromatografica tra DB ed esperimento sia quanto più simile possibile, 
 
 L'identificazione è più complessa per:
-- Variabilità analitica-> colonne o strumenti diversi, tR diversi
+- Variabilità analitica-> colonne o strumenti diversi, tR diversi (drift di tR dovuto a variazione strumentale)
 - Database -> i metaboliti sono tantissimi, non sempre si ottiene un match univoco
 Il picco è una variazione significativa e sostenuta del segnali di fondo.
 Il picco ideale è:
@@ -320,11 +320,13 @@ Le strategie di identificazione sono:
 	- In house -> Confronto con standard di metaboliti precedentemente analizzati in laboratorio -> massima affidabilità
 	- Esterno -> Confronto con librerie pubbliche, più comune per GC-MS, dove gli spettri sono più riproducibili
 - Standard free per metaboliti non noti:
+	- In silico database generation
 	- Sulla base dei valori di m/z e dei pattern di frammentazione si tenta di ricostruire la struttura della molecola.
-	- Se il metabolita è totalmente nuovo, allora bisogna integrare tecniche non distruttive NMR
-Bisogna tener conto di:
-- Variazioni in frammentazione -> Energia di collisione e tipologia di frammentazione in MS/MS possono variare e produrre diversi pattern di frammenti
+	- De novo elucidation -> Se il metabolita è totalmente nuovo, allora bisogna integrare tecniche non distruttive NMR
+Durante il confronto bisogna tener conto di:
+- Variazioni in frammentazione -> Energia di collisione e tipologia di frammentazione in MS/MS possono variare e produrre diversi pattern di frammenti -> Si necessita di metodica di frammentazione uguale, stessa energia di frammentazione e durata di frammentazione simile per confrontare spettri MS/MS
 - Addotti -> I metaboliti possono formare addotti per sodiazione o altro, che alterano peso molecolare rispetto alla nativa. È essenziale identificare correttamente di quale ione si sta parlando prima di assegnare la massa alla molecola
+
 La massa esatta e l'analisi del pattern di frammentazione rimangono gli strumenti principali per identificare le sostanze, anche quando si utilizzano nuovi metodi cromatografici o di
 frammentazione, al fine di calcolare i valori di m/z attesi.
 
