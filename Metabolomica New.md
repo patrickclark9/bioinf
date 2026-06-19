@@ -489,3 +489,15 @@ Esempio: In S. cerevisiae, in assenza di glucosio, il PEP aumenta in concentrazi
 - Il C13 viene incorporato nei metaboliti a valle di un pathway in modo direttamente proporzionale al flusso con cui quel pathway si attiva
 - Gli isotopomeri vengono distinti dalla MS in base all'aumento di peso molecolare
 L'analisi dei rapporti tra molecola non marcato e forme marcate ci fornisce informazioni quantitative sui flussi metabolici e sulla modificazione dell'utilizzo del metabolismo
+Il tracing è fondamentale per identificare flussi metabolici alternativi come reazioni anaplerotiche.
+Si possono usare varianti di marcatura posizionale per isolare e quantificare il flusso attraverso specifici pathway che si intersecano
+È cruciale non mescolare mai le fonti di carbonio marcate in un unico esperimento:
+-  Necessità: La cellula non distingue tra C12 e C13, quindi il metabolismo avviene
+normalmente. Tuttavia, i ricercatori devono utilizzare i traccianti separatamente per poter
+attribuire univocamente la marcatura all'una o all'altra fonte.
+ -  Protocollo: Su un identico numero di cellule, si eseguono tre esperimenti separati:
+	1. Glucosio e Glutammina non marcati (Controllo M0).
+	2. Glucosio marcato e Glutammina non marcata.
+	3. Glucosio non marcato e Glutammina marcata.
+Solo in questo modo, analizzando la massa finale (MS), si è in grado di tracciare e quantificare
+separatamente il contributo del metabolismo del glucosio da quello della glutammina.
