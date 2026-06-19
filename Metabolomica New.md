@@ -242,7 +242,7 @@ La maggior parte dei metaboliti biologici **non è volatile** ed è **termolabil
 
 **Librerie dedicate** -> Le librerie GC-MS contengono spettri di frammentazione per il metabolita **già derivatizzato**, rendendo semplice la deduzione del valore di m/z atteso (sia di ioni molecolari sia dei frammenti). anche senza standard in loco.
 
-Standard è Impatto elettronico per GC-MS
+Sorgente di ionizzazione standard è Impatto elettronico per GC-MS
 ## LC-MS
 Si utilizza principalmente Reversed-Phase LC.
 - Fase stazionaria apolare idrofobica (catene C-18 o C-8 spesso derivatizzate)
@@ -299,9 +299,7 @@ L'obiettivo è compilare una tabella che riporti per ciascun campione tutti ques
 ### Identificazione
 Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. 
 Si confronta tempo di ritenzione, m/z precursore e m/z daughter. Cruciale è che la metodologia cromatografica tra DB ed esperimento sia quanto più simile possibile, motivo per cui spesso si fanno database in house.
-Per metaboliti non noti:
-- Sulla base dei valori di m/z e dei pattern di frammentazione si tenta di ricostruire la struttura della molecola.
-- Se il metabolita è totalmente nuovo, allora bisogna integrare tecniche non distruttive
+
 L'identificazione è più complessa per:
 - Variabilità analitica-> colonne o strumenti diversi, tR diversi
 - Database -> i metaboliti sono tantissimi, non sempre si ottiene un match univoco
@@ -317,6 +315,18 @@ Problemi:
 - Picchi sovrapposti:
 	- In questo caso si fa deconvoluzione:
 		- Si sfruttano assunzioni sulla forma ideale del picco, come la simmetria, per separare distintamente i due picchi. Le assunzioni possono non riflettere la realtà chimica, sono assunzioni puramente analitiche
+Le strategie di identificazione sono:
+- Standard based:
+	- In house -> Confronto con standard di metaboliti precedentemente analizzati in laboratorio -> massima affidabilità
+	- Esterno -> Confronto con librerie pubbliche, più comune per GC-MS, dove gli spettri sono più riproducibili
+- Standard free per metaboliti non noti:
+	- Sulla base dei valori di m/z e dei pattern di frammentazione si tenta di ricostruire la struttura della molecola.
+	- Se il metabolita è totalmente nuovo, allora bisogna integrare tecniche non distruttive NMR
+Bisogna tener conto di:
+- Variazioni in frammentazione -> Energia di collisione e tipologia di frammentazione in MS/MS possono variare e produrre diversi pattern di frammenti
+- Addotti -> I metaboliti possono formare addotti per sodiazione o altro, che alterano peso molecolare rispetto alla nativa. È essenziale identificare correttamente di quale ione si sta parlando prima di assegnare la massa alla molecola
+La massa esatta e l'analisi del pattern di frammentazione rimangono gli strumenti principali per identificare le sostanze, anche quando si utilizzano nuovi metodi cromatografici o di
+frammentazione, al fine di calcolare i valori di m/z attesi.
 
 ### Quantificazione
 - Relativa -> Solo area del picco, confronta i livelli di metabolita tra diversi campioni (normalizzati per variabilità di carico)
