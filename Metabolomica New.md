@@ -501,3 +501,5 @@ attribuire univocamente la marcatura all'una o all'altra fonte.
 	3. Glucosio non marcato e Glutammina marcata.
 Solo in questo modo, analizzando la massa finale (MS), si è in grado di tracciare e quantificare
 separatamente il contributo del metabolismo del glucosio da quello della glutammina.
+
+## Protocollo in vivo
