@@ -468,7 +468,11 @@ Metaboliti chiave:
 - S-AdenosilMetionina SAM
 Comprendere i livelli e i flussi di questi metaboliti permette di interpretare direttamente lo stato funzionale della cellula.
 
+Nella separazione cromatografica, i diversi isotopologhi hanno identico tempo di ritenzione nella colonna, perchè la massa del marcatore è troppo piccola per influenzare le proprietà chimico-fisiche della molecola.
+Tramite MS ad alta risoluzione possiamo distinguere i diversi isotopologhi mer masse molecolari differenti.
 
+I diversi componenti vengono chiamati M0, M1, M2, M3 ecc... in base al numero di isotopi marcati presenti. M0 = 0, M1 = +1 carbonio marcato, M2 = +2 carboni marcati
+Citrato M5 = citrato a 5 atomi di carbonio marcati.
 ## Metabolomica Statica vs Dinamica
 
 La comprensione della relazione tra metabolismo e funzione biologica richiede più di una semplice misurazione della quantità di metaboliti
@@ -502,4 +506,10 @@ attribuire univocamente la marcatura all'una o all'altra fonte.
 Solo in questo modo, analizzando la massa finale (MS), si è in grado di tracciare e quantificare
 separatamente il contributo del metabolismo del glucosio da quello della glutammina.
 
-## Protocollo in vivo
+Il tracing è effettuabile anche in vivo oltre ache in vitro. L'uso di isotopi non radioattivi è abbastanza sicuro poichè non dovrebbe produrre effetti dannosi all'organismo.
+L'esaurimento delle risorse endogene viene effettuate mediante digiuno, mentre la somministrazione viene effettuata o tramite singola iniezione oppure a infusione costante. Si attende un tempo prestabilito prima della raccolta dei campioni.
+
+In vivo si osserva una anomalia rispetto all'in vitro -> La marcatura +1 è dominante, particolarmente per Citrato e Malato e altri del ciclo di Krebs.
+
+La CO2 marcata M+1 in vivo non lascia il sistema ma viene reincorporata nei metaboliti, partecipando alle vie anaplerotiche, come la PEP carbossichinasi, producendo metaboliti marcati +1. In vitro l'ambiente è spesso saturato con CO2 non marcata, che diluisce rapidamente la CO2 marcata endogena, rendendone trascurabile l'incorporazione.
+Quindi in vivo la CO2 marcata endogena è una reazione sostanziale e fondamentale nel contesto in vivo, ma invisibile in vitro.
