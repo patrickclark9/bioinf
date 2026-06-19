@@ -476,9 +476,16 @@ La comprensione della relazione tra metabolismo e funzione biologica richiede pi
 La metabolomica classica fornisce una misura delle concentrazioni assolute dei metaboliti, misurata pero al netto di un equilibrio dinamico Formazione-Catabolismo. 
 È un apporccio statico, non fornisce alcune idea di quanto velocemente il metabolita venga consumato o formato, nè quale pathway sia preferibilmente attivo.
 
-Il tracing isotopico utilizza isotopi stabili (C-13, N-15, Deuterio), introducendo dinamicità nello studio metabolico:
+Il tracing isotopico utilizza isotopi stabili non radioattivi (C-13, N-15, Deuterio), introducendo dinamicità nello studio metabolico:
 - Misura l'andamento del pathway per capire se una via è arricchita in una specifica condizione
 - Si introduce un substrato marcato e si monitora come l'isotopo viene incorporato nei metaboliti a valle, consentendo di capire come una perturbazione (knockout genico, sovraespressione, farmaco) influisce sul flussi metabolici
 Un flusso può essere attivo ad elevata concentrazione di metaboliti, ma misurandolo possiamo identificare lo stato funzionale del pathway -> forse la concentrazione di metaboliti elevata è dovuta al fatto che il flusso è bloccato in un determinato stadio, mentre nel normale il flusso è pienamente attivo
 
 Esempio: In S. cerevisiae, in assenza di glucosio, il PEP aumenta in concentrazione. L'aumento di PEP è dovuto all'attivazione di un flusso anaplerotico, che lo produce dall'ossalacetato tramite PEP-carbossichinasi, non dalla glicolisi
+
+## Tracing Principi
+- Fonte marcata -> Si fornisce alle cellule un substrato vitale (glucosio, glutammina) arricchito artificialmente al 100% con C13 o altro
+- U-13C6 -> Glucosio marcato su tutti e 6 i carboni, U sta per ubiquitaria
+- Il C13 viene incorporato nei metaboliti a valle di un pathway in modo direttamente proporzionale al flusso con cui quel pathway si attiva
+- Gli isotopomeri vengono distinti dalla MS in base all'aumento di peso molecolare
+L'analisi dei rapporti tra molecola non marcato e forme marcate ci fornisce informazioni quantitative sui flussi metabolici e sulla modificazione dell'utilizzo del metabolismo
