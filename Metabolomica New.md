@@ -367,7 +367,9 @@ Se non otteniamo un match (metabolita sconosciuto o non esiste uno standard comm
 - **De novo elucidation**  
     → integrazione con tecniche come **NMR**
 
-Nello standard-free sp
+Nello standard-free spesso si sfruttano algoritmi di machine learning e banche dati esterne per definire la struttura molecolare del metabolita incognito a partire dai soli dati strumentali.
+
+
 ### Considerazioni per il Confronto
 
 Per il confronto tra spettri è essenziale che la frammentazione sia riproducibile, quindi deve essere identico l'esperimento di frammentazione.
@@ -387,7 +389,16 @@ Per il confronto tra spettri è essenziale che la frammentazione sia riproducibi
 - Colonne o strumenti diversi, o usura della colonna, causano variazioni di tR → rende difficile il confronto diretto con librerie esterne
 
 
+### Deconvoluzione degli Addotti
 
+La sorgente MS può produrre vari addotti a partire dalla stessa molecola. La deconvoluzione mira a identificare queste forme derivanti da un unico analita per evitare di contarle come metaboliti distinti.
+Ad ogni tempo di ritenzione, si ricercano feature separate da differenze di massa dati dalle diverse forme adduttive.
+
+### Isotopi
+Gli isotopologhi sono problematici -> Sono molecole di struttura identica ma con distribuzione isotopica differente.
+La de-isotopizzazione è il processo di ricerca dei picchi corrispondenti a isotopologhi della stessa molecola.
+All'interno di ogni spettro, si ricercano masse separate da sostituzioni isotopiche conosciute
+La capacità di distinguere isotopologhi è fondamentale e viene sfruttata quando il sistema viene arricchito artificialmente con isotopi più pesanti (flussomica).
 
 
 ---
