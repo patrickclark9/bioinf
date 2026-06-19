@@ -284,4 +284,28 @@ In genere si combinano più tecniche per combinare alta sensibilità. identifica
 L'output iniziale è il cromatogramma, che visualizza i picchi dei metaboliti nel tempo: separazione cromatografica
 
 ## MS
-L'analisi singolo MS dove 
+L'analisi singolo MS genera un'analisi 2D:
+- Tempo di ritenzione -> Istante di eluizione del metabolita
+- m/z aprendo lo spettro a quel tempo
+- Intensità del picco -> Proporzionale alla quantità di metabolita
+
+## MS/MS
+Un ulteriore livello analitico:
+- m/z dei frammenti daughter -> spettro di frammentazione è unico per ogni molecola
+- La configurazione tempo di ritenzione, m/z precursore, m/z frammento fornisce una impronta molecolare specifica
+
+L'obiettivo è compilare una tabella che riporti per ciascun campione tutti questi parametri, insieme all'area sottesa al picco -> Quantificazione
+
+### Identificazione
+Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. L'identificazione è più complessa per:
+- Variabilità analitica-> colonne o strumenti diversi, tR diversi
+- Database -> i metaboliti sono tantissimi, non sempre si ottiene un match univoco
+
+## Quantificazione
+- Relativa -> Solo area del picco, confronta i livelli di metabolita tra diversi campioni (normalizzati per variabilità di carico)
+- Assoluta -> Si vuole ottenere concentrazione assoluta (Molare, ng/mL) -> Serve una curva di calibrazione di diluizione seriale di standard puri, per correlare i picchi osservati a quelli noti
+## Isomeri e Isobari
+- Gli isomeri avranno stesso m/z. Per distinguerli serve una separazione cromatografica molto efficiente, poichè spesso varia il tempo di ritenzione
+- Isobari -> Sostanze non correlate ma con m/z quasi identico -> in MS/MS la frammentazione avverrebbe su entrambe le molecole simultaneamente. La separazione cromatografica risolve questo problema perchè quasi sicuramente due sostanze completamente diverse avranno tempi di ritenzione diversi
+
+File spesso proprietari -> ProteoWizard converte tra formati proprietari
