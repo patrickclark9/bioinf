@@ -116,8 +116,14 @@ La lipidomica è una disciplina a sé stante all'interno della metabolomica. Le 
 
 - Sistemi HPLC dedicati (fasi inverse, colonne C18/C8)
 - Metodi di estrazione specifici
+Tipicamente LC ottimizzati sono i più utilizzati.
+I lipidi hanno range di massa enorme (150Da-1500Da) e strutture molto variabili (lunghezza delle catene, insaturazioni, teste polari).
+Isomeri posizionali (es. posizione del doppio legame) vengono risolti mediante tecniche di frammentazione MS/MS specifiche (MRM, Neutral Loss Scan) per la lipidomica.
+Le librerie standard specifiche per i lipidi sono molte estese, aiutano nell'identificazione significativamente.
+Per sua natura la lipidomica è una delle aree più complesse della metabolomica.
 
 La metabolomica "generale" ha beneficiato maggiormente dalle tecniche MS applicate a molecole più **polari e reattive**, mentre i lipidi sono analizzati in pipeline separate.
+
 
 # Bulk Metabolomics
 
