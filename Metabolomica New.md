@@ -119,55 +119,130 @@ La lipidomica è una disciplina a sé stante all'interno della metabolomica. Le 
 
 La metabolomica "generale" ha beneficiato maggiormente dalle tecniche MS applicate a molecole più **polari e reattive**, mentre i lipidi sono analizzati in pipeline separate.
 
-
 # Bulk Metabolomics
-Analisi dell'intero tessuto o dell'intero campione biologico.
-Si distinguono due tipologie di analisi
-- Untargeted (screening): Non è un'analisi selettiva, non si focalizza su specifici metaboliti
-	- L'analizzatore (spesso MS) scansione un intero range di massa m/z d'interesse, senza preselezionare alcun valore
-	- Profilo metabolico globale
-	- Prevalentemente qualitativo, semi-quantitativo
-	- L'identificazione dei metaboliti corrispondenti ai picchi viene effettuata a posteriori (es. MS/MS) per confronto con standard noti o librerie spettrali
-- Targeted -> Selettiva, si concentra su specifiche molecole
-	- Quantifica un insieme specifico e conosciuto di metaboliti (spesso coinvolti in un pathway)
-	- Necessità di standard puri (metaboliti puri di interesse) e caraterrizazione spettrale (analisi dello standard, per conoscerne tempo di ritenzione, m/z del parent e daughter), ed una curva di calibrazione utilizzando diluizione seriali dello standard (stabilisce una relazione lineare tra concentrazione del metabolita e area sottesa al picco)
-	- Si lavora in selettività, solo specifici m/z (noti grazie all'analisi dello standard)
-	- Misurando l'area sottesa al picco del metabolita nel campione e usando la curva di calibrazione è possibile dedurre con precisione la sua concentrazione
+
+Analisi dell'intero tessuto o campione biologico. Non risolve eterogeneità spaziale o cellulare, ma permette una visione aggregata del metaboloma.
+
+---
+
+## Tipologie di Analisi
+
+### Untargeted (Screening)
+
+Analisi non selettiva: l'analizzatore (tipicamente MS) scansiona un intero range di m/z d'interesse senza preselezionare alcun valore.
+
+- Produce un **profilo metabolico globale**
+- Prevalentemente **qualitativa o semi-quantitativa**
+- L'identificazione dei metaboliti avviene **a posteriori** (es. via MS/MS), per confronto con standard noti o librerie spettrali
+
+### Targeted
+
+Analisi selettiva: quantifica un insieme **specifico e conosciuto** di metaboliti, spesso coinvolti in un pathway d'interesse.
+
+Richiede per ogni metabolita target:
+
+|Elemento|Scopo|
+|---|---|
+|**Standard puro**|Caratterizzazione spettrale (TR, m/z parent e daughter)|
+|**Curva di calibrazione**|Diluizioni seriali dello standard; relazione lineare tra concentrazione e area del picco|
+
+Si lavora in **selettività**: vengono acquisiti solo gli m/z noti dallo standard. L'area del picco nel campione, interpolata sulla curva, fornisce la concentrazione assoluta del metabolita.
+
+---
+
+## Variabilità
+
+In metabolomica occorre distinguere due fonti di variabilità:
+
+|Tipo|Origine|
+|---|---|
+|**Analitica**|Errore strumentale o di protocollo|
+|**Biologica**|Differenze naturali tra campioni; più accentuata che in proteomica, perché i metaboliti sono a valle del flusso informazionale e mostrano maggiore dispersione nelle concentrazioni|
+
+> È indispensabile un **N statisticamente adeguato** per garantire la potenza statistica dell'analisi.
+
+---
+
 ## Workflow
-- Estrazione è selettiva -> polarità dei metaboliti diversa
-	- Estrazione sequenziale -> prima molecole polari, poi apolari. Esistono metodi onnicomprensivi, ma preferiscono molecole polari
-- L'estrazione avviene in cellule attive -> Necessità di quenching -> fermare l'attività enzimatica che può alterare il profilo metabolico
-	- Congelamento ultrarapido -> Azoto liquido -> Campioni solidi, Il campione viene portato rapidamente a temperature criogeniche, bloccando attività enzimatica. Il campione ormai duro viene polverizzato meccanicamente
-	- Denaturazione con solventi organici freddi -> Si utilizzano solventi organici per denaturare le proteine, disattivando gli enzimi (metanolo freddo), lisi cellulari si effettua utilizzando sonicatori o frullatori a temperature basse 
-	- Acidi o buffer specifici (acido perclorico), o buffer che aiutano a solubilizzare e portare in soluzione i metaboliti desiderati
 
-2 Variabilità da tener conto:
-1. Analitica -> Errore strumento o protocollo
-2. Biologica -> Differenze naturali. Ancora più accentuata in metabolomica. I metaboliti, essendo avalle del flusso informazionale cellulare, tendono a mostrare una maggiore dispersione nel livello di concentrazione rispetto a proteine
+```
+Campione biologico
+       │
+       ▼
+   Quenching  ──────────────────────────────────────────────────────┐
+  (blocco attività enzimatica)                                       │
+       │                                                             │
+       ▼                                                             │
+Rimozione proteine                                        Metodi di quenching:
+  (centrifugazione)                                        - Congelamento ultrarapido (N₂ liquido)
+       │                                                     → polverizzazione meccanica
+       ▼                                                   - Solventi organici freddi (es. MeOH)
+Estrazione selettiva                                         → denaturazione proteica + lisi
+  (frazionamento per polarità)                             - Acidi / buffer specifici
+       │                                                     (es. acido perclorico)
+       ▼
+Separazione cromatografica (LC o GC)
+       │
+       ▼
+Analisi MS
+       │
+       ▼
+Analisi dei dati
+```
 
-Bisogna ottenere un numero di campioni statisticamente significativo per assicurare  una adeguata potenza statistica.
+### Estrazione
 
-Quenching -> Rimozione proteine (centrifugazione), rimuove pellet proteico e lascia una fase liquida contenente il metaboloma -> Estrazione selettiva, frazionamento e purificazione dell'estratto, si utilizza LC o GC spesso. Esempio usare cloroformia in seconda estrazione per ottenere il metaboloma lipofilico.
+L'estrazione è **selettiva per polarità**: molecole idrofiliche e lipofiliche vengono estratte separatamente.
 
-Queste fasi sono seguita da analisi spettrometrica di massa e analisi dei risultati.
+- **Estrazione sequenziale**: prima i metaboliti polari, poi quelli apolari (es. cloroformio per il comparto lipofilico)
+- Esistono metodi onnicomprensivi, ma tendono a favorire le molecole polari
 
-### Detection
-Dipende da origine del metaboloma (intracellulare o extracellulare)
-- Intracellulare  separa biomassa dal sovranatante-> Si separa per centrifugazione, metanolo/acqua fredda per estrarre il metaboloma e indurre quenching. Ulteriore centrifugazione per rimuovere le proteine
-- Extracellulare è il sovranatante-> Separato dalle cellulare tramite centrifugazione, estrazione avviene aggiungendo metanolo freddo per indurre precipitazione delle proteine. Centrifugazione ulteriore per la rimozione
+### Campioni: Intracellulare vs Extracellulare
 
-Per campioni solidi o ambientali, il campione viene analizzato in toto -> Disomogeneizzato (azoto liquido, meccanicamente (afrullatori et al) in presenza di solventi freddi), si raccoglie il lisato post-centrifugazione che contiene i metaboliti
+|Origine|Procedura|
+|---|---|
+|**Intracellulare**|Separare biomassa dal sovranatante per centrifugazione → MeOH/H₂O freddi per estrarre metaboliti e indurre quenching → centrifugazione per rimozione proteine|
+|**Extracellulare** (sovranatante)|Separare le cellule per centrifugazione → aggiungere MeOH freddo per precipitare le proteine → centrifugazione per rimozione|
+|**Campioni solidi / ambientali**|Disomogeneizzazione (N₂ liquido + meccanica) in presenza di solventi freddi → raccolta del lisato post-centrifugazione|
 
-## Separazione cromatografica
-Passaggio obbligatorio nel workflow metabolomico -> Risolve risoluzione e distinzione tra metaboliti diversi, che pur avendo lo stesso PM devono essere analizzati separatamente. Il tempo di ritenzione in colonna permette la distinzione. Un altro aspetto è la duilizione temporale, che diluisce nel tempo l'ingresso dei vari metaboliti verso la sorgente di ionizzazione di MS. L'intera massa di metaboliti contemporaneamente sarebbe impossibile da analizzare, dato che MS/MS richiede un certo tempo strumentale per l'acquisizione
+---
 
-Se l'obiettivo è la quantificazione assoluta, è indispensabile utilizzare una curva di calibrazione per metabolita -> Standard puro diluito serialmente a concentrazione nota, poi si relazionano i due dati: concentrazione nota dello standard e area sottesa al picco cromatografico generato, da cui possiamo interpolare i dati
-### GC-MS
+## Separazione Cromatografica
 
-La GC è importante in metabolomica, limitata però a sostanze volatili -> Iniettore a temperature elevate, immediata volatilizzazione del campione liquido iniettato.
-Nella GC l'interazione dei composti con la fase stazionaria è modulata dalla temperatura.
-Non si varia la composizione chimica della fase mobile, si applica invece un gradiente di temperatura, che aumentando, favorisce l'eluizione dei vari composti.
+Passaggio **obbligatorio** nel workflow metabolomico. Ha due funzioni principali:
 
-La maggior parte dei metaboliti nei campioni biologici non è volatile.
-Derivatizzazione -> Si asciuga il campione (rimozione acqua). Dopodichè si utilizzano silani (agenti derivatizzanti), aggiungono gruppi (ad esempio trimetilsilil o TMS) a gruppi funzionali di metaboliti al campione secco, rendendo le molecole più volatili e meno termolabili. I silani reagiscono con gruppi nucleofili (ammine, ossidrili, carbossilici). In assenza di questi e presenza di carbonilici ad esempio (C=O) si usa metossiamina per stabilizzare i gruppi funzionali e derivatizzarli.
-Ovviamente derivatizzazione ha conseguenze -> Modifica del peso molecolare, TMS aggiunto e quindi m/z; La GC utilizza impatto elettronico, la quale produce inevitabilmente ioni frammento direttamente nella sorgente. Le librerie per GC-MS contengono già lo spettro di frammentazione atteso per il metabolita già derivatizzato con uno specifico agente. Queste librerie sono robuste e validate, rendendo possibile la consultazione della libreria per dedurre il valore di m/z atteso sia di ione molecolare che dei frammenti
+1. **Risoluzione** → separa metaboliti con lo stesso PM (isobari) grazie al diverso tempo di ritenzione in colonna
+2. **Diluizione temporale** → distribuisce nel tempo l'ingresso dei metaboliti nella sorgente di ionizzazione MS; un flusso simultaneo dell'intero metaboloma renderebbe impossibile l'acquisizione MS/MS
+
+> Per la **quantificazione assoluta** è indispensabile una curva di calibrazione per ciascun metabolita: si diluisce serialmente lo standard a concentrazione nota e si mette in relazione la concentrazione con l'area del picco cromatografico, da cui si interpolano i dati campione.
+
+---
+
+## GC-MS
+
+### Principio
+
+La GC separa composti **volatili**: il campione liquido viene iniettato a temperature elevate e volatilizzato immediatamente. La separazione è modulata da un **gradiente di temperatura** (non dalla composizione della fase mobile, come in LC): all'aumentare della temperatura, i composti eluiscono progressivamente.
+
+### Derivatizzazione
+
+La maggior parte dei metaboliti biologici **non è volatile** ed è **termolabile**. Si ricorre alla **derivatizzazione**:
+
+1. **Essiccazione** del campione (rimozione dell'acqua)
+2. **Aggiunta di agenti derivatizzanti** (es. silani → gruppi **TMS**, trimetilsilil) che reagiscono con gruppi nucleofili (ammine, ossidrili, carbossilici), rendendo le molecole più volatili e meno termolabili
+3. Per gruppi carbonilici (C=O, non nucleofili): uso di **metossiamina** per stabilizzarli prima della sililazione
+
+**Conseguenze della derivatizzazione:**
+
+| Effetto                            | Dettaglio                                                                                                                                                      |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modifica del PM                    | Ogni gruppo TMS aggiunto incrementa l'm/z                                                                                                                      |
+| Pattern di frammentazione alterato | La GC usa **ionizzazione per impatto elettronico (EI)**, che produce ioni frammento già nella sorgente                                                         |
+**Soluzione**:
+
+**Librerie dedicate** -> Le librerie GC-MS contengono spettri di frammentazione per il metabolita **già derivatizzato**, rendendo semplice la deduzione del valore di m/z atteso (sia di ioni molecolari sia dei frammenti). anche senza standard in loco.
+
+## LC-MS
+Si utilizza principalmente Reversed-Phase LC.
+- Fase stazionaria apolare idrofobica (catene C-18 o C-8 spesso derivatizzate)
+- Fase mobile -> Inizia polare acquosa, e procede verso una fase mobile più apolare (acetonitrile 0.1% acido formico)
