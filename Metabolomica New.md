@@ -352,8 +352,14 @@ Il match viene confermato dal confronto simulataneo di tR, m/z del precursore ed
 
 **2. Standard-free** (per metaboliti non noti)
 
+Se non otteniamo un match, la **massa esatta** e il **pattern di frammentazione** rimangono gli strumenti principali per l'identificazione, anche quando si cambiano metodi cromatografici o di frammentazione, calcolando i valori di m/z attesi.
+
 - **In silico database generation**: sulla base di m/z e pattern di frammentazione si tenta di ricostruire la struttura
 - **De novo elucidation**: se il metabolita è totalmente nuovo, si integrano tecniche non distruttive come **NMR**
+
+MS1 -> Formula molecolare candidata
+MS2 -> Pattern di frammentazione -> ricostruiamo la struttura sulla base della frammentazione, analizzando gap (perdite neutrale, perdita di gruppi comuni (H2O, CO2 etc))
+Similarity searching -> Cerchiamo nel database pattern di frammentazione **simili** a quelli ottenuti -> Probabilmente è un metabolita noto ma glicosilato, o con piccole modificazioni
 
 ### Considerazioni per il Confronto
 
@@ -373,11 +379,8 @@ Per il confronto tra spettri è essenziale che la frammentazione sia riproducibi
 
 - Colonne o strumenti diversi, o usura della colonna, causano variazioni di tR → rende difficile il confronto diretto con librerie esterne
 
-> La **massa esatta** e il **pattern di frammentazione** rimangono gli strumenti principali per l'identificazione, anche quando si cambiano metodi cromatografici o di frammentazione, calcolando i valori di m/z attesi.
 
-Per identificare prodotti di campioni inusuali, o derivati da differente cromatografia o per metodo di frammentazione diverso si usa:
-- MS1 m/z
-- MS2 m/z -> Pattern di frammentazione
+
 
 
 ---
