@@ -472,3 +472,13 @@ Comprendere i livelli e i flussi di questi metaboliti permette di interpretare d
 ## Metabolomica Statica vs Dinamica
 
 La comprensione della relazione tra metabolismo e funzione biologica richiede più di una semplice misurazione della quantità di metaboliti
+
+La metabolomica classica fornisce una misura delle concentrazioni assolute dei metaboliti, misurata pero al netto di un equilibrio dinamico Formazione-Catabolismo. 
+È un apporccio statico, non fornisce alcune idea di quanto velocemente il metabolita venga consumato o formato, nè quale pathway sia preferibilmente attivo.
+
+Il tracing isotopico utilizza isotopi stabili (C-13, N-15, Deuterio), introducendo dinamicità nello studio metabolico:
+- Misura l'andamento del pathway per capire se una via è arricchita in una specifica condizione
+- Si introduce un substrato marcato e si monitora come l'isotopo viene incorporato nei metaboliti a valle, consentendo di capire come una perturbazione (knockout genico, sovraespressione, farmaco) influisce sul flussi metabolici
+Un flusso può essere attivo ad elevata concentrazione di metaboliti, ma misurandolo possiamo identificare lo stato funzionale del pathway -> forse la concentrazione di metaboliti elevata è dovuta al fatto che il flusso è bloccato in un determinato stadio, mentre nel normale il flusso è pienamente attivo
+
+Esempio: In S. cerevisiae, in assenza di glucosio, il PEP aumenta in concentrazione. L'aumento di PEP è dovuto all'attivazione di un flusso anaplerotico, che lo produce dall'ossalacetato tramite PEP-carbossichinasi, non dalla glicolisi
