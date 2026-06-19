@@ -446,3 +446,12 @@ Parent/Daughter) e le aree dei picchi normalizzate per tutti i campioni, pronta 
 ## Formati File
 
 I file raw degli strumenti sono spesso in formato **proprietario**. **ProteoWizard** (msConvert) converte tra formati proprietari e formati aperti (es. mzML, mzXML).
+
+
+# Fluxonomica
+
+Un approccio della metabolomica Targeted è la flussonomica, assistita da isotopi stabili.
+L'obiettivo principale della flussonomica non è misurare le quantità assolute ma misurare le velocità (i flussi) con cui i metaboliti si formano e si interconvertono
+- Monitoraggio -> Si monitora l'incorporazione di marcatori isotopici lungo un pathway metabolico specifico. In pratica si nutre il sistema con un substrato marcato e si osserva quanto rapidamente e in che misura l'isotopo viene trasferito ai metaboliti a valle
+
+Applicazioni -> Studi in vivo, studio delle alterazioni metaboliche (effetto warburg nei tumori), efficienza dei bioreattori nell'utilizzo del carbonio
