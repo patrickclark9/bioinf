@@ -242,6 +242,7 @@ La maggior parte dei metaboliti biologici **non è volatile** ed è **termolabil
 
 **Librerie dedicate** -> Le librerie GC-MS contengono spettri di frammentazione per il metabolita **già derivatizzato**, rendendo semplice la deduzione del valore di m/z atteso (sia di ioni molecolari sia dei frammenti). anche senza standard in loco.
 
+Standard è Impatto elettronico per GC-MS
 ## LC-MS
 Si utilizza principalmente Reversed-Phase LC.
 - Fase stazionaria apolare idrofobica (catene C-18 o C-8 spesso derivatizzate)
@@ -253,7 +254,7 @@ Il grande sviluppo della LC in metabolomica è stato guidato dall'innovazione ne
 colonne cromatografiche (ad esempio, le particelle sub-2 micrometri utilizzate
 nell'UPLC/UHPLC). Questi progressi tecnologici hanno continuamente migliorato l'efficienza di
 separazione e la risoluzione analitica dei metaboliti.
-ESI-LC-MS è lo stand
+ESI-LC-MS è lo standard
 ### HILIC
 - Fase stazionaria polare
 - Mobile va da apolare e procede verso una più acquosa, con aumento progressivo della componente acquosa
@@ -277,3 +278,10 @@ La risonanza magnetica atomica valuta un assorbimento di energia da parte dei nu
 - Fondamentale nel Tracing Isotopico, molto sensibile agli isotopi pesanti
 - Distingue bene gli isomeri
 In genere si combinano più tecniche per combinare alta sensibilità. identificazione e dati strutturali completi
+
+## Analisi Eluizione -> Identificazione
+
+L'output iniziale è il cromatogramma, che visualizza i picchi dei metaboliti nel tempo: separazione cromatografica
+
+## MS
+L'analisi singolo MS dove 
