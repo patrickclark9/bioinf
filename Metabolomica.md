@@ -22,4 +22,18 @@ In metabolomica si applicano classiche sorgenti di ionizzazione hard, poichè la
 Il metaboloma è l'indicatore ultimo dello stato funzionale di un sistema biologico. È la prova che una cascata di eventi si è effettivamente attivata.
 
 I metaboliti sono indicatori essenziale dello stato funzionale della cellula, disregolazioni si manifestano rapidamente in variazioni del contenuto di specifici metaboliti
-Stanno acquisendo capacità come biomarcatori. La loro alterazione può indicare uno stato patologico prima che si manifestano cambiamenti a livello proteico o genico
+Stanno acquisendo capacità come biomarcatori. La loro alterazione può indicare uno stato patologico prima che si manifestano cambiamenti a livello proteico o genico.
+
+Il metabolismo è centrale nella regolazione epigenetica. Fenotipo e Genotipo sono fortemente influenzati dall'ambiente esterno, ed il metabolismo è il meccanismo attraverso cui il sistema si adatta e risponde ai segnali ambientali.
+
+Ad esempio, la S-adenosilmetionina SAM è uno dei principali donatori di metile per la metilazione del DNA.
+
+## Problema
+Il numero di metaboliti in un organismo ecede di gran lunga quello delle proteine e dei geni.
+I metaboliti possono essere endogeni -> prodotti ciclicamente da anabolismo e catabolismo
+Possono derivare dalla dieta/farmaci o altro.
+Sono tanti >200.000, ed eterogenei (3.000 classi chimiche diverse).
+
+## Tecnologie
+- NMR -> Prevalente in passato, ma aveva bassa sensibilità, richiedendo grandi quantitià di campione
+- La spettrometria di massa (soprattutto avanzamenti di questa, con velocità di scansione aumentata e maggiore risoluzione) ha permesso di identificare metaboliti a livelli di concentrazione più bassi, spingendo lo sviluppo della disciplina
