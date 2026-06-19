@@ -128,4 +128,14 @@ Si distinguono due tipologie di analisi
 	- Profilo metabolico globale
 	- Prevalentemente qualitativo, semi-quantitativo
 	- L'identificazione dei metaboliti corrispondenti ai picchi viene effettuata a posteriori (es. MS/MS) per confronto con standard noti o librerie spettrali
-- Targeted -> Selettiva, si concentra su specifi
+- Targeted -> Selettiva, si concentra su specifiche molecole
+	- Quantifica un insieme specifico e conosciuto di metaboliti (spesso coinvolti in un pathway)
+	- Necessità di standard puri (metaboliti puri di interesse) e caraterrizazione spettrale (analisi dello standard, per conoscerne tempo di ritenzione, m/z del parent e daughter), ed una curva di calibrazione utilizzando diluizione seriali dello standard (stabilisce una relazione lineare tra concentrazione del metabolita e area sottesa al picco)
+	- Si lavora in selettività, solo specifici m/z (noti grazie all'analisi dello standard)
+	- Misurando l'area sottesa al picco del metabolita nel campione e usando la curva di calibrazione è possibile dedurre con precisione la sua concentrazione
+## Workflow
+- Estrazione è selettiva -> polarità dei metaboliti diversa
+	- Estrazione sequenziale -> prima molecole polari, poi apolari. Esistono metodi onnicomprensivi, ma preferiscono molecole polari
+- L'estrazione avviene in cellule attive -> Necessità di quenching -> fermare l'attività enzimatica che può alterare il profilo metabolico
+	- Congelamento ultrarapido -> Azoto liquido -> Campioni solidi, Il campione viene portato rapidamente a temperature criogeniche, bloccando attività enzimatica. Il campione ormai duro viene polverizzato meccanicamente
+	- Denaturazione con solventi organici freddi -> Si utilizzano solventi organici per denaturare le proteine, disattivando gli enzimi (metanolo freddo), lisi cellulari si effettua utilizzando sonicatori o frullatori a temperature 
