@@ -246,3 +246,15 @@ La maggior parte dei metaboliti biologici **non è volatile** ed è **termolabil
 Si utilizza principalmente Reversed-Phase LC.
 - Fase stazionaria apolare idrofobica (catene C-18 o C-8 spesso derivatizzate)
 - Fase mobile -> Inizia polare acquosa, e procede verso una fase mobile più apolare (acetonitrile 0.1% acido formico)
+Qui le molecole meno polari eluiscono dopo perchè la fase stazionaria è apolare, quindi formano interazioni più forti con la fase stazionaria rispetto alla mobile.
+Molti metaboliti sono estremamente polari, quindi la reversed phase non fornisce risoluzione ottimale -> HILIC
+
+Il grande sviluppo della LC in metabolomica è stato guidato dall'innovazione nei materiali delle
+colonne cromatografiche (ad esempio, le particelle sub-2 micrometri utilizzate
+nell'UPLC/UHPLC). Questi progressi tecnologici hanno continuamente migliorato l'efficienza di
+separazione e la risoluzione analitica dei metaboliti.
+### HILIC
+- Fase stazionaria polare
+- Mobile va da apolare e procede verso una più acquosa, con aumento progressivo della componente acquosa
+Si ottiene l'inverso, i composti più polari vengono trattenuti più a lungo, i meno polari eluiscono prima.
+HILIC permette una maggiore separazione e risoluzione delle sostanze polari, dilazionando la loro uscita nel tempo maggiormente per una migliore analisi
