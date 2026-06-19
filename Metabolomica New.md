@@ -253,8 +253,27 @@ Il grande sviluppo della LC in metabolomica è stato guidato dall'innovazione ne
 colonne cromatografiche (ad esempio, le particelle sub-2 micrometri utilizzate
 nell'UPLC/UHPLC). Questi progressi tecnologici hanno continuamente migliorato l'efficienza di
 separazione e la risoluzione analitica dei metaboliti.
+ESI-LC-MS è lo stand
 ### HILIC
 - Fase stazionaria polare
 - Mobile va da apolare e procede verso una più acquosa, con aumento progressivo della componente acquosa
 Si ottiene l'inverso, i composti più polari vengono trattenuti più a lungo, i meno polari eluiscono prima.
 HILIC permette una maggiore separazione e risoluzione delle sostanze polari, dilazionando la loro uscita nel tempo maggiormente per una migliore analisi
+
+## Detection MS vs NMR
+
+La più utilizzata è la GC-MS o LC-MS:
+- Ion-Trap, Q, QqQ, o Q-TOF sono comuni per quantificazione, a bassa/media risoluzione
+- Orbitrap, FT-ICR-MS hanno accuratezza di massa e risoluzione molto elevata, usati in ambiti specialistici. L'elevata risoluzione permette di distinguere molecole con masse molto vicine
+Spesso si usano in combinazione GC-MS e LC-MS, dipendentemente dal metabolita.
+
+La risonanza magnetica atomica valuta un assorbimento di energia da parte dei nuclei atomici, che viene rilasciata:
+- Poco sensibile, la separazione energetica tra i livelli di spin nucleare è molto ridotta, aumenta solo all'aumentare dell'intensità del campo magnetico applicato
+- Necessita di strumenti che applicano campi magnetici intensi
+- Molto riproducibile
+- La bassa sensitività richiede quantitativo di materiale elevato, rispetto ad MS
+- La preparazione del campione consiste solo nel solubilizzarlo, molto semplice, almeno rispetto a MS
+- Non distruttiva
+- Fondamentale nel Tracing Isotopico, molto sensibile agli isotopi pesanti
+- Distingue bene gli isomeri
+In genere si combinano più tecniche per combinare alta sensibilità. identificazione e dati strutturali completi
