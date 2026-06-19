@@ -297,11 +297,25 @@ Un ulteriore livello analitico:
 L'obiettivo è compilare una tabella che riporti per ciascun campione tutti questi parametri, insieme all'area sottesa al picco -> Quantificazione
 
 ### Identificazione
-Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. L'identificazione è più complessa per:
+Per identificare, similmente alla proteomica, si utilizzano database metabolici, e si confronta metabolita incognito contro i campioni del DB. 
+Si confronta tempo di ritenzione, m/z precursore e m/z daughter. Cruciale è che la metodologia cromatografica tra DB ed esperimento sia quanto più simile possibile, motivo per cui spesso si fanno database in house.
+L'identificazione è più complessa per:
 - Variabilità analitica-> colonne o strumenti diversi, tR diversi
 - Database -> i metaboliti sono tantissimi, non sempre si ottiene un match univoco
+Il picco è una variazione significativa e sostenuta del segnali di fondo.
+Il picco ideale è:
+- Sottile e appuntito -> simmetrico e con alta risoluzione
+- Baseline stabile -> Ritorna alla baseline, non a uno superiore
+- Curvo, no indentazione
+Problemi:
+- Forme non ideali, code
+- Baseline mobile
+- picchi tronchi dovuta a saturazione. Se l'intensità misurata supera il limite di saturazione dello strumento, il campione va diluito e rianalizzato
+- Picchi sovrapposti:
+	- In questo caso si fa deconvoluzione:
+		- Si sfruttano assunzioni sulla forma ideale del picco, come la simmetria, per separare distintamente i due picchi. Le assunzioni possono non riflettere la realtà chimica, sono assunzioni puramente analitiche
 
-## Quantificazione
+### Quantificazione
 - Relativa -> Solo area del picco, confronta i livelli di metabolita tra diversi campioni (normalizzati per variabilità di carico)
 - Assoluta -> Si vuole ottenere concentrazione assoluta (Molare, ng/mL) -> Serve una curva di calibrazione di diluizione seriale di standard puri, per correlare i picchi osservati a quelli noti
 ## Isomeri e Isobari
@@ -309,3 +323,4 @@ Per identificare, similmente alla proteomica, si utilizzano database metabolici,
 - Isobari -> Sostanze non correlate ma con m/z quasi identico -> in MS/MS la frammentazione avverrebbe su entrambe le molecole simultaneamente. La separazione cromatografica risolve questo problema perchè quasi sicuramente due sostanze completamente diverse avranno tempi di ritenzione diversi
 
 File spesso proprietari -> ProteoWizard converte tra formati proprietari
+
