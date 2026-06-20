@@ -195,6 +195,11 @@ Analisi MS
        ▼
 Analisi dei dati
 ```
+## Quenching
+
+- Congelamento ultrarapido -> Azoto liquido -> Campioni solidi, Il campione viene portato rapidamente a temperature criogeniche, bloccando attività enzimatica. Il campione ormai duro viene polverizzato meccanicamente
+- Denaturazione con solventi organici freddi -> Si utilizzano solventi organici per denaturare le proteine, disattivando gli enzimi (metanolo freddo), lisi cellulari si effettua utilizzando sonicatori o frullatori a temperature basse 
+- Acidi o buffer specifici (acido perclorico), o buffer che aiutano a solubilizzare e portare in soluzione i metaboliti desiderati
 
 ### Estrazione
 
@@ -242,11 +247,11 @@ La maggior parte dei metaboliti biologici **non è volatile** ed è **termolabil
 
 **Conseguenze e soluzione:**
 
-|Effetto|Dettaglio|
-|---|---|
-|Modifica del PM|Ogni gruppo TMS aggiunto incrementa l'm/z|
-|Pattern di frammentazione alterato|L'EI produce ioni frammento già nella sorgente, con pattern dipendenti dalla derivatizzazione|
-|**Soluzione: librerie dedicate**|Le librerie GC-MS contengono spettri di metaboliti **già derivatizzati** → identificazione affidabile anche **senza standard in loco**, con m/z attesi (ione molecolare + frammenti) già noti|
+| Effetto                            | Dettaglio                                                                                                                                                                                     |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modifica del PM                    | Ogni gruppo TMS aggiunto incrementa l'm/z                                                                                                                                                     |
+| Pattern di frammentazione alterato | L'EI produce ioni frammento già nella sorgente, con pattern dipendenti dalla derivatizzazione                                                                                                 |
+| **Soluzione: librerie dedicate**   | Le librerie GC-MS contengono spettri di metaboliti **già derivatizzati** → identificazione affidabile anche **senza standard in loco**, con m/z attesi (ione molecolare + frammenti) già noti |
 
 ---
 
