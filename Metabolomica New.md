@@ -281,22 +281,22 @@ HILIC è complementare alla RP: insieme coprono un range di polarità molto più
 
 ## MS vs NMR: Confronto
 
-NMR valuta un assorbimento di energia da parte dei nuclei atomici, energia che viene successivamente rilasciata. Per ottenere una distinzion
+NMR valuta un assorbimento di energia da parte dei nuclei atomici, energia che viene successivamente rilasciata. Per ottenere una distinzione sufficientemente elevata è necessario applicare campi magnetici molto intensi (>11.7Tesla)
 
-|Proprietà|MS|NMR|
-|---|---|---|
-|**Sensibilità**|Alta|Bassa (richiede campioni abbondanti)|
-|**Preparazione campione**|Complessa (estrazione, separazione)|Semplice (solo solubilizzazione)|
-|**Distruttività**|Sì|No|
-|**Riproducibilità**|Buona|Molto alta|
-|**Distinzione isomeri**|Difficile senza cromatografia|Buona|
-|**Tracing isotopico**|Possibile|Eccellente (molto sensibile agli isotopi pesanti)|
-|**Campo magnetico richiesto**|No|Sì (intenso)|
+| Proprietà                     | MS                                  | NMR                                               |
+| ----------------------------- | ----------------------------------- | ------------------------------------------------- |
+| **Sensibilità**               | Alta                                | Bassa (richiede campioni abbondanti)              |
+| **Preparazione campione**     | Complessa (estrazione, separazione) | Semplice (solo solubilizzazione)                  |
+| **Distruttività**             | Sì                                  | No                                                |
+| **Riproducibilità**           | Buona                               | Molto alta                                        |
+| **Distinzione isomeri**       | Difficile senza cromatografia       | Buona                                             |
+| **Tracing isotopico**         | Possibile                           | Eccellente (molto sensibile agli isotopi pesanti) |
+
 
 > La bassa sensibilità NMR deriva dalla piccola separazione energetica tra i livelli di spin nucleare, che aumenta solo con l'intensità del campo magnetico applicato.
 
 
-In genere si **combinano più tecniche** per ottenere alta sensibilità, identificazione e dati strutturali completi.
+In genere si **combinano più tecniche** per ottenere alta sensibilità, identificazione e dati strutturali completi. LC-MS è la più performante in termini di sensibilità e capacità di analizzare metaboliti diversi.
 
 **Analizzatori MS comuni in metabolomica:**
 
@@ -449,6 +449,8 @@ L'**output finale** è una tabella completa con parametri identificativi (nome, 
 ---
 
 ## Isomeri e Isobari
+
+Sia isomeri sia isobari sono problematici con solo MS.
 
 | Caso        | Problema                                                                                | Soluzione                                                                      |
 | ----------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
