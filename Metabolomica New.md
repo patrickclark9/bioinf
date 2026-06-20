@@ -228,7 +228,7 @@ Passaggio **obbligatorio** nel workflow metabolomico. Ha due funzioni principali
 
 ### Principio
 
-La GC separa composti **volatili**: il campione liquido viene iniettato a temperature elevate e volatilizzato immediatamente. La separazione è modulata da un **gradiente di temperatura** (non dalla composizione della fase mobile, come in LC): all'aumentare della temperatura, i composti eluiscono progressivamente.
+La GC separa composti **volatili**: il campione liquido viene iniettato a temperature elevate e volatilizzato immediatamente. La separazione è modulat/ da un **gradiente di temperatura** (non dalla composizione della fase mobile, come in LC): all'aumentare della temperatura, i composti eluiscono progressivamente.
 
 Sorgente di ionizzazione standard: **impatto elettronico (EI)**.
 
@@ -440,10 +440,10 @@ L'**output finale** è una tabella completa con parametri identificativi (nome, 
 
 ## Isomeri e Isobari
 
-|Caso|Problema|Soluzione|
-|---|---|---|
-|**Isomeri**|Stesso m/z → indistinguibili per MS|Separazione cromatografica efficiente: spesso il tR differisce|
-|**Isobari**|m/z quasi identico → in MS/MS la frammentazione coinvolgerebbe entrambi simultaneamente|Separazione cromatografica: molecole diverse hanno quasi certamente tR diversi|
+| Caso        | Problema                                                                                | Soluzione                                                                      |
+| ----------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| **Isomeri** | Stesso m/z → indistinguibili per MS                                                     | Separazione cromatografica efficiente: spesso il tR differisce                 |
+| **Isobari** | m/z quasi identico → in MS/MS la frammentazione coinvolgerebbe entrambi simultaneamente | Separazione cromatografica: molecole diverse hanno quasi certamente tR diversi |
 
 ---
 
