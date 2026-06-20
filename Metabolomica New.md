@@ -227,6 +227,8 @@ Passaggio **obbligatorio** nel workflow metabolomico. Ha due funzioni principali
 
 > Per la **quantificazione assoluta** è indispensabile una curva di calibrazione per ciascun metabolita: concentrazione nota dello standard vs. area del picco cromatografico, da cui si interpolano i dati campione.
 
+Nel contesto della spettrometria di massa (e della cromatografia), la linearità deve essere eccellente: il valore di R2 (coefficiente di determinazione, che indica la bontà dell'adattamento della retta ai punti) deve essere il più vicino possibile a 1 (idealmente, superiore a 0.999 per la quantificazione rigorosa).
+
 ---
 
 ## GC-MS
