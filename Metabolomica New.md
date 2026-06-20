@@ -235,7 +235,7 @@ Nel contesto della spettrometria di massa (e della cromatografia), la linearità
 
 ### Principio
 
-La GC separa composti **volatili**: il campione liquido viene iniettato a temperature elevate e volatilizzato immediatamente. La separazione è modulat/ da un **gradiente di temperatura** (non dalla composizione della fase mobile, come in LC): all'aumentare della temperatura, i composti eluiscono progressivamente.
+La GC separa composti **volatili**: il campione liquido viene iniettato a temperature elevate e volatilizzato immediatamente. La separazione è modulata da un **gradiente di temperatura** (non dalla composizione della fase mobile, come in LC): all'aumentare della temperatura, i composti eluiscono progressivamente.
 
 Sorgente di ionizzazione standard: **impatto elettronico (EI)**.
 
@@ -281,6 +281,8 @@ HILIC è complementare alla RP: insieme coprono un range di polarità molto più
 
 ## MS vs NMR: Confronto
 
+NMR valuta un assorbimento di energia da parte dei nuclei atomici, energia che viene successivamente rilasciata. Per ottenere una distinzion
+
 |Proprietà|MS|NMR|
 |---|---|---|
 |**Sensibilità**|Alta|Bassa (richiede campioni abbondanti)|
@@ -292,6 +294,7 @@ HILIC è complementare alla RP: insieme coprono un range di polarità molto più
 |**Campo magnetico richiesto**|No|Sì (intenso)|
 
 > La bassa sensibilità NMR deriva dalla piccola separazione energetica tra i livelli di spin nucleare, che aumenta solo con l'intensità del campo magnetico applicato.
+
 
 In genere si **combinano più tecniche** per ottenere alta sensibilità, identificazione e dati strutturali completi.
 
