@@ -274,8 +274,6 @@ HILIC è complementare alla RP: insieme coprono un range di polarità molto più
 
 ## MS vs NMR: Confronto
 
-La risonanza magnetica atomica valuta un assorbimento di energia da parte dei nuclei atomici, che viene rilasciata.
-
 |Proprietà|MS|NMR|
 |---|---|---|
 |**Sensibilità**|Alta|Bassa (richiede campioni abbondanti)|
@@ -352,38 +350,33 @@ Il **picco ideale** è:
 
 |Tipo|Descrizione|Affidabilità|
 |---|---|---|
-|**In-house**|Confronto con standard di metaboliti precedentemente analizzati in laboratorio|Massima|
+|**In-house**|Confronto con standard analizzati in laboratorio|Massima|
 |**Esterno (librerie pubbliche)**|Confronto con database pubblici; più comune per GC-MS, dove gli spettri EI sono altamente riproducibili|Alta (GC-MS), minore per LC-MS|
-Il match viene confermato dal confronto simulataneo di tR, m/z del precursore ed m/z dei frammenti. Cruciale è che la metodologia cromatografico sia la più simile possibile tra analisi del campione e generazione della libreria, per riproducibilità.
 
-**2. Standard-free / putative identification** (per metaboliti non noti)
+Il match viene confermato dal confronto simultaneo di **tR**, **m/z precursore** e **m/z frammenti**. È cruciale che la metodologia cromatografica sia la più simile possibile tra analisi del campione e generazione della libreria.
 
-Se non otteniamo un match (metabolita sconosciuto o non esiste uno standard commerciale), la **massa esatta** e il **pattern di frammentazione** rimangono gli strumenti principali per l'identificazione, anche quando si cambiano metodi cromatografici o di frammentazione, calcolando i valori di m/z attesi.
+**2. Standard-free / Putative Identification** (metabolita sconosciuto o senza standard commerciale)
 
-- **MS1 → formula molecolare (candidati), non struttura**
-- **MS2 → pattern di frammentazione**  
-    → ricostruiamo la struttura analizzando:
-    - frammenti (picchi)
-    - gap (perdite neutre: H₂O, CO₂, ecc.)
-- **Similarity searching**  
-    → cerchiamo pattern di frammentazione simili  
-    → indica **stesso scaffold chimico con modificazioni** (es. glicosilazione)
-- **In silico fragmentation prediction**  
-    → confronto con spettri teorici generati computazionalmente
-- **De novo elucidation**  
-    → integrazione con tecniche come **NMR**
+> La **massa esatta** e il **pattern di frammentazione** rimangono gli strumenti principali per l'identificazione, anche cambiando metodo cromatografico o di frammentazione.
 
-Nello standard-free spesso si sfruttano algoritmi di machine learning e banche dati esterne per definire la struttura molecolare del metabolita incognito a partire dai soli dati strumentali.
+| Strumento                   | Steo                           | Output                                                                                |
+| --------------------------- | ------------------------------ | ------------------------------------------------------------------------------------- |
+| **MS1**                     | Massa esatta                   | Formula molecolare (candidati), non struttura                                         |
+| **MS2**                     | Pattern di frammentazione      | Frammenti (picchi) + perdite neutre (gap: H₂O, CO₂, ecc.) → ricostruzione strutturale |
+| **Similarity searching**    | Confronto con librerie         | Pattern simile → stesso scaffold con modificazioni (es. glicosilazione)               |
+| **In silico fragmentation** | Spettri teorici computazionali | Confronto con predizioni                                                              |
+| **De novo elucidation**     | Integrazione NMR               | Per metaboliti totalmente nuovi                                                       |
 
+Spesso si integrano algoritmi di **machine learning** e banche dati esterne per definire la struttura molecolare a partire dai soli dati strumentali.
+
+---
 
 ### Considerazioni per il Confronto
 
-Per il confronto tra spettri è essenziale che la frammentazione sia riproducibile, quindi deve essere identico l'esperimento di frammentazione.
-
 **Variazioni in frammentazione MS/MS**
 
-- Energia di collisione e modalità di frammentazione possono variare tra strumenti → producono pattern di frammenti diversi
-- Il confronto richiede **stessa energia di frammentazione**, stessa metodica e durata simili
+- Energia di collisione e modalità di frammentazione possono variare tra strumenti → pattern di frammenti diversi
+- Il confronto richiede stessa energia di frammentazione, stessa metodica e durata simili
 
 **Addotti**
 
@@ -392,45 +385,56 @@ Per il confronto tra spettri è essenziale che la frammentazione sia riproducibi
 
 **Drift del tempo di ritenzione**
 
-- Colonne o strumenti diversi, o usura della colonna, causano variazioni di tR → rende difficile il confronto diretto con librerie esterne
+- Colonne diverse, usura della colonna o variazioni strumentali causano shift di tR → difficile il confronto diretto con librerie esterne
 
+---
 
 ### Deconvoluzione degli Addotti
 
-La sorgente MS può produrre vari addotti a partire dalla stessa molecola. La deconvoluzione mira a identificare queste forme derivanti da un unico analita per evitare di contarle come metaboliti distinti.
-Ad ogni tempo di ritenzione, si ricercano feature separate da differenze di massa dati dalle diverse forme adduttive.
+La sorgente MS può produrre vari addotti a partire dalla stessa molecola. La **deconvoluzione** mira a raggrupparli come forme derivanti da un unico analita, evitando di contarli come metaboliti distinti. Ad ogni tR, si ricercano feature separate da differenze di massa corrispondenti alle forme adduttive note.
+
+---
 
 ### Isotopologhi
-Gli isotopologhi sono problematici -> Sono molecole di struttura identica ma con distribuzione isotopica differente.
-La de-isotopizzazione è il processo di ricerca dei picchi corrispondenti a isotopologhi della stessa molecola.
-All'interno di ogni spettro, si ricercano masse separate da sostituzioni isotopiche conosciute
-La capacità di distinguere isotopologhi è fondamentale e viene sfruttata quando il sistema viene arricchito artificialmente con isotopi più pesanti (flussomica).
+
+Gli **isotopologhi** sono molecole di struttura identica ma con distribuzione isotopica differente. La **de-isotopizzazione** è il processo che identifica i picchi corrispondenti a isotopologhi della stessa molecola all'interno di ogni spettro, ricercando masse separate da sostituzioni isotopiche conosciute.
+
+> La capacità di distinguere isotopologhi è fondamentale ed è sfruttata attivamente nella flussonomica, quando il sistema viene arricchito artificialmente con isotopi pesanti. → [[Fluxonomica]]
+
+---
 
 ### Allineamento
-L'allineamento è necessario quando si confrontano più campioni. Anche tentando di mantenere costanti le condizioni cromatografiche, piccoli shift nei tempi di ritenzione si verificano inevitabilmente tra le iniezioni.
-L'allineamento corregge questi scostamenti, sincronizzando i picchi attraverso tutti i campioni in modo che la matrice di dati sia corretto.
+
+Quando si confrontano più campioni, piccoli shift nei tR si verificano inevitabilmente tra iniezioni successive, anche a condizioni cromatografiche costanti. L'**allineamento** corregge questi scostamenti, sincronizzando i picchi attraverso tutti i campioni in modo che la matrice di dati risultante sia coerente.
+
+---
 
 ### QA/QC
 
-Per garantire riproducibilità e accuratezza, è essenziale implementare diversi fattori di controllo:
-- Replicati -> Replicati tecnici dello stesso campione per valutare la variabilità strumentale e analitica
-- Randomizzare l'ordine dei campioni di analisi per evitare bias sistematici (Deriva strumentale, effetto carry-over) influenzino i risultati
-- QC -> Blanks -> fondamentali per valutare e sottrarre il background strumentale ed eventuale contaminazione
-	- Standard -> Iniezione periodica di standard a concentrazione nota per monitorare le prestazioni dello strumento
-- QA -> Ispezione manuale della qualità dei dati generati dal software, verificando forma dei picchi, stabilità della baseline e coerenza degli spettri di massa
+|Elemento|Scopo|
+|---|---|
+|**Replicati tecnici**|Valutare la variabilità strumentale e analitica|
+|**Randomizzazione dell'ordine**|Evitare bias sistematici (deriva strumentale, carry-over)|
+|**Blank**|Valutare e sottrarre il background strumentale e le contaminazioni|
+|**Standard a concentrazione nota**|Iniezione periodica per monitorare le prestazioni dello strumento nel tempo|
+|**Ispezione manuale (QA)**|Verifica forma dei picchi, stabilità della baseline, coerenza degli spettri di massa|
+
+---
+
 ### Normalizzazione
-Mira a ridurre variabilità biologica e analitica. Dipende da molti fattori -> metodologia comune di normalizzazione in campioni cellulari è la normalizzazione rispetto al contenuto proteico. Si quantifica il pellet proteico e la quantità di metaboliti ritrovata viene normalizzata rispetto alla quantità di proteina iniziale, fungendo da misura del volume cellulare o della biomassa 
-L'output finale è una tabella completa che riporta i parametri identificativi (Nome, tR, m/z
-Parent/Daughter) e le aree dei picchi normalizzate per tutti i campioni, pronta per l'analisi statistica.
+
+Mira a ridurre la variabilità biologica e analitica non biologicamente rilevante. Il metodo dipende dal tipo di campione; in campioni cellulari è comune la **normalizzazione al contenuto proteico**: si quantifica il pellet proteico e la quantità di metaboliti viene divisa per la quantità di proteina, che funge da proxy del volume cellulare o della biomassa.
+
+L'**output finale** è una tabella completa con parametri identificativi (nome, tR, m/z parent/daughter) e aree dei picchi normalizzate per tutti i campioni, pronta per l'analisi statistica.
 
 ---
 
 ## Quantificazione
 
-| Tipo         | Metodo                                                        | Output                                  |
-| ------------ | ------------------------------------------------------------- | --------------------------------------- |
-| **Relativa** | Solo area del picco, normalizzata per variabilità di carico   | Confronto dei livelli tra campioni      |
-| **Assoluta** | Curva di calibrazione con diluizioni seriali di standard puri | Concentrazione assoluta (molare, ng/mL) |
+|Tipo|Metodo|Output|
+|---|---|---|
+|**Relativa**|Area del picco, normalizzata per variabilità di carico|Confronto dei livelli tra campioni|
+|**Assoluta**|Curva di calibrazione con diluizioni seriali di standard puri|Concentrazione assoluta (molare, ng/mL)|
 
 ---
 
@@ -439,77 +443,10 @@ Parent/Daughter) e le aree dei picchi normalizzate per tutti i campioni, pronta 
 |Caso|Problema|Soluzione|
 |---|---|---|
 |**Isomeri**|Stesso m/z → indistinguibili per MS|Separazione cromatografica efficiente: spesso il tR differisce|
-|**Isobari**|Sostanze non correlate con m/z quasi identico → in MS/MS la frammentazione coinvolgerebbe entrambe simultaneamente|Separazione cromatografica: molecole diverse hanno quasi certamente tR diversi|
+|**Isobari**|m/z quasi identico → in MS/MS la frammentazione coinvolgerebbe entrambi simultaneamente|Separazione cromatografica: molecole diverse hanno quasi certamente tR diversi|
 
 ---
 
 ## Formati File
 
 I file raw degli strumenti sono spesso in formato **proprietario**. **ProteoWizard** (msConvert) converte tra formati proprietari e formati aperti (es. mzML, mzXML).
-
-
-# Fluxonomica
-
-Un approccio della metabolomica Targeted è la flussonomica, assistita da isotopi stabili.
-L'obiettivo principale della flussonomica non è misurare le quantità assolute ma misurare le velocità (i flussi) con cui i metaboliti si formano e si interconvertono
-- Monitoraggio -> Si monitora l'incorporazione di marcatori isotopici lungo un pathway metabolico specifico. In pratica si nutre il sistema con un substrato marcato e si osserva quanto rapidamente e in che misura l'isotopo viene trasferito ai metaboliti a valle
-
-Applicazioni -> Studi in vivo, studio delle alterazioni metaboliche (effetto warburg nei tumori), efficienza dei bioreattori nell'utilizzo del carbonio
-
-L'analisi dei dati di flussonomica è complessa:
-- Rilevazione MS o NMR, per distinguere la massa degli isotopologhi
-- Modello matematico metabolico che ipotizza le possibili risposte metaboliche del sistema
-L'integrazione di questi due elementi permette di mappare i flussi e di comprendere come il flusso di un determinato metabolita si ripartisce attraverso i pathway metabolici a valle, fornendo una visione dinamica della funzione cellulare
-
-Metaboliti chiave:
-- ATP
-- acetil-CoA
-- NAD+
-- S-AdenosilMetionina SAM
-Comprendere i livelli e i flussi di questi metaboliti permette di interpretare direttamente lo stato funzionale della cellula.
-
-Nella separazione cromatografica, i diversi isotopologhi hanno identico tempo di ritenzione nella colonna, perchè la massa del marcatore è troppo piccola per influenzare le proprietà chimico-fisiche della molecola.
-Tramite MS ad alta risoluzione possiamo distinguere i diversi isotopologhi mer masse molecolari differenti.
-
-I diversi componenti vengono chiamati M0, M1, M2, M3 ecc... in base al numero di isotopi marcati presenti. M0 = 0, M1 = +1 carbonio marcato, M2 = +2 carboni marcati
-Citrato M5 = citrato a 5 atomi di carbonio marcati.
-## Metabolomica Statica vs Dinamica
-
-La comprensione della relazione tra metabolismo e funzione biologica richiede più di una semplice misurazione della quantità di metaboliti
-
-La metabolomica classica fornisce una misura delle concentrazioni assolute dei metaboliti, misurata pero al netto di un equilibrio dinamico Formazione-Catabolismo. 
-È un apporccio statico, non fornisce alcune idea di quanto velocemente il metabolita venga consumato o formato, nè quale pathway sia preferibilmente attivo.
-
-Il tracing isotopico utilizza isotopi stabili non radioattivi (C-13, N-15, Deuterio), introducendo dinamicità nello studio metabolico:
-- Misura l'andamento del pathway per capire se una via è arricchita in una specifica condizione
-- Si introduce un substrato marcato e si monitora come l'isotopo viene incorporato nei metaboliti a valle, consentendo di capire come una perturbazione (knockout genico, sovraespressione, farmaco) influisce sul flussi metabolici
-Un flusso può essere attivo ad elevata concentrazione di metaboliti, ma misurandolo possiamo identificare lo stato funzionale del pathway -> forse la concentrazione di metaboliti elevata è dovuta al fatto che il flusso è bloccato in un determinato stadio, mentre nel normale il flusso è pienamente attivo
-
-Esempio: In S. cerevisiae, in assenza di glucosio, il PEP aumenta in concentrazione. L'aumento di PEP è dovuto all'attivazione di un flusso anaplerotico, che lo produce dall'ossalacetato tramite PEP-carbossichinasi, non dalla glicolisi
-
-## Tracing Principi
-- Fonte marcata -> Si fornisce alle cellule un substrato vitale (glucosio, glutammina) arricchito artificialmente al 100% con C13 o altro
-- U-13C6 -> Glucosio marcato su tutti e 6 i carboni, U sta per ubiquitaria
-- Il C13 viene incorporato nei metaboliti a valle di un pathway in modo direttamente proporzionale al flusso con cui quel pathway si attiva
-- Gli isotopomeri vengono distinti dalla MS in base all'aumento di peso molecolare
-L'analisi dei rapporti tra molecola non marcato e forme marcate ci fornisce informazioni quantitative sui flussi metabolici e sulla modificazione dell'utilizzo del metabolismo
-Il tracing è fondamentale per identificare flussi metabolici alternativi come reazioni anaplerotiche.
-Si possono usare varianti di marcatura posizionale per isolare e quantificare il flusso attraverso specifici pathway che si intersecano
-È cruciale non mescolare mai le fonti di carbonio marcate in un unico esperimento:
--  Necessità: La cellula non distingue tra C12 e C13, quindi il metabolismo avviene
-normalmente. Tuttavia, i ricercatori devono utilizzare i traccianti separatamente per poter
-attribuire univocamente la marcatura all'una o all'altra fonte.
- -  Protocollo: Su un identico numero di cellule, si eseguono tre esperimenti separati:
-	1. Glucosio e Glutammina non marcati (Controllo M0).
-	2. Glucosio marcato e Glutammina non marcata.
-	3. Glucosio non marcato e Glutammina marcata.
-Solo in questo modo, analizzando la massa finale (MS), si è in grado di tracciare e quantificare
-separatamente il contributo del metabolismo del glucosio da quello della glutammina.
-
-Il tracing è effettuabile anche in vivo oltre ache in vitro. L'uso di isotopi non radioattivi è abbastanza sicuro poichè non dovrebbe produrre effetti dannosi all'organismo.
-L'esaurimento delle risorse endogene viene effettuate mediante digiuno, mentre la somministrazione viene effettuata o tramite singola iniezione oppure a infusione costante. Si attende un tempo prestabilito prima della raccolta dei campioni.
-
-In vivo si osserva una anomalia rispetto all'in vitro -> La marcatura +1 è dominante, particolarmente per Citrato e Malato e altri del ciclo di Krebs.
-
-La CO2 marcata M+1 in vivo non lascia il sistema ma viene reincorporata nei metaboliti, partecipando alle vie anaplerotiche, come la PEP carbossichinasi, producendo metaboliti marcati +1. In vitro l'ambiente è spesso saturato con CO2 non marcata, che diluisce rapidamente la CO2 marcata endogena, rendendone trascurabile l'incorporazione.
-Quindi in vivo la CO2 marcata endogena è una reazione sostanziale e fondamentale nel contesto in vivo, ma invisibile in vitro.
