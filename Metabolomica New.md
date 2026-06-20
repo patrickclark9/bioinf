@@ -431,10 +431,10 @@ L'**output finale** è una tabella completa con parametri identificativi (nome, 
 
 ## Quantificazione
 
-|Tipo|Metodo|Output|
-|---|---|---|
-|**Relativa**|Area del picco, normalizzata per variabilità di carico|Confronto dei livelli tra campioni|
-|**Assoluta**|Curva di calibrazione con diluizioni seriali di standard puri|Concentrazione assoluta (molare, ng/mL)|
+| Tipo         | Metodo                                                        | Output                                  |
+| ------------ | ------------------------------------------------------------- | --------------------------------------- |
+| **Relativa** | Area del picco, normalizzata per variabilità di carico        | Confronto dei livelli tra campioni      |
+| **Assoluta** | Curva di calibrazione con diluizioni seriali di standard puri | Concentrazione assoluta (molare, ng/mL) |
 
 ---
 
