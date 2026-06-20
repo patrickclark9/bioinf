@@ -385,7 +385,7 @@ Spesso si integrano algoritmi di **machine learning** e banche dati esterne per 
 
 **Drift del tempo di ritenzione**
 
-- Colonne diverse, usura della colonna o variazioni strumentali causano shift di tR → difficile il confronto diretto con librerie esterne
+- Colonne diverse, usura della colonna o variazioni strumentali causano shift di tR → difficile il confronto diretto con librerie esterne. Va dato un margine
 
 ---
 
