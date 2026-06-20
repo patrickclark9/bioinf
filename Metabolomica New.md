@@ -399,7 +399,7 @@ La sorgente MS può produrre vari addotti a partire dalla stessa molecola. La **
 
 Gli **isotopologhi** sono molecole di struttura identica ma con distribuzione isotopica differente. La **de-isotopizzazione** è il processo che identifica i picchi corrispondenti a isotopologhi della stessa molecola all'interno di ogni spettro, ricercando masse separate da sostituzioni isotopiche conosciute.
 
-> La capacità di distinguere isotopologhi è fondamentale ed è sfruttata attivamente nella flussonomica, quando il sistema viene arricchito artificialmente con isotopi pesanti. → [[Fluxonomica]]
+> La capacità di distinguere isotopologhi è fondamentale ed è sfruttata attivamente nella flussonomica, quando il sistema viene arricchito artificialmente con isotopi pesanti. → [[Fluxonomics - New]]
 
 ---
 

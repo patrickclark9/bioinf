@@ -17,7 +17,7 @@ Un approccio targeted della metabolomica. → [[Metabolomica New]]
 
 > Una concentrazione elevata di un metabolita può significare che il flusso è **bloccato a valle**, non che sia aumentata la produzione. Solo il tracing isotopico permette di distinguere i due scenari.
 
-**Esempio:** In _S. cerevisiae_ in assenza di glucosio, il PEP aumenta in concentrazione. Il tracing rivela che l'aumento è dovuto all'attivazione di un **flusso anaplerotico** (PEP-carbossichinasi dall'ossalacetato), non dalla glicolisi.
+**Esempio:** In _S. cerevisiae_ in assenza di glucosio, il PEP aumenta in concentrazione. Il tracing rivela che l'aumento è dovuto all'attivazione di un **flusso anaplerotico** (PEP-carbossichinasi dall'ossalacetato), non dalla glicolisi, ma dalla gluconeogenesi.
 
 ---
 
@@ -50,6 +50,9 @@ I metaboliti marcati vengono denominati in base al **numero di atomi pesanti inc
 Gli isotopologhi di uno stesso metabolita hanno **identico tempo di ritenzione (tR)** in cromatografia: la massa aggiuntiva del marcatore è troppo piccola per influenzare le proprietà chimico-fisiche della molecola.
 
 La distinzione avviene **esclusivamente per MS ad alta risoluzione**, che rileva la differenza di massa tra M0, M+1, M+2, ecc.
+
+L'area sottesa al picco di ciascun isotopologo marcato (M+x) viene misurata e rapportata all'area totale del metabolita (somma di tutte le forme isotopiche), fornendo così la percentuale di marcatura, e di conseguenza, la misura del flusso metabolico in quel tessuto specifico
+
 
 ---
 
