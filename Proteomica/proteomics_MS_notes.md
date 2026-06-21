@@ -440,3 +440,62 @@ Replaces gel separation with solution-phase digestion + LC fractionation + MS/MS
 9. **ICAT selects Cys-containing peptides** — simplifies mixture but misses Cys-free proteins.
 
 10. **Gel-free approaches** have largely superseded 2D-PAGE + MALDI for deep proteome coverage and quantification, while 2D-PAGE remains useful for visual comparison and preparative work.
+
+
+**Shotgun proteomics** and **Peptide Mass Fingerprinting (PMF)** are both mass-spectrometry-based approaches for protein identification, but they differ substantially in workflow, information content, and applications.
+
+| Feature                          | Shotgun Proteomics                                                                 | Peptide Mass Fingerprinting (PMF)                                                                |
+| -------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Basic principle                  | Identifies proteins from peptide **mass and sequence information** (MS/MS spectra) | Identifies proteins by matching a set of **peptide masses** to theoretical digests in a database |
+| Mass spectrometry                | Usually uses **tandem MS (MS/MS)**                                                 | Often relies mainly on **MS peptide mass measurements** (e.g., MALDI-TOF)                        |
+| Sample type                      | Complex mixtures containing many proteins                                          | Typically a single purified protein or a protein spot from a gel                                 |
+| Digestion                        | Proteins are enzymatically digested (commonly trypsin)                             | Same                                                                                             |
+| Identification method            | Database search using peptide fragmentation spectra                                | Database search using peptide mass patterns only                                                 |
+| Sensitivity                      | High                                                                               | Lower                                                                                            |
+| Throughput                       | Very high; can identify thousands of proteins                                      | Relatively low                                                                                   |
+| Quantification                   | Often possible (label-free, TMT, SILAC, etc.)                                      | Generally not used for quantification                                                            |
+| Post-translational modifications | Can often be localized and characterized                                           | Difficult to identify confidently                                                                |
+| Best use                         | Global proteome analysis                                                           | Rapid identification of relatively pure proteins                                                 |
+
+### How PMF works
+
+1. Isolate a protein (often from a 2D gel spot).
+    
+2. Digest it with trypsin.
+    
+3. Measure the masses of the resulting peptides.
+    
+4. Compare the observed peptide mass pattern ("fingerprint") to theoretical digests of proteins in a database.
+    
+5. The best-matching protein is reported.
+    
+
+The key limitation is that different proteins can produce similar peptide mass patterns, especially in complex samples.
+
+### How shotgun proteomics works
+
+1. Digest an entire protein mixture into peptides.
+    
+2. Separate peptides by liquid chromatography (LC).
+    
+3. Analyze peptides by tandem mass spectrometry (LC-MS/MS).
+    
+4. Fragment selected peptides and record MS/MS spectra.
+    
+5. Use database-search algorithms to identify peptide sequences and infer proteins.
+    
+
+Because fragmentation provides sequence information, shotgun proteomics can distinguish proteins much more accurately and analyze highly complex samples.
+
+### Example
+
+Suppose a sample contains 2,000 proteins:
+
+- **PMF** would generally struggle because peptide masses from many proteins overlap.
+    
+- **Shotgun proteomics** can separate and sequence peptides, allowing identification of hundreds to thousands of proteins in a single experiment.
+    
+
+### In one sentence
+
+**PMF identifies proteins from a peptide mass pattern alone, whereas shotgun proteomics identifies proteins by sequencing peptides through MS/MS, making it far more powerful for complex proteome-wide analyses.**

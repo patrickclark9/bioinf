@@ -59,11 +59,11 @@ Campione proteico
 
 ### 4.2 Esempio Quantitativo
 
-| Parametro | Valore |
-|---|---|
-| Numero di proteine | 5.000 |
-| Frammenti peptidici attesi | ~40.000 |
-| Peso molecolare medio | 30 kDa |
+| Parametro                          | Valore             |
+| ---------------------------------- | ------------------ |
+| Numero di proteine                 | 5.000              |
+| Frammenti peptidici attesi         | ~40.000            |
+| Peso molecolare medio              | 30 kDa             |
 | Quantità minima per sequenziamento | 15 fmol / proteina |
 
 **Caso ideale** (abbondanza uniforme):
@@ -84,24 +84,24 @@ $$2.25\ \mu g \times 10^5 = \mathbf{225\ mg\ \text{di proteina totale}}$$
 
 ### 5.1 Pre-digestione (a livello di proteina)
 
-Si riduce la complessità prima della digestione, lavorando sulla proteina intatta.
+Si riduce la complessità prima della digestione, lavorando sulla proteina intatta. È l'approccio utilizzato mediante 2D PAGE.
 
-| Metodo | Note |
-|---|---|
-| **Isolamento di organelli** | Mitocondri, nucleo, membrana plasmatica |
-| **Frazionamento per solubilità** | Frazione di membrana vs. frazione solubile |
-| **Separazione cromatografica** | Scambio cationico / anionico |
-| **Separazione elettroforetica** | 1D-SDS-PAGE · 2D-PAGE (pI + MW) |
-| **Affinity chromatography** | Arricchimento per tag, leganti specifici o PTM |
+| Metodo                           | Note                                           |
+| -------------------------------- | ---------------------------------------------- |
+| **Isolamento di organelli**      | Mitocondri, nucleo, membrana plasmatica        |
+| **Frazionamento per solubilità** | Frazione di membrana vs. frazione solubile     |
+| **Separazione cromatografica**   | Scambio cationico / anionico                   |
+| **Separazione elettroforetica**  | 1D-SDS-PAGE · 2D-PAGE (pI + MW)                |
+| **Affinity chromatography**      | Arricchimento per tag, leganti specifici o PTM |
 
 ![[Pasted image 20260616201219.png]]
 ### 5.2 Post-digestione (a livello di peptide)
 
 Si riduce la complessità dopo la digestione triptica.
 
-| Metodo | Note |
-|---|---|
-| **RP-HPLC** | Step finale prima dell'ingresso nello spettrometro |
+| Metodo                | Note                                                                             |
+| --------------------- | -------------------------------------------------------------------------------- |
+| **RP-HPLC**           | Step finale prima dell'ingresso nello spettrometro                               |
 | **MudPIT** (SCX → RP) | Due colonne ortogonali in serie; aumenta drasticamente la copertura del proteoma |
 ![[Pasted image 20260616201207.png]]
 
@@ -259,6 +259,7 @@ Le variazioni tra gel compromettono la riproducibilità e l'accuratezza della qu
 - Inaccuratezza nella quantificazione
 
 
+![[Pasted image 20260621171901.png]]
 
 ---
 
@@ -341,26 +342,30 @@ Il workflow di analisi dell'immagine in DiGE si svolge in quattro fasi sequenzia
 
 ![[Pasted image 20260617093909.png]]
 
+La separazione DiGE in gel separa proteine intatte, e attraverso la spot quantification possiamo dedurre che una data proteina, identificata solo per punto isoelettrico e peso molecolare, varia tra i due possibili campioni.
+Per l'identificazione serve comunque MS. Si passa quindi alla digestione triptica spot-by-spot
+
 ---
 
-## 4. Gel-Free Proteomics -> Shotgun
+## 4. Gel-Free (Shotgun) Proteomics
 
 ### 4.1 Motivazione: Limiti dell'Approccio Gel-Based
 
-| Limite | Dettaglio |
-|---|---|
-| Variabilità biologica | Dipende dalla natura del campione |
-| Variabilità tecnica | Legata all'esecuzione della 2D-PAGE |
-| Scala | Difficile gestire proteomi di grande complessità |
-| Macromolecole | La cromatografia moderna fatica con proteine intatte |
+| Limite                | Dettaglio                                            |
+| --------------------- | ---------------------------------------------------- |
+| Variabilità biologica | Dipende dalla natura del campione                    |
+| Variabilità tecnica   | Legata all'esecuzione della 2D-PAGE                  |
+| Scala                 | Difficile gestire proteomi di grande complessità     |
+| Macromolecole         | La cromatografia moderna fatica con proteine intatte |
 
 Gli approcci **Gel-Free** combinano labelling isotopico, tecniche cromatografiche e spettrometria di massa per l'identificazione e quantificazione su larga scala.
 
 ---
 
-### 4.2 Approccio Bottom-Up: Digestione Triptica
+### 4.2 Approccio Gel Free
 
-La 2D-PAGE analizza **proteine intatte**. Nell'approccio Bottom-Up, invece, le proteine vengono **digerite enzimaticamente** prima della separazione.
+La 2D-PAGE separa **proteine intatte**. In approcci gel-free la digestione triptica avviene prima, ovvero in soluzione, e la separazione avviene mediante LC.
+
 
 ```
 Proteoma complesso
@@ -504,7 +509,7 @@ $$\boxed{t = \frac{d}{\sqrt{2U}}\sqrt{\frac{m}{q}}}$$
 
 Invertendo per ottenere la massa:
 
-$$m = \frac{2qU}{d^2},t^2$$
+$$m = \frac{2qU}{d^2}t^2$$
 
 Il tempo di volo è dunque una misura diretta di $\sqrt{m/q}$ — da $t$ misurato si risale a $m/z$.
 
