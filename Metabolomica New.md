@@ -175,17 +175,16 @@ In metabolomica occorre distinguere due fonti di variabilità:
 Campione biologico
        │
        ▼
-   Quenching  ──────────────────────────────────────────────────────┐
-  (blocco attività enzimatica)                                       │
-       │                                                             │
-       ▼                                                             │
-Rimozione proteine                                        Metodi di quenching:
-  (centrifugazione)                                        - Congelamento ultrarapido (N₂ liquido)
-       │                                                     → polverizzazione meccanica
-       ▼                                                   - Solventi organici freddi (es. MeOH)
-Estrazione selettiva                                         → denaturazione proteica + lisi
-  (frazionamento per polarità)                             - Acidi / buffer specifici
-       │                                                     (es. acido perclorico)
+   Quenching 
+  (blocco attività enzimatica)                                       
+       │                                                             
+       ▼                                                             
+Rimozione proteine                                       
+
+       │                                                   
+       ▼                                                    
+Estrazione selettiva                                                                 
+       │                                                     
        ▼
 Separazione cromatografica (LC o GC)
        │
