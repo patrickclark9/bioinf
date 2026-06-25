@@ -29,7 +29,7 @@ Il metabolismo è centrale nella regolazione epigenetica. Fenotipo e Genotipo so
 Ad esempio, la S-adenosilmetionina SAM è uno dei principali donatori di metile per la metilazione del DNA.
 
 ## Problema
-Il numero di metaboliti in un organismo ecede di gran lunga quello delle proteine e dei geni.
+Il numero di metaboliti in un organismo eccede di gran lunga quello delle proteine e dei geni.
 I metaboliti possono essere endogeni -> prodotti ciclicamente da anabolismo e catabolismo
 Possono derivare dalla dieta/farmaci o altro.
 Sono tanti >200.000, ed eterogenei (3.000 classi chimiche diverse).
