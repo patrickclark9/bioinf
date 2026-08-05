@@ -18,3 +18,5 @@ Hanno forza variabile (16-60kJ/mol-1).
 Sono più deboli dei legami salini ma più forti delle van der Waals. Ha luogo tra un idrogeno già impegato in un legame con un altro atomo ed un eteroatomo ricco di elettroni (N o O). Il donatore è l'idrogeno, l'accettore è l'eteroatomo.
 
 È una interazione tra oritali ed è direzionale. L'orientamento ottimale è dove il punto di legame X-H punta direttamente al lone-pair su Y tale che l'angolo tra X H ed Y è 180 gradi (ma può essere tra 130 e 180 gradi)
+
+Buoni accettori: Ioni carbossilati, fosfato, ammine terziarie
