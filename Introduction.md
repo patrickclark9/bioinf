@@ -28,5 +28,11 @@ Buoni donatori: Ioni aminio HNR_3+
 
 ### Interazioni di Van der Waals
 
-Sono interazioni deboli. Avvengono tra regioni idrofobiche tra il farmaco ed il target.
-Regioni transienti di densità elevat
+Sono interazioni deboli 2-4kJ/mol-1. Avvengono tra regioni idrofobiche tra il farmaco ed il target.
+Regioni transienti di densità elevata e bassa di elettroni causano la presenza di dipoli temporanei.
+Il farmaco deve essere molto vicino alla regione di binding perchè avvenga l'interazione. L'interazione diventa debole rapidamente con la distanza.
+Il contributo complessivo delle interazioni di Van der Waals è cruciale per il binding.
+
+#### Interazioni dipolo-dipolo
+
+Avviene solo se il farmaco ed il sito di binding ha momenti dipolari permanenti. I dipoli si allineano l'uno con l'altro quando il farmaco entra nel sito di legame.
