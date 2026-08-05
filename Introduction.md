@@ -1,5 +1,7 @@
 
 # Introduzione
+
+Il target di farmaci sono nella maggioranza dei casi macromolecole.
 ## Forze di Interazione Molecola-Target Intermolecolari
 
 ### Legami Ionici-Salini-Elettrostatici
@@ -20,3 +22,11 @@ Sono più deboli dei legami salini ma più forti delle van der Waals. Ha luogo t
 È una interazione tra oritali ed è direzionale. L'orientamento ottimale è dove il punto di legame X-H punta direttamente al lone-pair su Y tale che l'angolo tra X H ed Y è 180 gradi (ma può essere tra 130 e 180 gradi)
 
 Buoni accettori: Ioni carbossilati, fosfato, ammine terziarie
+Moderati accettori: Acidi carbossilici, ammide ossigenate, chetoni, esteri, eteri e alcoli
+Bassi accettori: Zolfo, fluoro, cloro, anelli aromatici, ammide azotate, ammine aromatiche
+Buoni donatori: Ioni aminio HNR_3+
+
+### Interazioni di Van der Waals
+
+Sono interazioni deboli. Avvengono tra regioni idrofobiche tra il farmaco ed il target.
+Regioni transienti di densità elevat
