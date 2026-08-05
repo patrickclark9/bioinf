@@ -40,4 +40,18 @@ L'allineamento del dipolo orienta la molecola nel sito di legame. L'orientamento
 La forza delle interazione decresce con la distanza più rapidamente rispetto a interazioni elettrostatiche, ma meno rapidamente rispetto a interazioni di Van der Waals.
 
 #### Interazioni Ioni-Dipolo
-Avvengono quando la carica su una mm
+Avvengono quando la carica su una molecola interagisce con il momento dipolare di un'altra.
+Più forte delle interazioni dipolo-dipolo.
+La forza dell'interazione decresce meno rapidamente con la distanza rispetto ad una interazione dipolo-dipolo
+
+#### Interazioni a Dipolo indotto
+Avvengono quando la carica su una molecola induce un dipolo su un'altra.
+Avvengono tra ioni ammonio quaternari e anello aromatico. L'acetilcolina froma questa interazione con il suo sito di legame.
+
+## Desolvatazione
+
+Le regioni polari di un farmaco ed il suo target solo solvatate prima dell'interazione. La desolvatazione per permettere il legame molecola-molecola richiede energia, ed il guadagno in termini di stabilità (energia di stabilizzazione) deve essere maggiore dell'energia richiesta per la desolvatazione. Una soluzione è la rimozione di gruppi polari, ma si incorre in problemi di solubilità se ne vengono rimossi troppi.
+
+## Interazioni Idrofobiche
+
+Sono interazioni particolarmente importanti, aumentano significativamente l'energia di legame.
