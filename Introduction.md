@@ -36,3 +36,8 @@ Il contributo complessivo delle interazioni di Van der Waals è cruciale per il 
 #### Interazioni dipolo-dipolo
 
 Avviene solo se il farmaco ed il sito di binding ha momenti dipolari permanenti. I dipoli si allineano l'uno con l'altro quando il farmaco entra nel sito di legame.
+L'allineamento del dipolo orienta la molecola nel sito di legame. L'orientamento è beneficiale se altri gruppi di binding sono posizionati correttamente rispetto alle rispettive regioni di binding.
+La forza delle interazione decresce con la distanza più rapidamente rispetto a interazioni elettrostatiche, ma meno rapidamente rispetto a interazioni di Van der Waals.
+
+#### Interazioni Ioni-Dipolo
+Avvengono quando la carica su una mm
