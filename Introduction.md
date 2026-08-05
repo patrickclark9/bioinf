@@ -55,3 +55,4 @@ Le regioni polari di un farmaco ed il suo target solo solvatate prima dell'inter
 ## Interazioni Idrofobiche
 
 Sono interazioni particolarmente importanti, aumentano significativamente l'energia di legame.
+Le molecole d'acqua formano uno strato di solvatazione attorno alle regioni idrofobiche molto ordinato -> entropia negativa. L'interazione tra regioni idrofobiche delle due molecole causa una riduzione dello strato di solvatazione, liberando le molecole d'acqua dal proprio reticolo ordinato, risultando in un aumento entropico.
