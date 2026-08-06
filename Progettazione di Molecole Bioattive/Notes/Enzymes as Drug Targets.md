@@ -14,4 +14,23 @@ Spesso simili in struttura al substrato.
 ## Allosterico
 Gli inibitori allosterici si legano su siti diversi dal sito di legame, detti allosterici. Questo legame provoca un cambiamento conformazionale nell'enzima che altera e distorce il sito attivo, che non è più riconosciuto dal substrato.
 Incrementare la concentrazione del substrato non reverte l'inibizione. Il meccanismo è detto **incompetitivo**. Uncompetitive inhibition is ==a type of enzyme regulation where an inhibitor binds only to the already formed enzyme-substrate (ES) complex, rather than to the free enzyme==. This action decreases both the maximum reaction velocity ($V_{max}$) and the Michaelis constant $(K_{m})$, and cannot be overcome by adding more substrate.
+A basse concentrazioni di substrato è poco efficace, dato che lega il complesso ES.
 
+Gli inibitori allosterici possono mostrare comportamento sia non-competitivo sia incompetitivo, dipende da quando si legano al substrato.
+
+**Qualsiasi inibitore che non lega il sito attivo è di natura allosterico**
+**Il meccanismo di inibizione (non-competitivo, incompetitivo) dipende dal meccanismo dell'inibitore, se lega complesso ES oppure no**.
+
+## Inibitori dello stato di transizione
+
+Questi mimano lo stato di transizione di una reazione catalizzata da enzimi.
+Lo stato di transizione non è una specie chimica definita, è uno stato ad elevata energia, non corrispondente necessariamente ad un intermedio di reazione. DI conseguenza, non è sintetizzabile o isolabile.
+
+Si possono creare però farmaci in grado di mimare lo stato di transizione del substrato, invece che il substrato stesso o il prodotto.
+
+![[Pasted image 20260806180240.png]]![[Pasted image 20260806180250.png]]
+
+
+## Substrati suicidi
+
+I substrati suicidi sono agenti che si convertono in inibitori irreversibili per una reazione cata
