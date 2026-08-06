@@ -80,6 +80,8 @@ Tipici ligandi sono:
 - Ca2+
 
 ### Tipi di recettori
+La rhodopsina è un recettore visivo, ma molti recettori appartengono alla stessa famiglia evolutiva. Essendo una proteina di membrana, la sua cristallizzazione è complessa, di conseguenza è stata cristallizzata la batteriorhodopsina, ed è stata usata come template per ricostruire la struttura del recettore in altre specie.
+Recentemente è stata cristallizzata la struttura della rhodopsina bovina e del recettore $\beta_2$ adrenergico, template più accurati per il design di farmaci.
 ![[Pasted image 20260806091021.png]]showing how different G-Protein Coupled Receptors evolved from a common ancestor.
 
 - The tree branches out into major receptor categories, such as Endothelins, Tachkinins, Monoamines, and Opsins/Rhodopsins.
@@ -93,5 +95,7 @@ I tipi di recettori e i sottotipi non sono equamente distribuiti tra i tesuti. L
 - Cuore (muscolo) -> $\beta_1$ adrenergic
 - Muscolo bronchiale -> $\alpha_1$ e $\beta_2$ adrenergic
 - Tratto gastrointestinale -> $\alpha_1 \alpha_2$ e $\beta_2$ adrenergic
-- Adiposo -> $\beta_3$
+- Adiposo -> $\beta_3$ adrenergic
+
+
 
