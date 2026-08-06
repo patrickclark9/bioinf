@@ -137,4 +137,11 @@ Gli agonisti devono avere i corretti gruppi di binding, correttamente posizionat
 Il ligando deve possedere la forma corretta per il sito di binding.
 Il razionale è che se è conosciuta la natura chimica del messaggero, e si possono identificare i gruppi funzionali, si formano importanti interazioni con il sito di binding, e poi è possibile predire ragionevolmente quale serie di molecole interagisce alla stessa maniera del messaggero.
 
-Cruciale è identificare i gruppi funzionali in grado di effettuare le medesime interazioni. Spesso richiedono lo stesso numero di interazioni
+Cruciale è identificare i gruppi funzionali in grado di effettuare le medesime interazioni. Spesso richiedono lo stesso numero di interazioni.
+I gruppi devono essere posizionati cosicchè possono interagire con regioni complementari di binding contemporaneamente.
+
+Enantiomeri hanno nella maggior parte dei casi proprietà biologiche differenti.
+
+Le dimensioni dell'agonista devono essere corrette, la forma deve riempire il sito di binding.
+I gruppi che prevengono l'accesso sono chiamati scudi sterici o blocchi sterici.
+Alcuni agonisti possono presentare differenze strutturali rispetto al messaggero naturale. Questi agonisti possono però possedere gruppi di legame per altre regioni di binding, andando a compensare la perdita di interazioni chiave con nuove interazioni in differenti regioni di binding.
