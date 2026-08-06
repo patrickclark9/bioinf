@@ -191,6 +191,22 @@ I recettori sono in equilibrio tra costituzionalmente attivi e inattivi
 Esposizione duratura ad agonist/antagonisti desentitizza o sensitizza il recettore.
 I recettori esposti a lungo ad agonisti diventano desentitizzati, portando alla fosforilazione del recettore, il quale si disattiva.
 La defosforilazione avviene dopo che l'agonista lascia il recettore. La fosforilazione provoca un cambiamento conformazionale che inibisce l'agonista.
+Questo causa una temporanea perdita di funzione o riduzione nel numero di recettori. Può essere omologa (specifica per il recettore) o eterologa (estesa ad altri recettori).
+La cellula risponde meno al segnale, aumentando la tolleranza.
 
 Equivalentemente, esposizione prolungata ad un antagonista causa la sensitizzazione, in cui la cellula inizia a sintetizzare più recettori per compensare, rendendosi più sensibili al messaggero naturale. Può causare tolleranza e dipendenza, richiedendo dosi sempre più elevate di antagonista per ottenere lo stesso effetto. 
 Privando la cellula del farmaco, la cellula rimane ipersensibile al normale neurotrasmettitore, provocando crisi di astinenza. È la causa principale delle dipendenze.
+
+# Affinità Efficacia e Potenza
+Affinità misura quanto forte è il legame tra ligando-recettore
+Efficacia misura l'effetto biologico massimo dopo il legame al recettore
+Potenza misura la quantità di ligando necessaria per raggiungere un dato effetto
+
+## Radioligand Labelling
+Si marcano i ligandi a radioattività. Una volta raggiunto equilibrio, si raccoglie il ligando non legato al recettore. Il binding è misurabile andando a rilevare la traccia radioattiva presente nelle cellule o nel tessuto e quella raccolta dal ligando non legato (\[LR] ed \[L])
+$$\frac{[\text{bound ligand}]}{\text{[free ligand]}} = \frac{[LR]}{[L]} = \frac{[R_{tot}]-[LR]}{K_d}$$
+con $$K_d = \frac{[L][R]}{[LR]}$$
+Per determinare Rtot si fanno più esperimenti con concentrazioni note di radioligando.
+![[Pasted image 20260806160322.png]]IC50 = Concentrazione inibitoria al 50% del ligando legato
+![[Pasted image 20260806160448.png]]
+La Ki o costante di affinità/inibitoria è pari all'IC50 se 
