@@ -98,4 +98,11 @@ I tipi di recettori e i sottotipi non sono equamente distribuiti tra i tesuti. L
 - Adiposo -> $\beta_3$ adrenergic
 
 
+## Kinase Linked
 
+I recettori kinase-linked sono recettori bifunzionali recettore/enzima, attivati spesso da ormoni.
+In generale è un sistema integrato recettore+enzima, dove il recettore si lega al messaggero portando ad un induced fit.
+Il cambiamento conformazionale provoca l'apertura del sito attivo intracellulare, catalizzando una reazione all'interno della cellula
+
+### Recettori tirosina-chinasi
+![[Pasted image 20260806093341.png]]![[Pasted image 20260806093350.png]]![[Pasted image 20260806093407.png]]
