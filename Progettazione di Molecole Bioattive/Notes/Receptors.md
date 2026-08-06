@@ -121,3 +121,14 @@ Gli ormoni steroidei sono molecole lipofiliche, e tutte eccetto il calcitriolo h
 ![[Pasted image 20260806094459.png]]![[Pasted image 20260806094510.png]]Gli ormoni steroide e tiroidei, spesso legati a proteine plasmatiche, hanno tempo di vita abbastanza elevato (ore).
 Ormoni peptidici e catecolammine sono solubili e trasportati disciolti nel plasma. Hanno tempo di vita basso
 ![[Pasted image 20260806094734.png]]![[Pasted image 20260806094704.png]]![[Pasted image 20260806094900.png]]
+
+## Ligand Design
+
+Gli agonisti vogliono mimare il messaggero naturale. Dovrebbero legarsi e slegarsi rapidamente, il numero di interazioni è importante.
+
+Gli antagonisti invece dovrebbero bloccare il messaggero naturale, quindi vogliono forze di legame più forti e tendono ad avere più interazioni, risultando in cambiamenti conformazionali differenti affinchè il recettore non si attivi.
+
+### Design Of Agonists
+
+Gli agonisti quindi mimano il messaggero naturale, legano reversibilmente il sito di legame e producono il medesimo cambiamento conformazionale del messaggero naturale.
+Formano legami intermolecolari simili al messaggero naturale. 
