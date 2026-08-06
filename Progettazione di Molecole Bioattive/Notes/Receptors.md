@@ -208,5 +208,12 @@ $$\frac{[\text{bound ligand}]}{\text{[free ligand]}} = \frac{[LR]}{[L]} = \frac{
 con $$K_d = \frac{[L][R]}{[LR]}$$
 Per determinare Rtot si fanno più esperimenti con concentrazioni note di radioligando.
 ![[Pasted image 20260806160322.png]]IC50 = Concentrazione inibitoria al 50% del ligando legato
-![[Pasted image 20260806160448.png]]
-La Ki o costante di affinità/inibitoria è pari all'IC50 se 
+Curva di spiazzamento o inibizione![[Pasted image 20260806160448.png]]
+La Ki o costante di affinità/inibitoria è pari all'IC50 se sono coinvolte interazioni non competitive.
+Per ligandi competitivi l'affinità dipende dal livello di radioligando presente:
+$$K_i = \frac{IC_{50}}{1+\frac{[L_{tot}]}{K_d}}$$
+Dove Kd è la costante di dissociazione del radioligando ed Ltot è la concentrazione del radioligando utilizzata nell'esperimento.
+
+EC50 = Effettiva concentrazione al 50%. Più basso l'EC50 più potente è il farmaco
+![[Pasted image 20260806160811.png]]
+Analisi di Schild:![[Pasted image 20260806160919.png]]![[Pasted image 20260806160938.png]]
