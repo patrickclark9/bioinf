@@ -31,3 +31,17 @@ Ovviamente l'interazione deve essere abbastanza forte da trattenere il ligando a
 Se il ligando non viene rilasciato -> Antagonisti, bloccano il sito di binding
 ![[Pasted image 20260806083142.png]]
 ![[Pasted image 20260806083128.png]]
+
+## Tipi di recettori
+**Canali Ionici** -> ms response time
+**G-protein coupled** -> s response time
+**Kinase-linked** -> minutes response time
+**Intracellular** -> hours response time
+
+
+## Ion Channel
+
+In un canale ionico, la proteina recettrice è parte di un canale ionico, formando con esso un complesso.
+Il recettore lega un messaggero, causando un cambiamento conformazionale ed un induced fit, provocando quindi apertura o chiusura del canale ionico.
+I canali sono specifici per determinati tipi di ioni, i quali fluiscono attraverso questo canale per attraversare la membrana per gradiente di concentrazione.
+Possono polarizzare o depolarizzare membrane nervose o attivare/disattivare reazioni catalizzate da enzimi all'interno della cellula.
