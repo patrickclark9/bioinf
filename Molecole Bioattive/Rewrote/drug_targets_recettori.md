@@ -86,15 +86,25 @@ L'interazione deve essere:
 - Cascata tipica: lo split della proteina G attiva un enzima di membrana; il legame della proteina G a un sito allosterico sull'enzima ne provoca il cambiamento conformazionale e l'attivazione.
 
 ![[Pasted image 20260806085636.png]]
+La proteina G nello stato di riposo si trova sotto forma di trimeto $\alpha\beta\gamma$ con GDP legato al sito specifico su subunità $\alpha$.
+Il cambiamento conformazionale indotto dal legame di un agonista coinvolge il dominio citoplasmatico del recettore, con elevata affinità per il trimero.
+L'associazione provoca il rilascio del GDP e la sua sostituzione con GTP, sostituzione che provoca la dissociazione del trimero in $\alpha$-GTP e $\beta\gamma$, che sono le forme attive della proteina G, che si diffondono nella membrana e legano canali ionici o enzimi, provocandone attivazione/inattivazione. Il processo termina con idrolisi del GTP a GDP nella subunità $\alpha$, che possiede attività GTP-asica. Questa quindi si dissocia dall'effettore e si ricongiunge alla subunità $\beta\gamma$, terminando il ciclo. La regolazione dell'azione GTP-asica da parte dell'effettore implica che l'attivazione di quest'ultimo tende ad essere autolimitante.
+Questo meccanismo porta ad un'amplificazione del segnale, in quanto un singolo complesso agonista-recettore può attivare parecchie proteine G per volta, ognuna associata con l'enzima effettore per tempi sufficienti alla formazione di molecole di prodotto. Tipicamente è un secondo messaggero, per cui si verifica una seconda amplificazione prima che sia evidente la rispsota cellullare finale.
+Ci sono _differenze molecolari_ tra le varie proteine G: queste differenze danno origine a tre principali classi di proteine ( **G s ![{\displaystyle G_{s}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2cae10c18b60e8086af35b09bf4539346df236b8)** , **G i ![{\displaystyle G_{i}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0dd9fe8d455762608cc4e0a946b452492790ee5f) ** e **G q ![{\displaystyle G_{q}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/aa833656caf1493595e18fd39600427f4505f9f5)** ), che sono selettive sia per i recettori sia per gli effettori con i quali si accoppiano. Le proteine G s ![{\displaystyle G_{s}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/2cae10c18b60e8086af35b09bf4539346df236b8) e G i ![{\displaystyle G_{i}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/0dd9fe8d455762608cc4e0a946b452492790ee5f) promuovono rispettivamente la stimolazione e l'inibizione dell'enzima **[adenil ciclasi](https://it.wikipedia.org/wiki/Adenil_ciclasi "Adenil ciclasi")**, e un simile controllo bidirezionale è attivo su altri effettori, come la **[fosfolipasi C](https://it.wikipedia.org/wiki/Fosfolipasi_C "Fosfolipasi C")**.
 ## Struttura
-I GPCR sono costituiti da una singola catena polipeptidica formata anche da 1100 residui. La caratteristica strutturale è rappresentata da 7 $\alpha$-eliche transmembrana (tant'è che i GPCR sono anche detti "recettori a 7 eliche transmembrana"), con un dominio extracellulare N-terminale di lunghezza variabile e un dominio intracellulare C-terminale.![[Pasted image 20260806095343.png]]
+I GPCR sono costituiti da una singola catena polipeptidica formata anche da 1100 residui. La caratteristica strutturale è rappresentata da 7 $\alpha$-eliche transmembrana (tant'è che i GPCR sono anche detti "recettori a 7 eliche transmembrana"), con un dominio extracellulare N-terminale di lunghezza variabile e un dominio intracellulare C-terminale.
+![[Pasted image 20260806095343.png]]
+I GPCR vengono divisi in tre distinte famiglie che condividono la stessa struttura eptaelicale ma differiscono per vari aspetti, principalmente per la lunghezza della sequenza N-terminale e la localizzazione del sito di legame per l'agonista.
+- La famiglia **A**, a cui appartiene la rodopsina, è di gran lunga la più numerosa e comprende la maggior parte dei recettori per le monoamine e i neuropeptidi.
+- La famiglia **B** è costituita dai recettori della secretina, del glucagone e della calcitonina.
+- La famiglia **C** è costituita principalmente dai recettori metabotropici del glutammato e dai recettori sensibili al $Ca^{2+}$ .
 ### Sito di legame del ligando (varia per classe di recettore)
-| Classe | Ligando | Sito di legame |
-|---|---|---|
-| A | Monoammine | Tasca nelle eliche transmembrana |
-| B | Ormoni peptidici | Eliche transmembrana + loop extracellulare + catena N-terminale |
-| C | Ormoni | Loop extracellulari + catena N-terminale |
-| D | Glutammato | Catena N-terminale |
+| Classe | Ligando          | Sito di legame                                                  |
+| ------ | ---------------- | --------------------------------------------------------------- |
+| A      | Monoammine       | Tasca nelle eliche transmembrana                                |
+| B      | Ormoni peptidici | Eliche transmembrana + loop extracellulare + catena N-terminale |
+| C      | Ormoni           | Loop extracellulari + catena N-terminale                        |
+| D      | Glutammato       | Catena N-terminale                                              |
 ![[Pasted image 20260806085648.png]]
 ### Ligandi tipici
 Circa il **30%** dei farmaci ha come target i recettori accoppiati a proteine G. Ligandi tipici: monoammine, nucleotidi, lipidi, ormoni, glutammato, Ca2+.
