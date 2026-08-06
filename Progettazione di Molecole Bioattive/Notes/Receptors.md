@@ -164,4 +164,13 @@ Questo meccanismo è anche utilizzato per etichettare i recettori. (Marcatura is
 
 ### Allosteric Antagonism
 
-Sono antagonisti allosterici quei ligandi che legano siti differenti da quello di legame, siti allosterici, che inducono un cambiamento conformazionale che altera il sito di legame non permettendo il 
+Sono antagonisti allosterici quei ligandi che legano siti differenti da quello di legame, siti allosterici, che inducono un cambiamento conformazionale che altera il sito di legame non permettendo il legame del messaggero. Anche qui incrementare la concentrazione del messaggero non inverte l'antagonismo
+
+### Umbrella Effect
+L'umbrella Effect avviene quando un antagonista si lega reversibilmente ad un sito di binding vicino a quello del messaggero. Il legame dell'antagonista "copre" il sito di binding del messaggero impedendo il legame di esso per ingombro.
+![[Pasted image 20260806124527.png]]
+
+### Antagonisti parziali
+Sono agenti che agiscono come antagonisti ma producono un effetto più debole. Il legame causa un cambiamento conformazionale non ideale per il massimo effetto, ad esempio provocando la parziale apertura di un canale ionico.
+Il ligando si lega in due differenti regioni di binding, legandosi in due differenti maniere, una dove si comporta da agonista, ed una dove si comporta da antagonista.
+L'agente si lega da agonista su un sottotipo di recettore e da antagonista su un altro sottotipo di recettore.
