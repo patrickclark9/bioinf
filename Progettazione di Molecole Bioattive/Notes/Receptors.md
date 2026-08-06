@@ -185,3 +185,9 @@ Si legano al recettore inducendo un cambiamento conformazionale differente dal m
 Bloccano tutta l'attività inerente del recettore
 I recettori sono in equilibrio tra costituzionalmente attivi e inattivi
 ![[Pasted image 20260806152837.png]]
+
+## Sensitizzazione e Desentizzazione
+
+Esposizione duratura ad agonist/antagonisti desentitizza o sensitizza il recettore.
+I recettori esposti a lungo ad agonisti diventano desentitizzati, portando alla fosforilazione del recettore, il quale si disattiva.
+La defosforilazione avviene dopo che l'agonista lascia il recettore
