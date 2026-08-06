@@ -190,4 +190,7 @@ I recettori sono in equilibrio tra costituzionalmente attivi e inattivi
 
 Esposizione duratura ad agonist/antagonisti desentitizza o sensitizza il recettore.
 I recettori esposti a lungo ad agonisti diventano desentitizzati, portando alla fosforilazione del recettore, il quale si disattiva.
-La defosforilazione avviene dopo che l'agonista lascia il recettore
+La defosforilazione avviene dopo che l'agonista lascia il recettore. La fosforilazione provoca un cambiamento conformazionale che inibisce l'agonista.
+
+Equivalentemente, esposizione prolungata ad un antagonista causa la sensitizzazione, in cui la cellula inizia a sintetizzare più recettori per compensare, rendendosi più sensibili al messaggero naturale. Può causare tolleranza e dipendenza, richiedendo dosi sempre più elevate di antagonista per ottenere lo stesso effetto. 
+Privando la cellula del farmaco, la cellula rimane ipersensibile al normale neurotrasmettitore, provocando crisi di astinenza. È la causa principale delle dipendenze.
