@@ -45,3 +45,20 @@ In un canale ionico, la proteina recettrice è parte di un canale ionico, forman
 Il recettore lega un messaggero, causando un cambiamento conformazionale ed un induced fit, provocando quindi apertura o chiusura del canale ionico.
 I canali sono specifici per determinati tipi di ioni, i quali fluiscono attraverso questo canale per attraversare la membrana per gradiente di concentrazione.
 Possono polarizzare o depolarizzare membrane nervose o attivare/disattivare reazioni catalizzate da enzimi all'interno della cellula.
+
+Il legame tra ligando e proteina provoca apertura/chiusura del canale ionico, permettendo o impedendo il passaggio degli ioni 
+
+I canali ionici per cationi (K+, Na+, Ca2+) sono eccitatori (depolarizzano), mentre i canali anionici (Cl-) sono inibitori (iperpolarizzazione)
+![[Pasted image 20260806084447.png]]![[Pasted image 20260806084454.png]]
+![[Pasted image 20260806084615.png]]![[Pasted image 20260806084621.png]]![[Pasted image 20260806084645.png]]
+### Effetti
+- Bassi tempi di risposta
+- Ideali per la trasmissione tra nervi
+- Il binding del messaggero permette il flusso ionico attraverso la membrana cellulare
+- La trasduzione del segnale corrisponde al flusso ionico
+- La concentrazione ionica interna cellulare viene alterata, portando a variazioni nella chimica cellulare
+
+
+## Recettori G-protein
+
+Con il legame del ligando, questi recettori aprono un sito di binding per una proteina segnale, la proteina G, la quale viene legata, destabilizzata e splittata all'interno del recettore
