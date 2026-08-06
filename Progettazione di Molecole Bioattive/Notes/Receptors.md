@@ -152,4 +152,16 @@ Legano un sito allosterico invece del sito di binding, aumentando l'attività de
 ## Antagonisti
 Gli antagonisti si legano reversibilmente al sito di binding, provocando differente cambiamento conformazionale rendendo il recettore inattivo.
 L'antagonista non viene sottoposto ad alcuna reazione chimica.
-Il livello 
+Il livello di antagonismo dipende dalla forza di legame e dalla concetrazione di esso.
+Il messaggero viene bloccato dal sito di binding, ed incrementando la concentrazione del messaggero inverte l'antagonismo.
+
+Antagonisti si legano al sito di legame, ma non producono il corretto cambiamento conformazionale indotto da legame, impedendo l'attivazione del recettore.
+L'antagonista può formare interazioni di legame con le regioni di legame nel sito non usate dal messaggero naturale.
+![[Pasted image 20260806123849.png]]
+### Irreversible Antagonist
+Gli antagonisti irreversibili invece si legano permanentemente al sito di legame, inducendo un cambiamento conformazionale che non attiva il recettore e portando alla formazione di un legame covalente tra ligando e recettore. Il messaggero viene bloccato permanentemente dal sito di legame, e l'incremento di concentrazione del messaggero non inverte l'antagonismo.
+Questo meccanismo è anche utilizzato per etichettare i recettori. (Marcatura isotopica incorporata nella struttura chimica del ligando)
+
+### Allosteric Antagonism
+
+Sono antagonisti allosterici quei ligandi che legano siti differenti da quello di legame, siti allosterici, che inducono un cambiamento conformazionale che altera il sito di legame non permettendo il 
