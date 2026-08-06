@@ -78,3 +78,20 @@ Tipici ligandi sono:
 - Ormoni
 - Glutammato
 - Ca2+
+
+### Tipi di recettori
+![[Pasted image 20260806091021.png]]showing how different G-Protein Coupled Receptors evolved from a common ancestor.
+
+- The tree branches out into major receptor categories, such as Endothelins, Tachkinins, Monoamines, and Opsins/Rhodopsins.
+    
+- It further breaks down the **Receptor Types** into specific **Receptor Subtypes**.
+    
+- For example, under the "Monoamines" branch, you can trace the evolutionary split into muscarinic, histamine, alpha-adrenergic, dopaminergic, and beta-adrenergic receptors.
+    
+- These are then further categorized into highly specific subtypes, such as $D1_{A}$, $D1_{B}$, D2, D3, D4, and D5 for dopaminergic receptors, or H1 and H2 for histamine receptors.
+I tipi di recettori e i sottotipi non sono equamente distribuiti tra i tesuti. La selettività del target porta a selettività nel tessuto.
+- Cuore (muscolo) -> $\beta_1$ adrenergic
+- Muscolo bronchiale -> $\alpha_1$ e $\beta_2$ adrenergic
+- Tratto gastrointestinale -> $\alpha_1 \alpha_2$ e $\beta_2$ adrenergic
+- Adiposo -> $\beta_3$
+
