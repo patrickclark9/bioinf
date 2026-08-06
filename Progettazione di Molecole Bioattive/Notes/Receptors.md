@@ -144,4 +144,12 @@ Enantiomeri hanno nella maggior parte dei casi proprietà biologiche differenti.
 
 Le dimensioni dell'agonista devono essere corrette, la forma deve riempire il sito di binding.
 I gruppi che prevengono l'accesso sono chiamati scudi sterici o blocchi sterici.
-Alcuni agonisti possono presentare differenze strutturali rispetto al messaggero naturale. Questi agonisti possono però possedere gruppi di legame per altre regioni di binding, andando a compensare la perdita di interazioni chiave con nuove interazioni in differenti regioni di binding.
+Alcuni agonisti possono presentare differenze strutturali rispetto al messaggero naturale. Questi agonisti possono però possedere gruppi di legame per altre regioni di binding, andando a compensare la perdita di interazioni chiave con nuove interazioni in differenti regioni di binding.![[Pasted image 20260806122350.png]]
+
+**Modulatori allosterici agonistici**
+Legano un sito allosterico invece del sito di binding, aumentando l'attività del recettore.
+
+## Antagonisti
+Gli antagonisti si legano reversibilmente al sito di binding, provocando differente cambiamento conformazionale rendendo il recettore inattivo.
+L'antagonista non viene sottoposto ad alcuna reazione chimica.
+Il livello 
