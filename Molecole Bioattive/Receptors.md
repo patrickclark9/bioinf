@@ -105,4 +105,16 @@ In generale è un sistema integrato recettore+enzima, dove il recettore si lega 
 Il cambiamento conformazionale provoca l'apertura del sito attivo intracellulare, catalizzando una reazione all'interno della cellula
 
 ### Recettori tirosina-chinasi
-![[Pasted image 20260806093341.png]]![[Pasted image 20260806093350.png]]![[Pasted image 20260806093407.png]]
+![[Pasted image 20260806093341.png]]![[Pasted image 20260806093350.png]]![[Pasted image 20260806093407.png]]Il legame di EGF al recettore causa un cambiamento conformazionale che apre e permette l'azione dei domini tirosina chinasi.
+
+Il sito attivo su una prima metà del dimero catalizza la fosforilazione dei residui di tirosina sull'altra metà.
+La dimerizzazione del recettore è cruciale, poichè le regioni fosforilate agiscono come siti di binding per altre proteine ed enzimi.
+Questo risulta nell'attivazione di proteine di segnale ed enzima, trasducendo il messaggio nella cellula.
+
+
+## Recettori intracellulari
+
+I messaggeri chimici in questo caso devono attraversare la membrana cellulare e devono essere idrofobici.
+Spesso questi sono ormoni steroidei, ormoni tiroidei o retinoidi.
+
+Gli ormoni steroidei sono molecole lipofiliche, e tutte eccetto il calcitriolo hanno come st
