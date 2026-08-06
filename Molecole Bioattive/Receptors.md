@@ -117,4 +117,7 @@ Questo risulta nell'attivazione di proteine di segnale ed enzima, trasducendo il
 I messaggeri chimici in questo caso devono attraversare la membrana cellulare e devono essere idrofobici.
 Spesso questi sono ormoni steroidei, ormoni tiroidei o retinoidi.
 
-Gli ormoni steroidei sono molecole lipofiliche, e tutte eccetto il calcitriolo hanno come st
+Gli ormoni steroidei sono molecole lipofiliche, e tutte eccetto il calcitriolo hanno come struttura comuna il ciclopentanoperidrofenantrene. Il precursore è il colesterolo
+![[Pasted image 20260806094459.png]]![[Pasted image 20260806094510.png]]Gli ormoni steroide e tiroidei, spesso legati a proteine plasmatiche, hanno tempo di vita abbastanza elevato (ore).
+Ormoni peptidici e catecolammine sono solubili e trasportati disciolti nel plasma. Hanno tempo di vita basso
+![[Pasted image 20260806094734.png]]![[Pasted image 20260806094704.png]]![[Pasted image 20260806094900.png]]

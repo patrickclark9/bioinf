@@ -39,6 +39,9 @@ L'interazione deve essere:
 
 > Se il ligando non viene rilasciato, si comporta da **antagonista**, bloccando il sito di binding.
 
+![[Pasted image 20260806083142.png]]
+![[Pasted image 20260806083128.png]]
+
 ---
 
 ## Tipi di recettori e tempi di risposta
@@ -58,8 +61,12 @@ L'interazione deve essere:
 - Il legame del messaggero causa un cambiamento conformazionale (*induced fit*) che apre o chiude il canale.
 - I canali sono specifici per determinati ioni, che li attraversano secondo gradiente di concentrazione.
 - Possono polarizzare/depolarizzare membrane nervose o attivare/disattivare reazioni enzimatiche intracellulari.
-- **Canali cationici** (K⁺, Na⁺, Ca²⁺) → eccitatori, depolarizzano.
-- **Canali anionici** (Cl⁻) → inibitori, iperpolarizzano.
+- Il legame tra ligando e proteina provoca apertura/chiusura del canale, permettendo o impedendo il passaggio degli ioni.
+- **Canali cationici** (K+, Na+, Ca2+) → eccitatori, depolarizzano.
+- **Canali anionici** (Cl-) → inibitori, iperpolarizzano.
+
+![[Pasted image 20260806084447.png]]![[Pasted image 20260806084454.png]]
+![[Pasted image 20260806084615.png]]![[Pasted image 20260806084621.png]]![[Pasted image 20260806084645.png]]
 
 ### Effetti caratteristici
 - Bassi tempi di risposta.
@@ -73,8 +80,14 @@ L'interazione deve essere:
 ## 2. Recettori G-protein Coupled (GPCR)
 
 - Il legame del ligando apre un sito di binding per la **proteina G**, che viene legata, destabilizzata e "splittata" all'interno del recettore.
+
+![[Pasted image 20260806085407.png]]![[Pasted image 20260806085415.png]]
+
 - Cascata tipica: lo split della proteina G attiva un enzima di membrana; il legame della proteina G a un sito allosterico sull'enzima ne provoca il cambiamento conformazionale e l'attivazione.
 
+![[Pasted image 20260806085636.png]]
+## Struttura
+I GPCR sono costituiti da una singola catena polipeptidica formata anche da 1100 residui. La caratteristica strutturale è rappresentata da 7 $\alpha$-eliche transmembrana (tant'è che i GPCR sono anche detti "recettori a 7 eliche transmembrana"), con un dominio extracellulare N-terminale di lunghezza variabile e un dominio intracellulare C-terminale.![[Pasted image 20260806095343.png]]
 ### Sito di legame del ligando (varia per classe di recettore)
 | Classe | Ligando | Sito di legame |
 |---|---|---|
@@ -82,24 +95,61 @@ L'interazione deve essere:
 | B | Ormoni peptidici | Eliche transmembrana + loop extracellulare + catena N-terminale |
 | C | Ormoni | Loop extracellulari + catena N-terminale |
 | D | Glutammato | Catena N-terminale |
-
+![[Pasted image 20260806085648.png]]
 ### Ligandi tipici
-Circa il **30%** dei farmaci ha come target i recettori accoppiati a proteine G. Ligandi tipici: monoammine, nucleotidi, lipidi, ormoni, glutammato, Ca²⁺.
+Circa il **30%** dei farmaci ha come target i recettori accoppiati a proteine G. Ligandi tipici: monoammine, nucleotidi, lipidi, ormoni, glutammato, Ca2+.
 
 ### Cristallografia e template strutturali
 - La rodopsina è un recettore visivo appartenente alla stessa famiglia evolutiva di molti GPCR.
 - Essendo una proteina di membrana, la sua cristallizzazione è complessa; per questo è stata inizialmente cristallizzata la **batteriorodopsina**, usata come template per ricostruire la struttura di recettori in altre specie.
-- Più recentemente sono state cristallizzate la **rodopsina bovina** e il **recettore β₂ adrenergico**, offrendo template più accurati per il drug design.
+- Più recentemente sono state cristallizzate la **rodopsina bovina** e il **recettore beta_2 adrenergico**, offrendo template più accurati per il drug design.
 
-### Albero evolutivo dei GPCR
-I GPCR derivano da un antenato comune e si diramano in famiglie principali (endoteline, tachichinine, monoammine, opsine/rodopsine), a loro volta suddivise in sottotipi recettoriali specifici. Ad esempio, dal ramo delle monoammine derivano i recettori muscarinici, istaminici, α-adrenergici, dopaminergici e β-adrenergici — ulteriormente suddivisi in sottotipi molto specifici (es. D1A, D1B, D2, D3, D4, D5 per i dopaminergici; H1, H2 per gli istaminici).
+![[Pasted image 20260806091021.png]]
+
+L'immagine mostra come i diversi recettori accoppiati a proteine G si sono evoluti da un antenato comune:
+- L'albero si dirama nelle principali categorie recettoriali: endoteline, tachichinine, monoammine, opsine/rodopsine.
+- Ogni **tipo di recettore** si suddivide ulteriormente in **sottotipi recettoriali** specifici.
+- Ad esempio, dal ramo delle monoammine si diramano i recettori muscarinici, istaminici, alfa-adrenergici, dopaminergici e beta-adrenergici.
+- Questi si suddividono a loro volta in sottotipi molto specifici, come D1A, D1B, D2, D3, D4, D5 per i dopaminergici, oppure H1 e H2 per gli istaminici.
 
 ### Distribuzione tissutale dei sottotipi
-I recettori e i loro sottotipi non sono distribuiti equamente tra i tessuti — la selettività del target si traduce in selettività tissutale:
+I tipi di recettori e i loro sottotipi non sono distribuiti equamente tra i tessuti. La selettività del target porta a selettività tissutale:
 
-| Tessuto | Sottotipo recettoriale |
-|---|---|
-| Cuore (muscolo) | β₁ adrenergico |
-| Muscolo bronchiale | α₁ e β₂ adrenergico |
-| Tratto gastrointestinale | α₁, α₂ e β₂ adrenergico |
-| Tessuto adiposo | β₃ adrenergico |
+| Tessuto                  | Sottotipo recettoriale                       |
+| ------------------------ | -------------------------------------------- |
+| Cuore (muscolo)          | $\beta_1$ adrenergico                        |
+| Muscolo bronchiale       | $\alpha_1$ e $\beta_2$ adrenergico           |
+| Tratto gastrointestinale | $alpha_1$, $alpha_2$ e $\beta_2$ adrenergico |
+| Tessuto adiposo          | $\beta_3$ adrenergico                        |
+
+---
+
+## 3. Recettori Kinase-Linked
+
+- Sono recettori bifunzionali recettore/enzima, spesso attivati da ormoni.
+- Costituiscono un sistema integrato recettore+enzima: il recettore lega il messaggero, provocando un *induced fit*.
+- Il cambiamento conformazionale apre il sito attivo intracellulare, catalizzando una reazione all'interno della cellula.
+
+### Recettori tirosina-chinasi
+
+![[Pasted image 20260806093341.png]]![[Pasted image 20260806093350.png]]![[Pasted image 20260806093407.png]]
+
+- Il legame di EGF al recettore causa un cambiamento conformazionale che apre e permette l'azione dei domini tirosina-chinasi.
+- Il sito attivo su una prima metà del dimero catalizza la fosforilazione dei residui di tirosina sull'altra metà.
+- La **dimerizzazione** del recettore è cruciale: le regioni fosforilate agiscono da siti di binding per altre proteine ed enzimi.
+- Il risultato è l'attivazione di proteine di segnale ed enzimi a valle, trasducendo il messaggio all'interno della cellula.
+
+---
+
+## 4. Recettori Intracellulari
+
+- I messaggeri chimici devono attraversare la membrana cellulare, quindi devono essere **idrofobici**.
+- Sono spesso ormoni steroidei, ormoni tiroidei o retinoidi.
+- Gli ormoni steroidei sono molecole lipofiliche; tutti, eccetto il calcitriolo, condividono la struttura comune del **ciclopentanoperidrofenantrene**. Il precursore è il **colesterolo**.
+
+![[Pasted image 20260806094459.png]]![[Pasted image 20260806094510.png]]
+
+- Gli ormoni steroidei e tiroidei, spesso legati a proteine plasmatiche, hanno un tempo di vita abbastanza elevato (ore).
+- Gli ormoni peptidici e le catecolammine sono solubili e trasportati disciolti nel plasma, con tempo di vita basso.
+
+![[Pasted image 20260806094734.png]]![[Pasted image 20260806094704.png]]
