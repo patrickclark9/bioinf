@@ -33,4 +33,11 @@ Si possono creare però farmaci in grado di mimare lo stato di transizione del s
 
 ## Substrati suicidi
 
-I substrati suicidi sono agenti che si convertono in inibitori irreversibili per una reazione cata
+I substrati suicidi sono agenti che si convertono in inibitori irreversibili per una reazione catalizzata da enzimi.
+Reagiscono con l'enzima una volta formato il complesso ES. Mecacnismo non competitivo.
+Formano legami covalenti con l'enzima e causano una inibizione irreversibile.
+**Esempio**
+Beta lattamasi rompono le strutture dell'antibiotico. Gli antibiotici hanno tutti in comune un elemento della struttura, il beta-lattame, un anello a 4 atomi. Questi enzimi idrolizzano l'anello a 4 atomi, aprendolo, e disattivando le proprietà antibatteriche della molecola.
+L'acido clavulanic agisce come substrato suicida per la beta-lattamasi.![[Pasted image 20260806182002.png]]
+L'acido tienilico era un diuretico ritirato dal mercato poichè agisce come substrato suicida per il citocromo p450.
+![[Pasted image 20260806182043.png]]![[Pasted image 20260806182057.png]]
