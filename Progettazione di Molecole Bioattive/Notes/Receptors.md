@@ -174,3 +174,14 @@ L'umbrella Effect avviene quando un antagonista si lega reversibilmente ad un si
 Sono agenti che agiscono come antagonisti ma producono un effetto più debole. Il legame causa un cambiamento conformazionale non ideale per il massimo effetto, ad esempio provocando la parziale apertura di un canale ionico.
 Il ligando si lega in due differenti regioni di binding, legandosi in due differenti maniere, una dove si comporta da agonista, ed una dove si comporta da antagonista.
 L'agente si lega da agonista su un sottotipo di recettore e da antagonista su un altro sottotipo di recettore.
+
+### Agonisti Inversi
+Gli agonisti inversi si legano allo stesso recettore dell'agonista ma induce la risposta farmacologica inversa. Agiscono da antagonisti ma eliminano tutta l'attività basale/inerente del recettore associato,
+Questi hanno azione opposta a quella degli agonisti ma gli effetti di entrambi può essere bloccata da antagonisti.
+
+**similarità ad agonisti**
+Si legano al recettore inducendo un cambiamento conformazionale differente dal messaggero normale, mantenendo il recettore inattivo. Il normale messaggero viene bloccato.
+**Differenze con antagonisti**
+Bloccano tutta l'attività inerente del recettore
+I recettori sono in equilibrio tra costituzionalmente attivi e inattivi
+![[Pasted image 20260806152837.png]]
