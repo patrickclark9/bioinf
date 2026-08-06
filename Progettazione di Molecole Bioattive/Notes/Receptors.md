@@ -131,4 +131,10 @@ Gli antagonisti invece dovrebbero bloccare il messaggero naturale, quindi voglio
 ### Design Of Agonists
 
 Gli agonisti quindi mimano il messaggero naturale, legano reversibilmente il sito di legame e producono il medesimo cambiamento conformazionale del messaggero naturale.
-Formano legami intermolecolari simili al messaggero naturale. 
+Formano legami intermolecolari simili al messaggero naturale. Agonisti sono spesso simili in struttura al messaggero naturale.
+
+Gli agonisti devono avere i corretti gruppi di binding, correttamente posizionati per l'interazione.
+Il ligando deve possedere la forma corretta per il sito di binding.
+Il razionale è che se è conosciuta la natura chimica del messaggero, e si possono identificare i gruppi funzionali, si formano importanti interazioni con il sito di binding, e poi è possibile predire ragionevolmente quale serie di molecole interagisce alla stessa maniera del messaggero.
+
+Cruciale è identificare i gruppi funzionali in grado di effettuare le medesime interazioni. Spesso richiedono lo stesso numero di interazioni
