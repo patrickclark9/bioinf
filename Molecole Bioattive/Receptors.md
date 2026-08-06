@@ -16,5 +16,5 @@ I messaggeri chimici attivano i recettori senza provocare una reazione, a differ
 ## Meccanismo
 
 I recettori contengono un dominio di binding, riconosciuto dal messaggero. Il legame tra ligando-sito di binding provoca un cambiamento conformazionale del target, risultando in un induced-fit e inizializzando un effetto domino, detto trasduzione del segnale, dove il segnale viene propagato all'interno della cellula senza che il ligando entri nella cellula.
-Il ligando non provoca alcuna reazione chimica e
+Il ligando non provoca alcuna reazione chimica e non è legato permanentemente, quindi quando lascia il recettore il messaggero rimane inalterato.
 
