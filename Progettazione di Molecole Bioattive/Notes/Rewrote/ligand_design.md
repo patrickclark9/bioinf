@@ -42,7 +42,7 @@ Gli antagonisti si legano reversibilmente al sito di binding, provocando un camb
 ### Antagonisti Irreversibili
 - Si legano **permanentemente** al sito di legame, inducendo un cambiamento conformazionale che non attiva il recettore, tramite formazione di un **legame covalente** tra ligando e recettore.
 - Il messaggero viene bloccato permanentemente: incrementare la sua concentrazione **non inverte** l'antagonismo.
-- Questo meccanismo è utilizzato anche per etichettare i recettori (marcatura isotopica incorporata nella struttura [[chimica del ligando).
+- Questo meccanismo è utilizzato anche per etichettare i recettori (marcatura isotopica incorporata nella struttura [[chimica]] del ligando).
 
 ### Antagonismo Allosterico
 - Ligandi che legano siti differenti da quello di legame (siti allosterici), inducendo un cambiamento conformazionale che altera il sito di legame, impedendo il legame del messaggero.
