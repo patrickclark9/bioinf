@@ -62,3 +62,19 @@ I canali ionici per cationi (K+, Na+, Ca2+) sono eccitatori (depolarizzano), men
 ## Recettori G-protein
 
 Con il legame del ligando, questi recettori aprono un sito di binding per una proteina segnale, la proteina G, la quale viene legata, destabilizzata e splittata all'interno del recettore
+![[Pasted image 20260806085407.png]]![[Pasted image 20260806085415.png]]
+Una cascata tipica è composta dall'attivazione, in seguito allo split della proteina G, di un enzima di membrana. Il legame della proteina G ad un sito allosterico sull'enzima provoca un cambiamento conformazionale dell'enzima, attivandolo. 
+![[Pasted image 20260806085636.png]]![[Pasted image 20260806085648.png]]Il sito di legame del ligando varia a seconda del recettore:
+- A -> Monoammine -> Tasca nelle eliche transmembrana
+- B -> Ormoni peptidici -> Sulle eliche transmembrana + loop extracellulare + catena N terminale
+- C -> Ormone -> Loop extracellulari + catena N-terminale
+- D -> Glutammato -> Catena N-terminale
+### Ligandi 
+30% dei farmaci ha come target i recettori proteina G.
+Tipici ligandi sono:
+- Monoammine
+- Nucleotidi
+- Lipidi
+- Ormoni
+- Glutammato
+- Ca2+
