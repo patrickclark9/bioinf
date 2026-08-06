@@ -14,7 +14,7 @@ Gli agonisti mimano il messaggero naturale: legano reversibilmente il sito di le
 ### Principi di design
 - Devono avere i corretti gruppi di binding, correttamente posizionati per l'interazione.
 - Il ligando deve possedere la forma corretta per il sito di binding.
-- **Razionale**: se è conosciuta la natura chimica del messaggero e si identificano i suoi gruppi funzionali chiave, si possono predire ragionevolmente quali altre molecole interagiranno con il sito di binding nella stessa maniera.
+- **Razionale**: se è conosciuta la natura [[chimica]] del messaggero e si identificano i suoi gruppi funzionali chiave, si possono predire ragionevolmente quali altre molecole interagiranno con il sito di binding nella stessa maniera.
 - È cruciale identificare i gruppi funzionali in grado di effettuare le medesime interazioni — spesso è richiesto lo stesso numero di interazioni.
 - I gruppi devono essere posizionati in modo da poter interagire con le regioni complementari di binding **contemporaneamente**.
 - Gli **enantiomeri** hanno, nella maggior parte dei casi, proprietà biologiche differenti.
@@ -30,7 +30,7 @@ Legano un sito allosterico invece del sito di binding, **aumentando** l'attivit�
 
 ## Antagonisti
 
-Gli antagonisti si legano reversibilmente al sito di binding, provocando un cambiamento conformazionale differente che rende il recettore **inattivo**. L'antagonista non subisce alcuna reazione chimica.
+Gli antagonisti si legano reversibilmente al sito di binding, provocando un cambiamento conformazionale differente che rende il recettore **inattivo**. L'antagonista non subisce alcuna reazione [[chimica]].
 
 - Il livello di antagonismo dipende dalla forza di legame e dalla concentrazione dell'antagonista.
 - Il messaggero viene bloccato dal sito di binding; incrementare la concentrazione del messaggero **inverte** l'antagonismo.
@@ -42,7 +42,7 @@ Gli antagonisti si legano reversibilmente al sito di binding, provocando un camb
 ### Antagonisti Irreversibili
 - Si legano **permanentemente** al sito di legame, inducendo un cambiamento conformazionale che non attiva il recettore, tramite formazione di un **legame covalente** tra ligando e recettore.
 - Il messaggero viene bloccato permanentemente: incrementare la sua concentrazione **non inverte** l'antagonismo.
-- Questo meccanismo è utilizzato anche per etichettare i recettori (marcatura isotopica incorporata nella struttura chimica del ligando).
+- Questo meccanismo è utilizzato anche per etichettare i recettori (marcatura isotopica incorporata nella struttura [[chimica del ligando).
 
 ### Antagonismo Allosterico
 - Ligandi che legano siti differenti da quello di legame (siti allosterici), inducendo un cambiamento conformazionale che altera il sito di legame, impedendo il legame del messaggero.
@@ -100,7 +100,7 @@ Avviene quando un antagonista si lega reversibilmente a un sito di binding vicin
 ## Radioligand Labelling
 
 - Si marcano i ligandi con radioattività. Raggiunto l'equilibrio, si raccoglie il ligando non legato al recettore.
-- Il binding è misurabile rilevando la traccia radioattiva presente nelle cellule/tessuto e quella del ligando non legato ([L] e [LR]).
+- Il binding è misurabile rilevando la traccia radioattiva presente nelle cellule/tessuto e quella del ligando non legato (\[L] e \[LR]).
 
 $$\frac{[\text{bound ligand}]}{[\text{free ligand}]} = \frac{[LR]}{[L]} = \frac{[R_{tot}]-[LR]}{K_d}$$
 
@@ -108,11 +108,11 @@ con
 
 $$K_d = \frac{[L][R]}{[LR]}$$
 
-Per determinare R_tot si eseguono più esperimenti con concentrazioni note di radioligando.
+Per determinare R_tot (affinità) si eseguono più esperimenti con concentrazioni note di radioligando.
 
-![[Pasted image 20260806160322.png]]
+Determinazione dell'affinità: Mediante costante di dissociazione e costante di inibizione $K_d$ e $K_i$.![[Pasted image 20260806160322.png]]![[Pasted image 20260806162301.png]]
 
-**IC50** = (Half Maximal Inhibitory Concentration) concentrazione inibitoria al 50% del ligando legato (curva di spiazzamento o inibizione). È la concentrazione necessaria a bloccare il 50% dell'attività biologica o del processo. Misura quanta sostanza è necessaria per bloccare il 50% dell'attività enzimatica, utilizzata per antagonisti e inibitori. Più basso il valore migliore è l'attività inibitoria
+**IC50** = (Half Maximal Inhibitory Concentration) concentrazione inibitoria al 50% del ligando legato (curva di spiazzamento o inibizione). È la concentrazione necessaria a bloccare il 50% dell'attività biologica o del processo. Misura quanta sostanza è necessaria per bloccare il 50% dell'attività enzimatica, utilizzata per antagonisti e inibitori. Più basso il valore migliore è l'attività inibitoria (**potenza**)
 
 ![[Pasted image 20260806160448.png]]
 
@@ -123,7 +123,7 @@ $$K_i = \frac{IC_{50}}{1+\frac{[L_{tot}]}{K_d}}$$
 
 dove $K_d$ è la costante di dissociazione del radioligando e $L_{tot}$ è la concentrazione di radioligando utilizzata nell'esperimento.
 
-**EC50** = (Half Maximal Effective Concentration) concentrazione effettiva al 50%. Più basso è l'EC50, più potente è il farmaco.
+**EC50** = (Half Maximal Effective Concentration) Misura la concentrazione necessaria ad ottenere il 50% della massima risposta biologica. Misura l'attivazione o lo stimolo, e quindi quanta sostanza è necessaria per ottenere il 50% dell'effetto biologico. Utilizzato per agonisti ed attivatori. Più basso il valore, maggiore la **potenza**
 
 ![[Pasted image 20260806160811.png]]
 
