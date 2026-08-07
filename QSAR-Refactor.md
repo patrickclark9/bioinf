@@ -319,3 +319,21 @@ Si inizia da un singolo descrittore che meglio si correla con la variabile dipen
 È l'esatto opposto della forward selection, si utilizzano tutti i descrittori, ad ogni step si rimuove quello che non degrada le prestazioni del modello. Il processo termina quando le prestazioni del modello calano significativamente
 
 #### Stepwise Regression
+È un misto dei due precedenti. Si inizia con un singolo descrittore, ma ad ogni step si può aggiungere il prossimo descrittore che migliora le prestazioni del modello e/o si possono togliere descrittori che non influiscono sulle prestazioni del modello. Si termina quando aggiungere o rimuovere descrittori peggiora le prestazioni del modello
+
+
+#### Descrittori Correlati
+L'utilizzo di descrittori correlati, ovvero descrittori che comunicano la stessa informazione su una serie di molecole, va evitato. 
+La costruzione di matrici di correlazione aiuta a identificare e rimuovere descrittori fortemente correlati tra loro. Tra tutti quelli correlati si va a selezionare uno solo, gli altri rimossi. Tipicamente si mantiene quello che possiede informazione strutturale più forte, mentre si rimuove quello meno intuitivo, oppure si rimuove quello con la più alta correlazione con altri descrittori.
+Ad esempio, un descrittore per il numero di atomi di carbonio ed un descrittore per il peso molecolare per gli alcani saranno ovviamente fortemente correlati tra loro (CnH2n+2)
+
+#### Regola centrale della QSAR
+In un buon modello QSAR, il numero di molecole nel training set **eccede** il numero di descrittori di 3-5 volte. 
+
+
+## Costruzione del modello QSAR
+
+1. Data Matrix -> Matrice Composti e attività + descrittori 
+
+![[Pasted image 20260807161631.png]]
+2. Analisi grafica dei dati per una preliminare interpretazione dei dati
