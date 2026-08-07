@@ -377,7 +377,7 @@ Alcuni dei modelli utilizzati sono:
 - Modello di Equilibrio (Hyde) -> $\log \frac{1}{C} =  a(\log P)-\log (aP+1) + c$
 - Modello Bilineare (Kubinyi) -> $\log \frac{1}{C} =  a(\log P) -b\log (\beta P+1) + c$
 
-## Validazione dei modelli
+## Validazione dei modelli 
 
 I modelli vengono validati:
 - In fase di addestramento, si valuta quando bene l'equazione QSAR riproduce i dati sperimentali
@@ -395,24 +395,68 @@ $r^2 \in [0,1]$
 ### T-test
 Il test di Student utilizza la distribuzione t per testare se il coefficiente di correlazione ottenuto dalla QSAR è significativamente diverso da 0.
 Tanto più grande $t$, tanto più grande la probabilità che $r^2$ differisca da 0, ovvero è più probabile che il descrittore utilizzato per l'analisi sia rilevante per l'attività.
-
-1. Si calcola $t$ come $t = r\sqrt{\frac{N-2}{1-r^2}}$
-2. Si seleziona un grado di significatività (e.g. 0.05)
-3. Si cerca il valore di $t$ all'interno della distribuzione T derivato per il corretto numero di campioni N al livello di significatività posto
-4. Se il valore di $t$ calcolato è più grande del valore di $t$ tabulato, allora l'equazione di regressione è significativa a quel dato grado di significatività
 - **One-Sample t-Test**: Compares the mean of a single group against a known or target value. 
 
 - **Independent Two-Sample t-Test**: Compares the means of two completely separate and unrelated groups (such as a control group vs. a treatment group).
 
 - **Paired Samples t-Test**: Compares the means from the same group at two different times, such as a "before and after" intervention measurement.
+1. Si calcola $t$ come $t = r\sqrt{\frac{N-2}{1-r^2}}$
+2. Si seleziona un grado di significatività (e.g. 0.05)
+3. Si cerca il valore di $t$ all'interno della distribuzione T derivato per il corretto numero di campioni N al livello di significatività posto
+4. Se il valore di $t$ calcolato è più grande del valore di $t$ tabulato, allora l'equazione di regressione è significativa a quel dato grado di significatività
+
 
 #### Assunzioni
 - I campioni seguono distribuzione circa Normale
-- I campioni sono indipendenti tra loro
+- I campioni sono indipendenti tra loro e selezionati casualmente
 - Nella variante indipendente, i due gruppi di campioni devono avere varianza simile
 ### F-test
-Simile al T-test come svolgimento ma utilizza la distribuzione F di Fisher
+Simile al T-test come svolgimento ma utilizza la distribuzione F di Fisher.  Valuta se un insieme di variabili indipendenti collettivamente spiegano un quantitativo significativo di varianza della variabile dipendente rispetto ad un modello basilare. Utilizzato anche per comparare la varianza tra due popolazioni
+- **Comparing Two Variances:** Tests whether two population variances are equal by dividing the larger sample variance by the smaller one. 
 
+- **Analysis of Variance (ANOVA):** Tests if the means of three or more groups are significantly different by comparing between-group variance to within-group variance. 
+
+- **Regression Analysis:** Evaluates whether a set of independent variables collectively explains a significant amount of variance in the dependent variable compared to a baseline model
+
+1. Si calcola $F$ come $F = \frac{r^2(N-k-1)}{k(1-r^2)}$
+2. Si seleziona un grado di significatività (e.g. 0.05)
+3. Si cerca il valore di $F$ all'interno della distribuzione F derivato per il corretto numero di campioni N al livello di significatività posto
+4. Se il valore di $F$ calcolato è più grande del valore di $F$ tabulato, allora l'equazione di regressione è significativa a quel dato grado di significatività
 #### Assunzioni
 - I campioni seguono distribuzione circa Normale
-- I camp
+- I campioni devono essere indipendenti e selezionati casualmente
+
+
+### Valutare il Potere Predittivo del modello
+I test precedenti possono essere utilizzati per valutare i risultati di una QSAR. Questi parametri però sono utili solo per valutare l'abilità del modello QSAR nel riprodurre i dati di addestramento, non servono per valutare la qualità della predizione nell'attività per composti mai osservati.
+
+Per valutare il potere predittivo del modello si utilizza il metodo del "Test-set", ovvero partizionare i dati di partenza in due insiemi separati, uno di addestramento ed uno di validazione, ed è la strategia preferita quando il numero di composti iniziale è molto grande.
+L'insieme di partenza viene diviso in due parti in maniera del tutto casuale, la prima viene utilizzata per costruire e addestrare il modello QSAR, il secondo viene utilizzato per validare il modello QSAR.
+
+## Finale
+- **Diversity**
+- **Relevance**
+- **Reliability**
+- **Prediction**
+
+These can be understood as follows.
+
+### Diversity
+
+Does the dataset cover sufficiently diverse chemical structures?
+
+If all molecules are almost identical, the model may have limited scope.
+
+### Relevance
+
+Are the chosen descriptors actually related to the biological phenomenon?
+
+### Reliability
+
+Is the model statistically robust and properly validated?
+
+### Prediction
+
+Can it successfully predict new compounds?
+
+A model should ideally satisfy **all four**, rather than merely having a high R2.
