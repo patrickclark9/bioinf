@@ -214,3 +214,53 @@ $$\text{Activity} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 ...$$
 
 #  Descrittori Molecolari
 I descrittori molecolari sono numeri che catturno la struttura e le proprietà fisico-chimiche della molecola. Per essere utili, i descrittori devono essere biologicamente rilevanti, cioè devono essere in grado di differenziare le molecole attive da quelle inattive.
+
+Si converte la molecola in una serie di descrittori $X_1, X_2, ...,X_k$.
+
+Tutte le equazioni QSAR hanno proprietà molecolari espresse come una funzione di specifici descrittori. Differiscono nelle proprietà che correlano, nei descrittori utilizzati e nell'espressione matemat
+
+## Classi di Descrittori
+### Costituzionali
+- Descrivono la composizione molecolare semplice
+	- Peso molecolare
+	- Numero di Atomi
+	- Numero di Atomi di Carbonio
+	- Numero di Eteroatomi
+	- Numero di Anelli
+### Topologici
+- Descrivono come gli atomi sono connessi
+	- Indice di Wiener
+	- Indici di connettività
+	- Indici basati su grafi
+- Non richiedono struttura 3D. È il motivo per cui questa è chiamata 2D QSAR
+
+### Fisico-Chimici
+- Sono i descrittori come:
+	- $\log P$
+	- $MW$
+	- Donatori di legami idrogeno
+	- Accettori di legami idrogeno
+- Influenzano
+	- Permeabilità di membrana
+	- Solubilità
+	- Interazioni molecolari
+	- Partizionamento
+	- Legame a proteine
+### Elettronici
+- Descrivono le caratteristiche elettroniche
+	- Carica
+	- Densità elettronica
+	- Sostituenti con effetti eletronici
+	- Polarizzabilità
+- Diventano importanti se l'attività dipende da una specifica interazione con un target
+
+### Sterici
+- Descrivono la dimensione e forma della molecola o gli effetti sterici, due sostituenti possono avere simili caratteristiche chimiche ma differenti effetti sterici
+
+## Selezione dei Descrittori
+I descrittori possono essere quindi tantissimi. L'utilizzo di un gran numero di descrittori non è necessariamente un fattore positivo, in quanto spesso molti possono essere:
+- Ridodanti
+- Correlati tra loro
+- Irrilevanti
+- Rumorosi
+Inoltre utilizzare troppi descrittori può facilmente rendere il modello peggiore. 
