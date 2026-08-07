@@ -377,3 +377,12 @@ Alcuni dei modelli utilizzati sono:
 - Modello di Equilibrio (Hyde) -> $\log \frac{1}{C} =  a(\log P)-\log (aP+1) + c$
 - Modello Bilineare (Kubinyi) -> $\log \frac{1}{C} =  a(\log P) -b\log (\beta P+1) + c$
 
+## Validazione dei modelli
+
+I modelli vengono validati:
+- In fase di addestramento, si valuta quando bene l'equazione QSAR riproduce i dati sperimentali
+- In fase di predizione, come il modello si comporta in predizione con nuovi composti
+
+### Deviazione standard
+Misura più semplice. Si va a validare il modello computando l'errore standard o deviazione standard $\sigma$. Calcolata come la media del quadrato della deviazione di ogni residuo dalla media. Questo indice riflette la deviazione tra dati e modello. Tanto più stretta, tanto più il modello performa bene
+$$\sigma = \sqrt{\frac{\sum {y_{obs} - y_}}{}}$$ 
