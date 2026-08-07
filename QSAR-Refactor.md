@@ -311,3 +311,11 @@ Si basa sulla conoscenza del SAR, si scelgono manualmente i descrittori per l'an
 ### Automatica
 Si utilizza un metodo di scoring e ranking automatizzato per andare a selezionare automaticamente i descrittori più rilevanti e selezionari quelli più semplici da interpretare.
 Metodi moderni utilizzano algoritmi genetici per effettuare queste predizioni.
+
+L'identificazione sistematica del sottoinsieme migliore di descrittori è ovviamente infattibile, considerando che ogni descrittore può essere inserito oppure no, si hanno $2^{k}$ con $k = descrittori$ possibili sottoinsiemi da esplorare, motivo per cui si usano metodi differenti per la selezione del sottoinsieme migliore di descrittori
+#### Forward Selection
+Si inizia da un singolo descrittore che meglio si correla con la variabile dipendente. Da qui, ad ogni step iterativo, il modello aggiunge il prossimo descrittore che contribuisce maggiormente al modello. Il processo iterativo termina quando l'aggiunta di un descrittore non migliora le prestazioni del modello, valutate appropriamente con metodologie statistiche rilevanti
+#### Backwards Elimination
+È l'esatto opposto della forward selection, si utilizzano tutti i descrittori, ad ogni step si rimuove quello che non degrada le prestazioni del modello. Il processo termina quando le prestazioni del modello calano significativamente
+
+#### Stepwise Regression
