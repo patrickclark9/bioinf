@@ -340,6 +340,27 @@ In un buon modello QSAR, il numero di molecole nel training set **eccede** il nu
 	- in un approccio QSAR, non è troppo problematico che l'equazione si adatti alle peculiarità dell'insieme di addestramento. È comunque importante non fittare troppo i dati, in quanto può produrre modelli inutili dal punto di vista della predicibilità
 
 #### Modelli Lineari
+##### Regressione Lineare Semplice
 Nella forma più semplice di un modello QSAR si ha un modello lineare a singolo descrittore, ed è un modello di regressione lineare semplice
 $$y = \beta_o + \beta_1X$$
-Con $\beta_0$ intercetta sull'asse delle ordinate e 
+Con $\beta_0$ intercetta sull'asse delle ordinate e $\beta_1$ la pendenza della retta.
+![[Pasted image 20260807163818.png]]
+
+##### Regressione Multipla:
+Non è sempre possibile correlare attività biologica con un singolo descrittore, motivo per cui si può estendere il modello QSAR ad utilizzare più descrittori.
+In questo caso si fa utilizzo del metodo di regressione multipla MLR.
+In questo modello, la linearità viene mantenuta per ognuno dei descrittori individualmente
+$$\text{activity} = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_3x_3 + ... + \beta_nx_n$$
+con $\beta_k$ coefficienti e $x_k$ descrittori.
+
+In questo esempio si vede che la regressione singola per ogni singolo descrittore non produceva una buona correlazione (r =<0.40). L'utilizzo di più descrittori insieme mediante regressione multipla invece produce modelli più accurati (r > 0.8)
+![[Pasted image 20260807164129.png]]
+
+##### Analisi dell'equazione MLR
+Uno dei motivi per cui si utilizza la QSAR è anche quello di comprendere quali forze governano l'attività di una particolare classe di composti, ed aiutare nel design di farmaci.
+Le analisi QSAR aiutano a comprendere la relativa importanza dei descrittori utilizzati, andando a valutare il contributo dei singoli descrittori utilizzati nel modello.
+![[Pasted image 20260807164607.png]]
+#### Modelli Non Lineari
+
+Una equazione non lineare invece è una estensione del modello di regressione multipla. In alcuni sistemi la linearità potrebbe non essere sufficiente per raggiungere una buona correlazione.
+Il termine parabolico introdotto da Hansch fu il primo termine non lineare introdotto.
