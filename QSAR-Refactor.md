@@ -333,7 +333,8 @@ In un buon modello QSAR, il numero di molecole nel training set **eccede** il nu
 
 ## Costruzione del modello QSAR
 
-1. Data Matrix -> Matrice Composti e attività + descrittori 
-
-![[Pasted image 20260807161631.png]]
-2. Analisi grafica dei dati per una preliminare interpretazione dei dati
+1. Data Matrix -> Matrice Composti e attività + descrittori ![[Pasted image 20260807161631.png]]
+2. Analisi grafica dei dati per una preliminare interpretazione dei dati: Aiuta a comprendere se i dati sono ordinati, se sono visibili pattern noti, se questi pattern sono traducibili in espressioni chimico-fisiche![[Pasted image 20260807161745.png]]
+3. Scelta dell'equazione: L'analisi preliminare dovrebbe aiutare nella scelta della corretta equazione, che contenga informazioni che riflettono il comportamento e permettono una interpretazione strutturale del sistema. La scelta dell'equazione dipende dalla forma dell'equazione matematica e dal numero di descrittori presi in considerazione. L'analisi può essere una regressione lineare, un modello parabolico, una regressione multipla, o altro.![[Pasted image 20260807162215.png]]
+4. Il modello QSAR può essere skewed non intenzionalmente dalla scelta di un modello matematico troppo potente. Un'equazione che modella i dati di un training set può produrre un'equazione che è perfetta per i dati di addestramento ma inutile per dati non noti. Questo fenomeno è noto come overfitting![[Pasted image 20260807162727.png]]
+5. 
