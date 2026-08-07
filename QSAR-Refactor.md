@@ -268,3 +268,19 @@ I descrittori possono essere quindi tantissimi. L'utilizzo di un gran numero di 
 Inoltre utilizzare troppi descrittori può facilmente rendere il modello peggiore a causa dell'overfitting.
 Diventa quindi fondamentale e cruciale identificare descrittori che sono rilevanti per un dato problema, quindi identificare i descrittori **rilevanti** e quelli **irrilevanti**, ovvero che ci permettono di differenziare molecole che possiedono una determinata proprietà e quelli che non la possiedono.
 I descrittori possono essere estratti sperimentalmente, oppure calcolati. Quelli sperimentali sono spesso complessi da ottenere.
+
+
+# Modellazione
+La costruzione di un modello QSAR è un processo iterativo:
+1. Selezione dei composti
+2. Selezione dei descrittori
+3. Si deriva l'equazione da un insieme iniziale di descrittori
+4. Validazione
+5. Si migliora il modello aggiungendo/rimuovendo descrittori
+6. Si rifinisce l'equazione
+
+## Selezione di Composti
+
+Si inizia costruendo e assemblando un insieme di composti con attività biologica nota. Vanno scelte molecole che definiscono un insieme omogeneo e che meglio rappresentano un determinato sistema.
+I composti selezionati per una QSAR dovrebbero coprire un grosso range di valori per i descrittori rilevanti per l'attività biologica.
+Ciò incrementa la probabilità che futuri composti avranno descrittori nel range definito e permette di ottenere predizioni interpolative al posto di estrapolative
