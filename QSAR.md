@@ -18,4 +18,22 @@ Le costanti di dissociazione degli acidi aromatici sono influenzate dalle propri
 Poichè le costandi di dissociazione sono associate con l'energia libera, questa è anche nota come **relazione lineare dell'energia libera**
 $$\log\frac{K}{K_0} = \rho\sigma$$
 dove
-- $\rho$ -> Mette in relazione uno scaffold/equilibrio con un acido benzoico di riferimen
+- $\rho$ -> Mette in relazione uno scaffold/equilibrio con un acido benzoico di riferimento
+- $\sigma$ -> Un descrittore di un sostituenti che descrive la sua influenza sulla dissociazione. È positivo per gruppi accettori di elettroni e negativo per gruppi donatori di elettroni
+
+## Contributo di Hansch
+Hansch riconobbe l'importanza dello lipofilicità per l'attività biologica, in quanto i farmaci devono essere in grado di attraversare il bilayer di membrana per raggiungere i target.
+Introduce il $\log P$ (coefficiente di partizione tra 1-octanolo e fase acquosa) come misura della lipofilicità.
+Venne introdotto poi un termine parabolico per il $\log P$ per tenere conto di molecole che rimangono intrappolate nella membrana e che non possono raggiungere il sito di azione.
+$$\log \frac{1}{C} = a(\log P)^2 + b \log P + c\sigma + dE_s + e$$
+
+## Analisi di Free-Wilson
+Questo modello matematico  invece si basa sull'ipotesi che l'attività biologica è la somma di tutti i contributi elementari dei sostituenti.
+Utilizza variabili indicatore ($x_i$ con valori di 1 o 0) per descrivere la presenza o l'assenza di un sostituente in  una specifica posizione di scaffold.
+
+$$\log \frac{1}{C} = \sum{a_ix_i+\mu}$$
+Dove $a_i$ è il peso del sostituente e $\mu$ e l'attività media.
+
+## Descrittori Molecolari
+
+I descrittori molecolari sono nu
