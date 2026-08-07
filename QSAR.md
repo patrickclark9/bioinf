@@ -67,7 +67,8 @@ L'equazione di Hammet correlate le proprietà elettriche degli acidi e basi orga
 La dissociazione consiste nella rimozione di un protone dal composto neutrale, lasciando un anione. La reazione viene misurata dalla costante di dissociazione $K$.
 Le costanti di dissociazione degli acidi aromatici sono influenzate dalle proprietà elettroniche dei sostituenti sull'**anello fenile**.
 Le costanti di dissociazione di acidi benzoici e fenilacetici sostiuiti indicano che gruppi electron-withdrawing incrementano la dissociazione, mentre gruppi electron-donating diminuiscono la dissociazione.
-Poichè le costanti di dissociazione sono associate con l'energia libera, questa è anche nota come **relazione lineare dell'energia libera**
+![[Pasted image 20260807095916.png]]
+Poichè le costanti di dissociazione sono associate con l'energia libera $\Delta G = -RT\log K$, questa è anche nota come **relazione lineare dell'energia libera**
 $$\log\frac{K}{K_0} = \rho\sigma$$
 dove
 - $K$ -> Costante di reazione per il composto sostituito
@@ -81,7 +82,7 @@ Compara una proprietà molecolare, la costante di dissociazione, con un insieme 
 Il valore di $\sigma$ differisce se il sostituente è meta o para.
 In chimica organica, ==**orto, meta e para** indicano le posizioni relative di due sostituenti su un anello benzenico==. La posizione **orto** (1,2) è vicina, **meta** (1,3) è separata da un carbonio e **para** (1,4) è opposta
 ## Contributo di Hansch
-Hansch riconobbe l'importanza dello lipofilicità per l'attività biologica, in quanto i farmaci devono essere in grado di attraversare il bilayer di membrana per raggiungere i target.
+Hansch riconobbe l'importanza dello lipofilicità per l'attività biologica, in quanto i farmaci devono essere in grado di attraversare il bilayer di membrana per raggiungere i target. La lipofilicità è correlata alla presenza di gruppi idrofobici e all'assenza di gruppi polari e ionizzabili.
 Introduce il $\log P$ (coefficiente di partizione tra 1-octanolo e fase acquosa) come misura della lipofilicità.
 Venne introdotto poi un termine parabolico per il $\log P$ per tenere conto di molecole che rimangono intrappolate nella membrana e che non possono raggiungere il sito di azione.
 $$\log \frac{1}{C} = a(\log P)^2 + b \log P + c\sigma + dE_s + e$$
