@@ -71,7 +71,8 @@ dove
 - $k$ -> Costante di reazione per il composto sostituito
 - $k_0$ -> Costante di reazione per il composto di riferimento
 - $\rho$ -> Mette in relazione uno scaffold/equilibrio con un acido benzoico di riferimento
-- $\sigma$ -> Un descrittore di un sostituente che descrive la sua influenza sulla dissociazione. È positivo per gruppi accettori di elettroni e negativo per gruppi donatori di elettroni
+- $\sigma$ -> Un descrittore che quantifica l'effetto di un sostituente, descrivendo la sua influenza sulla dissociazione. È positivo per gruppi accettori di elettroni e negativo per gruppi donatori di elettroni. Descrive come un sostituente cambia il carattere eletronico di una molecola relativo all'idrogeno.
+	- Effetto mesomerico -> Risonanza dell'orbitale p, relazionata alla topologia 
 
 ## Contributo di Hansch
 Hansch riconobbe l'importanza dello lipofilicità per l'attività biologica, in quanto i farmaci devono essere in grado di attraversare il bilayer di membrana per raggiungere i target.
