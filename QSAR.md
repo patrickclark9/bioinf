@@ -19,7 +19,7 @@ con
 
 La QSAR ci permette di:
 - Rivelare informazioni riguardo il sito di legame di un recettore.
-- Il modello può essere utilizzato per predire l'attività biologica di analoghi che non sono stati sintetizzati.
+- Il modello può essere utilizzato per predire l'attività biologica di analoghi che non sono stati sintetizzati. Una volta definito il modello, che riproduce correttamente dati noti,  questo può essere usato per predire l'attività biologica di analoghi non ancora sintetizzati
 - In chimica combinatoriale, la QSAR riduce grosse librerie virtuali in dimensioni pratiche per sintesi e screening
 
 È importante distinguere la struttura molecolare dai descrittori:
@@ -55,7 +55,10 @@ In una relazione quantitativa:
 
 I coefficienti ci danno direzione e contributo approssimativo del descrittore
 
-Ad esempio $$\text{Activity} = 2 +1.5(\text{parametro sterico})$$
+Ad esempio $$\text{Activity} = 2 +1.5\log P$$
+Significa che all'interno di questa serie chimica e dominio, incrementare logP è associato con incremento nell'attività predetta.
+
+Questo non significa automaticamente che incrementare logP causa l'incremento di attività
 
 La QSAR moderna si basa su 3 contributi: Equazione di Hammet, contributo di Hansch e Analisi di Free-Wilson.
 ## Equazione di Hammet
@@ -65,6 +68,8 @@ Le costanti di dissociazione degli acidi aromatici sono influenzate dalle propri
 Poichè le costandi di dissociazione sono associate con l'energia libera, questa è anche nota come **relazione lineare dell'energia libera**
 $$\log\frac{K}{K_0} = \rho\sigma$$
 dove
+- $k$ -> Costante di reazione per il composto sostituito
+- $k_0$ -> Costante di reazione per il composto di riferimento
 - $\rho$ -> Mette in relazione uno scaffold/equilibrio con un acido benzoico di riferimento
 - $\sigma$ -> Un descrittore di un sostituente che descrive la sua influenza sulla dissociazione. È positivo per gruppi accettori di elettroni e negativo per gruppi donatori di elettroni
 
