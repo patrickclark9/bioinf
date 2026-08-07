@@ -1,14 +1,14 @@
-# QSAR
+# [[QSAR]]
 
 ## Introduzione
 
-La **QSAR** (Quantitative Structure-Activity Relationship) è un approccio che tenta di formulare la relazione tra una struttura molecolare e la sua attività biologica, sotto forma di un modello matematico.
+La **[[QSAR]]** (Quantitative Structure-Activity Relationship) è un approccio che tenta di formulare la relazione tra una struttura molecolare e la sua attività biologica, sotto forma di un modello matematico.
 
-La **QSPR** (Quantitative Structure-Property Relationship) è un'estensione della QSAR che correla la struttura molecolare con qualsiasi altra proprietà molecolare, come solubilità, stabilità metabolica, ecc.
+La **QSPR** (Quantitative Structure-Property Relationship) è un'estensione della [[QSAR]] che correla la struttura molecolare con qualsiasi altra proprietà molecolare, come solubilità, stabilità metabolica, ecc.
 
 > Per la costruzione di un modello è impossibile connettere tutte le proprietà alla struttura simultaneamente: ogni singola proprietà va considerata una per volta.
 
-La QSAR tenta di stabilire una relazione matematica tra una struttura molecolare e una proprietà chimica/biologica. Dati _k_ composti, i **descrittori** descrivono la struttura chimica, mentre l'**attività** è la quantità da valutare/predire.
+La [[QSAR]] tenta di stabilire una relazione matematica tra una struttura molecolare e una proprietà chimica/biologica. Dati _k_ composti, i **descrittori** descrivono la struttura chimica, mentre l'**attività** è la quantità da valutare/predire.
 
 Ponendo la risposta biologica sperimentale come attività:
 
@@ -20,9 +20,9 @@ dove:
 - $\beta_1, \beta_2, \beta_3$ → coefficienti stimati da dati sperimentali
 - $\beta_0$ → intercetta
 
-Questo è un esempio di modello QSAR semplice.
+Questo è un esempio di modello [[QSAR]] semplice.
 
-### A cosa serve la QSAR
+### A cosa serve la [[QSAR]]
 
 - Rivelare informazioni riguardo il sito di legame di un recettore.
 - Predire l'attività biologica di analoghi non ancora sintetizzati: una volta definito un modello che riproduce correttamente i dati noti, può essere usato per predire l'attività di nuovi analoghi.
@@ -63,9 +63,9 @@ $$\text{Struttura} \rightarrow \text{Descrittore}$$
 
 > Spesso l'attività viene trasformata in scala logaritmica per ottenere una scala meglio rappresentabile.
 
-### Da SAR qualitativa a QSAR quantitativa
+### Da SAR qualitativa a [[QSAR]] quantitativa
 
-La QSAR diventa _quantitativa_ perché tenta di trasformare una semplice SAR (Structure-Activity Relationship qualitativa):
+La [[QSAR]] diventa _quantitativa_ perché tenta di trasformare una semplice SAR (Structure-Activity Relationship qualitativa):
 
 > "Aggiunta di un gruppo idrofobico aumenta l'attività"
 
@@ -79,7 +79,7 @@ $$\text{Activity} = 2 + 1.5\log P$$
 
 Significa che, all'interno di questa serie chimica e dominio, incrementare logP è associato a un incremento nell'attività predetta — **non** che l'incremento di logP _causi_ automaticamente l'incremento di attività.
 
-La QSAR moderna si basa su tre contributi principali: **Equazione di Hammett**, **Contributo di Hansch**, **Analisi di Free-Wilson**.
+La [[QSAR]] moderna si basa su tre contributi principali: **Equazione di Hammett**, **Contributo di Hansch**, **Analisi di Free-Wilson**.
 
 ---
 
@@ -111,7 +111,7 @@ L'equazione di Hammett è un esempio di **QSPR**: compara una proprietà molecol
 
 > Il valore di σ differisce a seconda che il sostituente sia in posizione **meta** o **para**.
 
-**Nomenclatura orto/meta/para**: in chimica organica indicano le posizioni relative di due sostituenti su un anello benzenico:
+**[[Nomenclatura]] orto/meta/para**: in chimica organica indicano le posizioni relative di due sostituenti su un anello benzenico:
 
 - **Orto** (1,2) → posizioni adiacenti
 - **Meta** (1,3) → separate da un carbonio
@@ -134,7 +134,7 @@ $$P = \frac{[\text{farmaco}]_{organico}}{[\text{farmaco}]_{acquoso}}$$
 
 **Prima formulazione** (un solo descrittore): $$\text{Activity} = f(\log P)$$
 
-Venne poi introdotto un **termine parabolico** per il logP, per tenere conto delle molecole che rimangono intrappolate nella membrana e non possono raggiungere il sito d'azione. L'equazione QSAR fu quindi ampliata con nuovi descrittori:
+Venne poi introdotto un **termine parabolico** per il logP, per tenere conto delle molecole che rimangono intrappolate nella membrana e non possono raggiungere il sito d'azione. L'equazione [[QSAR]] fu quindi ampliata con nuovi descrittori:
 
 $$\log \frac{1}{C} = a(\log P)^2 + b \log P + c\sigma + dE_s + e$$
 
@@ -198,7 +198,7 @@ Il modello si costruisce a partire da una **matrice strutturale** composta da va
 
 ![[Pasted image 20260807111056.png]]
 
-Si utilizza poi la **regressione multipla lineare** per derivare l'equazione QSAR dalla matrice strutturale:
+Si utilizza poi la **regressione multipla lineare** per derivare l'equazione [[QSAR]] dalla matrice strutturale:
 
 $$\text{Activity} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 ...$$
 
@@ -215,7 +215,7 @@ $$\text{Activity} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 ...$$
 #  Descrittori Molecolari
 
 
-Tutte le equazioni QSAR hanno proprietà molecolari espresse come una funzione di specifici descrittori. Differiscono nelle proprietà che correlano, nei descrittori utilizzati e nell'espressione matematica del modello
+Tutte le equazioni [[QSAR]] hanno proprietà molecolari espresse come una funzione di specifici descrittori. Differiscono nelle proprietà che correlano, nei descrittori utilizzati e nell'espressione matematica del modello
 ![[Pasted image 20260807115016.png]]
 I descrittori molecolari sono numeri che catturno la struttura e le proprietà fisico-chimiche della molecola. Per essere utili, i descrittori devono essere biologicamente rilevanti, cioè devono essere in grado di differenziare le molecole attive da quelle inattive.
 
@@ -235,7 +235,7 @@ Si converte la molecola in una serie di descrittori $X_1, X_2, ...,X_k$.
 	- Indice di Wiener
 	- Indici di connettività
 	- Indici basati su grafi
-- Non richiedono struttura 3D. È il motivo per cui questa è chiamata 2D QSAR
+- Non richiedono struttura 3D. È il motivo per cui questa è chiamata 2D [[QSAR]]
 
 ### Fisico-Chimici
 - Sono i descrittori come:
@@ -245,10 +245,9 @@ Si converte la molecola in una serie di descrittori $X_1, X_2, ...,X_k$.
 	- Accettori di legami idrogeno
 - Influenzano
 	- Permeabilità di membrana
-	- Solubilità
-	- Interazioni molecolari
+	- SolubilitàQ
 	- Partizionamento
-	- Legame a proteine
+	- Legame a [[proteine]]
 ### Elettronici
 - Descrivono le caratteristiche elettroniche
 	- Carica
