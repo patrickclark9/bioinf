@@ -460,3 +460,29 @@ Is the model statistically robust and properly validated?
 Can it successfully predict new compounds?
 
 A model should ideally satisfy **all four**, rather than merely having a high R2.
+# Why R2 alone is insufficient
+
+Suppose:
+
+R2=0.98
+
+It is tempting to conclude:
+
+> Excellent QSAR model.
+
+But that can be misleading.
+
+A sufficiently complex model can achieve a very high R2 simply because it has enough parameters to fit the training data.
+
+Therefore, you need to consider things such as:
+
+- training performance
+- test-set performance
+- cross-validation
+- number of descriptors
+- dataset size
+- outliers
+- applicability domain
+- chemical diversity
+
+This is essentially the reason separates **modelling** from **model quality**.
