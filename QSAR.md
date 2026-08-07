@@ -118,6 +118,7 @@ Utilizza variabili indicatore ($x_i$ con valori di 1 o 0) per descrivere la pres
 $$\log \frac{1}{C} = \sum{a_ix_i+\mu}$$
 Dove $a_i$ è il peso del sostituente e $\mu$ e l'attività media.
 Funziona particolarmente bene quando si studia una serie congenerica, dove i composti differiscono per sostituzioni sistematiche. Il modello è però costretto ad una particolare modifica struttura presente nel dataset.
-
-## Descrittori Molecolari
-I descrittori molecolari sono numeri che catturno la struttura e le proprietà fisico-chimiche della molecola. Per essere utili, i descrittori devono essere biologicamente rilevanti, cioè devono essere in grado di differenziare le molecole attive da quelle inattive.
+Il modello QSAR di Free-Wilson si costruisce sulla base di una matrice strutturale composta da variabili indicatore:
+![[Pasted image 20260807111056.png]]
+Dopodichè si utilizza la regressione multipla lineare per derivare l'equazione QSAR dalla matrice strutturale:
+$$\text{Activity}=\beta_0​+\beta_1​X_1​​+\beta_2​ X_2​+\beta_3​X_3 ...$$
