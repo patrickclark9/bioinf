@@ -35,5 +35,4 @@ $$\log \frac{1}{C} = \sum{a_ix_i+\mu}$$
 Dove $a_i$ è il peso del sostituente e $\mu$ e l'attività media.
 
 ## Descrittori Molecolari
-
-I descrittori molecolari sono nu
+I descrittori molecolari sono numeri che catturno la struttura e le proprietà fisico-chimiche della molecola. Per essere utili, i descrittori devono essere biologicamente rilevanti, cioè devono essere in grado di differenziare le molecole attive da quelle inattive.
