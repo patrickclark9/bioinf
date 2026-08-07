@@ -25,6 +25,37 @@ La QSAR ci permette di:
 È importante distinguere la struttura molecolare dai descrittori:
 - La struttura molecolare è l'effettiva struttura rappresentata in 2D, come SMILES, o grafico molecolare
 	- Benzene -> benzene sostituito -> fenolo sostituito
+- Un descrittore molecolare è una rappresentazione numerica di una proprietà della struttura
+	- molecular weight
+	- logP
+	- polar surface area
+	- number of H-bond donors
+	- number of H-bond acceptors
+	- molecular volume
+	- polarizability
+	- topological indices
+	- electronic parameters
+Quindi **Struttura -> Descrittore**
+L'attività invece è una quantità sperimentale da predire/spiegare:
+- IC50
+- EC50
+- Affinità di binding
+- Percentuale di inibizione
+- Tossicità
+- Attività enzimatica
+- Rate di reazione
+
+Spesso trasformiamo l'attività in scala logaritmica per produrre una scala meglio rappresentabile.
+La QSAR è diventa quantitativa perchè si tenta di trasformare la semplice SAR:
+> Aggiunta di un gruppo idrofobico aumenta l'attività
+
+In una relazione quantitativa:
+
+> $\text{Activity} = 2.3+1.4(\text{lipofilicità}) -0.8(\text{parametro sterico})$
+
+I coefficienti ci danno direzione e contributo approssimativo del descrittore
+
+Ad esempio $$\text{Activity} = 2 +1.5(\text{parametro sterico})$$
 
 La QSAR moderna si basa su 3 contributi: Equazione di Hammet, contributo di Hansch e Analisi di Free-Wilson.
 ## Equazione di Hammet
@@ -35,7 +66,7 @@ Poichè le costandi di dissociazione sono associate con l'energia libera, questa
 $$\log\frac{K}{K_0} = \rho\sigma$$
 dove
 - $\rho$ -> Mette in relazione uno scaffold/equilibrio con un acido benzoico di riferimento
-- $\sigma$ -> Un descrittore di un sostituenti che descrive la sua influenza sulla dissociazione. È positivo per gruppi accettori di elettroni e negativo per gruppi donatori di elettroni
+- $\sigma$ -> Un descrittore di un sostituente che descrive la sua influenza sulla dissociazione. È positivo per gruppi accettori di elettroni e negativo per gruppi donatori di elettroni
 
 ## Contributo di Hansch
 Hansch riconobbe l'importanza dello lipofilicità per l'attività biologica, in quanto i farmaci devono essere in grado di attraversare il bilayer di membrana per raggiungere i target.
