@@ -5,12 +5,28 @@ La QSPR invece è una estensione della QSAR che correla la struttura molecolare 
 
 Per la costruzione di un modello, è impossibile connettere tutte le proprietà alla struttura simultaneamente, motivo per cui ogni singola proprietà va considerata una per volta.
 
+La QSAR tenta di stabilire una relazione matematica tra una struttura molecolare e proprietà chimica/biologica.
+Dati k composti, i descrittori descrivono la struttura chimica, mentre l'attività è la quantità che bisogna valutare/predire.
+
+Ponendo la risposta biologica sperimentale come l'attività
+$$Activity = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3X_3$$
+con 
+- $X_1, X_2, X_3,...$ descrittori molecolari
+- $\beta_1,\beta_2. \beta_3$ coefficienti stimati da dati sperimentali
+- $\beta_0$ intercetta
+È un esempio di modello QSAR semplice.
+
+
 La QSAR ci permette di:
 - Rivelare informazioni riguardo il sito di legame di un recettore.
 - Il modello può essere utilizzato per predire l'attività biologica di analoghi che non sono stati sintetizzati.
 - In chimica combinatoriale, la QSAR riduce grosse librerie virtuali in dimensioni pratiche per sintesi e screening
 
-La QSAR moderna si basa su 3 contributi:
+È importante distinguere la struttura molecolare dai descrittori:
+- La struttura molecolare è l'effettiva struttura rappresentata in 2D, come SMILES, o grafico molecolare
+	- Benzene -> benzene sostituito -> fenolo sostituito
+
+La QSAR moderna si basa su 3 contributi: Equazione di Hammet, contributo di Hansch e Analisi di Free-Wilson.
 ## Equazione di Hammet
 
 L'equazione di hammet correlate le proprietà elettriche degli acidi e basi organiche con le costanti di equilibrio.
