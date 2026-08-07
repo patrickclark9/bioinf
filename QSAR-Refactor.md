@@ -213,11 +213,14 @@ $$\text{Activity} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_3 ...$$
 | **Free-Wilson** | Attività come somma di contributi additivi dei sostituenti                           | Variabili indicatore ($x_i$) |
 
 #  Descrittori Molecolari
+
+
+Tutte le equazioni QSAR hanno proprietà molecolari espresse come una funzione di specifici descrittori. Differiscono nelle proprietà che correlano, nei descrittori utilizzati e nell'espressione matematica del modello
+![[Pasted image 20260807115016.png]]
 I descrittori molecolari sono numeri che catturno la struttura e le proprietà fisico-chimiche della molecola. Per essere utili, i descrittori devono essere biologicamente rilevanti, cioè devono essere in grado di differenziare le molecole attive da quelle inattive.
 
 Si converte la molecola in una serie di descrittori $X_1, X_2, ...,X_k$.
 
-Tutte le equazioni QSAR hanno proprietà molecolari espresse come una funzione di specifici descrittori. Differiscono nelle proprietà che correlano, nei descrittori utilizzati e nell'espressione matemat
 
 ## Classi di Descrittori
 ### Costituzionali
@@ -263,4 +266,6 @@ I descrittori possono essere quindi tantissimi. L'utilizzo di un gran numero di 
 - Correlati tra loro
 - Irrilevanti
 - Rumorosi
-Inoltre utilizzare troppi descrittori può facilmente rendere il modello peggiore. 
+Inoltre utilizzare troppi descrittori può facilmente rendere il modello peggiore a causa dell'overfitting.
+Diventa quindi fondamentale e cruciale identificare descrittori che sono rilevanti per un dato problema, quindi identificare i descrittori **rilevanti** e quelli **irrilevanti**, ovvero che ci permettono di differenziare molecole che possiedono una determinata proprietà e quelli che non la possiedono.
+I descrittori possono essere estratti sperimentalmente, oppure calcolati. Quelli sperimentali sono spesso complessi da ottenere.
