@@ -385,4 +385,34 @@ I modelli vengono validati:
 
 ### Deviazione standard
 Misura più semplice. Si va a validare il modello computando l'errore standard o deviazione standard $\sigma$. Calcolata come la media del quadrato della deviazione di ogni residuo dalla media. Questo indice riflette la deviazione tra dati e modello. Tanto più stretta, tanto più il modello performa bene
-$$\sigma = \sqrt{\frac{\sum {y_{obs} - y_}}{}}$$ 
+$$\sigma = \sqrt{\frac{\sum {(y_{obs} - y_{calc})^2}}{n-m-1}}$$ con $n$ dimensione del campione, $m$ numero di descrittori, $y_{obs}$ attività osservata, $y_{calc}$ attività calcolata
+
+### Indice di correlazione
+L'indice di correlazione $r^2$, che è il quadrato del coefficiente di correlazione. $r^2$ misura il grado di correlazione tra i valori di attività calcolati dal modello e quelli misurati sperimentalmente.
+$r^2 \in [0,1]$
+![[Pasted image 20260807172125.png]]
+
+### T-test
+Il test di Student utilizza la distribuzione t per testare se il coefficiente di correlazione ottenuto dalla QSAR è significativamente diverso da 0.
+Tanto più grande $t$, tanto più grande la probabilità che $r^2$ differisca da 0, ovvero è più probabile che il descrittore utilizzato per l'analisi sia rilevante per l'attività.
+
+1. Si calcola $t$ come $t = r\sqrt{\frac{N-2}{1-r^2}}$
+2. Si seleziona un grado di significatività (e.g. 0.05)
+3. Si cerca il valore di $t$ all'interno della distribuzione T derivato per il corretto numero di campioni N al livello di significatività posto
+4. Se il valore di $t$ calcolato è più grande del valore di $t$ tabulato, allora l'equazione di regressione è significativa a quel dato grado di significatività
+- **One-Sample t-Test**: Compares the mean of a single group against a known or target value. 
+
+- **Independent Two-Sample t-Test**: Compares the means of two completely separate and unrelated groups (such as a control group vs. a treatment group).
+
+- **Paired Samples t-Test**: Compares the means from the same group at two different times, such as a "before and after" intervention measurement.
+
+#### Assunzioni
+- I campioni seguono distribuzione circa Normale
+- I campioni sono indipendenti tra loro
+- Nella variante indipendente, i due gruppi di campioni devono avere varianza simile
+### F-test
+Simile al T-test come svolgimento ma utilizza la distribuzione F di Fisher
+
+#### Assunzioni
+- I campioni seguono distribuzione circa Normale
+- I camp
