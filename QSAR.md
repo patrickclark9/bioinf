@@ -86,9 +86,10 @@ Hansch riconobbe l'importanza dello lipofilicità per l'attività biologica, in 
 Introduce il $\log P$ (coefficiente di partizione tra fase lipidica (1-octanolo) e fase acquosa) come misura della lipofilicità.
 Venne introdotto poi un termine parabolico per il $\log P$ per tenere conto di molecole che rimangono intrappolate nella membrana e che non possono raggiungere il sito di azione.
 $$P = \frac{[farmaco]_{organico}}{[farmaco]_{acquoso}}$$
-Dove per P>1 (logP>0) la molecola è lipofilica, P < 1 (logP<0) è idrofobica. 
+Dove per P>1 (logP>0) la molecola è lipofilica, P < 1 (logP<0) è idrofobica.
+Prima formulazione: $$\text{Activity} = f(\log P)$$
+Eventualmente l'equazione QSAR venne ampliata introducendo nuovi descrittori, in quanto la prima formulazione prevedeva un solo descrittore:
 $$\log \frac{1}{C} = a(\log P)^2 + b \log P + c\sigma + dE_s + e$$
-Eventualmente l'equazione QSAR venne ampliata introducendo nuovi descrittori:
 $\sigma$ -> Descrittore Elettronico
 $Es$ -> Descrittore di Taft -> È la costante sterica, un valore sperimentale basato su costanti del rate di un dato modello di reazione. Misura l'effetto sterico esercitato da un sostituente sull'equilibrio. Più grosso il sostituente, più negativo sarà $Es$.
 $$Es = \log K_x - \log K_H$$
@@ -104,14 +105,19 @@ Con:
 - n -> indice di rifrazione
 - MW -> Peso molecolare
 
-Il termine quadratico $(\log P)^2$ è particolarmente interessante perchè l'attività biologica non incrementa indefinitivamente con la lipofilicità, esistono punti di massimo globale/locale.
+Il termine quadratico (parabolico) $(\log P)^2$ è particolarmente interessante perchè l'attività biologica non incrementa indefinitivamente con la lipofilicità, esistono punti di massimo globale/locale.
 $$\text{Activity} = a\log P - b(\log P)^2$$
+produce una relazione a U. Un composto troppo idrofilico non attraversa la membrana, ma egualmente un composto troppo idrofobico presenta problemi di solubilità, binding non specifico, o rimane intrappolato nelle membrane idrofobiche.
+
+![[Pasted image 20260807110201.png]]
 ## Analisi di Free-Wilson
-Questo modello matematico  invece si basa sull'ipotesi che l'attività biologica è la somma di tutti i contributi elementari dei sostituenti.
+Questo modello matematico invece si basa sull'ipotesi che l'attività biologica è la somma di tutti i contributi elementari dei sostituenti.
+Invece di descrivere i sostituenti attraverso proprietà fisico-chimiche, rappresenta le modifiche strutturali con **variabili indicatore**.
 Utilizza variabili indicatore ($x_i$ con valori di 1 o 0) per descrivere la presenza o l'assenza di un sostituente in  una specifica posizione di scaffold.
 
 $$\log \frac{1}{C} = \sum{a_ix_i+\mu}$$
 Dove $a_i$ è il peso del sostituente e $\mu$ e l'attività media.
+Funziona particolarmente bene quando si studia una serie congenerica, dove i composti differiscono per sostituzioni sistematiche. Il modello è però costretto ad una particolare modifica struttura presente nel dataset.
 
 ## Descrittori Molecolari
 I descrittori molecolari sono numeri che catturno la struttura e le proprietà fisico-chimiche della molecola. Per essere utili, i descrittori devono essere biologicamente rilevanti, cioè devono essere in grado di differenziare le molecole attive da quelle inattive.
