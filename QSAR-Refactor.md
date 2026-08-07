@@ -364,3 +364,16 @@ Le analisi QSAR aiutano a comprendere la relativa importanza dei descrittori uti
 
 Una equazione non lineare invece è una estensione del modello di regressione multipla. In alcuni sistemi la linearità potrebbe non essere sufficiente per raggiungere una buona correlazione.
 Il termine parabolico introdotto da Hansch fu il primo termine non lineare introdotto.
+Ad esempio, l'attività di anticonvulsionanti in un insieme di molecole venne inizialmente trovata come linearmente correlata alla $\log P$ (idrofobicità). Erà però implauisibile assumere che l'attività biologica potesse aumentare indefinitivamente con la lipofilicità delle molecole. È noto che composti troppo lipofilici non possono raggiungere il sito di interesse perchè rimangono incastrati nella membrana, o sono poco solubili.
+L'utilizzo di una equazione non lineare ha permesso di dimostrare che esiste un punto di massimo, in cui l'attività raggiungeva il massimo possibile, prima di incominciare a decresce all'aumentare della idrofobicità
+
+![[Pasted image 20260807165100.png]]
+
+##### Modelli Non lineari utilizzati
+I modelli non lineari vengono utilizzati per la cinetica del trasporto di molecole, l'equilibrio della sua distribuzione, effetti allosterici, farmacocinetica, metabolismo, solubilità ecc... .
+Alcuni dei modelli utilizzati sono:
+- Modello Parabolico (Hansch) -> $\log \frac{1}{C} =  a(\log P)^2 +b\log P + c$
+- Modello Probabilistico (McFarland) -> $\log \frac{1}{C} =  a(\log P) -2a\log (P+1) + c$
+- Modello di Equilibrio (Hyde) -> $\log \frac{1}{C} =  a(\log P)-\log (aP+1) + c$
+- Modello Bilineare (Kubinyi) -> $\log \frac{1}{C} =  a(\log P) -b\log (\beta P+1) + c$
+
