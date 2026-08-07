@@ -279,13 +279,6 @@ La costruzione di un modello QSAR è un processo iterativo:
 5. Si migliora il modello aggiungendo/rimuovendo descrittori
 6. Si rifinisce l'equazione
 
-### Attività biologica in termini di 1/C
-
-Per riflettere la variazione di energia libera che avviene in un'azione biologica, queste vengono rappresentate come logaritmo della concentrazione del composto ($\log \frac{1}{C}$), dove $C$ è la concentrazione di composto richiesta per produrre una data risposta standard.
-$$E+S \rightarrow ES$$
-$$K = \frac{[ES]}{[E][S]}$$
-$$\Delta G  = -RT\log K \approx \log \frac{1}{[S]}$$
-$$\Delta G \approx \log \frac{1}{[C]}$$
 
 ## Selezione di Composti
 
@@ -297,9 +290,24 @@ Ciò incrementa la probabilità che futuri composti avranno descrittori nel rang
 - **Interpolation**: Estimates a value _inside_ the range of known data points. It fills in missing intermediate values or gaps.
 
 - **Extrapolation**: Estimates a value _outside_ the range of known data points. It projects trends into the unknown future or past
+### Attività biologica in termini di 1/C
+
+Per riflettere la variazione di energia libera che avviene in un'azione biologica, queste vengono rappresentate come logaritmo della concentrazione del composto ($\log \frac{1}{C}$), dove $C$ è la concentrazione di composto richiesta per produrre una data risposta standard. Attività biologiche devono essere accurate e devono avere span di 2-3 ordini di grandezza
+$$E+S \rightarrow ES$$
+$$K = \frac{[ES]}{[E][S]}$$
+$$\Delta G  = -RT\log K \approx \log \frac{1}{[S]}$$
+$$\Delta G \approx \log \frac{1}{[C]}$$
 
 ### Outlier
 Il modellamento QSAR si basa sull'assunzione di omogeneità e sull'assenza di outlier all'interno del training set.
 Un outlier può essere una molecola che si comporta differentemente, un valore incorretto o con attività biologica differente.
 Un numero elevato di molecole e ripetute misurazioni aiutano a ridurre le distorsioni imposte dall'outlier.
 
+## Selezione dei Descrittori
+Un buon modello QSAR è caratterizzato da un piccolo numero di descrittori scelti accuratamente. Quando troppi descrittori vengono analizzati, incrementa la probabilità che una correlazione casuale possa avenire
+### Manuale
+Si basa sulla conoscenza del SAR, si scelgono manualmente i descrittori per l'analisi. Ad esempio se analisi preliminari mostrano che sostituenti idrofobici o sterici incrementano l'attività, allora descrittori come $MR$ e $\pi$ saranno sicuramente rilevanti.
+
+### Automatica
+Si utilizza un metodo di scoring e ranking automatizzato per andare a selezionare automaticamente i descrittori più rilevanti e selezionari quelli più semplici da interpretare.
+Metodi moderni utilizzano algoritmi genetici per effettuare queste predizioni.
