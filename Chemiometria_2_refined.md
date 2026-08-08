@@ -40,7 +40,6 @@ Misura la dispersione congiunta di due variabili rispetto alle rispettive medie.
 
 $$\sigma_{jk} = \frac{\sum_{i=1}^n (x_{ij} - \overline{x}_j)(x_{ik} - \overline{x}_k)}{n-1} \qquad -\infty < \sigma_{jk} < +\infty$$
 
-> _Nota: la covarianza si indica con $\sigma_{jk}$ (non $\sigma^2_{jk}$) — non è una varianza al quadrato, ma una misura di co-dispersione tra due variabili distinte; il quadrato è proprio solo del caso j = k (cioè la varianza)._
 
 ### Correlazione di Pearson
 
@@ -72,8 +71,8 @@ La trasformazione è definita da un insieme di dimensione $l$, dove $l < p$ (num
 
 La PCA diagonalizza la matrice di correlazione $C$. Dalla matrice iniziale $X$ si calcola $C$, la cui diagonalizzazione produce due matrici:
 
-- $\Lambda$ — matrice degli **autovalori**
-- $L$ — matrice dei **loadings** (autovettori)
+- $\Lambda$ —> matrice degli **autovalori**
+- $L$ —> matrice dei **loadings** (autovettori)
 
 ![[Pasted image 20260808165543.png]]
 
@@ -103,3 +102,40 @@ $$T = XL$$
 
 - La matrice dei loading agisce come matrice di rotazione, proiettando i dati originali in un nuovo spazio ortogonale.
 - Gli score ($t_{i,m}$) sono le nuove coordinate cartesiane delle molecole all'interno dello spazio delle componenti principali.
+
+
+
+
+# Similarità Molecolare
+- Le molecole sono rappresentate in notazione lineare compatta, come la notazione SMILES, che rappresenta le molecole in funzione dei modelli di valenza
+
+
+---
+
+## Spazio Chimico
+
+![[Pasted image 20260808104158.png]]
+
+Ogni molecola è un punto in un gigantesco spazio multidimensionale, dove ogni asse rappresenta una proprietà molecolare. Ogni composto è quindi un **punto nello spazio chimico**.
+
+- Lo spazio chimico è uno spazio astratto multidimensionale in cui i composti sono rappresentati come punti
+- I descrittoi molecolari definiscono la posizione dei composti nello spazio
+- La similarità/dissimilarità quantifica le distanze tra i composti nello spazio chimico
+
+## Dissimilarità\Similarità
+
+- Si va a quantificare il grado di similarità tra coppie di molecole attraverso opportuni coefficienti di similarità
+	- Proprietà chimico-fisiche e indici topologici (MW, lipofilia, ecc) -> riducibili mediante PCA
+	- Fingerprint 2D per chiavi strutturali
+	- Punti di farmacoforo
+- La diversità molecolare esprime una misura numerica di distanza molecolare tra due oggetti caratterizzzati da un set di attributi comuni
+
+Alcuni indici di misurazione sono:
+- Hamming
+- Euclidea
+- Soergel
+- Tanimoto
+- Dice 
+- Cosine
+
+Questi sono principalmente indici che valutano la distanza, trasformabili in indici di similarità poichè basta invertire il coefficiente
