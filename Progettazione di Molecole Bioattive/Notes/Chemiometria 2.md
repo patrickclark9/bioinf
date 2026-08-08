@@ -93,3 +93,35 @@ Questi sono principalmente indici che valutano la distanza, trasformabili in ind
 $$s_{A,B} = \frac{1}{1+d_{A,B}}$$
 $$d_{A,B} = \frac{1-s_{A,B}}{s_{A,B}}$$
 ![[Pasted image 20260808173806.png]]
+
+# Clustering
+Il clustering è una operazione di raggruppamento di un insieme di oggetti in cluster, tale che gli oggetti in un cluster sono per una qualche ragione più simili tra loro rispetto agli oggetti in cluster differenti
+
+- Gli algoritmi di clustering sono algoritmi non supervisionati in quanto determinano i gruppi di similarità all'interno di un dataset di oggetti non etichettati -> Non c'è "addestramento" del modello con dati pre-etichettati e guidati con l'output corretto
+- Il risultato dipende da come viene calcolata la similarità -> algoritmi differenti possono avere output differenti e non ci sono a priori motivi per preferire uno rispetto all'altro
+
+Gli algoritmi possono essere:
+- Parametrici -> Sfruttano conoscenza a priori sul dataset per fissare il numero di classi -> diventa un problema di ottimizzazione con una funzione obiettivo da minimizzare
+- Non Parametrici -> In assenza di conoscenza a priori, l'algoritmo determina una gerarchia di classi in funzione di una scala di osservazione, producendo dendogrammi
+
+## K-Means
+- Si sceglie K il numero di cluster
+- Si computano i K centroidi iniziali casualmente all'interno dello spazio
+- Ogni punto (dato) viene assegnato al centroide più vicino sulla base di una data misura della distanza
+- Si ricalcola la posizione dei centroidi sulla base dei cluster generati
+- Si itera finchè non viene minimizzata una funzione obiettivo, spesso la distorsione $$D = \sum^N_{i=1} ||x_i - c(x_i)||^2$$
+	- Dove $c(x_i)$ è il centroide associato al punto $x_i$ 
+- Il numero di cluster vieno fissato arbitrariamente, spesso plottando valori di K contro il TSS (total sum of within cluster square distances)  e prendendo il "gomito" della curva![[Pasted image 20260808181955.png]]
+
+## Algoritmi Gerarchici di Linkage
+- Si inizia considerando ogni oggetto come un cluster e si calcola la matrice delle distanze
+- I due oggetti più vicini vengono raggruppati in un cluster e considerati come un unico oggetto
+- Si ricalcolano le distanze e si uniscono gli oggetti più vicini
+	- La distanza tra cluster può essere considerata come
+		- Single Linkage $d(A,B) =  \min{d(a,b)}$
+		- Complete Linkage $d(A,B) = \max{d(a,b)}$![[Pasted image 20260808182511.png]]
+		- Average Linkage -> Distanza tra cluster è la media delle distanze tra tutti i punti dei due cluster
+		- Centroid Linkage -> La distanza fra cluster è la distanza fra i centroidi dei cluster
+	- Si prosegue finchè tutti gli oggetti non vengono raggruppati in un unico cluster e si ottiene il dendogramma![[Pasted image 20260808182638.png|400]]![[Pasted image 20260808182651.png]]
+ Questo produce una gerarchia di cluster, senza partizioni fisse,(Unlike algorithms such as K-means that force data into a strict, pre-defined number of boxes (fixed partitions), hierarchical clustering builds a continuous tree-like structure known as a **dendrogram** (shown on the right side of the slide). This diagram maps out the relationships and distances between all data points (labeled 1 through 5) at various levels of similarity.) agglomerativi o divisivi (- **Agglomerative (Bottom-Up / _agglomerativi_):** Indicated by the upward-pointing arrow. This is the most common approach. It starts by treating every single data point (1, 3, 2, 4, 5) as its own isolated cluster. It then finds the two most similar points (e.g., 1 and 3) and merges them into a new cluster. It repeats this process, joining clusters together step-by-step as you move up the y-axis, until everything is merged into one massive, all-encompassing cluster at the top.
+**Divisive (Top-Down / _divisivi_):** Indicated by the downward-pointing arrow. This approach does the exact opposite. It starts with all data points lumped into one giant cluster at the top. It then progressively splits the cluster into smaller, increasingly distinct subsets as you move down, until every point stands alone.).To decide which points to merge (agglomerative) or split (divisive), the algorithm requires a mathematical rule to define how "alike" two objects are. This similarity index can be based on spatial **distance** (like Euclidean or Manhattan distance) or statistical **correlation** (like the Pearson coefficient). Il dendogramma viene tagliato dove è maggiore il lifetime del cluster Because the algorithm generates a continuous tree rather than a final set of groups, the researcher must decide how many clusters to ultimately use. This is done by drawing a horizontal "cut" across the dendrogram. The slide specifies that this cut should be made where the **lifetime** of the clusters is greatest. "Lifetime" refers to the vertical length of the branches (the vertical lines in the graph). A long vertical branch means that the cluster remains stable over a large range of distance/similarity before it is forced to merge with another group. Cutting through these long vertical lines ensures you are isolating highly distinct, stable clusters.
