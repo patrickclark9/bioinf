@@ -60,195 +60,220 @@ Valori di attività fortemente differenti per uno stesso composto possono essere
 
 ![[Pasted image 20260808095357.png|350]]
 
-## Descrizione molecolare
-- Formula bruta -> Informazione composizionale, peso molecolare
-- Struttura 2D -> Connessione tra atomi, tipi di legame, configurazione Z/E
-- Struttura 3D -> Include coordinate spaziale $<x_i, y_i, z_i>$, descrive volume molecolare, superficie molecolare, momento dipolare, superficie polare
-- Struttura 4D -> Informazione conformazionale, Distribuzione elettronica
-- Ulteriori livelli in 4 dimensioni -> Proprietà di dinamica molecola in un sistema spazio-tempo, proprietà biologiche se valutate le interazioni con l'ambiente
-Le dimensioni rappresentano non solo 4 coordinate, ma diversi livelli di informazione sul livello molecolare
+# Descrizione Molecolare: Livelli, Fingerprint e Preprocessing
+
+## Descrizione Molecolare
+
+|Livello|Contenuto informativo|
+|---|---|
+|**Formula bruta**|Informazione composizionale, peso molecolare|
+|**Struttura 2D**|Connessione tra atomi, tipi di legame, configurazione Z/E|
+|**Struttura 3D**|Coordinate spaziali $<x_i, y_i, z_i>$; descrive volume molecolare, superficie molecolare, momento dipolare, superficie polare|
+|**Struttura 4D**|Informazione conformazionale, distribuzione elettronica|
+|**Ulteriori livelli 4D**|Proprietà dinamiche della molecola in un sistema spazio-tempo; proprietà biologiche se vengono valutate le interazioni con l'ambiente|
+
+> Le "dimensioni" non rappresentano solo 4 coordinate spaziali, ma diversi **livelli di informazione** sulla molecola.
+
 ![[Pasted image 20260808101345.png]]
 
-## Fingerprint Molecolare
+---
+
+## Fingerprint Molecolari
+
 Le fingerprint molecolari sono sistemi sviluppati per la codifica e rappresentazione vettoriale delle feature molecolari.
-Un esempio di fingerprint molecolari sono le fingerprint strutturali, in cui si va a rappresentare la presenza o assenza di una determinata feature strutturale (anello aromatico, gruppo ossidrilico, ammina, ammide ecc...) attraverso un vettore binario, in cui ogni posizione rappresenta la presenza/assenza di una data feature strutturale: $$<1,0,1,1,0,0>$$
-Di fingerprint ne esistono molte tipologie differenti con significati diversi in grado di codificare differenti feature della molecola, a partire dalle substrutture fino a codificare la struttura tridimensionale molecolare.
 
-Le fingerprint sono particolarmente utili per operazioni di:
+Un esempio sono le **fingerprint strutturali**, in cui si rappresenta la presenza o assenza di una determinata feature strutturale (anello aromatico, gruppo ossidrilico, ammina, ammide, ecc.) attraverso un vettore binario, dove ogni posizione indica la presenza/assenza di una data feature:
+
+$$<1,0,1,1,0,0>$$
+
+Esistono molte tipologie di fingerprint, con significati diversi, in grado di codificare differenti feature della molecola — dalle sottostrutture fino alla struttura tridimensionale.
+
+### Utilizzi principali
+
 - Clustering
-- Similarity Searching
-- Virtual Screening
-- Machine Learning
+- Similarity searching
+- Virtual screening
+- Machine learning
 
-Le fingerprint sono uno dei motivi per cui la standardizzazione è importante: Differenti rappresentazioni avranno diverse fingerprint.
+> Le fingerprint sono uno dei motivi per cui la **standardizzazione** è importante: rappresentazioni differenti della stessa molecola produrranno fingerprint diverse.
+
+---
 
 ## Descrittori 3D
-I Descrittori tridimensionali dipendono dalle coordinate $<x,y,z>$ , di conseguenza se una molecola può assumere differenti conformazioni $C_1, C_2, C_3$, allora il descrittore calcolato sulle conformazioni sarà differente $D(C_1) \ne D(C_2)$ potenzilamente.
-Il valore di un descrittore 3D cambia in funzione delle coordinate atomiche delle differenti conformazioni, introducendo un problema -> quale conformazione scegliere.
-Questo problema diventa esponenzialmente più complesso per le proteine:
+
+I descrittori tridimensionali dipendono dalle coordinate $<x,y,z>$: di conseguenza, se una molecola può assumere diverse conformazioni $C_1, C_2, C_3$, il descrittore calcolato su ciascuna conformazione può risultare differente ($D(C_1) \ne D(C_2)$).
+
+Il valore di un descrittore 3D cambia in funzione delle coordinate atomiche delle diverse conformazioni, introducendo un problema: **quale conformazione scegliere**.
+
+Questo problema diventa esponenzialmente più complesso per le proteine.
+
 ### Paradosso di Levinthal
-Data una proteina di 100 amminoacidi, se ogni amminoacidi possiede anche solo 3 possibili conformazioni, allora il numero di possibili conformazioni totali sarebbe $$3^{100} \approx 10^{48}$$
-Impossibile raggiungere la struttura nativa, richiederebbe troppo tempo anche esplorando miliardi di conformazioni al secondo.
 
-I descrittori 3D quindi introducono un livello non banale di complessità conformazionale
+Data una proteina di 100 amminoacidi, se ciascun amminoacido possiede anche solo 3 possibili conformazioni, il numero totale di conformazioni possibili sarebbe:
 
+$$3^{100} \approx 10^{48}$$
+
+Sarebbe impossibile raggiungere la struttura nativa in tempi ragionevoli, anche esplorando miliardi di conformazioni al secondo.
+
+> I descrittori 3D introducono quindi un livello non banale di **complessità conformazionale**.
+
+---
 
 ## Descrittori Chirali
-La stereochimica è un altro problema importante, dato che diversi enantiomeri, pur avendo stessa:
+
+La stereochimica è un altro problema importante: enantiomeri diversi, pur avendo la stessa:
+
 - Formula chimica
 - Connettività
-- Peso Molecolare
-Presentano struttura 3-D differente, e quindi anche differente attività biologica, dato che il target è anch'esso tridimensionale e spesso chirale.
+- Peso molecolare
+
+presentano una struttura 3D differente, e quindi una differente attività biologica — dato che il target è anch'esso tridimensionale e spesso chirale.
 
 Nella sintesi molecolare, ogni centro chirale introduce una complessità importante:
 
 $$2^{\text{centri chirali}}$$
-È il numero di enantiomeri prodotti durante la sintesi. Con 4 centri chirali:
-$$2^4 = 16 \space \text{enantiomeri diversi}$$
-### Easson-Stedman
-Il modello Easson-Stedman introduce il modello a 3 punti di interazioni:
-- Il ligando chirale può interagire con il recettore chirale attraverso più punti di interazione $$A \rightleftarrows A'$$ $$B \rightleftarrows B'$$ $$C \rightleftarrows C'$$
-- Di conseguenza solo uno stereoisomero può ottenere il corretto arrangiamento spaziale, mentre gli altri non possono simultaneamente soddisfare le stesse interazioni ![[Pasted image 20260808103826.png]]![[Pasted image 20260808103848.png]]For geometric isomerism:
 
-/and\
+è il numero di enantiomeri prodotti durante la sintesi. Con 4 centri chirali:
 
-are used.
+$$2^4 = 16 \text{ enantiomeri diversi}$$
 
-For example:
+### Modello di Easson-Stedman
 
-Br/C=C/Br
+Introduce il modello a **3 punti di interazione**:
 
-and
+- Il ligando chirale può interagire con il recettore chirale attraverso più punti di interazione:
 
-Br/C=C\backslashBr
+$$A \rightleftarrows A'$$ $$B \rightleftarrows B'$$ $$C \rightleftarrows C'$$
 
-represent different geometric arrangements.
+- Di conseguenza, solo uno stereoisomero può ottenere il corretto arrangiamento spaziale, mentre gli altri non possono soddisfare simultaneamente le stesse interazioni.
 
-For tetrahedral stereochemistry, SMILES uses:
+![[Pasted image 20260808103826.png]]![[Pasted image 20260808103848.png]]
 
-@
+### Notazione SMILES per la stereochimica
 
-and: @@
+**Isomeria geometrica**: si usano i simboli `/` e `\`. Ad esempio:
+
+- `Br/C=C/Br` e `Br/C=C\Br` rappresentano arrangiamenti geometrici differenti.
+
+**Stereochimica tetraedrica**: SMILES utilizza `@` e `@@`.
+
+---
 
 ## Feature Selection
-Dato che il numero di descrittori utilizabili sono tantissimi, bisogna accuratamente selezionare e scegliere quali sono particolarmente importanti per il dato caso di studio
-### Caso: Lipinski Rule of Five
-The four criteria shown are:
 
-MW>500 logP>5 HBD>5 HBA>10
+Dato che il numero di descrittori utilizzabili è enorme, è necessario selezionare accuratamente quelli particolarmente rilevanti per il caso di studio specifico.
 
-These are commonly expressed as the Rule of Five because compounds violating more of these criteria tend to have poorer oral drug-like properties.
+### Caso di studio: Regola di Lipinski (Rule of Five)
 
-The important connection to QSAR is that:
+I quattro criteri della regola sono:
 
-simple molecular descriptors can provide useful biological/ADME information​
+- MW > 500
+- logP > 5
+- HBD > 5 (donatori di legame idrogeno)
+- HBA > 10 (accettori di legame idrogeno)
 
-For example:
+Vengono comunemente espressi come "Rule of Five" perché i composti che violano un numero maggiore di questi criteri tendono ad avere proprietà drug-like orali più scarse.
 
-#### High MW
+Il collegamento importante con la QSAR è che **descrittori molecolari semplici possono fornire informazioni biologiche/ADME utili**. Ad esempio:
 
-Can make diffusion more difficult.
+|Descrittore|Implicazione|
+|---|---|
+|**MW alto**|Può rendere la diffusione più difficile|
+|**logP alto**|Indica elevata lipofilicità|
+|**Molti donatori/accettori H-bond**|La molecola ha molti siti di interazione polare|
 
-#### High logP
+Insieme, questi descrittori forniscono un'indicazione approssimativa di quanto una molecola abbia proprietà favorevoli per l'assorbimento orale.
 
-Means high lipophilicity.
+---
 
-#### Many H-bond donors/acceptors
-
-Means a molecule has many polar interaction sites.
-
-Together these descriptors provide a rough indication of whether a molecule has favourable properties for oral absorption.
-
-## Spazio Chimico 
+## Spazio Chimico
 
 ![[Pasted image 20260808104158.png]]
-Ogni molecola è un punto sul gigantesco spazio multidimensionale, dove ogni asse è una proprietà molecolare. Ogni composto è quindi un punto nello spazio chimico.
 
-# Modellazione del dato
-- Preprocessing
-- Variable selection
-- Model derivation
-## Data pre-processing - Normalizzazione
-- Autoscaling delle ascisse
-- Trasformazione logaritimica delle Y
+Ogni molecola è un punto in un gigantesco spazio multidimensionale, dove ogni asse rappresenta una proprietà molecolare. Ogni composto è quindi un **punto nello spazio chimico**.
 
-La normalizzazione è necessaria per evitare problemi di scala differente di valori per i singoli descrittori molecolari, ed evitare che determinate feature vengano interpretate come più importanti a livello biologico solo in funzione del numero più grande in termini assoluti.
+---
+
+# Modellazione del Dato
+
+Il processo si articola in tre fasi:
+
+1. **Preprocessing**
+2. **Variable selection**
+3. **Model derivation**
+
+---
+
+## Data Pre-processing — Normalizzazione
+
+- Autoscaling delle ascisse (X)
+- Trasformazione logaritmica delle Y
+
+La normalizzazione è necessaria per evitare problemi legati alla scala differente dei valori tra i singoli descrittori molecolari, ed evitare che determinate feature vengano interpretate come più importanti a livello biologico solo in funzione di un valore assoluto più grande.
 
 ### Autoscaling
-Prima fase è la centratura:
-Per un descrittore X: $$x'_i = x_i - \overline{x}$$con $$\overline x = \frac{1}{n}\sum_i x_i$$
-Quindi dopo la centratura $$\text{mean} = 0$$
-L'autoscaling introduce anche un secondo step dopo la centratura:
-$$x_i - \overline{x}$$
-l'autoscaling divide per la deviazione standard:
+
+**Prima fase: centratura.** Per un descrittore X:
+
+$$x'_i = x_i - \overline{x} \qquad \text{con} \qquad \overline{x} = \frac{1}{n}\sum_i x_i$$
+
+Dopo la centratura: $\text{mean} = 0$.
+
+**Seconda fase: scaling.** L'autoscaling divide poi per la deviazione standard:
+
 $$x'_i = \frac{x_i - \overline{x}}{\sigma_x}$$
 
-E si ottiene $$\text{mean} = 0$$ e approssimativamente $$\sigma^2 = 1$$
-Ovvero la dimensione normalizzata, rendendo i descrittori più comparabili numericamente.
-La centratura pone solo media = 0. L'autoscaling pone media = 0 e varianza = 1.
+Si ottiene $\text{mean} = 0$ e approssimativamente $\sigma^2 = 1$ — ovvero la dimensione normalizzata, rendendo i descrittori più comparabili numericamente.
+
+> La sola centratura pone la media a 0. L'autoscaling pone media = 0 **e** varianza = 1.
 
 ### Log-Transform
 
-L'asse delle Y viene log-trasformato spesso, quindi invece di modellare direttamente l'attività (es. IC50) si usa la log-trasformazione
+L'asse delle Y viene spesso log-trasformato: invece di modellare direttamente l'attività (es. IC50), si usa la log-trasformazione:
+
 $$pIC_{50} = -\log_{10}(IC_{50})$$
 
-## Variable Selection - Pruning
-Andiamo a rimuovere:
-- Variabili costanti -> $\text{Varianza} = 0$, ovvero quelle variabili in cui non c'è informazione, non oscillano, e non sono utili alla distinzione dei composti
-- Variabili quasi costanti -> $\text{Varianza} \approx 0$, come sopra, ma c'è un minimo di variazione, non molto informativa
-- Variabili correlate -> Possono essere raggruppate in gruppi di correlazione, e poi scegliere quelle maggiormente correlate alla risposta/attività, rimuovendo le altre. 
-- Variabili correlate TRA loro -> Rimuovere l'informazione ridodante, dovuta a correlazione TRA descrtittori
-- Gestione dei valori mancanti -> Dipendente dal modello, bisogna gestire eventualmente i dati mancanti. Le opzioni sono
-	- Rimozione dei composti problematici per cui mancano dati
-	- Imputazione dei valori
-	- Ricalcolo dei descrittori
-	- Utilizzo di algoritmi che possono gestire dati mancanti per alcune feature
-	- L'approccio corretto dipende dalla ragione per cui manca il dato
+---
+
+## Variable Selection — Pruning
+
+Vengono rimosse:
+
+- **Variabili costanti** — Varianza = 0: variabili senza informazione, che non oscillano e non sono utili alla distinzione dei composti.
+- **Variabili quasi costanti** — Varianza ≈ 0: come sopra, ma con un minimo di variazione, poco informativa.
+- **Variabili poco correlate con la risposta** — le variabili possono essere raggruppate in gruppi di correlazione; si scelgono quelle maggiormente correlate all'attività, rimuovendo le altre.
+- **Variabili correlate TRA loro** — si rimuove l'informazione ridondante dovuta alla correlazione tra descrittori.
+- **Gestione dei valori mancanti** — dipendente dal modello; le opzioni sono:
+    - Rimozione dei composti problematici per cui mancano dati
+    - Imputazione dei valori
+    - Ricalcolo dei descrittori
+    - Utilizzo di algoritmi in grado di gestire dati mancanti per alcune feature
+    - L'approccio corretto dipende dalla ragione per cui il dato manca
+
+---
 
 ## Correlazione
-Suppose:
 
-r=0.95
+Supponiamo di ottenere $r = 0.95$. Si potrebbe pensare: _"eccellente descrittore!"_ — ma bisogna comunque chiedersi:
 
-You might think:
+- La relazione è causale?
+- È solo correlazione?
+- Il descrittore è ridondante con un altro descrittore?
+- Funziona su composti nuovi?
+- La relazione è lineare?
+- C'è un outlier che guida la correlazione?
+- Il composto è all'interno del dominio di applicabilità?
 
-> Excellent descriptor!
+Quindi: **alta correlazione ≠ modello QSAR validato.**
 
-But you still have to ask:
+### Definizione concettuale
 
-- Is the relationship causal?
-- Is it just correlation?
-- Is the descriptor redundant with another descriptor?
-- Does it work on new compounds?
-- Is the relationship linear?
-- Is there an outlier driving the correlation?
-- Is the compound inside the applicability domain?
+$$r = \frac{cov(X,Y)}{\sigma_X \sigma_Y} \qquad \text{con} \qquad -1 \le r \le 1$$
 
-Therefore:
+|Valore di r|Significato|
+|---|---|
+|$r = 1$|Relazione lineare positiva perfetta|
+|$r = 0$|Nessuna relazione lineare|
+|$r = -1$|Relazione lineare negativa perfetta|
 
-high correlation=validated QSAR model
-
-Conceptually:
-
-r=σX​σY​cov(X,Y)​
-with:
-
-−1≤r≤1
-
-### r=1
-
-Perfect positive linear relationship.
-
-### r=0
-
-No linear relationship.
-
-### r=−1
-
-Perfect negative linear relationship.
-
-For example:
-
-X↑⇒Y↑
-
-gives positive correlation.
+Ad esempio: $X\uparrow \Rightarrow Y\uparrow$ dà correlazione positiva.
