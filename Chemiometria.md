@@ -5,6 +5,7 @@ La chemiometria è una branca della chimica che si occupa di relazionare le misu
 La QSAR è una applicazione della chemiometria:
 ![[Pasted image 20260808092802.png]]
 
+Centrale alla QSAR non è solo fittare il modello, è importante validare matematicamente (test-set, CrossValidation, Y-scrambling) per valutare l'effettive prestazioni del modello.
 ## Data Curation for QSAR
 
 Essenziale prima di effettuare una qualsiasi analisi QSAR è quella di curare il dataset con cui verranno effettuate le analisi.
@@ -19,7 +20,7 @@ E quantitativamente:
 
 I criteri basi per la data curation sono:
 - Effettuare esperimenti in condizioni simili
-- Gestione dei duplicati
-- Standardizzazione strutturale
+- Gestione dei duplicati e degli errori -> È vitale identificare se la stessa molecola è presente più volte, specialmente se etichettata con valori di attività differenti (e.g. una marcata attiva, l'altra disattiva)
+- Standardizzazione strutturale -> La rappresentazione strutturale deve essere consistente
 - Rimozione delle miscele
 
