@@ -8,6 +8,17 @@ Si parte dalla matrice $X$ dei dati, di dimensione $n\times p$, con $n = \text{m
 Le relazioni tra i descrittori vengono quantificate calcolando la matrice di covarianza $S$ e la matrice di correlazione $C$.
 
 ## Varianza 
-Misura la distribuzione dei valori rispetto alla media
+Misura la dispersione di una singola variabile rispetto alla sua media. Misura della variabilità dei valori assunti dalla variabile stessa
 
-$$\sigma^2 = \sum_{i=1} ^n (x_{ij$$
+$$\sigma^2_{jj} = \frac{\sum_{i=1} ^n (x_{ij} - \overline x_j)}{n-1} $$
+$$ 0 <\sigma^2 < +\infty$$
+## Covarianza
+Misura la dispersione di una singola variabile rispetto alla sua media e rispetto ai valori di un'altra variabile. Indica se i valori variano nella stessa direzione (positivo) o in direzioni opposte (negativo)
+
+$$\sigma^2_{jk} = \frac{\sum_{i=1} ^n (x_{ij} - \overline x_j) (x_{ik} - \overline x_k)}{n-1} $$
+$$ -\infty <\sigma^2 < +\infty$$
+
+## Correlazione di Pearson
+Indice che esprime una eventuale relazione lineare tra loro.
+Ha valori $$-1 \le \rho \le 1$$
+Dove +1 rappresenta ad una perfetta correlazione lineare positiva, 0 
