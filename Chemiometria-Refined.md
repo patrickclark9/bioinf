@@ -172,4 +172,26 @@ Ogni molecola è un punto sul gigantesco spazio multidimensionale, dove ogni ass
 - Autoscaling delle ascisse
 - Trasformazione logaritimica delle Y
 
-La normalizzazione è necessaria per evitare problemi di scala differente di valori per i singoli descrittori molecolari, ed evitare che determinate feature diventino più importanti solo in funzi
+La normalizzazione è necessaria per evitare problemi di scala differente di valori per i singoli descrittori molecolari, ed evitare che determinate feature vengano interpretate come più importanti a livello biologico solo in funzione del numero più grande in termini assoluti.
+
+### Autoscaling
+Prima fase è la centratura:
+Per un descrittore X: $$x'_i = x_i - \overline{x}$$con $$\overline x = \frac{1}{n}\sum_i x_i$$
+Quindi dopo la centratura $$\text{mean} = 0$$
+L'autoscaling introduce anche un secondo step dopo la centratura:
+$$x_i - \overline{x}$$
+l'autoscaling divide per la deviazione standard:
+$$x'_i = \frac{x_i - \overline{x}}{\sigma_x}$$
+
+E si ottiene $$\text{mean} = 0$$ e approssimativamente $$\sigma^2 = 1$$
+Ovvero la dimensione normalizzata, rendendo i descrittori più comparabili numericamente.
+La centratura pone solo media = 0. L'autoscaling pone media = 0 e varianza = 1.
+
+### Log-Transform
+
+L'asse delle Y viene log-trasformato spesso, quindi invece di modellare direttamente l'attività (es. IC50) si usa la log-trasformazione
+$$pIC_{50} = -\log_{10}(IC_{50})$$
+
+## Variable Selection - Pruning
+Andiamo a rimuovere:
+- Variabili costanti -> $\text{Varianza} = 0$, ovvero quelle variabili in cui non c'è informazione, non oscillano, e non son
