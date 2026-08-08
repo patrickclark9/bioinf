@@ -19,8 +19,9 @@ E quantitativamente:
 - Senza che queste molecole aggiungano complessità non necessaria al modello
 
 I criteri basi per la data curation sono:
-- Effettuare esperimenti in condizioni simili
-- Gestione dei duplicati e degli errori -> È vitale identificare se la stessa molecola è presente più volte, specialmente se etichettata con valori di attività differenti (e.g. una marcata attiva, l'altra disattiva)
-- Standardizzazione strutturale -> La rappresentazione strutturale deve essere consistente
-- Rimozione delle miscele
+- Effettuare esperimenti in condizioni simili -> Valori di attività fortemente differenti per uno stesso composto possono essere interpretati come rumore, o peggio il modello può trovare una relazione incorretta dovuta alla variabilità sperimentale
+- Gestione dei duplicati e degli errori -> È vitale identificare se la stessa molecola è presente più volte, specialmente se etichettata con valori di attività differenti (e.g. una marcata attiva, l'altra disattiva). Questo rappresenta un problema, soprattutto se presente informazione contraddittoria.
+- Standardizzazione strutturale -> La rappresentazione strutturale deve essere consistente. Definire l'aromatizzazione ad esempio è una delle sfide principali, dato che esistono più possibilità di rappresentazione. Lo stesso composto chimico può presentare differenti rappresentazioni (protonazione, aromaticità, tautomeri, stereochimica, sali, acidi carbossilici, gruppi nitro). Alcune proprietà non sono invarianti (stato di ionizzazione in funzione del pH). Due rappresentazioni molecolari possono produrre differenti valori per un descrittore molecolare, specialmente per approcci basati su fingerprint o su frammenti. Standardizzare prima del calcolo dei descrittori molecolari è essenziale
+- Rimozione delle miscele e composti inorganici -> I composti inorganici vengono rimossi spesso. Per miscele, la pratica standard è mantenere solo il frammento o la molecola con il peso molecolare maggiore
 
+![[Pasted image 20260808095357.png]]
