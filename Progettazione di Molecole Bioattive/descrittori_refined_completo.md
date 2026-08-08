@@ -1,0 +1,210 @@
+# Descrizione Molecolare: Livelli, Fingerprint e Preprocessing
+
+## Descrizione Molecolare
+
+|Livello|Contenuto informativo|
+|---|---|
+|**Formula bruta**|Informazione composizionale, peso molecolare|
+|**Struttura 2D**|Connessione tra atomi, tipi di legame, configurazione Z/E|
+|**Struttura 3D**|Coordinate spaziali $<x_i, y_i, z_i>$; descrive volume molecolare, superficie molecolare, momento dipolare, superficie polare|
+|**Struttura 4D**|Informazione conformazionale, distribuzione elettronica|
+|**Ulteriori livelli 4D**|Proprietà dinamiche della molecola in un sistema spazio-tempo; proprietà biologiche se vengono valutate le interazioni con l'ambiente|
+
+> Le "dimensioni" non rappresentano solo 4 coordinate spaziali, ma diversi **livelli di informazione** sulla molecola.
+
+![[Pasted image 20260808101345.png]]
+
+---
+
+## Fingerprint Molecolari
+
+Le fingerprint molecolari sono sistemi sviluppati per la codifica e rappresentazione vettoriale delle feature molecolari.
+
+Un esempio sono le **fingerprint strutturali**, in cui si rappresenta la presenza o assenza di una determinata feature strutturale (anello aromatico, gruppo ossidrilico, ammina, ammide, ecc.) attraverso un vettore binario, dove ogni posizione indica la presenza/assenza di una data feature:
+
+$$<1,0,1,1,0,0>$$
+
+Esistono molte tipologie di fingerprint, con significati diversi, in grado di codificare differenti feature della molecola — dalle sottostrutture fino alla struttura tridimensionale.
+
+### Utilizzi principali
+
+- Clustering
+- Similarity searching
+- Virtual screening
+- Machine learning
+
+> Le fingerprint sono uno dei motivi per cui la **standardizzazione** è importante: rappresentazioni differenti della stessa molecola produrranno fingerprint diverse.
+
+---
+
+## Descrittori 3D
+
+I descrittori tridimensionali dipendono dalle coordinate $<x,y,z>$: di conseguenza, se una molecola può assumere diverse conformazioni $C_1, C_2, C_3$, il descrittore calcolato su ciascuna conformazione può risultare differente ($D(C_1) \ne D(C_2)$).
+
+Il valore di un descrittore 3D cambia in funzione delle coordinate atomiche delle diverse conformazioni, introducendo un problema: **quale conformazione scegliere**.
+
+Questo problema diventa esponenzialmente più complesso per le proteine.
+
+### Paradosso di Levinthal
+
+Data una proteina di 100 amminoacidi, se ciascun amminoacido possiede anche solo 3 possibili conformazioni, il numero totale di conformazioni possibili sarebbe:
+
+$$3^{100} \approx 10^{48}$$
+
+Sarebbe impossibile raggiungere la struttura nativa in tempi ragionevoli, anche esplorando miliardi di conformazioni al secondo.
+
+> I descrittori 3D introducono quindi un livello non banale di **complessità conformazionale**.
+
+---
+
+## Descrittori Chirali
+
+La stereochimica è un altro problema importante: enantiomeri diversi, pur avendo la stessa:
+
+- Formula chimica
+- Connettività
+- Peso molecolare
+
+presentano una struttura 3D differente, e quindi una differente attività biologica — dato che il target è anch'esso tridimensionale e spesso chirale.
+
+Nella sintesi molecolare, ogni centro chirale introduce una complessità importante:
+
+$$2^{\text{centri chirali}}$$
+
+è il numero di enantiomeri prodotti durante la sintesi. Con 4 centri chirali:
+
+$$2^4 = 16 \text{ enantiomeri diversi}$$
+
+### Modello di Easson-Stedman
+
+Introduce il modello a **3 punti di interazione**:
+
+- Il ligando chirale può interagire con il recettore chirale attraverso più punti di interazione:
+
+$$A \rightleftarrows A'$$ $$B \rightleftarrows B'$$ $$C \rightleftarrows C'$$
+
+- Di conseguenza, solo uno stereoisomero può ottenere il corretto arrangiamento spaziale, mentre gli altri non possono soddisfare simultaneamente le stesse interazioni.
+
+![[Pasted image 20260808103826.png]]![[Pasted image 20260808103848.png]]
+
+### Notazione SMILES per la stereochimica
+
+**Isomeria geometrica**: si usano i simboli `/` e `\`. Ad esempio:
+
+- `Br/C=C/Br` e `Br/C=C\Br` rappresentano arrangiamenti geometrici differenti.
+
+**Stereochimica tetraedrica**: SMILES utilizza `@` e `@@`.
+
+---
+
+## Feature Selection
+
+Dato che il numero di descrittori utilizzabili è enorme, è necessario selezionare accuratamente quelli particolarmente rilevanti per il caso di studio specifico.
+
+### Caso di studio: Regola di Lipinski (Rule of Five)
+
+I quattro criteri della regola sono:
+
+- MW > 500
+- logP > 5
+- HBD > 5 (donatori di legame idrogeno)
+- HBA > 10 (accettori di legame idrogeno)
+
+Vengono comunemente espressi come "Rule of Five" perché i composti che violano un numero maggiore di questi criteri tendono ad avere proprietà drug-like orali più scarse.
+
+Il collegamento importante con la QSAR è che **descrittori molecolari semplici possono fornire informazioni biologiche/ADME utili**. Ad esempio:
+
+|Descrittore|Implicazione|
+|---|---|
+|**MW alto**|Può rendere la diffusione più difficile|
+|**logP alto**|Indica elevata lipofilicità|
+|**Molti donatori/accettori H-bond**|La molecola ha molti siti di interazione polare|
+
+Insieme, questi descrittori forniscono un'indicazione approssimativa di quanto una molecola abbia proprietà favorevoli per l'assorbimento orale.
+
+---
+
+
+# Modellazione del Dato
+
+Il processo si articola in tre fasi:
+
+1. **Preprocessing**
+2. **Variable selection**
+3. **Model derivation**
+
+---
+
+## Data Pre-processing — Normalizzazione
+
+- Autoscaling delle ascisse (X)
+- Trasformazione logaritmica delle Y
+
+La normalizzazione è necessaria per evitare problemi legati alla scala differente dei valori tra i singoli descrittori molecolari, ed evitare che determinate feature vengano interpretate come più importanti a livello biologico solo in funzione di un valore assoluto più grande.
+
+### Autoscaling
+
+**Prima fase: centratura.** Per un descrittore X:
+
+$$x'_i = x_i - \overline{x} \qquad \text{con} \qquad \overline{x} = \frac{1}{n}\sum_i x_i$$
+
+Dopo la centratura: $\text{mean} = 0$.
+
+**Seconda fase: scaling.** L'autoscaling divide poi per la deviazione standard:
+
+$$x'_i = \frac{x_i - \overline{x}}{\sigma_x}$$
+
+Si ottiene $\text{mean} = 0$ e approssimativamente $\sigma^2 = 1$ — ovvero la dimensione normalizzata, rendendo i descrittori più comparabili numericamente.
+
+> La sola centratura pone la media a 0. L'autoscaling pone media = 0 **e** varianza = 1.
+
+### Log-Transform
+
+L'asse delle Y viene spesso log-trasformato: invece di modellare direttamente l'attività (es. IC50), si usa la log-trasformazione:
+
+$$pIC_{50} = -\log_{10}(IC_{50})$$
+
+---
+
+## Variable Selection — Pruning
+
+Vengono rimosse:
+
+- **Variabili costanti** — Varianza = 0: variabili senza informazione, che non oscillano e non sono utili alla distinzione dei composti.
+- **Variabili quasi costanti** — Varianza ≈ 0: come sopra, ma con un minimo di variazione, poco informativa.
+- **Variabili poco correlate con la risposta** — le variabili possono essere raggruppate in gruppi di correlazione; si scelgono quelle maggiormente correlate all'attività, rimuovendo le altre.
+- **Variabili correlate TRA loro** — si rimuove l'informazione ridondante dovuta alla correlazione tra descrittori.
+- **Gestione dei valori mancanti** — dipendente dal modello; le opzioni sono:
+    - Rimozione dei composti problematici per cui mancano dati
+    - Imputazione dei valori
+    - Ricalcolo dei descrittori
+    - Utilizzo di algoritmi in grado di gestire dati mancanti per alcune feature
+    - L'approccio corretto dipende dalla ragione per cui il dato manca
+
+---
+
+## Correlazione
+
+Supponiamo di ottenere $r = 0.95$. Si potrebbe pensare: _"eccellente descrittore!"_ — ma bisogna comunque chiedersi:
+
+- La relazione è causale?
+- È solo correlazione?
+- Il descrittore è ridondante con un altro descrittore?
+- Funziona su composti nuovi?
+- La relazione è lineare?
+- C'è un outlier che guida la correlazione?
+- Il composto è all'interno del dominio di applicabilità?
+
+Quindi: **alta correlazione ≠ modello QSAR validato.**
+
+### Definizione concettuale
+
+$$r = \frac{cov(X,Y)}{\sigma_X \sigma_Y} \qquad \text{con} \qquad -1 \le r \le 1$$
+
+|Valore di r|Significato|
+|---|---|
+|$r = 1$|Relazione lineare positiva perfetta|
+|$r = 0$|Nessuna relazione lineare|
+|$r = -1$|Relazione lineare negativa perfetta|
+
+Ad esempio: $X\uparrow \Rightarrow Y\uparrow$ dà correlazione positiva.

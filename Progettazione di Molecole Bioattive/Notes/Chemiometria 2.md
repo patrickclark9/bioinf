@@ -55,3 +55,41 @@ Dalla matrice X iniziale ci si calcola $C$ la matrice di correlazione, la cui di
 Lo step finale è calcolare la matrice degli Score $T$, fatto moltiplicando il valore originale della matrice dei dati autoscalati per la matrice dei loading $L$ $$T = XL$$
 - La matrice dei loading agisce come matrice di rotazione, proiettando i dati originali in un nuovo spazio ortogonale
 - Gli score ($t_{i,m}$) sono nuove coordinate cartesiane di molecole all'interno dello spazio delle componenti principali
+
+
+# Similarità Molecolare
+- Le molecole sono rappresentate in notazione lineare compatta, come la notazione SMILES, che rappresenta le molecole in funzione dei modelli di valenza
+
+
+---
+
+## Spazio Chimico
+
+![[Pasted image 20260808104158.png]]
+
+Ogni molecola è un punto in un gigantesco spazio multidimensionale, dove ogni asse rappresenta una proprietà molecolare. Ogni composto è quindi un **punto nello spazio chimico**.
+
+- Lo spazio chimico è uno spazio astratto multidimensionale in cui i composti sono rappresentati come punti
+- I descrittoi molecolari definiscono la posizione dei composti nello spazio
+- La similarità/dissimilarità quantifica le distanze tra i composti nello spazio chimico
+
+## Dissimilarità\Similarità
+
+- Si va a quantificare il grado di similarità tra coppie di molecole attraverso opportuni coefficienti di similarità
+	- Proprietà chimico-fisiche e indici topologici (MW, lipofilia, ecc) -> riducibili mediante PCA
+	- Fingerprint 2D per chiavi strutturali
+	- Punti di farmacoforo
+- La diversità molecolare esprime una misura numerica di distanza molecolare tra due oggetti caratterizzzati da un set di attributi comuni
+
+Alcuni indici di misurazione sono:
+- Hamming
+- Euclidea
+- Soergel
+- Tanimoto
+- Dice 
+- Cosine
+
+Questi sono principalmente indici che valutano la distanza, trasformabili in indici di similarità poichè basta invertire il coefficiente -> la similarità è data dalla distanza tra due oggetti. La distanza è data dalla similarità di due oggetti
+$$s_{A,B} = \frac{1}{1+d_{A,B}}$$
+$$d_{A,B} = \frac{1-s_{A,B}}{s_{A,B}}$$
+![[Pasted image 20260808173806.png]]
