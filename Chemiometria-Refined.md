@@ -107,5 +107,69 @@ $$2^{\text{centri chirali}}$$
 $$2^4 = 16 \space \text{enantiomeri diversi}$$
 ### Easson-Stedman
 Il modello Easson-Stedman introduce il modello a 3 punti di interazioni:
-- Il ligando chirale può interagire con il recettore chirale attraverso più punti di interazione
-- Di conseguenza solo uno stereoisomero può ottenere il corretto arrangiamento spaziale, mentre gli altri non possono simultaneamente sod
+- Il ligando chirale può interagire con il recettore chirale attraverso più punti di interazione $$A \rightleftarrows A'$$ $$B \rightleftarrows B'$$ $$C \rightleftarrows C'$$
+- Di conseguenza solo uno stereoisomero può ottenere il corretto arrangiamento spaziale, mentre gli altri non possono simultaneamente soddisfare le stesse interazioni ![[Pasted image 20260808103826.png]]![[Pasted image 20260808103848.png]]For geometric isomerism:
+
+/and\
+
+are used.
+
+For example:
+
+Br/C=C/Br
+
+and
+
+Br/C=C\backslashBr
+
+represent different geometric arrangements.
+
+For tetrahedral stereochemistry, SMILES uses:
+
+@
+
+and: @@
+
+## Feature Selection
+Dato che il numero di descrittori utilizabili sono tantissimi, bisogna accuratamente selezionare e scegliere quali sono particolarmente importanti per il dato caso di studio
+### Caso: Lipinski Rule of Five
+The four criteria shown are:
+
+MW>500 logP>5 HBD>5 HBA>10
+
+These are commonly expressed as the Rule of Five because compounds violating more of these criteria tend to have poorer oral drug-like properties.
+
+The important connection to QSAR is that:
+
+simple molecular descriptors can provide useful biological/ADME information​
+
+For example:
+
+#### High MW
+
+Can make diffusion more difficult.
+
+#### High logP
+
+Means high lipophilicity.
+
+#### Many H-bond donors/acceptors
+
+Means a molecule has many polar interaction sites.
+
+Together these descriptors provide a rough indication of whether a molecule has favourable properties for oral absorption.
+
+## Spazio Chimico 
+
+![[Pasted image 20260808104158.png]]
+Ogni molecola è un punto sul gigantesco spazio multidimensionale, dove ogni asse è una proprietà molecolare. Ogni composto è quindi un punto nello spazio chimico.
+
+# Modellazione del dato
+- Preprocessing
+- Variable selection
+- Model derivation
+## Data pre-processing - Normalizzazione
+- Autoscaling delle ascisse
+- Trasformazione logaritimica delle Y
+
+La normalizzazione è necessaria per evitare problemi di scala differente di valori per i singoli descrittori molecolari, ed evitare che determinate feature diventino più importanti solo in funzi
