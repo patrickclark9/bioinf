@@ -51,11 +51,20 @@ Valori di attività fortemente differenti per uno stesso composto possono essere
 - Lo stesso composto chimico può presentare rappresentazioni diverse: protonazione, aromaticità, tautomeri, stereochimica, sali, acidi carbossilici, gruppi nitro.
 - Alcune proprietà non sono invarianti (es. lo stato di ionizzazione in funzione del pH).
 - Due rappresentazioni molecolari diverse possono produrre valori differenti per lo stesso descrittore molecolare, specialmente per approcci basati su fingerprint o su frammenti.
-- **Standardizzare prima del calcolo dei descrittori molecolari è essenziale.**![[Pasted image 20260808100537.png | 350]]![[Pasted image 20260808100526.png|350]]
+- **Standardizzare prima del calcolo dei descrittori molecolari è essenziale.**![[Pasted image 20260808100537.png|250]]![[Pasted image 20260808100526.png|350]]
 ### 4. Rimozione di miscele e composti inorganici
 
 - I composti inorganici vengono spesso rimossi dal dataset.
-- Per le miscele, la pratica standard è mantenere solo il frammento o la molecola con il **peso molecolare maggiore**.
+- Per le miscele, la pratica standard è mantenere solo il frammento o la molecola con il **peso molecolare maggiore o il numero maggiore di atomi**.
 - La QSAR richiede un'entità chimica ben definita, associata a una misurazione: la rimozione delle miscele è quindi fondamentale, perché il descrittore deve essere calcolato per una sola specie chimica — una miscela ne contiene più di una.
 
-![[Pasted image 20260808095357.png]]
+![[Pasted image 20260808095357.png|350]]
+
+## Descrizione molecolare
+- Formula bruta -> Informazione composizionale, peso molecolare
+- Struttura 2D -> Connessione tra atomi, tipi di legame, configurazione Z/E
+- Struttura 3D -> Include coordinate spaziale $<x_i, y_i, z_i>$, descrive volume molecolare, superficie molecolare, momento dipolare, superficie polare
+- Struttura 4D -> Informazione conformazionale, Distribuzione elettronica
+- Ulteriori livelli in 4 dimensioni -> Proprietà di dinamica molecola in un sistema spazio-tempo, proprietà biologiche se valutate le interazioni con l'ambiente
+Le dimensioni rappresentano no
+![[Pasted image 20260808101345.png]]
