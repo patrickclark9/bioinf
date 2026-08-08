@@ -84,4 +84,28 @@ Le fingerprint sono uno dei motivi per cui la standardizzazione è importante: D
 
 ## Descrittori 3D
 I Descrittori tridimensionali dipendono dalle coordinate $<x,y,z>$ , di conseguenza se una molecola può assumere differenti conformazioni $C_1, C_2, C_3$, allora il descrittore calcolato sulle conformazioni sarà differente $D(C_1) \ne D(C_2)$ potenzilamente.
-Il valore di un descrittore 3D cambia i
+Il valore di un descrittore 3D cambia in funzione delle coordinate atomiche delle differenti conformazioni, introducendo un problema -> quale conformazione scegliere.
+Questo problema diventa esponenzialmente più complesso per le proteine:
+### Paradosso di Levinthal
+Data una proteina di 100 amminoacidi, se ogni amminoacidi possiede anche solo 3 possibili conformazioni, allora il numero di possibili conformazioni totali sarebbe $$3^{100} \approx 10^{48}$$
+Impossibile raggiungere la struttura nativa, richiederebbe troppo tempo anche esplorando miliardi di conformazioni al secondo.
+
+I descrittori 3D quindi introducono un livello non banale di complessità conformazionale
+
+
+## Descrittori Chirali
+La stereochimica è un altro problema importante, dato che diversi enantiomeri, pur avendo stessa:
+- Formula chimica
+- Connettività
+- Peso Molecolare
+Presentano struttura 3-D differente, e quindi anche differente attività biologica, dato che il target è anch'esso tridimensionale e spesso chirale.
+
+Nella sintesi molecolare, ogni centro chirale introduce una complessità importante:
+
+$$2^{\text{centri chirali}}$$
+È il numero di enantiomeri prodotti durante la sintesi. Con 4 centri chirali:
+$$2^4 = 16 \space \text{enantiomeri diversi}$$
+### Easson-Stedman
+Il modello Easson-Stedman introduce il modello a 3 punti di interazioni:
+- Il ligando chirale può interagire con il recettore chirale attraverso più punti di interazione
+- Di conseguenza solo uno stereoisomero può ottenere il corretto arrangiamento spaziale, mentre gli altri non possono simultaneamente sod
