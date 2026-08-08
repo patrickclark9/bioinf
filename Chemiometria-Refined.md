@@ -66,5 +66,22 @@ Valori di attività fortemente differenti per uno stesso composto possono essere
 - Struttura 3D -> Include coordinate spaziale $<x_i, y_i, z_i>$, descrive volume molecolare, superficie molecolare, momento dipolare, superficie polare
 - Struttura 4D -> Informazione conformazionale, Distribuzione elettronica
 - Ulteriori livelli in 4 dimensioni -> Proprietà di dinamica molecola in un sistema spazio-tempo, proprietà biologiche se valutate le interazioni con l'ambiente
-Le dimensioni rappresentano no
+Le dimensioni rappresentano non solo 4 coordinate, ma diversi livelli di informazione sul livello molecolare
 ![[Pasted image 20260808101345.png]]
+
+## Fingerprint Molecolare
+Le fingerprint molecolari sono sistemi sviluppati per la codifica e rappresentazione vettoriale delle feature molecolari.
+Un esempio di fingerprint molecolari sono le fingerprint strutturali, in cui si va a rappresentare la presenza o assenza di una determinata feature strutturale (anello aromatico, gruppo ossidrilico, ammina, ammide ecc...) attraverso un vettore binario, in cui ogni posizione rappresenta la presenza/assenza di una data feature strutturale: $$<1,0,1,1,0,0>$$
+Di fingerprint ne esistono molte tipologie differenti con significati diversi in grado di codificare differenti feature della molecola, a partire dalle substrutture fino a codificare la struttura tridimensionale molecolare.
+
+Le fingerprint sono particolarmente utili per operazioni di:
+- Clustering
+- Similarity Searching
+- Virtual Screening
+- Machine Learning
+
+Le fingerprint sono uno dei motivi per cui la standardizzazione è importante: Differenti rappresentazioni avranno diverse fingerprint.
+
+## Descrittori 3D
+I Descrittori tridimensionali dipendono dalle coordinate $<x,y,z>$ , di conseguenza se una molecola può assumere differenti conformazioni $C_1, C_2, C_3$, allora il descrittore calcolato sulle conformazioni sarà differente $D(C_1) \ne D(C_2)$ potenzilamente.
+Il valore di un descrittore 3D cambia i
