@@ -10,6 +10,10 @@ Le relazioni tra i descrittori vengono quantificate calcolando la matrice di cov
 
 Prima di estrarre le componenti, le relazioni tra le variabili iniziali vanno quantificate con queste due matrici
 
+Le componenti principali sono nuove variabili costituite dalla combinazione lineare di quelle originali (i descrittori molecolari)
+Le componenti principali sono nuove variabili che intercettano la direzione di massima varianza in uno spazio multivariato
+Ogni combinazione lineare spiega parte della varianza totale
+Sono ortogonali, ovvero l'informazione contenuta in ognuna di esse è unica
 ### Varianza 
 Misura la dispersione di una singola variabile rispetto alla sua media. Misura della variabilità dei valori assunti dalla variabile stessa
 
@@ -46,6 +50,8 @@ Dalla matrice X iniziale ci si calcola $C$ la matrice di correlazione, la cui di
 - $L$ -> La matrice degli autovettori o loading
 	- Ogni riga rappresenta il descrittore originale, mentre la colonna rappresenta la nuova componente principale
 	- Ogni valore $l_{j,m}$ mostra il peso o l'importanza della variabile $j$ originale nella nuiova componente principale $m$
-	- I valori sono standardizzati cosicchè $-1 \le l_{j,m} \le 1$, e la loro somma quadratica è pari a 1
+	- I valori sono standardizzati cosicchè $-1 \le l_{j,m} \le 1$, e la loro somma quadratica è pari a 1 $$\sum_j l^2_{j,m} = 1$$
 
-Lo step finale è calcolare la matrice degli score
+Lo step finale è calcolare la matrice degli Score $T$, fatto moltiplicando il valore originale della matrice dei dati autoscalati per la matrice dei loading $L$ $$T = XL$$
+- La matrice dei loading agisce come matrice di rotazione, proiettando i dati originali in un nuovo spazio ortogonale
+- Gli score ($t_{i,m}$) sono nuove coordinate cartesiane di molecole all'interno dello spazio delle componenti principali
