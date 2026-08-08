@@ -8,6 +8,8 @@ Ortogonalità -> Perpendicolarità (formano un angolo di 90 gradi). Geometricame
 Si parte dalla matrice $X$ dei dati, di dimensione $n\times p$, con $n = \text{molecole}$ e $p = \text{descrittori}$.
 Le relazioni tra i descrittori vengono quantificate calcolando la matrice di covarianza $S$ e la matrice di correlazione $C$.
 
+Prima di estrarre le componenti, le relazioni tra le variabili iniziali vanno quantificate con queste due matrici
+
 ### Varianza 
 Misura la dispersione di una singola variabile rispetto alla sua media. Misura della variabilità dei valori assunti dalla variabile stessa
 
@@ -33,6 +35,17 @@ Ci si calcola $S$ e $C$.
 ![[Pasted image 20260808165025.png | 300]]![[Pasted image 20260808165037.png | 300]]
 
 La trasformazione è definita da un insieme di dimensione $l$, dove $l < \text{features}$ per ridurre la dimensionalità.
-
-Dalla matrice X iniziale ci si calcola $C$ la matrice di correlazione, la cui diagonalizzazione produce due matrici: $\Lambda$ la matrice degli autovalori, $L$ la matrice dei loadings.
+La PCA diagonalizza la matrice di correlazione $C$:
+Dalla matrice X iniziale ci si calcola $C$ la matrice di correlazione, la cui diagonalizzazione produce due matrici: $\Lambda$ la matrice degli autovalori, $L$ la matrice dei loadings (autovettori).
 ![[Pasted image 20260808165543.png]]
+
+- $\Lambda$ -> Ogni autovalore rappresenta l'esatta frazione di varianza catturata dalla corrispondente componente principale
+	- Sono ordinati diagonalmente per frazione di varianza spiegata: $\lambda_1 \ge \lambda_2 \ge \lambda_3 \ge ... \ge \lambda_k \ge 0$
+	- La somma degli autovalori è pari alla traccia della matrice $C$ -> $$\sum_{i} \lambda_i = trace(C)$$
+	- Per decidere il numero di componenti principali da calcolare, si utilizzano gli Scree-Plot o il criterio Kaiser-Guttman, che suggerisce di mantenere solo le componenti con $\lambda > 1$
+- $L$ -> La matrice degli autovettori o loading
+	- Ogni riga rappresenta il descrittore originale, mentre la colonna rappresenta la nuova componente principale
+	- Ogni valore $l_{j,m}$ mostra il peso o l'importanza della variabile $j$ originale nella nuiova componente principale $m$
+	- I valori sono standardizzati cosicchè $-1 \le l_{j,m} \le 1$, e la loro somma quadratica è pari a 1
+
+Lo step finale è calcolare la matrice degli score
