@@ -194,4 +194,61 @@ $$pIC_{50} = -\log_{10}(IC_{50})$$
 
 ## Variable Selection - Pruning
 Andiamo a rimuovere:
-- Variabili costanti -> $\text{Varianza} = 0$, ovvero quelle variabili in cui non c'è informazione, non oscillano, e non son
+- Variabili costanti -> $\text{Varianza} = 0$, ovvero quelle variabili in cui non c'è informazione, non oscillano, e non sono utili alla distinzione dei composti
+- Variabili quasi costanti -> $\text{Varianza} \approx 0$, come sopra, ma c'è un minimo di variazione, non molto informativa
+- Variabili correlate -> Possono essere raggruppate in gruppi di correlazione, e poi scegliere quelle maggiormente correlate alla risposta/attività, rimuovendo le altre. 
+- Variabili correlate TRA loro -> Rimuovere l'informazione ridodante, dovuta a correlazione TRA descrtittori
+- Gestione dei valori mancanti -> Dipendente dal modello, bisogna gestire eventualmente i dati mancanti. Le opzioni sono
+	- Rimozione dei composti problematici per cui mancano dati
+	- Imputazione dei valori
+	- Ricalcolo dei descrittori
+	- Utilizzo di algoritmi che possono gestire dati mancanti per alcune feature
+	- L'approccio corretto dipende dalla ragione per cui manca il dato
+
+## Correlazione
+Suppose:
+
+r=0.95
+
+You might think:
+
+> Excellent descriptor!
+
+But you still have to ask:
+
+- Is the relationship causal?
+- Is it just correlation?
+- Is the descriptor redundant with another descriptor?
+- Does it work on new compounds?
+- Is the relationship linear?
+- Is there an outlier driving the correlation?
+- Is the compound inside the applicability domain?
+
+Therefore:
+
+high correlation=validated QSAR model
+
+Conceptually:
+
+r=σX​σY​cov(X,Y)​
+with:
+
+−1≤r≤1
+
+### r=1
+
+Perfect positive linear relationship.
+
+### r=0
+
+No linear relationship.
+
+### r=−1
+
+Perfect negative linear relationship.
+
+For example:
+
+X↑⇒Y↑
+
+gives positive correlation.
