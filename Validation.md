@@ -53,4 +53,19 @@ Diversamente da $R^2$ ma similmente allo stesso aggiustato, $Q^2$ presenta un ma
 $Q^2$ viene esplicitamente valutato per esprimere una misura predittiva e non descrittiva (fitting) del modello
 ![[Pasted image 20260809170446.png]]
 Non esiste correlazione tra $Q^2$ e la predizione del test set $R^2_{pred}$, ovvero non vie è relazione tra predizione interna ed esterna.
-Spesso ad una maggiore predizione interna corrisponde una più bassa predizione esterna
+Spesso ad una maggiore predizione interna corrisponde una più bassa predizione esterna.
+
+
+## Y-Scrambling
+
+- Consiste nell'andare a valudare le prestazioni preditivve del modello andando a shufflare la variabile target $Y$ e lasciando immutate le $X$.
+- Le etichette-valori di $Y$ vengono riorganizzate o permutate
+- Il modello viene riaddestrato sui dati "scrambled" utilizzando le stesse feature di input
+- Vengono raccolte metriche di prestazioni
+- Si ripete lo scrambling e l'addestramento molte volte per costruire una distribuzione di score casuali
+- Il modello originale viene comparato contro la distribuzione di score casuali.
+	- Se lo score originale è più alto il modello ha potere predittivo effettivo
+
+Aiuta nel visualizzare eventuale overfitting
+Espone correlazioni dovute al caso
+Vastamente utilizzato in modelli QSAR per validare modelli relazionali struttura-attività
