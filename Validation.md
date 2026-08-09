@@ -20,4 +20,22 @@ Nel test set:
 ## Cross Validazione
 ### Leave One Out
 - Si partiziona il dataset in $k$ partizioni dove $k=N$ il numero di campioni
-- Si massimizza il training se
+- Si massimizza il training set, in quanto il modello viene addestrano su $N-1$ campioni
+- Si lascia un campione per la validazione
+- A rotazione, ogni data-point verrà usato per la validazione
+
+Vantaggi:
+- Basso bias -> L'utilizzo di tutto il dataset per il training previene underfitting
+- Deterministico -> Gli split sono fissati a priori
+Svantaggi
+- Altissimo costo computazionale -> dipende da $N$. Per $N >> 500$ significa addestrare un numero enorme di modelli
+- Alta varianza -> La predizione può fluttuare dipendentemente dal rumore del campione
+
+### K-Fold
+- Identico alla Leave-One-Out, ma invece di partizionare il dataset $k=N$, si definisce un valore per $k$ a priori, tipicamente non molto grande, ma dipende dalle dimensioni del campione (e.g. $k=5, k=10$)
+- Il dataset viene partizionato in $k$ parti uguali, dove $k-1$ fold vengono utilizzati per l'addestramento, ed 1 fold viene utilizzato per la validazione
+- L'addestramento-validazione avviene $k$ volte, quindi ogni partizione verrà usata per la validazione
+- Il risultato medio dei $k$ modelli creati è una metrica delle prestazioni del modello
+- Di strategie di K-Fold ne esistono tante, tra cui la stratificata, dove ogni partizione contiene più o meno lo stesso rapporto di classi. In regressione significa che il valore di risposta medio è più o meno lo stesso tra tutte le partizioni
+- Nella repeated cross-validation, il partizionamento avviene più volte, e le prestazioni del modello possono essere catturate da più run
+La Leave-One-Out è un caso particolare di K-Fold, dove $k = N$.
