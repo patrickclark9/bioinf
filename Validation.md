@@ -18,6 +18,7 @@ Nel test set:
 - Il rapporto tra molecole attive/inattive tra trainin e test deve essere simile
 
 ## Cross Validazione
+La cross Validazione è un metodo di validazione INTERNO, effettuato esclusivamente sul training set.  Misura la stabilità e la robustezza del modello matematico. Serve un Test set per validare il resto.
 ### Leave One Out
 - Si partiziona il dataset in $k$ partizioni dove $k=N$ il numero di campioni
 - Si massimizza il training set, in quanto il modello viene addestrano su $N-1$ campioni
@@ -39,3 +40,15 @@ Svantaggi
 - Di strategie di K-Fold ne esistono tante, tra cui la stratificata, dove ogni partizione contiene più o meno lo stesso rapporto di classi. In regressione significa che il valore di risposta medio è più o meno lo stesso tra tutte le partizioni
 - Nella repeated cross-validation, il partizionamento avviene più volte, e le prestazioni del modello possono essere catturate da più run
 La Leave-One-Out è un caso particolare di K-Fold, dove $k = N$.
+
+## $Q^2$
+Il $Q^2$ è una metrica statistica utilizzata per valutare il potere predittivo e la generalizzabilità di un modello.
+La $\text{PRESS}$ o Predictive Error Sum of Squares $$\text{PRESS} = \sum_{i=1} ^N(y_i - \hat y_{i/i})^2$$
+È uguale alla RSS, ma calcolato sul valore di $y$ predetto definito come $\hat y$ per l'i-esimo campione da un modello in cui il campione non è stato utilizzato in training. Viene calcolato ovviamente mediante LeaveOneOut.
+
+Utilizzando la PRESS al posto di RSS possiamo ottenere la percentuale di varianza spiegata dal modello in predizione: 
+$$Q^2 = R^2_{CV}=1- \frac{\text{PRESS}}{\text{TSS}}$$
+Diversamente da $R^2$ ma similmente allo stesso aggiustato, $Q^2$ presenta un massimo per la complessità ottimale del modello, e ridiscende ogni volta che aggiungiamo al modello variabili non predittive.
+$Q^2$ viene esplicitamente valutato per esprimere una misura predittiva e non descrittiva (fitting) del modello
+
+Non esiste correlazione tra $Q^2$ e la predizione del te $R^2$
