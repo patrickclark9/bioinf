@@ -69,3 +69,14 @@ Spesso ad una maggiore predizione interna corrisponde una più bassa predizione 
 Aiuta nel visualizzare eventuale overfitting
 Espone correlazioni dovute al caso
 Vastamente utilizzato in modelli QSAR per validare modelli relazionali struttura-attività
+
+## Classificazione
+
+- Prestazioni tipicamente valutati mediante matrici di confusione
+- Accuratezza, Precisione e Richiamo
+![[Pasted image 20260809174014.png]]
+
+## Modelli di Classficazione
+- Alberi
+- SVM
+- KNN
