@@ -19,6 +19,7 @@ Nel test set:
 
 ## Cross Validazione
 La cross Validazione è un metodo di validazione INTERNO, effettuato esclusivamente sul training set.  Misura la stabilità e la robustezza del modello matematico. Serve un Test set per validare il resto.
+Ogni modello deve essere validato con dati nuovi e indipendenti per evitare il problema della correlazione fortuita.
 ### Leave One Out
 - Si partiziona il dataset in $k$ partizioni dove $k=N$ il numero di campioni
 - Si massimizza il training set, in quanto il modello viene addestrano su $N-1$ campioni
@@ -50,5 +51,6 @@ Utilizzando la PRESS al posto di RSS possiamo ottenere la percentuale di varianz
 $$Q^2 = R^2_{CV}=1- \frac{\text{PRESS}}{\text{TSS}}$$
 Diversamente da $R^2$ ma similmente allo stesso aggiustato, $Q^2$ presenta un massimo per la complessità ottimale del modello, e ridiscende ogni volta che aggiungiamo al modello variabili non predittive.
 $Q^2$ viene esplicitamente valutato per esprimere una misura predittiva e non descrittiva (fitting) del modello
-
-Non esiste correlazione tra $Q^2$ e la predizione del te $R^2$
+![[Pasted image 20260809170446.png]]
+Non esiste correlazione tra $Q^2$ e la predizione del test set $R^2_{pred}$, ovvero non vie è relazione tra predizione interna ed esterna.
+Spesso ad una maggiore predizione interna corrisponde una più bassa predizione esterna
