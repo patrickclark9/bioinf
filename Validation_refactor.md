@@ -176,6 +176,12 @@ Poichè il modello è una generalizzazione dei dati su cui è stato addestrato, 
 - Molecole Intra-dominio -> Se una nuova molecola cade all'interno di uno spazio stabilito, la predizione del modello è considerata **affidabile**
 - Molecola Extra-dominio -> Se una nuova molecola cade qui, la predizione è considerata inaffidabile
 
+Ogni molecola = un punto in $\mathbb{R}^p$. Il training set è un insieme di punti in questo spazio.
+
+Un modello QSAR è valido solo se: $$x \in D$$
+Dove $D$ è il dominio definito dai dati di training, anche quando si ottengono valori di $R^2$ molto elevati.
+Si pparla di interpolazione se la predizione avviene all'interno dell'insieme definito, estrapolazione se avviene al di fuori.
+
 Stabilire dove un nuovo esempio cade e i confini del dominio di applicabilità non è banale. Alcuni metodi utilizzati per definirlo sono:
 1. Response Range -> Verifica semplicemente che il valore predetto cade all'interno dell'intervallo definito dai dati sperimentali utilizzati per addestrare il modello
 2. Tecniche Chemiometriche:
@@ -184,3 +190,10 @@ Stabilire dove un nuovo esempio cade e i confini del dominio di applicabilità n
 	3. Metodi Basati sulla distanza -> Calcolo della distanza tra la nuova molecola ed il centro del training set, o le molecole più vicine ![[Pasted image 20260810085855.png]]
 	4. Metodi basati sulla densità di probabilità -> Si costruisce una heatmap che definisce i confini basandosi sulla probabilità di trovare una molecola del training set in specifiche regioni dello spazio dei descrittori ![[Pasted image 20260810085959.png]]
 3. Approcci basati su Frammenti -> Si utilizza la struttura chimica. Valuta se le nuove molecole contengono gruppi funzionali o frammenti strutturali che il modello sa come gestire
+
+Definire il dominio di applicabilità è essenziale per definire gli outlier.
+Una molecola può essere considerata come al di fuori del dominio se contiene gruppi funzionali mai visti dal modello, o se si comporta in modo anomalo. Alcune classi di composti che possono richiedere ulteriore analisi sono:
+- Carbammati
+- Carbammidi
+- Sulfanyl-Acrylamide
+- Composti Policiclici con almeno un anello eteoriciclico
