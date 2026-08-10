@@ -173,3 +173,14 @@ Quando l'obiettivo non è predire un valore continuo (es. IC50) ma assegnare i c
 Il dominio di applicabilità definisce lo spazio all'interno del quale le predizioni di un modello sono considerate affidabili.
 Poichè il modello è una generalizzazione dei dati su cui è stato addestrato, non può predire accuratamente valori per molecole completamente diverse da quelle su cui è stato addestrato.
 
+- Molecole Intra-dominio -> Se una nuova molecola cade all'interno di uno spazio stabilito, la predizione del modello è considerata **affidabile**
+- Molecola Extra-dominio -> Se una nuova molecola cade qui, la predizione è considerata inaffidabile
+
+Stabilire dove un nuovo esempio cade e i confini del dominio di applicabilità non è banale. Alcuni metodi utilizzati per definirlo sono:
+1. Response Range -> Verifica semplicemente che il valore predetto cade all'interno dell'intervallo definito dai dati sperimentali utilizzati per addestrare il modello
+2. Tecniche Chemiometriche:
+	1. Descriptor Range -> Si definiscono i valori minimi e massimi per ciascun descrittore nel training set ![[Pasted image 20260810085834.png]]
+	2. Metodi Geometrici -> Viene definito uno spazio geometrico che incapsula i dati di addestramento ![[Pasted image 20260810085847.png]]
+	3. Metodi Basati sulla distanza -> Calcolo della distanza tra la nuova molecola ed il centro del training set, o le molecole più vicine ![[Pasted image 20260810085855.png]]
+	4. Metodi basati sulla densità di probabilità -> Si costruisce una heatmap che definisce i confini basandosi sulla probabilità di trovare una molecola del training set in specifiche regioni dello spazio dei descrittori ![[Pasted image 20260810085959.png]]
+3. Approcci basati su Frammenti -> Si utilizza la struttura chimica. Valuta se le nuove molecole contengono gruppi funzionali o frammenti strutturali che il modello sa come gestire
