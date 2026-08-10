@@ -80,3 +80,215 @@ Vastamente utilizzato in modelli QSAR per validare modelli relazionali struttura
 - Alberi
 - SVM
 - KNN
+
+
+
+# Validazione della QSAR
+
+## Test Set
+
+- Partizionamento del dato in **training set** e **test set**.
+- I composti devono presentare una rappresentatività uniforme.
+- Il test set non deve essere né troppo simile al training set (rischio di sovrastima delle prestazioni), né troppo dissimile (predizione troppo difficile).
+- Aiuta a identificare l'**overfitting**: se i miglioramenti nel training set non si traducono in una migliore predizione, il modello si è adattato troppo bene ai dati di addestramento, ma non generalizza in fase predittiva.
+
+> L'overfitting diventa problematico spesso quando il modello è troppo complesso. In alcuni casi, tuttavia, la presenza di termini di interazione è necessaria per descrivere un fenomeno complesso — come nell'equazione generale di solvatazione di Abraham, il cui termine $$\sum \alpha_2^H \cdot \sum \beta_2^H$$ rappresenta il prodotto tra l'acidità e la basicità di legame idrogeno dei soluti in soluzione.
+
+### Criteri per un buon test set
+
+- I metodi sperimentali per la determinazione della risposta in training e test devono essere simili.
+- I valori delle risposte devono estendersi su ordini di grandezza comparabili, senza eccedere troppo quelli del training set.
+- Il rapporto tra molecole attive/inattive tra training e test deve essere simile.
+
+---
+
+## Cross-Validazione
+
+La cross-validazione è un metodo di validazione **interno**, effettuato esclusivamente sul training set. Misura la stabilità e la robustezza del modello matematico — resta comunque necessario un test set indipendente per la validazione esterna.
+
+> Ogni modello deve essere validato con dati nuovi e indipendenti, per evitare il problema della correlazione fortuita.
+
+### Leave-One-Out (LOO)
+
+- Si partiziona il dataset in $k$ partizioni, dove $k = N$ (il numero di campioni).
+- Si massimizza il training set: il modello viene addestrato su $N-1$ campioni.
+- Si lascia un campione per la validazione.
+- A rotazione, ogni data-point viene usato per la validazione.
+
+**Vantaggi:**
+
+- Basso bias — l'utilizzo di quasi tutto il dataset per il training previene l'underfitting.
+- Deterministico — gli split sono fissati a priori.
+
+**Svantaggi:**
+
+- Costo computazionale altissimo — dipende da $N$; per $N \gg 500$ significa addestrare un numero enorme di modelli.
+- Alta varianza — la predizione può fluttuare in funzione del rumore del singolo campione lasciato fuori.
+
+### K-Fold
+
+- Identico al Leave-One-Out, ma invece di partizionare il dataset con $k=N$, si definisce un valore di $k$ a priori, tipicamente non molto grande (es. $k=5$, $k=10$), a seconda delle dimensioni del campione.
+- Il dataset viene partizionato in $k$ parti uguali: $k-1$ fold vengono utilizzati per l'addestramento, 1 fold per la validazione.
+- L'addestramento-validazione avviene $k$ volte, così ogni partizione viene usata una volta per la validazione.
+- Il risultato medio dei $k$ modelli creati costituisce la metrica delle prestazioni complessive.
+
+**Varianti:**
+
+- **K-Fold stratificato** — ogni partizione contiene più o meno lo stesso rapporto di classi (in regressione: lo stesso valore di risposta medio tra tutte le partizioni).
+- **Repeated cross-validation** — il partizionamento viene ripetuto più volte, catturando le prestazioni del modello su più run.
+
+> Il Leave-One-Out è un caso particolare di K-Fold, dove $k = N$.
+
+---
+
+## Q²
+
+Il **Q²** è una metrica statistica utilizzata per valutare il potere predittivo e la generalizzabilità di un modello.
+
+### PRESS
+
+La **PRESS** (Predictive Error Sum of Squares):
+
+$$\text{PRESS} = \sum_{i=1}^{N} (y_i - \hat{y}_{i/i})^2$$
+
+È analoga alla RSS, ma calcolata sul valore predetto $\hat{y}_{i/i}$ per l'i-esimo campione, ottenuto da un modello in cui quel campione **non** è stato utilizzato in training. Viene calcolata tramite Leave-One-Out.
+
+### Formula del Q²
+
+Utilizzando la PRESS al posto della RSS, si ottiene la percentuale di varianza spiegata dal modello **in predizione**:
+
+$$Q^2 = R^2_{CV} = 1 - \frac{\text{PRESS}}{\text{TSS}}$$
+
+- A differenza dell'R² (ma similmente all'R² aggiustato), il Q² presenta un massimo in corrispondenza della complessità ottimale del modello, e ridiscende quando si aggiungono variabili non predittive.
+- Il Q² viene esplicitamente calcolato per esprimere una misura **predittiva**, non descrittiva (di fitting), del modello.
+
+![[Pasted image 20260809170446.png]]
+
+#### Paradosso di Kubinyi
+> Non esiste correlazione garantita tra Q² e la predizione sul test set ($R^2_{pred}$): non vi è necessariamente relazione tra predizione interna ed esterna. Spesso, ad una maggiore predizione interna corrisponde una predizione esterna più bassa.
+
+Un buon risultato in CrossValidation non implica necesariamente buone prestazioni predittive
+
+---
+
+## Y-Scrambling
+
+Procedura:
+
+1. Si valutano le prestazioni predittive del modello permutando (shuffle) la variabile target $Y$, lasciando immutate le $X$.
+2. Le etichette/valori di $Y$ vengono riorganizzati casualmente.
+3. Il modello viene riaddestrato sui dati "scrambled", utilizzando le stesse feature di input.
+4. Vengono raccolte le metriche di prestazione.
+5. Si ripetono scrambling e addestramento molte volte, costruendo una distribuzione di score casuali.
+6. Il modello originale viene confrontato contro questa distribuzione: se lo score originale è significativamente più alto, il modello possiede un potere predittivo effettivo.
+
+**Utilità:**
+
+- Aiuta a visualizzare eventuale overfitting.
+- Espone correlazioni dovute al caso.
+- Ampiamente utilizzato nei modelli QSAR per validare modelli relazionali struttura-attività.
+
+---
+
+## Regressione vs Classificazione
+
+In determinati casi, i dati possono essere più adatti a un modello di **classificazione** piuttosto che a uno di **regressione**.
+
+![[Pasted image 20260809174647.png]]
+
+### Quando preferire la Regressione
+
+- La risposta biologica è una quantità **continua** e misurata con precisione (es. IC50, EC50, pKi).
+- L'obiettivo è predire un valore numerico esatto, utile per confrontare quantitativamente composti diversi.
+- I dati sperimentali coprono un range continuo di attività, senza discontinuità naturali tra "gruppi" di composti.
+
+### Quando preferire la Classificazione
+
+- La risposta biologica è naturalmente **categorica** (es. attivo/inattivo, tossico/non tossico, mutageno/non mutageno) — oppure viene resa tale per necessità pratiche.
+- I dati sperimentali sono rumorosi o poco precisi in termini assoluti, ma sufficientemente affidabili per distinguere categorie ampie (es. "attivo sopra una data soglia" vs "inattivo").
+- Si dispone di dati eterogenei, provenienti da fonti o metodi sperimentali differenti, difficili da armonizzare su una scala continua unica, ma più facilmente riconducibili a categorie comuni.
+- L'obiettivo applicativo è decisionale — ad esempio, nello screening di grandi librerie, spesso interessa più identificare "quali composti sono probabilmente attivi" (classificazione) che predire il valore esatto della loro attività (regressione).
+- Il numero di composti con dati quantitativi affidabili è limitato, ma è possibile etichettare più facilmente un numero maggiore di composti in categorie ampie, aumentando la dimensione del dataset utilizzabile.
+
+### Trasformazione tra i due approcci
+
+Un dataset continuo può sempre essere convertito in categorico introducendo una soglia (es. $pIC_{50} > 6 \rightarrow$ attivo), sacrificando parte dell'informazione quantitativa a favore della robustezza e semplicità del modello risultante. La scelta della soglia deve essere biologicamente/chimicamente motivata, non arbitraria, poiché influenza direttamente le prestazioni e l'interpretabilità del modello di classificazione.
+
+---
+
+## Classificazione
+
+- Le prestazioni sono tipicamente valutate mediante **matrici di confusione**.
+- Metriche principali: **Accuratezza**, **Precisione** e **Richiamo (Recall)**.
+
+![[Pasted image 20260809174014.png]]
+
+---
+
+## Modelli di Classificazione per QSAR
+
+Quando l'obiettivo non è predire un valore continuo (es. IC50) ma assegnare i composti a una categoria (es. attivo/inattivo, tossico/non tossico), si utilizzano modelli di **classificazione** anziché di regressione.
+
+### Alberi Decisionali (Decision Trees)
+
+- Suddividono ripetutamente lo spazio dei descrittori in base a soglie su singole variabili, costruendo una struttura ad albero di regole if/then.
+- Ogni nodo interno rappresenta un test su un descrittore (es. "logP > 3?"), ogni foglia rappresenta una classe finale (attivo/inattivo).
+- **Vantaggi**: facilmente interpretabili, permettono di identificare visivamente quali descrittori guidano la classificazione.
+- **Svantaggi**: tendenza all'overfitting se l'albero cresce troppo in profondità; instabili a piccole variazioni nel dataset.
+- Estensioni come **Random Forest** combinano molti alberi per ridurre la varianza e migliorare la generalizzazione.
+
+### SVM (Support Vector Machine)
+
+- Cerca l'iperpiano che meglio separa le classi nello spazio dei descrittori, massimizzando il margine tra le classi (i punti più vicini all'iperpiano, i "support vector").
+- Per dati non linearmente separabili, utilizza il **kernel trick** (es. kernel RBF) per proiettare i dati in uno spazio a dimensionalità superiore, dove diventano separabili.
+- **Vantaggi**: efficace anche con un numero elevato di descrittori rispetto al numero di composti; robusto all'overfitting grazie alla massimizzazione del margine.
+- **Svantaggi**: meno interpretabile rispetto agli alberi; la scelta del kernel e dei suoi iperparametri richiede tuning accurato.
+
+### KNN (K-Nearest Neighbors)
+
+- Classifica un nuovo composto sulla base della classe maggioritaria tra i suoi **K vicini più prossimi** nello spazio dei descrittori, secondo una data misura di distanza (es. Euclidea, Tanimoto per fingerprint).
+- Non richiede una fase di addestramento esplicita (metodo "lazy"): la predizione avviene calcolando le distanze al momento della classificazione.
+- **Vantaggi**: semplice, intuitivo, si adatta naturalmente a confini di decisione complessi e non lineari.
+- **Svantaggi**: computazionalmente costoso su grandi dataset (deve calcolare la distanza da tutti i punti); sensibile alla scelta di K e alla scala dei descrittori (richiede normalizzazione).
+
+> La scelta del modello dipende dal compromesso tra **interpretabilità** (favorita da alberi decisionali) e **capacità predittiva su relazioni complesse e non lineari** (favorita da SVM e KNN) — un compromesso analogo a quello già visto tra modelli QSAR lineari e non lineari.
+
+### Modelli Ensemble
+I modelli ensemble ricercano uno spazsio delle ipotesi per trovare una ipotesi che funzioni per un particolare problema.
+Anche se questo spazio contiene ipotesi ben costruire per un particolare problema, la ricerca di una adeguata può essere complessa.
+I modelli Ensemble uniscono due o più modelli di apprendimento per uno specifico task di regressione o classificazione, definiti modelli base. I modelli base possono essere tutti uguali (tutti alberi di decisione) o diversi. L'idea è addestrare un insieme di modelli weak sullo stesso task, cosicchè gli output possano essere combinati secondo una qualche strategia per costruire un modello migliore.
+Le tecniche vengono suddivise in:
+- Boosting -> Processo iterativo dove si addestrano sequenzialmente i modelli base sull'errore pesato del modello precedente, producendo un modello additivo che riduce l'errore finale del modello. Ogni nuovo modello base continua l'addestramento da quello precedente
+- Bagging -> Crea diverse partizioni del dataset originale campionando uniformemente con rimpiazzo dal dataset, costruendo diversi partizioni. $m$ modelli vengono poi addestrati utilizzando i diversi bootstrap, e poi si aggrega il risultato prendendo la media (regressione) o mediante il voto (classificazione). SI chiama Bootstrap-Aggregating perchè consiste nel campionamento -> addestramento su diverse parti del dataset -> Aggregazione del risultato
+- Stacking -> Lo stacking consiste nell'addestrare diversi modelli base, ognuno addestrato indipendentemente per essere combinato all'interno di un modello ensemble. Spesso a differenza degli altri metodi si utilizzano diversi modelli (KNN, SVM, Albero). Un secondo modello poi riceve in input le predizioni dei modelli base e produce una predizione finale. Il modello finale non utilizza il dataset iniziale $X$, ma invece apprende dalle predizioni dei modelli base
+- Voting -> Più modelli base vengono addestrati sul dataset, dopodichè la predizione finale si ottiene per voto di ciascun modello per una classe, dove la maggioranza determina la predizione o mediante media delle predizioni per la regressione
+
+## Dominio di Applicabilità
+
+Il dominio di applicabilità definisce lo spazio all'interno del quale le predizioni di un modello sono considerate affidabili.
+Poichè il modello è una generalizzazione dei dati su cui è stato addestrato, non può predire accuratamente valori per molecole completamente diverse da quelle su cui è stato addestrato.
+
+- Molecole Intra-dominio -> Se una nuova molecola cade all'interno di uno spazio stabilito, la predizione del modello è considerata **affidabile**
+- Molecola Extra-dominio -> Se una nuova molecola cade qui, la predizione è considerata inaffidabile
+
+Ogni molecola = un punto in $\mathbb{R}^p$. Il training set è un insieme di punti in questo spazio.
+
+Un modello QSAR è valido solo se: $$x \in D$$
+Dove $D$ è il dominio definito dai dati di training, anche quando si ottengono valori di $R^2$ molto elevati.
+Si pparla di interpolazione se la predizione avviene all'interno dell'insieme definito, estrapolazione se avviene al di fuori.
+
+Stabilire dove un nuovo esempio cade e i confini del dominio di applicabilità non è banale. Alcuni metodi utilizzati per definirlo sono:
+1. Response Range -> Verifica semplicemente che il valore predetto cade all'interno dell'intervallo definito dai dati sperimentali utilizzati per addestrare il modello
+2. Tecniche Chemiometriche:
+	1. Descriptor Range -> Si definiscono i valori minimi e massimi per ciascun descrittore nel training set ![[Pasted image 20260810085834.png]]
+	2. Metodi Geometrici -> Viene definito uno spazio geometrico che incapsula i dati di addestramento ![[Pasted image 20260810085847.png]]
+	3. Metodi Basati sulla distanza -> Calcolo della distanza tra la nuova molecola ed il centro del training set, o le molecole più vicine ![[Pasted image 20260810085855.png]]
+	4. Metodi basati sulla densità di probabilità -> Si costruisce una heatmap che definisce i confini basandosi sulla probabilità di trovare una molecola del training set in specifiche regioni dello spazio dei descrittori ![[Pasted image 20260810085959.png]]
+3. Approcci basati su Frammenti -> Si utilizza la struttura chimica. Valuta se le nuove molecole contengono gruppi funzionali o frammenti strutturali che il modello sa come gestire
+
+Definire il dominio di applicabilità è essenziale per definire gli outlier.
+Una molecola può essere considerata come al di fuori del dominio se contiene gruppi funzionali mai visti dal modello, o se si comporta in modo anomalo. Alcune classi di composti che possono richiedere ulteriore analisi sono:
+- Carbammati
+- Carbammidi
+- Sulfanyl-Acrylamide
+- Composti Policiclici con almeno un anello eteoriciclico

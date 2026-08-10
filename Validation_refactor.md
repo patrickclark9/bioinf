@@ -79,10 +79,7 @@ $$Q^2 = R^2_{CV} = 1 - \frac{\text{PRESS}}{\text{TSS}}$$
 
 ![[Pasted image 20260809170446.png]]
 
-#### Paradosso di Kubinyi
 > Non esiste correlazione garantita tra Q² e la predizione sul test set ($R^2_{pred}$): non vi è necessariamente relazione tra predizione interna ed esterna. Spesso, ad una maggiore predizione interna corrisponde una predizione esterna più bassa.
-
-Un buon risultato in CrossValidation non implica necesariamente buone prestazioni predittive
 
 ---
 
@@ -168,41 +165,78 @@ Quando l'obiettivo non è predire un valore continuo (es. IC50) ma assegnare i c
 
 > La scelta del modello dipende dal compromesso tra **interpretabilità** (favorita da alberi decisionali) e **capacità predittiva su relazioni complesse e non lineari** (favorita da SVM e KNN) — un compromesso analogo a quello già visto tra modelli QSAR lineari e non lineari.
 
+---
+
 ### Modelli Ensemble
-I modelli ensemble ricercano uno spazsio delle ipotesi per trovare una ipotesi che funzioni per un particolare problema.
-Anche se questo spazio contiene ipotesi ben costruire per un particolare problema, la ricerca di una adeguata può essere complessa.
-I modelli Ensemble uniscono due o più modelli di apprendimento per uno specifico task di regressione o classificazione, definiti modelli base. I modelli base possono essere tutti uguali (tutti alberi di decisione) o diversi. L'idea è addestrare un insieme di modelli weak sullo stesso task, cosicchè gli output possano essere combinati secondo una qualche strategia per costruire un modello migliore.
-Le tecniche vengono suddivise in:
-- Boosting -> Processo iterativo dove si addestrano sequenzialmente i modelli base sull'errore pesato del modello precedente, producendo un modello additivo che riduce l'errore finale del modello. Ogni nuovo modello base continua l'addestramento da quello precedente
-- Bagging -> Crea di
-- Voting/Stacking
+
+I modelli ensemble ricercano uno spazio delle ipotesi per trovare quella che funziona meglio per un particolare problema. Anche se questo spazio contiene ipotesi ben costruite per il problema in esame, individuarne una adeguata può essere complesso.
+
+I modelli ensemble uniscono due o più modelli di apprendimento (detti **modelli base**) per uno specifico task di regressione o classificazione. I modelli base possono essere tutti dello stesso tipo (es. tutti alberi decisionali) o di tipo diverso. L'idea è addestrare un insieme di modelli "weak" (deboli) sullo stesso task, in modo che i loro output possano essere combinati secondo una strategia per costruire un modello complessivamente migliore.
+
+Le tecniche si suddividono in quattro categorie principali:
+
+|Tecnica|Meccanismo|
+|---|---|
+|**Boosting**|Processo iterativo in cui i modelli base vengono addestrati **sequenzialmente** sull'errore pesato del modello precedente, producendo un modello additivo che riduce progressivamente l'errore finale. Ogni nuovo modello base continua l'addestramento a partire da quello precedente.|
+|**Bagging** (Bootstrap Aggregating)|Si creano diverse partizioni del dataset originale campionando uniformemente **con rimpiazzo** (bootstrap). Si addestrano $m$ modelli su questi diversi campioni bootstrap, e si aggrega il risultato prendendo la **media** (regressione) o tramite **voto** (classificazione). Il nome deriva dal processo: campionamento → addestramento su diverse porzioni del dataset → aggregazione del risultato.|
+|**Stacking**|Si addestrano diversi modelli base, ciascuno **indipendentemente**, spesso di tipo eterogeneo (es. KNN, SVM, Albero decisionale combinati insieme). Un secondo modello ("meta-modello") riceve in input le predizioni dei modelli base e produce la predizione finale — il meta-modello non utilizza direttamente il dataset $X$, ma apprende dalle predizioni dei modelli base.|
+|**Voting**|Più modelli base vengono addestrati sul dataset; la predizione finale si ottiene per **voto** di ciascun modello su una classe (vince la maggioranza), oppure tramite **media delle predizioni** nel caso della regressione.|
+
+---
 
 ## Dominio di Applicabilità
 
-Il dominio di applicabilità definisce lo spazio all'interno del quale le predizioni di un modello sono considerate affidabili.
-Poichè il modello è una generalizzazione dei dati su cui è stato addestrato, non può predire accuratamente valori per molecole completamente diverse da quelle su cui è stato addestrato.
+Il **dominio di applicabilità** definisce lo spazio all'interno del quale le predizioni di un modello sono considerate affidabili. Poiché il modello è una generalizzazione dei dati su cui è stato addestrato, non può predire accuratamente valori per molecole completamente diverse da quelle utilizzate in training.
 
-- Molecole Intra-dominio -> Se una nuova molecola cade all'interno di uno spazio stabilito, la predizione del modello è considerata **affidabile**
-- Molecola Extra-dominio -> Se una nuova molecola cade qui, la predizione è considerata inaffidabile
+|Tipo di molecola|Descrizione|
+|---|---|
+|**Intra-dominio**|Se una nuova molecola cade all'interno dello spazio stabilito, la predizione del modello è considerata **affidabile**.|
+|**Extra-dominio**|Se una nuova molecola cade al di fuori, la predizione è considerata **inaffidabile**.|
 
-Ogni molecola = un punto in $\mathbb{R}^p$. Il training set è un insieme di punti in questo spazio.
+Ogni molecola corrisponde a un punto in $\mathbb{R}^p$; il training set è un insieme di punti in questo spazio.
 
-Un modello QSAR è valido solo se: $$x \in D$$
-Dove $D$ è il dominio definito dai dati di training, anche quando si ottengono valori di $R^2$ molto elevati.
-Si pparla di interpolazione se la predizione avviene all'interno dell'insieme definito, estrapolazione se avviene al di fuori.
+Un modello QSAR è valido solo se:
 
-Stabilire dove un nuovo esempio cade e i confini del dominio di applicabilità non è banale. Alcuni metodi utilizzati per definirlo sono:
-1. Response Range -> Verifica semplicemente che il valore predetto cade all'interno dell'intervallo definito dai dati sperimentali utilizzati per addestrare il modello
-2. Tecniche Chemiometriche:
-	1. Descriptor Range -> Si definiscono i valori minimi e massimi per ciascun descrittore nel training set ![[Pasted image 20260810085834.png]]
-	2. Metodi Geometrici -> Viene definito uno spazio geometrico che incapsula i dati di addestramento ![[Pasted image 20260810085847.png]]
-	3. Metodi Basati sulla distanza -> Calcolo della distanza tra la nuova molecola ed il centro del training set, o le molecole più vicine ![[Pasted image 20260810085855.png]]
-	4. Metodi basati sulla densità di probabilità -> Si costruisce una heatmap che definisce i confini basandosi sulla probabilità di trovare una molecola del training set in specifiche regioni dello spazio dei descrittori ![[Pasted image 20260810085959.png]]
-3. Approcci basati su Frammenti -> Si utilizza la struttura chimica. Valuta se le nuove molecole contengono gruppi funzionali o frammenti strutturali che il modello sa come gestire
+$$x \in D$$
 
-Definire il dominio di applicabilità è essenziale per definire gli outlier.
-Una molecola può essere considerata come al di fuori del dominio se contiene gruppi funzionali mai visti dal modello, o se si comporta in modo anomalo. Alcune classi di composti che possono richiedere ulteriore analisi sono:
+dove $D$ è il dominio definito dai dati di training — **anche quando si ottengono valori di R² molto elevati**.
+
+> Si parla di **interpolazione** se la predizione avviene all'interno dell'insieme definito, di **estrapolazione** se avviene al di fuori.
+
+### Metodi per Definire il Dominio di Applicabilità
+
+Stabilire dove cade un nuovo esempio e i confini del dominio non è banale. I principali approcci sono:
+
+1. **Response Range** — verifica semplicemente che il valore predetto cada all'interno dell'intervallo definito dai dati sperimentali usati per addestrare il modello.
+    
+2. **Tecniche Chemiometriche:**
+    
+    - **Descriptor Range** — si definiscono i valori minimi e massimi per ciascun descrittore nel training set.
+        
+        ![[Pasted image 20260810085834.png]]
+        
+    - **Metodi Geometrici** — si definisce uno spazio geometrico che incapsula i dati di addestramento.
+        
+        ![[Pasted image 20260810085847.png]]
+        
+    - **Metodi Basati sulla Distanza** — calcolo della distanza tra la nuova molecola e il centro del training set, o le molecole più vicine.
+        
+        ![[Pasted image 20260810085855.png]]
+        
+    - **Metodi Basati sulla Densità di Probabilità** — si costruisce una heatmap che definisce i confini in base alla probabilità di trovare una molecola del training set in specifiche regioni dello spazio dei descrittori.
+        
+        ![[Pasted image 20260810085959.png]]
+        
+3. **Approcci Basati su Frammenti** — utilizzano la struttura chimica, valutando se le nuove molecole contengono gruppi funzionali o frammenti strutturali che il modello "sa gestire" (già visti in training).
+    
+
+### Dominio di Applicabilità e Outlier
+
+Definire il dominio di applicabilità è essenziale per identificare gli outlier. Una molecola può essere considerata al di fuori del dominio se contiene gruppi funzionali mai visti dal modello, o se si comporta in modo anomalo.
+
+Alcune classi di composti che possono richiedere un'analisi più approfondita:
+
 - Carbammati
 - Carbammidi
-- Sulfanyl-Acrylamide
-- Composti Policiclici con almeno un anello eteoriciclico
+- Sulfanil-acrilammidi
+- Composti policiclici con almeno un anello eterociclico
