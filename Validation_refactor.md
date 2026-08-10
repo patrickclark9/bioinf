@@ -168,6 +168,15 @@ Quando l'obiettivo non è predire un valore continuo (es. IC50) ma assegnare i c
 
 > La scelta del modello dipende dal compromesso tra **interpretabilità** (favorita da alberi decisionali) e **capacità predittiva su relazioni complesse e non lineari** (favorita da SVM e KNN) — un compromesso analogo a quello già visto tra modelli QSAR lineari e non lineari.
 
+### Modelli Ensemble
+I modelli ensemble ricercano uno spazsio delle ipotesi per trovare una ipotesi che funzioni per un particolare problema.
+Anche se questo spazio contiene ipotesi ben costruire per un particolare problema, la ricerca di una adeguata può essere complessa.
+I modelli Ensemble uniscono due o più modelli di apprendimento per uno specifico task di regressione o classificazione, definiti modelli base. I modelli base possono essere tutti uguali (tutti alberi di decisione) o diversi. L'idea è addestrare un insieme di modelli weak sullo stesso task, cosicchè gli output possano essere combinati secondo una qualche strategia per costruire un modello migliore.
+Le tecniche vengono suddivise in:
+- Boosting -> Processo iterativo dove si addestrano sequenzialmente i modelli base sull'errore pesato del modello precedente, producendo un modello additivo che riduce l'errore finale del modello. Ogni nuovo modello base continua l'addestramento da quello precedente
+- Bagging -> Crea di
+- Voting/Stacking
+
 ## Dominio di Applicabilità
 
 Il dominio di applicabilità definisce lo spazio all'interno del quale le predizioni di un modello sono considerate affidabili.
