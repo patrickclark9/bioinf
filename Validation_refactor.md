@@ -79,7 +79,10 @@ $$Q^2 = R^2_{CV} = 1 - \frac{\text{PRESS}}{\text{TSS}}$$
 
 ![[Pasted image 20260809170446.png]]
 
+#### Paradosso di Kubinyi
 > Non esiste correlazione garantita tra Q² e la predizione sul test set ($R^2_{pred}$): non vi è necessariamente relazione tra predizione interna ed esterna. Spesso, ad una maggiore predizione interna corrisponde una predizione esterna più bassa.
+
+Un buon risultato in CrossValidation non implica necesariamente buone prestazioni predittive
 
 ---
 
@@ -164,3 +167,9 @@ Quando l'obiettivo non è predire un valore continuo (es. IC50) ma assegnare i c
 - **Svantaggi**: computazionalmente costoso su grandi dataset (deve calcolare la distanza da tutti i punti); sensibile alla scelta di K e alla scala dei descrittori (richiede normalizzazione).
 
 > La scelta del modello dipende dal compromesso tra **interpretabilità** (favorita da alberi decisionali) e **capacità predittiva su relazioni complesse e non lineari** (favorita da SVM e KNN) — un compromesso analogo a quello già visto tra modelli QSAR lineari e non lineari.
+
+## Dominio di Applicabilità
+
+Il dominio di applicabilità definisce lo spazio all'interno del quale le predizioni di un modello sono considerate affidabili.
+Poichè il modello è una generalizzazione dei dati su cui è stato addestrato, non può predire accuratamente valori per molecole completamente diverse da quelle su cui è stato addestrato.
+
