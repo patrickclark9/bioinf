@@ -102,6 +102,32 @@ Procedura:
 
 ---
 
+## Regressione vs Classificazione
+
+In determinati casi, i dati possono essere più adatti a un modello di **classificazione** piuttosto che a uno di **regressione**.
+
+![[Pasted image 20260809174647.png]]
+
+### Quando preferire la Regressione
+
+- La risposta biologica è una quantità **continua** e misurata con precisione (es. IC50, EC50, pKi).
+- L'obiettivo è predire un valore numerico esatto, utile per confrontare quantitativamente composti diversi.
+- I dati sperimentali coprono un range continuo di attività, senza discontinuità naturali tra "gruppi" di composti.
+
+### Quando preferire la Classificazione
+
+- La risposta biologica è naturalmente **categorica** (es. attivo/inattivo, tossico/non tossico, mutageno/non mutageno) — oppure viene resa tale per necessità pratiche.
+- I dati sperimentali sono rumorosi o poco precisi in termini assoluti, ma sufficientemente affidabili per distinguere categorie ampie (es. "attivo sopra una data soglia" vs "inattivo").
+- Si dispone di dati eterogenei, provenienti da fonti o metodi sperimentali differenti, difficili da armonizzare su una scala continua unica, ma più facilmente riconducibili a categorie comuni.
+- L'obiettivo applicativo è decisionale — ad esempio, nello screening di grandi librerie, spesso interessa più identificare "quali composti sono probabilmente attivi" (classificazione) che predire il valore esatto della loro attività (regressione).
+- Il numero di composti con dati quantitativi affidabili è limitato, ma è possibile etichettare più facilmente un numero maggiore di composti in categorie ampie, aumentando la dimensione del dataset utilizzabile.
+
+### Trasformazione tra i due approcci
+
+Un dataset continuo può sempre essere convertito in categorico introducendo una soglia (es. $pIC_{50} > 6 \rightarrow$ attivo), sacrificando parte dell'informazione quantitativa a favore della robustezza e semplicità del modello risultante. La scelta della soglia deve essere biologicamente/chimicamente motivata, non arbitraria, poiché influenza direttamente le prestazioni e l'interpretabilità del modello di classificazione.
+
+---
+
 ## Classificazione
 
 - Le prestazioni sono tipicamente valutate mediante **matrici di confusione**.
