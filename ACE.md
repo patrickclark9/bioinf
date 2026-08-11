@@ -20,3 +20,18 @@ D-R-V-Y-I-H-P-F-H-L -> D-R-V-Y-I-H-P-F + H-L
 L'angiotensina II restringe i vasi sanguigni ed aumenta la pressione sanguigna.
 
 Gli inibitori dell'ACE sono usati come agenti anti-ipertensione.
+
+L'ACE enzima è complesso da isolare, come ogni enzima di membrana, il design dell'inibitore è basato su studi su enzima equivalente isolabile, L'enzima CarbossiPeptidasi.
+
+## Carboxypeptidase
+La carbossipeptidasi è una zinco-metalloproteinasi che taglia un amminoacido terminale al C-terminale. Viene inibito dall'acido L-benzilsuccinico.
+![[Pasted image 20260811185619.png]]
+
+Lo Ione $Zn^{2+}$ è importante per il binding e per la polarizzazione del gruppo carbonile.
+L'Arg-145 forma un legame ionico al terminale del gruppo carbossilato
+La tasca idrofobica S1 ha una prefernza per anelli aromatici, una specificità più elevata per amminoacidi aromatici al C-terminale.
+![[Pasted image 20260811185837.png]]
+
+L'acido L-benzilsuccinico è stato creato per mimare le interazioni di binding dei due prodotti carbossilati, ma all'interno della stessa molecola.
+Si lega in maniera forte ma non può essere idrolizzata poichè non esiste alcun legame peptidico.
+L'enzima viene inibito finchè questo composto rimane legato.
