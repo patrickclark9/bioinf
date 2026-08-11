@@ -35,3 +35,17 @@ La tasca idrofobica S1 ha una prefernza per anelli aromatici, una specificità p
 L'acido L-benzilsuccinico è stato creato per mimare le interazioni di binding dei due prodotti carbossilati, ma all'interno della stessa molecola.
 Si lega in maniera forte ma non può essere idrolizzata poichè non esiste alcun legame peptidico.
 L'enzima viene inibito finchè questo composto rimane legato.
+
+## Inibitori
+La comprensione del meccanismo studiato sulla carbossipeptidasi ha aiutato nel design di inibitori ACE
+- Il sito attivo probabilmente contiene Uno ione zinco e arginina per il binding, probabilmente più lontani tra loro rispetto alla carbossipeptidasi visto che viene tagliato un dipeptide, non un singolo peptide
+- Inibitori analoghi devono essere più lunghi di 1 solo amminoacido
+- Va usato un amminoacido succinil-sostituito ![[Pasted image 20260811192221.png]]
+
+La domanda rimane quale amminoacido scegliere
+
+### Teprotide
+La teprotide è un nonapeptide isolato dal veleno della vipera brasiliana, inibitore dell'ACE.
+È suscettibile a enzimi digestivi ed è oralmente inattiva.
+
+La prolina però sembrava essere coinvolta nel processo di legame con il sito attivo, di conseguenza
