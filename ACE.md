@@ -48,4 +48,32 @@ La domanda rimane quale amminoacido scegliere
 La teprotide è un nonapeptide isolato dal veleno della vipera brasiliana, inibitore dell'ACE.
 È suscettibile a enzimi digestivi ed è oralmente inattiva.
 
-La prolina però sembrava essere coinvolta nel processo di legame con il sito attivo, di conseguenza
+La prolina però sembrava essere coinvolta nel processo di legame con il sito attivo, di conseguenza venne scelto come amminoacido per la sostituzione succinil-.
+La succinil-prolina si dimostrò un debole, ma selettivo, inibitore dell'ACE![[Pasted image 20260811192445.png]]
+
+![[Pasted image 20260811192459.png]]
+
+## Estensioni
+La succinil-prolina venne ulteriormente modificata con sostituenti metilici aggiunti per formare addizionali interazioni idrofobiche con la tasca S1.
+Questo però causa la formazione di un centro chirale, e l'entantiomero opposto è 100-fold meno attivo.
+Il gruppo carbossilato venne poi rimpiazzato con un tiolico, che agisce come bio-isostere per lo ione carbossilato, portando alla formazione del Captoprile.
+Il tiolico forma interazioni più forti con lo ione $Zn^{2+}$.
+Il Captoprile fu il primo inibitore non peptidico per l'ACE.
+![[Pasted image 20260811192809.png]]
+![[Pasted image 20260811192816.png]]
+
+### Svantaggi del Captoprile
+
+- Svariati effetti collaterali, arrossamenti, perdita del gusto, probabilmente associati con il tiolico
+L'obiettivo divenne quindi trovare un inibitore forte come il captoprile ma senza tiolico
+
+Il carbossilato viene reintrodotto, ma questo abbassa l'attività della molecola. Si rende quindi necessario trovare metodi per aumentare le interazioni per compensare per la perdita del tiolico.
+
+## Enalaprilato
+![[Pasted image 20260811193332.png]]
+L'enalaprilato rimpiazza il tiolico con lo ione carbossilato, e compensa la perdita del tiolo con interazioni di binding aggiuntive coinvolgenti gruppi fenetil, amminici e metilici
+
+L'amminico introdotto mima le interazioni di binding dell'ammidico NH nel substrato
+Il metilico entra nella tasca S1 insieme al fenetili, che porta alla formazione di ulteriori interazioni di legame
+
+L'enalapril è un etil-estere dell'enalaprilato, assorbito meglio rispetto all'enalaprilato
