@@ -77,3 +77,22 @@ L'amminico introdotto mima le interazioni di binding dell'ammidico NH nel substr
 Il metilico entra nella tasca S1 insieme al fenetili, che porta alla formazione di ulteriori interazioni di legame
 
 L'enalapril è un etil-estere dell'enalaprilato, assorbito meglio rispetto all'enalaprilato
+
+![[Pasted image 20260811193401.png]]
+
+## Lisinopril
+![[Pasted image 20260811193620.png]]
+- Simile all'enalaprilato, ma il gruppo metilico viene esteso per mimare la catena laterale della lisina
+- La struttura cristallizzata di ACE + lisinopril venne risolta nel 2003, e dimostrò che la lisina è uno dei residui coinvolti nel legame ionico con inibitori ACE, invece di un residuo di Arg, come invece avviene nella carbossipeptidasi
+
+![[Pasted image 20260811193611.png]]
+Lisinopril ed Enalaprilato sono descritti come inibitori dello stato di transizione. Lo stato di transizione è probabilmente simile all'intermedio di reazione.
+Un centro tetraedrico (chirale) è presente dove normalmente sarebbe il centro di reazione
+![[Pasted image 20260811193721.png]]
+
+## Nuovi Inibitori
+Silanediolo mima il carbonile idratato dell'intermedio di reazione
+I cheto-ACE analoghi in forma idratata agiscono come analoghi dello stato di transizione.
+![[Pasted image 20260811193747.png]]
+
+![[Pasted image 20260811193849.png]]
