@@ -11,7 +11,7 @@ Il gruppo OH non ha un singolo valore di pKa, poiché l'acidità di un gruppo os
 - Fenoli: I fenoli, in cui il gruppo OH è legato a un anello aromatico, sono significativamente più acidi degli alcoli.
     
     - Il fenolo ha un pKa di circa 10, rendendolo milioni di volte più acido degli alcoli.
-    - Questa maggiore acidità è dovuta alla stabilizzazione per risonanza dell'anione fenossido, la base coniugata, grazie alla delocalizzazione della carica negativa nell'anello aromatico. 
+    - Questa maggiore acidità è  dovuta alla stabilizzazione per risonanza dell'anione fenossido, la base coniugata, grazie alla delocalizzazione della carica negativa nell'anello aromatico. 
 
 - Acqua: Il pKa dell'acqua è 15,7, un valore simile a quello di molti alcoli, il che significa che anche l'acqua può agire da acido debole. 
 
