@@ -48,5 +48,5 @@ This matters practically because a molecule's ionization state at physiological 
 Un acido è tanto più forte quanto più stabile la sua base coniugata.
 Questo significa che effetto mesomerico ed effetto induttivo, stabilizzando la struttura della base coniugata, aumentano la forza dell'acido.
 Ad esempio, preso etanolo e 2-fluoroetanolo, il 2-fluoroetanolo è un acido molto più forte dell'etanolo semplice.
-Ciò è dovuto all'effetto electron-withdrawing del fluoro ($-I$, effetto induttivo), che stabilizza la carica negativo dell'ossigeno rendendo il fluoroetanolo un acido più forte. Generalmente gli alogeni aumentano l'acidità grazie 
+Ciò è dovuto all'effetto electron-withdrawing del fluoro ($-I$, effetto induttivo), che stabilizza la carica negativo dell'ossigeno rendendo il fluoroetanolo un acido più forte. Generalmente gli alogeni aumentano l'acidità grazie al loro effetto induttivo, e tanto più forte l'elettronegatività dell'alogeno, tanto più forte l'acido.
 ![[Pasted image 20260817173210.png]]
