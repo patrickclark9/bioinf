@@ -50,16 +50,19 @@ T cells and B cells are the two main **antigen-specific lymphocytes** of the ada
 - **Need for T-cell help:** for most protein antigens, B cells need **CD4⁺ T follicular helper cells** to undergo class switching, somatic hypermutation and affinity maturation. Some repetitive antigens (e.g., bacterial polysaccharides) can activate B cells with little or no T-cell help (**T-independent** responses), but with weaker memory.
 - **Self vs non-self:** B cells with strongly self-reactive receptors are removed or edited in the bone marrow (central tolerance), and further controls act in the periphery.
 
+> An **antigen-presenting cell** (**APC**) or **accessory cell** is a cell that displays an antigen bound by [major histocompatibility complex](https://en.wikipedia.org/wiki/Major_histocompatibility_complex "Major histocompatibility complex") (MHC) proteins on its surface; this process is known as [antigen presentation](https://en.wikipedia.org/wiki/Antigen_presentation "Antigen presentation"). T cells may recognize these complexes using their T cell receptors (TCRs). APCs process antigens and present them to T cells.
+
 ![[Pasted image 20261008172105.png]]
 
+While B-Cells can act as APCs (they display antigen bound on its surface), T-Cells can only recognize an antigen if bound to an APC complexed with peptides from MHC, they cannot act themselves as APCs.
 ### Common misconceptions to avoid
 
-| Statement | More accurate version |
-|---|---|
-| "T cells do not recognize non-self antigens." | T cells **do** respond to non-self antigens, but only as **processed peptides on MHC**; they cannot see free, native antigen. |
-| "T cells only deal with intracellular microbes." | CD8⁺ T cells mainly handle intracellular threats and tumor cells, but CD4⁺ T cells also coordinate responses against **extracellular** microbes and help B cells. |
-| "B cells only fight extracellular microbes." | Antibodies mostly act outside cells, but they also neutralize viruses **before** cell entry, and B cells present antigen to T cells, linking both arms. |
-| "B cells need MHC to recognize antigen." | The BCR binds **native antigen directly**; MHC II is needed only later, when the B cell presents peptide to a helper T cell. |
+| Statement                                        | More accurate version                                                                                                                                                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "T cells do not recognize non-self antigens."    | T cells **do** respond to non-self antigens, but only as **processed peptides on MHC**; they cannot see free, native antigen. Antigen is on an APC complexed with peptides from MHC, therefore is not soluble |
+| "T cells only deal with intracellular microbes." | CD8⁺ T cells mainly handle intracellular threats and tumor cells, but CD4⁺ T cells also coordinate responses against **extracellular** microbes and help B cells.                                             |
+| "B cells only fight extracellular microbes."     | Antibodies mostly act outside cells, but they also neutralize viruses **before** cell entry, and B cells present antigen to T cells, linking both arms.                                                       |
+| "B cells need MHC to recognize antigen."         | The BCR binds **native antigen directly**; MHC II is needed only later, when the B cell presents peptide to a helper T cell.                                                                                  |
 
 ### In a nutshell
 
@@ -281,6 +284,7 @@ Absence of signal 2 leads to **anergy**.
 - Membrane-bound **immunoglobulin** (IgM/IgD on naive cells) associated with **Igα/Igβ (CD79a/CD79b)** that carry ITAMs.
 - **Co-receptor complex**: CD19–CD21 (CR2)–CD81 lowers the activation threshold when antigen is coated with complement (C3d).
 - Signaling: Lyn/Syk → BLNK → PLCγ2, BTK → Ca²⁺, NF-κB, MAPK.
+- Act as APCs themselves
 
 ### 7.2 Immunoglobulin structure and isotypes
 - Two heavy chains + two light chains (κ or λ); **Fab** (antigen binding) and **Fc** (effector function).
@@ -319,7 +323,7 @@ Absence of signal 2 leads to **anergy**.
 Defects: **Hyper-IgM syndrome** (CD40L or AID deficiency).
 
 ### 7.6 Plasma cells and memory B cells
-- **Plasma cells**: antibody-secreting factories (Blimp-1/PRDM1, XBP1, IRF4); lose surface BCR and MHC II; CD138⁺, CD38^hi, CD27^hi. Long-lived plasma cells reside in bone marrow niches.
+- **Plasma cells**: antibody-secreting factories (Blimp-1/PRDM1, XBP1, IRF4); lose surface BCR and MHC II; CD138⁺, CD38^hi, CD27^hi. Long-lived plasma cells reside in bone marrow niches. Short-lived plasma cells form in the initial phases of infection, then die out rapidly (~7 days)
 - **Memory B cells**: CD27⁺ (humans), carry mutated, often class-switched BCRs; respond rapidly and more strongly upon re-exposure.
 
 ### 7.7 Antibody effector functions
