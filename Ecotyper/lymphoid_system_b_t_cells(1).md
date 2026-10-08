@@ -1,19 +1,77 @@
 # The Lymphoid System, B Cells and T Cells: A Detailed Overview
 
 ## Table of Contents
-1. [The Lymphoid System at a Glance](#1-the-lymphoid-system-at-a-glance)
-2. [Primary Lymphoid Organs](#2-primary-lymphoid-organs)
-3. [Secondary Lymphoid Organs](#3-secondary-lymphoid-organs)
-4. [Lymph and Lymphatic Circulation](#4-lymph-and-lymphatic-circulation)
-5. [Lymphocyte Development (Lymphopoiesis)](#5-lymphocyte-development-lymphopoiesis)
-6. [T Cells](#6-t-cells)
-7. [B Cells](#7-b-cells)
-8. [T–B Cooperation and the Germinal Center](#8-tb-cooperation-and-the-germinal-center)
-9. [Innate Lymphoid Cells, NK Cells and Unconventional Lymphocytes](#9-innate-lymphoid-cells-nk-cells-and-unconventional-lymphocytes)
-10. [Tolerance and Immune Regulation](#10-tolerance-and-immune-regulation)
-11. [Clinical Relevance](#11-clinical-relevance)
-12. [Lymphocytes in Omics and Computational Work](#12-lymphocytes-in-omics-and-computational-work)
-13. [Quick Comparison Table](#13-quick-comparison-table)
+- [[#General Overview of T Cells and B Cells]]
+- [[#1. The Lymphoid System at a Glance]]
+- [[#2. Primary Lymphoid Organs]]
+- [[#3. Secondary Lymphoid Organs]]
+- [[#4. Lymph and Lymphatic Circulation]]
+- [[#5. Lymphocyte Development (Lymphopoiesis)]]
+- [[#6. T Cells]]
+- [[#7. B Cells]]
+- [[#8. T–B Cooperation and the Germinal Center]]
+- [[#9. Innate Lymphoid Cells, NK Cells and Unconventional Lymphocytes]]
+- [[#10. Tolerance and Immune Regulation]]
+- [[#11. Clinical Relevance]]
+- [[#12. Lymphocytes in Omics and Computational Work]]
+- [[#13. Quick Comparison Table]]
+
+---
+
+## General Overview of T Cells and B Cells
+
+T cells and B cells are the two main **antigen-specific lymphocytes** of the adaptive immune system. Each individual cell carries a single receptor specificity, and the whole population together can recognize a vast range of antigens. Both undergo **clonal selection** (the cell whose receptor matches an antigen is activated and expands), generate **immunological memory**, and are shaped by **self-tolerance** so that they normally ignore the body's own components.
+
+![[Pasted image 20261008172030.png]]
+### T cells (T lymphocytes) in general
+
+- **Origin:** arise from bone-marrow progenitors but **mature in the thymus** (the "T" stands for thymus).
+- **Type of immunity:** **cell-mediated immunity**. They act through direct contact with other cells and through secreted cytokines. They **do not produce antibodies**.
+- **What they recognize:** short **peptide fragments** that have been processed inside a cell and displayed on **MHC molecules** at the cell surface. This is called **MHC restriction**.
+  - **CD8⁺ T cells** see peptides on **MHC class I**, which is present on almost all nucleated cells and reports on proteins made *inside* the cell.
+  - **CD4⁺ T cells** see peptides on **MHC class II**, found on professional antigen-presenting cells (dendritic cells, macrophages, B cells), which reports on material taken up from *outside* the cell.
+- **Main targets:**
+  - **Intracellular pathogens** that hide from antibodies: viruses, intracellular bacteria (e.g., *Mycobacterium tuberculosis*, *Listeria*), and some protozoa and fungi
+  - **Infected, damaged or malignant (tumor) cells**, which CD8⁺ cytotoxic T cells kill directly
+  - Indirectly, **extracellular pathogens**, because CD4⁺ helper T cells activate macrophages and provide help to B cells
+- **Main roles:** killing infected or abnormal cells (CD8⁺ CTLs), coordinating the immune response (CD4⁺ helper subsets), dampening immunity to prevent damage (Tregs), and forming long-lived memory.
+- **Self vs non-self:** T cells **do** discriminate non-self from self, but only at the level of **peptide–MHC complexes**. During thymic selection, cells that bind self peptide–MHC too strongly are eliminated or diverted to a regulatory fate, so mature T cells respond mainly to **foreign peptides presented on self-MHC**. A T cell cannot recognize a free, intact pathogen or a soluble antigen floating in fluid; the antigen must first be processed and presented.
+
+### B cells (B lymphocytes) in general
+
+- **Origin:** develop and mature in the **bone marrow** in mammals (the "B" originally came from the *bursa of Fabricius* in birds).
+- **Type of immunity:** **humoral immunity**, mediated by **antibodies** (immunoglobulins) secreted into blood, lymph and mucosal secretions.
+- **What they recognize:** **native, intact antigens** in their original three-dimensional shape, through the membrane-bound **B-cell receptor (BCR)**. Antigens can be proteins, polysaccharides, lipids or nucleic acids, and **no MHC presentation is needed** for recognition itself.
+- **Main targets:**
+  - **Extracellular pathogens** (e.g., many bacteria, free virus particles before they enter cells, parasites)
+  - **Toxins** and other soluble molecules in body fluids
+  - Antibodies can also **block viral entry**, tag microbes for phagocytosis (**opsonization**), activate **complement**, and protect mucosal surfaces (IgA)
+- **Main roles:** after activation, B cells differentiate into **plasma cells** (antibody-secreting factories) and **memory B cells**. They also act as **antigen-presenting cells** to helper T cells.
+- **Need for T-cell help:** for most protein antigens, B cells need **CD4⁺ T follicular helper cells** to undergo class switching, somatic hypermutation and affinity maturation. Some repetitive antigens (e.g., bacterial polysaccharides) can activate B cells with little or no T-cell help (**T-independent** responses), but with weaker memory.
+- **Self vs non-self:** B cells with strongly self-reactive receptors are removed or edited in the bone marrow (central tolerance), and further controls act in the periphery.
+
+![[Pasted image 20261008172105.png]]
+
+### Common misconceptions to avoid
+
+| Statement | More accurate version |
+|---|---|
+| "T cells do not recognize non-self antigens." | T cells **do** respond to non-self antigens, but only as **processed peptides on MHC**; they cannot see free, native antigen. |
+| "T cells only deal with intracellular microbes." | CD8⁺ T cells mainly handle intracellular threats and tumor cells, but CD4⁺ T cells also coordinate responses against **extracellular** microbes and help B cells. |
+| "B cells only fight extracellular microbes." | Antibodies mostly act outside cells, but they also neutralize viruses **before** cell entry, and B cells present antigen to T cells, linking both arms. |
+| "B cells need MHC to recognize antigen." | The BCR binds **native antigen directly**; MHC II is needed only later, when the B cell presents peptide to a helper T cell. |
+
+### In a nutshell
+
+| | **T cells** | **B cells** |
+|---|---|---|
+| **Arm of immunity** | Cell-mediated | Humoral (antibody-mediated) |
+| **What the receptor sees** | Processed peptide + MHC | Native antigen (protein, sugar, lipid, nucleic acid) |
+| **MHC needed for recognition?** | Yes (MHC I or II) | No |
+| **Where they act** | Inside and between cells; tissues and lymphoid organs | Body fluids (blood, lymph, mucosal surfaces) |
+| **Typical targets** | Intracellular pathogens, infected and tumor cells | Extracellular pathogens, toxins, free virus |
+| **Main output** | Cytotoxic killing, cytokines, regulation | Antibodies |
+| **Memory** | Memory T cells (T_CM, T_EM, T_RM) | Memory B cells and long-lived plasma cells |
 
 ---
 
