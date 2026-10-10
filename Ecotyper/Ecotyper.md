@@ -10,4 +10,19 @@
 
 Possiamo osservare una variazione degli stati trascrizionali non solo per tipo cellulare, ma all'interno dei tipi stessi. Lo stato S0 di B-Cells è trascrizionalmente diverso da S1 di B-Cells, e sono due stati caratterizzati da profili di espressione differenti.
 
+## Step (Forse)
+
+1. **Frazionamento** CIBERSORTx Fractions -> Stima dell'infiltrato per i 12 tipi cellulari, conta grezza, assente nel dataset
+2. **Purificazione** CIBERSORTx HiRes -> Usando i frazionamenti, viene imputato un profilo di espressione per tipo cellulare per campione
+3. **State Discovery** NMF -> NMF sui top 1000 geni per dispersione più elevata tra i campioni. Ogni "gene program" è uno stato cellulare (69 totali?)
+4. **QC** -> Rimozione stati a bassa qualità (i NaN)
+5. **Validazione** ->Validazione con dati single-cell e clinici.
+6. **EcoTyping** -> Raggruppamento di stati che co-occorrono tra campioni in 10 comunità multicellulari (CE1-CE10)
+
+
+
+> Gene Program:
+> Tutti elementi non-negativi
+> NMF = $$V \approx WH $$
+
 > **Citotossico** significa una sostanza o un agente che danneggia, intossica o distrugge le cellule viventi.
