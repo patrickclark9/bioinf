@@ -1,7 +1,7 @@
 # The Lymphoid System, B Cells and T Cells: A Detailed Overview
 
 ## Table of Contents
-- [[#General Overview of T Cells, B Cells and NK Cells]]
+- [[#General Overview of T Cells and B Cells]]
 - [[#1. The Lymphoid System at a Glance]]
 - [[#2. Primary Lymphoid Organs]]
 - [[#3. Secondary Lymphoid Organs]]
@@ -10,18 +10,18 @@
 - [[#6. T Cells]]
 - [[#7. B Cells]]
 - [[#8. T–B Cooperation and the Germinal Center]]
-- [[#9. NK Cells]]
-- [[#10. Innate Lymphoid Cells (ILCs)]]
-- [[#11. Tolerance and Immune Regulation]]
-- [[#12. Clinical Relevance]]
-- [[#13. Lymphocytes in Omics and Computational Work]]
-- [[#14. Quick Comparison Table]]
+- [[#9. Innate Lymphoid Cells, NK Cells and Unconventional Lymphocytes]]
+- [[#10. Tolerance and Immune Regulation]]
+- [[#11. Clinical Relevance]]
+- [[#12. Lymphocytes in Omics and Computational Work]]
+- [[#13. Quick Comparison Table]]
 
 ---
 
-## General Overview of T Cells, B Cells and NK Cells
+## General Overview of T Cells and B Cells
 
-T cells and B cells are the two main **antigen-specific lymphocytes** of the adaptive immune system, while NK cells are the main cytotoxic lymphocytes of the **innate** immune system. Each individual cell carries a single receptor specificity, and the whole population together can recognize a vast range of antigens. Both undergo **clonal selection** (the cell whose receptor matches an antigen is activated and expands), generate **immunological memory**, and are shaped by **self-tolerance** so that they normally ignore the body's own components.
+T cells and B cells are the two main **antigen-specific lymphocytes** of the adaptive immune system. Each individual cell carries a single receptor specificity, and the whole population together can recognize a vast range of antigens. Both undergo **clonal selection** (the cell whose receptor matches an antigen is activated and expands), generate **immunological memory**, and are shaped by **self-tolerance** so that they normally ignore the body's own components.
+
 ![[Pasted image 20261008172030.png]]
 ### T cells (T lymphocytes) in general
 
@@ -50,16 +50,6 @@ T cells and B cells are the two main **antigen-specific lymphocytes** of the ada
 - **Need for T-cell help:** for most protein antigens, B cells need **CD4⁺ T follicular helper cells** to undergo class switching, somatic hypermutation and affinity maturation. Some repetitive antigens (e.g., bacterial polysaccharides) can activate B cells with little or no T-cell help (**T-independent** responses), but with weaker memory.
 - **Self vs non-self:** B cells with strongly self-reactive receptors are removed or edited in the bone marrow (central tolerance), and further controls act in the periphery.
 
-### NK cells (natural killer cells) in general
-
-- **Origin:** develop from the common lymphoid progenitor, mainly in the **bone marrow**; classed as **innate lymphoid cells** (cytotoxic group 1 ILCs).
-- **Type of immunity:** **innate** cell-mediated immunity. They act **quickly and without prior sensitization**, and do not need clonal expansion before acting.
-- **What they recognize:** **not a specific antigen.** They use a **balance of activating and inhibitory germline-encoded receptors**. Cells that lack normal **MHC class I** ("missing-self") or display **stress-induced ligands** ("induced-self") are killed, as are **IgG-coated** cells (via CD16, ADCC).
-- **Main targets:** virally infected cells, tumor cells, stressed cells and cells that have lost MHC I.
-- **Main roles:** killing via **perforin/granzymes**, producing **IFN-γ** and other cytokines that shape later adaptive responses, and regulating DCs and T cells. A subset shows memory-like behavior.
-- **Self vs non-self:** healthy self cells display MHC I that engages NK **inhibitory receptors**, so they are spared; NK cells are "educated" on self MHC I to ensure this.
-- See [[#9. NK Cells]] for the detailed section.
-
 > An **antigen-presenting cell** (**APC**) or **accessory cell** is a cell that displays an antigen bound by [major histocompatibility complex](https://en.wikipedia.org/wiki/Major_histocompatibility_complex "Major histocompatibility complex") (MHC) proteins on its surface; this process is known as [antigen presentation](https://en.wikipedia.org/wiki/Antigen_presentation "Antigen presentation"). T cells may recognize these complexes using their T cell receptors (TCRs). APCs process antigens and present them to T cells.
 
 ![[Pasted image 20261008172105.png]]
@@ -67,28 +57,24 @@ T cells and B cells are the two main **antigen-specific lymphocytes** of the ada
 While B-Cells can act as APCs (they display antigen bound on its surface), T-Cells can only recognize an antigen if bound to an APC complexed with peptides from MHC, they cannot act themselves as APCs.
 ### Common misconceptions to avoid
 
-| Statement | More accurate version |
-|---|---|
-| "T cells do not recognize non-self antigens." | T cells **do** respond to non-self antigens, but only as **processed peptides on MHC**; they cannot see free, native antigen. |
-| "T cells only deal with intracellular microbes." | CD8⁺ T cells mainly handle intracellular threats and tumor cells, but CD4⁺ T cells also coordinate responses against **extracellular** microbes and help B cells. |
-| "B cells only fight extracellular microbes." | Antibodies mostly act outside cells, but they also neutralize viruses **before** cell entry, and B cells present antigen to T cells, linking both arms. |
-| "B cells need MHC to recognize antigen." | The BCR binds **native antigen directly**; MHC II is needed only later, when the B cell presents peptide to a helper T cell. |
-| "NK cells are just a type of T cell." | NK cells are **innate lymphocytes** with no TCR; they are CD3⁻ and use germline-encoded activating and inhibitory receptors. |
-| "NK cells kill anything with MHC I missing and nothing else." | Missing-self is one trigger. NK cells also respond to **stress ligands**, **antibody-coated targets** (ADCC) and cytokines, and the final decision is a **balance of signals**. |
+| Statement                                        | More accurate version                                                                                                                                                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "T cells do not recognize non-self antigens."    | T cells **do** respond to non-self antigens, but only as **processed peptides on MHC**; they cannot see free, native antigen. Antigen is on an APC complexed with peptides from MHC, therefore is not soluble |
+| "T cells only deal with intracellular microbes." | CD8⁺ T cells mainly handle intracellular threats and tumor cells, but CD4⁺ T cells also coordinate responses against **extracellular** microbes and help B cells.                                             |
+| "B cells only fight extracellular microbes."     | Antibodies mostly act outside cells, but they also neutralize viruses **before** cell entry, and B cells present antigen to T cells, linking both arms.                                                       |
+| "B cells need MHC to recognize antigen."         | The BCR binds **native antigen directly**; MHC II is needed only later, when the B cell presents peptide to a helper T cell.                                                                                  |
 
 ### In a nutshell
 
-| | **T cells** | **B cells** | **NK cells** |
-|---|---|---|---|
-| **Arm of immunity** | Adaptive, cell-mediated | Adaptive, humoral (antibody-mediated) | Innate, cell-mediated |
-| **Receptor** | TCR (V(D)J-rearranged) | BCR (V(D)J-rearranged) | Germline-encoded activating and inhibitory receptors |
-| **What the receptor sees** | Processed peptide + MHC | Native antigen (protein, sugar, lipid, nucleic acid) | Missing-self (low MHC I), stress ligands, IgG-coated cells |
-| **MHC needed for recognition?** | Yes (MHC I or II) | No | Self MHC I acts as an **inhibitory** signal |
-| **Where they act** | Inside and between cells; tissues and lymphoid organs | Body fluids (blood, lymph, mucosal surfaces) | Blood, liver, uterus, tissues; lymph nodes |
-| **Typical targets** | Intracellular pathogens, infected and tumor cells | Extracellular pathogens, toxins, free virus | Virally infected, tumor and stressed cells |
-| **Speed of response** | Days (priming and expansion) | Days (antibodies after activation) | Hours to days; no priming needed |
-| **Main output** | Cytotoxic killing, cytokines, regulation | Antibodies | Cytotoxic killing, IFN-γ and other cytokines |
-| **Memory** | Memory T cells (T_CM, T_EM, T_RM) | Memory B cells and long-lived plasma cells | Limited, innate-like (adaptive NK, CIML) |
+| | **T cells** | **B cells** |
+|---|---|---|
+| **Arm of immunity** | Cell-mediated | Humoral (antibody-mediated) |
+| **What the receptor sees** | Processed peptide + MHC | Native antigen (protein, sugar, lipid, nucleic acid) |
+| **MHC needed for recognition?** | Yes (MHC I or II) | No |
+| **Where they act** | Inside and between cells; tissues and lymphoid organs | Body fluids (blood, lymph, mucosal surfaces) |
+| **Typical targets** | Intracellular pathogens, infected and tumor cells | Extracellular pathogens, toxins, free virus |
+| **Main output** | Cytotoxic killing, cytokines, regulation | Antibodies |
+| **Memory** | Memory T cells (T_CM, T_EM, T_RM) | Memory B cells and long-lived plasma cells |
 
 ---
 
@@ -298,6 +284,7 @@ Absence of signal 2 leads to **anergy**.
 - Membrane-bound **immunoglobulin** (IgM/IgD on naive cells) associated with **Igα/Igβ (CD79a/CD79b)** that carry ITAMs.
 - **Co-receptor complex**: CD19–CD21 (CR2)–CD81 lowers the activation threshold when antigen is coated with complement (C3d).
 - Signaling: Lyn/Syk → BLNK → PLCγ2, BTK → Ca²⁺, NF-κB, MAPK.
+- Act as APCs themselves
 
 ### 7.2 Immunoglobulin structure and isotypes
 - Two heavy chains + two light chains (κ or λ); **Fab** (antigen binding) and **Fc** (effector function).
@@ -336,7 +323,7 @@ Absence of signal 2 leads to **anergy**.
 Defects: **Hyper-IgM syndrome** (CD40L or AID deficiency).
 
 ### 7.6 Plasma cells and memory B cells
-- **Plasma cells**: antibody-secreting factories (Blimp-1/PRDM1, XBP1, IRF4); lose surface BCR and MHC II; CD138⁺, CD38^hi, CD27^hi. Long-lived plasma cells reside in bone marrow niches.
+- **Plasma cells**: antibody-secreting factories (Blimp-1/PRDM1, XBP1, IRF4); lose surface BCR and MHC II; CD138⁺, CD38^hi, CD27^hi. Long-lived plasma cells reside in bone marrow niches. Short-lived plasma cells form in the initial phases of infection, then die out rapidly (~7 days)
 - **Memory B cells**: CD27⁺ (humans), carry mutated, often class-switched BCRs; respond rapidly and more strongly upon re-exposure.
 
 ### 7.7 Antibody effector functions
@@ -363,109 +350,18 @@ Defects: **Hyper-IgM syndrome** (CD40L or AID deficiency).
 
 ---
 
-## 9. NK Cells
+## 9. Innate Lymphoid Cells, NK Cells and Unconventional Lymphocytes
 
-### 9.1 Overview
-- **Natural killer (NK) cells** are **innate lymphocytes**: lymphoid in origin, but they do **not** rearrange V(D)J genes and do **not** carry an antigen-specific TCR or BCR. They use **germline-encoded receptors** instead.
-- Morphologically they are **large granular lymphocytes**, making up roughly 5–15% of circulating lymphocytes in humans, and are also abundant in liver, uterus (decidua), lung and lymph nodes.
-- They are the **cytotoxic member of the group 1 innate lymphoid cell family** and are often described as the innate counterpart of CD8⁺ cytotoxic T cells.
-- They respond within hours to days **without prior sensitization** (hence "natural" killer), providing early defense before adaptive responses are ready.
-- **Main targets:** virally infected cells (especially herpesviruses such as CMV), **tumor cells**, stressed or damaged cells, and cells that have lost MHC class I expression. They also contribute to **graft-versus-leukemia** effects in transplantation.
-
-### 9.2 Development and licensing
-- Derive from the **common lymphoid progenitor** in the bone marrow; also mature in secondary lymphoid tissue and liver.
-- **IL-15** (presented in trans by IL-15Rα) is essential for development, survival and homeostasis.
-- Key transcription factors: **NFIL3 (E4BP4), ID2, EOMES, T-bet (TBX21), TOX**.
-- **Education / licensing**: NK cells become functionally competent when their inhibitory receptors engage **self MHC class I** during maturation (e.g., KIR–HLA, NKG2A–HLA-E in humans; Ly49–H-2 in mice). This tunes responsiveness so that they tolerate healthy self cells yet react to cells that lack self MHC I.
-
-### 9.3 Phenotype and subsets
-- **Human identification:** **CD3⁻ CD56⁺** (mouse: NK1.1⁺ / NKp46⁺ / CD49b⁺, CD3⁻).
-
-| Subset (human) | Phenotype | Location | Main function |
-|---|---|---|---|
-| **CD56^bright** | CD56^hi CD16^lo/⁻, CCR7⁺, CD62L⁺, NKG2A^hi, KIR^lo | ~10% of blood NK cells; enriched in lymph nodes and tissues | Cytokine production (IFN-γ, TNF, GM-CSF), immunoregulation |
-| **CD56^dim** | CD56^lo CD16^hi, KIR⁺, high perforin | ~90% of blood NK cells | Cytotoxicity and ADCC |
-| **Tissue-resident NK** | CD69⁺, CD103⁺/CXCR6⁺ (varies) | Liver, uterus (decidual NK), lung, gut | Local surveillance, tissue homeostasis, pregnancy support |
-| **Adaptive / memory-like NK** | NKG2C⁺ CD57⁺, FcRγ-low | Expanded after HCMV infection | Faster, stronger secondary responses |
-
-### 9.4 How NK cells decide: the balance of signals
-NK activity depends on the **integration of activating and inhibitory signals**, not on a single receptor.
-
-**Inhibitory receptors** (signal through **ITIMs** → SHP-1/SHP-2)
-- **KIRs** (e.g., KIR2DL, KIR3DL) bind classical HLA-A, -B, -C
-- **CD94/NKG2A** binds **HLA-E**
-- **LILRB1 (LIR-1/ILT2)** binds a broad range of HLA class I
-- Mouse: **Ly49** family
-
-**Activating receptors** (signal through ITAM-containing adaptors or DAP10)
-- **NKG2D** → binds stress-induced ligands (**MICA, MICB, ULBP1–6**); signals via **DAP10**
-- **Natural cytotoxicity receptors (NCRs):** **NKp46, NKp30, NKp44**
-- **DNAM-1 (CD226)** → binds CD155 (PVR) and CD112
-- **Activating KIRs** (e.g., KIR2DS), **CD94/NKG2C**
-- **CD16 (FcγRIIIa)** → binds the Fc region of **IgG**, triggering **ADCC**
-- **Co-receptors:** 2B4 (CD244), NTB-A, CD2
-
-**Recognition concepts**
-- **Missing-self**: cells with reduced or absent MHC I (e.g., many virally infected or tumor cells) lose inhibitory input and are killed.
-- **Induced-self**: stress-induced ligands (e.g., MICA/B) trigger activating receptors.
-- **Antibody-dependent recognition**: IgG-coated targets are recognized via CD16.
-
-**Cytokine inputs**: **IL-15, IL-2, IL-12, IL-18, IL-21, type I interferons** prime and activate NK cells.
-
-### 9.5 Effector functions
-1. **Direct cytotoxicity**
-   - Form an **immunological synapse**; **lytic granules** polarize and release **perforin** and **granzymes** (A, B) → target apoptosis
-   - **Death-receptor pathways:** FasL–Fas and **TRAIL**–TRAIL-R
-2. **ADCC (antibody-dependent cellular cytotoxicity)** via CD16: central to the action of therapeutic antibodies such as rituximab (anti-CD20) and trastuzumab (anti-HER2).
-3. **Cytokine and chemokine production:** **IFN-γ, TNF, GM-CSF**, CCL3/4/5, XCL1. These activate macrophages, promote **Th1** responses and recruit dendritic cells.
-4. **Immunoregulation and crosstalk**
-   - **NK–DC crosstalk**: DC-derived IL-12/IL-15/IL-18 activate NK cells; NK cells can edit immature DCs and promote DC maturation via IFN-γ/TNF.
-   - NK cells can **limit T-cell responses** by killing activated T cells or competing for IL-2.
-5. **Reproductive and tissue roles:** **decidual NK cells** help remodel uterine spiral arteries and support placentation.
-
-### 9.6 Memory-like properties
-NK cells lack rearranged receptors, but show forms of **innate-like memory**:
-- **Adaptive NK cells**: clonal-like expansion of **Ly49H⁺ NK cells** in mouse CMV infection and **NKG2C⁺ NK cells** in human CMV infection.
-- **Cytokine-induced memory-like (CIML) NK cells**: brief exposure to IL-12 + IL-15 + IL-18 yields enhanced IFN-γ responses upon restimulation.
-- **Hapten- and virus-specific liver-resident NK memory** has been described in mice.
-
-### 9.7 NK cells vs. cytotoxic T cells (CD8⁺)
-| Feature | **NK cells** | **CD8⁺ CTLs** |
-|---|---|---|
-| Immunity | Innate | Adaptive |
-| Antigen receptor | Germline-encoded (KIR, NKG2D, NCRs…); no V(D)J | TCR generated by V(D)J recombination |
-| Antigen recognition | Balance of activating vs. inhibitory ligands; missing-self; IgG via CD16 | Specific peptide on MHC class I |
-| MHC I effect | **Low or absent MHC I** promotes killing | **MHC I presenting peptide** is required |
-| Response time | Hours to days; no prior priming needed | Days (needs priming and clonal expansion) |
-| Memory | Limited / innate-like (adaptive NK, CIML) | Classical, antigen-specific memory |
-| Killing machinery | Perforin, granzymes, FasL, TRAIL | Perforin, granzymes, FasL |
-| Key markers | CD3⁻ CD56⁺ (CD16⁺ in the dim subset), NKp46 | CD3⁺ CD8⁺ TCR⁺ |
-
-### 9.8 NK cells in cancer
-- NK cells provide **tumor immunosurveillance** and limit **metastatic spread**; higher NK-cell infiltration correlates with better outcomes in several cancers.
-- **Evasion mechanisms:** shedding of NKG2D ligands (e.g., soluble MICA), **TGF-β**-mediated downregulation of NKG2D and NKp30, upregulation of **HLA-E**/HLA-G, expression of checkpoint ligands, hypoxia and metabolic suppression in the tumor microenvironment, and NK-cell **exhaustion/dysfunction**.
-
-### 9.9 Clinical relevance
-- **Primary NK-cell deficiencies** (rare): recurrent severe **herpesvirus** infections (e.g., CD16 deficiency, *GATA2* deficiency, *MCM4* deficiency).
-- **Familial hemophagocytic lymphohistiocytosis (HLH)**: defective cytotoxic granule function (*PRF1*, *UNC13D*, *STX11*, *STXBP2*) in NK and CD8⁺ T cells.
-- **Haploidentical hematopoietic stem cell transplantation**: **KIR–HLA mismatch** can generate alloreactive NK cells with antileukemic activity.
-- **Therapeutic strategies:** antibodies that act via **ADCC**, **CAR-NK cells** (e.g., from cord blood or iPSCs, often engineered with IL-15), **NK cell engagers** (BiKEs/TriKEs), cytokine therapy (IL-15 superagonists, IL-2), and **checkpoint blockade** targeting NK receptors (e.g., **anti-NKG2A, monalizumab**; **anti-KIR, lirilumab**).
-
----
-
-## 10. Innate Lymphoid Cells (ILCs)
-
-- **ILCs** are tissue-resident innate lymphocytes that lack antigen-specific receptors (lineage-negative) and mirror T-cell subsets in their cytokine and transcription factor profiles:
+- **NK cells**: CD56⁺CD3⁻ (human). Detect **missing-self** (low MHC I) and stress ligands via activating receptors (NKG2D, NCRs) balanced by inhibitory receptors (KIRs, NKG2A). Kill via perforin/granzyme and ADCC (CD16).
+- **ILCs** (lack antigen-specific receptors; lineage-negative):
   - **ILC1** (T-bet, IFN-γ) ↔ Th1
-  - **NK cells** (T-bet, EOMES; cytotoxic) ↔ CD8⁺ CTLs; see [[#9. NK Cells]]
   - **ILC2** (GATA3, IL-5, IL-13) ↔ Th2
-  - **ILC3** (RORγt, IL-22, IL-17) ↔ Th17; includes **LTi cells** important for lymphoid organogenesis
-- They bridge innate and adaptive immunity, especially in barrier tissues (gut, lung, skin), responding quickly to alarmins and cytokines (IL-25, IL-33, TSLP, IL-1β, IL-23).
-- Unconventional T cells (γδ, NKT, MAIT) are covered in section 6.8.
+  - **ILC3** (RORγt, IL-22, IL-17) ↔ Th17; includes LTi cells important for lymphoid organogenesis
+- Bridge innate and adaptive immunity, especially in barrier tissues.
 
 ---
 
-## 11. Tolerance and Immune Regulation
+## 10. Tolerance and Immune Regulation
 
 | Mechanism | Description |
 |---|---|
@@ -477,7 +373,7 @@ Failure leads to **autoimmunity** (e.g., type 1 diabetes, rheumatoid arthritis, 
 
 ---
 
-## 12. Clinical Relevance
+## 11. Clinical Relevance
 
 ### Immunodeficiencies
 - **SCID**: RAG1/2, IL2RG (X-linked, common γ chain), ADA deficiency
@@ -496,14 +392,13 @@ Failure leads to **autoimmunity** (e.g., type 1 diabetes, rheumatoid arthritis, 
 - **Immune checkpoint inhibitors** (anti-PD-1/PD-L1, anti-CTLA-4, anti-LAG-3)
 - **CAR-T cells** (engineered T cells, e.g., anti-CD19, anti-BCMA)
 - **Bispecific T-cell engagers** (e.g., blinatumomab)
-- **NK-cell-based therapies** (CAR-NK, NK cell engagers, anti-NKG2A/monalizumab); see [[#9. NK Cells]]
 - **Monoclonal antibodies** (rituximab anti-CD20, etc.)
 - **Vaccines** (exploit memory and affinity maturation)
 - **Immunosuppressants** (calcineurin inhibitors, mTOR inhibitors, anti-CD3, belatacept)
 
 ---
 
-## 13. Lymphocytes in Omics and Computational Work
+## 12. Lymphocytes in Omics and Computational Work
 
 ### Common marker genes (RNA-level, useful for annotation)
 | Population | Typical markers |
@@ -540,7 +435,7 @@ Failure leads to **autoimmunity** (e.g., type 1 diabetes, rheumatoid arthritis, 
 
 ---
 
-## 14. Quick Comparison Table
+## 13. Quick Comparison Table
 
 | Feature | T cells | B cells |
 |---|---|---|
@@ -566,5 +461,4 @@ Failure leads to **autoimmunity** (e.g., type 1 diabetes, rheumatoid arthritis, 
 - **T cells** mature in the thymus, recognize peptide–MHC through the TCR, and orchestrate or execute cell-mediated immunity (helper, cytotoxic, regulatory subsets).
 - **B cells** mature in the bone marrow, recognize native antigen through the BCR, and differentiate into antibody-secreting plasma cells and memory B cells, refined by **somatic hypermutation and class switching** in germinal centers.
 - **T–B collaboration** (Tfh, CD40L–CD40) is central to high-affinity, long-lived antibody responses.
-- **NK cells** are innate lymphocytes that kill virally infected and tumor cells by integrating activating and inhibitory signals (missing-self, stress ligands, ADCC) without prior sensitization, and they shape adaptive responses through IFN-γ.
 - Tolerance mechanisms prevent autoimmunity; their failure, or malignant transformation of lymphocytes, underlies many diseases—and increasingly, these cells are therapeutic tools themselves.

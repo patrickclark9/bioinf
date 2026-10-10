@@ -4,7 +4,7 @@
 | Colonna                        | Significato                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | State_Assignment.{CellType}    | [[Ecotyper]] scompone il tipo cellulare in sottostati trascrizionali, e la colonna indica a quale stato trascrizionale è stato assegnato il campione per quel tipo cellulare, ovvero qual è il sottotipo trascrizionale dominante di quel tipo cellulare per quel dato campione. Se NaN, l'abbondanza stimata di quel tipo cellulare nel campione era troppo bassa per un'assegnazione affidabile                                                                                                        |
-| State_Abundance.{CellType}_S0N | $\text{Valori}\in [0,1]$. Punteggio continuo di abbondanza per ogni singolo stato all'interno di un tipo cellulare. La somma degli stati approssima la frazione totale di quel tipo cellulare nel campione.                                                                                                                                                                                                                                                                                              |
+| State_Abundance.{CellType}_S0N | $\text{Valori}\in [0,1]$. Punteggio continuo di abbondanza per ogni singolo stato all'interno di un tipo cellulare. La somma degli stati approssima la frazione totale di quel tipo cellulare nel campione Molto probabilmente questo è il valore del gene-program, non un valore di abbondanza reale. Le righe (Abundances per ciascuno stato) non sommano a 1.                                                                                                                                         |
 | EcoType_Assignment             | È una singola etichetta per campione (CE1-CE10). Rappresenta la comunica multicellulare dominante. Si cercano pattern di co-occorrenza tra gli stati di tipi cellulari diversi (un certo stato S0N di fibroblasti che tende a comparire insieme ad un certo stato S0N dei macrofagi). Vengono raggruppati in 10 ecotupi conservati. La colonna dice a quale dei 10 ecotipi è stato assegnato il campione nel complesso. NaN quando nessuno ecotipo ha un punteggio significativo(?) rispetto agli altri. |
 | EcoType_Abundance.CE1>10       | Punteggio continuo per ciascuno dei 10 ecotipi distinti nel campione.                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
@@ -21,8 +21,11 @@ Possiamo osservare una variazione degli stati trascrizionali non solo per tipo c
 
 
 
-> Gene Program:
-> Tutti elementi non-negativi
-> NMF = $$V \approx WH $$
+### Gene Program:
+ NMF -> Tutti elementi non negativi $$NMF \rightarrow V \approx WH $$
+ $V = \text{Matrice dei dati}$
+ $W = \text{Matrice base}$
+ $H = \text{Matrice dei coefficienti/pesi}$
 
-> **Citotossico** significa una sostanza o un agente che danneggia, intossica o distrugge le cellule viventi.
+ Un gene program è una delle colonne distinte di W (o riga di H). Generalmente rappresenta (in questo caso geni) elementi che appaiono frequentemente insieme. Nel caso dei geni, rappresenta un insieme coordinato di geni che agiscono insieme in uno specifico processo biologico o uno stato cellulare. $W$ Definisce quali geni sono coinvolti, $H$ definisce il peso di ciascun gene
+
