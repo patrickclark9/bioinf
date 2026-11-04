@@ -1,4 +1,4 @@
-# Least Squares and Linear Regression — A Comprehensive Overview
+`# Least Squares and Linear Regression — A Comprehensive Overview
 
 The **least squares problem** is one of the most fundamental problems in linear algebra, numerical optimization, and statistics.
 
